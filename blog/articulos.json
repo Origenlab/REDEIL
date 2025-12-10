@@ -1,0 +1,154 @@
+{
+  "articulos": [
+    {
+      "id": "sonido-para-eventos-renta-bocinas-cdmx",
+      "titulo": "Sonido para Eventos: La Mejor Empresa de Renta de Bocinas en CDMX",
+      "descripcion": "Conoce a Sonido para Eventos, líder en renta de bocinas y equipo de audio profesional en Ciudad de México. Socios comerciales de REDEIL con más de 500 eventos exitosos.",
+      "imagen": "../img/img-index/bocinas-para-bodas.webp",
+      "categoria": "Socios Comerciales",
+      "autor": "REDEIL Team",
+      "url": "articulos/sonido-para-eventos-renta-bocinas-cdmx.html",
+      "lecturaMinutos": 8
+    },
+    {
+      "id": "renta-de-bocinas-cdmx-eventos-profesionales",
+      "titulo": "Renta de Bocinas en CDMX: Audio Profesional para Eventos",
+      "descripcion": "Renta de bocinas profesionales en CDMX para bodas, XV años, conferencias y fiestas. REDEIL ofrece el mejor equipo de audio con servicio integral.",
+      "imagen": "../img/img-index/bocinas-para-bodas.webp",
+      "categoria": "Guías",
+      "autor": "REDEIL Team",
+      "url": "articulos/renta-de-bocinas-cdmx-eventos-profesionales.html",
+      "lecturaMinutos": 15
+    },
+    {
+      "id": "canones-led-rgbw-efectos-neon-cdmx",
+      "titulo": "Cañones LED RGBW con Efectos Neón para Eventos en CDMX",
+      "descripcion": "Descubre cómo los cañones LED RGBW transforman eventos en Polanco, Lomas y Santa Fe con efectos de luz neón vibrantes y UV. Guía completa con aplicaciones.",
+      "imagen": "../img/img-index/luz-neon.webp",
+      "categoria": "Guías",
+      "autor": "REDEIL Team",
+      "url": "articulos/canones-led-rgbw-efectos-neon-cdmx.html",
+      "lecturaMinutos": 12
+    },
+    {
+      "id": "iluminacion-neon-bodas-tendencias",
+      "titulo": "Iluminación Neón para Bodas: Guía Completa de Tendencias y Efectos",
+      "descripcion": "Descubre las últimas tendencias en iluminación neón para bodas 2025. Efectos LED RGBW, uplighting romántico y decoración con luz UV para bodas en CDMX.",
+      "imagen": "../img/img-index/city-color.webp",
+      "categoria": "Guías",
+      "autor": "REDEIL Team",
+      "url": "articulos/iluminacion-neon-para-bodas-tendencias-efectos.html",
+      "lecturaMinutos": 12
+    },
+    {
+      "id": "luz-negra-uv-fiestas-neon",
+      "titulo": "Luz Negra UV para Fiestas Neón: Todo lo que Necesitas Saber",
+      "descripcion": "Guía completa de luz negra UV para fiestas temáticas. Materiales fluorescentes, decoración, equipos profesionales y efectos espectaculares en CDMX.",
+      "imagen": "../img/img-index/luz-negra.webp",
+      "categoria": "Guías",
+      "autor": "REDEIL Team",
+      "url": "articulos/luz-negra-uv-fiestas-tematicas-neon.html",
+      "lecturaMinutos": 11
+    },
+    {
+      "id": "uplighting-arquitectonico-espacios",
+      "titulo": "Uplighting Arquitectónico: Cómo Transformar Espacios con Luz Neón",
+      "descripcion": "Guía profesional de uplighting arquitectónico. Aprende a transformar cualquier espacio con iluminación LED desde el piso para eventos en CDMX.",
+      "imagen": "../img/img-index/iluminacin-arquitectonica.webp",
+      "categoria": "Guías",
+      "autor": "REDEIL Team",
+      "url": "articulos/uplighting-arquitectonico-transformar-espacios.html",
+      "lecturaMinutos": 10
+    },
+    {
+      "id": "iluminacion-neon-xv-anos",
+      "titulo": "Iluminación Neón para XV Años: Ideas Creativas y Modernas",
+      "descripcion": "Ideas creativas de iluminación neón para XV años 2025. Efectos LED, zonas Instagram, decoración UV y tendencias modernas para quinceañeras en CDMX.",
+      "imagen": "../img/img-index/bocinas-para-xv-anos.webp",
+      "categoria": "Guías",
+      "autor": "REDEIL Team",
+      "url": "articulos/iluminacion-neon-xv-anos-ideas-creativas.html",
+      "lecturaMinutos": 11
+    },
+    {
+      "id": "efectos-neon-vs-tradicional",
+      "titulo": "Efectos de Luz Neón vs Iluminación Tradicional: Comparativa",
+      "descripcion": "Comparativa profesional entre LED RGBW y iluminación tradicional. Análisis técnico, ROI, eficiencia energética y beneficios para eventos.",
+      "imagen": "../img/img-index/cabezas-moviles.webp",
+      "categoria": "Guías",
+      "autor": "REDEIL Team",
+      "url": "articulos/efectos-neon-vs-iluminacion-tradicional-comparativa.html",
+      "lecturaMinutos": 12
+    },
+    {
+      "id": "eventos-corporativos-cdmx-tecnologia-audiovisual",
+      "titulo": "Eventos Corporativos CDMX: Tecnología Audiovisual Profesional",
+      "descripcion": "Guía completa de tecnología audiovisual para eventos corporativos en CDMX. Audio profesional, video HD, iluminación de marca y producción técnica impecable.",
+      "imagen": "../img/img-index/conferencias.webp",
+      "categoria": "Guías",
+      "autor": "REDEIL Team",
+      "url": "articulos/eventos-corporativos-cdmx-tecnologia-audiovisual.html",
+      "lecturaMinutos": 15
+    },
+    {
+      "id": "guia-completa-equipo-audio-iluminacion-eventos",
+      "titulo": "Guía Definitiva: Cómo Elegir Equipo de Audio e Iluminación",
+      "descripcion": "Todo lo que necesitas saber para elegir equipo profesional de audio e iluminación según tu tipo de evento, presupuesto y objetivos en CDMX.",
+      "imagen": "../img/img-index/bocinas-para-bodas.webp",
+      "categoria": "Guías",
+      "autor": "REDEIL Team",
+      "url": "articulos/guia-completa-equipo-audio-iluminacion-eventos.html",
+      "lecturaMinutos": 18
+    },
+    {
+      "id": "guirnaldas-vintage-bodas-decoracion",
+      "titulo": "Guirnaldas Vintage para Bodas: Guía Completa de Decoración Luminosa",
+      "descripcion": "Descubre cómo las guirnaldas vintage transforman bodas en eventos únicos. Guía completa de estilos, instalación y tendencias 2025 para tu celebración perfecta.",
+      "imagen": "../img/img-index/guirnaldas.webp",
+      "categoria": "Guías",
+      "autor": "REDEIL Team",
+      "url": "articulos/guirnaldas-vintage-bodas-decoracion-luminosa.html",
+      "lecturaMinutos": 12
+    },
+    {
+      "id": "iluminacion-romantica-guirnaldas",
+      "titulo": "Iluminación Romántica con Guirnaldas: Ideas y Tendencias para tu Boda",
+      "descripcion": "Crea ambientes románticos únicos con guirnaldas de luz. Descubre ideas, combinaciones y tendencias 2025 para iluminar tu boda de manera espectacular.",
+      "imagen": "../img/img-index/city-light.webp",
+      "categoria": "Inspiración",
+      "autor": "REDEIL Team",
+      "url": "articulos/iluminacion-romantica-guirnaldas-ideas-tendencias.html",
+      "lecturaMinutos": 10
+    },
+    {
+      "id": "focos-edison-bodas-elegancia",
+      "titulo": "Focos Edison para Bodas: Elegancia Vintage en tu Celebración",
+      "descripcion": "Los focos Edison aportan elegancia vintage única a bodas. Descubre tipos, instalación y cómo crear ambientes sofisticados con estas bombillas decorativas.",
+      "imagen": "../img/img-index/bocinas-para-bodas.webp",
+      "categoria": "Guías",
+      "autor": "REDEIL Team",
+      "url": "articulos/focos-edison-bodas-elegancia-vintage.html",
+      "lecturaMinutos": 11
+    },
+    {
+      "id": "tendencias-iluminacion-bodas-2025",
+      "titulo": "Tendencias en Iluminación para Bodas 2025: Del Vintage al Moderno",
+      "descripcion": "Descubre las tendencias de iluminación para bodas 2025: guirnaldas vintage, neón personalizado, iluminación sostenible y más. Guía completa con ideas innovadoras.",
+      "imagen": "../img/img-index/cascadas-led.webp",
+      "categoria": "Tendencias",
+      "autor": "REDEIL Team",
+      "url": "articulos/tendencias-iluminacion-bodas-2025.html",
+      "lecturaMinutos": 13
+    },
+    {
+      "id": "presupuesto-iluminacion-bodas",
+      "titulo": "Presupuesto de Iluminación para Bodas: Guía Completa de Costos 2025",
+      "descripcion": "Guía completa de presupuesto para iluminación de bodas. Descubre costos reales, cómo optimizar inversión y qué incluir en tu paquete de iluminación.",
+      "imagen": "../img/img-index/bocinas-para-fiestas.webp",
+      "categoria": "Guías",
+      "autor": "REDEIL Team",
+      "url": "articulos/presupuesto-iluminacion-bodas-guia-completa.html",
+      "lecturaMinutos": 14
+    }
+  ]
+}

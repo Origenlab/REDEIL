@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+4. Mantener EXACTAMENTE la misma estructura del header y footer
+5. Usar SIEMPRE las clases correctas (ver sección de CLASES CSS CORRECTAS)
+
+═══════════════════════════════════════════════════════════════════════════════
+CLASES CSS CORRECTAS (NO CAMBIAR):
+═══════════════════════════════════════════════════════════════════════════════
+
+✅ CORRECTO:
+- article-header (para la sección de encabezado del artículo)
+- article-header__meta (para los metadatos: categoría y fecha)
+- article-header__category (para la categoría)
+- article-header__date (para la fecha)
+- article-header__title (para el título H1)
+- article-header__description (para la descripción)
+- article-image (para la sección de imagen)
+- article-image__img (para la imagen destacada)
+- article-content (para el contenido del artículo)
+- article-section (para cada sección del artículo)
+- article-toc (para tabla de contenidos)
+- article-faq (para preguntas frecuentes)
+- gallery (para galería de imágenes - estilo guirnaldas.html)
+- gallery__item (para cada elemento de la galería)
+- gallery__image (para la imagen dentro del item)
+- article-list-box (para cajas de listas destacadas)
+- article-cta (para llamados a la acción)
+
+❌ INCORRECTO (NUNCA USAR):
+- article__header
+- article__meta
+- article__title
+- article__container
+- article__content
+- article__section
+- article-gallery (usar "gallery" en su lugar)
+- article-gallery__item (usar "gallery__item" en su lugar)
+- article-list-grid (OBSOLETO - usar "gallery" ahora)
+
+═══════════════════════════════════════════════════════════════════════════════
+ESTRUCTURA DE ARCHIVOS:
+═══════════════════════════════════════════════════════════════════════════════
+
+CSS: ../../css/style.css
+JS: ../../js/app.min.js
+Logo: ../../img/redeil.webp (NO usar logo.webp)
+Imágenes del artículo: ../img/nombre-carpeta/imagen.webp
+Rutas relativas: Siempre usar ../../ para salir de /blog/articulos/
+
+═══════════════════════════════════════════════════════════════════════════════
+USO CORRECTO DE IMÁGENES:
+═══════════════════════════════════════════════════════════════════════════════
+
+📸 REGLA FUNDAMENTAL:
+
+1. IMAGEN PRINCIPAL (Hero Image):
+   - Ubicación: blog/img/{tema}/
+   - Uso: Imagen destacada que aparece al inicio del artículo
+   - Ruta en HTML: ../img/{tema}/nombre-imagen.webp
+
+   Ejemplo:
+   <img src="../img/bodas-guirnaldas/nombre-imagen.webp" alt="Descripción" />
+
+2. IMÁGENES DE GALERÍA:
+   - Ubicación: renta-de-iluminacion/img-{tema}/
+   - Uso: Galería de 3 imágenes en medio del artículo
+   - Ruta en HTML: ../../renta-de-iluminacion/img-{tema}/nombre-imagen.webp
+
+   Ejemplo para artículo de GUIRNALDAS:
+   <ul class="article-list-grid">
+     <li>
+       <img src="../../renta-de-iluminacion/img-guirnaldas/imagen1.webp" alt="..." />
+     </li>
+     <li>
+       <img src="../../renta-de-iluminacion/img-guirnaldas/imagen2.webp" alt="..." />
+     </li>
+     <li>
+       <img src="../../renta-de-iluminacion/img-guirnaldas/imagen3.webp" alt="..." />
+     </li>
+   </ul>
+
+   Ejemplo para artículo de LUZ NEÓN:
+   <ul class="article-list-grid">
+     <li>
+       <img src="../../renta-de-iluminacion/img-luz-negra/imagen1.webp" alt="..." />
+     </li>
+   </ul>
+
+   ⚠️ NOTA: Las carpetas están intercambiadas:
+   - Artículos de LUZ NEÓN usan: img-luz-negra/
+   - Artículos de LUZ NEGRA usan: img-luz-neon/
+
+   Ejemplo para artículo de LUZ NEGRA UV:
+   <ul class="article-list-grid">
+     <li>
+       <img src="../../renta-de-iluminacion/img-luz-neon/imagen1.webp" alt="..." />
+     </li>
+   </ul>
+
+🗂️ MAPEO DE TEMAS A CARPETAS:
+
+TEMA: Guirnaldas / Focos Edison / Iluminación Vintage
+  - Imagen principal: ../img/bodas-guirnaldas/
+  - Galería: ../../renta-de-iluminacion/img-guirnaldas/
+
+TEMA: Luz Neón LED / Letreros Neón / Iluminación Moderna
+  - Imagen principal: ../img/iluminacion-neon/
+  - Galería: ../../renta-de-iluminacion/img-luz-negra/
+
+TEMA: Luz Negra UV / Iluminación Fluorescente
+  - Imagen principal: ../img/iluminacion-neon/
+  - Galería: ../../renta-de-iluminacion/img-luz-neon/
+
+✅ ESTRUCTURA CORRECTA DE GALERÍA:
+   - Usar <ul class="article-list-grid">
+   - Cada imagen en <li>
+   - NUNCA usar <div> para la galería
+
+❌ ESTRUCTURA INCORRECTA:
+   <div class="article-list-grid">
+     <div><img /></div>  ← INCORRECTO
+   </div>
+
+═══════════════════════════════════════════════════════════════════════════════
+-->
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <title>Título del Artículo: Subtítulo Descriptivo | REDEIL</title>
+
+        <style>
+:root{--primary-color:#1d1d1f;--secondary-color:#6e6e73;--accent-color:#0071e3;--success-color:#30b952;--white:#fff;--gray-light:#f5f5f7;--gray-medium:#86868b;--font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display','Helvetica Neue',Helvetica,Arial,sans-serif;--font-weight-regular:400;--font-weight-medium:500;--font-weight-semibold:600;--font-weight-bold:700;--spacing-xs:.5rem;--spacing-sm:1rem;--spacing-md:2rem;--spacing-lg:4rem;--spacing-xl:6rem;--border-color:rgba(0,0,0,.08);--border-radius:18px}*{margin:0;padding:0;box-sizing:border-box}html{font-size:17px;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}body{font-family:var(--font-family);font-weight:var(--font-weight-regular);line-height:1.47059;color:var(--primary-color);background-color:#f5f5f7;letter-spacing:-.022em}.container{max-width:1400px;margin:0 auto;padding:0 var(--spacing-md)}h1,h2,h3,h4,h5,h6{font-weight:var(--font-weight-semibold);line-height:1.0834933333;letter-spacing:-.003em;margin:0;color:var(--primary-color)}h1{font-size:2.5rem;font-weight:var(--font-weight-bold);line-height:1.05;letter-spacing:-.015em}h2{font-size:1.25rem;font-weight:var(--font-weight-medium);line-height:1.2;letter-spacing:-.005em}p{font-size:1rem;line-height:1.381;color:var(--secondary-color);margin:0}a{color:var(--accent-color);text-decoration:none}.header{background-color:#ffffff!important;border-bottom:1px solid var(--border-color);position:sticky;top:0;z-index:1000}.header__content{display:flex;align-items:center;justify-content:space-between;padding:var(--spacing-sm) 0;min-height:60px}.header__logo .logo{display:flex;align-items:center}.logo__image{height:70px;width:auto;object-fit:contain}
+    </style>
+
+        <link rel="stylesheet" href="../../css/style.css" />
+    <link rel="stylesheet" href="../../css/mobile-menu.css" />
+
+        <meta
+      name="description"
+      content="Descripción del artículo que aparecerá en Google. Debe ser atractiva y contener palabras clave principales."
+    />
+
+        <meta
+      name="keywords"
+      content="palabra clave 1, palabra clave 2, iluminación eventos, REDEIL CDMX, palabra clave 3"
+    />
+
+    <meta name="author" content="REDEIL Team" />
+
+        <meta property="og:title" content="Título del Artículo: Subtítulo | REDEIL" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://redeil.com/blog/articulos/nombre-del-articulo.html" />
+    <meta property="og:image" content="https://redeil.com/blog/img/carpeta/imagen-destacada.webp" />
+    <meta
+      property="og:description"
+      content="Descripción para redes sociales (puede ser diferente a la meta description)."
+    />
+
+        <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Título del Artículo: Subtítulo | REDEIL" />
+    <meta name="twitter:description" content="Descripción breve para Twitter." />
+    <meta name="twitter:image" content="https://redeil.com/blog/img/carpeta/imagen-destacada.webp" />
+
+        <link rel="icon" href="../../favicon.ico" sizes="any" />
+    <link rel="icon" href="../../icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="../../icon.png" />
+
+        <link rel="manifest" href="../../site.webmanifest" />
+    <meta name="theme-color" content="#1a365d" />
+
+        <meta name="robots" content="index, follow" />
+
+        <link rel="canonical" href="https://redeil.com/blog/articulos/nombre-del-articulo.html" />
+
+        <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Título del Artículo: Subtítulo Descriptivo",
+      "image": "https://redeil.com/blog/img/carpeta/imagen-destacada.webp",
+      "datePublished": "2025-10-24",
+      "dateModified": "2025-10-24",
+      "author": {
+        "@type": "Organization",
+        "name": "REDEIL Team"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "REDEIL",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://redeil.com/img/redeil.webp"
+        }
+      },
+      "description": "Descripción completa del artículo para Schema.org (puede ser igual a meta description).",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://redeil.com/blog/articulos/nombre-del-articulo.html"
+      }
+    }
+    </script>
+  </head>
+
+  <body>
+            <header class="header">
+      <div class="container">
+        <div class="header__content">
+                    <div class="header__logo">
+            <a href="/" class="logo">
+              <img
+                src="../../img/redeil.webp"
+                alt="Redeil - Renta de Equipo para Eventos"
+                class="logo__image"
+                width="200"
+                height="77"
+                loading="eager"
+              />
+            </a>
+          </div>
+
+                    <nav class="header__nav" role="navigation" aria-label="Menú principal">
+            <ul class="nav__list">
+              <li class="nav__item nav__item--dropdown">
+                <a href="../../renta-de-iluminacion/iluminacion.html" class="nav__link">Iluminación</a>
+                <div class="nav__dropdown">
+                  <a href="../../renta-de-iluminacion/guirnaldas.html" class="nav__dropdown-link">Guirnaldas de Luces</a>
+                  <a href="../../renta-de-iluminacion/cascadas-led.html" class="nav__dropdown-link">Cascadas LED</a>
+                  <a href="../../renta-de-iluminacion/luz-neon.html" class="nav__dropdown-link">Luz Neón LED</a>
+                  <a href="../../renta-de-iluminacion/luz-negra.html" class="nav__dropdown-link">Luz Negra UV</a>
+                  <a href="../../renta-de-iluminacion/city-color.html" class="nav__dropdown-link">City Color LED</a>
+                  <a href="../../renta-de-iluminacion/sky-tracker.html" class="nav__dropdown-link">Sky Tracker</a>
+                  <a href="../../renta-de-iluminacion/cabezas-moviles.html" class="nav__dropdown-link">Cabezas Móviles</a>
+                <a href="../../renta-de-iluminacion/iluminacion-laser.html" class="nav__dropdown-link">Iluminación Láser</a>
+                <a href="renta-de-iluminacion/luces-arquitectonicas.html" class="nav__dropdown-link">Luces Arquitectónicas</a>
+                </div>
+              </li>
+              <li class="nav__item">
+                <a href="../../renta-de-bocinas/bocinas.html" class="nav__link">Audio</a>
+              </li>
+              <li class="nav__item">
+                <a href="../../equipos-para-eventos/equipos-para-eventos.html" class="nav__link">Equipos</a>
+              </li>
+              <li class="nav__item">
+                <a href="/blog/" class="nav__link">Blog</a>
+              </li>
+              <li class="nav__item">
+                <a href="../../contacto.html" class="nav__link">Contacto</a>
+              </li>
+            </ul>
+          </nav>
+
+                    <div class="header__contact">
+            <a href="tel:+525549375172" class="contact__phone" aria-label="Llamar al número 55 4937 5172">
+              <span class="contact__text">55 4937 5172</span>
+            </a>
+            <a
+              href="https://wa.me/525549375172?text=Hola%2C%20me%20interesa%20rentar%20equipo%20para%20eventos"
+              class="contact__whatsapp"
+              target="_blank"
+              rel="noopener"
+              aria-label="Enviar un mensaje de WhatsApp a Redeil"
+            >
+              <span class="contact__text">WhatsApp</span>
+            </a>
+          </div>
+
+                    <button class="mobile-menu-btn" id="mobileMenuBtn" type="button" aria-label="Menú">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+
+                        <div class="mobile-menu" id="mobileMenu">
+          <div class="mobile-menu-dropdown">
+            <a href="#" class="mobile-menu-link mobile-menu-dropdown-toggle">Iluminación</a>
+                        <div class="mobile-menu-submenu">
+              <a href="../../renta-de-iluminacion/guirnaldas.html">Guirnaldas de Luces</a>
+              <a href="../../renta-de-iluminacion/cascadas-led.html">Cascadas LED</a>
+              <a href="../../renta-de-iluminacion/luz-neon.html">Luz Neón LED</a>
+              <a href="../../renta-de-iluminacion/luz-negra.html">Luz Negra UV</a>
+              <a href="../../renta-de-iluminacion/city-color.html">City Color LED</a>
+              <a href="../../renta-de-iluminacion/sky-tracker.html">Sky Tracker</a>
+              <a href="../../renta-de-iluminacion/cabezas-moviles.html">Cabezas Móviles</a>
+              <a href="../../renta-de-iluminacion/iluminacion-laser.html">Iluminación Láser</a>
+              <a href="../../renta-de-iluminacion/luces-arquitectonicas.html">Luces Arquitectónicas</a>
+              <a href="../../renta-de-iluminacion/proyector-de-gobos.html">Proyector de Gobos</a>
+            </div>
+          </div>
+          <a href="../../renta-de-bocinas/bocinas.html" class="mobile-menu-link">Audio</a>
+          <a href="../../equipos-para-eventos/equipos-para-eventos.html" class="mobile-menu-link">Equipos</a>
+          <a href="/blog/" class="mobile-menu-link">Blog</a>
+          <a href="../../contacto.html" class="mobile-menu-link">Contacto</a>
+          <a href="tel:+525549375172" class="mobile-menu-link mobile-menu-phone">55 4937 5172</a>
+          <a href="https://wa.me/525549375172?text=Hola%2C%20me%20interesa%20rentar%20equipo%20para%20eventos" class="mobile-menu-link mobile-menu-whatsapp" target="_blank" rel="noopener">WhatsApp</a>
+        </div>
+      </div>
+    </header>
+
+        <section class="article-header">
+      <div class="container">
+        <div class="article-header__meta">
+          <span class="article-header__category">Guías</span>
+          <time class="article-header__date" datetime="2025-10-24">24 de Octubre, 2025</time>
+        </div>
+        <h1 class="article-header__title">Título Principal del Artículo: Subtítulo Descriptivo</h1>
+        <p class="article-header__description">Descripción introductoria del artículo que engancha al lector. Debe ser concisa pero informativa. Incluir tiempo de lectura opcional: X min de lectura.</p>
+      </div>
+    </section>
+
+        <section class="section" style="padding: 2rem 0;">
+      <div class="container">
+        <div class="article-image">
+          <img
+            src="../img/carpeta/imagen-destacada.webp"
+            alt="Descripción de la imagen destacada"
+            class="article-image__img"
+            loading="eager"
+          />
+        </div>
+      </div>
+    </section>
+
+        <article class="article-content">
+      <div class="container">
+
+                <div class="intro-box">
+          <p>Párrafo introductorio con <strong>palabras clave importantes en negrita</strong>. Puedes incluir <a href="../../renta-de-iluminacion/guirnaldas.html">enlaces internos relevantes</a> a servicios.</p>
+          <p>Segundo párrafo de introducción que expande la idea principal y prepara al lector para el contenido.</p>
+        </div>
+
+                <nav class="article-toc">
+          <h2 class="article-toc__title">Contenido</h2>
+          <ul class="article-toc__list">
+            <li><a href="#seccion-1" class="article-toc__link">Título de Sección 1</a></li>
+            <li><a href="#seccion-2" class="article-toc__link">Título de Sección 2</a></li>
+            <li><a href="#seccion-3" class="article-toc__link">Título de Sección 3</a></li>
+            <li><a href="#faq" class="article-toc__link">Preguntas Frecuentes</a></li>
+          </ul>
+        </nav>
+
+                <section id="seccion-1" class="article-section">
+          <h2>Título de la Primera Sección</h2>
+          <p>Contenido de la sección. Usa párrafos claros y concisos. <strong>Resalta información importante</strong> con negritas.</p>
+
+          <h3>Subsección 1.1</h3>
+          <p>Contenido de la subsección con información específica.</p>
+
+                    <ul>
+            <li>Primer punto importante</li>
+            <li>Segundo punto importante</li>
+            <li>Tercer punto importante</li>
+            <li>Cuarto punto importante</li>
+          </ul>
+        </section>
+
+                <div class="gallery">
+          <div class="gallery__item">
+            <img
+              src="../../renta-de-iluminacion/img-guirnaldas/imagen-1.webp"
+              alt="Descripción imagen 1"
+              class="gallery__image"
+              width="800"
+              height="533"
+              loading="lazy"
+            />
+          </div>
+
+          <div class="gallery__item">
+            <img
+              src="../../renta-de-iluminacion/img-guirnaldas/imagen-2.webp"
+              alt="Descripción imagen 2"
+              class="gallery__image"
+              width="800"
+              height="533"
+              loading="lazy"
+            />
+          </div>
+
+          <div class="gallery__item">
+            <img
+              src="../../renta-de-iluminacion/img-guirnaldas/imagen-3.webp"
+              alt="Descripción imagen 3"
+              class="gallery__image"
+              width="800"
+              height="533"
+              loading="lazy"
+            />
+          </div>
+        </div>
+
+                <section id="seccion-2" class="article-section">
+          <h2>Título de la Segunda Sección</h2>
+          <p>Contenido de la segunda sección.</p>
+
+                    <div class="article-list-box">
+            <h4>Puntos Clave a Recordar:</h4>
+            <ul>
+              <li><strong>Punto 1:</strong> Explicación del punto</li>
+              <li><strong>Punto 2:</strong> Explicación del punto</li>
+              <li><strong>Punto 3:</strong> Explicación del punto</li>
+            </ul>
+          </div>
+        </section>
+
+                <div class="article-cta">
+          <h3>¿Necesitas Iluminación Profesional para tu Evento?</h3>
+          <p>Contamos con todo el <strong>equipo profesional</strong> que necesitas. Cotización sin compromiso.</p>
+          <a href="https://wa.me/525549375172?text=Hola%2C%20necesito%20cotización%20de%20iluminación" class="btn btn--primary" target="_blank" rel="noopener">Solicitar Cotización</a>
+        </div>
+
+                <section id="seccion-3" class="article-section">
+          <h2>Título de la Tercera Sección</h2>
+
+                    <ol>
+            <li>Primer paso del proceso</li>
+            <li>Segundo paso del proceso</li>
+            <li>Tercer paso del proceso</li>
+          </ol>
+
+          <h3>Subsección 3.1</h3>
+          <p>Más contenido relevante con información valiosa para el lector.</p>
+        </section>
+
+                <section id="faq" class="article-section">
+          <h2>Preguntas Frecuentes</h2>
+
+          <div class="article-faq">
+            <details class="article-faq__item">
+              <summary class="article-faq__question">¿Primera pregunta frecuente?</summary>
+              <div class="article-faq__answer">
+                <p>Respuesta a la primera pregunta. Puede incluir múltiples párrafos y listas:</p>
+                <ul>
+                  <li>Punto 1 de la respuesta</li>
+                  <li>Punto 2 de la respuesta</li>
+                  <li>Punto 3 de la respuesta</li>
+                </ul>
+              </div>
+            </details>
+
+            <details class="article-faq__item">
+              <summary class="article-faq__question">¿Segunda pregunta frecuente?</summary>
+              <div class="article-faq__answer">
+                <p>Respuesta a la segunda pregunta con información relevante.</p>
+              </div>
+            </details>
+
+            <details class="article-faq__item">
+              <summary class="article-faq__question">¿Tercera pregunta frecuente?</summary>
+              <div class="article-faq__answer">
+                <p>Respuesta a la tercera pregunta.</p>
+              </div>
+            </details>
+          </div>
+        </section>
+
+                <div class="article-list-box">
+          <h4>Artículos Relacionados</h4>
+          <ul>
+            <li><a href="articulo-relacionado-1.html">Título del Artículo Relacionado 1</a></li>
+            <li><a href="articulo-relacionado-2.html">Título del Artículo Relacionado 2</a></li>
+            <li><a href="articulo-relacionado-3.html">Título del Artículo Relacionado 3</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </article>
+
+        <footer class="footer">
+      <div class="footer__container">
+                <div class="footer__main">
+          <div class="footer__section">
+            <div class="footer__logo">
+              <h3 class="footer__brand">REDEIL</h3>
+              <p class="footer__tagline">
+                Equipos para eventos de alta calidad
+              </p>
+            </div>
+            <div class="footer__contact-quick">
+              <a href="tel:+525549375172" class="footer__contact-link">
+                <span class="footer__contact-label">Llamar ahora</span>
+                <span class="footer__contact-value">+52 55 4937 5172</span>
+              </a>
+              <a href="mailto:contacto@redeil.com" class="footer__contact-link">
+                <span class="footer__contact-label">Email</span>
+                <span class="footer__contact-value">contacto@redeil.com</span>
+              </a>
+            </div>
+          </div>
+
+                    <div class="footer__section">
+            <h4 class="footer__title">
+              <a
+                href="../../renta-de-iluminacion/iluminacion.html"
+                class="footer__title-link"
+                >Iluminación</a
+              >
+            </h4>
+            <ul class="footer__list">
+                            <li>
+                <a href="../../renta-de-iluminacion/guirnaldas.html" class="footer__link">Guirnaldas</a>
+              </li>
+              <li><a href="../../renta-de-iluminacion/cascadas-led.html" class="footer__link">Cascadas LED</a></li>
+              <li><a href="../../renta-de-iluminacion/luz-neon.html" class="footer__link">Luz neón</a></li>
+              <li><a href="../../renta-de-iluminacion/luz-negra.html" class="footer__link">Luz Negra</a></li>
+              <li><a href="../../renta-de-iluminacion/city-color.html" class="footer__link">City Color LED</a></li>
+              <li><a href="../../renta-de-iluminacion/sky-tracker.html" class="footer__link">Sky Tracker</a></li>
+              <li><a href="../../renta-de-iluminacion/cabezas-moviles.html" class="footer__link">Cabezas Móviles</a></li>
+              <li><a href="../../renta-de-iluminacion/iluminacion-laser.html" class="footer__link">Iluminación Láser</a></li>
+              <li><a href="../../renta-de-iluminacion/luces-arquitectonicas.html" class="footer__link">Luces Arquitectónicas</a></li>
+              <li><a href="../../renta-de-iluminacion/proyector-de-gobos.html" class="footer__link">Proyector de Gobos</a></li>
+</ul>
+          </div>
+
+          <div class="footer__section">
+            <h4 class="footer__title">
+              <a href="../../renta-de-bocinas/bocinas.html" class="footer__title-link"
+                >Audio</a
+              >
+            </h4>
+            <ul class="footer__list">
+              <li>
+                <a href="../../renta-de-bocinas/bocinas.html#audio" class="footer__link">Bocinas para bodas</a>
+              </li>
+              <li>
+                <a href="../../renta-de-bocinas/bocinas.html#audio" class="footer__link">Bocinas para XV años</a>
+              </li>
+              <li>
+                <a href="../../renta-de-bocinas/bocinas.html#audio" class="footer__link">Bocinas para fiestas</a>
+              </li>
+            </ul>
+          </div>
+
+                    <div class="footer__section">
+            <h4 class="footer__title">
+              <a
+                href="../../equipos-para-eventos/equipos-para-eventos.html"
+                class="footer__title-link"
+                >Equipos Especiales</a
+              >
+            </h4>
+            <ul class="footer__list">
+              <li>
+                <a
+                  href="../../equipos-para-eventos/equipos-para-eventos.html#servicios"
+                  class="footer__link"
+                  >Bolas Disco</a
+                >
+              </li>
+              <li>
+                <a
+                  href="../../equipos-para-eventos/equipos-para-eventos.html#servicios"
+                  class="footer__link"
+                  >Máquina de Confeti</a
+                >
+              </li>
+              <li>
+                <a
+                  href="../../equipos-para-eventos/equipos-para-eventos.html#servicios"
+                  class="footer__link"
+                  >Renta de podium</a
+                >
+              </li>
+              <li>
+                <a
+                  href="../../equipos-para-eventos/equipos-para-eventos.html#servicios"
+                  class="footer__link"
+                  >Pantalla Inflable</a
+                >
+              </li>
+            </ul>
+          </div>
+
+                    <div class="footer__section">
+            <h4 class="footer__title">Información</h4>
+            <ul class="footer__list">
+              <li>
+                <a href="/#eventos" class="footer__link">Tipos de Eventos</a>
+              </li>
+              <li>
+                <a href="/#testimonios" class="footer__link">Testimonios</a>
+              </li>
+              <li><a href="../../contacto.html" class="footer__link">Contacto</a></li>
+              <li><a href="/blog/" class="footer__link">Blog</a></li>
+              <li>
+                <a href="../../sitemap.html" class="footer__link">Mapa del Sitio</a>
+              </li>
+            </ul>
+            <div class="footer__business-info">
+              <p class="footer__business-text">
+                <strong>Horarios de Atención:</strong><br />
+                Lunes a Domingo<br />
+                8:00 AM - 11:00 PM
+              </p>
+              <p class="footer__business-text">
+                <strong>Cobertura:</strong><br />
+                Ciudad de México y Estado de México
+              </p>
+            </div>
+          </div>
+        </div>
+
+                <div class="footer__social">
+          <div class="footer__social-content">
+            <h4 class="footer__social-title">Conecta con nosotros</h4>
+            <div class="footer__social-links">
+              <a
+                href="https://wa.me/525549375172?text=Hola%20REDEIL%2C%20necesito%20información%20sobre%20sus%20servicios%20para%20eventos"
+                class="footer__whatsapp"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                WhatsApp
+              </a>
+            </div>
+            <p class="footer__social-desc">
+              Obtén respuesta inmediata a través de WhatsApp para cotizaciones
+              rápidas y consultas
+            </p>
+          </div>
+        </div>
+
+                <div class="footer__divider"></div>
+
+                <div class="footer__bottom">
+          <div class="footer__bottom-left">
+            <p class="footer__copyright">
+              © 2025 REDEIL. Todos los derechos reservados.
+            </p>
+            <p class="footer__legal">
+              Empresa especializada en alquiler de equipos para eventos en CDMX
+              y Estado de México
+            </p>
+          </div>
+          <div class="footer__bottom-right">
+            <div class="footer__certifications">
+              <span class="footer__cert">Empresa Establecida</span>
+              <span class="footer__cert">+10 años de experiencia</span>
+              <span class="footer__cert">Equipos Certificados</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+        <script src="../../js/mobile-menu.js"></script>
+        <script src="../../js/app.min.js" defer></script>
+  </body>
+</html>
+

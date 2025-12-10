@@ -1,0 +1,93 @@
+/**
+ * REDEIL - JavaScript para Formulario de Contacto
+ * Código limpio y funcional
+ */
+
+document.addEventListener('DOMContentLoaded', function() {
+
+    // === FORMULARIO DE CONTACTO ===
+    const contactForm = document.getElementById('contactForm');
+    
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Recopilar datos del formulario
+            const formData = new FormData(contactForm);
+            const data = {};
+            
+            // Datos básicos
+            for (let [key, value] of formData.entries()) {
+                if (key === 'servicios') {
+                    if (!data.servicios) data.servicios = [];
+                    data.servicios.push(value);
+                } else {
+                    data[key] = value;
+                }
+            }
+            
+            // Crear mensaje para WhatsApp
+            let mensaje = "🎉 *SOLICITUD DE COTIZACIÓN DETALLADA* 🎉\n\n";
+            mensaje += `📝 *Nombre:* ${data.nombre || 'No especificado'}\n`;
+            mensaje += `📧 *Email:* ${data.email || 'No especificado'}\n`;
+            mensaje += `📱 *Teléfono:* ${data.telefono || 'No especificado'}\n`;
+            mensaje += `🎊 *Tipo de evento:* ${data.tipoEvento || 'No especificado'}\n`;
+            mensaje += `📅 *Fecha del evento:* ${data.fechaEvento || 'No especificada'}\n`;
+            mensaje += `👥 *Número de invitados:* ${data.numInvitados || 'No especificado'}\n`;
+            mensaje += `📍 *Ubicación:* ${data.ubicacion || 'No especificada'}\n`;
+            
+            if (data.servicios && data.servicios.length > 0) {
+                mensaje += `⚡ *Servicios de interés:*\n`;
+                data.servicios.forEach(servicio => {
+                    mensaje += `   • ${servicio}\n`;
+                });
+            }
+            
+            if (data.descripcion) {
+                mensaje += `💭 *Descripción del evento:*\n${data.descripcion}\n`;
+            }
+            
+            mensaje += `\n✅ Cliente acepta política de privacidad\n`;
+            mensaje += `\n🕐 Solicitud enviada: ${new Date().toLocaleString('es-MX')}`;
+            
+            // Codificar mensaje para URL
+            const mensajeCodificado = encodeURIComponent(mensaje);
+            
+            // Crear URL de WhatsApp
+            const whatsappURL = `https://wa.me/525549375172?text=${mensajeCodificado}`;
+            
+            // Abrir WhatsApp
+            window.open(whatsappURL, '_blank');
+            
+            // Opcional: Limpiar formulario después del envío
+            contactForm.reset();
+            
+            // Mostrar confirmación
+            showToastNotification('¡Perfecto! Tu solicitud se ha enviado a WhatsApp. Te responderemos muy pronto.');
+        });
+    }
+
+    // Función para mostrar notificación
+    function showToastNotification(message) {
+        const toast = document.createElement('div');
+        toast.className = 'toast-notification';
+        toast.textContent = message;
+        document.body.appendChild(toast);
+
+        // Animar entrada
+        setTimeout(() => {
+            toast.classList.add('show');
+        }, 100);
+
+        // Animar salida y eliminar después de unos segundos
+        setTimeout(() => {
+            toast.classList.remove('show');
+            setTimeout(() => {
+                if (document.body.contains(toast)) {
+                    document.body.removeChild(toast);
+                }
+            }, 500); // Coincidir con el tiempo de la transición de CSS
+        }, 5000); // 5 segundos
+    }
+
+});

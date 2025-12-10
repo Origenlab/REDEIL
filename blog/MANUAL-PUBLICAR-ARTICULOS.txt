@@ -1,0 +1,325 @@
+===============================================================================
+  MANUAL PARA PUBLICAR ARTÍCULOS EN EL BLOG DE REDEIL
+===============================================================================
+
+Este manual te enseñará cómo publicar un nuevo artículo en el blog de forma
+simple y rápida, SIN necesidad de conocimientos técnicos avanzados.
+
+===============================================================================
+  PASO 1: PREPARAR EL CONTENIDO Y LA IMAGEN
+===============================================================================
+
+Antes de empezar, asegúrate de tener:
+
+  1. El título del artículo
+  2. La descripción corta (2-3 líneas)
+  3. El contenido completo del artículo escrito
+  4. Una imagen destacada en formato JPG o PNG
+     - Tamaño recomendado: 1200x675 píxeles (proporción 16:9)
+     - Peso máximo: 200KB (comprime la imagen si es necesario)
+  5. La categoría del artículo (Guías, Tendencias, Tips, o Inspiración)
+
+===============================================================================
+  PASO 2: SUBIR LA IMAGEN
+===============================================================================
+
+  1. Renombra tu imagen con un nombre descriptivo, SIN espacios ni acentos.
+     Ejemplo: "tendencias-iluminacion-2025.jpg"
+
+  2. Sube la imagen a la carpeta: blog/img/
+
+===============================================================================
+  PASO 3: CREAR EL ARCHIVO DEL ARTÍCULO
+===============================================================================
+
+  1. Ve a la carpeta: blog/articulos/
+
+  2. Copia el archivo "plantilla.html" y renómbralo con el nombre de tu
+     artículo (sin espacios, sin acentos, todo en minúsculas).
+     Ejemplo: "tendencias-iluminacion-eventos-2025.html"
+
+  3. Abre el archivo con un editor de texto (Notepad++, Sublime Text, o
+     incluso el Bloc de Notas de Windows).
+
+===============================================================================
+  PASO 4: EDITAR EL ARTÍCULO
+===============================================================================
+
+En el archivo HTML que acabas de crear, busca los comentarios que dicen:
+<!-- EDITAR: ... -->
+
+Estos comentarios te indican qué debes cambiar. A continuación te explico
+cada sección:
+
+┌─────────────────────────────────────────────────────────────────────────┐
+│ SECCIÓN 1: TÍTULO Y META DESCRIPCIÓN (Líneas 7-15 aproximadamente)     │
+└─────────────────────────────────────────────────────────────────────────┘
+
+  Busca:
+    <!-- EDITAR: Título del artículo (70 caracteres máximo) -->
+    <title>Título del Artículo - Blog REDEIL</title>
+
+  Cambia por tu título real:
+    <title>Tendencias en Iluminación para Eventos 2025 - Blog REDEIL</title>
+
+  Busca:
+    <!-- EDITAR: Meta descripción (155 caracteres máximo) -->
+    <meta name="description" content="Descripción breve..." />
+
+  Cambia por tu descripción:
+    <meta name="description" content="Descubre las últimas tendencias
+    en iluminación profesional para bodas y eventos corporativos." />
+
+┌─────────────────────────────────────────────────────────────────────────┐
+│ SECCIÓN 2: KEYWORDS (Línea 18 aproximadamente)                         │
+└─────────────────────────────────────────────────────────────────────────┘
+
+  Busca:
+    <!-- EDITAR: Keywords del artículo -->
+    <meta name="keywords" content="..." />
+
+  Cambia por palabras clave relacionadas:
+    <meta name="keywords" content="iluminación eventos 2025, tendencias
+    iluminación bodas, luz neón LED, REDEIL" />
+
+┌─────────────────────────────────────────────────────────────────────────┐
+│ SECCIÓN 3: URLS Y REDES SOCIALES (Líneas 25-45 aproximadamente)        │
+└─────────────────────────────────────────────────────────────────────────┘
+
+  Busca TODOS los lugares donde aparece:
+    nombre-del-articulo.html
+
+  Y cámbialos por el nombre real de tu archivo:
+    tendencias-iluminacion-eventos-2025.html
+
+  Busca TODOS los lugares donde aparece:
+    nombre-del-articulo.jpg
+
+  Y cámbialos por el nombre real de tu imagen:
+    tendencias-iluminacion-2025.jpg
+
+┌─────────────────────────────────────────────────────────────────────────┐
+│ SECCIÓN 4: SCHEMA.ORG / JSON-LD (Líneas 55-75 aproximadamente)         │
+└─────────────────────────────────────────────────────────────────────────┘
+
+  Esta sección ayuda a Google a entender tu artículo. Edita:
+
+  - "headline": "Título del artículo"
+  - "image": "URL de la imagen"
+  - "datePublished": "2025-10-24" (fecha de hoy en formato YYYY-MM-DD)
+  - "dateModified": "2025-10-24" (misma fecha que datePublished)
+  - "description": "Descripción completa del artículo"
+
+┌─────────────────────────────────────────────────────────────────────────┐
+│ SECCIÓN 5: HEADER DEL ARTÍCULO (Líneas 200-220 aproximadamente)        │
+└─────────────────────────────────────────────────────────────────────────┘
+
+  Busca:
+    <!-- EDITAR: Toda esta sección con los datos del artículo -->
+    <span class="article-header__category">Categoría</span>
+
+  Cambia "Categoría" por una de estas opciones:
+    - Guías
+    - Tendencias
+    - Tips
+    - Inspiración
+
+  Cambia también:
+    <span class="article-header__date">24 de octubre de 2025</span>
+
+  Por la fecha actual en formato: "24 de octubre de 2025"
+
+  Cambia:
+    <h1 class="article-header__title">Título del Artículo</h1>
+
+  Por tu título completo.
+
+  Cambia:
+    <p class="article-header__description">
+      Descripción introductoria...
+    </p>
+
+  Por una descripción de 2-3 líneas que enganche al lector.
+
+┌─────────────────────────────────────────────────────────────────────────┐
+│ SECCIÓN 6: IMAGEN DESTACADA (Línea 230 aproximadamente)                │
+└─────────────────────────────────────────────────────────────────────────┘
+
+  Busca:
+    src="../../blog/img/nombre-del-articulo.jpg"
+    alt="Título del Artículo"
+
+  Cambia por el nombre de tu imagen y el título de tu artículo.
+
+┌─────────────────────────────────────────────────────────────────────────┐
+│ SECCIÓN 7: CONTENIDO DEL ARTÍCULO (Líneas 240 en adelante)             │
+└─────────────────────────────────────────────────────────────────────────┘
+
+  Aquí escribes todo el contenido de tu artículo. Usa la estructura HTML
+  que ya viene en la plantilla:
+
+  Para PÁRRAFOS:
+    <p>
+      Tu texto aquí...
+    </p>
+
+  Para SUBTÍTULOS GRANDES (H2):
+    <h2>Tu Subtítulo Aquí</h2>
+
+  Para SUBTÍTULOS PEQUEÑOS (H3):
+    <h3>Tu Subtítulo Aquí</h3>
+
+  Para LISTAS CON VIÑETAS:
+    <ul>
+      <li>Primer punto</li>
+      <li>Segundo punto</li>
+      <li>Tercer punto</li>
+    </ul>
+
+  Para LISTAS NUMERADAS:
+    <ol>
+      <li>Primer paso</li>
+      <li>Segundo paso</li>
+      <li>Tercer paso</li>
+    </ol>
+
+  Para NEGRITAS:
+    <strong>texto en negritas</strong>
+
+  Para ENLACES:
+    <a href="../../contacto.html">texto del enlace</a>
+
+===============================================================================
+  PASO 5: AGREGAR EL ARTÍCULO AL ÍNDICE (articulos.json)
+===============================================================================
+
+  1. Abre el archivo: blog/articulos.json
+
+  2. Dentro del archivo verás una estructura como esta:
+
+     {
+       "articulos": [
+         {
+           "id": "articulo-1",
+           ...
+         },
+         {
+           "id": "articulo-2",
+           ...
+         }
+       ]
+     }
+
+  3. Agrega tu nuevo artículo AL PRINCIPIO (después de la línea
+     "articulos": [), copiando esta estructura:
+
+     {
+       "id": "nombre-del-articulo-sin-extension",
+       "titulo": "Título Completo del Artículo",
+       "descripcion": "Descripción corta de 2-3 líneas máximo.",
+       "imagen": "blog/img/nombre-imagen.jpg",
+       "fecha": "2025-10-24",
+       "categoria": "Tendencias",
+       "autor": "REDEIL Team",
+       "url": "blog/articulos/nombre-del-articulo.html",
+       "lecturaMinutos": 8
+     },
+
+     ⚠️  IMPORTANTE: No olvides la COMA (,) al final del bloque.
+
+  EJEMPLO COMPLETO:
+
+  {
+    "articulos": [
+      {
+        "id": "tendencias-iluminacion-eventos-2025",
+        "titulo": "Tendencias en Iluminación para Eventos 2025",
+        "descripcion": "Descubre las últimas tendencias en iluminación
+                        profesional para bodas y eventos corporativos.",
+        "imagen": "blog/img/tendencias-iluminacion-2025.jpg",
+        "fecha": "2025-10-24",
+        "categoria": "Tendencias",
+        "autor": "REDEIL Team",
+        "url": "blog/articulos/tendencias-iluminacion-eventos-2025.html",
+        "lecturaMinutos": 8
+      },
+      {
+        "id": "otro-articulo-anterior",
+        ...
+      }
+    ]
+  }
+
+===============================================================================
+  PASO 6: SUBIR LOS ARCHIVOS AL SERVIDOR
+===============================================================================
+
+  Debes subir 3 archivos:
+
+  1. La imagen: blog/img/nombre-de-tu-imagen.jpg
+  2. El artículo HTML: blog/articulos/nombre-de-tu-articulo.html
+  3. El índice JSON actualizado: blog/articulos.json
+
+  Usa tu cliente FTP (FileZilla, por ejemplo) para subir estos archivos
+  a las carpetas correspondientes en el servidor web.
+
+===============================================================================
+  PASO 7: VERIFICAR QUE TODO FUNCIONE
+===============================================================================
+
+  1. Abre tu navegador y ve a: https://redeil.com/blog/
+
+  2. Verifica que tu artículo aparezca en la lista principal.
+
+  3. Haz clic en "Leer artículo" y verifica que todo se vea bien:
+     - El título
+     - La imagen
+     - El contenido
+     - Los enlaces
+
+  4. Si algo no se ve bien, revisa los pasos anteriores.
+
+===============================================================================
+  SOLUCIÓN DE PROBLEMAS COMUNES
+===============================================================================
+
+  PROBLEMA: El artículo no aparece en la lista del blog
+  SOLUCIÓN: Verifica que agregaste correctamente el artículo a
+            articulos.json y que no haya errores de sintaxis (comas
+            faltantes, comillas sin cerrar, etc.).
+
+  PROBLEMA: La imagen no se carga
+  SOLUCIÓN: Verifica que el nombre de la imagen en el HTML coincida
+            EXACTAMENTE con el nombre del archivo subido (incluyendo
+            mayúsculas/minúsculas y la extensión .jpg o .png).
+
+  PROBLEMA: El artículo se ve mal (sin estilos)
+  SOLUCIÓN: Verifica que las rutas a los archivos CSS sean correctas
+            (../../css/style.min.css).
+
+  PROBLEMA: Los links del header/footer no funcionan
+  SOLUCIÓN: No modifiques las rutas del header y footer, solo edita
+            el contenido del artículo.
+
+===============================================================================
+  CONSEJOS PARA ESCRIBIR BUENOS ARTÍCULOS
+===============================================================================
+
+  ✓ Usa títulos claros y descriptivos
+  ✓ Escribe párrafos cortos (3-4 líneas máximo)
+  ✓ Usa subtítulos (H2, H3) para organizar el contenido
+  ✓ Incluye listas para información puntual
+  ✓ Usa negritas (<strong>) para resaltar conceptos clave
+  ✓ Escribe en un tono amigable pero profesional
+  ✓ Incluye llamados a la acción (contacto, cotización, etc.)
+  ✓ Revisa la ortografía y gramática antes de publicar
+
+===============================================================================
+  SOPORTE
+===============================================================================
+
+  Si tienes problemas o dudas, contacta al equipo técnico de REDEIL.
+
+  ¡Listo! Ahora ya sabes cómo publicar artículos en el blog de REDEIL.
+
+===============================================================================

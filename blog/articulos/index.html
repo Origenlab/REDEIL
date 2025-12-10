@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Articulos del Blog | REDEIL</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Explora todos los articulos del blog de REDEIL sobre iluminacion profesional, audio y equipos para eventos en CDMX y Estado de Mexico." />
+    <meta name="keywords" content="articulos iluminacion eventos, guias audio profesional, blog REDEIL, consejos eventos CDMX" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://redeil.com/blog/articulos/" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Articulos del Blog | REDEIL" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://redeil.com/blog/articulos/" />
+    <meta property="og:image" content="https://redeil.com/img/img-index/bocinas-para-bodas.webp" />
+    <meta property="og:description" content="Explora todos los articulos del blog de REDEIL sobre iluminacion profesional, audio y equipos para eventos." />
+    <meta property="og:locale" content="es_MX" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Articulos del Blog | REDEIL" />
+    <meta name="twitter:description" content="Explora todos los articulos del blog de REDEIL sobre iluminacion profesional, audio y equipos para eventos." />
+
+    <!-- Favicon -->
+    <link rel="icon" href="../../favicon.ico" sizes="any" />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../../css/style.css" />
+    <link rel="stylesheet" href="../../css/mobile-menu.css" />
+    <link rel="stylesheet" href="../../css/blog.min.css" />
+
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "Articulos del Blog REDEIL",
+        "description": "Coleccion de articulos sobre iluminacion profesional, audio y equipos para eventos",
+        "url": "https://redeil.com/blog/articulos/",
+        "isPartOf": {
+            "@type": "Blog",
+            "name": "Blog REDEIL",
+            "url": "https://redeil.com/blog/"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "REDEIL",
+            "url": "https://redeil.com"
+        }
+    }
+    </script>
+
+    <style>
+        .articles-hero {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            padding: 4rem 0;
+            text-align: center;
+        }
+        .articles-hero__title {
+            color: #ffffff;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        .articles-hero__subtitle {
+            color: rgba(255,255,255,0.8);
+            font-size: 1.125rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .articles-section {
+            background: #f5f5f7;
+            padding: 3rem 0 4rem;
+        }
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .article-card {
+            background: #ffffff;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-decoration: none;
+            display: block;
+        }
+        .article-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+        }
+        .article-card__image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            background: #e5e5e5;
+        }
+        .article-card__content {
+            padding: 1.5rem;
+        }
+        .article-card__category {
+            display: inline-block;
+            background: #0071e3;
+            color: #ffffff;
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            margin-bottom: 0.75rem;
+            text-transform: uppercase;
+        }
+        .article-card__category--socios,
+        .article-card__category--socios-comerciales {
+            background: #30b952;
+        }
+        .article-card__category--tendencias {
+            background: #ff6b35;
+        }
+        .article-card__category--inspiracion {
+            background: #9b59b6;
+        }
+        .article-card__category--tips {
+            background: #f39c12;
+        }
+        .article-card__title {
+            color: #1d1d1f;
+            font-size: 1.125rem;
+            font-weight: 600;
+            line-height: 1.4;
+            margin-bottom: 0.5rem;
+        }
+        .article-card__description {
+            color: #6e6e73;
+            font-size: 0.9375rem;
+            line-height: 1.5;
+            margin-bottom: 1rem;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        .article-card__meta {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            color: #86868b;
+            font-size: 0.8125rem;
+        }
+        .back-to-blog {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #0071e3;
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+            text-decoration: none;
+        }
+        .back-to-blog:hover {
+            text-decoration: underline;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+        .articles-count {
+            color: #6e6e73;
+            font-size: 0.9375rem;
+            margin-bottom: 1rem;
+        }
+        .loading-spinner {
+            text-align: center;
+            padding: 3rem;
+            color: #6e6e73;
+        }
+        .loading-spinner::after {
+            content: '';
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            border: 3px solid #e5e5e5;
+            border-top-color: #0071e3;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-left: 10px;
+            vertical-align: middle;
+        }
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        @media (max-width: 768px) {
+            .articles-hero {
+                padding: 2.5rem 0;
+            }
+            .articles-hero__title {
+                font-size: 1.75rem;
+            }
+            .articles-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <div id="header-placeholder"></div>
+
+    <!-- Breadcrumbs -->
+    <div id="breadcrumbs-placeholder"></div>
+
+    <!-- Hero Section -->
+    <section class="articles-hero">
+        <div class="container">
+            <h1 class="articles-hero__title">Todos los Articulos</h1>
+            <p class="articles-hero__subtitle">
+                Explora nuestra coleccion completa de guias, consejos y tendencias sobre iluminacion, audio y produccion de eventos profesionales.
+            </p>
+        </div>
+    </section>
+
+    <!-- Articles Grid -->
+    <section class="articles-section">
+        <div class="container">
+            <a href="../" class="back-to-blog">← Volver al Blog</a>
+
+            <p class="articles-count" id="articlesCount">Cargando articulos...</p>
+
+            <div class="articles-grid" id="articlesGrid">
+                <div class="loading-spinner">Cargando</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Scripts -->
+    <script src="/js/load-components.js"></script>
+    <script src="../../js/app.min.js" defer></script>
+
+    <!-- Dynamic Article Loader -->
+    <script>
+    (function() {
+        'use strict';
+
+        // Configuracion
+        const CONFIG = {
+            jsonUrls: [
+                '/blog/articulos.json',
+                '../articulos.json',
+                'https://redeil.com/blog/articulos.json'
+            ],
+            defaultImage: '/img/img-index/bocinas-para-bodas.webp',
+            categoryColors: {
+                'guias': '',
+                'guías': '',
+                'tendencias': 'article-card__category--tendencias',
+                'inspiracion': 'article-card__category--inspiracion',
+                'inspiración': 'article-card__category--inspiracion',
+                'tips': 'article-card__category--tips',
+                'socios': 'article-card__category--socios',
+                'socios comerciales': 'article-card__category--socios-comerciales'
+            }
+        };
+
+        // Funcion para corregir rutas de imagenes
+        function fixImagePath(imagePath) {
+            if (!imagePath) return CONFIG.defaultImage;
+
+            // Si ya es ruta absoluta, retornar
+            if (imagePath.startsWith('http')) return imagePath;
+            if (imagePath.startsWith('/img/')) return imagePath;
+
+            // Corregir rutas relativas
+            if (imagePath.startsWith('../img/')) {
+                return imagePath.replace('../img/', '/img/');
+            }
+            if (imagePath.startsWith('../../img/')) {
+                return imagePath.replace('../../img/', '/img/');
+            }
+            if (imagePath.includes('img-index/')) {
+                return '/img/img-index/' + imagePath.split('img-index/').pop();
+            }
+
+            return CONFIG.defaultImage;
+        }
+
+        // Funcion para corregir rutas de articulos
+        function fixArticleUrl(url) {
+            if (!url) return '#';
+
+            // Si tiene 'articulos/' al inicio, quitarlo (estamos en /articulos/)
+            if (url.startsWith('articulos/')) {
+                return url.replace('articulos/', '');
+            }
+
+            return url;
+        }
+
+        // Funcion para obtener clase de categoria
+        function getCategoryClass(categoria) {
+            if (!categoria) return '';
+            const key = categoria.toLowerCase().trim();
+            return CONFIG.categoryColors[key] || '';
+        }
+
+        // Funcion para crear HTML de una card
+        function createCardHTML(articulo) {
+            const imagenUrl = fixImagePath(articulo.imagen);
+            const articuloUrl = fixArticleUrl(articulo.url);
+            const categoryClass = getCategoryClass(articulo.categoria);
+            const lectura = articulo.lecturaMinutos || 10;
+            const autor = articulo.autor || 'REDEIL Team';
+            const categoria = articulo.categoria || 'Guias';
+
+            return `
+                <a href="${articuloUrl}" class="article-card">
+                    <img src="${imagenUrl}"
+                         alt="${articulo.titulo}"
+                         class="article-card__image"
+                         loading="lazy"
+                         onerror="this.onerror=null; this.src='${CONFIG.defaultImage}';" />
+                    <div class="article-card__content">
+                        <span class="article-card__category ${categoryClass}">${categoria}</span>
+                        <h2 class="article-card__title">${articulo.titulo}</h2>
+                        <p class="article-card__description">${articulo.descripcion}</p>
+                        <div class="article-card__meta">
+                            <span>${lectura} min de lectura</span>
+                            <span>${autor}</span>
+                        </div>
+                    </div>
+                </a>
+            `;
+        }
+
+        // Funcion para cargar articulos
+        async function loadArticles() {
+            const grid = document.getElementById('articlesGrid');
+            const countEl = document.getElementById('articlesCount');
+
+            // Intentar cada URL hasta que una funcione
+            let data = null;
+            for (const url of CONFIG.jsonUrls) {
+                try {
+                    const response = await fetch(url, {
+                        cache: 'no-cache',
+                        headers: { 'Accept': 'application/json' }
+                    });
+                    if (response.ok) {
+                        data = await response.json();
+                        console.log('JSON cargado desde:', url);
+                        break;
+                    }
+                } catch (e) {
+                    console.warn('No se pudo cargar desde:', url, e.message);
+                }
+            }
+
+            // Si no se pudo cargar el JSON, mostrar error
+            if (!data || !data.articulos || data.articulos.length === 0) {
+                grid.innerHTML = `
+                    <div style="grid-column: 1/-1; text-align: center; padding: 3rem; color: #6e6e73;">
+                        <p>No se pudieron cargar los articulos.</p>
+                        <p><a href="../" style="color: #0071e3;">Volver al blog</a></p>
+                    </div>
+                `;
+                countEl.textContent = 'Error al cargar';
+                return;
+            }
+
+            const articulos = data.articulos;
+
+            // Actualizar contador
+            countEl.textContent = `${articulos.length} articulos disponibles`;
+
+            // Generar HTML de todas las cards
+            const cardsHTML = articulos.map(createCardHTML).join('');
+            grid.innerHTML = cardsHTML;
+
+            console.log(`Cargados ${articulos.length} articulos correctamente`);
+        }
+
+        // Ejecutar cuando el DOM este listo
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', loadArticles);
+        } else {
+            loadArticles();
+        }
+    })();
+    </script>
+</body>
+</html>
