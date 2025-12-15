@@ -1,108 +1,168 @@
 /**
  * Blog System - REDEIL
- * Sistema para cargar y mostrar artículos dinámicamente desde articulos.json
+ * Sistema optimizado para cargar articulos dinamicamente desde articulos.json
+ * Compatible con automatizacion n8n
+ * Version: 2.0
  */
 
 (function() {
   'use strict';
 
-  // Configuración
+  // Configuracion
   const CONFIG = {
     jsonPath: 'articulos.json',
     articlesPerPage: 9,
-    placeholderImage: 'img/blog-placeholder.jpg'
+    placeholderImage: '../img/img-index/placeholder-blog.webp',
+    dateLocale: 'es-MX',
+    dateOptions: { year: 'numeric', month: 'long', day: 'numeric' }
   };
 
-  // Estado de la aplicación
+  // Estado de la aplicacion
   const state = {
     allArticles: [],
     filteredArticles: [],
     currentPage: 1,
-    currentCategory: 'todas'
+    currentCategory: 'todas',
+    isLoading: false
   };
 
-  // Elementos del DOM
-  const elements = {
-    blogGrid: document.getElementById('blogGrid'),
-    filters: document.querySelectorAll('.blog-filter'),
-    pagination: document.getElementById('blogPagination'),
-    paginationNumbers: document.getElementById('paginationNumbers'),
-    prevBtn: document.getElementById('prevPage'),
-    nextBtn: document.getElementById('nextPage')
-  };
+  // Cache de elementos del DOM
+  let elements = null;
+
+  /**
+   * Inicializa referencias a elementos del DOM
+   */
+  function initElements() {
+    elements = {
+      blogGrid: document.getElementById('blogGrid'),
+      filters: document.querySelectorAll('.blog-filter'),
+      pagination: document.getElementById('blogPagination'),
+      paginationNumbers: document.getElementById('paginationNumbers'),
+      prevBtn: document.getElementById('prevPage'),
+      nextBtn: document.getElementById('nextPage'),
+      recentArticles: document.getElementById('recentArticles')
+    };
+  }
 
   /**
    * Inicializa el sistema del blog
    */
   async function init() {
+    initElements();
+
+    if (!elements.blogGrid) {
+      console.warn('Blog grid element not found');
+      return;
+    }
+
     try {
+      state.isLoading = true;
+      showLoadingState();
       await loadArticles();
       setupEventListeners();
       filterArticles('todas');
       renderRecentArticles();
     } catch (error) {
-      showError('Error al cargar los artículos. Por favor, intenta más tarde.');
+      console.error('Error initializing blog:', error);
+      showError('Error al cargar los articulos. Por favor, intenta mas tarde.');
+    } finally {
+      state.isLoading = false;
     }
   }
 
   /**
-   * Carga los artículos desde el JSON
+   * Muestra estado de carga
+   */
+  function showLoadingState() {
+    if (elements.blogGrid) {
+      elements.blogGrid.innerHTML = `
+        <div class="blog-loading">
+          <div class="blog-loading__spinner"></div>
+          <p>Cargando articulos...</p>
+        </div>
+      `;
+    }
+  }
+
+  /**
+   * Carga los articulos desde el JSON
    */
   async function loadArticles() {
-    try {
-      const response = await fetch(CONFIG.jsonPath);
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
-      const data = await response.json();
-      state.allArticles = data.articulos || [];
+    const response = await fetch(CONFIG.jsonPath);
 
-      // Los artículos se muestran en el orden que aparecen en el JSON
-      // (sin ordenamiento por fecha)
-    } catch (error) {
-      throw error;
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
     }
+
+    const data = await response.json();
+
+    // Filtrar solo articulos publicados
+    state.allArticles = (data.articulos || []).filter(
+      article => article.status === 'published' || !article.status
+    );
+
+    // Ordenar por fecha de publicacion (mas recientes primero)
+    state.allArticles.sort((a, b) => {
+      const dateA = new Date(a.fechaPublicacion || '2000-01-01');
+      const dateB = new Date(b.fechaPublicacion || '2000-01-01');
+      return dateB - dateA;
+    });
   }
 
   /**
    * Configura los event listeners
    */
   function setupEventListeners() {
-    // Filtros de categoría
+    // Filtros de categoria
     elements.filters.forEach(filter => {
-      filter.addEventListener('click', function() {
-        const category = this.dataset.category;
-
-        // Actualizar UI de filtros
-        elements.filters.forEach(f => f.classList.remove('blog-filter--active'));
-        this.classList.add('blog-filter--active');
-
-        // Filtrar artículos
-        filterArticles(category);
-      });
+      filter.addEventListener('click', handleFilterClick);
     });
 
-    // Botones de paginación
+    // Botones de paginacion
     if (elements.prevBtn) {
-      elements.prevBtn.addEventListener('click', () => {
-        if (state.currentPage > 1) {
-          changePage(state.currentPage - 1);
-        }
-      });
+      elements.prevBtn.addEventListener('click', handlePrevPage);
     }
 
     if (elements.nextBtn) {
-      elements.nextBtn.addEventListener('click', () => {
-        const totalPages = Math.ceil(state.filteredArticles.length / CONFIG.articlesPerPage);
-        if (state.currentPage < totalPages) {
-          changePage(state.currentPage + 1);
-        }
-      });
+      elements.nextBtn.addEventListener('click', handleNextPage);
     }
   }
 
   /**
-   * Filtra artículos por categoría
+   * Maneja click en filtro
+   */
+  function handleFilterClick(e) {
+    const category = e.target.dataset.category;
+
+    // Actualizar UI de filtros
+    elements.filters.forEach(f => f.classList.remove('blog-filter--active'));
+    e.target.classList.add('blog-filter--active');
+
+    // Filtrar articulos
+    filterArticles(category);
+  }
+
+  /**
+   * Maneja click en pagina anterior
+   */
+  function handlePrevPage() {
+    if (state.currentPage > 1) {
+      changePage(state.currentPage - 1);
+    }
+  }
+
+  /**
+   * Maneja click en pagina siguiente
+   */
+  function handleNextPage() {
+    const totalPages = Math.ceil(state.filteredArticles.length / CONFIG.articlesPerPage);
+    if (state.currentPage < totalPages) {
+      changePage(state.currentPage + 1);
+    }
+  }
+
+  /**
+   * Filtra articulos por categoria
    */
   function filterArticles(category) {
     state.currentCategory = category;
@@ -121,7 +181,7 @@
   }
 
   /**
-   * Cambia de página
+   * Cambia de pagina
    */
   function changePage(page) {
     state.currentPage = page;
@@ -129,11 +189,13 @@
     renderPagination();
 
     // Scroll suave al inicio de la grid
-    elements.blogGrid.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    if (elements.blogGrid) {
+      elements.blogGrid.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
   }
 
   /**
-   * Renderiza los artículos en la grid
+   * Renderiza los articulos en la grid
    */
   function renderArticles() {
     const start = (state.currentPage - 1) * CONFIG.articlesPerPage;
@@ -142,43 +204,56 @@
 
     if (articlesToShow.length === 0) {
       elements.blogGrid.innerHTML = `
-        <div class="blog-loading">
-          <p>No se encontraron artículos en esta categoría.</p>
+        <div class="blog-empty">
+          <p>No se encontraron articulos en esta categoria.</p>
+          <button class="blog-empty__btn" onclick="window.blogFilterAll()">Ver todos los articulos</button>
         </div>
       `;
       return;
     }
 
-    elements.blogGrid.innerHTML = articlesToShow.map(article => createArticleCard(article)).join('');
+    elements.blogGrid.innerHTML = articlesToShow.map(createArticleCard).join('');
   }
 
   /**
-   * Crea una tarjeta de artículo
+   * Crea una tarjeta de articulo con estructura optimizada
    */
   function createArticleCard(article) {
     const imageUrl = article.imagen || CONFIG.placeholderImage;
+    const imageAlt = article.imagenAlt || article.titulo;
     const lecturaMinutos = article.lecturaMinutos || '5';
     const autor = article.autor || 'REDEIL Team';
+    const fecha = formatDate(article.fechaPublicacion);
+    const categoria = article.categoria || 'General';
+    const destacado = article.destacado ? 'blog-card--featured' : '';
+    const tags = article.tags ? article.tags.slice(0, 3).join(', ') : '';
 
     return `
-      <a href="${article.url}" class="blog-card__link">
-        <article class="blog-card">
+      <a href="${article.url}" class="blog-card__link" aria-label="Leer: ${article.titulo}">
+        <article class="blog-card ${destacado}" data-category="${categoria}">
           <div class="blog-card__image">
             <img
               src="${imageUrl}"
-              alt="${article.titulo}"
+              alt="${imageAlt}"
               loading="lazy"
+              width="400"
+              height="250"
               onerror="this.src='${CONFIG.placeholderImage}'"
             />
-            <span class="blog-card__category">${article.categoria}</span>
+            <span class="blog-card__category">${categoria}</span>
+            ${article.destacado ? '<span class="blog-card__badge">Destacado</span>' : ''}
           </div>
           <div class="blog-card__content">
             <h3 class="blog-card__title">${article.titulo}</h3>
             <p class="blog-card__excerpt">${article.descripcion}</p>
             <div class="blog-card__meta">
-              <span class="blog-card__date">${autor}</span>
-              <span class="blog-card__read-time">${lecturaMinutos} min lectura</span>
+              <div class="blog-card__meta-left">
+                <span class="blog-card__author">${autor}</span>
+                <span class="blog-card__date">${fecha}</span>
+              </div>
+              <span class="blog-card__read-time">${lecturaMinutos} min</span>
             </div>
+            ${tags ? `<div class="blog-card__tags">${tags}</div>` : ''}
           </div>
         </article>
       </a>
@@ -186,18 +261,22 @@
   }
 
   /**
-   * Renderiza la paginación
+   * Renderiza la paginacion
    */
   function renderPagination() {
     const totalPages = Math.ceil(state.filteredArticles.length / CONFIG.articlesPerPage);
 
-    // Ocultar paginación si solo hay una página o menos
+    // Ocultar paginacion si solo hay una pagina o menos
     if (totalPages <= 1) {
-      elements.pagination.style.display = 'none';
+      if (elements.pagination) {
+        elements.pagination.style.display = 'none';
+      }
       return;
     }
 
-    elements.pagination.style.display = 'flex';
+    if (elements.pagination) {
+      elements.pagination.style.display = 'flex';
+    }
 
     // Actualizar botones prev/next
     if (elements.prevBtn) {
@@ -207,29 +286,73 @@
       elements.nextBtn.disabled = state.currentPage === totalPages;
     }
 
-    // Renderizar números de página
+    // Renderizar numeros de pagina
     if (elements.paginationNumbers) {
-      elements.paginationNumbers.innerHTML = Array.from(
-        { length: totalPages },
-        (_, i) => i + 1
-      ).map(pageNum => `
-        <button
-          class="pagination-number ${pageNum === state.currentPage ? 'pagination-number--active' : ''}"
-          onclick="window.blogChangePage(${pageNum})"
-        >
-          ${pageNum}
-        </button>
-      `).join('');
+      elements.paginationNumbers.innerHTML = generatePaginationNumbers(totalPages);
     }
   }
 
   /**
-   * Formatea la fecha
+   * Genera los numeros de paginacion con logica inteligente
+   */
+  function generatePaginationNumbers(totalPages) {
+    const current = state.currentPage;
+    const pages = [];
+
+    // Siempre mostrar primera pagina
+    pages.push(1);
+
+    // Mostrar puntos suspensivos si hay gap
+    if (current > 3) {
+      pages.push('...');
+    }
+
+    // Paginas alrededor de la actual
+    for (let i = Math.max(2, current - 1); i <= Math.min(totalPages - 1, current + 1); i++) {
+      if (!pages.includes(i)) {
+        pages.push(i);
+      }
+    }
+
+    // Puntos suspensivos antes de la ultima
+    if (current < totalPages - 2) {
+      pages.push('...');
+    }
+
+    // Siempre mostrar ultima pagina si hay mas de 1
+    if (totalPages > 1 && !pages.includes(totalPages)) {
+      pages.push(totalPages);
+    }
+
+    return pages.map(page => {
+      if (page === '...') {
+        return '<span class="pagination-ellipsis">...</span>';
+      }
+      return `
+        <button
+          class="pagination-number ${page === current ? 'pagination-number--active' : ''}"
+          onclick="window.blogChangePage(${page})"
+          aria-label="Ir a pagina ${page}"
+          ${page === current ? 'aria-current="page"' : ''}
+        >
+          ${page}
+        </button>
+      `;
+    }).join('');
+  }
+
+  /**
+   * Formatea la fecha al formato legible
    */
   function formatDate(dateString) {
-    const date = new Date(dateString);
-    const options = { year: 'numeric', month: 'long', day: 'numeric' };
-    return date.toLocaleDateString('es-MX', options);
+    if (!dateString) return '';
+
+    try {
+      const date = new Date(dateString + 'T00:00:00');
+      return date.toLocaleDateString(CONFIG.dateLocale, CONFIG.dateOptions);
+    } catch (e) {
+      return dateString;
+    }
   }
 
   /**
@@ -238,55 +361,77 @@
   function showError(message) {
     if (elements.blogGrid) {
       elements.blogGrid.innerHTML = `
-        <div class="blog-loading">
-          <p style="color: #d32f2f;">${message}</p>
+        <div class="blog-error">
+          <p>${message}</p>
+          <button class="blog-error__btn" onclick="location.reload()">Reintentar</button>
         </div>
       `;
     }
   }
 
   /**
-   * Renderiza artículos recientes en el sidebar
+   * Renderiza articulos recientes en el sidebar
    */
   function renderRecentArticles() {
-    const recentContainer = document.getElementById('recentArticles');
-    if (!recentContainer) return;
+    if (!elements.recentArticles) return;
 
-    // Obtener los 5 artículos más recientes
+    // Obtener los 5 articulos mas recientes
     const recentArticles = state.allArticles.slice(0, 5);
 
     if (recentArticles.length === 0) {
-      recentContainer.innerHTML = '<p style="color: #86868b; font-size: 0.875rem;">No hay artículos disponibles.</p>';
+      elements.recentArticles.innerHTML = '<p class="sidebar-empty">No hay articulos disponibles.</p>';
       return;
     }
 
-    recentContainer.innerHTML = recentArticles.map(article => {
+    elements.recentArticles.innerHTML = recentArticles.map(article => {
       const imageUrl = article.imagen || CONFIG.placeholderImage;
       const lecturaMinutos = article.lecturaMinutos || '5';
 
       return `
         <div class="recent-article">
-          <a href="${article.url}">
+          <a href="${article.url}" class="recent-article__link">
             <div class="recent-article__image">
-              <img src="${imageUrl}" alt="${article.titulo}" loading="lazy" />
+              <img src="${imageUrl}" alt="${article.imagenAlt || article.titulo}" loading="lazy" />
             </div>
           </a>
           <div class="recent-article__content">
             <span class="recent-article__category">${article.categoria}</span>
-            <a href="${article.url}">
+            <a href="${article.url}" class="recent-article__title-link">
               <h4 class="recent-article__title">${article.titulo}</h4>
             </a>
-            <span class="recent-article__date">${lecturaMinutos} min lectura</span>
+            <span class="recent-article__meta">${lecturaMinutos} min lectura</span>
           </div>
         </div>
       `;
     }).join('');
   }
 
-  // Exponer función changePage globalmente para los botones de paginación
-  window.blogChangePage = changePage;
+  /**
+   * Filtra todos los articulos (para boton "Ver todos")
+   */
+  function filterAll() {
+    const allFilter = document.querySelector('.blog-filter[data-category="todas"]');
+    if (allFilter) {
+      allFilter.click();
+    }
+  }
 
-  // Inicializar cuando el DOM esté listo
+  // Exponer funciones globalmente para interaccion HTML
+  window.blogChangePage = changePage;
+  window.blogFilterAll = filterAll;
+
+  // API publica para n8n o integraciones externas
+  window.REDEIL_Blog = {
+    getArticles: () => [...state.allArticles],
+    getFilteredArticles: () => [...state.filteredArticles],
+    getCurrentPage: () => state.currentPage,
+    getTotalPages: () => Math.ceil(state.filteredArticles.length / CONFIG.articlesPerPage),
+    filterByCategory: filterArticles,
+    goToPage: changePage,
+    refresh: init
+  };
+
+  // Inicializar cuando el DOM este listo
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', init);
   } else {
