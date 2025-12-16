@@ -11,7 +11,7 @@
   // Configuracion
   const CONFIG = {
     jsonPath: 'articulos.json',
-    articlesPerPage: 9,
+    articlesPerPage: 6,
     placeholderImage: '../img/img-index/placeholder-blog.webp',
     dateLocale: 'es-MX',
     dateOptions: { year: 'numeric', month: 'long', day: 'numeric' }
@@ -249,7 +249,6 @@
             <div class="blog-card__meta">
               <div class="blog-card__meta-left">
                 <span class="blog-card__author">${autor}</span>
-                <span class="blog-card__date">${fecha}</span>
               </div>
               <span class="blog-card__read-time">${lecturaMinutos} min</span>
             </div>

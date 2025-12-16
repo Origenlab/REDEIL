@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<!--
+================================================================================
+PLANTILLA OPTIMIZADA PARA N8N - REDEIL BLOG
+================================================================================
+Esta plantilla esta disenada para ser procesada automaticamente por n8n.
+Los marcadores {{VARIABLE}} deben ser reemplazados por el workflow.
+
+VARIABLES DISPONIBLES:
+- {{SLUG}} - URL amigable del articulo (ej: mi-articulo-seo)
+- {{TITULO}} - Titulo principal del articulo
+- {{TITULO_SEO}} - Titulo optimizado para SEO (max 60 chars)
+- {{DESCRIPCION}} - Meta description (max 160 chars)
+- {{DESCRIPCION_CORTA}} - Extracto para cards (max 120 chars)
+- {{IMAGEN_PRINCIPAL}} - Ruta de imagen principal
+- {{IMAGEN_ALT}} - Texto alternativo de imagen
+- {{CATEGORIA}} - Categoria del articulo (Guias, Tendencias, Tips, Inspiracion)
+- {{TAGS}} - Tags separados por coma
+- {{AUTOR}} - Nombre del autor
+- {{FECHA_PUBLICACION}} - Formato YYYY-MM-DD
+- {{LECTURA_MINUTOS}} - Tiempo estimado de lectura
+- {{CONTENIDO_HTML}} - Contenido completo en HTML
+
+SECCIONES OPCIONALES (eliminar si no aplica):
+- {{TOC_HTML}} - Tabla de contenidos
+- {{FAQ_HTML}} - Preguntas frecuentes
+- {{RELACIONADOS_HTML}} - Articulos relacionados
+================================================================================
+-->
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- SEO Principal -->
+    <title>{{TITULO_SEO}} | REDEIL</title>
+    <meta name="description" content="{{DESCRIPCION}}" />
+    <meta name="keywords" content="{{TAGS}}, iluminacion eventos, audio profesional, REDEIL CDMX" />
+    <meta name="author" content="{{AUTOR}}" />
+    <link rel="canonical" href="https://redeil.com/blog/articulos/{{SLUG}}.html" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="{{TITULO_SEO}} | REDEIL" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://redeil.com/blog/articulos/{{SLUG}}.html" />
+    <meta property="og:image" content="https://redeil.com/blog/{{IMAGEN_PRINCIPAL}}" />
+    <meta property="og:description" content="{{DESCRIPCION}}" />
+    <meta property="og:site_name" content="REDEIL - Renta de Equipo para Eventos" />
+    <meta property="article:published_time" content="{{FECHA_PUBLICACION}}T00:00:00-06:00" />
+    <meta property="article:author" content="{{AUTOR}}" />
+    <meta property="article:section" content="{{CATEGORIA}}" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="{{TITULO_SEO}} | REDEIL" />
+    <meta name="twitter:description" content="{{DESCRIPCION}}" />
+    <meta name="twitter:image" content="https://redeil.com/blog/{{IMAGEN_PRINCIPAL}}" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="../../favicon.ico" sizes="any" />
+    <link rel="icon" href="../../icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="../../icon.png" />
+
+    <!-- PWA -->
+    <link rel="manifest" href="../../site.webmanifest" />
+    <meta name="theme-color" content="#1a365d" />
+
+    <!-- Robots -->
+    <meta name="robots" content="index, follow" />
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../css/style.css" />
+    <link rel="stylesheet" href="../../css/mobile-menu.css" />
+    <link rel="stylesheet" href="../../css/blog-article.min.css" />
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://redeil.com/blog/articulos/{{SLUG}}.html"
+        },
+        "headline": "{{TITULO}}",
+        "description": "{{DESCRIPCION}}",
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://redeil.com/blog/{{IMAGEN_PRINCIPAL}}",
+            "width": 1200,
+            "height": 630
+        },
+        "author": {
+            "@type": "Organization",
+            "name": "{{AUTOR}}",
+            "url": "https://redeil.com"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "REDEIL",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://redeil.com/img/redeil.webp",
+                "width": 200,
+                "height": 77
+            }
+        },
+        "datePublished": "{{FECHA_PUBLICACION}}",
+        "dateModified": "{{FECHA_PUBLICACION}}",
+        "articleSection": "{{CATEGORIA}}",
+        "keywords": "{{TAGS}}",
+        "wordCount": "{{WORD_COUNT}}",
+        "timeRequired": "PT{{LECTURA_MINUTOS}}M",
+        "inLanguage": "es-MX"
+    }
+    </script>
+
+    <!-- BreadcrumbList Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Inicio",
+                "item": "https://redeil.com"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Blog",
+                "item": "https://redeil.com/blog/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "{{TITULO}}",
+                "item": "https://redeil.com/blog/articulos/{{SLUG}}.html"
+            }
+        ]
+    }
+    </script>
+</head>
+
+<body>
+    <!-- Header dinamico -->
+    <div id="header-placeholder"></div>
+
+    <!-- Breadcrumbs -->
+    <div id="breadcrumbs-placeholder"></div>
+
+    <!-- Hero del Articulo -->
+    <section class="article-hero">
+        <div class="container">
+            <div class="article-hero__meta">
+                <span class="article-hero__category">{{CATEGORIA}}</span>
+                <span class="article-hero__read-time">{{LECTURA_MINUTOS}} min de lectura</span>
+            </div>
+            <h1 class="article-hero__title">{{TITULO}}</h1>
+            <p class="article-hero__subtitle">{{DESCRIPCION_CORTA}}</p>
+        </div>
+    </section>
+
+    <!-- Layout Principal -->
+    <article class="article-layout">
+        <div class="container">
+            <div class="article-layout__wrapper">
+
+                <!-- Contenido Principal -->
+                <div class="article-layout__content">
+
+                    <!-- Imagen Destacada -->
+                    <div class="article-featured-image">
+                        <img
+                            src="{{IMAGEN_PRINCIPAL}}"
+                            alt="{{IMAGEN_ALT}}"
+                            loading="eager"
+                            width="1200"
+                            height="630"
+                        />
+                    </div>
+
+                    <!-- Intro -->
+                    <div class="article-intro">
+                        <p>{{INTRO_TEXTO}}</p>
+                    </div>
+
+                    <!-- Tabla de Contenidos (opcional) -->
+                    {{TOC_HTML}}
+
+                    <!-- Contenido del Articulo -->
+                    {{CONTENIDO_HTML}}
+
+                    <!-- FAQ Section (opcional) -->
+                    {{FAQ_HTML}}
+
+                    <!-- Interlinking SEO - Servicios Relacionados -->
+                    <div class="article-services">
+                        <h2 class="article-services__title">Nuestros Servicios</h2>
+                        <div class="article-services__grid">
+                            <a href="../../renta-de-iluminacion/guirnaldas.html" class="article-services__item">Guirnaldas de Luces</a>
+                            <a href="../../renta-de-iluminacion/luz-neon.html" class="article-services__item">Luz Neon LED</a>
+                            <a href="../../renta-de-iluminacion/luz-negra.html" class="article-services__item">Luz Negra UV</a>
+                            <a href="../../renta-de-iluminacion/cabezas-moviles.html" class="article-services__item">Cabezas Moviles</a>
+                            <a href="../../renta-de-iluminacion/city-color.html" class="article-services__item">City Color LED</a>
+                            <a href="../../renta-de-iluminacion/iluminacion-laser.html" class="article-services__item">Iluminacion Laser</a>
+                            <a href="../../renta-de-iluminacion/cascadas-led.html" class="article-services__item">Cascadas LED</a>
+                            <a href="../../renta-de-iluminacion/sky-tracker.html" class="article-services__item">Sky Tracker</a>
+                            <a href="../../renta-de-bocinas/bocinas-para-bodas.html" class="article-services__item">Audio para Bodas</a>
+                            <a href="../../renta-de-bocinas/bocinas-para-xv-anos.html" class="article-services__item">Audio XV Anos</a>
+                            <a href="../../equipos-para-eventos/maquina-de-humo.html" class="article-services__item">Maquina de Humo</a>
+                            <a href="../../equipos-para-eventos/maquina-de-confeti.html" class="article-services__item">Maquina de Confeti</a>
+                        </div>
+                    </div>
+
+                    <!-- CTA -->
+                    <div class="article-cta">
+                        <h3>{{CTA_TITULO}}</h3>
+                        <p>{{CTA_DESCRIPCION}}</p>
+                        <a href="https://wa.me/525549375172?text=Hola%2C%20lei%20su%20articulo%20sobre%20{{SLUG}}%20y%20me%20gustaria%20una%20cotizacion" class="btn btn--primary" target="_blank" rel="noopener">Solicitar Cotizacion</a>
+                    </div>
+
+                    <!-- Articulos Relacionados -->
+                    {{RELACIONADOS_HTML}}
+
+                </div>
+
+                <!-- Sidebar -->
+                <aside class="article-layout__sidebar">
+
+                    <!-- Tabla de Contenidos Sticky -->
+                    <div class="sidebar-toc">
+                        <h3 class="sidebar-toc__title">Contenido</h3>
+                        <nav class="sidebar-toc__nav">
+                            {{TOC_NAV_HTML}}
+                        </nav>
+                    </div>
+
+                    <!-- Widget de Servicios de Iluminacion -->
+                    <div class="sidebar-widget">
+                        <h3 class="sidebar-widget__title">Iluminacion</h3>
+                        <ul class="sidebar-widget__list">
+                            <li><a href="../../renta-de-iluminacion/guirnaldas.html">Guirnaldas de Luces</a></li>
+                            <li><a href="../../renta-de-iluminacion/luz-neon.html">Luz Neon LED</a></li>
+                            <li><a href="../../renta-de-iluminacion/luz-negra.html">Luz Negra UV</a></li>
+                            <li><a href="../../renta-de-iluminacion/city-color.html">City Color LED</a></li>
+                            <li><a href="../../renta-de-iluminacion/sky-tracker.html">Sky Tracker</a></li>
+                            <li><a href="../../renta-de-iluminacion/cabezas-moviles.html">Cabezas Moviles</a></li>
+                            <li><a href="../../renta-de-iluminacion/iluminacion-laser.html">Iluminacion Laser</a></li>
+                            <li><a href="../../renta-de-iluminacion/luces-arquitectonicas.html">Luces Arquitectonicas</a></li>
+                            <li><a href="../../renta-de-iluminacion/cascadas-led.html">Cascadas LED</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Widget de Audio -->
+                    <div class="sidebar-widget">
+                        <h3 class="sidebar-widget__title">Audio Profesional</h3>
+                        <ul class="sidebar-widget__list">
+                            <li><a href="../../renta-de-bocinas/bocinas-para-bodas.html">Audio para Bodas</a></li>
+                            <li><a href="../../renta-de-bocinas/bocinas-para-xv-anos.html">Audio para XV Anos</a></li>
+                            <li><a href="../../renta-de-bocinas/audio-para-conferencias.html">Audio Conferencias</a></li>
+                            <li><a href="../../renta-de-bocinas/bocinas-para-fiestas.html">Audio para Fiestas</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Widget de Contacto -->
+                    <div class="sidebar-widget sidebar-contact">
+                        <h3 class="sidebar-widget__title">Contactanos</h3>
+                        <div class="sidebar-contact__info">
+                            <div class="sidebar-contact__item">
+                                <div class="sidebar-contact__content">
+                                    <div class="sidebar-contact__label">Telefono</div>
+                                    <div class="sidebar-contact__value">
+                                        <a href="tel:+525549375172">55 4937 5172</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sidebar-contact__item">
+                                <div class="sidebar-contact__content">
+                                    <div class="sidebar-contact__label">Email</div>
+                                    <div class="sidebar-contact__value">
+                                        <a href="mailto:contacto@redeil.com">contacto@redeil.com</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sidebar-contact__item">
+                                <div class="sidebar-contact__content">
+                                    <div class="sidebar-contact__label">Cobertura</div>
+                                    <div class="sidebar-contact__value">CDMX y Estado de Mexico</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sidebar-contact__cta">
+                            <a href="../../contacto.html" class="sidebar-contact__button">Solicitar Cotizacion</a>
+                        </div>
+                    </div>
+
+                </aside>
+
+            </div>
+        </div>
+    </article>
+
+    <!-- Footer dinamico -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Scripts -->
+    <script src="/js/load-components.js"></script>
+    <script src="../../js/app.min.js" defer></script>
+</body>
+</html>

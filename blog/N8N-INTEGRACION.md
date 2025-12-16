@@ -117,8 +117,7 @@ Usar nodo **HTTP Request** o **FTP** para:
 | `{{CATEGORIA}}` | Categoria | `Guias` |
 | `{{TAGS}}` | Tags separados por coma | `seo, marketing, web` |
 | `{{AUTOR}}` | Nombre autor | `REDEIL Team` |
-| `{{FECHA_PUBLICACION}}` | Fecha ISO | `2025-12-15` |
-| `{{FECHA_LEGIBLE}}` | Fecha formateada | `15 de Diciembre, 2025` |
+| `{{FECHA_PUBLICACION}}` | Fecha ISO (solo meta/schema) | `2025-12-15` |
 | `{{LECTURA_MINUTOS}}` | Tiempo lectura | `10` |
 | `{{CONTENIDO_HTML}}` | Contenido completo | `<section>...</section>` |
 | `{{TOC_HTML}}` | Tabla de contenidos | `<nav>...</nav>` |
@@ -301,7 +300,9 @@ blog/img/
 
 1. **Orden de articulos**: Los articulos se muestran por fecha de publicacion (mas recientes primero)
 
-2. **Articulos destacados**: Solo marcar 3-4 articulos como `destacado: true`
+2. **Fechas NO visibles**: Las fechas no se muestran en los articulos ni en las tarjetas del blog. Solo se usan internamente para ordenamiento y en metadatos SEO (Schema.org)
+
+3. **Articulos destacados**: Solo marcar 3-4 articulos como `destacado: true`
 
 3. **Cache**: El navegador cachea el JSON. Para forzar actualizacion, agregar timestamp: `articulos.json?v=timestamp`
 

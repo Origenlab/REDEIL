@@ -462,9 +462,66 @@ Este documento contiene las instrucciones completas para crear articulos del blo
 
 ---
 
-## PARTE 5: ELEMENTOS DE CONTENIDO
+## PARTE 5: INTERLINKING SEO
 
-### 5.1 Info Box (Consejo/Tip)
+### 5.1 Interlinking Contextual (OBLIGATORIO)
+
+Cada articulo DEBE incluir 1-2 links internos dentro del contenido que apunten a paginas de servicios de REDEIL. Estos links deben ser naturales y contextualmente relevantes.
+
+**Reglas:**
+- Minimo 1 link, maximo 2 links por articulo
+- El anchor text debe ser natural (no "click aqui")
+- Colocar en los primeros 3 parrafos del contenido
+- Usar URLs relativas: `../../renta-de-iluminacion/servicio.html`
+
+**Ejemplo de interlinking contextual:**
+```html
+<p>Para bodas en jardin, las <a href="../../renta-de-iluminacion/guirnaldas.html">guirnaldas de luces</a>
+crean el ambiente romantico perfecto, especialmente cuando se combinan con
+<a href="../../renta-de-iluminacion/luz-neon.html">letreros de luz neon</a> personalizados.</p>
+```
+
+**Mapeo de Keywords a Servicios:**
+
+| Keyword | URL de Servicio |
+|---------|-----------------|
+| guirnaldas, guirnaldas de luces, focos edison | `/renta-de-iluminacion/guirnaldas.html` |
+| luz neon, letreros neon, iluminacion neon | `/renta-de-iluminacion/luz-neon.html` |
+| luz negra, luz UV, fiesta neon | `/renta-de-iluminacion/luz-negra.html` |
+| cabezas moviles, roboticas | `/renta-de-iluminacion/cabezas-moviles.html` |
+| city color, iluminacion LED RGB | `/renta-de-iluminacion/city-color.html` |
+| luces arquitectonicas, uplighting | `/renta-de-iluminacion/luces-arquitectonicas.html` |
+| iluminacion laser, laser show | `/renta-de-iluminacion/iluminacion-laser.html` |
+| cascadas LED, cortinas LED | `/renta-de-iluminacion/cascadas-led.html` |
+| sky tracker, reflectores cielo | `/renta-de-iluminacion/sky-tracker.html` |
+| audio bodas, sonido bodas, bocinas bodas | `/renta-de-bocinas/bocinas-para-bodas.html` |
+| audio XV anos, sonido quince anos | `/renta-de-bocinas/bocinas-para-xv-anos.html` |
+| audio fiestas, bocinas fiestas | `/renta-de-bocinas/bocinas-para-fiestas.html` |
+| audio conferencias, sonido corporativo | `/renta-de-bocinas/audio-para-conferencias.html` |
+| maquina humo, efectos humo | `/equipos-para-eventos/maquina-de-humo.html` |
+| humo bajo, hielo seco | `/equipos-para-eventos/humo-bajo.html` |
+| maquina confeti, canones confeti | `/equipos-para-eventos/maquina-de-confeti.html` |
+
+### 5.2 Seccion de Servicios (al final del contenido)
+
+Ademas del interlinking contextual, cada articulo incluye una seccion fija de servicios antes del CTA:
+
+```html
+<div class="article-services">
+    <h2 class="article-services__title">Nuestros Servicios</h2>
+    <div class="article-services__grid">
+        <a href="../../renta-de-iluminacion/guirnaldas.html" class="article-services__item">Guirnaldas de Luces</a>
+        <a href="../../renta-de-iluminacion/luz-neon.html" class="article-services__item">Luz Neon LED</a>
+        <!-- ... mas servicios ... -->
+    </div>
+</div>
+```
+
+---
+
+## PARTE 6: ELEMENTOS DE CONTENIDO
+
+### 6.1 Info Box (Consejo/Tip)
 
 ```html
 <div class="info-box">
