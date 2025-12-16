@@ -1,8 +1,36 @@
 {
-  "lastUpdated": "2025-12-15T00:00:00.000Z",
-  "totalArticles": 15,
-  "categories": ["Guias", "Tendencias", "Tips", "Inspiracion", "Socios Comerciales"],
+  "lastUpdated": "2025-12-16T00:13:54.899Z",
+  "totalArticles": 16,
+  "categories": [
+    "Guias",
+    "Tendencias",
+    "Tips",
+    "Inspiracion",
+    "Socios Comerciales"
+  ],
   "articulos": [
+    {
+      "id": "guia-audio-profesional-eventos",
+      "slug": "guia-audio-profesional-eventos",
+      "titulo": "Guía Completa de Audio para Eventos en CDMX",
+      "descripcion": "Descubre cómo elegir el audio perfecto para tu evento en CDMX y Estado de México. ¡Contacta a REDEIL hoy!",
+      "imagen": "img/guia-audio-profesional-eventos-hero-1765844030140.webp",
+      "imagenAlt": "Equipo de sonido profesional en un evento en Ciudad de México",
+      "categoria": "Guias",
+      "tags": [
+        "guia de audio para eventos",
+        "guia audio eventos",
+        "como elegir bocinas",
+        "sonido profesional"
+      ],
+      "autor": "REDEIL Team",
+      "fechaPublicacion": "2025-12-16",
+      "fechaModificacion": "2025-12-16",
+      "url": "articulos/guia-audio-profesional-eventos.html",
+      "lecturaMinutos": 12,
+      "destacado": false,
+      "status": "published"
+    },
     {
       "id": "sonido-para-eventos-renta-bocinas-cdmx",
       "slug": "sonido-para-eventos-renta-bocinas-cdmx",
@@ -11,7 +39,13 @@
       "imagen": "../img/img-index/bocinas-para-bodas.webp",
       "imagenAlt": "Renta de bocinas profesionales para eventos en CDMX",
       "categoria": "Socios Comerciales",
-      "tags": ["audio", "bocinas", "eventos", "cdmx", "renta"],
+      "tags": [
+        "audio",
+        "bocinas",
+        "eventos",
+        "cdmx",
+        "renta"
+      ],
       "autor": "REDEIL Team",
       "fechaPublicacion": "2025-12-10",
       "fechaModificacion": "2025-12-10",
@@ -28,7 +62,13 @@
       "imagen": "../img/img-index/bocinas-para-bodas.webp",
       "imagenAlt": "Bocinas profesionales para renta en eventos CDMX",
       "categoria": "Guias",
-      "tags": ["audio", "bocinas", "renta", "cdmx", "profesional"],
+      "tags": [
+        "audio",
+        "bocinas",
+        "renta",
+        "cdmx",
+        "profesional"
+      ],
       "autor": "REDEIL Team",
       "fechaPublicacion": "2025-12-08",
       "fechaModificacion": "2025-12-08",
@@ -45,7 +85,13 @@
       "imagen": "../img/img-index/luz-neon.webp",
       "imagenAlt": "Canones LED RGBW con efectos neon para eventos",
       "categoria": "Guias",
-      "tags": ["led", "rgbw", "neon", "iluminacion", "cdmx"],
+      "tags": [
+        "led",
+        "rgbw",
+        "neon",
+        "iluminacion",
+        "cdmx"
+      ],
       "autor": "REDEIL Team",
       "fechaPublicacion": "2025-12-05",
       "fechaModificacion": "2025-12-05",
@@ -62,7 +108,13 @@
       "imagen": "../img/img-index/city-color.webp",
       "imagenAlt": "Iluminacion neon LED para bodas modernas",
       "categoria": "Guias",
-      "tags": ["neon", "bodas", "iluminacion", "led", "tendencias"],
+      "tags": [
+        "neon",
+        "bodas",
+        "iluminacion",
+        "led",
+        "tendencias"
+      ],
       "autor": "REDEIL Team",
       "fechaPublicacion": "2025-12-03",
       "fechaModificacion": "2025-12-03",
@@ -79,7 +131,13 @@
       "imagen": "../img/img-index/luz-negra.webp",
       "imagenAlt": "Luz negra UV para fiestas neon tematicas",
       "categoria": "Guias",
-      "tags": ["luz-negra", "uv", "fiestas", "neon", "tematicas"],
+      "tags": [
+        "luz-negra",
+        "uv",
+        "fiestas",
+        "neon",
+        "tematicas"
+      ],
       "autor": "REDEIL Team",
       "fechaPublicacion": "2025-12-01",
       "fechaModificacion": "2025-12-01",
@@ -96,7 +154,13 @@
       "imagen": "../img/img-index/iluminacin-arquitectonica.webp",
       "imagenAlt": "Uplighting arquitectonico LED profesional",
       "categoria": "Guias",
-      "tags": ["uplighting", "arquitectonico", "led", "iluminacion", "espacios"],
+      "tags": [
+        "uplighting",
+        "arquitectonico",
+        "led",
+        "iluminacion",
+        "espacios"
+      ],
       "autor": "REDEIL Team",
       "fechaPublicacion": "2025-11-28",
       "fechaModificacion": "2025-11-28",
@@ -113,7 +177,13 @@
       "imagen": "../img/img-index/bocinas-para-xv-anos.webp",
       "imagenAlt": "Iluminacion neon moderna para XV anos",
       "categoria": "Guias",
-      "tags": ["xv-anos", "neon", "iluminacion", "quinceaera", "ideas"],
+      "tags": [
+        "xv-anos",
+        "neon",
+        "iluminacion",
+        "quinceaera",
+        "ideas"
+      ],
       "autor": "REDEIL Team",
       "fechaPublicacion": "2025-11-25",
       "fechaModificacion": "2025-11-25",
@@ -130,7 +200,13 @@
       "imagen": "../img/img-index/cabezas-moviles.webp",
       "imagenAlt": "Comparativa iluminacion LED neon vs tradicional",
       "categoria": "Guias",
-      "tags": ["led", "tradicional", "comparativa", "eficiencia", "eventos"],
+      "tags": [
+        "led",
+        "tradicional",
+        "comparativa",
+        "eficiencia",
+        "eventos"
+      ],
       "autor": "REDEIL Team",
       "fechaPublicacion": "2025-11-22",
       "fechaModificacion": "2025-11-22",
@@ -147,7 +223,13 @@
       "imagen": "../img/img-index/conferencias.webp",
       "imagenAlt": "Tecnologia audiovisual para eventos corporativos",
       "categoria": "Guias",
-      "tags": ["corporativos", "audiovisual", "profesional", "cdmx", "empresas"],
+      "tags": [
+        "corporativos",
+        "audiovisual",
+        "profesional",
+        "cdmx",
+        "empresas"
+      ],
       "autor": "REDEIL Team",
       "fechaPublicacion": "2025-11-20",
       "fechaModificacion": "2025-11-20",
@@ -164,7 +246,13 @@
       "imagen": "../img/img-index/bocinas-para-bodas.webp",
       "imagenAlt": "Guia para elegir equipo de audio e iluminacion",
       "categoria": "Guias",
-      "tags": ["audio", "iluminacion", "guia", "equipo", "eventos"],
+      "tags": [
+        "audio",
+        "iluminacion",
+        "guia",
+        "equipo",
+        "eventos"
+      ],
       "autor": "REDEIL Team",
       "fechaPublicacion": "2025-11-18",
       "fechaModificacion": "2025-11-18",
@@ -181,7 +269,13 @@
       "imagen": "../img/img-index/guirnaldas.webp",
       "imagenAlt": "Guirnaldas vintage luminosas para bodas",
       "categoria": "Guias",
-      "tags": ["guirnaldas", "vintage", "bodas", "decoracion", "luces"],
+      "tags": [
+        "guirnaldas",
+        "vintage",
+        "bodas",
+        "decoracion",
+        "luces"
+      ],
       "autor": "REDEIL Team",
       "fechaPublicacion": "2025-11-15",
       "fechaModificacion": "2025-11-15",
@@ -198,7 +292,13 @@
       "imagen": "../img/img-index/city-light.webp",
       "imagenAlt": "Iluminacion romantica con guirnaldas para bodas",
       "categoria": "Inspiracion",
-      "tags": ["romantico", "guirnaldas", "bodas", "ideas", "tendencias"],
+      "tags": [
+        "romantico",
+        "guirnaldas",
+        "bodas",
+        "ideas",
+        "tendencias"
+      ],
       "autor": "REDEIL Team",
       "fechaPublicacion": "2025-11-12",
       "fechaModificacion": "2025-11-12",
@@ -215,7 +315,13 @@
       "imagen": "../img/img-index/bocinas-para-bodas.webp",
       "imagenAlt": "Focos Edison vintage para decoracion de bodas",
       "categoria": "Guias",
-      "tags": ["focos-edison", "vintage", "bodas", "elegancia", "decoracion"],
+      "tags": [
+        "focos-edison",
+        "vintage",
+        "bodas",
+        "elegancia",
+        "decoracion"
+      ],
       "autor": "REDEIL Team",
       "fechaPublicacion": "2025-11-10",
       "fechaModificacion": "2025-11-10",
@@ -232,7 +338,13 @@
       "imagen": "../img/img-index/cascadas-led.webp",
       "imagenAlt": "Tendencias de iluminacion para bodas 2025",
       "categoria": "Tendencias",
-      "tags": ["tendencias", "2025", "bodas", "iluminacion", "moderno"],
+      "tags": [
+        "tendencias",
+        "2025",
+        "bodas",
+        "iluminacion",
+        "moderno"
+      ],
       "autor": "REDEIL Team",
       "fechaPublicacion": "2025-11-08",
       "fechaModificacion": "2025-11-08",
@@ -249,7 +361,13 @@
       "imagen": "../img/img-index/bocinas-para-fiestas.webp",
       "imagenAlt": "Guia de presupuesto para iluminacion de bodas",
       "categoria": "Guias",
-      "tags": ["presupuesto", "costos", "bodas", "iluminacion", "guia"],
+      "tags": [
+        "presupuesto",
+        "costos",
+        "bodas",
+        "iluminacion",
+        "guia"
+      ],
       "autor": "REDEIL Team",
       "fechaPublicacion": "2025-11-05",
       "fechaModificacion": "2025-11-05",
