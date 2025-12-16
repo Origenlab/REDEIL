@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2025-12-16T00:13:54.899Z",
-  "totalArticles": 16,
+  "lastUpdated": "2025-12-16T00:57:08.141Z",
+  "totalArticles": 17,
   "categories": [
     "Guias",
     "Tendencias",
@@ -9,6 +9,26 @@
     "Socios Comerciales"
   ],
   "articulos": [
+    {
+      "id": "city-color-led-bodas-eventos",
+      "slug": "city-color-led-bodas-eventos",
+      "titulo": "Iluminacion City Color para Bodas en CDMX: Impacto Unico",
+      "descripcion": "Descubre como el City Color transforma bodas en CDMX. Contacta a REDEIL para una cotizacion personalizada y asegura un evento inolvidable.",
+      "imagen": "img/city-color-led-bodas-eventos-hero-1765846623248.webp",
+      "imagenAlt": "Luces LED City Color iluminando un jardin durante una boda nocturna en CDMX",
+      "categoria": "Bodas",
+      "tags": [
+        "city color para bodas CDMX",
+        "city color boda",
+        "luces LED potentes",
+        "iluminacion exterior boda"
+      ],
+      "autor": "REDEIL Team",
+      "url": "articulos/city-color-led-bodas-eventos.html",
+      "lecturaMinutos": 12,
+      "destacado": false,
+      "status": "published"
+    },
     {
       "id": "guia-audio-profesional-eventos",
       "slug": "guia-audio-profesional-eventos",
