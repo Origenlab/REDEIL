@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2025-12-16T00:57:08.141Z",
-  "totalArticles": 17,
+  "lastUpdated": "2025-12-16T01:10:26.366Z",
+  "totalArticles": 18,
   "categories": [
     "Guias",
     "Tendencias",
@@ -9,6 +9,27 @@
     "Socios Comerciales"
   ],
   "articulos": [
+    {
+      "id": "tendencias-iluminacion-eventos-modernas",
+      "slug": "tendencias-iluminacion-eventos-modernas",
+      "titulo": "Tendencias de Iluminacion para Eventos: Innovacion y Estilo",
+      "descripcion": "Explora las tendencias de iluminacion para eventos modernos con REDEIL. Innovacion y estilo en la CDMX y Estado de Mexico.",
+      "imagen": "img/tendencias-iluminacion-eventos-modernas-hero-1765847421662.webp",
+      "imagenAlt": "Imagen inspiradora de iluminacion moderna para eventos en CDMX y Estado de Mexico",
+      "categoria": "Tendencias",
+      "tags": [
+        "tendencias de iluminacion para eventos",
+        "tendencias iluminacion",
+        "iluminacion moderna",
+        "nuevas luces eventos",
+        "luz neon"
+      ],
+      "autor": "REDEIL Team",
+      "url": "articulos/tendencias-iluminacion-eventos-modernas.html",
+      "lecturaMinutos": 12,
+      "destacado": false,
+      "status": "published"
+    },
     {
       "id": "city-color-led-bodas-eventos",
       "slug": "city-color-led-bodas-eventos",
