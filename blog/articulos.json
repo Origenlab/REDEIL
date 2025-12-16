@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2025-12-16T01:10:26.366Z",
-  "totalArticles": 18,
+  "lastUpdated": "2025-12-16T18:01:49.402Z",
+  "totalArticles": 19,
   "categories": [
     "Guias",
     "Tendencias",
@@ -9,6 +9,26 @@
     "Socios Comerciales"
   ],
   "articulos": [
+    {
+      "id": "cabezas-moviles-bodas-iluminacion",
+      "slug": "cabezas-moviles-bodas-iluminacion",
+      "titulo": "Cabezas Moviles para Bodas: Iluminacion Dinamica en CDMX",
+      "descripcion": "Transforma tu boda en CDMX con cabezas móviles de REDEIL. Contacta para una cotización personalizada.",
+      "imagen": "img/cabezas-moviles-bodas-iluminacion-hero-1765908104713.webp",
+      "imagenAlt": "Cabezas moviles iluminando pista de baile en boda elegante en CDMX",
+      "categoria": "Bodas",
+      "tags": [
+        "cabezas moviles bodas CDMX",
+        "cabezas moviles boda",
+        "luces roboticas boda",
+        "iluminacion profesional"
+      ],
+      "autor": "REDEIL Team",
+      "url": "articulos/cabezas-moviles-bodas-iluminacion.html",
+      "lecturaMinutos": 12,
+      "destacado": false,
+      "status": "published"
+    },
     {
       "id": "tendencias-iluminacion-eventos-modernas",
       "slug": "tendencias-iluminacion-eventos-modernas",
