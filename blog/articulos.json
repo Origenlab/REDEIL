@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2025-12-16T18:01:49.402Z",
-  "totalArticles": 19,
+  "lastUpdated": "2025-12-19T18:01:36.379Z",
+  "totalArticles": 20,
   "categories": [
     "Guias",
     "Tendencias",
@@ -9,6 +9,26 @@
     "Socios Comerciales"
   ],
   "articulos": [
+    {
+      "id": "proyector-gobos-bodas-monograma",
+      "slug": "proyector-gobos-bodas-monograma",
+      "titulo": "Haz de tu boda un evento unico con proyectores de gobos",
+      "descripcion": "Embellece tu boda con un proyector de gobos de REDEIL. Proyeccion de monogramas personalizados. Cotiza hoy.",
+      "imagen": "img/proyector-gobos-bodas-monograma-hero-1766167291314.webp",
+      "imagenAlt": "Proyector de gobos en una boda mostrando monograma personalizado en pista de baile",
+      "categoria": "Bodas",
+      "tags": [
+        "proyector de gobos para bodas",
+        "gobo boda",
+        "proyector monograma",
+        "logo boda proyectado"
+      ],
+      "autor": "REDEIL Team",
+      "url": "articulos/proyector-gobos-bodas-monograma.html",
+      "lecturaMinutos": 12,
+      "destacado": false,
+      "status": "published"
+    },
     {
       "id": "cabezas-moviles-bodas-iluminacion",
       "slug": "cabezas-moviles-bodas-iluminacion",
