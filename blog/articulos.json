@@ -1,6 +1,6 @@
 {
   "lastUpdated": "2026-01-11T18:45:06.061Z",
-  "totalArticles": 25,
+  "totalArticles": 26,
   "categories": [
     "Guias",
     "Tendencias",
@@ -9,6 +9,27 @@
     "Socios Comerciales"
   ],
   "articulos": [
+    {
+      "id": "guirnaldas-corporativos-tendencias-guirnaldas-corporati",
+      "slug": "guirnaldas-corporativos-tendencias-guirnaldas-corporati",
+      "titulo": "Transforma Eventos con Guirnaldas Corporativas",
+      "descripcion": "Descubre cómo las guirnaldas corporativas pueden transformar tus eventos empresariales. Contacta a REDEIL para cotización personalizada.",
+      "imagen": "img/bodas-guirnaldas/renta-guirnaldas-luces-vintage.webp",
+      "imagenAlt": "Transforma Eventos con Guirnaldas Corporativas - REDEIL",
+      "categoria": "Tendencias",
+      "tags": [
+        "guirnaldas corporativas",
+        "iluminacion empresarial",
+        "decoracion eventos corporativos",
+        "ambientacion comercial",
+        "luces activaciones marca"
+      ],
+      "autor": "REDEIL",
+      "url": "articulos/guirnaldas-corporativos-tendencias-guirnaldas-corporati.html",
+      "lecturaMinutos": 12,
+      "destacado": false,
+      "status": "published"
+    },
     {
       "id": "guirnaldas-corporativos-guia-guirnaldas-eventos-corpor",
       "slug": "guirnaldas-corporativos-guia-guirnaldas-eventos-corpor",
