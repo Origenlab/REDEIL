@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-01-11T18:37:43.761Z",
-  "totalArticles": 24,
+  "lastUpdated": "2026-01-11T18:45:06.061Z",
+  "totalArticles": 25,
   "categories": [
     "Guias",
     "Tendencias",
@@ -9,6 +9,29 @@
     "Socios Comerciales"
   ],
   "articulos": [
+    {
+      "id": "guirnaldas-corporativos-guia-guirnaldas-eventos-corpor",
+      "slug": "guirnaldas-corporativos-guia-guirnaldas-eventos-corpor",
+      "titulo": "Guirnaldas para Eventos Corporativos: La Guia Completa",
+      "descripcion": "Descubre cómo nuestras guirnaldas transforman eventos corporativos. ¡Llama ahora y mejora tu iluminacion!",
+      "imagen": "img/bodas-guirnaldas/renta-guirnaldas-iluminacion-rustica.webp",
+      "imagenAlt": "Guirnaldas para Eventos Corporativos: La Guia Completa - REDEIL",
+      "categoria": "Guias",
+      "tags": [
+        "guirnaldas eventos corporativos",
+        "iluminacion empresarial",
+        "decoracion comercial luces",
+        "ambientacion eventos empresa",
+        "renta iluminacion corporativa"
+      ],
+      "autor": "REDEIL Team",
+      "fechaPublicacion": "2026-01-11",
+      "fechaModificacion": "2026-01-11",
+      "url": "articulos/guirnaldas-corporativos-guia-guirnaldas-eventos-corpor.html",
+      "lecturaMinutos": 15,
+      "destacado": false,
+      "status": "published"
+    },
     {
       "id": "guirnaldas-fiestas-guia-guirnaldas-fiestas",
       "slug": "guirnaldas-fiestas-guia-guirnaldas-fiestas",
