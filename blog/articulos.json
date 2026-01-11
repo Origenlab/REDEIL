@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-01-11T18:12:17.937Z",
-  "totalArticles": 21,
+  "lastUpdated": "2026-01-11T18:18:51.999Z",
+  "totalArticles": 22,
   "categories": [
     "Guias",
     "Tendencias",
@@ -9,6 +9,29 @@
     "Socios Comerciales"
   ],
   "articulos": [
+    {
+      "id": "guirnaldas-fiestas-tendencias-guirnaldas-fiestas",
+      "slug": "guirnaldas-fiestas-tendencias-guirnaldas-fiestas",
+      "titulo": "Guirnaldas para Fiestas: Iluminación Perfecta para Eventos",
+      "descripcion": "Descubre las mejores guirnaldas para fiestas en CDMX. Reserva ahora y transforma tu evento con luz y estilo. ¡Cotiza hoy con REDEIL!",
+      "imagen": "img/bodas-guirnaldas/renta-guirnaldas-luces-bodas.webp",
+      "imagenAlt": "Guirnaldas para Fiestas: Iluminación Perfecta para Eventos - REDEIL",
+      "categoria": "Guias",
+      "tags": [
+        "guirnaldas fiestas",
+        "decoracion luminosa XV anos",
+        "luces para cumpleanos",
+        "iluminacion eventos sociales",
+        "renta luces fiesta"
+      ],
+      "autor": "REDEIL Team",
+      "fechaPublicacion": "2026-01-11",
+      "fechaModificacion": "2026-01-11",
+      "url": "articulos/guirnaldas-fiestas-tendencias-guirnaldas-fiestas.html",
+      "lecturaMinutos": 12,
+      "destacado": false,
+      "status": "published"
+    },
     {
       "id": "guirnaldas-eventos-corporativos-mka1wk5f",
       "slug": "guirnaldas-eventos-corporativos-mka1wk5f",
