@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2025-12-19T18:01:36.379Z",
-  "totalArticles": 20,
+  "lastUpdated": "2026-01-11T18:12:17.937Z",
+  "totalArticles": 21,
   "categories": [
     "Guias",
     "Tendencias",
@@ -9,6 +9,29 @@
     "Socios Comerciales"
   ],
   "articulos": [
+    {
+      "id": "guirnaldas-eventos-corporativos-mka1wk5f",
+      "slug": "guirnaldas-eventos-corporativos-mka1wk5f",
+      "titulo": "Guirnaldas para Eventos Corporativos: Iluminación Ideal",
+      "descripcion": "Descubre cómo las guirnaldas transforman eventos corporativos. Contacta a REDEIL para iluminar tu próximo evento.",
+      "imagen": "img/bodas-guirnaldas/renta-guirnaldas-decoracion-iluminada.webp",
+      "imagenAlt": "Guirnaldas para Eventos Corporativos: Iluminación Ideal - REDEIL",
+      "categoria": "Guias",
+      "tags": [
+        "guirnaldas eventos corporativos",
+        "iluminacion empresarial",
+        "decoracion comercial luces",
+        "ambientacion eventos empresa",
+        "renta iluminacion corporativa"
+      ],
+      "autor": "REDEIL Team",
+      "fechaPublicacion": "2026-01-11",
+      "fechaModificacion": "2026-01-11",
+      "url": "articulos/guirnaldas-eventos-corporativos-mka1wk5f.html",
+      "lecturaMinutos": 12,
+      "destacado": false,
+      "status": "published"
+    },
     {
       "id": "proyector-gobos-bodas-monograma",
       "slug": "proyector-gobos-bodas-monograma",
