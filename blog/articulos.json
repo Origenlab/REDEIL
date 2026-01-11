@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-01-11T18:18:51.999Z",
-  "totalArticles": 22,
+  "lastUpdated": "2026-01-11T18:26:24.467Z",
+  "totalArticles": 23,
   "categories": [
     "Guias",
     "Tendencias",
@@ -9,6 +9,29 @@
     "Socios Comerciales"
   ],
   "articulos": [
+    {
+      "id": "guirnaldas-jardines-guia-guirnaldas-jardin",
+      "slug": "guirnaldas-jardines-guia-guirnaldas-jardin",
+      "titulo": "Guirnaldas para Jardines: Iluminación Exterior Perfecta",
+      "descripcion": "Descubre guirnaldas para jardines con REDEIL. Realza tus eventos con nuestra iluminación exterior. ¡Contacta hoy!",
+      "imagen": "img/bodas-guirnaldas/renta-guirnaldas-decoracion-nocturna.webp",
+      "imagenAlt": "Guirnaldas para Jardines: Iluminación Exterior Perfecta - REDEIL",
+      "categoria": "Guias",
+      "tags": [
+        "guirnaldas jardin",
+        "iluminacion exterior eventos",
+        "luces para jardin boda",
+        "decoracion luminosa terraza",
+        "guirnaldas exteriores"
+      ],
+      "autor": "REDEIL Team",
+      "fechaPublicacion": "2026-01-11",
+      "fechaModificacion": "2026-01-11",
+      "url": "articulos/guirnaldas-jardines-guia-guirnaldas-jardin.html",
+      "lecturaMinutos": 15,
+      "destacado": false,
+      "status": "published"
+    },
     {
       "id": "guirnaldas-fiestas-tendencias-guirnaldas-fiestas",
       "slug": "guirnaldas-fiestas-tendencias-guirnaldas-fiestas",
