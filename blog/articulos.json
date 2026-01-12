@@ -1,6 +1,6 @@
 {
   "lastUpdated": "2026-01-11T18:45:06.061Z",
-  "totalArticles": 26,
+  "totalArticles": 27,
   "categories": [
     "Guias",
     "Tendencias",
@@ -9,6 +9,27 @@
     "Socios Comerciales"
   ],
   "articulos": [
+    {
+      "id": "guirnaldas-festivas-tendencias-guirnaldas-decorativ",
+      "slug": "guirnaldas-festivas-tendencias-guirnaldas-decorativ",
+      "titulo": "Transforma tus eventos con guirnaldas decorativas",
+      "descripcion": "Descubre cómo las guirnaldas decorativas transforman eventos. Solicita cotización personalizada.",
+      "imagen": "img/bodas-guirnaldas/renta-guirnaldas-luces-bodas.webp",
+      "imagenAlt": "Transforma tus eventos con guirnaldas decorativas - REDEIL",
+      "categoria": "Tendencias",
+      "tags": [
+        "guirnaldas decorativas",
+        "iluminacion festiva",
+        "decoracion temporadas",
+        "luces decorativas eventos",
+        "ambientacion especial"
+      ],
+      "autor": "REDEIL",
+      "url": "articulos/guirnaldas-festivas-tendencias-guirnaldas-decorativ.html",
+      "lecturaMinutos": 12,
+      "destacado": false,
+      "status": "published"
+    },
     {
       "id": "guirnaldas-corporativos-tendencias-guirnaldas-corporati",
       "slug": "guirnaldas-corporativos-tendencias-guirnaldas-corporati",
