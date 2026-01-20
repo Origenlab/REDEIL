@@ -2,3 +2,4 @@ REDEIL-TOOLS/
 
 # Workflow con credenciales (no subir)
 workflow/workflow-REDEIL-guirnaldas-v4.json
+node_modules

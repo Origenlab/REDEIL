@@ -22,27 +22,27 @@ const SERVICIOS_MEJORADOS = `<div class="article-services"><h2 class="article-se
 
 // Imagenes disponibles
 const IMAGENES_DISPONIBLES = [
-  'renta-guirnaldas-decoracion-exterior.webp',
-  'renta-guirnaldas-decoracion-iluminada.webp',
-  'renta-guirnaldas-decoracion-luminosa.webp',
-  'renta-guirnaldas-decoracion-nocturna.webp',
-  'renta-guirnaldas-iluminacion-comercial.webp',
-  'renta-guirnaldas-iluminacion-decorativa.webp',
-  'renta-guirnaldas-iluminacion-eventos.webp',
-  'renta-guirnaldas-iluminacion-fiestas.webp',
-  'renta-guirnaldas-iluminacion-fondo.webp',
-  'renta-guirnaldas-iluminacion-rustica.webp',
-  'renta-guirnaldas-iluminacion-terraza.webp',
-  'renta-guirnaldas-luces-ambientales.webp',
-  'renta-guirnaldas-luces-bodas.webp',
-  'renta-guirnaldas-luces-calidas.webp',
-  'renta-guirnaldas-luces-decorativas.webp',
-  'renta-guirnaldas-luces-festejo.webp',
-  'renta-guirnaldas-luces-festivas.webp',
-  'renta-guirnaldas-luces-jardin.webp',
-  'renta-guirnaldas-luces-led.webp',
-  'renta-guirnaldas-luces-navidad.webp',
-  'renta-guirnaldas-luces-vintage.webp'
+  'renta-guirnaldas-decoracion-exterior.avif',
+  'renta-guirnaldas-decoracion-iluminada.avif',
+  'renta-guirnaldas-decoracion-luminosa.avif',
+  'renta-guirnaldas-decoracion-nocturna.avif',
+  'renta-guirnaldas-iluminacion-comercial.avif',
+  'renta-guirnaldas-iluminacion-decorativa.avif',
+  'renta-guirnaldas-iluminacion-eventos.avif',
+  'renta-guirnaldas-iluminacion-fiestas.avif',
+  'renta-guirnaldas-iluminacion-fondo.avif',
+  'renta-guirnaldas-iluminacion-rustica.avif',
+  'renta-guirnaldas-iluminacion-terraza.avif',
+  'renta-guirnaldas-luces-ambientales.avif',
+  'renta-guirnaldas-luces-bodas.avif',
+  'renta-guirnaldas-luces-calidas.avif',
+  'renta-guirnaldas-luces-decorativas.avif',
+  'renta-guirnaldas-luces-festejo.avif',
+  'renta-guirnaldas-luces-festivas.avif',
+  'renta-guirnaldas-luces-jardin.avif',
+  'renta-guirnaldas-luces-led.avif',
+  'renta-guirnaldas-luces-navidad.avif',
+  'renta-guirnaldas-luces-vintage.avif'
 ];
 
 let imageIndex = 0;

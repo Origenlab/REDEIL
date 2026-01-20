@@ -9,12 +9,12 @@ const path = require('path');
 const ARTICULOS_DIR = path.join(__dirname, '../blog/articulos');
 
 const IMAGENES = [
-  'renta-guirnaldas-decoracion-exterior.webp',
-  'renta-guirnaldas-iluminacion-eventos.webp',
-  'renta-guirnaldas-luces-vintage.webp',
-  'renta-guirnaldas-iluminacion-rustica.webp',
-  'renta-guirnaldas-luces-bodas.webp',
-  'renta-guirnaldas-iluminacion-decorativa.webp'
+  'renta-guirnaldas-decoracion-exterior.avif',
+  'renta-guirnaldas-iluminacion-eventos.avif',
+  'renta-guirnaldas-luces-vintage.avif',
+  'renta-guirnaldas-iluminacion-rustica.avif',
+  'renta-guirnaldas-luces-bodas.avif',
+  'renta-guirnaldas-iluminacion-decorativa.avif'
 ];
 
 let imgIdx = 0;

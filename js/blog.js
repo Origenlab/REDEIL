@@ -12,7 +12,7 @@
   const CONFIG = {
     jsonPath: 'articulos.json',
     articlesPerPage: 6,
-    placeholderImage: '../img/img-index/placeholder-blog.webp',
+    placeholderImage: '../img/img-index/placeholder-blog.avif',
     dateLocale: 'es-MX',
     dateOptions: { year: 'numeric', month: 'long', day: 'numeric' }
   };
