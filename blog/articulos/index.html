@@ -215,7 +215,7 @@
         <div class="header__content">
           <div class="header__logo">
             <a href="/" class="logo">
-              <img src="/img/redeil.avif" alt="Redeil - Renta de Equipo para Eventos" class="logo__image" width="200" height="77" loading="eager" />
+              <img src="/img/redeil.avif" alt="Redeil - Renta de Equipo para Eventos" class="logo__image" width="194" height="70" loading="eager" decoding="async" />
             </a>
           </div>
           <nav class="header__nav" role="navigation" aria-label="Menu principal">
@@ -579,7 +579,7 @@
                     <img src="${imagenUrl}"
                          alt="${articulo.titulo}"
                          class="article-card__image"
-                         loading="lazy"
+                         loading="lazy" decoding="async"
                          onerror="this.onerror=null; this.src='${CONFIG.defaultImage}';" />
                     <div class="article-card__content">
                         <span class="article-card__category ${categoryClass}">${categoria}</span>
