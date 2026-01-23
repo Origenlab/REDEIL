@@ -1,0 +1,243 @@
+# ============================================
+# REDEIL.COM - CONFIGURACION .htaccess
+# Optimizado para SEO - Enero 2026
+# ============================================
+
+# Habilitar motor de reescritura
+RewriteEngine On
+
+# ============================================
+# REDIRECCIONES HTTPS Y WWW
+# ============================================
+
+# Forzar HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Redirigir www a non-www (canonical)
+RewriteCond %{HTTP_HOST} ^www\.redeil\.com [NC]
+RewriteRule ^(.*)$ https://redeil.com/$1 [L,R=301]
+
+# ============================================
+# REDIRECCIONES 301 - ERRORES 404 CRITICOS
+# ============================================
+
+# Error 404: bocinas.html no existe -> redirigir a sonido.html
+RewriteRule ^renta-de-bocinas/bocinas\.html$ /renta-de-bocinas/sonido.html [L,R=301]
+
+# Error 404: alquiler-iluminacion.html -> redirigir a iluminacion.html
+RewriteRule ^renta-de-iluminacion/alquiler-iluminacion\.html$ /renta-de-iluminacion/iluminacion.html [L,R=301]
+
+# Error 404: index.html en iluminacion -> redirigir a iluminacion.html
+RewriteRule ^renta-de-iluminacion/index\.html$ /renta-de-iluminacion/iluminacion.html [L,R=301]
+
+# Error 404: /iluminacion sin extension -> redirigir a pagina correcta
+RewriteRule ^iluminacion/?$ /renta-de-iluminacion/iluminacion.html [L,R=301]
+
+# Redireccion adicional: /audio o /sonido sin extension
+RewriteRule ^audio/?$ /renta-de-bocinas/sonido.html [L,R=301]
+RewriteRule ^sonido/?$ /renta-de-bocinas/sonido.html [L,R=301]
+RewriteRule ^bocinas/?$ /renta-de-bocinas/sonido.html [L,R=301]
+
+# Redireccion: /equipos sin extension
+RewriteRule ^equipos/?$ /equipos-para-eventos/equipos-para-eventos.html [L,R=301]
+
+# ============================================
+# REDIRECCIONES DE CARPETAS A PAGINAS PRINCIPALES
+# ============================================
+
+# Carpeta iluminacion sin archivo -> pagina principal
+RewriteRule ^renta-de-iluminacion/?$ /renta-de-iluminacion/iluminacion.html [L,R=301]
+
+# Carpeta bocinas sin archivo -> pagina principal
+RewriteRule ^renta-de-bocinas/?$ /renta-de-bocinas/sonido.html [L,R=301]
+
+# Carpeta equipos sin archivo -> pagina principal
+RewriteRule ^equipos-para-eventos/?$ /equipos-para-eventos/equipos-para-eventos.html [L,R=301]
+
+# Blog index
+RewriteRule ^blog/articulos/?$ /blog/ [L,R=301]
+
+# ============================================
+# TRAILING SLASH - URLs limpias
+# ============================================
+
+# Remover trailing slash de archivos HTML
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} (.+)/$
+RewriteRule ^ %1 [L,R=301]
+
+# ============================================
+# COMPRESION GZIP
+# ============================================
+
+<IfModule mod_deflate.c>
+    # Comprimir HTML, CSS, JavaScript, Text, XML y fonts
+    AddOutputFilterByType DEFLATE application/javascript
+    AddOutputFilterByType DEFLATE application/rss+xml
+    AddOutputFilterByType DEFLATE application/vnd.ms-fontobject
+    AddOutputFilterByType DEFLATE application/x-font
+    AddOutputFilterByType DEFLATE application/x-font-opentype
+    AddOutputFilterByType DEFLATE application/x-font-otf
+    AddOutputFilterByType DEFLATE application/x-font-truetype
+    AddOutputFilterByType DEFLATE application/x-font-ttf
+    AddOutputFilterByType DEFLATE application/x-javascript
+    AddOutputFilterByType DEFLATE application/xhtml+xml
+    AddOutputFilterByType DEFLATE application/xml
+    AddOutputFilterByType DEFLATE font/opentype
+    AddOutputFilterByType DEFLATE font/otf
+    AddOutputFilterByType DEFLATE font/ttf
+    AddOutputFilterByType DEFLATE image/svg+xml
+    AddOutputFilterByType DEFLATE image/x-icon
+    AddOutputFilterByType DEFLATE text/css
+    AddOutputFilterByType DEFLATE text/html
+    AddOutputFilterByType DEFLATE text/javascript
+    AddOutputFilterByType DEFLATE text/plain
+    AddOutputFilterByType DEFLATE text/xml
+
+    # Eliminar bugs de navegadores antiguos
+    BrowserMatch ^Mozilla/4 gzip-only-text/html
+    BrowserMatch ^Mozilla/4\.0[678] no-gzip
+    BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
+    Header append Vary User-Agent
+</IfModule>
+
+# ============================================
+# CACHE DEL NAVEGADOR
+# ============================================
+
+<IfModule mod_expires.c>
+    ExpiresActive On
+
+    # Imagenes - 1 ano
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/gif "access plus 1 year"
+    ExpiresByType image/webp "access plus 1 year"
+    ExpiresByType image/avif "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 year"
+    ExpiresByType image/x-icon "access plus 1 year"
+
+    # Fuentes - 1 ano
+    ExpiresByType font/ttf "access plus 1 year"
+    ExpiresByType font/otf "access plus 1 year"
+    ExpiresByType font/woff "access plus 1 year"
+    ExpiresByType font/woff2 "access plus 1 year"
+    ExpiresByType application/font-woff "access plus 1 year"
+    ExpiresByType application/font-woff2 "access plus 1 year"
+
+    # CSS y JavaScript - 1 mes
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+    ExpiresByType text/javascript "access plus 1 month"
+
+    # HTML - 1 dia (para actualizaciones de contenido)
+    ExpiresByType text/html "access plus 1 day"
+
+    # XML y JSON - 1 dia
+    ExpiresByType application/json "access plus 1 day"
+    ExpiresByType application/xml "access plus 1 day"
+    ExpiresByType text/xml "access plus 1 day"
+
+    # Default
+    ExpiresDefault "access plus 1 week"
+</IfModule>
+
+# Cache-Control headers
+<IfModule mod_headers.c>
+    # Imagenes estaticas
+    <FilesMatch "\.(ico|jpe?g|png|gif|webp|avif|svg)$">
+        Header set Cache-Control "public, max-age=31536000, immutable"
+    </FilesMatch>
+
+    # CSS y JS
+    <FilesMatch "\.(css|js)$">
+        Header set Cache-Control "public, max-age=2592000"
+    </FilesMatch>
+
+    # HTML
+    <FilesMatch "\.(html|htm)$">
+        Header set Cache-Control "public, max-age=86400, must-revalidate"
+    </FilesMatch>
+
+    # Fuentes
+    <FilesMatch "\.(ttf|otf|woff|woff2|eot)$">
+        Header set Cache-Control "public, max-age=31536000, immutable"
+    </FilesMatch>
+</IfModule>
+
+# ============================================
+# HEADERS DE SEGURIDAD
+# ============================================
+
+<IfModule mod_headers.c>
+    # Prevenir clickjacking
+    Header always set X-Frame-Options "SAMEORIGIN"
+
+    # Prevenir MIME type sniffing
+    Header always set X-Content-Type-Options "nosniff"
+
+    # Habilitar XSS Protection
+    Header always set X-XSS-Protection "1; mode=block"
+
+    # Referrer Policy
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+
+    # Permissions Policy (antes Feature-Policy)
+    Header always set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+</IfModule>
+
+# ============================================
+# PREVENCION DE ACCESO A ARCHIVOS SENSIBLES
+# ============================================
+
+# Bloquear acceso a archivos de configuracion
+<FilesMatch "^\.">
+    Require all denied
+</FilesMatch>
+
+# Bloquear archivos de backup y temporales
+<FilesMatch "\.(bak|config|sql|fla|psd|ini|log|sh|inc|swp|dist|old|orig|tmp)$">
+    Require all denied
+</FilesMatch>
+
+# Proteger wp-config si existe (por si migran a WordPress)
+<Files wp-config.php>
+    Require all denied
+</Files>
+
+# ============================================
+# PAGINAS DE ERROR PERSONALIZADAS
+# ============================================
+
+ErrorDocument 404 /404.html
+ErrorDocument 403 /404.html
+ErrorDocument 500 /404.html
+
+# ============================================
+# PERFORMANCE - ETags
+# ============================================
+
+# Deshabilitar ETags para recursos estaticos (usar Cache-Control)
+<IfModule mod_headers.c>
+    Header unset ETag
+</IfModule>
+FileETag None
+
+# ============================================
+# PREVENIR HOTLINKING DE IMAGENES
+# ============================================
+
+<IfModule mod_rewrite.c>
+    RewriteCond %{HTTP_REFERER} !^$
+    RewriteCond %{HTTP_REFERER} !^https?://(www\.)?redeil\.com [NC]
+    RewriteCond %{HTTP_REFERER} !^https?://(www\.)?google\. [NC]
+    RewriteCond %{HTTP_REFERER} !^https?://(www\.)?facebook\. [NC]
+    RewriteCond %{HTTP_REFERER} !^https?://(www\.)?instagram\. [NC]
+    RewriteCond %{HTTP_REFERER} !^https?://(www\.)?pinterest\. [NC]
+    RewriteRule \.(jpg|jpeg|png|gif|webp|avif)$ - [F,NC,L]
+</IfModule>
+
+# ============================================
+# FIN DE CONFIGURACION
+# ============================================
