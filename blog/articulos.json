@@ -1,6 +1,6 @@
 {
   "lastUpdated": "2026-01-20T19:00:00.000Z",
-  "totalArticles": 32,
+  "totalArticles": 33,
   "categories": [
     "Guias",
     "Tendencias",
@@ -9,6 +9,27 @@
     "Socios Comerciales"
   ],
   "articulos": [
+    {
+      "id": "guirnaldas-bodas-guia-guirnaldas-para-boda-6xum",
+      "slug": "guirnaldas-bodas-guia-guirnaldas-para-boda-6xum",
+      "titulo": "Iluminación Romántica: Guirnaldas para Bodas",
+      "descripcion": "Transforma tu boda con guirnaldas. Solicita tu cotización personalizada en REDEIL.",
+      "imagen": "/renta-de-iluminacion/img-guirnaldas/renta-guirnaldas-patio-decorativo.avif",
+      "imagenAlt": "Iluminación Romántica: Guirnaldas para Bodas - REDEIL",
+      "categoria": "Guias",
+      "tags": [
+        "guirnaldas para bodas",
+        "iluminacion romantica bodas",
+        "decoracion luminosa ceremonias",
+        "focos edison bodas",
+        "ambientacion nupcial"
+      ],
+      "autor": "REDEIL",
+      "url": "articulos/guirnaldas-bodas-guia-guirnaldas-para-boda-6xum.html",
+      "lecturaMinutos": 12,
+      "destacado": false,
+      "status": "published"
+    },
     {
       "id": "guirnaldas-fiestas-consejos-guirnaldas-fiestas-tnhy",
       "slug": "guirnaldas-fiestas-consejos-guirnaldas-fiestas-tnhy",
