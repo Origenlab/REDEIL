@@ -1,6 +1,6 @@
 {
   "lastUpdated": "2026-01-20T19:00:00.000Z",
-  "totalArticles": 30,
+  "totalArticles": 31,
   "categories": [
     "Guias",
     "Tendencias",
@@ -9,6 +9,27 @@
     "Socios Comerciales"
   ],
   "articulos": [
+    {
+      "id": "guirnaldas-bodas-tecnico-guirnaldas-para-lt8e",
+      "slug": "guirnaldas-bodas-tecnico-guirnaldas-para-lt8e",
+      "titulo": "Guirnaldas para Bodas: Iluminación Romántica Perfecta",
+      "descripcion": "Descubre cómo las guirnaldas para bodas transforman ceremonias con iluminación romántica y personalizada.",
+      "imagen": "/renta-de-iluminacion/img-guirnaldas/renta-guirnaldas-balcon-terraza.avif",
+      "imagenAlt": "Guirnaldas para Bodas: Iluminación Romántica Perfecta - REDEIL",
+      "categoria": "Tecnico",
+      "tags": [
+        "guirnaldas para bodas",
+        "iluminacion romantica bodas",
+        "decoracion luminosa ceremonias",
+        "focos edison bodas",
+        "ambientacion nupcial"
+      ],
+      "autor": "REDEIL",
+      "url": "articulos/guirnaldas-bodas-tecnico-guirnaldas-para-lt8e.html",
+      "lecturaMinutos": 12,
+      "destacado": false,
+      "status": "published"
+    },
     {
       "id": "guirnaldas-corporativos-consejos-guirnaldas-corporati",
       "slug": "guirnaldas-corporativos-consejos-guirnaldas-corporati",
