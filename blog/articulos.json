@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-01-25T05:27:00.418Z",
-  "totalArticles": 35,
+  "lastUpdated": "2026-01-25T05:44:51.268Z",
+  "totalArticles": 36,
   "categories": [
     "Guias",
     "Tendencias",
@@ -9,6 +9,27 @@
     "Socios Comerciales"
   ],
   "articulos": [
+    {
+      "id": "iluminacion-profesional-para-eventos-elegantes",
+      "slug": "iluminacion-profesional-para-eventos-elegantes",
+      "titulo": "Iluminación Profesional para Eventos Elegantes",
+      "descripcion": "Mejora tus eventos con iluminación profesional estratégica. Aprende a crear ambientes únicos. Contacta para más información.",
+      "imagen": "/blog/img/bodas-guirnaldas/guirnaldas-focos-edison-iluminacion.avif",
+      "imagenAlt": "Iluminación Profesional para Eventos Elegantes - REDEIL",
+      "categoria": "Guias",
+      "tags": [
+        "iluminacion eventos elegantes",
+        "decoracion profesional eventos",
+        "diseno de luz eventos",
+        "ambientacion eventos sociales",
+        "iluminacion profesional"
+      ],
+      "autor": "REDEIL Team",
+      "url": "articulos/iluminacion-profesional-para-eventos-elegantes.html",
+      "lecturaMinutos": 10,
+      "destacado": false,
+      "status": "published"
+    },
     {
       "id": "iluminacion-espectacular-para-xv-anos-crea-la-fiesta-pe",
       "slug": "iluminacion-espectacular-para-xv-anos-crea-la-fiesta-pe",
