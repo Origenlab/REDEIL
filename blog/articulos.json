@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-01-25T04:48:58.093Z",
-  "totalArticles": 34,
+  "lastUpdated": "2026-01-25T05:27:00.418Z",
+  "totalArticles": 35,
   "categories": [
     "Guias",
     "Tendencias",
@@ -9,6 +9,27 @@
     "Socios Comerciales"
   ],
   "articulos": [
+    {
+      "id": "iluminacion-espectacular-para-xv-anos-crea-la-fiesta-pe",
+      "slug": "iluminacion-espectacular-para-xv-anos-crea-la-fiesta-pe",
+      "titulo": "Iluminación Espectacular para XV Años: Crea la Fiesta Perfecta",
+      "descripcion": "Descubre cómo iluminar tu fiesta de XV años con estilo. Aprende consejos prácticos y creativos. ¡Transforma tu evento!",
+      "imagen": "/blog/img/bodas-guirnaldas/renta-guirnaldas-interiores-elegantes.avif",
+      "imagenAlt": "Iluminación Espectacular para XV Años: Crea la Fiesta Perfecta - REDEIL",
+      "categoria": "Guias",
+      "tags": [
+        "decoracion xv anos",
+        "iluminacion quinceañera",
+        "fiesta xv anos luces",
+        "decoracion luminosa xv",
+        "ideas iluminacion quince anos"
+      ],
+      "autor": "REDEIL Team",
+      "url": "articulos/iluminacion-espectacular-para-xv-anos-crea-la-fiesta-pe.html",
+      "lecturaMinutos": 10,
+      "destacado": false,
+      "status": "published"
+    },
     {
       "id": "errores-comunes-al-decorar-bodas-con-guirnaldas-de-luce",
       "slug": "errores-comunes-al-decorar-bodas-con-guirnaldas-de-luce",
