@@ -1,6 +1,6 @@
 {
   "lastUpdated": "2026-01-20T19:00:00.000Z",
-  "totalArticles": 31,
+  "totalArticles": 32,
   "categories": [
     "Guias",
     "Tendencias",
@@ -9,6 +9,27 @@
     "Socios Comerciales"
   ],
   "articulos": [
+    {
+      "id": "guirnaldas-fiestas-consejos-guirnaldas-fiestas-tnhy",
+      "slug": "guirnaldas-fiestas-consejos-guirnaldas-fiestas-tnhy",
+      "titulo": "Guirnaldas: Iluminación Perfecta para Celebraciones",
+      "descripcion": "Descubre cómo las guirnaldas transforman tus eventos en experiencias inolvidables.",
+      "imagen": "/renta-de-iluminacion/img-guirnaldas/guirnaldas-iluminacion-vintage-noche.avif",
+      "imagenAlt": "Guirnaldas: Iluminación Perfecta para Celebraciones - REDEIL",
+      "categoria": "Consejos",
+      "tags": [
+        "guirnaldas fiestas",
+        "decoracion XV anos",
+        "iluminacion cumpleanos",
+        "luces celebraciones",
+        "ambientacion eventos sociales"
+      ],
+      "autor": "REDEIL",
+      "url": "articulos/guirnaldas-fiestas-consejos-guirnaldas-fiestas-tnhy.html",
+      "lecturaMinutos": 12,
+      "destacado": false,
+      "status": "published"
+    },
     {
       "id": "guirnaldas-bodas-tecnico-guirnaldas-para-lt8e",
       "slug": "guirnaldas-bodas-tecnico-guirnaldas-para-lt8e",
