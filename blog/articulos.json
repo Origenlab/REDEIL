@@ -1,6 +1,6 @@
 {
   "lastUpdated": "2026-01-20T19:00:00.000Z",
-  "totalArticles": 29,
+  "totalArticles": 30,
   "categories": [
     "Guias",
     "Tendencias",
@@ -9,6 +9,27 @@
     "Socios Comerciales"
   ],
   "articulos": [
+    {
+      "id": "guirnaldas-corporativos-consejos-guirnaldas-corporati",
+      "slug": "guirnaldas-corporativos-consejos-guirnaldas-corporati",
+      "titulo": "Iluminación Corporativa: Transformación con Guirnaldas",
+      "descripcion": "Descubre cómo nuestras guirnaldas transforman eventos corporativos. Contacta a REDEIL para una cotización personalizada.",
+      "imagen": "img/bodas-guirnaldas/renta-guirnaldas-iluminacion-decorativa.webp",
+      "imagenAlt": "Iluminación Corporativa: Transformación con Guirnaldas - REDEIL",
+      "categoria": "Consejos",
+      "tags": [
+        "guirnaldas corporativas",
+        "iluminacion empresarial",
+        "decoracion eventos corporativos",
+        "ambientacion comercial",
+        "luces activaciones marca"
+      ],
+      "autor": "REDEIL",
+      "url": "articulos/guirnaldas-corporativos-consejos-guirnaldas-corporati.html",
+      "lecturaMinutos": 12,
+      "destacado": false,
+      "status": "published"
+    },
     {
       "id": "guirnaldas-fiestas-consejos-guirnaldas-fiestas",
       "slug": "guirnaldas-fiestas-consejos-guirnaldas-fiestas",
