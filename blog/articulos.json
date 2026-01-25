@@ -1,6 +1,6 @@
 {
   "lastUpdated": "2026-01-20T19:00:00.000Z",
-  "totalArticles": 28,
+  "totalArticles": 29,
   "categories": [
     "Guias",
     "Tendencias",
@@ -9,6 +9,27 @@
     "Socios Comerciales"
   ],
   "articulos": [
+    {
+      "id": "guirnaldas-fiestas-consejos-guirnaldas-fiestas",
+      "slug": "guirnaldas-fiestas-consejos-guirnaldas-fiestas",
+      "titulo": "Transforma tus Eventos con Guirnaldas de Luces",
+      "descripcion": "Descubre cómo las guirnaldas de luces pueden transformar tus eventos en experiencias inolvidables. Contacta a REDEIL para asesoría.",
+      "imagen": "img/bodas-guirnaldas/renta-guirnaldas-luces-festejo.webp",
+      "imagenAlt": "Transforma tus Eventos con Guirnaldas de Luces - REDEIL",
+      "categoria": "Consejos",
+      "tags": [
+        "guirnaldas fiestas",
+        "decoracion XV anos",
+        "iluminacion cumpleanos",
+        "luces celebraciones",
+        "ambientacion eventos sociales"
+      ],
+      "autor": "REDEIL",
+      "url": "articulos/guirnaldas-fiestas-consejos-guirnaldas-fiestas.html",
+      "lecturaMinutos": 12,
+      "destacado": false,
+      "status": "published"
+    },
     {
       "id": "renta-guirnaldas-focos-vintage-eventos-cdmx",
       "slug": "renta-guirnaldas-focos-vintage-eventos-cdmx",
