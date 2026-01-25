@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-01-20T19:00:00.000Z",
-  "totalArticles": 33,
+  "lastUpdated": "2026-01-25T04:48:58.093Z",
+  "totalArticles": 34,
   "categories": [
     "Guias",
     "Tendencias",
@@ -9,6 +9,27 @@
     "Socios Comerciales"
   ],
   "articulos": [
+    {
+      "id": "errores-comunes-al-decorar-bodas-con-guirnaldas-de-luce",
+      "slug": "errores-comunes-al-decorar-bodas-con-guirnaldas-de-luce",
+      "titulo": "Errores Comunes al Decorar Bodas con Guirnaldas de Luces",
+      "descripcion": "Descubre cómo evitar errores comunes y crear una iluminación romántica y elegante en tu boda. ¡Transforma tu evento con guirnaldas!",
+      "imagen": "/blog/img/bodas-guirnaldas/renta-guirnaldas-arbol-iluminado-evento.avif",
+      "imagenAlt": "Errores Comunes al Decorar Bodas con Guirnaldas de Luces - REDEIL",
+      "categoria": "Guias",
+      "tags": [
+        "decoracion bodas guirnaldas",
+        "iluminacion romantica bodas",
+        "como decorar boda con luces",
+        "ambientacion nupcial",
+        "ideas iluminacion bodas"
+      ],
+      "autor": "REDEIL Team",
+      "url": "articulos/errores-comunes-al-decorar-bodas-con-guirnaldas-de-luce.html",
+      "lecturaMinutos": 10,
+      "destacado": false,
+      "status": "published"
+    },
     {
       "id": "guirnaldas-bodas-iluminacion-perfecta",
       "slug": "guirnaldas-bodas-iluminacion-perfecta",
