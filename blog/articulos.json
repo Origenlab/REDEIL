@@ -1,6 +1,6 @@
 {
   "lastUpdated": "2026-01-20T19:00:00.000Z",
-  "totalArticles": 33,
+  "totalArticles": 34,
   "categories": [
     "Guias",
     "Tendencias",
@@ -9,6 +9,27 @@
     "Socios Comerciales"
   ],
   "articulos": [
+    {
+      "id": "guirnaldas-vintage-tecnico-guirnaldas-vintage-f9m0",
+      "slug": "guirnaldas-vintage-tecnico-guirnaldas-vintage-f9m0",
+      "titulo": "Guirnaldas Vintage: Elegancia y Estilo Retro en CDMX",
+      "descripcion": "Descubre cómo las guirnaldas vintage transforman eventos con su estilo retro. Contacta a REDEIL para más información.",
+      "imagen": "/blog/img/bodas-guirnaldas/renta-guirnaldas-corporativo-elegante.avif",
+      "imagenAlt": "Guirnaldas Vintage: Elegancia y Estilo Retro en CDMX - REDEIL",
+      "categoria": "Tecnico",
+      "tags": [
+        "guirnaldas vintage",
+        "focos edison decorativos",
+        "iluminacion retro eventos",
+        "decoracion vintage",
+        "luces calidas ambientales"
+      ],
+      "autor": "REDEIL",
+      "url": "articulos/guirnaldas-vintage-tecnico-guirnaldas-vintage-f9m0.html",
+      "lecturaMinutos": 12,
+      "destacado": false,
+      "status": "published"
+    },
     {
       "id": "guirnaldas-bodas-guia-guirnaldas-para-boda-6xum",
       "slug": "guirnaldas-bodas-guia-guirnaldas-para-boda-6xum",
