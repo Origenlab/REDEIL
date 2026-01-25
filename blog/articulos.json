@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-01-25T04:02:55.724Z",
-  "totalArticles": 35,
+  "lastUpdated": "2026-01-20T19:00:00.000Z",
+  "totalArticles": 33,
   "categories": [
     "Guias",
     "Tendencias",
@@ -10,52 +10,8 @@
   ],
   "articulos": [
     {
-      "id": "transforma-tus-eventos-con-guirnaldas-decorativas",
-      "slug": "transforma-tus-eventos-con-guirnaldas-decorativas",
-      "titulo": "Transforma tus eventos con guirnaldas decorativas",
-      "descripcion": "Descubre cómo las guirnaldas decorativas transforman tus eventos. Contacta a REDEIL para una cotización personalizada.",
-      "imagen": "/blog/img/bodas-guirnaldas/serie-focos-vintage-decoracion-boda.avif",
-      "imagenAlt": "Transforma tus eventos con guirnaldas decorativas - REDEIL",
-      "categoria": "Tendencias",
-      "tags": [
-        "guirnaldas decorativas",
-        "iluminacion festiva",
-        "decoracion temporadas",
-        "luces decorativas eventos",
-        "ambientacion especial"
-      ],
-      "autor": "REDEIL Team",
-      "fechaPublicacion": "2026-01-25",
-      "fechaModificacion": "2026-01-25",
-      "url": "articulos/transforma-tus-eventos-con-guirnaldas-decorativas.html",
-      "lecturaMinutos": 12,
-      "destacado": false,
-      "status": "published"
-    },
-    {
-      "id": "guirnaldas-vintage-tecnico-guirnaldas-vintage-f9m0",
-      "slug": "guirnaldas-vintage-tecnico-guirnaldas-vintage-f9m0",
-      "titulo": "Guirnaldas Vintage: Elegancia y Estilo Retro en CDMX",
-      "descripcion": "Descubre cómo las guirnaldas vintage transforman eventos con su estilo retro. Contacta a REDEIL para más información.",
-      "imagen": "/blog/img/bodas-guirnaldas/renta-guirnaldas-corporativo-elegante.avif",
-      "imagenAlt": "Guirnaldas Vintage: Elegancia y Estilo Retro en CDMX - REDEIL",
-      "categoria": "Tecnico",
-      "tags": [
-        "guirnaldas vintage",
-        "focos edison decorativos",
-        "iluminacion retro eventos",
-        "decoracion vintage",
-        "luces calidas ambientales"
-      ],
-      "autor": "REDEIL",
-      "url": "articulos/guirnaldas-vintage-tecnico-guirnaldas-vintage-f9m0.html",
-      "lecturaMinutos": 12,
-      "destacado": false,
-      "status": "published"
-    },
-    {
-      "id": "guirnaldas-bodas-guia-guirnaldas-para-boda-6xum",
-      "slug": "guirnaldas-bodas-guia-guirnaldas-para-boda-6xum",
+      "id": "guirnaldas-bodas-iluminacion-perfecta",
+      "slug": "guirnaldas-bodas-iluminacion-perfecta",
       "titulo": "Iluminación Romántica: Guirnaldas para Bodas",
       "descripcion": "Transforma tu boda con guirnaldas. Solicita tu cotización personalizada en REDEIL.",
       "imagen": "/renta-de-iluminacion/img-guirnaldas/renta-guirnaldas-patio-decorativo.avif",
@@ -69,14 +25,14 @@
         "ambientacion nupcial"
       ],
       "autor": "REDEIL",
-      "url": "articulos/guirnaldas-bodas-guia-guirnaldas-para-boda-6xum.html",
+      "url": "articulos/guirnaldas-bodas-iluminacion-perfecta.html",
       "lecturaMinutos": 12,
       "destacado": false,
       "status": "published"
     },
     {
-      "id": "guirnaldas-fiestas-consejos-guirnaldas-fiestas-tnhy",
-      "slug": "guirnaldas-fiestas-consejos-guirnaldas-fiestas-tnhy",
+      "id": "guirnaldas-fiestas-cdmx",
+      "slug": "guirnaldas-fiestas-cdmx",
       "titulo": "Guirnaldas: Iluminación Perfecta para Celebraciones",
       "descripcion": "Descubre cómo las guirnaldas transforman tus eventos en experiencias inolvidables.",
       "imagen": "/renta-de-iluminacion/img-guirnaldas/guirnaldas-iluminacion-vintage-noche.avif",
@@ -90,14 +46,14 @@
         "ambientacion eventos sociales"
       ],
       "autor": "REDEIL",
-      "url": "articulos/guirnaldas-fiestas-consejos-guirnaldas-fiestas-tnhy.html",
+      "url": "articulos/guirnaldas-fiestas-cdmx.html",
       "lecturaMinutos": 12,
       "destacado": false,
       "status": "published"
     },
     {
-      "id": "guirnaldas-bodas-tecnico-guirnaldas-para-lt8e",
-      "slug": "guirnaldas-bodas-tecnico-guirnaldas-para-lt8e",
+      "id": "guirnaldas-bodas-iluminacion-romantica",
+      "slug": "guirnaldas-bodas-iluminacion-romantica",
       "titulo": "Guirnaldas para Bodas: Iluminación Romántica Perfecta",
       "descripcion": "Descubre cómo las guirnaldas para bodas transforman ceremonias con iluminación romántica y personalizada.",
       "imagen": "/renta-de-iluminacion/img-guirnaldas/renta-guirnaldas-balcon-terraza.avif",
@@ -111,7 +67,7 @@
         "ambientacion nupcial"
       ],
       "autor": "REDEIL",
-      "url": "articulos/guirnaldas-bodas-tecnico-guirnaldas-para-lt8e.html",
+      "url": "articulos/guirnaldas-bodas-iluminacion-romantica.html",
       "lecturaMinutos": 12,
       "destacado": false,
       "status": "published"
