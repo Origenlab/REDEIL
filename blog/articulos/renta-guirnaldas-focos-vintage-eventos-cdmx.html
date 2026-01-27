@@ -155,7 +155,8 @@
         ]
     }
     </script>
-</head>
+    <link rel="stylesheet" href="../../css/web-vitals.css" />
+  </head>
 
 <body>
     <!-- Header -->
@@ -269,6 +270,17 @@
         </div>
       </div>
     </header>
+
+    <!-- Breadcrumbs -->
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <div class="container">
+            <ol class="breadcrumbs-list">
+                <li class="breadcrumbs-item"><a href="/">Inicio</a></li>
+                <li class="breadcrumbs-item"><a href="/blog/">Blog</a></li>
+                <li class="breadcrumbs-item breadcrumbs-item--active">Articulo</li>
+            </ol>
+        </div>
+    </nav>
 
     <!-- Article Hero Section -->
     <section class="article-hero">
@@ -817,5 +829,6 @@
       });
     </script>
     <script src="/js/app.min.js" defer></script>
-</body>
+    <script src="../../js/eventos-tracking.js" defer></script>
+  </body>
 </html>
