@@ -1,24 +1,148 @@
-[
-  {
-    "id": "humo-bajo-bodas-baile-ensueno",
-    "slug": "humo-bajo-bodas-baile-ensueno",
-    "titulo": "Humo Bajo para Bodas: Crea un Baile de Ensueño",
-    "descripcion": "Transforma tu primer baile con humo bajo en bodas. Descubre cómo crear un efecto de nubes mágico en CDMX.",
-    "imagen": "/img/img-index/bocinas-para-bodas.avif",
-    "imagenAlt": "Humo Bajo para Bodas: Crea un Baile de Ensueño - REDEIL",
-    "categoria": "Bodas",
-    "tags": [
-      "humo bajo",
-      "bodas",
-      "primer baile",
-      "efecto nubes",
-      "CDMX"
-    ],
-    "autor": "REDEIL Team",
-    "fechaPublicacion": "2026-01-27",
-    "url": "articulos/humo-bajo-bodas-baile-ensueno.html",
-    "lecturaMinutos": 8,
-    "destacado": false,
-    "status": "published"
-  }
-]
+{
+  "articulos": [
+    {
+      "id": "humo-bajo-bodas-baile-ensueno",
+      "slug": "humo-bajo-bodas-baile-ensueno",
+      "titulo": "Humo Bajo para Bodas: Crea un Baile de Ensueño",
+      "descripcion": "Transforma tu primer baile con humo bajo en bodas. Descubre cómo crear un efecto de nubes mágico en CDMX.",
+      "imagen": "/img/img-index/bocinas-para-bodas.avif",
+      "categoria": "Bodas",
+      "autor": "REDEIL Team",
+      "fechaPublicacion": "2026-01-27",
+      "url": "humo-bajo-bodas-baile-ensueno.html",
+      "lecturaMinutos": 8
+    },
+    {
+      "id": "iluminacion-profesional-para-eventos-elegantes",
+      "slug": "iluminacion-profesional-para-eventos-elegantes",
+      "titulo": "Iluminación Profesional para Eventos Elegantes",
+      "descripcion": "Mejora tus eventos con iluminación profesional estratégica. Aprende a crear ambientes únicos.",
+      "imagen": "/blog/img/bodas-guirnaldas/renta-guirnaldas-estilo-industrial.avif",
+      "categoria": "Guias",
+      "autor": "REDEIL Team",
+      "fechaPublicacion": "2026-01-27",
+      "url": "iluminacion-profesional-para-eventos-elegantes.html",
+      "lecturaMinutos": 10
+    },
+    {
+      "id": "tendencias-iluminacion-bodas",
+      "slug": "tendencias-iluminacion-bodas",
+      "titulo": "Tendencias en Iluminación para Bodas",
+      "descripcion": "Descubre las últimas tendencias en iluminación para bodas y cómo aplicarlas en tu evento.",
+      "imagen": "/img/img-index/cabezas-moviles.avif",
+      "categoria": "Tendencias",
+      "autor": "REDEIL Team",
+      "fechaPublicacion": "2026-01-20",
+      "url": "tendencias-iluminacion-bodas.html",
+      "lecturaMinutos": 8
+    },
+    {
+      "id": "guirnaldas-vintage-bodas-decoracion-luminosa",
+      "slug": "guirnaldas-vintage-bodas-decoracion-luminosa",
+      "titulo": "Guirnaldas Vintage para Bodas: Decoración Luminosa",
+      "descripcion": "Aprende a usar guirnaldas vintage con focos Edison para crear ambientes románticos en bodas.",
+      "imagen": "/renta-de-iluminacion/img-guirnaldas/focos-edison-guirnalda-jardin.avif",
+      "categoria": "Bodas",
+      "autor": "REDEIL Team",
+      "fechaPublicacion": "2026-01-18",
+      "url": "guirnaldas-vintage-bodas-decoracion-luminosa.html",
+      "lecturaMinutos": 9
+    },
+    {
+      "id": "iluminacion-neon-para-bodas-tendencias-efectos",
+      "slug": "iluminacion-neon-para-bodas-tendencias-efectos",
+      "titulo": "Iluminación Neón para Bodas: Tendencias y Efectos",
+      "descripcion": "Guía completa para novios modernos que quieren efectos de luz neón LED profesional.",
+      "imagen": "/img/img-index/city-color.avif",
+      "categoria": "Tendencias",
+      "autor": "REDEIL Team",
+      "fechaPublicacion": "2026-01-15",
+      "url": "iluminacion-neon-para-bodas-tendencias-efectos.html",
+      "lecturaMinutos": 12
+    },
+    {
+      "id": "luz-negra-uv-fiestas-tematicas-neon",
+      "slug": "luz-negra-uv-fiestas-tematicas-neon",
+      "titulo": "Luz Negra UV para Fiestas Temáticas Neón",
+      "descripcion": "Crea fiestas temáticas neón con luz negra UV. Guía profesional para eventos en CDMX.",
+      "imagen": "/img/img-index/luz-negra.avif",
+      "categoria": "Tips",
+      "autor": "REDEIL Team",
+      "fechaPublicacion": "2026-01-12",
+      "url": "luz-negra-uv-fiestas-tematicas-neon.html",
+      "lecturaMinutos": 8
+    },
+    {
+      "id": "renta-de-bocinas-cdmx-eventos-profesionales",
+      "slug": "renta-de-bocinas-cdmx-eventos-profesionales",
+      "titulo": "Renta de Bocinas en CDMX: Audio Profesional",
+      "descripcion": "Guía completa para rentar bocinas profesionales para eventos en Ciudad de México.",
+      "imagen": "/img/img-index/bocinas-para-fiestas.avif",
+      "categoria": "Guias",
+      "autor": "REDEIL Team",
+      "fechaPublicacion": "2026-01-10",
+      "url": "renta-de-bocinas-cdmx-eventos-profesionales.html",
+      "lecturaMinutos": 10
+    },
+    {
+      "id": "xv-anos-unforgettable-produccion-completa",
+      "slug": "xv-anos-unforgettable-produccion-completa",
+      "titulo": "XV Años Inolvidables: Guía de Producción",
+      "descripcion": "Guía completa para producir una fiesta de XV años inolvidable con iluminación y audio profesional.",
+      "imagen": "/img/img-index/bocinas-para-xv-anos.avif",
+      "categoria": "XV Anos",
+      "autor": "REDEIL Team",
+      "fechaPublicacion": "2026-01-08",
+      "url": "xv-anos-unforgettable-produccion-completa.html",
+      "lecturaMinutos": 11
+    },
+    {
+      "id": "cabezas-moviles-bodas-iluminacion",
+      "slug": "cabezas-moviles-bodas-iluminacion",
+      "titulo": "Cabezas Móviles para Bodas: Iluminación Robótica",
+      "descripcion": "Descubre cómo las cabezas móviles transforman bodas con efectos de luz espectaculares.",
+      "imagen": "/img/img-index/cabezas-moviles.avif",
+      "categoria": "Guias",
+      "autor": "REDEIL Team",
+      "fechaPublicacion": "2026-01-05",
+      "url": "cabezas-moviles-bodas-iluminacion.html",
+      "lecturaMinutos": 9
+    },
+    {
+      "id": "focos-edison-bodas-elegancia-vintage",
+      "slug": "focos-edison-bodas-elegancia-vintage",
+      "titulo": "Focos Edison para Bodas: Elegancia Vintage",
+      "descripcion": "Crea ambientes románticos con focos Edison LED para tu boda. Guía profesional REDEIL.",
+      "imagen": "/renta-de-iluminacion/img-guirnaldas/serie-focos-edison-ambiente.avif",
+      "categoria": "Bodas",
+      "autor": "REDEIL Team",
+      "fechaPublicacion": "2026-01-03",
+      "url": "focos-edison-bodas-elegancia-vintage.html",
+      "lecturaMinutos": 8
+    },
+    {
+      "id": "eventos-corporativos-cdmx-tecnologia-audiovisual",
+      "slug": "eventos-corporativos-cdmx-tecnologia-audiovisual",
+      "titulo": "Eventos Corporativos CDMX: Tecnología Audiovisual",
+      "descripcion": "Guía profesional de iluminación y audio para eventos corporativos en Ciudad de México.",
+      "imagen": "/img/img-index/conferencias.avif",
+      "categoria": "Corporativos",
+      "autor": "REDEIL Team",
+      "fechaPublicacion": "2025-12-28",
+      "url": "eventos-corporativos-cdmx-tecnologia-audiovisual.html",
+      "lecturaMinutos": 10
+    },
+    {
+      "id": "presupuesto-iluminacion-bodas-guia-completa",
+      "slug": "presupuesto-iluminacion-bodas-guia-completa",
+      "titulo": "Presupuesto de Iluminación para Bodas: Guía Completa",
+      "descripcion": "Aprende a planificar el presupuesto de iluminación para tu boda con consejos profesionales.",
+      "imagen": "/renta-de-iluminacion/img-guirnaldas/renta-guirnaldas-pergola-iluminada.avif",
+      "categoria": "Guias",
+      "autor": "REDEIL Team",
+      "fechaPublicacion": "2025-12-25",
+      "url": "presupuesto-iluminacion-bodas-guia-completa.html",
+      "lecturaMinutos": 12
+    }
+  ]
+}
