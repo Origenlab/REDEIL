@@ -1,6 +1,18 @@
 {
   "articulos": [
     {
+      "id": "guirnaldas-luces-eventos-consejos-expertos",
+      "slug": "guirnaldas-luces-eventos-consejos-expertos",
+      "titulo": "Guirnaldas de Luces para Eventos: Consejos de Expertos",
+      "descripcion": "Descubre como las guirnaldas de luces transforman eventos en CDMX. Beneficios, tipos y consejos expertos. Conoce mas.",
+      "imagen": "/renta-de-iluminacion/img-guirnaldas/focos-edison-guirnalda-jardin.avif",
+      "categoria": "Guias",
+      "autor": "REDEIL Team",
+      "fechaPublicacion": "2026-01-28",
+      "url": "guirnaldas-luces-eventos-consejos-expertos.html",
+      "lecturaMinutos": 8
+    },
+    {
       "id": "bocinas-para-fiestas-bodas-guia-cdmx",
       "slug": "bocinas-para-fiestas-bodas-guia-cdmx",
       "titulo": "Bocinas para Fiestas para Bodas: Guia Completa CDMX",
