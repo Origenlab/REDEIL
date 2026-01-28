@@ -1,6 +1,18 @@
 {
   "articulos": [
     {
+      "id": "iluminacion-laser-para-bodas-cdmx",
+      "slug": "iluminacion-laser-para-bodas-cdmx",
+      "titulo": "Iluminacion Laser para Bodas: Guia Completa CDMX",
+      "descripcion": "Descubre como la iluminacion laser en CDMX transforma eventos. Aprende beneficios y consejos para elegir el equipo ideal.",
+      "imagen": "/img/img-index/luz-neon.avif",
+      "categoria": "Tendencias",
+      "autor": "REDEIL Team",
+      "fechaPublicacion": "2026-01-28",
+      "url": "iluminacion-laser-para-bodas-cdmx.html",
+      "lecturaMinutos": 10
+    },
+    {
       "id": "audio-conferencias-cdmx",
       "slug": "audio-conferencias-cdmx",
       "titulo": "Audio para Conferencias en CDMX: Elección Profesional",
