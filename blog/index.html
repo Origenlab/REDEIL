@@ -57,101 +57,202 @@
 
     <style>
         .articles-hero {
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-            padding: 4rem 0;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            padding: 5rem 0;
             text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .articles-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 20% 80%, rgba(0,113,227,0.15) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 20%, rgba(0,113,227,0.1) 0%, transparent 40%);
+            pointer-events: none;
         }
         .articles-hero__title {
             color: #ffffff;
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 1.25rem;
+            letter-spacing: -0.02em;
+            position: relative;
         }
         .articles-hero__subtitle {
-            color: rgba(255,255,255,0.8);
-            font-size: 1.125rem;
-            max-width: 600px;
+            color: rgba(255,255,255,0.85);
+            font-size: 1.1875rem;
+            max-width: 650px;
             margin: 0 auto;
+            line-height: 1.6;
+            position: relative;
         }
         .articles-section {
-            background: #f5f5f7;
-            padding: 3rem 0 4rem;
+            background: linear-gradient(180deg, #f5f5f7 0%, #ffffff 100%);
+            padding: 4rem 0 5rem;
         }
         .articles-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
+            grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+            gap: 2.5rem;
+            margin-top: 2.5rem;
         }
         .article-card {
             background: #ffffff;
-            border-radius: 16px;
+            border-radius: 20px;
             overflow: hidden;
-            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06), 0 1px 3px rgba(0,0,0,0.04);
             text-decoration: none;
-            display: block;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid rgba(0,0,0,0.04);
+            position: relative;
         }
-        .article-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+        .article-card__image-wrapper {
+            position: relative;
+            overflow: hidden;
+        }
+        .article-card__image-wrapper::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 60px;
+            background: linear-gradient(to top, rgba(0,0,0,0.08), transparent);
+            pointer-events: none;
         }
         .article-card__image {
             width: 100%;
-            height: 200px;
+            height: 220px;
             object-fit: cover;
-            background: #e5e5e5;
-        }
-        .article-card__content {
-            padding: 1.5rem;
+            background: linear-gradient(135deg, #f5f5f7 0%, #e8e8ed 100%);
+            display: block;
         }
         .article-card__category {
-            display: inline-block;
-            background: #0071e3;
-            color: #ffffff;
-            font-size: 0.75rem;
-            font-weight: 600;
-            padding: 0.25rem 0.75rem;
-            border-radius: 20px;
-            margin-bottom: 0.75rem;
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            display: inline-flex;
+            align-items: center;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            color: #0071e3;
+            font-size: 0.6875rem;
+            font-weight: 700;
+            padding: 0.4rem 0.875rem;
+            border-radius: 100px;
             text-transform: uppercase;
+            letter-spacing: 0.05em;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            z-index: 2;
         }
         .article-card__category--socios,
         .article-card__category--socios-comerciales {
-            background: #30b952;
+            color: #30b952;
         }
         .article-card__category--tendencias {
-            background: #ff6b35;
+            color: #ff6b35;
         }
         .article-card__category--inspiracion {
-            background: #9b59b6;
+            color: #9b59b6;
         }
         .article-card__category--tips {
-            background: #f39c12;
+            color: #f39c12;
+        }
+        .article-card__category--bodas {
+            color: #e91e63;
+        }
+        .article-card__category--xv-anos {
+            color: #9c27b0;
+        }
+        .article-card__category--corporativos {
+            color: #1d1d1f;
+        }
+        .article-card__content {
+            padding: 1.75rem;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
         }
         .article-card__title {
             color: #1d1d1f;
-            font-size: 1.125rem;
-            font-weight: 600;
-            line-height: 1.4;
-            margin-bottom: 0.5rem;
+            font-size: 1.25rem;
+            font-weight: 700;
+            line-height: 1.35;
+            margin-bottom: 0.75rem;
+            letter-spacing: -0.01em;
+        }
+        .article-card__title a {
+            color: inherit;
+            text-decoration: none;
         }
         .article-card__description {
             color: #6e6e73;
             font-size: 0.9375rem;
-            line-height: 1.5;
-            margin-bottom: 1rem;
+            line-height: 1.6;
+            margin-bottom: 1.25rem;
             display: -webkit-box;
             -webkit-line-clamp: 3;
             -webkit-box-orient: vertical;
             overflow: hidden;
+            flex-grow: 1;
         }
         .article-card__meta {
             display: flex;
             align-items: center;
-            gap: 1rem;
+            justify-content: space-between;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(0,0,0,0.06);
+            margin-bottom: 1.25rem;
+        }
+        .article-card__meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.375rem;
             color: #86868b;
             font-size: 0.8125rem;
+            font-weight: 500;
+        }
+        .article-card__meta-item svg {
+            width: 14px;
+            height: 14px;
+            opacity: 0.7;
+        }
+        .article-card__button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            background: linear-gradient(135deg, #0071e3 0%, #0077ed 100%);
+            color: #ffffff;
+            font-size: 0.875rem;
+            font-weight: 600;
+            padding: 0.875rem 1.5rem;
+            border-radius: 12px;
+            text-decoration: none;
+            text-align: center;
+            margin-top: auto;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 2px 8px rgba(0,113,227,0.25);
+            letter-spacing: 0.01em;
+        }
+        .article-card__button::after {
+            content: '→';
+            font-size: 1rem;
+            transition: transform 0.3s ease;
+        }
+        .article-card__button:hover {
+            background: linear-gradient(135deg, #0077ed 0%, #0056b3 100%);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,113,227,0.35);
+        }
+        .article-card__button:hover::after {
+            transform: translateX(4px);
         }
         .back-to-blog {
             display: inline-flex;
@@ -166,31 +267,50 @@
             text-decoration: underline;
         }
         .container {
-            max-width: 1200px;
+            max-width: 1280px;
             margin: 0 auto;
-            padding: 0 1.5rem;
+            padding: 0 2rem;
         }
         .articles-count {
-            color: #6e6e73;
-            font-size: 0.9375rem;
-            margin-bottom: 1rem;
+            color: #1d1d1f;
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: #ffffff;
+            padding: 0.75rem 1.25rem;
+            border-radius: 100px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        }
+        .articles-count::before {
+            content: '';
+            width: 8px;
+            height: 8px;
+            background: #0071e3;
+            border-radius: 50%;
         }
         .loading-spinner {
             text-align: center;
-            padding: 3rem;
-            color: #6e6e73;
+            padding: 4rem 2rem;
+            color: #1d1d1f;
+            font-weight: 500;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            grid-column: 1 / -1;
         }
-        .loading-spinner::after {
+        .loading-spinner::before {
             content: '';
-            display: inline-block;
-            width: 24px;
-            height: 24px;
+            display: block;
+            width: 40px;
+            height: 40px;
             border: 3px solid #e5e5e5;
             border-top-color: #0071e3;
             border-radius: 50%;
-            animation: spin 1s linear infinite;
-            margin-left: 10px;
-            vertical-align: middle;
+            animation: spin 0.8s linear infinite;
         }
         @keyframes spin {
             to { transform: rotate(360deg); }
@@ -205,6 +325,155 @@
             .articles-grid {
                 grid-template-columns: 1fr;
                 gap: 1.5rem;
+            }
+            .article-card {
+                border-radius: 16px;
+            }
+            .article-card__image {
+                height: 180px;
+            }
+            .article-card__content {
+                padding: 1.25rem;
+            }
+            .article-card__title {
+                font-size: 1.125rem;
+            }
+            .article-card__description {
+                font-size: 0.875rem;
+                -webkit-line-clamp: 2;
+            }
+            .article-card__meta {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5rem;
+            }
+            .article-card__button {
+                padding: 0.75rem 1.25rem;
+                font-size: 0.8125rem;
+            }
+        }
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .articles-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* Pagination Styles */
+        .pagination {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            margin-top: 3.5rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(0,0,0,0.06);
+        }
+        .pagination__btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.25rem;
+            background: #ffffff;
+            border: 1px solid rgba(0,0,0,0.1);
+            border-radius: 10px;
+            color: #1d1d1f;
+            font-size: 0.875rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+        }
+        .pagination__btn:hover:not(:disabled) {
+            background: #0071e3;
+            color: #ffffff;
+            border-color: #0071e3;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,113,227,0.25);
+        }
+        .pagination__btn:disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+            transform: none;
+        }
+        .pagination__btn svg {
+            width: 18px;
+            height: 18px;
+        }
+        .pagination__numbers {
+            display: flex;
+            align-items: center;
+            gap: 0.375rem;
+        }
+        .pagination__number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 42px;
+            height: 42px;
+            padding: 0 0.5rem;
+            background: #ffffff;
+            border: 1px solid rgba(0,0,0,0.08);
+            border-radius: 10px;
+            color: #1d1d1f;
+            font-size: 0.9375rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        .pagination__number:hover {
+            background: #f5f5f7;
+            border-color: rgba(0,0,0,0.12);
+        }
+        .pagination__number--active {
+            background: linear-gradient(135deg, #0071e3 0%, #0077ed 100%);
+            color: #ffffff;
+            border-color: #0071e3;
+            box-shadow: 0 2px 8px rgba(0,113,227,0.3);
+        }
+        .pagination__number--active:hover {
+            background: linear-gradient(135deg, #0071e3 0%, #0077ed 100%);
+        }
+        .pagination__ellipsis {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            color: #86868b;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+        .pagination__info {
+            text-align: center;
+            margin-top: 1.25rem;
+            color: #86868b;
+            font-size: 0.875rem;
+        }
+        @media (max-width: 768px) {
+            .pagination {
+                flex-wrap: wrap;
+                gap: 0.5rem;
+            }
+            .pagination__btn {
+                padding: 0.625rem 1rem;
+                font-size: 0.8125rem;
+            }
+            .pagination__btn span {
+                display: none;
+            }
+            .pagination__btn svg {
+                width: 20px;
+                height: 20px;
+            }
+            .pagination__number {
+                min-width: 38px;
+                height: 38px;
+                font-size: 0.875rem;
+            }
+            .pagination__numbers {
+                order: -1;
+                width: 100%;
+                justify-content: center;
+                margin-bottom: 0.5rem;
             }
         }
     </style>
@@ -352,6 +621,23 @@
             <div class="articles-grid" id="articlesGrid">
                 <div class="loading-spinner">Cargando</div>
             </div>
+
+            <!-- Pagination -->
+            <nav class="pagination" id="pagination" aria-label="Paginación de artículos">
+                <button class="pagination__btn pagination__btn--prev" id="prevPage" aria-label="Página anterior">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M15 18l-6-6 6-6"/>
+                    </svg>
+                    <span>Anterior</span>
+                </button>
+                <div class="pagination__numbers" id="pageNumbers"></div>
+                <button class="pagination__btn pagination__btn--next" id="nextPage" aria-label="Página siguiente">
+                    <span>Siguiente</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M9 18l6-6-6-6"/>
+                    </svg>
+                </button>
+            </nav>
         </div>
     </section>
 
@@ -529,7 +815,11 @@
                 'inspiración': 'article-card__category--inspiracion',
                 'tips': 'article-card__category--tips',
                 'socios': 'article-card__category--socios',
-                'socios comerciales': 'article-card__category--socios-comerciales'
+                'socios comerciales': 'article-card__category--socios-comerciales',
+                'bodas': 'article-card__category--bodas',
+                'xv anos': 'article-card__category--xv-anos',
+                'xv años': 'article-card__category--xv-anos',
+                'corporativos': 'article-card__category--corporativos'
             }
         };
 
@@ -574,6 +864,110 @@
             return CONFIG.categoryColors[key] || '';
         }
 
+        // Funcion para extraer CTA con SEO y marketing
+        function extractKeyword(titulo, categoria) {
+            // CTAs orientados a acción por tema específico
+            const ctaKeywords = {
+                // Efectos especiales
+                'humo bajo': 'Crear Magia',
+                'maquina de humo': 'Ver Efectos',
+                'confeti': 'Sorprender',
+                'burbujas': 'Descubrir',
+
+                // Iluminación
+                'iluminacion profesional': 'Iluminar Evento',
+                'iluminacion': 'Ver Opciones',
+                'guirnaldas vintage': 'Estilo Vintage',
+                'guirnaldas': 'Decorar Ahora',
+                'neon': 'Efecto Neón',
+                'luz negra': 'Fiesta UV',
+                'uv': 'Glow Party',
+                'city color': 'Ambientar',
+                'laser': 'Show Láser',
+                'cabezas moviles': 'Efecto Pro',
+                'cabezas móviles': 'Efecto Pro',
+                'focos edison': 'Look Vintage',
+                'edison': 'Estilo Rústico',
+                'cascadas led': 'Decorar LED',
+                'arquitectonica': 'Realzar Espacio',
+
+                // Audio
+                'bocinas': 'Cotizar Audio',
+                'audio profesional': 'Sonido Pro',
+                'audio': 'Ver Equipos',
+                'sonido': 'Escuchar Más',
+
+                // Eventos
+                'xv años': 'Planear XV',
+                'xv anos': 'Planear XV',
+                'quinceañera': 'Fiesta Soñada',
+                'bodas': 'Boda Perfecta',
+                'boda': 'Día Especial',
+                'corporativo': 'Evento Pro',
+                'conferencia': 'Impactar',
+                'empresa': 'Profesionalizar',
+
+                // Contenido
+                'tendencias': 'Ver Tendencias',
+                'guia': 'Leer Guía',
+                'guía': 'Leer Guía',
+                'tips': 'Ver Tips',
+                'consejos': 'Aprender',
+                'presupuesto': 'Calcular',
+                'como': 'Descubrir Cómo',
+                'cómo': 'Descubrir Cómo',
+
+                // Estilos
+                'vintage': 'Estilo Retro',
+                'moderno': 'Diseño Actual',
+                'elegante': 'Elegancia',
+                'romantico': 'Romanticismo',
+                'romántico': 'Romanticismo',
+
+                // Temporadas
+                'navidad': 'Celebrar',
+                'año nuevo': 'Festejar',
+                'halloween': 'Asustar',
+
+                // Ubicación
+                'cdmx': 'En CDMX',
+                'ciudad de mexico': 'Ver en CDMX'
+            };
+
+            const tituloLower = titulo.toLowerCase();
+
+            // Buscar coincidencia específica primero
+            for (const [key, cta] of Object.entries(ctaKeywords)) {
+                if (tituloLower.includes(key)) {
+                    return cta;
+                }
+            }
+
+            // CTAs por categoría si no hay coincidencia específica
+            const categoriaCtas = {
+                'bodas': 'Tu Boda Ideal',
+                'xv anos': 'Fiesta Única',
+                'xv años': 'Fiesta Única',
+                'corporativos': 'Evento Exitoso',
+                'guias': 'Ver Guía',
+                'guías': 'Ver Guía',
+                'tendencias': 'Estar al Día',
+                'tips': 'Leer Tips',
+                'inspiracion': 'Inspirarte',
+                'inspiración': 'Inspirarte'
+            };
+
+            if (categoria) {
+                const catLower = categoria.toLowerCase();
+                if (categoriaCtas[catLower]) {
+                    return categoriaCtas[catLower];
+                }
+            }
+
+            // CTA genérico con acción
+            return 'Explorar Ahora';
+        }
+
         // Funcion para crear HTML de una card
         function createCardHTML(articulo) {
             const imagenUrl = fixImagePath(articulo.imagen);
@@ -582,25 +976,140 @@
             const lectura = articulo.lecturaMinutos || 10;
             const autor = articulo.autor || 'REDEIL Team';
             const categoria = articulo.categoria || 'Guias';
+            const keyword = extractKeyword(articulo.titulo, categoria);
 
             return `
-                <a href="${articuloUrl}" class="article-card">
-                    <img src="${imagenUrl}"
-                         alt="${articulo.titulo}"
-                         class="article-card__image"
-                         loading="lazy" decoding="async"
-                         onerror="this.onerror=null; this.src='${CONFIG.defaultImage}';" />
-                    <div class="article-card__content">
+                <article class="article-card">
+                    <a href="${articuloUrl}" class="article-card__image-wrapper">
                         <span class="article-card__category ${categoryClass}">${categoria}</span>
-                        <h2 class="article-card__title">${articulo.titulo}</h2>
+                        <img src="${imagenUrl}"
+                             alt="${articulo.titulo}"
+                             class="article-card__image"
+                             loading="lazy" decoding="async"
+                             onerror="this.onerror=null; this.src='${CONFIG.defaultImage}';" />
+                    </a>
+                    <div class="article-card__content">
+                        <h2 class="article-card__title">
+                            <a href="${articuloUrl}">${articulo.titulo}</a>
+                        </h2>
                         <p class="article-card__description">${articulo.descripcion}</p>
                         <div class="article-card__meta">
-                            <span>${lectura} min de lectura</span>
-                            <span>${autor}</span>
+                            <span class="article-card__meta-item">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>
+                                </svg>
+                                ${lectura} min
+                            </span>
+                            <span class="article-card__meta-item">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
+                                </svg>
+                                ${autor}
+                            </span>
                         </div>
+                        <a href="${articuloUrl}" class="article-card__button">${keyword}</a>
                     </div>
-                </a>
+                </article>
             `;
+        }
+
+        // Estado de paginación
+        const PAGINATION = {
+            articlesPerPage: 9,
+            currentPage: 1,
+            totalPages: 1,
+            allArticles: []
+        };
+
+        // Funcion para renderizar la paginación
+        function renderPagination() {
+            const pageNumbers = document.getElementById('pageNumbers');
+            const prevBtn = document.getElementById('prevPage');
+            const nextBtn = document.getElementById('nextPage');
+            const pagination = document.getElementById('pagination');
+
+            if (PAGINATION.totalPages <= 1) {
+                pagination.style.display = 'none';
+                return;
+            }
+
+            pagination.style.display = 'flex';
+
+            // Habilitar/deshabilitar botones
+            prevBtn.disabled = PAGINATION.currentPage === 1;
+            nextBtn.disabled = PAGINATION.currentPage === PAGINATION.totalPages;
+
+            // Generar números de página
+            let numbersHTML = '';
+            const maxVisible = 5;
+            let startPage = Math.max(1, PAGINATION.currentPage - Math.floor(maxVisible / 2));
+            let endPage = Math.min(PAGINATION.totalPages, startPage + maxVisible - 1);
+
+            if (endPage - startPage < maxVisible - 1) {
+                startPage = Math.max(1, endPage - maxVisible + 1);
+            }
+
+            // Primera página
+            if (startPage > 1) {
+                numbersHTML += `<button class="pagination__number" data-page="1">1</button>`;
+                if (startPage > 2) {
+                    numbersHTML += `<span class="pagination__ellipsis">...</span>`;
+                }
+            }
+
+            // Páginas intermedias
+            for (let i = startPage; i <= endPage; i++) {
+                const activeClass = i === PAGINATION.currentPage ? 'pagination__number--active' : '';
+                numbersHTML += `<button class="pagination__number ${activeClass}" data-page="${i}">${i}</button>`;
+            }
+
+            // Última página
+            if (endPage < PAGINATION.totalPages) {
+                if (endPage < PAGINATION.totalPages - 1) {
+                    numbersHTML += `<span class="pagination__ellipsis">...</span>`;
+                }
+                numbersHTML += `<button class="pagination__number" data-page="${PAGINATION.totalPages}">${PAGINATION.totalPages}</button>`;
+            }
+
+            pageNumbers.innerHTML = numbersHTML;
+
+            // Event listeners para números
+            pageNumbers.querySelectorAll('.pagination__number').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    goToPage(parseInt(btn.dataset.page));
+                });
+            });
+        }
+
+        // Funcion para ir a una página
+        function goToPage(page) {
+            if (page < 1 || page > PAGINATION.totalPages) return;
+
+            PAGINATION.currentPage = page;
+            renderArticles();
+            renderPagination();
+
+            // Scroll suave al inicio del grid
+            const grid = document.getElementById('articlesGrid');
+            grid.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        // Funcion para renderizar artículos de la página actual
+        function renderArticles() {
+            const grid = document.getElementById('articlesGrid');
+            const countEl = document.getElementById('articlesCount');
+
+            const start = (PAGINATION.currentPage - 1) * PAGINATION.articlesPerPage;
+            const end = start + PAGINATION.articlesPerPage;
+            const pageArticles = PAGINATION.allArticles.slice(start, end);
+
+            const cardsHTML = pageArticles.map(createCardHTML).join('');
+            grid.innerHTML = cardsHTML;
+
+            // Actualizar contador con info de paginación
+            const total = PAGINATION.allArticles.length;
+            const showing = Math.min(end, total);
+            countEl.textContent = `Mostrando ${start + 1}-${showing} de ${total} artículos`;
         }
 
         // Funcion para cargar articulos
@@ -635,19 +1144,29 @@
                     </div>
                 `;
                 countEl.textContent = 'Error al cargar';
+                document.getElementById('pagination').style.display = 'none';
                 return;
             }
 
-            const articulos = data.articulos;
+            // Guardar todos los artículos
+            PAGINATION.allArticles = data.articulos;
+            PAGINATION.totalPages = Math.ceil(data.articulos.length / PAGINATION.articlesPerPage);
+            PAGINATION.currentPage = 1;
 
-            // Actualizar contador
-            countEl.textContent = `${articulos.length} articulos disponibles`;
+            // Renderizar primera página
+            renderArticles();
+            renderPagination();
 
-            // Generar HTML de todas las cards
-            const cardsHTML = articulos.map(createCardHTML).join('');
-            grid.innerHTML = cardsHTML;
+            // Event listeners para botones prev/next
+            document.getElementById('prevPage').addEventListener('click', () => {
+                goToPage(PAGINATION.currentPage - 1);
+            });
 
-            console.log(`Cargados ${articulos.length} articulos correctamente`);
+            document.getElementById('nextPage').addEventListener('click', () => {
+                goToPage(PAGINATION.currentPage + 1);
+            });
+
+            console.log(`Cargados ${data.articulos.length} articulos, ${PAGINATION.totalPages} páginas`);
         }
 
         // Ejecutar cuando el DOM este listo
