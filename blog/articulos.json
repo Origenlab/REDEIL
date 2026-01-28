@@ -1,6 +1,18 @@
 {
   "articulos": [
     {
+      "id": "bocinas-para-fiestas-bodas-guia-cdmx",
+      "slug": "bocinas-para-fiestas-bodas-guia-cdmx",
+      "titulo": "Bocinas para Fiestas para Bodas: Guia Completa CDMX",
+      "descripcion": "Descubre bocinas para fiestas en CDMX que transforman eventos. Conoce beneficios y consejos. Aprende a elegir con confianza.",
+      "imagen": "/renta-de-iluminacion/img-guirnaldas/guirnaldas-focos-antiguos-fiesta.avif",
+      "categoria": "Guias",
+      "autor": "REDEIL Team",
+      "fechaPublicacion": "2026-01-28",
+      "url": "bocinas-para-fiestas-bodas-guia-cdmx.html",
+      "lecturaMinutos": 12
+    },
+    {
       "id": "iluminacion-laser-para-bodas-cdmx",
       "slug": "iluminacion-laser-para-bodas-cdmx",
       "titulo": "Iluminacion Laser para Bodas: Guia Completa CDMX",
