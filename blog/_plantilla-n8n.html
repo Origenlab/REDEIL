@@ -1,146 +1,137 @@
 <!DOCTYPE html>
 <html lang="es-MX">
 <head>
-<!-- ============================================
-     TEMPLATE ARTICULO REDEIL v1.0
-     Sistema Profesional de Generacion de Contenido
-     Compatible con Workflow N8N v7
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="google-site-verification" content="google60c17291f46d5049" />
+    <script src="https://app.rybbit.io/api/script.js" data-site-id="9340b2303c86" defer></script>
 
-     VARIABLES DINAMICAS (N8N reemplaza estas):
-     {{TITULO}}             - Titulo H1 del articulo
-     {{SLUG}}               - URL amigable
-     {{META_DESCRIPTION}}   - Descripcion SEO (150-160 chars)
-     {{META_KEYWORDS}}      - Keywords separadas por coma
-     {{CATEGORIA}}          - Nombre categoria
-     {{CATEGORIA_SLUG}}     - Slug categoria
-     {{IMAGEN_PRINCIPAL}}   - Ruta imagen (ej: /blog/img/categoria/imagen.avif)
-     {{IMAGEN_ALT}}         - Alt de imagen
-     {{BREADCRUMB_TEXT}}    - Texto corto breadcrumb (15-25 chars)
-     {{TIEMPO_LECTURA}}     - Ej: "10 min lectura"
-     {{CONTENIDO}}          - HTML del articulo generado por IA
-     {{FAQ_SCHEMA}}         - JSON-LD de FAQs
-     ============================================ -->
+    <!-- SEO Meta Tags -->
+    <title>{{TITULO_SEO}} | REDEIL</title>
+    <meta name="description" content="{{DESCRIPCION}}" />
+    <meta name="keywords" content="{{TAGS}}" />
+    <meta name="author" content="{{AUTOR}}" />
+    <link rel="canonical" href="https://redeil.com/blog/{{SLUG}}.html" />
 
-<!-- Analytics Rybbit -->
-<script src="https://app.rybbit.io/api/script.js" data-site-id="9340b2303c86" defer></script>
+    <!-- Open Graph -->
+    <meta property="og:title" content="{{TITULO}}" />
+    <meta property="og:description" content="{{DESCRIPCION}}" />
+    <meta property="og:image" content="https://redeil.com{{IMAGEN_PRINCIPAL}}" />
+    <meta property="og:url" content="https://redeil.com/blog/{{SLUG}}.html" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="REDEIL" />
+    <meta property="og:locale" content="es_MX" />
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="google-site-verification" content="google60c17291f46d5049">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="{{TITULO}}" />
+    <meta name="twitter:description" content="{{DESCRIPCION_CORTA}}" />
+    <meta name="twitter:image" content="https://redeil.com{{IMAGEN_PRINCIPAL}}" />
 
-<title>{{TITULO}} | REDEIL</title>
-<meta name="description" content="{{META_DESCRIPTION}}">
-<meta name="keywords" content="{{META_KEYWORDS}}">
-<meta name="author" content="REDEIL">
-<meta name="robots" content="index, follow, max-image-preview:large">
+    <!-- Robots -->
+    <meta name="robots" content="index, follow" />
+    <meta name="googlebot" content="index, follow" />
 
-<!-- Canonical -->
-<link rel="canonical" href="https://redeil.com/blog/{{SLUG}}.html">
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
-<!-- Open Graph -->
-<meta property="og:type" content="article">
-<meta property="og:url" content="https://redeil.com/blog/{{SLUG}}.html">
-<meta property="og:title" content="{{TITULO}} | REDEIL">
-<meta property="og:description" content="{{META_DESCRIPTION}}">
-<meta property="og:image" content="https://redeil.com{{IMAGEN_PRINCIPAL}}">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:locale" content="es_MX">
-<meta property="og:site_name" content="REDEIL">
-<meta property="article:section" content="{{CATEGORIA}}">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/mobile-menu.css" />
+    <link rel="stylesheet" href="../css/blog-article.min.css" />
 
-<!-- Twitter Cards -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="{{TITULO}}">
-<meta name="twitter:description" content="{{META_DESCRIPTION}}">
-<meta name="twitter:image" content="https://redeil.com{{IMAGEN_PRINCIPAL}}">
+    <!-- Preloads -->
+    <link rel="preconnect" href="https://wa.me" crossorigin />
+    <link rel="dns-prefetch" href="//wa.me" />
+    <link rel="preload" href="../img/redeil.avif" as="image" />
 
-<!-- Favicon -->
-<link rel="icon" href="/favicon.ico" sizes="any">
-<link rel="icon" href="/icon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<link rel="manifest" href="/site.webmanifest">
-<meta name="theme-color" content="#1d1d1f">
+    <!-- Schema.org Article -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "{{TITULO}}",
+        "description": "{{DESCRIPCION}}",
+        "image": "https://redeil.com{{IMAGEN_PRINCIPAL}}",
+        "author": {
+            "@type": "Organization",
+            "name": "{{AUTOR}}",
+            "url": "https://redeil.com"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "REDEIL",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://redeil.com/img/redeil.avif"
+            }
+        },
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://redeil.com/blog/{{SLUG}}.html"
+        },
+        "datePublished": "{{FECHA_PUBLICACION}}",
+        "dateModified": "{{FECHA_MODIFICACION}}",
+        "wordCount": {{WORD_COUNT}}
+    }
+    </script>
 
-<!-- Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Schema.org BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Inicio",
+                "item": "https://redeil.com/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Blog",
+                "item": "https://redeil.com/blog/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "{{TITULO}}",
+                "item": "https://redeil.com/blog/{{SLUG}}.html"
+            }
+        ]
+    }
+    </script>
 
-<!-- Styles -->
-<link rel="stylesheet" href="/css/style.css">
-<link rel="stylesheet" href="/css/mobile-menu.css">
-<link rel="stylesheet" href="/css/blog-article.min.css?v=2.1">
+    <!-- Schema.org FAQPage (si hay FAQs) -->
+    {{FAQ_SCHEMA}}
 
-<!-- Preloads -->
-<link rel="preconnect" href="https://wa.me" crossorigin>
-<link rel="dns-prefetch" href="//wa.me">
-<link rel="preload" href="/img/redeil.avif" as="image">
-
-<!-- Schema.org Article -->
-<script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "{{TITULO}}",
-    "description": "{{META_DESCRIPTION}}",
-    "image": {
-        "@type": "ImageObject",
-        "url": "https://redeil.com{{IMAGEN_PRINCIPAL}}",
-        "width": 1200,
-        "height": 630
-    },
-    "author": {
-        "@type": "Organization",
-        "name": "REDEIL",
-        "url": "https://redeil.com"
-    },
-    "publisher": {
-        "@type": "Organization",
-        "name": "REDEIL",
-        "logo": {
-            "@type": "ImageObject",
-            "url": "https://redeil.com/img/redeil.avif"
-        }
-    },
-    "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "https://redeil.com/blog/{{SLUG}}.html"
-    },
-    "articleSection": "{{CATEGORIA}}",
-    "inLanguage": "es-MX"
-}
-</script>
-
-<!-- Schema.org BreadcrumbList -->
-<script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-        {"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://redeil.com"},
-        {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://redeil.com/blog/"},
-        {"@type": "ListItem", "position": 3, "name": "{{CATEGORIA}}", "item": "https://redeil.com/blog/?categoria={{CATEGORIA_SLUG}}"},
-        {"@type": "ListItem", "position": 4, "name": "{{BREADCRUMB_TEXT}}", "item": "https://redeil.com/blog/{{SLUG}}.html"}
-    ]
-}
-</script>
-
-<!-- Schema.org FAQPage (generado dinamicamente) -->
-<script type="application/ld+json">
-{{FAQ_SCHEMA}}
-</script>
-
+    <style>
+        /* Critical CSS inline */
+        .article-hero{background:linear-gradient(135deg,#1d1d1f 0%,#2d2d2f 100%);padding:100px 0 60px;color:#fff}
+        .article-hero__title{font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;line-height:1.2;margin-bottom:16px;max-width:800px}
+        .article-hero__meta{display:flex;flex-wrap:wrap;gap:16px;font-size:14px;opacity:0.8}
+        .breadcrumbs{background:#fff;padding:12px 0;border-bottom:1px solid rgba(0,0,0,0.08)}
+        .breadcrumbs-list{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin:0;padding:0;font-size:14px}
+        .breadcrumbs-item::after{content:"/";margin-left:8px;color:#86868b}
+        .breadcrumbs-item:last-child::after{display:none}
+        .breadcrumbs-item a{color:#6e6e73;text-decoration:none}
+        .breadcrumbs-item a:hover{color:#0071e3}
+        .breadcrumbs-item--active{color:#1d1d1f}
+    </style>
 </head>
 <body>
 
-<!-- ========== HEADER ========== -->
+<!-- Header -->
 <header class="header">
     <div class="container">
         <div class="header__content">
             <div class="header__logo">
                 <a href="/" class="logo">
-                    <img src="/img/redeil.avif" alt="REDEIL - Renta de Equipo para Eventos" class="logo__image" width="194" height="70" loading="eager">
+                    <img src="/img/redeil.avif" alt="REDEIL - Renta de Equipo para Eventos" class="logo__image" width="194" height="70" loading="eager" />
                 </a>
             </div>
             <nav class="header__nav" role="navigation" aria-label="Menu principal">
@@ -185,7 +176,7 @@
                         </div>
                     </li>
                     <li class="nav__item"><a href="/nosotros.html" class="nav__link">Nosotros</a></li>
-                    <li class="nav__item"><a href="/blog/" class="nav__link nav__link--active">Blog</a></li>
+                    <li class="nav__item"><a href="/blog/" class="nav__link">Blog</a></li>
                     <li class="nav__item"><a href="/contacto.html" class="nav__link">Contacto</a></li>
                 </ul>
             </nav>
@@ -248,156 +239,118 @@
     </div>
 </header>
 
-<!-- Espaciador para header fijo -->
-<div class="header-spacer"></div>
-
-<!-- ========== BREADCRUMB ========== -->
-<section class="breadcrumb-section">
+<!-- Breadcrumbs -->
+<nav class="breadcrumbs" aria-label="Breadcrumb">
     <div class="container">
-        <nav class="breadcrumb" aria-label="Breadcrumb">
-            <a href="/">Inicio</a>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><polyline points="9 18 15 12 9 6"/></svg>
-            <a href="/blog/">Blog</a>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><polyline points="9 18 15 12 9 6"/></svg>
-            <a href="/blog/?categoria={{CATEGORIA_SLUG}}">{{CATEGORIA}}</a>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><polyline points="9 18 15 12 9 6"/></svg>
-            <span>{{BREADCRUMB_TEXT}}</span>
-        </nav>
+        <ol class="breadcrumbs-list">
+            <li class="breadcrumbs-item"><a href="/">Inicio</a></li>
+            <li class="breadcrumbs-item"><a href="/blog/">Blog</a></li>
+            <li class="breadcrumbs-item breadcrumbs-item--active" aria-current="page">{{TITULO}}</li>
+        </ol>
+    </div>
+</nav>
+
+<!-- Article Hero -->
+<section class="article-hero">
+    <div class="container">
+        <h1 class="article-hero__title">{{TITULO}}</h1>
+        <div class="article-hero__meta">
+            <span class="article-hero__category">{{CATEGORIA}}</span>
+            <span class="article-hero__reading-time">{{LECTURA_MINUTOS}} min de lectura</span>
+            <span class="article-hero__author">Por {{AUTOR}}</span>
+        </div>
     </div>
 </section>
 
-<!-- ========== ARTICLE ========== -->
-<article itemscope itemtype="https://schema.org/Article">
-<meta itemprop="author" content="REDEIL">
-<meta itemprop="publisher" content="REDEIL">
+<main class="article-main">
+    <div class="container">
+        <div class="article-layout">
 
-<header class="article-hero">
-<div class="article-hero-content">
-<div class="container">
-<span class="article-category-tag" itemprop="articleSection">{{CATEGORIA}}</span>
-<h1 itemprop="headline">{{TITULO}}</h1>
-<div class="article-hero-meta">
-<span itemprop="timeRequired">
-<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-{{TIEMPO_LECTURA}}
-</span>
-<span>
-<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
-Guia Profesional
-</span>
-</div>
-</div>
-</div>
-</header>
+            <!-- Contenido Principal -->
+            <article class="article-content">
 
-<div class="article-wrapper">
-<div class="container">
-<div class="article-layout">
-<div class="article-content">
+                <!-- Imagen Principal -->
+                <figure class="article-featured-image">
+                    <img
+                        src="{{IMAGEN_PRINCIPAL}}"
+                        alt="{{IMAGEN_ALT}}"
+                        width="1200"
+                        height="630"
+                        loading="eager"
+                    />
+                </figure>
 
-<figure class="article-featured-image">
-<img src="{{IMAGEN_PRINCIPAL}}"
-     alt="{{IMAGEN_ALT}}"
-     loading="eager"
-     width="800"
-     height="450"
-     itemprop="image">
-<figcaption class="visually-hidden">{{IMAGEN_ALT}}</figcaption>
-</figure>
+                <!-- Introduccion -->
+                <div class="article-intro">
+                    <p>{{INTRO_TEXTO}}</p>
+                </div>
 
-<div class="article-body" itemprop="articleBody">
+                <!-- Tabla de Contenidos -->
+                <nav class="article-toc">
+                    <h2 class="article-toc__title">Contenido del Articulo</h2>
+                    {{TOC_NAV_HTML}}
+                </nav>
 
-<!-- ========== CONTENIDO GENERADO POR N8N ========== -->
-{{CONTENIDO}}
-<!-- ========== FIN CONTENIDO ========== -->
+                <!-- Contenido del Articulo -->
+                {{CONTENIDO_HTML}}
 
-</div>
+                <!-- FAQ Section -->
+                {{FAQ_HTML}}
 
-<!-- CTA Final -->
-<div class="article-cta">
-<h3>Transforma tu Evento con Iluminacion Profesional</h3>
-<p>En REDEIL contamos con el equipo y la experiencia para crear el ambiente perfecto. Cotiza ahora y recibe atencion personalizada.</p>
-<a href="https://wa.me/525549375172?text=Hola!%20Lei%20el%20articulo%20{{SLUG}}%20y%20me%20interesa%20cotizar" class="btn-cta" target="_blank" rel="noopener">
-<svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
-Cotizar por WhatsApp
-</a>
-</div>
+                <!-- CTA Final -->
+                <section class="article-cta">
+                    <div class="article-cta__content">
+                        <h2 class="article-cta__title">{{CTA_TITULO}}</h2>
+                        <p class="article-cta__text">{{CTA_DESCRIPCION}}</p>
+                        <a href="https://wa.me/525549375172?text=Hola%2C%20me%20interesa%20cotizar%20{{SERVICIO_PRINCIPAL}}" class="article-cta__button" target="_blank" rel="noopener">
+                            Cotizar Ahora por WhatsApp
+                        </a>
+                    </div>
+                </section>
 
-<!-- Compartir -->
-<div class="article-share">
-<span>Compartir articulo:</span>
-<div class="share-links">
-<a href="https://www.facebook.com/sharer/sharer.php?u=https://redeil.com/blog/{{SLUG}}.html" target="_blank" rel="noopener" aria-label="Compartir en Facebook">
-<svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.77 7.46H14.5v-1.9c0-.9.6-1.1 1-1.1h3V.5h-4.33C10.24.5 9.5 3.44 9.5 5.32v2.15h-3v4h3v12h5v-12h3.85l.42-4z"/></svg>
-</a>
-<a href="https://wa.me/?text={{TITULO}}%20-%20https://redeil.com/blog/{{SLUG}}.html" target="_blank" rel="noopener" aria-label="Compartir en WhatsApp">
-<svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
-</a>
-</div>
-</div>
-</div>
+                <!-- Tags -->
+                <div class="article-tags">
+                    <span class="article-tags__label">Etiquetas:</span>
+                    {{TAGS_HTML}}
+                </div>
 
-<!-- ========== SIDEBAR ========== -->
-<aside class="article-sidebar">
-<div class="sidebar-sticky">
+            </article>
 
-<div class="sidebar-widget sidebar-cta-whatsapp">
-<div class="sidebar-cta-badge">Atencion Personalizada</div>
-<h4>Cotiza tu Evento</h4>
-<p>Recibe una cotizacion personalizada en minutos</p>
-<a href="https://wa.me/525549375172?text=Hola%2C%20me%20interesa%20cotizar%20equipo%20para%20mi%20evento" class="sidebar-cta-btn-wa" target="_blank" rel="noopener">
-<svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
-Escribir por WhatsApp
-</a>
-<span class="sidebar-cta-phone"><a href="tel:+525549375172">55 4937 5172</a></span>
-</div>
+            <!-- Sidebar -->
+            <aside class="article-sidebar">
 
-<div class="sidebar-widget">
-<h3 class="sidebar-widget-title">
-<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
-Servicios de Iluminacion
-</h3>
-<div class="sidebar-services-grid">
-<a href="/renta-de-iluminacion/guirnaldas.html" class="sidebar-service-item"><span class="service-name">Guirnaldas</span></a>
-<a href="/renta-de-iluminacion/luz-neon.html" class="sidebar-service-item"><span class="service-name">Luz Neon</span></a>
-<a href="/renta-de-iluminacion/city-color.html" class="sidebar-service-item"><span class="service-name">City Color</span></a>
-<a href="/renta-de-iluminacion/cabezas-moviles.html" class="sidebar-service-item"><span class="service-name">Cabezas Moviles</span></a>
-</div>
-</div>
+                <!-- CTA Sidebar -->
+                <div class="sidebar-cta">
+                    <h3 class="sidebar-cta__title">Cotiza tu Evento</h3>
+                    <p class="sidebar-cta__text">Recibe una cotizacion personalizada en minutos</p>
+                    <a href="https://wa.me/525549375172" class="sidebar-cta__button" target="_blank" rel="noopener">
+                        WhatsApp Directo
+                    </a>
+                    <a href="tel:+525549375172" class="sidebar-cta__phone">
+                        55 4937 5172
+                    </a>
+                </div>
 
-<div class="sidebar-widget sidebar-why-us">
-<h3 class="sidebar-widget-title">
-<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-Por Que Elegirnos
-</h3>
-<ul class="sidebar-benefits-list">
-<li><span class="benefit-check">&#10003;</span> Equipo profesional certificado</li>
-<li><span class="benefit-check">&#10003;</span> Instalacion y montaje incluido</li>
-<li><span class="benefit-check">&#10003;</span> Soporte tecnico durante el evento</li>
-<li><span class="benefit-check">&#10003;</span> Mas de 500 eventos exitosos</li>
-<li><span class="benefit-check">&#10003;</span> Cobertura CDMX y Edomex</li>
-</ul>
-</div>
+                <!-- Servicios Relacionados -->
+                <div class="sidebar-widget">
+                    <h3 class="sidebar-widget__title">Servicios Relacionados</h3>
+                    <ul class="sidebar-widget__list">
+                        {{SERVICIOS_RELACIONADOS_HTML}}
+                    </ul>
+                </div>
 
-<div class="sidebar-widget">
-<h3 class="sidebar-widget-title">
-<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
-Te Puede Interesar
-</h3>
-<div class="sidebar-related-links">
-<a href="/blog/" class="sidebar-related-link"><span class="related-text">Mas Articulos del Blog</span><span class="related-arrow">&rarr;</span></a>
-<a href="/renta-de-iluminacion/iluminacion.html" class="sidebar-related-link"><span class="related-text">Servicios de Iluminacion</span><span class="related-arrow">&rarr;</span></a>
-<a href="/renta-de-bocinas/sonido.html" class="sidebar-related-link"><span class="related-text">Servicios de Audio</span><span class="related-arrow">&rarr;</span></a>
-<a href="/contacto.html" class="sidebar-related-link"><span class="related-text">Contacto</span><span class="related-arrow">&rarr;</span></a>
-</div>
-</div>
+                <!-- Articulos Relacionados -->
+                <div class="sidebar-widget">
+                    <h3 class="sidebar-widget__title">Articulos Relacionados</h3>
+                    <div class="sidebar-related">
+                        {{RELACIONADOS_HTML}}
+                    </div>
+                </div>
 
-</div>
-</aside>
-</div>
-</div>
-</div>
-</article>
+            </aside>
+        </div>
+    </div>
+</main>
 
 <!-- CTA Dark Section -->
 <section class="cta-dark">
@@ -413,7 +366,7 @@ Te Puede Interesar
     </div>
 </section>
 
-<!-- ========== FOOTER ========== -->
+<!-- Footer -->
 <footer class="footer">
     <div class="footer-container">
         <div class="footer-main">
@@ -458,29 +411,21 @@ Te Puede Interesar
                     <li><a href="/renta-de-iluminacion/city-color.html">City Color</a></li>
                     <li><a href="/renta-de-iluminacion/sky-tracker.html">Sky Tracker</a></li>
                     <li><a href="/renta-de-iluminacion/cabezas-moviles.html">Cabezas Moviles</a></li>
-                    <li><a href="/renta-de-iluminacion/iluminacion-laser.html">Iluminacion Laser</a></li>
-                    <li><a href="/renta-de-iluminacion/luces-arquitectonicas.html">Luces Arquitectonicas</a></li>
-                    <li><a href="/renta-de-iluminacion/cascadas-led.html">Cascadas LED</a></li>
-                    <li><a href="/renta-de-iluminacion/proyector-de-gobos.html">Proyector de Gobos</a></li>
                 </ul>
             </div>
             <div class="footer-column">
-                <h3 class="footer-column-title">Audio y Sonido</h3>
+                <h3 class="footer-column-title">Audio</h3>
                 <ul class="footer-links">
                     <li><a href="/renta-de-bocinas/bocinas-para-bodas.html">Bocinas para Bodas</a></li>
                     <li><a href="/renta-de-bocinas/bocinas-para-xv-anos.html">Bocinas para XV Anos</a></li>
                     <li><a href="/renta-de-bocinas/bocinas-para-fiestas.html">Bocinas para Fiestas</a></li>
                     <li><a href="/renta-de-bocinas/audio-para-conferencias.html">Conferencias</a></li>
                 </ul>
-                <h3 class="footer-column-title" style="margin-top: 24px;">Equipos para Eventos</h3>
+                <h3 class="footer-column-title" style="margin-top: 24px;">Equipos</h3>
                 <ul class="footer-links">
-                    <li><a href="/equipos-para-eventos/bolas-disco.html">Bolas Disco</a></li>
-                    <li><a href="/equipos-para-eventos/maquina-de-confeti.html">Maquina de Confeti</a></li>
-                    <li><a href="/equipos-para-eventos/renta-de-podium.html">Renta de Podium</a></li>
-                    <li><a href="/equipos-para-eventos/pantalla-inflable.html">Pantalla Inflable</a></li>
                     <li><a href="/equipos-para-eventos/maquina-de-humo.html">Maquina de Humo</a></li>
-                    <li><a href="/equipos-para-eventos/maquina-de-burbujas.html">Maquina de Burbujas</a></li>
-                    <li><a href="/equipos-para-eventos/humo-bajo.html">Humo Bajo</a></li>
+                    <li><a href="/equipos-para-eventos/maquina-de-confeti.html">Maquina de Confeti</a></li>
+                    <li><a href="/equipos-para-eventos/pantalla-inflable.html">Pantalla Inflable</a></li>
                 </ul>
             </div>
             <div class="footer-column">
@@ -508,8 +453,8 @@ Te Puede Interesar
     </div>
 </footer>
 
-<!-- WhatsApp Float -->
-<a href="https://wa.me/525549375172?text=Hola!%20Me%20gustaria%20mas%20informacion" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp" style="position:fixed;bottom:24px;right:24px;z-index:99999;display:flex;align-items:center;justify-content:center;width:60px;height:60px;background:#25d366;border-radius:50%;text-decoration:none;box-shadow:0 4px 12px rgba(0,0,0,0.3);transition:transform 0.3s ease,box-shadow 0.3s ease;">
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/525549375172?text=Hola%2C%20me%20interesa%20informacion%20sobre%20sus%20servicios" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp" style="position:fixed;bottom:24px;right:24px;z-index:99999;display:flex;align-items:center;justify-content:center;width:60px;height:60px;background:#25d366;border-radius:50%;text-decoration:none;box-shadow:0 4px 12px rgba(0,0,0,0.3);transition:transform 0.3s ease,box-shadow 0.3s ease;">
     <svg viewBox="0 0 24 24" fill="#ffffff" style="width:32px;height:32px;" xmlns="http://www.w3.org/2000/svg">
         <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
     </svg>
@@ -536,16 +481,9 @@ Te Puede Interesar
                 });
             });
         }
-
-        // FAQ Toggle
-        document.querySelectorAll('.faq-question').forEach(question => {
-            question.addEventListener('click', function() {
-                this.parentElement.classList.toggle('active');
-            });
-        });
     });
 </script>
-<script src="/js/app.min.js" defer></script>
+<script src="../js/app.min.js" defer></script>
 
 </body>
 </html>

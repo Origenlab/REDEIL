@@ -132,7 +132,7 @@
     {
       "parameters": {
         "method": "PUT",
-        "url": "=https://api.github.com/repos/Origenlab/REDEIL/contents/blog/articulos/{{ $json.slug }}.html",
+        "url": "=https://api.github.com/repos/Origenlab/REDEIL/contents/blog/{{ $json.slug }}.html",
         "sendHeaders": true,
         "headerParameters": {
           "parameters": [
@@ -221,7 +221,7 @@
     },
     {
       "parameters": {
-        "jsCode": "const data = $('Actualizar JSON').first().json;\nconst slug = data.slug;\nconst articleTitle = data.articleTitle;\nconst totalArticles = data.totalArticles;\nconst gh = $input.first().json;\n\nif (!slug || slug.length < 5) {\n  throw new Error('Slug invalido en Sitemap: ' + slug);\n}\n\nif (!gh.content) throw new Error('sitemap.xml no encontrado');\n\nlet sitemap = Buffer.from(gh.content, 'base64').toString('utf8');\n\n// Verificar si ya existe\nif (sitemap.includes(slug + '.html')) {\n  return [{ json: { slug, articleTitle, totalArticles, sitemapUpdated: false, sha: gh.sha } }];\n}\n\n// Crear entrada\nconst today = new Date().toISOString().split('T')[0];\nconst newUrl = `  <url>\n    <loc>https://redeil.com/blog/articulos/${slug}.html</loc>\n    <lastmod>${today}</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>0.6</priority>\n  </url>`;\n\n// Insertar antes de </urlset>\nconst newSitemap = sitemap.replace('</urlset>', newUrl + '\\n</urlset>');\nconst newBase64 = Buffer.from(newSitemap).toString('base64');\n\nreturn [{\n  json: {\n    slug,\n    articleTitle,\n    totalArticles,\n    newSitemapBase64: newBase64,\n    sha: gh.sha,\n    sitemapUpdated: true\n  }\n}];"
+        "jsCode": "const data = $('Actualizar JSON').first().json;\nconst slug = data.slug;\nconst articleTitle = data.articleTitle;\nconst totalArticles = data.totalArticles;\nconst gh = $input.first().json;\n\nif (!slug || slug.length < 5) {\n  throw new Error('Slug invalido en Sitemap: ' + slug);\n}\n\nif (!gh.content) throw new Error('sitemap.xml no encontrado');\n\nlet sitemap = Buffer.from(gh.content, 'base64').toString('utf8');\n\n// Verificar si ya existe\nif (sitemap.includes(slug + '.html')) {\n  return [{ json: { slug, articleTitle, totalArticles, sitemapUpdated: false, sha: gh.sha } }];\n}\n\n// Crear entrada\nconst today = new Date().toISOString().split('T')[0];\nconst newUrl = `  <url>\n    <loc>https://redeil.com/blog/${slug}.html</loc>\n    <lastmod>${today}</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>0.6</priority>\n  </url>`;\n\n// Insertar antes de </urlset>\nconst newSitemap = sitemap.replace('</urlset>', newUrl + '\\n</urlset>');\nconst newBase64 = Buffer.from(newSitemap).toString('base64');\n\nreturn [{\n  json: {\n    slug,\n    articleTitle,\n    totalArticles,\n    newSitemapBase64: newBase64,\n    sha: gh.sha,\n    sitemapUpdated: true\n  }\n}];"
       },
       "id": "update-sitemap",
       "name": "Actualizar Sitemap",
@@ -254,12 +254,32 @@
       "executeOnce": true
     },
     {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.telegram.org/bot8253197429:AAFuUSGCueoJoKZ0CaoMqWSIRMAnCeCIrMw/sendMessage",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            { "name": "Content-Type", "value": "application/json" }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"chat_id\": \"772938445\",\n  \"text\": \"✅ *Nuevo Artículo Publicado*\\n\\n📝 *Título:* {{ $json.articleTitle }}\\n🔗 *URL:* https://redeil.com/blog/{{ $json.slug }}.html\\n📊 *Total artículos:* {{ $json.totalArticles }}\\n\\n_Blog REDEIL - Sistema Automático_\",\n  \"parse_mode\": \"Markdown\"\n}"
+      },
+      "id": "telegram",
+      "name": "Telegram Notificacion",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [3480, 300]
+    },
+    {
       "parameters": {},
       "id": "fin",
       "name": "Fin - Articulo Publicado",
       "type": "n8n-nodes-base.noOp",
       "typeVersion": 1,
-      "position": [3480, 300]
+      "position": [3700, 300]
     }
   ],
   "connections": {
@@ -279,7 +299,8 @@
     "GitHub: Guardar JSON": { "main": [[{ "node": "GitHub: Obtener Sitemap", "type": "main", "index": 0 }]] },
     "GitHub: Obtener Sitemap": { "main": [[{ "node": "Actualizar Sitemap", "type": "main", "index": 0 }]] },
     "Actualizar Sitemap": { "main": [[{ "node": "GitHub: Guardar Sitemap", "type": "main", "index": 0 }]] },
-    "GitHub: Guardar Sitemap": { "main": [[{ "node": "Fin - Articulo Publicado", "type": "main", "index": 0 }]] }
+    "GitHub: Guardar Sitemap": { "main": [[{ "node": "Telegram Notificacion", "type": "main", "index": 0 }]] },
+    "Telegram Notificacion": { "main": [[{ "node": "Fin - Articulo Publicado", "type": "main", "index": 0 }]] }
   },
   "active": false,
   "settings": {

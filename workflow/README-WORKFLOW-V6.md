@@ -193,7 +193,7 @@ Categoria: [categoria]
 Tipo: [tipo de articulo]
 
 Ver articulo:
-https://mesas-de-dulces.com/blog/articulos/[slug].html
+https://mesas-de-dulces.com/blog/[slug].html
 
 Generado automaticamente v6.0
 ```

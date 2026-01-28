@@ -122,12 +122,12 @@ Este documento contiene las instrucciones completas para crear articulos del blo
     <meta name="description" content="{{DESCRIPCION}}" />
     <meta name="keywords" content="{{TAGS}}" />
     <meta name="author" content="{{AUTOR}}" />
-    <link rel="canonical" href="https://redeil.com/blog/articulos/{{SLUG}}.html" />
+    <link rel="canonical" href="https://redeil.com/blog/{{SLUG}}.html" />
 
     <!-- Open Graph -->
     <meta property="og:title" content="{{TITULO_SEO}} | REDEIL" />
     <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://redeil.com/blog/articulos/{{SLUG}}.html" />
+    <meta property="og:url" content="https://redeil.com/blog/{{SLUG}}.html" />
     <meta property="og:image" content="https://redeil.com/blog/{{IMAGEN_PRINCIPAL}}" />
     <meta property="og:description" content="{{DESCRIPCION}}" />
     <meta property="og:site_name" content="REDEIL - Renta de Equipo para Eventos" />
@@ -164,7 +164,7 @@ Este documento contiene las instrucciones completas para crear articulos del blo
         "@type": "BlogPosting",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https://redeil.com/blog/articulos/{{SLUG}}.html"
+            "@id": "https://redeil.com/blog/{{SLUG}}.html"
         },
         "headline": "{{TITULO}}",
         "description": "{{DESCRIPCION}}",
@@ -207,7 +207,7 @@ Este documento contiene las instrucciones completas para crear articulos del blo
         "itemListElement": [
             {"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://redeil.com"},
             {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://redeil.com/blog/"},
-            {"@type": "ListItem", "position": 3, "name": "{{TITULO_BREADCRUMB}}", "item": "https://redeil.com/blog/articulos/{{SLUG}}.html"}
+            {"@type": "ListItem", "position": 3, "name": "{{TITULO_BREADCRUMB}}", "item": "https://redeil.com/blog/{{SLUG}}.html"}
         ]
     }
     </script>
@@ -663,7 +663,7 @@ Coyoacan, Del Valle, Narvarte, Satelite, Tecamachalco
 
 ### 8.2 Crear HTML
 
-- [ ] Crear archivo en `/blog/articulos/[slug].html`
+- [ ] Crear archivo en `/blog/[slug].html`
 - [ ] Title tag (max 60 chars)
 - [ ] Meta description (150-160 chars)
 - [ ] Canonical URL correcta
