@@ -1,6 +1,18 @@
 {
   "articulos": [
     {
+      "id": "luces-arquitectonicas-eventos-consejos",
+      "slug": "luces-arquitectonicas-eventos-consejos",
+      "titulo": "Luces Arquitectonicas para Eventos: Consejos de Expertos",
+      "descripcion": "Luces arquitectonicas para eventos: transforma tu evento en CDMX con iluminacion profesional. Descubre las mejores soluciones en nuestro articulo.",
+      "imagen": "/img/img-index/conferencias.avif",
+      "categoria": "Corporativos",
+      "autor": "REDEIL Team",
+      "fechaPublicacion": "2026-01-28",
+      "url": "luces-arquitectonicas-eventos-consejos.html",
+      "lecturaMinutos": 12
+    },
+    {
       "id": "guirnaldas-luces-eventos-consejos-expertos",
       "slug": "guirnaldas-luces-eventos-consejos-expertos",
       "titulo": "Guirnaldas de Luces para Eventos: Consejos de Expertos",
