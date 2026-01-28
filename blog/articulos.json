@@ -1,6 +1,18 @@
 {
   "articulos": [
     {
+      "id": "humo-bajo-bodas-baile-nubes",
+      "slug": "humo-bajo-bodas-baile-nubes",
+      "titulo": "Humo Bajo para Bodas: Un Baile en las Nubes",
+      "descripcion": "Transforma tu primer baile de boda en CDMX con humo bajo. Descubre como crear un momento magico, perfecto para tu evento.",
+      "imagen": "/img/img-index/bocinas-para-bodas.avif",
+      "categoria": "Bodas",
+      "autor": "REDEIL Team",
+      "fechaPublicacion": "2026-01-28",
+      "url": "humo-bajo-bodas-baile-nubes.html",
+      "lecturaMinutos": 9
+    },
+    {
       "id": "humo-bajo-bodas-baile-ensueno",
       "slug": "humo-bajo-bodas-baile-ensueno",
       "titulo": "Humo Bajo para Bodas: Crea un Baile de Ensueño",
