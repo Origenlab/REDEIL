@@ -378,6 +378,19 @@ section.breadcrumb-section {
 .article-body a:hover {
     border-bottom-color: var(--accent-blue);
 }
+/* Inline Links - Enlaces internos profesionales */
+.article-body a.inline-link {
+    color: var(--accent-blue);
+    font-weight: 500;
+    border-bottom: 1px solid rgba(0,113,227,0.3);
+    background: linear-gradient(to bottom, transparent 60%, rgba(0,113,227,0.08) 60%);
+    padding: 0 2px;
+    transition: all 0.2s ease;
+}
+.article-body a.inline-link:hover {
+    background: rgba(0,113,227,0.12);
+    border-bottom-color: var(--accent-blue);
+}
 .article-body section {
     margin-bottom: 2rem;
 }

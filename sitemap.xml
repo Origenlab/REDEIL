@@ -14,21 +14,21 @@
 
   <!-- ========== PAGINAS INSTITUCIONALES ========== -->
   <url>
-    <loc>https://redeil.com/nosotros.html</loc>
+    <loc>https://redeil.com/nosotros/</loc>
     <lastmod>2026-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://redeil.com/contacto.html</loc>
+    <loc>https://redeil.com/contacto/</loc>
     <lastmod>2026-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://redeil.com/aviso-de-privacidad.html</loc>
+    <loc>https://redeil.com/aviso-de-privacidad/</loc>
     <lastmod>2026-01-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
@@ -36,91 +36,91 @@
 
   <!-- ========== RENTA DE ILUMINACION ========== -->
   <url>
-    <loc>https://redeil.com/renta-de-iluminacion/iluminacion.html</loc>
+    <loc>https://redeil.com/renta-de-iluminacion/</loc>
     <lastmod>2026-01-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://redeil.com/renta-de-iluminacion/guirnaldas.html</loc>
+    <loc>https://redeil.com/renta-de-iluminacion/guirnaldas/</loc>
     <lastmod>2026-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://redeil.com/renta-de-iluminacion/cascadas-led.html</loc>
+    <loc>https://redeil.com/renta-de-iluminacion/cascadas-led/</loc>
     <lastmod>2026-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://redeil.com/renta-de-iluminacion/luz-neon.html</loc>
+    <loc>https://redeil.com/renta-de-iluminacion/luz-neon/</loc>
     <lastmod>2026-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://redeil.com/renta-de-iluminacion/luz-negra.html</loc>
+    <loc>https://redeil.com/renta-de-iluminacion/luz-negra/</loc>
     <lastmod>2026-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://redeil.com/renta-de-iluminacion/city-color.html</loc>
+    <loc>https://redeil.com/renta-de-iluminacion/city-color/</loc>
     <lastmod>2026-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://redeil.com/renta-de-iluminacion/city-light.html</loc>
+    <loc>https://redeil.com/renta-de-iluminacion/city-light/</loc>
     <lastmod>2026-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://redeil.com/renta-de-iluminacion/cabezas-moviles.html</loc>
+    <loc>https://redeil.com/renta-de-iluminacion/cabezas-moviles/</loc>
     <lastmod>2026-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://redeil.com/renta-de-iluminacion/iluminacion-laser.html</loc>
+    <loc>https://redeil.com/renta-de-iluminacion/iluminacion-laser/</loc>
     <lastmod>2026-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://redeil.com/renta-de-iluminacion/luces-arquitectonicas.html</loc>
+    <loc>https://redeil.com/renta-de-iluminacion/luces-arquitectonicas/</loc>
     <lastmod>2026-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://redeil.com/renta-de-iluminacion/proyector-de-gobos.html</loc>
+    <loc>https://redeil.com/renta-de-iluminacion/proyector-de-gobos/</loc>
     <lastmod>2026-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://redeil.com/renta-de-iluminacion/seguidor-de-luz.html</loc>
+    <loc>https://redeil.com/renta-de-iluminacion/seguidor-de-luz/</loc>
     <lastmod>2026-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://redeil.com/renta-de-iluminacion/sky-tracker.html</loc>
+    <loc>https://redeil.com/renta-de-iluminacion/sky-tracker/</loc>
     <lastmod>2026-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -128,35 +128,35 @@
 
   <!-- ========== RENTA DE BOCINAS / AUDIO ========== -->
   <url>
-    <loc>https://redeil.com/renta-de-bocinas/sonido.html</loc>
+    <loc>https://redeil.com/renta-de-bocinas/</loc>
     <lastmod>2026-01-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://redeil.com/renta-de-bocinas/bocinas-para-bodas.html</loc>
+    <loc>https://redeil.com/renta-de-bocinas/bocinas-para-bodas/</loc>
     <lastmod>2026-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://redeil.com/renta-de-bocinas/bocinas-para-xv-anos.html</loc>
+    <loc>https://redeil.com/renta-de-bocinas/bocinas-para-xv-anos/</loc>
     <lastmod>2026-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://redeil.com/renta-de-bocinas/bocinas-para-fiestas.html</loc>
+    <loc>https://redeil.com/renta-de-bocinas/bocinas-para-fiestas/</loc>
     <lastmod>2026-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://redeil.com/renta-de-bocinas/audio-para-conferencias.html</loc>
+    <loc>https://redeil.com/renta-de-bocinas/audio-para-conferencias/</loc>
     <lastmod>2026-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -164,63 +164,63 @@
 
   <!-- ========== EQUIPOS PARA EVENTOS ========== -->
   <url>
-    <loc>https://redeil.com/equipos-para-eventos/equipos-para-eventos.html</loc>
+    <loc>https://redeil.com/equipos-para-eventos/</loc>
     <lastmod>2026-01-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://redeil.com/equipos-para-eventos/renta-de-podium.html</loc>
+    <loc>https://redeil.com/equipos-para-eventos/renta-de-podium/</loc>
     <lastmod>2026-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://redeil.com/equipos-para-eventos/bolas-disco.html</loc>
+    <loc>https://redeil.com/equipos-para-eventos/bolas-disco/</loc>
     <lastmod>2026-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://redeil.com/equipos-para-eventos/maquina-de-confeti.html</loc>
+    <loc>https://redeil.com/equipos-para-eventos/maquina-de-confeti/</loc>
     <lastmod>2026-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://redeil.com/equipos-para-eventos/maquina-de-humo.html</loc>
+    <loc>https://redeil.com/equipos-para-eventos/maquina-de-humo/</loc>
     <lastmod>2026-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://redeil.com/equipos-para-eventos/maquina-de-burbujas.html</loc>
+    <loc>https://redeil.com/equipos-para-eventos/maquina-de-burbujas/</loc>
     <lastmod>2026-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://redeil.com/equipos-para-eventos/humo-bajo.html</loc>
+    <loc>https://redeil.com/equipos-para-eventos/humo-bajo/</loc>
     <lastmod>2026-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://redeil.com/equipos-para-eventos/pantalla-inflable.html</loc>
+    <loc>https://redeil.com/equipos-para-eventos/pantalla-inflable/</loc>
     <lastmod>2026-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://redeil.com/equipos-para-eventos/mesas-picnic.html</loc>
+    <loc>https://redeil.com/equipos-para-eventos/mesas-picnic/</loc>
     <lastmod>2026-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -238,84 +238,84 @@
 
   <!-- Articulos - Bodas e Iluminacion -->
   <url>
-    <loc>https://redeil.com/blog/cabezas-moviles-bodas-iluminacion.html</loc>
+    <loc>https://redeil.com/blog/cabezas-moviles-bodas-iluminacion/</loc>
     <lastmod>2026-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://redeil.com/blog/city-color-led-bodas-eventos.html</loc>
+    <loc>https://redeil.com/blog/city-color-led-bodas-eventos/</loc>
     <lastmod>2026-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://redeil.com/blog/errores-comunes-al-decorar-bodas-con-guirnaldas-de-luce.html</loc>
+    <loc>https://redeil.com/blog/errores-comunes-al-decorar-bodas-con-guirnaldas-de-luce/</loc>
     <lastmod>2026-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://redeil.com/blog/focos-edison-bodas-elegancia-vintage.html</loc>
+    <loc>https://redeil.com/blog/focos-edison-bodas-elegancia-vintage/</loc>
     <lastmod>2026-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://redeil.com/blog/guirnaldas-vintage-bodas-decoracion-luminosa.html</loc>
+    <loc>https://redeil.com/blog/guirnaldas-vintage-bodas-decoracion-luminosa/</loc>
     <lastmod>2026-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://redeil.com/blog/guirnaldas-bodas-iluminacion-perfecta.html</loc>
+    <loc>https://redeil.com/blog/guirnaldas-bodas-iluminacion-perfecta/</loc>
     <lastmod>2026-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://redeil.com/blog/guirnaldas-bodas-iluminacion-romantica.html</loc>
+    <loc>https://redeil.com/blog/guirnaldas-bodas-iluminacion-romantica/</loc>
     <lastmod>2026-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://redeil.com/blog/iluminacion-romantica-guirnaldas-ideas-tendencias.html</loc>
+    <loc>https://redeil.com/blog/iluminacion-romantica-guirnaldas-ideas-tendencias/</loc>
     <lastmod>2026-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://redeil.com/blog/presupuesto-iluminacion-bodas-guia-completa.html</loc>
+    <loc>https://redeil.com/blog/presupuesto-iluminacion-bodas-guia-completa/</loc>
     <lastmod>2026-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://redeil.com/blog/proyector-gobos-bodas-monograma.html</loc>
+    <loc>https://redeil.com/blog/proyector-gobos-bodas-monograma/</loc>
     <lastmod>2026-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://redeil.com/blog/secretos-iluminacion-bodas-dreamlike.html</loc>
+    <loc>https://redeil.com/blog/secretos-iluminacion-bodas-dreamlike/</loc>
     <lastmod>2026-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://redeil.com/blog/tendencias-iluminacion-bodas.html</loc>
+    <loc>https://redeil.com/blog/tendencias-iluminacion-bodas/</loc>
     <lastmod>2026-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -323,42 +323,42 @@
 
   <!-- Articulos - Guirnaldas -->
   <url>
-    <loc>https://redeil.com/blog/renta-guirnaldas-focos-vintage-eventos-cdmx.html</loc>
+    <loc>https://redeil.com/blog/renta-guirnaldas-focos-vintage-eventos-cdmx/</loc>
     <lastmod>2026-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://redeil.com/blog/guirnaldas-vintage-edison-eventos.html</loc>
+    <loc>https://redeil.com/blog/guirnaldas-vintage-edison-eventos/</loc>
     <lastmod>2026-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://redeil.com/blog/guirnaldas-vintage-estilo-retro-elegancia.html</loc>
+    <loc>https://redeil.com/blog/guirnaldas-vintage-estilo-retro-elegancia/</loc>
     <lastmod>2026-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://redeil.com/blog/guirnaldas-festivas-tendencias-guirnaldas-decorativ.html</loc>
+    <loc>https://redeil.com/blog/guirnaldas-festivas-tendencias-guirnaldas-decorativ/</loc>
     <lastmod>2026-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://redeil.com/blog/guirnaldas-jardines-guia-guirnaldas-jardin.html</loc>
+    <loc>https://redeil.com/blog/guirnaldas-jardines-guia-guirnaldas-jardin/</loc>
     <lastmod>2026-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://redeil.com/blog/transforma-tus-eventos-con-guirnaldas-decorativas.html</loc>
+    <loc>https://redeil.com/blog/transforma-tus-eventos-con-guirnaldas-decorativas/</loc>
     <lastmod>2026-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -366,49 +366,49 @@
 
   <!-- Articulos - Fiestas y XV Anos -->
   <url>
-    <loc>https://redeil.com/blog/guirnaldas-fiestas-cdmx.html</loc>
+    <loc>https://redeil.com/blog/guirnaldas-fiestas-cdmx/</loc>
     <lastmod>2026-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://redeil.com/blog/guirnaldas-fiestas-consejos-guirnaldas-fiestas.html</loc>
+    <loc>https://redeil.com/blog/guirnaldas-fiestas-consejos-guirnaldas-fiestas/</loc>
     <lastmod>2026-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://redeil.com/blog/guirnaldas-fiestas-guia-guirnaldas-fiestas.html</loc>
+    <loc>https://redeil.com/blog/guirnaldas-fiestas-guia-guirnaldas-fiestas/</loc>
     <lastmod>2026-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://redeil.com/blog/guirnaldas-fiestas-tendencias-guirnaldas-fiestas.html</loc>
+    <loc>https://redeil.com/blog/guirnaldas-fiestas-tendencias-guirnaldas-fiestas/</loc>
     <lastmod>2026-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://redeil.com/blog/iluminacion-espectacular-para-xv-anos-crea-la-fiesta-pe.html</loc>
+    <loc>https://redeil.com/blog/iluminacion-espectacular-para-xv-anos-crea-la-fiesta-pe/</loc>
     <lastmod>2026-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://redeil.com/blog/iluminacion-neon-xv-anos-ideas-creativas.html</loc>
+    <loc>https://redeil.com/blog/iluminacion-neon-xv-anos-ideas-creativas/</loc>
     <lastmod>2026-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://redeil.com/blog/xv-anos-unforgettable-produccion-completa.html</loc>
+    <loc>https://redeil.com/blog/xv-anos-unforgettable-produccion-completa/</loc>
     <lastmod>2026-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -416,42 +416,42 @@
 
   <!-- Articulos - Corporativos -->
   <url>
-    <loc>https://redeil.com/blog/guirnaldas-corporativos-consejos-guirnaldas-corporati.html</loc>
+    <loc>https://redeil.com/blog/guirnaldas-corporativos-consejos-guirnaldas-corporati/</loc>
     <lastmod>2026-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://redeil.com/blog/guirnaldas-corporativos-guia-guirnaldas-eventos-corpor.html</loc>
+    <loc>https://redeil.com/blog/guirnaldas-corporativos-guia-guirnaldas-eventos-corpor/</loc>
     <lastmod>2026-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://redeil.com/blog/guirnaldas-corporativos-tendencias-guirnaldas-corporati.html</loc>
+    <loc>https://redeil.com/blog/guirnaldas-corporativos-tendencias-guirnaldas-corporati/</loc>
     <lastmod>2026-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://redeil.com/blog/guirnaldas-eventos-corporativos-mka1wk5f.html</loc>
+    <loc>https://redeil.com/blog/guirnaldas-eventos-corporativos-mka1wk5f/</loc>
     <lastmod>2026-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://redeil.com/blog/eventos-corporativos-cdmx-tecnologia-audiovisual.html</loc>
+    <loc>https://redeil.com/blog/eventos-corporativos-cdmx-tecnologia-audiovisual/</loc>
     <lastmod>2026-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://redeil.com/blog/iluminacion-profesional-para-eventos-elegantes.html</loc>
+    <loc>https://redeil.com/blog/iluminacion-profesional-para-eventos-elegantes/</loc>
     <lastmod>2026-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -459,35 +459,35 @@
 
   <!-- Articulos - Iluminacion Neon y LED -->
   <url>
-    <loc>https://redeil.com/blog/canones-led-rgbw-efectos-neon-cdmx.html</loc>
+    <loc>https://redeil.com/blog/canones-led-rgbw-efectos-neon-cdmx/</loc>
     <lastmod>2026-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://redeil.com/blog/efectos-neon-vs-iluminacion-tradicional-comparativa.html</loc>
+    <loc>https://redeil.com/blog/efectos-neon-vs-iluminacion-tradicional-comparativa/</loc>
     <lastmod>2026-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://redeil.com/blog/iluminacion-neon-para-bodas-tendencias-efectos.html</loc>
+    <loc>https://redeil.com/blog/iluminacion-neon-para-bodas-tendencias-efectos/</loc>
     <lastmod>2026-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://redeil.com/blog/luz-negra-uv-fiestas-tematicas-neon.html</loc>
+    <loc>https://redeil.com/blog/luz-negra-uv-fiestas-tematicas-neon/</loc>
     <lastmod>2026-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://redeil.com/blog/uplighting-arquitectonico-transformar-espacios.html</loc>
+    <loc>https://redeil.com/blog/uplighting-arquitectonico-transformar-espacios/</loc>
     <lastmod>2026-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -495,28 +495,28 @@
 
   <!-- Articulos - Audio y Sonido -->
   <url>
-    <loc>https://redeil.com/blog/guia-audio-profesional-eventos.html</loc>
+    <loc>https://redeil.com/blog/guia-audio-profesional-eventos/</loc>
     <lastmod>2026-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://redeil.com/blog/guia-completa-equipo-audio-iluminacion-eventos.html</loc>
+    <loc>https://redeil.com/blog/guia-completa-equipo-audio-iluminacion-eventos/</loc>
     <lastmod>2026-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://redeil.com/blog/renta-de-bocinas-cdmx-eventos-profesionales.html</loc>
+    <loc>https://redeil.com/blog/renta-de-bocinas-cdmx-eventos-profesionales/</loc>
     <lastmod>2026-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://redeil.com/blog/sonido-para-eventos-renta-bocinas-cdmx.html</loc>
+    <loc>https://redeil.com/blog/sonido-para-eventos-renta-bocinas-cdmx/</loc>
     <lastmod>2026-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -524,14 +524,14 @@
 
   <!-- Articulos - Tendencias -->
   <url>
-    <loc>https://redeil.com/blog/tendencias-iluminacion-eventos-modernas.html</loc>
+    <loc>https://redeil.com/blog/tendencias-iluminacion-eventos-modernas/</loc>
     <lastmod>2026-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://redeil.com/blog/tendencias-produccion-eventos-redeil.html</loc>
+    <loc>https://redeil.com/blog/tendencias-produccion-eventos-redeil/</loc>
     <lastmod>2026-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -539,44 +539,44 @@
 
   <!-- Sitemap HTML -->
   <url>
-    <loc>https://redeil.com/sitemap.html</loc>
+    <loc>https://redeil.com/sitemap/</loc>
     <lastmod>2026-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
   </url>
 
   <url>
-    <loc>https://redeil.com/blog/humo-bajo-bodas-baile-ensueno.html</loc>
+    <loc>https://redeil.com/blog/humo-bajo-bodas-baile-ensueno/</loc>
     <lastmod>2026-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://redeil.com/blog/humo-bajo-bodas-baile-nubes.html</loc>
+    <loc>https://redeil.com/blog/humo-bajo-bodas-baile-nubes/</loc>
     <lastmod>2026-01-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://redeil.com/blog/audio-conferencias-cdmx.html</loc>
+    <loc>https://redeil.com/blog/audio-conferencias-cdmx/</loc>
     <lastmod>2026-01-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://redeil.com/blog/iluminacion-laser-para-bodas-cdmx.html</loc>
+    <loc>https://redeil.com/blog/iluminacion-laser-para-bodas-cdmx/</loc>
     <lastmod>2026-01-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://redeil.com/blog/bocinas-para-fiestas-bodas-guia-cdmx.html</loc>
+    <loc>https://redeil.com/blog/bocinas-para-fiestas-bodas-guia-cdmx/</loc>
     <lastmod>2026-01-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://redeil.com/blog/guirnaldas-luces-eventos-consejos-expertos.html</loc>
+    <loc>https://redeil.com/blog/guirnaldas-luces-eventos-consejos-expertos/</loc>
     <lastmod>2026-01-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>

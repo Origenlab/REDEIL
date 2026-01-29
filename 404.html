@@ -14,7 +14,7 @@
   <meta property="og:description" content="La página que buscas no existe. Explora nuestros servicios de renta de equipos para eventos.">
   <meta property="og:url" content="https://redeil.com/404.html">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="https://redeil.com/img/redeil-og-image.avif">
+  <meta property="og:image" content="https://redeil.com/img/redeil.avif">
 
     <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Página No Encontrada - REDEIL">
@@ -199,6 +199,25 @@
 </head>
 
 <body>
+  <!-- Redirect old .html URLs to clean URLs -->
+  <script>
+    (function() {
+      var path = window.location.pathname;
+      // If URL ends with .html (except /404.html), redirect to clean URL
+      if (path.endsWith('.html') && path !== '/404.html') {
+        // Handle special category pages
+        var specialMappings = {
+          '/renta-de-iluminacion/iluminacion.html': '/renta-de-iluminacion/',
+          '/renta-de-bocinas/sonido.html': '/renta-de-bocinas/',
+          '/equipos-para-eventos/equipos-para-eventos.html': '/equipos-para-eventos/'
+        };
+        var cleanPath = specialMappings[path] || path.replace('.html', '/');
+        window.location.replace(cleanPath);
+        return;
+      }
+    })();
+  </script>
+
   <div class="error-container">
     <div class="error-code">404</div>
     <h1>Página No Encontrada</h1>
@@ -212,11 +231,11 @@
     <div class="links-section">
       <h2 class="links-title">Nuestros Servicios</h2>
       <ul class="links-list">
-        <li><a href="/renta-de-iluminacion/iluminacion.html">Iluminación</a></li>
-        <li><a href="/renta-de-iluminacion/guirnaldas.html">Guirnaldas</a></li>
-        <li><a href="/renta-de-bocinas/sonido.html">Audio</a></li>
-        <li><a href="/equipos-para-eventos/equipos-para-eventos.html">Equipos para Eventos</a></li>
-        <li><a href="/sitemap.html">Mapa del Sitio</a></li>
+        <li><a href="/renta-de-iluminacion/">Iluminación</a></li>
+        <li><a href="/renta-de-iluminacion/guirnaldas/">Guirnaldas</a></li>
+        <li><a href="/renta-de-bocinas/">Audio</a></li>
+        <li><a href="/equipos-para-eventos/">Equipos para Eventos</a></li>
+        <li><a href="/sitemap/">Mapa del Sitio</a></li>
       </ul>
     </div>
   </div>
