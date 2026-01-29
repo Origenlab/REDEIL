@@ -1,6 +1,18 @@
 {
   "articulos": [
     {
+      "id": "audio-conferencias-cdmx-sistemas-profesionales",
+      "slug": "audio-conferencias-cdmx-sistemas-profesionales",
+      "titulo": "Audio para Conferencias CDMX: Sistemas Profesionales 2024",
+      "descripcion": "Audio para conferencias CDMX con sistemas profesionales. Micrófonos, PA y sonido corporativo. Instalación incluida en Santa Fe, Polanco, Reforma.",
+      "imagen": "/img/img-index/conferencias.avif",
+      "categoria": "Corporativos",
+      "autor": "REDEIL Team",
+      "fechaPublicacion": "2026-01-29",
+      "url": "audio-conferencias-cdmx-sistemas-profesionales.html",
+      "lecturaMinutos": 8
+    },
+    {
       "id": "humo-bajo-bodas-primer-baile-nubes-cdmx",
       "slug": "humo-bajo-bodas-primer-baile-nubes-cdmx",
       "titulo": "Humo Bajo para Bodas: Tu Primer Baile Entre Nubes en CDMX",
