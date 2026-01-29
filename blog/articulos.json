@@ -1,6 +1,18 @@
 {
   "articulos": [
     {
+      "id": "luz-negra-uv-eventos-consejos-expertos-cdmx",
+      "slug": "luz-negra-uv-eventos-consejos-expertos-cdmx",
+      "titulo": "Luz Negra UV para Eventos: Consejos de Expertos en CDMX",
+      "descripcion": "Descubre cómo la luz negra renta transforma fiestas neon en CDMX. Consejos profesionales para UV fiestas espectaculares. Asesoría gratuita incluida.",
+      "imagen": "/img/img-index/luz-negra.avif",
+      "categoria": "Tips",
+      "autor": "REDEIL Team",
+      "fechaPublicacion": "2026-01-29",
+      "url": "luz-negra-uv-eventos-consejos-expertos-cdmx.html",
+      "lecturaMinutos": 8
+    },
+    {
       "id": "luces-arquitectonicas-eventos-consejos",
       "slug": "luces-arquitectonicas-eventos-consejos",
       "titulo": "Luces Arquitectonicas para Eventos: Consejos de Expertos",
