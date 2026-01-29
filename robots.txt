@@ -1,84 +1,21 @@
-# ============================================
-# REDEIL.COM - Robots.txt Optimizado para SEO
-# Actualizado: Enero 2026
-# ============================================
+# REDEIL.COM - Robots.txt
+# https://redeil.com
 
 # Reglas para todos los bots
 User-agent: *
 Allow: /
 
-# Bloquear recursos innecesarios para crawlers
-Disallow: /css/
-Disallow: /js/
-Disallow: /fonts/
-Disallow: /*.css$
-Disallow: /*.js$
-
-# Bloquear carpetas de imagenes (se indexan via sitemap de imagenes)
-Disallow: /img/
-Disallow: /*img*/
-Disallow: /*.avif$
-Disallow: /*.webp$
-Disallow: /*.png$
-Disallow: /*.jpg$
-Disallow: /*.jpeg$
-
 # Bloquear archivos del sistema
-Disallow: /.htaccess
 Disallow: /404.html
+Disallow: /.git/
+Disallow: /workflow/
 
-# ============================================
-# REGLAS ESPECIFICAS PARA GOOGLEBOT
-# ============================================
-User-agent: Googlebot
-Allow: /
-Crawl-delay: 1
-
-# Permitir CSS y JS para renderizado (Google necesita esto)
+# Permitir acceso a recursos necesarios para renderizado
 Allow: /css/
 Allow: /js/
-Allow: /*.css$
-Allow: /*.js$
-
-# ============================================
-# REGLAS PARA GOOGLEBOT-IMAGE
-# ============================================
-User-agent: Googlebot-Image
 Allow: /img/
-Allow: /*img*/
-Allow: /*.avif$
-Allow: /*.webp$
-Allow: /*.png$
-Allow: /*.jpg$
-Allow: /*.jpeg$
 
-# ============================================
-# REGLAS PARA OTROS BOTS IMPORTANTES
-# ============================================
-User-agent: Bingbot
-Allow: /
-Crawl-delay: 2
-
-User-agent: Slurp
-Allow: /
-Crawl-delay: 2
-
-User-agent: DuckDuckBot
-Allow: /
-Crawl-delay: 2
-
-User-agent: facebookexternalhit
-Allow: /
-
-User-agent: Twitterbot
-Allow: /
-
-User-agent: LinkedInBot
-Allow: /
-
-# ============================================
-# BLOQUEAR BOTS MALICIOSOS/SPAM
-# ============================================
+# Bloquear bots de scraping conocidos
 User-agent: AhrefsBot
 Disallow: /
 
@@ -94,12 +31,5 @@ Disallow: /
 User-agent: BLEXBot
 Disallow: /
 
-# ============================================
-# SITEMAPS
-# ============================================
+# Sitemap
 Sitemap: https://redeil.com/sitemap.xml
-
-# ============================================
-# HOST CANONICO
-# ============================================
-Host: https://redeil.com
