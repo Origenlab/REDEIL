@@ -1,6 +1,17 @@
 {
   "articulos": [
     {
+      "id": "cascadas-led-bodas-guia-completa-cdmx",
+      "slug": "cascadas-led-bodas-guia-completa-cdmx",
+      "titulo": "Cascadas LED para Bodas: Guía Completa de Expertos en CDMX",
+      "descripcion": "Descubre todo sobre cascadas LED para bodas en CDMX. Guía completa con tipos, beneficios y consejos de expertos para elegir la mejor decoracion luminosa.",
+      "imagen": "/img/img-index/cascadas-led.avif",
+      "categoria": "Bodas",
+      "autor": "REDEIL Team",
+      "url": "cascadas-led-bodas-guia-completa-cdmx/",
+      "lecturaMinutos": 8
+    },
+    {
       "id": "luz-negra-uv-eventos-cdmx-guia-completa",
       "slug": "luz-negra-uv-eventos-cdmx-guia-completa",
       "titulo": "Luz Negra UV para Eventos: Guía Completa CDMX 2024",
