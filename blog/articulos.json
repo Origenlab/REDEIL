@@ -1,6 +1,18 @@
 {
   "articulos": [
     {
+      "id": "city-color-led-profesional-eventos-cdmx",
+      "slug": "city-color-led-profesional-eventos-cdmx",
+      "titulo": "City Color LED Profesional: Guía de Expertos CDMX",
+      "descripcion": "Descubre cómo City Color LED transforma tu evento en CDMX. Uplighting profesional, instalación incluida y operador técnico. Consulta gratis.",
+      "imagen": "/img/img-index/iluminacion-arquitectonica.avif",
+      "categoria": "Corporativos",
+      "autor": "REDEIL Team",
+      "fechaPublicacion": "2026-01-29",
+      "url": "city-color-led-profesional-eventos-cdmx/",
+      "lecturaMinutos": 8
+    },
+    {
       "id": "audio-conferencias-cdmx-sistemas-profesionales",
       "slug": "audio-conferencias-cdmx-sistemas-profesionales",
       "titulo": "Audio para Conferencias CDMX: Sistemas Profesionales 2024",
