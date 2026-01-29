@@ -1,6 +1,18 @@
 {
   "articulos": [
     {
+      "id": "luz-negra-uv-eventos-cdmx-guia-completa",
+      "slug": "luz-negra-uv-eventos-cdmx-guia-completa",
+      "titulo": "Luz Negra UV para Eventos: Guía Completa CDMX 2024",
+      "descripcion": "Descubre todo sobre luz negra renta para fiestas neon y UV en CDMX. Tipos, beneficios y consejos profesionales para eventos exitosos. Expertos en iluminación.",
+      "imagen": "/img/img-index/luz-negra.avif",
+      "categoria": "Tips",
+      "autor": "REDEIL Team",
+      "fechaPublicacion": "2026-01-29",
+      "url": "luz-negra-uv-eventos-cdmx-guia-completa/",
+      "lecturaMinutos": 8
+    },
+    {
       "id": "city-color-led-profesional-eventos-cdmx",
       "slug": "city-color-led-profesional-eventos-cdmx",
       "titulo": "City Color LED Profesional: Guía de Expertos CDMX",
