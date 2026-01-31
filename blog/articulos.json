@@ -1,6 +1,17 @@
 {
   "articulos": [
     {
+      "id": "proyector-gobos-bodas-monogramas-logos-cdmx",
+      "slug": "proyector-gobos-bodas-monogramas-logos-cdmx",
+      "titulo": "Proyector de Gobos Bodas: Monogramas y Logos Únicos CDMX",
+      "descripcion": "Renta proyector de gobos para bodas en CDMX. Crea monogramas y logos personalizados únicos. Instalación profesional incluida. Asesoría gratuita.",
+      "imagen": "/img/img-index/proyector-de-gobos.avif",
+      "categoria": "Bodas",
+      "autor": "REDEIL Team",
+      "url": "proyector-gobos-bodas-monogramas-logos-cdmx/",
+      "lecturaMinutos": 8
+    },
+    {
       "id": "cascadas-led-bodas-guia-completa-cdmx",
       "slug": "cascadas-led-bodas-guia-completa-cdmx",
       "titulo": "Cascadas LED para Bodas: Guía Completa de Expertos en CDMX",
