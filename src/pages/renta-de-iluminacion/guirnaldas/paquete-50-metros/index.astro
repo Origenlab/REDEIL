@@ -88,67 +88,127 @@ const structuredData = [
     items={[{ label: "Estándar — 100 metros", href: "/renta-de-iluminacion/guirnaldas/paquete-100-metros/" }, { label: "Premium — 200 metros", href: "/renta-de-iluminacion/guirnaldas/paquete-200-metros/" }, { label: "Producción — 500 metros", href: "/renta-de-iluminacion/guirnaldas/paquete-500-metros/" }]}
   />
 
-  <!-- PRODUCTO -->
+    <!-- PRODUCTO CON SIDEBAR -->
   <section class="section" id="producto">
     <div class="container">
-      <div class="producto-layout">
-        <!-- LEFT: Imagen + galería -->
-        <div class="producto__visual">
-          <div class="producto__img-main">
-            <img src="/img/paquetes/guirnaldas/basico.avif" alt="Paquete Básico 50 metros de guirnaldas Edison" width="600" height="400" loading="eager" />
-          </div>
-          <div class="producto__img-grid">
-            <img src="/img/img-index/pro/guirnaldas.avif" alt="Guirnaldas Edison en jardín de boda" width="300" height="200" loading="lazy" />
-            <img src="/img/paquetes/guirnaldas/sell/focos-edison.avif" alt="Detalle foco Edison LED ámbar" width="300" height="200" loading="lazy" />
-          </div>
-        </div>
-
-        <!-- RIGHT: Info + pricing + CTA -->
-        <div class="producto__info">
-          <span class="producto__badge">Paquete Básico</span>
-          <h2 class="producto__title">50 metros de Guirnaldas LED</h2>
-          <p class="producto__desc">El paquete ideal para bodas íntimas en jardín, cenas al aire libre y terrazas pequeñas. 50 metros de guirnalda con focos Edison de luz ámbar que transforman cualquier espacio en algo memorable. Nuestro equipo llega, instala, opera y desmonta — tú solo disfrutas.</p>
-
-          <div class="producto__price-box">
-            <div class="producto__price">
-              <span class="producto__amount">$3,500</span>
-              <span class="producto__currency">MXN + IVA</span>
+      <div class="prod-layout">
+        <!-- MAIN -->
+        <div class="prod-main">
+          <!-- Galería -->
+          <div class="prod-gallery">
+            <div class="prod-gallery__big">
+              <img src="/img/paquetes/guirnaldas/basico.avif" alt="Paquete Básico 50 metros guirnaldas Edison" width="800" height="533" loading="eager" />
             </div>
-            <p class="producto__price-note">Instalación profesional incluida en CDMX y Edomex</p>
-          </div>
-
-          <div class="producto__includes">
-            <h3>Lo que incluye:</h3>
-            <div class="producto__features">
-              <div class="producto__feat">50 metros de guirnalda LED profesional</div>
-              <div class="producto__feat">Focos Edison cálidos con filamento visible</div>
-              <div class="producto__feat">Cable negro profesional (invisible entre árboles)</div>
-              <div class="producto__feat">Transporte + instalación + desmontaje</div>
-              <div class="producto__feat">Técnico operador durante todo el evento</div>
+            <div class="prod-gallery__row">
+              <img src="/img/img-index/pro/guirnaldas.avif" alt="Guirnaldas Edison en jardín de boda" width="400" height="267" loading="lazy" />
+              <img src="/img/paquetes/guirnaldas/sell/focos-edison.avif" alt="Detalle foco Edison LED ámbar" width="400" height="267" loading="lazy" />
+              <img src="/img/paquetes/guirnaldas/sell/montaje.avif" alt="Guirnaldas instaladas entre árboles" width="400" height="267" loading="lazy" />
             </div>
           </div>
 
-          <div class="producto__ctas">
-            <a href={WHATSAPP_URL_MSG} class="producto__btn producto__btn--primary" target="_blank" rel="noopener">Cotizar por WhatsApp</a>
-            <a href="/renta-de-iluminacion/guirnaldas/" class="producto__btn producto__btn--ghost">Ver todos los paquetes</a>
+          <!-- Info producto -->
+          <div class="prod-info">
+            <span class="prod-info__badge">Paquete Básico</span>
+            <h2 class="prod-info__title">50 metros de Guirnaldas LED con Focos Edison</h2>
+            <p class="prod-info__desc">El paquete ideal para bodas íntimas en jardín, cenas al aire libre y terrazas pequeñas. 50 metros de guirnalda con focos Edison de luz ámbar que transforman cualquier espacio en algo memorable. Nuestro equipo llega, instala, opera y desmonta — tú solo disfrutas.</p>
+
+            <div class="prod-price">
+              <span class="prod-price__amount">$3,500</span>
+              <span class="prod-price__currency">MXN + IVA</span>
+              <p class="prod-price__note">Todo incluido: transporte, instalación, operación y desmontaje en CDMX y Edomex</p>
+            </div>
+
+            <div class="prod-features">
+              <h3>Lo que incluye:</h3>
+              <div class="prod-features__grid">
+                <div class="prod-feat">50 metros de guirnalda LED profesional</div>
+                <div class="prod-feat">Focos Edison cálidos con filamento visible</div>
+                <div class="prod-feat">Cable negro profesional</div>
+                <div class="prod-feat">Transporte ida y vuelta</div>
+                <div class="prod-feat">Instalación profesional</div>
+                <div class="prod-feat">Técnico operador durante el evento</div>
+                <div class="prod-feat">Desmontaje al finalizar</div>
+                <div class="prod-feat">Repuestos en sitio por si acaso</div>
+              </div>
+            </div>
+
+            <div class="prod-ctas">
+              <a href={WHATSAPP_URL_MSG} class="prod-btn prod-btn--wa" target="_blank" rel="noopener">Cotizar por WhatsApp</a>
+              <a href="/cotizar/" class="prod-btn prod-btn--outline">Solicitar cotización formal</a>
+            </div>
+          </div>
+
+          <!-- ¿Para quién? -->
+          <div class="prod-segment">
+            <h2 class="prod-segment__title">¿Para qué tipo de evento es este paquete?</h2>
+            <p class="prod-segment__text">50 metros de guirnaldas cubren perfectamente una pérgola, un pasillo de ceremonia o una terraza para 30-50 invitados. Es el paquete más solicitado para cenas íntimas al aire libre, pedidas de mano, aniversarios y baby showers en jardines privados de CDMX.</p>
+            <p class="prod-segment__text">Si tu evento es más grande o necesitas cubrir más área, el paquete Estándar de 100 metros duplica la cobertura con dimmer incluido. Pero si buscas ese rincón especial que todos van a fotografiar — este paquete es exactamente lo que necesitas.</p>
           </div>
         </div>
+
+        <!-- SIDEBAR -->
+        <aside class="prod-sidebar">
+          <!-- Otros paquetes -->
+          <div class="ps-widget">
+            <h3 class="ps-widget__title">Otros paquetes</h3>
+            <a href="/renta-de-iluminacion/guirnaldas/paquete-100-metros/" class="ps-pkg">
+              <img src="/img/paquetes/guirnaldas/estandar.avif" alt="Estándar 100m" width="80" height="60" loading="lazy" class="ps-pkg__img" />
+              <div class="ps-pkg__info">
+                <span class="ps-pkg__name">Estándar — 100m</span>
+                <span class="ps-pkg__price">$6,200 MXN</span>
+              </div>
+            </a>
+            <a href="/renta-de-iluminacion/guirnaldas/paquete-200-metros/" class="ps-pkg">
+              <img src="/img/paquetes/guirnaldas/premium.avif" alt="Premium 200m" width="80" height="60" loading="lazy" class="ps-pkg__img" />
+              <div class="ps-pkg__info">
+                <span class="ps-pkg__name">Premium — 200m</span>
+                <span class="ps-pkg__price">$10,800 MXN</span>
+              </div>
+            </a>
+            <a href="/renta-de-iluminacion/guirnaldas/paquete-500-metros/" class="ps-pkg">
+              <img src="/img/paquetes/guirnaldas/produccion.avif" alt="Producción 500m" width="80" height="60" loading="lazy" class="ps-pkg__img" />
+              <div class="ps-pkg__info">
+                <span class="ps-pkg__name">Producción — 500m</span>
+                <span class="ps-pkg__price">$22,000 MXN</span>
+              </div>
+            </a>
+          </div>
+
+          <!-- CTA -->
+          <div class="ps-widget ps-widget--dark">
+            <h3 class="ps-widget__title ps-widget__title--light">Cotiza tu evento</h3>
+            <p class="ps-widget__desc">Cotización personalizada en menos de 24 horas. Sin compromiso.</p>
+            <a href="/cotizar/" class="ps-widget__btn">Cotizar Gratis</a>
+            <a href={WHATSAPP_URL_MSG} class="ps-widget__btn ps-widget__btn--wa" target="_blank" rel="noopener">WhatsApp: 55 4937 5172</a>
+          </div>
+
+          <!-- Otros servicios -->
+          <div class="ps-widget">
+            <h3 class="ps-widget__title">Servicios relacionados</h3>
+            <div class="ps-links">
+              <a href="/renta-de-iluminacion/cascadas-led/" class="ps-link">Cascadas LED</a>
+              <a href="/renta-de-iluminacion/luz-neon/" class="ps-link">Luz Neón LED</a>
+              <a href="/renta-de-iluminacion/cabezas-moviles/" class="ps-link">Cabezas Móviles</a>
+              <a href="/renta-de-iluminacion/luces-arquitectonicas/" class="ps-link">Uplighting</a>
+              <a href="/renta-de-bocinas/bocinas-para-bodas/" class="ps-link">Bocinas para Bodas</a>
+              <a href="/equipos-para-eventos/humo-bajo/" class="ps-link">Humo Bajo</a>
+            </div>
+          </div>
+
+          <!-- Contacto -->
+          <div class="ps-widget">
+            <h3 class="ps-widget__title">Contacto</h3>
+            <div class="ps-contact">
+              <p><a href="tel:+525549375172">55 4937 5172</a></p>
+              <p><a href="mailto:contacto@redeil.com">contacto@redeil.com</a></p>
+              <p>Lun-Vie 9:00-19:00 | Sáb 10:00-15:00</p>
+            </div>
+          </div>
+        </aside>
       </div>
     </div>
   </section>
 
-  <!-- ¿PARA QUIÉN? -->
-  <section class="section section--bg">
-    <div class="container">
-      <SectionHeader
-        badge="¿Es para ti?"
-        title="¿Para qué tipo de evento es el paquete de 50 metros?"
-        subtitle="50 metros de guirnaldas cubren perfectamente una pérgola, un pasillo de ceremonia o una terraza para 30-50 invitados. Es el paquete más solicitado para cenas íntimas al aire libre, pedidas de mano, aniversarios y baby showers en jardines privados de CDMX."
-        subtitle2="Si tu evento es más grande o necesitas cubrir más área, el paquete Estándar de 100 metros duplica la cobertura con dimmer incluido. Pero si buscas ese rincón especial que todos van a fotografiar — este paquete es exactamente lo que necesitas."
-        id="para-quien-title"
-      />
-    </div>
-  </section>
 
   <FaqSection items={faqItems} />
 
@@ -157,36 +217,76 @@ const structuredData = [
   <Footer />
   <WhatsAppBubble />
 </Base>
+
 <style>
-  .producto-layout {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-  @media (min-width: 768px) {
-    .producto-layout { grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; }
-  }
-  .producto__visual { display: flex; flex-direction: column; gap: 0.75rem; }
-  .producto__img-main { border-radius: 14px; overflow: hidden; }
-  .producto__img-main img { width: 100%; height: auto; display: block; }
-  .producto__img-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
-  .producto__img-grid img { width: 100%; height: 100%; object-fit: cover; border-radius: 10px; aspect-ratio: 3/2; }
-  .producto__badge { display: inline-block; font-size: 0.75rem; font-weight: 700; color: #D4A04A; text-transform: uppercase; letter-spacing: 0.1em; padding: 0.375rem 1rem; background: rgba(212,160,74,0.1); border-radius: 6px; margin-bottom: 0.75rem; }
-  .producto__title { font-size: 1.75rem; font-weight: 800; color: #0F172A; line-height: 1.2; margin: 0 0 1rem; }
-  .producto__desc { font-size: 1rem; color: #475569; line-height: 1.7; margin: 0 0 1.5rem; }
-  .producto__price-box { background: #F8F9FA; border-radius: 12px; padding: 1.25rem; margin-bottom: 1.5rem; border-left: 4px solid #D4A04A; }
-  .producto__price { display: flex; align-items: baseline; gap: 0.5rem; }
-  .producto__amount { font-size: 2.25rem; font-weight: 800; color: #D4A04A; line-height: 1; }
-  .producto__currency { font-size: 0.875rem; color: #94A3B8; font-weight: 500; }
-  .producto__price-note { font-size: 0.8125rem; color: #64748B; margin: 0.5rem 0 0; }
-  .producto__includes h3 { font-size: 1rem; font-weight: 700; color: #0F172A; margin: 0 0 0.75rem; }
-  .producto__features { display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 1.5rem; }
-  .producto__feat { font-size: 0.9375rem; color: #475569; padding-left: 1.25rem; position: relative; line-height: 1.5; }
-  .producto__feat::before { content: ""; position: absolute; left: 0; top: 0.5rem; width: 6px; height: 6px; border-radius: 50%; background: #D4A04A; }
-  .producto__ctas { display: flex; flex-direction: column; gap: 0.75rem; }
-  .producto__btn { display: block; text-align: center; padding: 0.875rem 1.5rem; border-radius: 10px; font-size: 0.9375rem; font-weight: 600; text-decoration: none; transition: background 0.2s; }
-  .producto__btn--primary { background: #25D366; color: #fff; }
-  .producto__btn--primary:hover { background: #1DA851; }
-  .producto__btn--ghost { background: none; color: #0F172A; border: 2px solid #E8E8E8; }
-  .producto__btn--ghost:hover { border-color: #D4A04A; color: #D4A04A; }
+  /* Product layout with sidebar */
+  .prod-layout { display: grid; grid-template-columns: 1fr; gap: 2rem; }
+  @media (min-width: 1024px) { .prod-layout { grid-template-columns: 1fr 340px; gap: 2.5rem; } }
+  
+  /* Gallery */
+  .prod-gallery { margin-bottom: 2rem; }
+  .prod-gallery__big { border-radius: 14px; overflow: hidden; margin-bottom: 0.75rem; }
+  .prod-gallery__big img { width: 100%; height: auto; display: block; }
+  .prod-gallery__row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem; }
+  .prod-gallery__row img { width: 100%; aspect-ratio: 3/2; object-fit: cover; border-radius: 10px; }
+  
+  /* Product info */
+  .prod-info__badge { display: inline-block; font-size: 0.75rem; font-weight: 700; color: #D4A04A; text-transform: uppercase; letter-spacing: 0.1em; padding: 0.375rem 1rem; background: rgba(212,160,74,0.1); border-radius: 6px; margin-bottom: 0.75rem; }
+  .prod-info__title { font-size: 1.5rem; font-weight: 800; color: #0F172A; line-height: 1.25; margin: 0 0 1rem; }
+  .prod-info__desc { font-size: 1rem; color: #475569; line-height: 1.7; margin: 0 0 1.5rem; }
+  
+  /* Price */
+  .prod-price { background: #FAFAF5; border-radius: 12px; padding: 1.25rem 1.5rem; margin-bottom: 1.5rem; border-left: 4px solid #D4A04A; }
+  .prod-price__amount { font-size: 2.25rem; font-weight: 800; color: #D4A04A; }
+  .prod-price__currency { font-size: 0.875rem; color: #94A3B8; margin-left: 0.5rem; }
+  .prod-price__note { font-size: 0.8125rem; color: #64748B; margin: 0.5rem 0 0; }
+  
+  /* Features */
+  .prod-features h3 { font-size: 1.0625rem; font-weight: 700; color: #0F172A; margin: 0 0 0.75rem; }
+  .prod-features__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; margin-bottom: 1.5rem; }
+  .prod-feat { font-size: 0.875rem; color: #475569; padding-left: 1.25rem; position: relative; line-height: 1.5; }
+  .prod-feat::before { content: ""; position: absolute; left: 0; top: 0.45rem; width: 6px; height: 6px; border-radius: 50%; background: #D4A04A; }
+  
+  /* CTAs */
+  .prod-ctas { display: flex; gap: 0.75rem; margin-bottom: 2.5rem; flex-wrap: wrap; }
+  .prod-btn { display: inline-flex; align-items: center; justify-content: center; padding: 0.875rem 1.75rem; border-radius: 10px; font-size: 0.9375rem; font-weight: 600; text-decoration: none; transition: background 0.2s; }
+  .prod-btn--wa { background: #25D366; color: #fff; }
+  .prod-btn--wa:hover { background: #1DA851; }
+  .prod-btn--outline { background: none; color: #0F172A; border: 2px solid #E2E8F0; }
+  .prod-btn--outline:hover { border-color: #D4A04A; color: #D4A04A; }
+  
+  /* Segment */
+  .prod-segment { padding: 2rem; background: #F8F9FA; border-radius: 14px; }
+  .prod-segment__title { font-size: 1.25rem; font-weight: 700; color: #0F172A; margin: 0 0 1rem; }
+  .prod-segment__text { font-size: 0.9375rem; color: #475569; line-height: 1.7; margin: 0 0 0.75rem; }
+  .prod-segment__text:last-child { margin: 0; }
+  
+  /* Sidebar */
+  .prod-sidebar { display: flex; flex-direction: column; gap: 1.5rem; }
+  .ps-widget { background: #fff; border-radius: 12px; padding: 1.25rem; box-shadow: 0 1px 4px rgba(0,0,0,0.06); }
+  .ps-widget--dark { background: #1A1A2E; color: #fff; }
+  .ps-widget__title { font-size: 1rem; font-weight: 700; color: #0F172A; margin: 0 0 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid #D4A04A; }
+  .ps-widget__title--light { color: #fff; }
+  .ps-widget__desc { font-size: 0.8125rem; color: rgba(255,255,255,0.75); margin: 0 0 0.75rem; }
+  .ps-widget__btn { display: block; text-align: center; padding: 0.625rem; border-radius: 8px; font-size: 0.875rem; font-weight: 600; text-decoration: none; margin-top: 0.5rem; background: #D4A04A; color: #fff; }
+  .ps-widget__btn--wa { background: #25D366; }
+  
+  /* Package cards in sidebar */
+  .ps-pkg { display: flex; gap: 0.75rem; align-items: center; text-decoration: none; padding: 0.75rem 0; border-bottom: 1px solid #F1F5F9; }
+  .ps-pkg:last-child { border-bottom: none; }
+  .ps-pkg__img { width: 80px; height: 60px; object-fit: cover; border-radius: 8px; flex-shrink: 0; }
+  .ps-pkg__info { display: flex; flex-direction: column; gap: 0.125rem; }
+  .ps-pkg__name { font-size: 0.875rem; font-weight: 600; color: #0F172A; }
+  .ps-pkg__price { font-size: 0.8125rem; font-weight: 700; color: #D4A04A; }
+  .ps-pkg:hover .ps-pkg__name { color: #D4A04A; }
+  
+  /* Service links */
+  .ps-links { display: flex; flex-direction: column; }
+  .ps-link { padding: 0.5rem 0; border-bottom: 1px solid #F1F5F9; font-size: 0.875rem; color: #475569; text-decoration: none; }
+  .ps-link:last-child { border-bottom: none; }
+  .ps-link:hover { color: #D4A04A; }
+  
+  /* Contact */
+  .ps-contact p { font-size: 0.875rem; color: #475569; margin: 0.375rem 0; }
+  .ps-contact a { color: #D4A04A; text-decoration: none; }
 </style>
