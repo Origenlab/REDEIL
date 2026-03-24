@@ -18,6 +18,8 @@ const paquetes = [
     "nombre": "1 Cortina",
     "slug": "paquete-1-cortina",
     "precio": 2000,
+    "imagen": "/img/paquetes/cascadas-led/paquete-1-cortina.avif",
+    "badge": "",
     "features": [
       "1 cortina LED 3x3m",
       "Luz blanca cálida",
@@ -29,6 +31,8 @@ const paquetes = [
     "nombre": "2 Cortinas",
     "slug": "paquete-2-cortinas",
     "precio": 3500,
+    "imagen": "/img/paquetes/cascadas-led/paquete-2-cortinas.avif",
+    "badge": "Más popular",
     "features": [
       "2 cortinas LED 3x3m",
       "Luz blanca cálida",
@@ -41,6 +45,8 @@ const paquetes = [
     "nombre": "4 Cortinas",
     "slug": "paquete-4-cortinas",
     "precio": 6000,
+    "imagen": "/img/paquetes/cascadas-led/paquete-4-cortinas.avif",
+    "badge": "",
     "features": [
       "4 cortinas LED 3x3m",
       "Luz blanca cálida o colores",
@@ -54,6 +60,8 @@ const paquetes = [
     "nombre": "Producción",
     "slug": "paquete-produccion",
     "precio": 12000,
+    "imagen": "/img/paquetes/cascadas-led/produccion.avif",
+    "badge": "",
     "features": [
       "8+ cortinas LED 3x3m",
       "Luz multicolor RGBW",
@@ -164,72 +172,135 @@ const structuredData = [
     }))}
   />
 
-  <!-- GRID DE PAQUETES -->
+  
+
+  <!-- PAQUETES -->
   <section class="section" id="paquetes">
     <div class="container">
       <SectionHeader
-        badge="4 paquetes"
-        title="Paquetes de Cascadas LED"
-        subtitle="Desde eventos íntimos hasta producciones de gran escala. Elige el paquete perfecto para tu evento."
+        badge="4 paquetes de cascadas"
+        title="¿Cuánto cuesta rentar cascadas LED?"
+        subtitle="Desde una sola cortina para un rincón fotográfico hasta una producción completa que envuelve todo el espacio en luz. Cada cortina mide entre 6 y 20 metros de largo y cae creando un efecto de lluvia de luz que transforma cualquier pared o estructura."
+        subtitle2="Todos los paquetes incluyen transporte, instalación profesional con estructura, operación durante el evento y desmontaje. Sin costos ocultos — lo que cotizamos es lo que pagas."
         id="paquetes-title"
       />
-      <div class="grid-4">
-        {paquetes.map((p) => (
-          <article class="pkg-card">
-            <div class="pkg-card__header">
-              <h3 class="pkg-card__title">{p.nombre}</h3>
-              <div class="pkg-card__price">
-                <span class="pkg-card__amount">${p.precio.toLocaleString()}</span>
-                <span class="pkg-card__currency">MXN + IVA</span>
-              </div>
+      <div class="pkg-grid">
+        {paquetes.map((p: any) => (
+          <article class={`pkg ${p.badge ? 'pkg--featured' : ''}`}>
+            <div class="pkg__img-wrap">
+              <img src={p.imagen} alt={p.nombre} width="600" height="400" loading="lazy" class="pkg__img" />
+              {p.badge && <span class="pkg__badge">{p.badge}</span>}
             </div>
-            <ul class="pkg-card__features">
-              {p.features.map((f: string) => (
-                <li class="pkg-card__feature">&#10003; {f}</li>
-              ))}
-            </ul>
-            <a href={'/renta-de-iluminacion/cascadas-led/' + p.slug + '/'} class="pkg-card__btn">Ver Paquete</a>
+            <div class="pkg__body">
+              <h3 class="pkg__name">{p.nombre}</h3>
+              <div class="pkg__pricing">
+                <span class="pkg__amount">${p.precio.toLocaleString()}</span>
+                <span class="pkg__tax">MXN + IVA</span>
+              </div>
+              <ul class="pkg__features">
+                {p.features.map((f: string) => (
+                  <li>{f}</li>
+                ))}
+              </ul>
+              <a href={'/renta-de-iluminacion/cascadas-led/' + p.slug + '/'} class="pkg__cta">
+                Cotizar este paquete
+              </a>
+            </div>
           </article>
         ))}
       </div>
     </div>
   </section>
 
-  <!-- CONTENIDO SEO -->
+  <!-- LA DIFERENCIA -->
   <section class="section section--bg">
-    <div class="container content-prose">
-      <h2>¿Por qué rentar cascadas led con REDEIL?</h2>
-      <p>Cortinas de luces LED tipo cascada para decoración de salones y jardines. En REDEIL nos especializamos en ofrecer equipamiento profesional para eventos de todos los tamaños en la Ciudad de México y área metropolitana. Nuestro equipo técnico capacitado se encarga de cada detalle para que tú solo te preocupes por disfrutar.</p>
-
-      <h3>¿Qué incluye la renta de cascadas LED?</h3>
-      <p>Cada paquete de cascadas led incluye mucho más que solo equipo. Ofrecemos un servicio completo que abarca la logística de transporte, la instalación profesional en tu venue, la configuración y pruebas antes del evento, la operación técnica durante toda la celebración y el desmontaje al finalizar. No hay costos ocultos ni sorpresas.</p>
-
-      <h3>¿Qué equipo profesional usan para cascadas LED?</h3>
-      <p>Trabajamos con las mejores marcas del mercado: JBL, QSC, Martin Professional, Chauvet y Elation. Nuestro inventario se actualiza constantemente para ofrecerte la tecnología más reciente. Cada equipo pasa por revisiones periódicas de mantenimiento para garantizar un funcionamiento impecable.</p>
-
-      <h3>¿En qué zonas de CDMX rentan cascadas LED?</h3>
-      <p>Nuestro servicio de renta de cascadas led cubre toda la Ciudad de México y el Estado de México. También llegamos a destinos populares para eventos como Cuernavaca, Tepoztlán, Valle de Bravo y cualquier ubicación dentro de 100 km de CDMX sin costo adicional de traslado.</p>
+    <div class="container">
+      <SectionHeader
+        badge="El efecto wow"
+        title="¿Por qué las cascadas LED son el fondo fotográfico más solicitado?"
+        subtitle="Hay un momento en cada boda donde los invitados sacan el celular y empiezan a tomarse fotos. Las cascadas LED crean ese momento. Una pared de cientos de luces LED cayendo como lluvia genera un fondo que no necesita filtros ni edición — cada foto sale espectacular."
+        subtitle2="No es decoración genérica. Es el elemento que define cómo se van a ver TODAS las fotos de tu evento. Por eso las cascadas LED son lo segundo más solicitado después de las guirnaldas. Y a diferencia de un photobooth, funcionan toda la noche sin necesitar operador."
+        id="diferencia-title"
+      />
+      <div class="sell__grid">
+        <div class="sell__card">
+          <div class="sell__card-img">
+            <img src="/img/paquetes/cascadas-led/sell/backdrop.avif" alt="Cascada LED como fondo fotográfico en boda" width="600" height="400" loading="lazy" />
+          </div>
+          <div class="sell__card-body">
+            <h3 class="sell__card-title">Fondo fotográfico perfecto</h3>
+            <p class="sell__card-desc">Las cascadas crean el backdrop que todas las novias buscan. Cientos de LEDs cayendo como lluvia detrás de la mesa principal generan fotos que parecen sacadas de revista. Sin filtros, sin edición.</p>
+          </div>
+        </div>
+        <div class="sell__card">
+          <div class="sell__card-img">
+            <img src="/img/paquetes/cascadas-led/sell/efecto-lluvia.avif" alt="Efecto lluvia de luz LED cascada" width="600" height="400" loading="lazy" />
+          </div>
+          <div class="sell__card-body">
+            <h3 class="sell__card-title">Efecto lluvia de luz</h3>
+            <p class="sell__card-desc">Cada cortina tiene cientos de LEDs programados para encenderse en secuencia, simulando gotas de agua cayendo. El efecto es hipnótico — tus invitados no van a dejar de mirarlo. Velocidad ajustable con dimmer.</p>
+          </div>
+        </div>
+        <div class="sell__card">
+          <div class="sell__card-img">
+            <img src="/img/paquetes/cascadas-led/sell/exterior.avif" alt="Cascada LED para exteriores certificación IP65" width="600" height="400" loading="lazy" />
+          </div>
+          <div class="sell__card-body">
+            <h3 class="sell__card-title">IP65 para exteriores</h3>
+            <p class="sell__card-desc">¿Tu evento es en jardín? No hay problema. Nuestras cascadas LED tienen certificación IP65 — funcionan con humedad, rocío y hasta lluvia ligera. Hemos montado cascadas en jardines de Cuernavaca, terrazas en Polanco y patios en Valle de Bravo.</p>
+          </div>
+        </div>
+        <div class="sell__card">
+          <div class="sell__card-img">
+            <img src="/img/paquetes/cascadas-led/sell/control.avif" alt="Control DMX dimmer para cascadas LED" width="600" height="400" loading="lazy" />
+          </div>
+          <div class="sell__card-body">
+            <h3 class="sell__card-title">Control total de efectos</h3>
+            <p class="sell__card-desc">Nuestro técnico controla velocidad, brillo y patrón de la cascada en tiempo real. Ceremonia con efecto suave y lento, cena con brillo estable, fiesta con cascada rápida y dinámica. Cada momento tiene su propio efecto.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
-  
-  <!-- Zonas de servicio -->
+  <!-- ZONAS -->
   <section class="section">
     <div class="container">
-      <h2 class="section__title">¿En qué zonas de CDMX ofrecemos cascadas LED?</h2>
-      <p class="section__subtitle">Llevamos cascadas LED a toda la Ciudad de México y Estado de México. Estas son algunas de nuestras zonas de cobertura.</p>
-      <div class="zonas-servicio">
-        <a href="/zonas/polanco/" class="zona-link">Renta de cascadas LED en Polanco</a>
-        <a href="/zonas/condesa/" class="zona-link">Renta de cascadas LED en Condesa</a>
-        <a href="/zonas/santa-fe/" class="zona-link">Renta de cascadas LED en Santa Fe</a>
+      <SectionHeader
+        badge="Cobertura"
+        title="¿Dónde instalamos cascadas LED en CDMX?"
+        subtitle="Cubrimos las 16 alcaldías de la Ciudad de México y los principales municipios del Estado de México. Las cascadas LED son especialmente populares en haciendas y jardines donde las paredes naturales de árboles o estructuras de madera sirven como soporte."
+        subtitle2="Nuestro equipo hace visita técnica previa para verificar puntos de anclaje, tomas de corriente y la distribución óptima de las cortinas en tu espacio."
+        id="zonas-title"
+      />
+      <div class="zonas-grid">
+        <a href="/zonas/polanco/" class="zona-card"><span class="zona-card__name">Polanco</span><span class="zona-card__desc">Terrazas y hoteles</span></a>
+        <a href="/zonas/condesa/" class="zona-card"><span class="zona-card__name">Condesa</span><span class="zona-card__desc">Foros y jardines</span></a>
+        <a href="/zonas/santa-fe/" class="zona-card"><span class="zona-card__name">Santa Fe</span><span class="zona-card__desc">Salones corporativos</span></a>
+        <a href="/zonas/coyoacan/" class="zona-card"><span class="zona-card__name">Coyoacán</span><span class="zona-card__desc">Jardines y haciendas</span></a>
+        <a href="/zonas/san-angel/" class="zona-card"><span class="zona-card__name">San Ángel</span><span class="zona-card__desc">Casas privadas</span></a>
+        <a href="/zonas/interlomas/" class="zona-card"><span class="zona-card__name">Interlomas</span><span class="zona-card__desc">Residenciales</span></a>
+        <a href="/zonas/naucalpan/" class="zona-card"><span class="zona-card__name">Naucalpan</span><span class="zona-card__desc">Salones y jardines</span></a>
+        <a href="/zonas/tlalnepantla/" class="zona-card"><span class="zona-card__name">Tlalnepantla</span><span class="zona-card__desc">Eventos y haciendas</span></a>
       </div>
-      <p style="margin-top: var(--spacing-md); text-align: center;"><a href="/zonas/" style="color: var(--color-accent); font-weight: 600;">Ver todas las zonas de cobertura →</a></p>
+      <div class="zonas-cta"><a href="/zonas/" class="zonas-cta__link">Ver las 30 zonas de cobertura →</a></div>
     </div>
   </section>
 
-  <FaqSection items={faqItems} />
+  <!-- FAQ -->
+  <section class="section" id="faq">
+    <div class="container">
+      <SectionHeader
+        badge="FAQ"
+        title="Preguntas Frecuentes"
+        subtitle="Las dudas más comunes sobre renta de cascadas LED para eventos en CDMX. Precios, instalación, exteriores y tiempos de montaje."
+        subtitle2="Si no encuentras tu respuesta, escríbenos por WhatsApp al 55 4937 5172 y te asesoramos sin compromiso."
+        id="faq-title"
+      />
+    </div>
+    <FaqSection items={faqItems} />
+  </section>
 
-  <!-- CTA FINAL -->
 
   <Footer />
   <WhatsAppBubble />
