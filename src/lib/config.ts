@@ -67,43 +67,43 @@ export const EMAIL_URL = `mailto:${EMAIL}`;
 
 // -- Servicios: Iluminación (12 items con paquetes) --
 export const ILUMINACION_SERVICES = [
-  { nombre: 'Guirnaldas de Luces', slug: 'guirnaldas', imagen: '/img/img-index/guirnaldas.avif', descripcion: 'Luces vintage con focos Edison para bodas en jardín y eventos elegantes.', paquetes: [
+  { nombre: 'Guirnaldas de Luces', slug: 'guirnaldas', imagen: '/img/img-index/pro/guirnaldas.avif', descripcion: 'Luces vintage con focos Edison para bodas en jardín y eventos elegantes.', paquetes: [
     { nombre: 'Básico — 50 metros', slug: 'paquete-50-metros' },
     { nombre: 'Estándar — 100 metros', slug: 'paquete-100-metros' },
     { nombre: 'Premium — 200 metros', slug: 'paquete-200-metros' },
     { nombre: 'Producción — 500 metros', slug: 'paquete-500-metros' },
   ]},
-  { nombre: 'Luz Neón LED', slug: 'luz-neon', imagen: '/img/img-index/luz-neon.avif', descripcion: 'Letreros y figuras neón LED personalizadas para ambientar cualquier evento.', paquetes: [
+  { nombre: 'Luz Neón LED', slug: 'luz-neon', imagen: '/img/img-index/pro/luz-neon.avif', descripcion: 'Letreros y figuras neón LED personalizadas para ambientar cualquier evento.', paquetes: [
     { nombre: 'UV Básico', slug: 'paquete-uv-basico' },
     { nombre: 'Glow Party', slug: 'paquete-glow-party' },
     { nombre: 'Neón Premium', slug: 'paquete-neon-premium' },
     { nombre: 'Producción Neón', slug: 'paquete-produccion-neon' },
   ]},
-  { nombre: 'Luz Negra UV', slug: 'luz-negra', imagen: '/img/img-index/luz-negra.avif', descripcion: 'Iluminación ultravioleta para fiestas temáticas neón y eventos nocturnos.', paquetes: [
+  { nombre: 'Luz Negra UV', slug: 'luz-negra', imagen: '/img/img-index/pro/luz-negra.avif', descripcion: 'Iluminación ultravioleta para fiestas temáticas neón y eventos nocturnos.', paquetes: [
     { nombre: 'Blacklight Básico', slug: 'paquete-blacklight-basico' },
     { nombre: 'Blacklight Party', slug: 'paquete-blacklight-party' },
     { nombre: 'UV Premium', slug: 'paquete-uv-premium' },
     { nombre: 'Producción UV', slug: 'paquete-produccion-uv' },
   ]},
-  { nombre: 'City Color LED', slug: 'city-color', imagen: '/img/img-index/city-color.avif', descripcion: 'Iluminación de alta potencia para bañar fachadas y espacios grandes en color.', paquetes: [
+  { nombre: 'City Color LED', slug: 'city-color', imagen: '/img/img-index/pro/city-color.avif', descripcion: 'Iluminación de alta potencia para bañar fachadas y espacios grandes en color.', paquetes: [
     { nombre: '4 Cañones', slug: 'paquete-4-canones' },
     { nombre: '8 Cañones', slug: 'paquete-8-canones' },
     { nombre: '16 Cañones', slug: 'paquete-16-canones' },
     { nombre: 'Producción', slug: 'paquete-produccion' },
   ]},
-  { nombre: 'Sky Tracker', slug: 'sky-tracker', imagen: '/img/img-index/sky-tracker.avif', descripcion: 'Rayos de luz verticales visibles a kilómetros para inauguraciones y eventos.', paquetes: [
+  { nombre: 'Sky Tracker', slug: 'sky-tracker', imagen: '/img/img-index/pro/sky-tracker.avif', descripcion: 'Rayos de luz verticales visibles a kilómetros para inauguraciones y eventos.', paquetes: [
     { nombre: '1 Sky Tracker', slug: 'paquete-1-sky-tracker' },
     { nombre: '2 Sky Trackers', slug: 'paquete-2-sky-trackers' },
     { nombre: '4 Sky Trackers', slug: 'paquete-4-sky-trackers' },
     { nombre: 'Producción', slug: 'paquete-produccion-sky-tracker' },
   ]},
-  { nombre: 'Cabezas Móviles', slug: 'cabezas-moviles', imagen: '/img/img-index/cabezas-moviles.avif', descripcion: 'Luces robóticas inteligentes con movimiento y cambio de color para pistas de baile.', paquetes: [
+  { nombre: 'Cabezas Móviles', slug: 'cabezas-moviles', imagen: '/img/img-index/pro/cabezas-moviles.avif', descripcion: 'Luces robóticas inteligentes con movimiento y cambio de color para pistas de baile.', paquetes: [
     { nombre: 'Show Básico', slug: 'paquete-show-basico' },
     { nombre: 'Show Estándar', slug: 'paquete-show-estandar' },
     { nombre: 'Show Premium', slug: 'paquete-show-premium' },
     { nombre: 'Producción', slug: 'paquete-produccion' },
   ]},
-  { nombre: 'Iluminación Láser', slug: 'iluminacion-laser', imagen: '/img/img-index/iluminacion-laser.avif', descripcion: 'Efectos láser profesionales para shows, conciertos y fiestas de alto impacto.', paquetes: [
+  { nombre: 'Iluminación Láser', slug: 'iluminacion-laser', imagen: '/img/img-index/pro/iluminacion-laser.avif', descripcion: 'Efectos láser profesionales para shows, conciertos y fiestas de alto impacto.', paquetes: [
     { nombre: 'Láser Básico', slug: 'paquete-laser-basico' },
     { nombre: 'Láser Estándar', slug: 'paquete-laser-estandar' },
     { nombre: 'Láser Premium', slug: 'paquete-laser-premium' },
@@ -115,7 +115,7 @@ export const ILUMINACION_SERVICES = [
     { nombre: '20 Uplighters', slug: 'paquete-20-uplighters' },
     { nombre: 'Producción', slug: 'paquete-produccion' },
   ]},
-  { nombre: 'Cascadas LED', slug: 'cascadas-led', imagen: '/img/img-index/cascadas-led.avif', descripcion: 'Cortinas de luces LED tipo cascada para decoración de salones y jardines.', paquetes: [
+  { nombre: 'Cascadas LED', slug: 'cascadas-led', imagen: '/img/img-index/pro/cascadas-led.avif', descripcion: 'Cortinas de luces LED tipo cascada para decoración de salones y jardines.', paquetes: [
     { nombre: '1 Cortina', slug: 'paquete-1-cortina' },
     { nombre: '2 Cortinas', slug: 'paquete-2-cortinas' },
     { nombre: '4 Cortinas', slug: 'paquete-4-cortinas' },
