@@ -273,14 +273,50 @@ const structuredData = [
   <!-- Zonas de servicio -->
   <section class="section">
     <div class="container">
-      <h2 class="section__title">¿En qué zonas de CDMX ofrecemos guirnaldas de luces?</h2>
-      <p class="section__subtitle">Llevamos guirnaldas de luces a toda la Ciudad de México y Estado de México. Estas son algunas de nuestras zonas de cobertura.</p>
-      <div class="zonas-servicio">
-        <a href="/zonas/polanco/" class="zona-link">Renta de guirnaldas de luces en Polanco</a>
-        <a href="/zonas/condesa/" class="zona-link">Renta de guirnaldas de luces en Condesa</a>
-        <a href="/zonas/santa-fe/" class="zona-link">Renta de guirnaldas de luces en Santa Fe</a>
+      <SectionHeader
+        badge="Cobertura"
+        title="¿Dónde llevamos guirnaldas en CDMX y Edomex?"
+        subtitle="Cubrimos las 16 alcaldías de la Ciudad de México y los principales municipios del Estado de México. El traslado está incluido dentro de los primeros 100 km desde CDMX. Para haciendas en Cuernavaca, Tepoztlán o Valle de Bravo, el costo adicional es mínimo."
+        subtitle2="Nuestro equipo conoce los venues más populares de cada zona: jardines en Coyoacán, terrazas en Polanco, haciendas en Santa Fe, salones en Condesa. Hacemos visita técnica previa para planificar la instalación exacta en tu espacio."
+        id="zonas-title"
+      />
+      <div class="zonas-grid">
+        <a href="/zonas/polanco/" class="zona-card">
+          <span class="zona-card__name">Polanco</span>
+          <span class="zona-card__desc">Hoteles y terrazas premium</span>
+        </a>
+        <a href="/zonas/condesa/" class="zona-card">
+          <span class="zona-card__name">Condesa</span>
+          <span class="zona-card__desc">Jardines y foros</span>
+        </a>
+        <a href="/zonas/santa-fe/" class="zona-card">
+          <span class="zona-card__name">Santa Fe</span>
+          <span class="zona-card__desc">Corporativos y salones</span>
+        </a>
+        <a href="/zonas/coyoacan/" class="zona-card">
+          <span class="zona-card__name">Coyoacán</span>
+          <span class="zona-card__desc">Jardines y haciendas</span>
+        </a>
+        <a href="/zonas/san-angel/" class="zona-card">
+          <span class="zona-card__name">San Ángel</span>
+          <span class="zona-card__desc">Casas y jardines privados</span>
+        </a>
+        <a href="/zonas/interlomas/" class="zona-card">
+          <span class="zona-card__name">Interlomas</span>
+          <span class="zona-card__desc">Residenciales y terrazas</span>
+        </a>
+        <a href="/zonas/naucalpan/" class="zona-card">
+          <span class="zona-card__name">Naucalpan</span>
+          <span class="zona-card__desc">Salones y jardines</span>
+        </a>
+        <a href="/zonas/tlalnepantla/" class="zona-card">
+          <span class="zona-card__name">Tlalnepantla</span>
+          <span class="zona-card__desc">Eventos y haciendas</span>
+        </a>
       </div>
-      <p style="margin-top: var(--spacing-md); text-align: center;"><a href="/zonas/" style="color: var(--color-accent); font-weight: 600;">Ver todas las zonas de cobertura →</a></p>
+      <div class="zonas-cta">
+        <a href="/zonas/" class="zonas-cta__link">Ver las 30 zonas de cobertura →</a>
+      </div>
     </div>
   </section>
 
@@ -561,4 +597,47 @@ const structuredData = [
     line-height: 1.7;
     margin: 0;
   }
+</style>
+<style>
+  .zonas-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+  @media (min-width: 768px) { .zonas-grid { grid-template-columns: repeat(4, 1fr); } }
+  .zona-card {
+    display: flex;
+    flex-direction: column;
+    padding: 1.25rem;
+    background: #fff;
+    border-radius: 10px;
+    border: 1px solid #E8E8E8;
+    text-decoration: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+  .zona-card:hover {
+    border-color: #D4A04A;
+    box-shadow: 0 4px 12px rgba(212,160,74,0.15);
+  }
+  .zona-card__name {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #0F172A;
+  }
+  .zona-card__desc {
+    font-size: 0.8125rem;
+    color: #94A3B8;
+    margin-top: 0.25rem;
+  }
+  .zonas-cta {
+    text-align: center;
+    margin-top: 1.5rem;
+  }
+  .zonas-cta__link {
+    font-size: 0.9375rem;
+    font-weight: 600;
+    color: #D4A04A;
+    text-decoration: none;
+  }
+  .zonas-cta__link:hover { text-decoration: underline; }
 </style>
