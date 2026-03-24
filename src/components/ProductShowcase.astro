@@ -1,0 +1,303 @@
+---
+/**
+ * ProductShowcase — Sección de venta marketing para páginas de paquetes Nivel 4.
+ * Reemplaza el bloque genérico "¿Para quién es?" con selling points visuales,
+ * specs técnicas y tipos de evento — todo orientado a conversión.
+ *
+ * Props:
+ *   headline    — H2 principal (marketing, no FAQ)
+ *   intro       — Párrafo de venta (1-2 oraciones, datos concretos)
+ *   highlights  — Array de 3-4 selling points con título y descripción
+ *   specs       — Array de specs técnicas [{ label, value }]
+ *   idealFor    — Array de strings: tipos de evento ideales para este paquete
+ *   comparison  — Objeto opcional para upsell { text, href, label }
+ */
+
+interface Highlight {
+  title: string;
+  desc: string;
+}
+
+interface Spec {
+  label: string;
+  value: string;
+}
+
+interface Comparison {
+  text: string;
+  href: string;
+  label: string;
+}
+
+interface Props {
+  headline: string;
+  intro: string;
+  highlights: Highlight[];
+  specs: Spec[];
+  idealFor: string[];
+  comparison?: Comparison;
+}
+
+const { headline, intro, highlights, specs, idealFor, comparison } = Astro.props;
+---
+
+<section class="showcase" id="detalles">
+  <div class="showcase__inner">
+    <!-- Selling Points -->
+    <div class="showcase__block">
+      <h2 class="showcase__headline">{headline}</h2>
+      <p class="showcase__intro">{intro}</p>
+
+      <div class="showcase__highlights">
+        {highlights.map((h) => (
+          <div class="sc-highlight">
+            <div class="sc-highlight__marker"></div>
+            <div class="sc-highlight__content">
+              <h3 class="sc-highlight__title">{h.title}</h3>
+              <p class="sc-highlight__desc">{h.desc}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- Sidebar: Specs + Ideal For -->
+    <div class="showcase__sidebar">
+      <!-- Specs técnicas -->
+      <div class="sc-specs">
+        <h3 class="sc-specs__title">Especificaciones</h3>
+        <dl class="sc-specs__list">
+          {specs.map((s) => (
+            <div class="sc-specs__row">
+              <dt class="sc-specs__label">{s.label}</dt>
+              <dd class="sc-specs__value">{s.value}</dd>
+            </div>
+          ))}
+        </dl>
+      </div>
+
+      <!-- Ideal para -->
+      <div class="sc-ideal">
+        <h3 class="sc-ideal__title">Ideal para</h3>
+        <ul class="sc-ideal__list">
+          {idealFor.map((item) => (
+            <li class="sc-ideal__item">{item}</li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Upsell / Comparación -->
+      {comparison && (
+        <div class="sc-upsell">
+          <p class="sc-upsell__text">{comparison.text}</p>
+          <a href={comparison.href} class="sc-upsell__link">{comparison.label} →</a>
+        </div>
+      )}
+    </div>
+  </div>
+</section>
+
+<style>
+  .showcase {
+    padding: 0;
+    margin-bottom: 2.5rem;
+  }
+
+  .showcase__inner {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  /* --- Main block --- */
+  .showcase__headline {
+    font-size: clamp(1.25rem, 3vw, 1.625rem);
+    font-weight: 800;
+    color: var(--color-text);
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    margin: 0 0 0.75rem;
+  }
+
+  .showcase__intro {
+    font-size: 0.9375rem;
+    color: var(--color-text-light);
+    line-height: 1.7;
+    margin: 0 0 1.75rem;
+    max-width: 65ch;
+  }
+
+  /* Highlights */
+  .showcase__highlights {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .sc-highlight {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+
+  .sc-highlight__marker {
+    flex-shrink: 0;
+    width: 3px;
+    min-height: 100%;
+    background: var(--color-accent);
+    border-radius: 2px;
+    margin-top: 0.25rem;
+  }
+
+  .sc-highlight__content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .sc-highlight__title {
+    font-size: 0.9375rem;
+    font-weight: 700;
+    color: var(--color-text);
+    margin: 0;
+    line-height: 1.3;
+  }
+
+  .sc-highlight__desc {
+    font-size: 0.8125rem;
+    color: var(--color-text-light);
+    line-height: 1.65;
+    margin: 0;
+  }
+
+  /* --- Sidebar --- */
+  .showcase__sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  /* Specs */
+  .sc-specs {
+    background: var(--color-bg);
+    border-radius: 12px;
+    padding: 1.25rem;
+  }
+
+  .sc-specs__title {
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var(--color-text);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin: 0 0 0.75rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--color-accent);
+  }
+
+  .sc-specs__list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin: 0;
+  }
+
+  .sc-specs__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--color-border);
+    gap: 1rem;
+  }
+
+  .sc-specs__row:last-child {
+    border-bottom: none;
+  }
+
+  .sc-specs__label {
+    font-size: 0.8125rem;
+    color: var(--color-text-light);
+    font-weight: 500;
+    margin: 0;
+  }
+
+  .sc-specs__value {
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: var(--color-text);
+    text-align: right;
+    margin: 0;
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Ideal para */
+  .sc-ideal {
+    background: var(--color-bg);
+    border-radius: 12px;
+    padding: 1.25rem;
+  }
+
+  .sc-ideal__title {
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var(--color-text);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin: 0 0 0.75rem;
+  }
+
+  .sc-ideal__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .sc-ideal__item {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--color-text);
+    padding: 0.375rem 0.875rem;
+    background: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    white-space: nowrap;
+  }
+
+  /* Upsell */
+  .sc-upsell {
+    background: linear-gradient(135deg, rgba(0,113,227,0.06), rgba(0,113,227,0.02));
+    border: 1px solid rgba(0,113,227,0.12);
+    border-radius: 12px;
+    padding: 1.25rem;
+  }
+
+  .sc-upsell__text {
+    font-size: 0.8125rem;
+    color: var(--color-text-light);
+    line-height: 1.6;
+    margin: 0 0 0.5rem;
+  }
+
+  .sc-upsell__link {
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: var(--color-accent);
+    text-decoration: none;
+  }
+
+  .sc-upsell__link:hover {
+    text-decoration: underline;
+  }
+
+  /* Desktop: 2 columns */
+  @media (min-width: 768px) {
+    .showcase__inner {
+      grid-template-columns: 1fr 300px;
+      gap: 2.5rem;
+    }
+  }
+</style>

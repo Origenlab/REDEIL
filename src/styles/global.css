@@ -11,10 +11,10 @@
   --color-wa: #25d366;
   --color-wa-dark: #1fb855;
   --color-white: #ffffff;
-  --color-text: #1d1d1f;
-  --color-text-light: #6e6e73;
-  --color-bg: #f5f5f7;
-  --color-border: #d2d2d7;
+  --color-text: #0f172a;
+  --color-text-light: #475569;
+  --color-bg: #f8fafc;
+  --color-border: #e2e8f0;
   --color-star: #f59e0b;
 
   /* Footer */
@@ -23,7 +23,7 @@
   --footer-text-50: rgba(255, 255, 255, 0.5);
 
   /* Typography */
-  --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-primary: 'Geist', 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --font-size-xs: 13px;
   --font-size-sm: 14px;
   --font-size-base: 16px;
@@ -53,9 +53,9 @@
   --border-radius-lg: 12px;
 
   /* Shadows */
-  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.04);
-  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
-  --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.12);
+  --shadow-sm: 0 1px 3px rgba(26, 54, 93, 0.06), 0 4px 12px rgba(26, 54, 93, 0.03);
+  --shadow-md: 0 4px 16px rgba(26, 54, 93, 0.08);
+  --shadow-lg: 0 12px 32px rgba(26, 54, 93, 0.1);
 }
 
 /* ==========================================================================
@@ -191,11 +191,11 @@ input, select, textarea {
   padding: 0.875rem 2rem;
   font-size: var(--font-size-base);
   font-weight: 600;
-  border-radius: var(--border-radius);
+  border-radius: 6px;
   text-align: center;
   line-height: 1;
   gap: 0.5rem;
-  transition: background-color 0.2s ease, border-color 0.2s ease;
+  transition: background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .btn--primary {
@@ -213,11 +213,13 @@ input, select, textarea {
   background-color: var(--color-accent);
   color: var(--color-white);
   border: 2px solid var(--color-accent);
+  box-shadow: 0 1px 3px rgba(0, 113, 227, 0.2);
 }
 
 .btn--accent:hover {
   background-color: var(--color-accent-dark);
   border-color: var(--color-accent-dark);
+  box-shadow: 0 2px 8px rgba(0, 113, 227, 0.25);
 }
 
 .btn--outline {
@@ -278,6 +280,7 @@ input, select, textarea {
   font-weight: 700;
   color: var(--color-text);
   margin: var(--spacing-xl) 0 var(--spacing-sm);
+  letter-spacing: -0.02em;
 }
 
 .prose h3 {
@@ -285,11 +288,13 @@ input, select, textarea {
   font-weight: 600;
   color: var(--color-text);
   margin: var(--spacing-lg) 0 var(--spacing-xs);
+  letter-spacing: -0.02em;
 }
 
 .prose p {
   margin-bottom: var(--spacing-sm);
   line-height: 1.75;
+  max-width: 65ch;
 }
 
 .prose ul, .prose ol {
@@ -604,12 +609,13 @@ input, select, textarea {
 
 .testimonial-card {
   background: var(--color-white);
-  border: 1px solid var(--color-border);
+  border: 1px solid rgba(226, 232, 240, 0.6);
   border-radius: var(--border-radius);
   padding: var(--spacing-lg);
   display: flex;
   flex-direction: column;
   gap: var(--spacing-sm);
+  box-shadow: 0 1px 4px rgba(26, 54, 93, 0.04);
 }
 
 .testimonial-card__header {
@@ -624,6 +630,7 @@ input, select, textarea {
   border-radius: 50%;
   object-fit: cover;
   flex-shrink: 0;
+  border: 2px solid var(--color-bg);
 }
 
 .testimonial-card__name {
@@ -676,10 +683,10 @@ input, select, textarea {
 }
 
 .trust-item {
-  padding: var(--spacing-md);
-  border-left: 3px solid var(--color-accent);
-  background: var(--color-bg);
-  border-radius: 0 var(--border-radius) var(--border-radius) 0;
+  padding: 1.5rem;
+  border: 1px solid var(--color-border);
+  background: var(--color-white);
+  border-radius: var(--border-radius-lg);
 }
 
 .trust-item__title {
@@ -1038,12 +1045,13 @@ a.contact-info__value:hover {
 
 .testimonial-card {
   background: var(--color-white);
-  border: 1px solid var(--color-border);
+  border: 1px solid rgba(226, 232, 240, 0.6);
   border-radius: var(--border-radius-lg);
   padding: var(--spacing-lg);
   display: flex;
   flex-direction: column;
   gap: var(--spacing-sm);
+  box-shadow: 0 1px 4px rgba(26, 54, 93, 0.04);
 }
 
 .testimonial-card__stars {
@@ -1073,6 +1081,7 @@ a.contact-info__value:hover {
   height: 48px;
   border-radius: 50%;
   object-fit: cover;
+  border: 2px solid var(--color-bg);
 }
 
 .testimonial-card__name {
@@ -1132,10 +1141,10 @@ a.contact-info__value:hover {
 }
 
 .trust-item {
-  padding: var(--spacing-md) var(--spacing-lg);
-  border-left: 3px solid var(--color-accent);
-  background: var(--color-bg);
-  border-radius: 0 var(--border-radius) var(--border-radius) 0;
+  padding: 1.5rem;
+  border: 1px solid var(--color-border);
+  background: var(--color-white);
+  border-radius: var(--border-radius-lg);
 }
 
 .trust-item__title {

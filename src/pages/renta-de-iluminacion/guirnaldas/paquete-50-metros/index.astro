@@ -6,6 +6,7 @@ import Hero from '../../../../components/Hero.astro';
 import Breadcrumb from '../../../../components/Breadcrumb.astro';
 import CtaBar from '../../../../components/CtaBar.astro';
 import SectionHeader from '../../../../components/SectionHeader.astro';
+import ProductShowcase from '../../../../components/ProductShowcase.astro';
 import FaqSection from '../../../../components/FaqSection.astro';
 import Footer from '../../../../components/Footer.astro';
 import WhatsAppBubble from '../../../../components/WhatsAppBubble.astro';
@@ -139,12 +140,54 @@ const structuredData = [
             </div>
           </div>
 
-          <!-- ¿Para quién? -->
-          <div class="prod-segment">
-            <h2 class="prod-segment__title">¿Para qué tipo de evento es este paquete?</h2>
-            <p class="prod-segment__text">50 metros de guirnaldas cubren perfectamente una pérgola, un pasillo de ceremonia o una terraza para 30-50 invitados. Es el paquete más solicitado para cenas íntimas al aire libre, pedidas de mano, aniversarios y baby showers en jardines privados de CDMX.</p>
-            <p class="prod-segment__text">Si tu evento es más grande o necesitas cubrir más área, el paquete Estándar de 100 metros duplica la cobertura con dimmer incluido. Pero si buscas ese rincón especial que todos van a fotografiar — este paquete es exactamente lo que necesitas.</p>
-          </div>
+          <!-- Product Showcase -->
+          <ProductShowcase
+            headline="50 metros que transforman cualquier rincón en el lugar que todos quieren fotografiar"
+            intro="Este no es solo un tendido de luces. Son 50 metros de atmósfera: focos Edison con filamento visible que proyectan una luz ámbar cálida, montados sobre cable negro profesional que desaparece contra el cielo nocturno. El resultado es ese efecto de jardín europeo que ves en Pinterest — pero real, en tu evento, en CDMX."
+            highlights={[
+              {
+                title: "Luz ámbar cálida sin deslumbrar",
+                desc: "Los focos Edison LED emiten 2700K — la temperatura exacta que favorece los tonos de piel en fotografías y crea intimidad sin oscurecer el espacio. Tus invitados se ven bien, tu evento se siente bien."
+              },
+              {
+                title: "Cable negro profesional: invisible de noche",
+                desc: "No usamos cable blanco ni transparente que refleja flash. El cable negro mate se mimetiza con el cielo nocturno, dejando visible solo la luz. El efecto: focos flotando en el aire."
+              },
+              {
+                title: "Instalación a medida de tu espacio",
+                desc: "Nuestro técnico evalúa la estructura del lugar — pérgolas, árboles, postes, techos — y diseña el recorrido óptimo de las guirnaldas. No es colgar cable: es iluminar arquitectura."
+              },
+              {
+                title: "Servicio puerta a puerta sin que muevas un dedo",
+                desc: "Llegamos 3 horas antes, instalamos, hacemos pruebas de encendido, operamos durante el evento y desmontamos al final. Tú llegas, todo está listo."
+              }
+            ]}
+            specs={[
+              { label: "Longitud total", value: "50 metros" },
+              { label: "Tipo de foco", value: "Edison LED ámbar" },
+              { label: "Temperatura de color", value: "2700K cálido" },
+              { label: "Cable", value: "Negro mate profesional" },
+              { label: "Cobertura aprox.", value: "30-50 invitados" },
+              { label: "Instalación", value: "Incluida" },
+              { label: "Desmontaje", value: "Incluido" },
+              { label: "Zona de servicio", value: "CDMX + Edomex" }
+            ]}
+            idealFor={[
+              "Bodas íntimas en jardín",
+              "Cenas al aire libre",
+              "Pedidas de mano",
+              "Aniversarios",
+              "Baby showers",
+              "Terrazas privadas",
+              "Marcos de fotografía",
+              "Pérgolas y pasillos"
+            ]}
+            comparison={{
+              text: "¿Tu espacio es más grande? El paquete Estándar de 100 metros duplica la cobertura e incluye dimmer para controlar la intensidad.",
+              href: "/renta-de-iluminacion/guirnaldas/paquete-100-metros/",
+              label: "Ver paquete Estándar — 100m"
+            }}
+          />
         </div>
 
         <!-- SIDEBAR -->
@@ -256,11 +299,7 @@ const structuredData = [
   .prod-btn--outline { background: none; color: #0F172A; border: 2px solid #E2E8F0; }
   .prod-btn--outline:hover { border-color: #D4A04A; color: #D4A04A; }
   
-  /* Segment */
-  .prod-segment { padding: 2rem; background: #F8F9FA; border-radius: 14px; }
-  .prod-segment__title { font-size: 1.25rem; font-weight: 700; color: #0F172A; margin: 0 0 1rem; }
-  .prod-segment__text { font-size: 0.9375rem; color: #475569; line-height: 1.7; margin: 0 0 0.75rem; }
-  .prod-segment__text:last-child { margin: 0; }
+  
   
   /* Sidebar */
   .prod-sidebar { display: flex; flex-direction: column; gap: 1.5rem; }
