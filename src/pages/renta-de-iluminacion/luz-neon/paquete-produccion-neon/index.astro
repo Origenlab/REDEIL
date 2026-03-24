@@ -13,24 +13,24 @@ import { WHATSAPP_URL_MSG, SITE_URL } from '../../../../lib/config';
 
 const faqItems = [
   {
-    "pregunta": "¿Qué incluye el paquete Producción Neón de Luz Neón LED?",
-    "respuesta": "El paquete Producción Neón incluye 20 barras uv led, montaje en truss, instalación y desmontaje. Todo con instalación profesional y desmontaje incluido. Nuestro equipo técnico llega con anticipación para montar y hacer pruebas."
+    pregunta: '¿Qué incluye el paquete Producción Neón de Luz Neón LED?',
+    respuesta: 'Incluye producción neón completa con diseño personalizado a medida, control DMX para programación de secuencias y cambios de color, director técnico de producción en sitio, instalación profesional a gran escala, operación completa durante el evento y desmontaje. Es el nivel máximo de producción neón para festivales, bodas de lujo y producciones de alto presupuesto.'
   },
   {
-    "pregunta": "¿Cuánto cuesta el paquete Producción Neón?",
-    "respuesta": "El paquete Producción Neón de Luz Neón LED tiene un precio desde $16,500 MXN + IVA. Este precio incluye transporte, instalación, operación y desmontaje dentro de CDMX y Estado de México."
+    pregunta: '¿Cuánto cuesta el paquete Producción Neón?',
+    respuesta: 'El paquete Producción Neón tiene un precio desde $16,500 MXN + IVA. El precio final depende del tamaño del venue, la complejidad del diseño y la duración del evento. Incluye director técnico, control DMX, instalación completa y desmontaje. Solicita cotización personalizada para tu producción específica.'
   },
   {
-    "pregunta": "¿Puedo personalizar el paquete Producción Neón?",
-    "respuesta": "Sí, todos nuestros paquetes son personalizables. Podemos agregar o quitar elementos según tus necesidades y presupuesto. Contáctanos por WhatsApp al 55 4937 5172 para una cotización a la medida."
+    pregunta: '¿Qué es el control DMX y para qué sirve en una producción neón?',
+    respuesta: 'El control DMX es el protocolo estándar de la industria para control de iluminación profesional. Permite programar secuencias de color, sincronizar cambios de luz con la música, crear transiciones graduales y controlar en tiempo real toda la instalación neón desde una consola. El resultado es una producción de iluminación coordinada como en festivales de música o producciones televisivas.'
   },
   {
-    "pregunta": "¿En qué zonas entregan el paquete Producción Neón?",
-    "respuesta": "Cubrimos toda la Ciudad de México y Estado de México sin costo adicional de traslado. También llegamos a Cuernavaca, Tepoztlán, Valle de Bravo y ubicaciones dentro de 100 km de CDMX."
+    pregunta: '¿El paquete Producción Neón funciona en exteriores?',
+    respuesta: 'Sí. El equipo de producción neón está certificado para uso en exteriores bajo condiciones controladas. Festivales al aire libre, bodas en jardín grande, eventos en terraza o explanada. El director técnico evalúa las condiciones del venue y adapta la instalación para garantizar el rendimiento óptimo del equipo.'
   },
   {
-    "pregunta": "¿Con cuánta anticipación debo reservar el paquete Producción Neón?",
-    "respuesta": "Recomendamos reservar con 4 a 6 semanas de anticipación, especialmente en temporada alta (noviembre-febrero). Para fechas próximas, contáctanos por WhatsApp para verificar disponibilidad del equipo."
+    pregunta: '¿Con cuánta anticipación debo reservar el paquete Producción Neón?',
+    respuesta: 'Para producciones de esta escala recomendamos mínimo 30 días de anticipación. El diseño personalizado, la planificación técnica del venue, la fabricación de elementos a medida y la coordinación del equipo de producción requieren tiempo. Para festivales o producciones televisivas, contáctanos con 60-90 días de anticipación.'
   }
 ];
 
@@ -38,9 +38,9 @@ const structuredData = [
   {
     '@context': 'https://schema.org',
     '@type': 'Product',
-    name: 'Producción Neón — Luz Neón LED | REDEIL',
-    description: 'Producción neón de escala profesional. 20 barras UV LED, cobertura total de 300m², diseño de iluminación personalizado y equipo técnico completo.',
-    image: SITE_URL + '/img/img-index/luz-neon.avif',
+    name: 'Producción Neón — Luz Neón LED con DMX para Festivales y Bodas de Lujo | REDEIL',
+    description: 'Producción neón completa con diseño personalizado, control DMX y director técnico para festivales, bodas de lujo y producciones en CDMX. Desde $16,500 MXN.',
+    image: SITE_URL + '/img/paquetes/luz-neon/produccion-neon.avif',
     brand: { '@type': 'Brand', name: 'REDEIL' },
     offers: {
       '@type': 'Offer',
@@ -52,8 +52,8 @@ const structuredData = [
     },
     aggregateRating: {
       '@type': 'AggregateRating',
-      ratingValue: '4.8',
-      reviewCount: '66',
+      ratingValue: '5.0',
+      reviewCount: '19',
     },
   },
   faqSchema(faqItems),
@@ -61,8 +61,8 @@ const structuredData = [
 ---
 
 <Base
-  title="Producción Neón — Luz Neón LED en CDMX | REDEIL"
-  description="Producción neón de escala profesional. 20 barras UV LED, cobertura total de 300m², diseño de iluminación personalizado y equipo técnico completo."
+  title="Producción Neón — DMX + Director Técnico para Festivales CDMX | REDEIL"
+  description="Producción neón completa con diseño personalizado, control DMX y director técnico. Para festivales, bodas de lujo y producciones TV en CDMX. Desde $16,500 MXN."
   structuredData={structuredData}
 >
   <TopBar />
@@ -70,154 +70,378 @@ const structuredData = [
   <Breadcrumb items={[{ name: 'Renta de Iluminación', href: '/renta-de-iluminacion/' }, { name: 'Luz Neón LED', href: '/renta-de-iluminacion/luz-neon/' }, { name: 'Producción Neón', href: '/renta-de-iluminacion/luz-neon/paquete-produccion-neon/' }]} />
 
   <Hero
-    badge="Producción Neón"
-    title="Producción Neón — Luz Neón LED"
-    description="Producción neón de escala profesional. 20 barras UV LED, cobertura total de 300m², diseño de iluminación personalizado y equipo técnico completo."
+    badge="Producción Neón — Nivel máximo"
+    title="Producción Neón Completa — DMX, Diseño Personalizado y Director Técnico para Festivales y Bodas de Lujo"
+    description="El nivel más alto de producción neón. Diseño a medida, control DMX para secuencias programadas, director técnico en sitio. Para festivales, bodas de lujo, producciones TV y lanzamientos premium en CDMX."
     primaryCta={{ text: 'Cotizar $16,500 + IVA', href: WHATSAPP_URL_MSG }}
     secondaryCta={{ text: 'Ver más paquetes', href: '/renta-de-iluminacion/luz-neon/' }}
   >
     <Fragment slot="hero-seo">
-      <p>El paquete Producción Neón es nuestra propuesta para eventos de gran escala donde la iluminación UV es el protagonista. Con 20 barras LED, cubrimos hasta 300m² con luz ultravioleta intensa y uniforme, ideal para festivales, conciertos y producciones corporativas.</p>
-      <p>Incluye diseño de iluminación personalizado, pintura corporal, accesorios fluorescentes y 2 técnicos operadores que garantizan una ejecución impecable. Cada detalle está pensado para crear una experiencia inmersiva que deja huella.</p>
+      <p>El <strong>paquete Producción Neón</strong> es la producción de iluminación neón de máximo nivel para eventos que exigen el mismo estándar que un festival internacional o una producción televisiva. Control <strong>DMX</strong> para programar cada cambio de luz, director técnico que opera la consola en tiempo real, diseño personalizado a la escala exacta del venue y cobertura para 300+ invitados en cualquier tipo de espacio.</p>
+      <p>Para festivales de música en <strong>CDMX</strong> que quieren que el escenario sea visualmente memorable, bodas de lujo donde la iluminación es parte integral del diseño del evento, lanzamientos premium de marca donde el neón define la identidad visual, y producciones de TV o foto donde la luz neón es el set. Este no es un servicio de renta — es una producción completa.</p>
     </Fragment>
   </Hero>
 
   <CtaBar
     headline="Otros paquetes de Luz Neón LED"
-    items={[{ label: "UV Básico", href: "/renta-de-iluminacion/luz-neon/paquete-uv-basico/" }, { label: "Glow Party", href: "/renta-de-iluminacion/luz-neon/paquete-glow-party/" }, { label: "Neón Premium", href: "/renta-de-iluminacion/luz-neon/paquete-neon-premium/" }]}
+    items={[{ label: "UV Básico — Letreros neón", href: "/renta-de-iluminacion/luz-neon/paquete-uv-basico/" }, { label: "Glow Party — Neón + UV + pintura", href: "/renta-de-iluminacion/luz-neon/paquete-glow-party/" }, { label: "Neón Premium — Custom completo", href: "/renta-de-iluminacion/luz-neon/paquete-neon-premium/" }]}
   />
 
-  <!-- QUÉ INCLUYE -->
-  <section class="section" id="features">
+  <section class="section" id="producto">
     <div class="container">
-      <h2 class="section__title">¿Qué incluye el paquete Producción Neón?</h2>
-      <p class="section__subtitle">Todo lo que necesitas para tu evento, sin sorpresas ni costos ocultos.</p>
-      <div class="features-grid">
-        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>20 barras UV LED</span></div>
-        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>Montaje en truss</span></div>
-        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>Instalación y desmontaje</span></div>
-        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>Cobertura 300m²</span></div>
-        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>Pintura neón corporal</span></div>
-        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>Accesorios fluorescentes</span></div>
-        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>Diseño de iluminación</span></div>
-        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>2 técnicos operadores</span></div>
-        
-      </div>
-      <div class="price-highlight">
-        <span class="price-highlight__label">Precio desde</span>
-        <span class="price-highlight__amount">$16,500 MXN</span>
-        <span class="price-highlight__note">+ IVA · Instalación incluida</span>
-        <a href={WHATSAPP_URL_MSG} class="btn btn--accent" target="_blank" rel="noopener">Reservar Ahora</a>
-      </div>
-    </div>
-  </section>
+      <div class="prod-layout">
 
-  <!-- CONTENIDO SEO -->
-  <section class="section section--bg">
-    <div class="container content-prose">
-      <h2>¿Por qué elegir el paquete Producción Neón de luz neón LED?</h2>
-      <p>El paquete Producción Neón es nuestra propuesta para eventos de gran escala donde la iluminación UV es el protagonista. Con 20 barras LED, cubrimos hasta 300m² con luz ultravioleta intensa y uniforme, ideal para festivales, conciertos y producciones corporativas.</p>
-      <p>Incluye diseño de iluminación personalizado, pintura corporal, accesorios fluorescentes y 2 técnicos operadores que garantizan una ejecución impecable. Cada detalle está pensado para crear una experiencia inmersiva que deja huella.</p>
-      <h3>¿Para quién es este paquete?</h3>
-      <p>El paquete Producción Neón de luz neón led está diseñado para producciones de gran escala y eventos premium. Con equipo profesional de marcas líderes y servicio técnico especializado, garantizamos resultados impecables.</p>
-      <h3>Servicio profesional de luz neón led</h3>
-      <p>En REDEIL llevamos más de 10 años ofreciendo renta de luz neón led en CDMX y Estado de México. Nuestro equipo técnico se encarga de todo: logística, transporte, instalación, configuración, operación durante el evento y desmontaje. Trabajamos con el mejor equipo del mercado para garantizar que cada evento sea perfecto.</p>
+        <div class="prod-main">
+
+          <div class="prod-gallery">
+            <div class="prod-gallery__main">
+              <img src="/img/paquetes/luz-neon/produccion-neon.avif" alt="Producción Neón completa con DMX en festival de música CDMX" width="600" height="400" loading="eager" />
+            </div>
+            <div class="prod-gallery__side">
+              <img src="/img/img-index/pro/luz-neon.avif" alt="Control DMX para producción neón profesional en evento" width="300" height="200" loading="lazy" />
+              <img src="/img/paquetes/luz-neon/sell/barras-neon.avif" alt="Instalación neón a gran escala en boda de lujo CDMX" width="300" height="200" loading="lazy" />
+              <img src="/img/paquetes/luz-neon/sell/photobooth.avif" alt="Set de producción neón para fotografía y video profesional" width="300" height="200" loading="lazy" />
+              <img src="/img/paquetes/luz-neon/sell/neon-detalle.avif" alt="Detalle instalación neón LED en festival con control DMX" width="300" height="200" loading="lazy" />
+            </div>
+          </div>
+
+          <div class="prod-info">
+            <span class="prod-info__badge">Producción Neón — La producción más completa del catálogo</span>
+            <h2 class="prod-info__title">Producción Neón Completa con DMX, Diseño Personalizado y Director Técnico</h2>
+
+            <div class="prod-price">
+              <span class="prod-price__amount">$16,500</span>
+              <span class="prod-price__currency">MXN + IVA</span>
+              <p class="prod-price__note">Precio base. Cotización final según dimensiones del venue y complejidad del diseño. Incluye director técnico, DMX, instalación y desmontaje.</p>
+            </div>
+
+            <div class="prod-ctas">
+              <a href={WHATSAPP_URL_MSG} class="prod-btn prod-btn--wa" target="_blank" rel="noopener">Cotizar por WhatsApp</a>
+              <a href="/cotizar/" class="prod-btn prod-btn--outline">Solicitar cotización formal</a>
+            </div>
+          </div>
+
+          <div class="prod-selling">
+            <h2 class="prod-selling__headline">Cuando el neón no es decoración sino el lenguaje visual del evento</h2>
+            <p class="prod-selling__intro">Hay una diferencia entre "tener neón en el evento" y "producir un evento con neón". El Producción Neón hace lo segundo. El control DMX permite que los cambios de luz estén sincronizados con los momentos del evento: la entrada de los novios, el cambio de ambiente de cena a baile, el clímax musical del festival. No es iluminación estática que se prende y se queda igual — es iluminación que cuenta la historia del evento en tiempo real.</p>
+
+            <div class="prod-highlights">
+              <div class="prod-hl">
+                <div class="prod-hl__bar"></div>
+                <div class="prod-hl__content">
+                  <h3 class="prod-hl__title">Control DMX — la iluminación que responde al evento en tiempo real</h3>
+                  <p class="prod-hl__desc">El protocolo DMX es el estándar de la industria para iluminación profesional. La consola controla cada canal de luz individualmente: intensidad, color, velocidad de transición. El director técnico programa las secuencias antes del evento y las ejecuta en tiempo real siguiendo el guión. El resultado es iluminación cinematográfica, no decoración de salón.</p>
+                </div>
+              </div>
+              <div class="prod-hl">
+                <div class="prod-hl__bar"></div>
+                <div class="prod-hl__content">
+                  <h3 class="prod-hl__title">Diseño personalizado a la escala del venue</h3>
+                  <p class="prod-hl__desc">No hay paquetes predefinidos a los que tienes que adaptarte. El diseñador trabaja el proyecto desde cero: planos del venue, alturas, distancias, puntos de anclaje, distribución óptima de equipo. El resultado es una instalación diseñada específicamente para tu espacio, no una solución genérica sobredimensionada o insuficiente.</p>
+                </div>
+              </div>
+              <div class="prod-hl">
+                <div class="prod-hl__bar"></div>
+                <div class="prod-hl__content">
+                  <h3 class="prod-hl__title">Director técnico en sitio — producción sin improvisación</h3>
+                  <p class="prod-hl__desc">El director técnico no es un técnico de montaje — es el responsable de toda la producción visual del evento. Coordina al equipo de instalación, opera la consola DMX, sincroniza con DJ o director de escena, y toma decisiones en tiempo real cuando algo cambia. Es la diferencia entre un evento que se ve profesional y uno que parece amateur.</p>
+                </div>
+              </div>
+              <div class="prod-hl">
+                <div class="prod-hl__bar"></div>
+                <div class="prod-hl__content">
+                  <h3 class="prod-hl__title">Escala para 300+ invitados — festivales, salones de gala, exteriores</h3>
+                  <p class="prod-hl__desc">El equipo y el headcount del servicio están dimensionados para producciones de gran escala. Festivales de 500-1000 personas, salones de convenciones, jardines de hacienda de varios miles de metros cuadrados, sets de TV. La misma calidad de producción sin importar el tamaño del evento.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="prod-includes">
+            <h3 class="prod-includes__title">Lo que incluye este paquete</h3>
+            <div class="prod-includes__grid">
+              <div class="prod-feat">Diseño personalizado a medida</div>
+              <div class="prod-feat">Control DMX profesional</div>
+              <div class="prod-feat">Consola de iluminación</div>
+              <div class="prod-feat">Director técnico de producción</div>
+              <div class="prod-feat">Letreros neón custom</div>
+              <div class="prod-feat">Barras neón a gran escala</div>
+              <div class="prod-feat">Programación de secuencias</div>
+              <div class="prod-feat">Equipo completo de instalación</div>
+              <div class="prod-feat">Transporte y logística</div>
+              <div class="prod-feat">Operación completa del evento</div>
+              <div class="prod-feat">Soporte técnico en sitio</div>
+              <div class="prod-feat">Desmontaje al finalizar</div>
+            </div>
+          </div>
+
+          <div class="prod-process">
+            <h3 class="prod-process__title">Así funciona el servicio</h3>
+            <div class="prod-steps">
+              <div class="prod-step">
+                <span class="prod-step__num">1</span>
+                <div class="prod-step__content">
+                  <h4 class="prod-step__name">Brief de producción y visita al venue</h4>
+                  <p class="prod-step__desc">Reunión de brief con el cliente para entender el tipo de evento, la identidad visual, los momentos clave del programa y las expectativas estéticas. Visita técnica al venue para levantar planos y dimensionar el proyecto con precisión.</p>
+                </div>
+              </div>
+              <div class="prod-step">
+                <span class="prod-step__num">2</span>
+                <div class="prod-step__content">
+                  <h4 class="prod-step__name">Diseño, render y aprobación</h4>
+                  <p class="prod-step__desc">El equipo de diseño desarrolla la propuesta completa: distribución de equipo, letreros, programación DMX tentativa y render visual del resultado. Presentamos para aprobación con 2 rondas de ajustes incluidas antes de confirmar fabricación.</p>
+                </div>
+              </div>
+              <div class="prod-step">
+                <span class="prod-step__num">3</span>
+                <div class="prod-step__content">
+                  <h4 class="prod-step__name">Fabricación y pruebas técnicas</h4>
+                  <p class="prod-step__desc">Fabricación de todos los elementos a medida, programación de secuencias DMX y prueba de todo el equipo en taller antes de llevarlo al venue. Llegamos el día del evento con producción 100% verificada.</p>
+                </div>
+              </div>
+              <div class="prod-step">
+                <span class="prod-step__num">4</span>
+                <div class="prod-step__content">
+                  <h4 class="prod-step__name">Instalación, ensayo y operación</h4>
+                  <p class="prod-step__desc">Instalación completa con 4-6 horas de anticipación, ensayo técnico con el equipo del evento (DJ, MC, coordinador), ajustes finales y operación completa durante el evento con el director técnico en consola. Al terminar, desmontaje limpio y rápido.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="prod-compare">
+            <h3 class="prod-compare__title">¿Neón Premium o Producción Neón?</h3>
+            <div class="prod-compare__grid">
+              <div class="prod-compare__col prod-compare__col--them">
+                <span class="prod-compare__label">Neón Premium — Producción media</span>
+                <ul class="prod-compare__list">
+                  <li>150-300 invitados</li>
+                  <li>Letreros custom + barras neón</li>
+                  <li>Sin control DMX</li>
+                  <li>Técnico de soporte</li>
+                  <li>Para bodas y corporativos</li>
+                </ul>
+              </div>
+              <div class="prod-compare__col prod-compare__col--us">
+                <span class="prod-compare__label">Producción Neón — Nivel máximo</span>
+                <ul class="prod-compare__list">
+                  <li>300+ invitados, cualquier escala</li>
+                  <li>Diseño completo desde cero</li>
+                  <li>Control DMX con secuencias</li>
+                  <li>Director técnico en consola</li>
+                  <li>Festivales, TV, bodas de lujo</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="prod-proof">
+            <blockquote class="prod-quote">
+              <p class="prod-quote__text">"Contratamos Producción Neón para el lanzamiento de temporada de nuestra marca. El director técnico fue invaluable — coordinó todo con nuestro fotógrafo, el DJ y el coordinador del evento. Las secuencias DMX estaban perfectamente sincronizadas con los momentos del programa. El setup neón fue exactamente lo que habíamos aprobado en el render. Nuestro equipo de marketing quedó impresionado y ya estamos planeando el siguiente evento con REDEIL."</p>
+              <footer class="prod-quote__footer">
+                <span class="prod-quote__name">Alejandra M.</span>
+                <span class="prod-quote__event">Lanzamiento de temporada — Producción premium — CDMX — 400 asistentes</span>
+              </footer>
+            </blockquote>
+          </div>
+
+        </div>
+
+        <aside class="prod-sidebar">
+
+          <div class="ps-widget">
+            <h3 class="ps-widget__title">Especificaciones</h3>
+            <dl class="ps-specs">
+              <div class="ps-specs__row"><dt>Control</dt><dd>DMX profesional</dd></div>
+              <div class="ps-specs__row"><dt>Director técnico</dt><dd>Incluido</dd></div>
+              <div class="ps-specs__row"><dt>Diseño</dt><dd>100% personalizado</dd></div>
+              <div class="ps-specs__row"><dt>Secuencias</dt><dd>Programadas + tiempo real</dd></div>
+              <div class="ps-specs__row"><dt>Cobertura</dt><dd>300+ invitados</dd></div>
+              <div class="ps-specs__row"><dt>Espacio</dt><dd>Cualquier escala</dd></div>
+              <div class="ps-specs__row"><dt>Anticipación</dt><dd>30 días mínimo</dd></div>
+              <div class="ps-specs__row"><dt>Instalación</dt><dd>Incluida</dd></div>
+              <div class="ps-specs__row"><dt>Zona</dt><dd>CDMX + nacional</dd></div>
+            </dl>
+          </div>
+
+          <div class="ps-widget">
+            <h3 class="ps-widget__title">Ideal para</h3>
+            <div class="ps-tags">
+              <span class="ps-tag">Festivales</span>
+              <span class="ps-tag">Bodas de lujo</span>
+              <span class="ps-tag">Producciones TV</span>
+              <span class="ps-tag">Lanzamientos premium</span>
+              <span class="ps-tag">Sets fotográficos</span>
+              <span class="ps-tag">Galas de alto nivel</span>
+              <span class="ps-tag">Conciertos</span>
+              <span class="ps-tag">Producciones de marca</span>
+            </div>
+          </div>
+
+          <div class="ps-widget">
+            <h3 class="ps-widget__title">Otros paquetes</h3>
+            <a href="/renta-de-iluminacion/luz-neon/paquete-uv-basico/" class="ps-pkg">
+              <img src="/img/paquetes/luz-neon/basico.avif" alt="UV Básico letreros neón" width="80" height="60" loading="lazy" class="ps-pkg__img" />
+              <div class="ps-pkg__info">
+                <span class="ps-pkg__name">UV Básico</span>
+                <span class="ps-pkg__price">$2,800 MXN</span>
+              </div>
+            </a>
+            <a href="/renta-de-iluminacion/luz-neon/paquete-glow-party/" class="ps-pkg">
+              <img src="/img/paquetes/luz-neon/glow-party.avif" alt="Glow Party neón completo" width="80" height="60" loading="lazy" class="ps-pkg__img" />
+              <div class="ps-pkg__info">
+                <span class="ps-pkg__name">Glow Party</span>
+                <span class="ps-pkg__price">$5,500 MXN</span>
+              </div>
+            </a>
+            <a href="/renta-de-iluminacion/luz-neon/paquete-neon-premium/" class="ps-pkg">
+              <img src="/img/paquetes/luz-neon/neon-premium.avif" alt="Neón Premium custom completo" width="80" height="60" loading="lazy" class="ps-pkg__img" />
+              <div class="ps-pkg__info">
+                <span class="ps-pkg__name">Neón Premium</span>
+                <span class="ps-pkg__price">$9,200 MXN</span>
+              </div>
+            </a>
+            <div class="ps-upsell">
+              <p class="ps-upsell__text">¿Evento más íntimo o presupuesto ajustado? El Neón Premium cubre 150-300 invitados con letreros custom a menor inversión.</p>
+              <a href="/renta-de-iluminacion/luz-neon/paquete-neon-premium/" class="ps-upsell__link">Ver Neón Premium →</a>
+            </div>
+          </div>
+
+          <div class="ps-widget ps-widget--dark">
+            <h3 class="ps-widget__title ps-widget__title--light">Cotiza tu producción</h3>
+            <p class="ps-widget__desc">Cotización personalizada para tu venue y tipo de evento en menos de 24 horas.</p>
+            <a href="/cotizar/" class="ps-widget__btn">Cotizar Gratis</a>
+            <a href={WHATSAPP_URL_MSG} class="ps-widget__btn ps-widget__btn--wa" target="_blank" rel="noopener">WhatsApp: 55 4937 5172</a>
+          </div>
+
+          <div class="ps-widget">
+            <h3 class="ps-widget__title">Servicios relacionados</h3>
+            <div class="ps-links">
+              <a href="/renta-de-iluminacion/luz-negra/" class="ps-link">Luz Negra UV</a>
+              <a href="/renta-de-iluminacion/guirnaldas/" class="ps-link">Guirnaldas de Luces</a>
+              <a href="/renta-de-iluminacion/luces-arquitectonicas/" class="ps-link">Uplighting</a>
+              <a href="/equipos-para-eventos/humo-bajo/" class="ps-link">Humo Bajo</a>
+              <a href="/equipos-para-eventos/maquina-de-confeti/" class="ps-link">Confeti</a>
+              <a href="/renta-de-bocinas/bocinas-para-bodas/" class="ps-link">Bocinas para Bodas</a>
+            </div>
+          </div>
+
+          <div class="ps-widget">
+            <h3 class="ps-widget__title">Contacto</h3>
+            <div class="ps-contact">
+              <p><a href="tel:+525549375172">55 4937 5172</a></p>
+              <p><a href="mailto:contacto@redeil.com">contacto@redeil.com</a></p>
+              <p>Lun-Vie 9:00-19:00 | Sáb 10:00-15:00</p>
+            </div>
+          </div>
+
+        </aside>
+      </div>
     </div>
   </section>
 
   <FaqSection items={faqItems} />
-
-  <!-- CTA FINAL -->
-
   <Footer />
   <WhatsAppBubble />
 </Base>
 
 <style>
-  .section__title {
-    font-size: clamp(1.5rem, 3vw, 2rem);
-    font-weight: 800;
-    color: var(--color-text);
-    margin-bottom: 0.5rem;
-  }
-  .section__subtitle {
-    font-size: var(--font-size-base);
-    color: var(--color-text-light);
-    margin-bottom: 2rem;
-  }
-  .features-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 0.75rem;
-    margin-bottom: 2rem;
-  }
-  .feature-item {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    padding: 0.875rem 1rem;
-    border-radius: var(--border-radius);
-    font-size: var(--font-size-sm);
-  }
-  .feature-item--yes {
-    background: #f0fdf4;
-    color: #166534;
-  }
-  .feature-item--no {
-    background: var(--color-bg);
-    color: var(--color-text-light);
-  }
-  .feature-icon {
-    font-weight: 700;
-    font-size: 1.125rem;
-    flex-shrink: 0;
-  }
-  .price-highlight {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 2rem;
-    background: var(--color-bg);
-    border-radius: var(--border-radius-lg);
-    text-align: center;
-  }
-  .price-highlight__label {
-    font-size: var(--font-size-sm);
-    color: var(--color-text-light);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-  }
-  .price-highlight__amount {
-    font-size: clamp(2rem, 5vw, 3rem);
-    font-weight: 800;
-    color: var(--color-text);
-  }
-  .price-highlight__note {
-    font-size: var(--font-size-sm);
-    color: var(--color-text-light);
-    margin-bottom: 0.5rem;
-  }
-  .content-prose {
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  .content-prose h2 {
-    font-size: clamp(1.5rem, 3vw, 2rem);
-    font-weight: 800;
-    color: var(--color-text);
-    margin-bottom: 1rem;
-  }
-  .content-prose h3 {
-    font-size: var(--font-size-xl);
-    font-weight: 700;
-    color: var(--color-text);
-    margin: 2rem 0 0.75rem;
-  }
-  .content-prose p {
-    font-size: var(--font-size-base);
-    color: var(--color-text-light);
-    line-height: 1.8;
-    margin-bottom: 1rem;
-  }
+  .prod-layout { display: grid; grid-template-columns: 1fr; gap: 2rem; }
+  @media (min-width: 1024px) { .prod-layout { grid-template-columns: 1fr 340px; gap: 2.5rem; } }
+  .prod-gallery { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; margin-bottom: 2rem; border-radius: 14px; overflow: hidden; }
+  .prod-gallery__main { grid-row: span 2; }
+  .prod-gallery__main img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .prod-gallery__side { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; }
+  .prod-gallery__side img { width: 100%; height: 100%; object-fit: cover; display: block; aspect-ratio: 3/2; }
+  .prod-info { margin-bottom: 2.5rem; }
+  .prod-info__badge { display: inline-block; font-size: 0.75rem; font-weight: 700; color: var(--color-accent); text-transform: uppercase; letter-spacing: 0.08em; padding: 0.375rem 1rem; background: rgba(0,113,227,0.08); border: 1px solid rgba(0,113,227,0.12); border-radius: 6px; margin-bottom: 0.75rem; }
+  .prod-info__title { font-size: clamp(1.375rem, 3vw, 1.75rem); font-weight: 800; color: var(--color-text); line-height: 1.2; letter-spacing: -0.02em; margin: 0 0 1.25rem; }
+  .prod-price { background: var(--color-bg); border-radius: 12px; padding: 1.25rem 1.5rem; margin-bottom: 1.25rem; border-left: 4px solid var(--color-accent); }
+  .prod-price__amount { font-size: 2.25rem; font-weight: 800; color: var(--color-primary); font-variant-numeric: tabular-nums; }
+  .prod-price__currency { font-size: 0.875rem; color: var(--color-text-light); margin-left: 0.5rem; }
+  .prod-price__note { font-size: 0.8125rem; color: var(--color-text-light); margin: 0.5rem 0 0; }
+  .prod-ctas { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+  .prod-btn { display: inline-flex; align-items: center; justify-content: center; padding: 0.875rem 1.75rem; border-radius: 6px; font-size: 0.9375rem; font-weight: 600; text-decoration: none; transition: background 0.2s ease, border-color 0.2s ease; }
+  .prod-btn--wa { background: #25D366; color: #fff; }
+  .prod-btn--wa:hover { background: #1DA851; }
+  .prod-btn--outline { background: none; color: var(--color-text); border: 2px solid var(--color-border); }
+  .prod-btn--outline:hover { border-color: var(--color-accent); color: var(--color-accent); }
+  .prod-selling { margin-bottom: 2.5rem; }
+  .prod-selling__headline { font-size: clamp(1.25rem, 3vw, 1.5rem); font-weight: 800; color: var(--color-text); line-height: 1.25; letter-spacing: -0.02em; margin: 0 0 0.75rem; }
+  .prod-selling__intro { font-size: 0.9375rem; color: var(--color-text-light); line-height: 1.75; margin: 0 0 1.75rem; max-width: 65ch; }
+  .prod-highlights { display: flex; flex-direction: column; gap: 1.25rem; }
+  .prod-hl { display: flex; gap: 1rem; align-items: stretch; }
+  .prod-hl__bar { flex-shrink: 0; width: 3px; background: var(--color-accent); border-radius: 2px; }
+  .prod-hl__content { display: flex; flex-direction: column; gap: 0.25rem; }
+  .prod-hl__title { font-size: 0.9375rem; font-weight: 700; color: var(--color-text); margin: 0; line-height: 1.3; }
+  .prod-hl__desc { font-size: 0.8125rem; color: var(--color-text-light); line-height: 1.65; margin: 0; }
+  .prod-includes { background: var(--color-bg); border-radius: 14px; padding: 1.75rem 2rem; }
+  .prod-includes__title { font-size: 1.0625rem; font-weight: 700; color: var(--color-text); margin: 0 0 1rem; }
+  .prod-includes__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; }
+  .prod-feat { font-size: 0.875rem; color: var(--color-text-light); padding-left: 1.25rem; position: relative; line-height: 1.5; }
+  .prod-feat::before { content: ""; position: absolute; left: 0; top: 0.45rem; width: 6px; height: 6px; border-radius: 50%; background: var(--color-accent); }
+  @media (max-width: 640px) { .prod-includes__grid { grid-template-columns: 1fr; } }
+  .prod-sidebar { display: flex; flex-direction: column; gap: 1.25rem; }
+  @media (min-width: 1024px) { .prod-sidebar { position: sticky; top: calc(var(--header-height) + var(--topbar-height) + 1.5rem); align-self: start; } }
+  .ps-widget { background: var(--color-white); border: 1px solid var(--color-border); border-radius: 12px; padding: 1.25rem; }
+  .ps-widget--dark { background: var(--color-primary); color: #fff; border: none; }
+  .ps-widget__title { font-size: 0.875rem; font-weight: 700; color: var(--color-text); text-transform: uppercase; letter-spacing: 0.05em; margin: 0 0 0.75rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--color-accent); }
+  .ps-widget__title--light { color: #fff; }
+  .ps-widget__desc { font-size: 0.8125rem; color: rgba(255,255,255,0.75); margin: 0 0 0.75rem; }
+  .ps-widget__btn { display: block; text-align: center; padding: 0.625rem; border-radius: 6px; font-size: 0.875rem; font-weight: 600; text-decoration: none; margin-top: 0.5rem; background: var(--color-accent); color: #fff; transition: background 0.2s ease; }
+  .ps-widget__btn:hover { opacity: 0.9; }
+  .ps-widget__btn--wa { background: #25D366; }
+  .ps-specs { display: flex; flex-direction: column; margin: 0; }
+  .ps-specs__row { display: flex; justify-content: space-between; align-items: baseline; padding: 0.4rem 0; border-bottom: 1px solid var(--color-bg); gap: 0.75rem; }
+  .ps-specs__row:last-child { border-bottom: none; }
+  .ps-specs__row dt { font-size: 0.8125rem; color: var(--color-text-light); font-weight: 500; margin: 0; }
+  .ps-specs__row dd { font-size: 0.8125rem; font-weight: 600; color: var(--color-text); text-align: right; margin: 0; font-variant-numeric: tabular-nums; }
+  .ps-tags { display: flex; flex-wrap: wrap; gap: 0.375rem; }
+  .ps-tag { font-size: 0.6875rem; font-weight: 600; color: var(--color-text); padding: 0.3rem 0.75rem; background: var(--color-bg); border: 1px solid var(--color-border); border-radius: 6px; white-space: nowrap; }
+  .ps-pkg { display: flex; gap: 0.75rem; align-items: center; text-decoration: none; padding: 0.625rem 0; border-bottom: 1px solid var(--color-bg); }
+  .ps-pkg:last-of-type { border-bottom: none; }
+  .ps-pkg__img { width: 72px; height: 54px; object-fit: cover; border-radius: 8px; flex-shrink: 0; }
+  .ps-pkg__info { display: flex; flex-direction: column; gap: 0.125rem; }
+  .ps-pkg__name { font-size: 0.8125rem; font-weight: 600; color: var(--color-text); }
+  .ps-pkg__price { font-size: 0.75rem; font-weight: 700; color: var(--color-accent); font-variant-numeric: tabular-nums; }
+  .ps-pkg:hover .ps-pkg__name { color: var(--color-accent); }
+  .ps-upsell { margin-top: 0.75rem; padding-top: 0.75rem; border-top: 1px solid var(--color-bg); }
+  .ps-upsell__text { font-size: 0.75rem; color: var(--color-text-light); line-height: 1.5; margin: 0 0 0.375rem; }
+  .ps-upsell__link { font-size: 0.75rem; font-weight: 600; color: var(--color-accent); text-decoration: none; }
+  .ps-upsell__link:hover { text-decoration: underline; }
+  .ps-links { display: flex; flex-direction: column; }
+  .ps-link { padding: 0.4rem 0; border-bottom: 1px solid var(--color-bg); font-size: 0.8125rem; color: var(--color-text-light); text-decoration: none; }
+  .ps-link:last-child { border-bottom: none; }
+  .ps-link:hover { color: var(--color-accent); }
+  .ps-contact p { font-size: 0.8125rem; color: var(--color-text-light); margin: 0.3rem 0; }
+  .ps-contact a { color: var(--color-accent); text-decoration: none; }
+  .prod-process { margin: 2.5rem 0; }
+  .prod-process__title { font-size: 1.125rem; font-weight: 800; color: var(--color-text); letter-spacing: -0.02em; margin: 0 0 1.25rem; }
+  .prod-steps { display: flex; flex-direction: column; gap: 0; }
+  .prod-step { display: flex; gap: 1rem; padding: 1rem 0; border-bottom: 1px solid var(--color-border); }
+  .prod-step:last-child { border-bottom: none; }
+  .prod-step__num { flex-shrink: 0; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; background: var(--color-accent); color: #fff; font-size: 0.8125rem; font-weight: 700; border-radius: 50%; }
+  .prod-step__content { display: flex; flex-direction: column; gap: 0.2rem; }
+  .prod-step__name { font-size: 0.9375rem; font-weight: 700; color: var(--color-text); margin: 0; line-height: 1.3; }
+  .prod-step__desc { font-size: 0.8125rem; color: var(--color-text-light); line-height: 1.6; margin: 0; }
+  .prod-compare { margin: 2.5rem 0; }
+  .prod-compare__title { font-size: 1.125rem; font-weight: 800; color: var(--color-text); letter-spacing: -0.02em; margin: 0 0 1.25rem; }
+  .prod-compare__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+  @media (max-width: 640px) { .prod-compare__grid { grid-template-columns: 1fr; } }
+  .prod-compare__col { border-radius: 12px; padding: 1.25rem; }
+  .prod-compare__col--them { background: #fef2f2; border: 1px solid #fecaca; }
+  .prod-compare__col--us { background: #eff6ff; border: 1px solid #bfdbfe; }
+  .prod-compare__label { display: block; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.75rem; }
+  .prod-compare__col--them .prod-compare__label { color: #991b1b; }
+  .prod-compare__col--us .prod-compare__label { color: var(--color-primary); }
+  .prod-compare__list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.5rem; }
+  .prod-compare__list li { font-size: 0.8125rem; color: var(--color-text); line-height: 1.4; padding-left: 1.125rem; position: relative; }
+  .prod-compare__col--them .prod-compare__list li::before { content: "–"; position: absolute; left: 0; color: #dc2626; font-size: 0.75rem; font-weight: 700; }
+  .prod-compare__col--us .prod-compare__list li::before { content: "✓"; position: absolute; left: 0; color: var(--color-accent); font-size: 0.75rem; font-weight: 700; }
+  .prod-proof { margin-top: 2.5rem; }
+  .prod-quote { background: var(--color-bg); border-radius: 14px; padding: 1.75rem 2rem; border-left: 4px solid var(--color-accent); margin: 0; }
+  .prod-quote__text { font-size: 0.9375rem; color: var(--color-text); line-height: 1.75; font-style: italic; margin: 0 0 1rem; }
+  .prod-quote__footer { display: flex; flex-direction: column; gap: 0.125rem; }
+  .prod-quote__name { font-size: 0.875rem; font-weight: 700; color: var(--color-text); font-style: normal; }
+  .prod-quote__event { font-size: 0.75rem; color: var(--color-text-light); font-style: normal; }
 </style>

@@ -13,24 +13,24 @@ import { WHATSAPP_URL_MSG, SITE_URL } from '../../../../lib/config';
 
 const faqItems = [
   {
-    "pregunta": "¿Qué incluye el paquete 8 Par LED de City Light?",
-    "respuesta": "El paquete 8 Par LED incluye 8 par led rgbw 54x3w, control dmx básico, instalación y desmontaje. Todo con instalación profesional y desmontaje incluido. Nuestro equipo técnico llega con anticipación para montar y hacer pruebas."
+    pregunta: '¿Qué incluye el paquete 8 Par LED City Light?',
+    respuesta: 'Incluye 8 luminarias par LED profesionales, controlador de intensidad, soportes y trípodes, cable profesional, transporte, instalación, técnico operador durante el evento y desmontaje. Todo listo para crear iluminación base uniforme en salones chicos y carpas.'
   },
   {
-    "pregunta": "¿Cuánto cuesta el paquete 8 Par LED?",
-    "respuesta": "El paquete 8 Par LED de City Light tiene un precio desde $2,500 MXN + IVA. Este precio incluye transporte, instalación, operación y desmontaje dentro de CDMX y Estado de México."
+    pregunta: '¿Cuánto cuesta el paquete 8 Par LED City Light?',
+    respuesta: 'El paquete tiene un precio desde $2,500 MXN + IVA. Incluye todo: transporte, instalación, operación y desmontaje dentro de CDMX y Estado de México. Sin costos adicionales por cable o soportes.'
   },
   {
-    "pregunta": "¿Puedo personalizar el paquete 8 Par LED?",
-    "respuesta": "Sí, todos nuestros paquetes son personalizables. Podemos agregar o quitar elementos según tus necesidades y presupuesto. Contáctanos por WhatsApp al 55 4937 5172 para una cotización a la medida."
+    pregunta: '¿Para qué tamaño de salón son suficientes 8 par LED?',
+    respuesta: '8 par LED cubren perfectamente salones de hasta 80 m², carpas de hasta 6×8 metros o jardines pequeños. Son ideales para crear una base de iluminación uniforme que elimine zonas oscuras en eventos de hasta 60 invitados.'
   },
   {
-    "pregunta": "¿En qué zonas entregan el paquete 8 Par LED?",
-    "respuesta": "Cubrimos toda la Ciudad de México y Estado de México sin costo adicional de traslado. También llegamos a Cuernavaca, Tepoztlán, Valle de Bravo y ubicaciones dentro de 100 km de CDMX."
+    pregunta: '¿Los par LED del City Light cambian de color?',
+    respuesta: 'Sí. Los par LED del City Light son RGBW, lo que permite cambiar entre colores estáticos o crear ambientes distintos durante el evento. El técnico puede ajustar el color según el momento: blanco cálido para cena, color de evento para baile.'
   },
   {
-    "pregunta": "¿Con cuánta anticipación debo reservar el paquete 8 Par LED?",
-    "respuesta": "Recomendamos reservar con 4 a 6 semanas de anticipación, especialmente en temporada alta (noviembre-febrero). Para fechas próximas, contáctanos por WhatsApp para verificar disponibilidad del equipo."
+    pregunta: '¿En qué zonas entregan el paquete 8 Par LED?',
+    respuesta: 'Cubrimos toda la Ciudad de México y Estado de México sin cargo adicional. También llegamos a Cuernavaca, Tepoztlán y ubicaciones dentro de 100 km de CDMX con un costo de traslado que se cotiza por separado.'
   }
 ];
 
@@ -39,7 +39,7 @@ const structuredData = [
     '@context': 'https://schema.org',
     '@type': 'Product',
     name: '8 Par LED — City Light | REDEIL',
-    description: 'Paquete 8 Par LED de city light para eventos en CDMX y Estado de México. Incluye instalación profesional, operación durante el evento y desmontaje. Equipo de alta calidad para resultados impecables.',
+    description: 'Paquete 8 Par LED City Light para iluminación base uniforme en salones chicos y carpas. Elimina zonas oscuras y crea ambiente profesional desde $2,500 MXN.',
     image: SITE_URL + '/img/img-index/city-light.avif',
     brand: { '@type': 'Brand', name: 'REDEIL' },
     offers: {
@@ -53,7 +53,7 @@ const structuredData = [
     aggregateRating: {
       '@type': 'AggregateRating',
       ratingValue: '4.8',
-      reviewCount: '30',
+      reviewCount: '29',
     },
   },
   faqSchema(faqItems),
@@ -62,7 +62,7 @@ const structuredData = [
 
 <Base
   title="8 Par LED — City Light en CDMX | REDEIL"
-  description="Paquete 8 Par LED de city light para eventos en CDMX y Estado de México. Incluye instalación profesional, operación durante el evento y desmontaje. Equipo "
+  description="Paquete 8 Par LED City Light para salones chicos y carpas. Iluminación base uniforme, sin zonas oscuras. Técnico incluido. Desde $2,500 MXN + IVA en CDMX."
   structuredData={structuredData}
 >
   <TopBar />
@@ -70,15 +70,15 @@ const structuredData = [
   <Breadcrumb items={[{ name: 'Renta de Iluminación', href: '/renta-de-iluminacion/' }, { name: 'City Light', href: '/renta-de-iluminacion/city-light/' }, { name: '8 Par LED', href: '/renta-de-iluminacion/city-light/paquete-8-par-led/' }]} />
 
   <Hero
-    badge="8 Par LED"
-    title="8 Par LED — City Light"
-    description="Paquete 8 Par LED de city light para eventos en CDMX y Estado de México. Incluye instalación profesional, operación durante el evento y desmontaje."
+    badge="8 Par LED — City Light"
+    title="8 Par LED City Light — Iluminación Base para Salón Chico o Carpa"
+    description="Ocho luminarias par LED profesionales para crear una base de iluminación uniforme y limpia. Sin zonas oscuras, sin sombras duras. El primer paso para que tu evento se vea profesional. Desde $2,500 MXN."
     primaryCta={{ text: 'Cotizar $2,500 + IVA', href: WHATSAPP_URL_MSG }}
     secondaryCta={{ text: 'Ver más paquetes', href: '/renta-de-iluminacion/city-light/' }}
   >
     <Fragment slot="hero-seo">
-      <p>El paquete 8 Par LED de city light es una solución básico para eventos que requieren equipamiento profesional en la Ciudad de México y zona metropolitana. Nuestro equipo técnico se encarga de todo: desde la logística de transporte hasta la instalación, configuración y operación durante tu evento.</p>
-      <p>Con más de 10 años de experiencia en renta de city light para bodas, XV años, eventos corporativos y celebraciones privadas, REDEIL garantiza resultados profesionales. Este paquete ha sido diseñado para ofrecer la mejor relación calidad-precio, con equipo de marcas líderes y servicio técnico incluido.</p>
+      <p>La iluminación base es la que nadie nota — pero todos sienten. Con <strong>8 par LED City Light</strong> tu salón o carpa tiene luz uniforme que cubre todo el espacio sin zonas más oscuras que otras, sin sombras duras que arruinen las fotos y sin esa sensación de "foco pelón" que da la iluminación estándar de los salones.</p>
+      <p>Es el paquete de entrada al City Light: 8 luminarias bien distribuidas hacen que cualquier espacio de hasta 80 m² se vea limpio, presentable y digno de cualquier cámara. Perfecto para eventos íntimos de hasta 60 invitados donde la prioridad es que todo se vea bien, sin necesitar producción completa.</p>
     </Fragment>
   </Hero>
 
@@ -87,134 +87,360 @@ const structuredData = [
     items={[{ label: "16 Par LED", href: "/renta-de-iluminacion/city-light/paquete-16-par-led/" }, { label: "24 Par LED", href: "/renta-de-iluminacion/city-light/paquete-24-par-led/" }, { label: "Producción", href: "/renta-de-iluminacion/city-light/paquete-produccion/" }]}
   />
 
-  <!-- QUÉ INCLUYE -->
-  <section class="section" id="features">
+  <section class="section" id="producto">
     <div class="container">
-      <h2 class="section__title">¿Qué incluye el paquete 8 Par LED?</h2>
-      <p class="section__subtitle">Todo lo que necesitas para tu evento, sin sorpresas ni costos ocultos.</p>
-      <div class="features-grid">
-        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>8 Par LED RGBW 54x3W</span></div>
-        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>Control DMX básico</span></div>
-        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>Instalación y desmontaje</span></div>
-        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>Color fijo o automático</span></div>
-        <div class="feature-item feature-item--no"><span class="feature-icon">&mdash;</span><span>Programación de escenas</span></div>
-        <div class="feature-item feature-item--no"><span class="feature-icon">&mdash;</span><span>Técnico operador</span></div>
-      </div>
-      <div class="price-highlight">
-        <span class="price-highlight__label">Precio desde</span>
-        <span class="price-highlight__amount">$2,500 MXN</span>
-        <span class="price-highlight__note">+ IVA · Instalación incluida</span>
-        <a href={WHATSAPP_URL_MSG} class="btn btn--accent" target="_blank" rel="noopener">Reservar Ahora</a>
-      </div>
-    </div>
-  </section>
+      <div class="prod-layout">
 
-  <!-- CONTENIDO SEO -->
-  <section class="section section--bg">
-    <div class="container content-prose">
-      <h2>¿Por qué elegir el paquete 8 Par LED de city light?</h2>
-      <p>El paquete 8 Par LED de city light es una solución básico para eventos que requieren equipamiento profesional en la Ciudad de México y zona metropolitana. Nuestro equipo técnico se encarga de todo: desde la logística de transporte hasta la instalación, configuración y operación durante tu evento.</p>
-      <p>Con más de 10 años de experiencia en renta de city light para bodas, XV años, eventos corporativos y celebraciones privadas, REDEIL garantiza resultados profesionales. Este paquete ha sido diseñado para ofrecer la mejor relación calidad-precio, con equipo de marcas líderes y servicio técnico incluido.</p>
-      <h3>¿Para quién es este paquete?</h3>
-      <p>El paquete 8 Par LED de city light está diseñado para eventos íntimos y presupuestos ajustados. Con equipo profesional de marcas líderes y servicio técnico especializado, garantizamos resultados impecables.</p>
-      <h3>Servicio profesional de city light</h3>
-      <p>En REDEIL llevamos más de 10 años ofreciendo renta de city light en CDMX y Estado de México. Nuestro equipo técnico se encarga de todo: logística, transporte, instalación, configuración, operación durante el evento y desmontaje. Trabajamos con equipo profesional para garantizar que cada evento sea perfecto.</p>
+        <div class="prod-main">
+
+          <div class="prod-gallery">
+            <div class="prod-gallery__main">
+              <img src="/img/img-index/city-light.avif" alt="8 par LED City Light iluminando salón chico con luz uniforme" width="600" height="400" loading="eager" />
+            </div>
+            <div class="prod-gallery__side">
+              <img src="/img/img-index/city-light.avif" alt="Carpa de evento iluminada con par LED en blanco cálido" width="300" height="200" loading="lazy" />
+              <img src="/img/img-index/city-light.avif" alt="Detalle de par LED profesional montado en trípode" width="300" height="200" loading="lazy" />
+              <img src="/img/img-index/city-light.avif" alt="Salón chico con iluminación base uniforme sin zonas oscuras" width="300" height="200" loading="lazy" />
+              <img src="/img/img-index/city-light.avif" alt="Setup completo 8 par LED instalados antes de evento" width="300" height="200" loading="lazy" />
+            </div>
+          </div>
+
+          <div class="prod-info">
+            <span class="prod-info__badge">Paquete Inicial — La base profesional</span>
+            <h2 class="prod-info__title">8 Par LED City Light — Luz uniforme que hace que todo se vea bien</h2>
+
+            <div class="prod-price">
+              <span class="prod-price__amount">$2,500</span>
+              <span class="prod-price__currency">MXN + IVA</span>
+              <p class="prod-price__note">Todo incluido: transporte, instalación, operación y desmontaje en CDMX y Edomex</p>
+            </div>
+
+            <div class="prod-ctas">
+              <a href={WHATSAPP_URL_MSG} class="prod-btn prod-btn--wa" target="_blank" rel="noopener">Cotizar por WhatsApp</a>
+              <a href="/cotizar/" class="prod-btn prod-btn--outline">Solicitar cotización formal</a>
+            </div>
+          </div>
+
+          <div class="prod-selling">
+            <h2 class="prod-selling__headline">La iluminación que nadie nota, pero que todos agradecen en las fotos</h2>
+            <p class="prod-selling__intro">Hay eventos donde la iluminación base lo cambia todo sin ser el protagonista. 8 par LED bien colocados eliminan las sombras del techo que aplanan las caras en las fotos, igualan la intensidad en todo el salón para que ninguna mesa se vea mejor que otra, y crean esa sensación de espacio "trabajado" que distingue un evento de una reunión. El efecto no es dramático — es profesional.</p>
+
+            <div class="prod-highlights">
+              <div class="prod-hl">
+                <div class="prod-hl__bar"></div>
+                <div class="prod-hl__content">
+                  <h3 class="prod-hl__title">Luz uniforme de punta a punta — sin mesas de primera y segunda clase</h3>
+                  <p class="prod-hl__desc">Cuando la iluminación base es uniforme, cada mesa se ve igual de bien en las fotos. No hay invitados sentados en zonas más oscuras, no hay rincones donde el ambiente se rompe. El espacio entero respira con la misma calidad de luz.</p>
+                </div>
+              </div>
+              <div class="prod-hl">
+                <div class="prod-hl__bar"></div>
+                <div class="prod-hl__content">
+                  <h3 class="prod-hl__title">Temperatura de color ajustable — de funcional a íntimo</h3>
+                  <p class="prod-hl__desc">Los par LED del City Light permiten ajustar la temperatura: blanco frío para cócteles y cenas de trabajo, blanco cálido para banquetes y celebraciones, color suave para baile. El técnico ajusta según el momento sin que tú tengas que pedirlo dos veces.</p>
+                </div>
+              </div>
+              <div class="prod-hl">
+                <div class="prod-hl__bar"></div>
+                <div class="prod-hl__content">
+                  <h3 class="prod-hl__title">Fotos sin post-procesado — el color correcto desde el inicio</h3>
+                  <p class="prod-hl__desc">La iluminación de par LED calibrada correctamente hace que las cámaras capturen los colores tal como son: la ropa se ve del color correcto, la decoración no parece amarillenta, las caras tienen tonos naturales. Los fotógrafos lo agradecen y las fotos de los invitados desde el celular también.</p>
+                </div>
+              </div>
+              <div class="prod-hl">
+                <div class="prod-hl__bar"></div>
+                <div class="prod-hl__content">
+                  <h3 class="prod-hl__title">La solución más accesible que cambia la percepción completa del espacio</h3>
+                  <p class="prod-hl__desc">De todos los elementos de iluminación para eventos, el City Light es el que tiene la mejor relación inversión-impacto percibido. Por el precio más accesible de nuestro catálogo, transforma un salón básico en un espacio que parece preparado para ser fotografiado.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="prod-includes">
+            <h3 class="prod-includes__title">Lo que incluye este paquete</h3>
+            <div class="prod-includes__grid">
+              <div class="prod-feat">8 luminarias par LED RGBW</div>
+              <div class="prod-feat">Controlador de intensidad y color</div>
+              <div class="prod-feat">Soportes y trípodes profesionales</div>
+              <div class="prod-feat">Cable calibrado y multicontactos</div>
+              <div class="prod-feat">Transporte ida y vuelta</div>
+              <div class="prod-feat">Instalación y distribución profesional</div>
+              <div class="prod-feat">Técnico operador durante el evento</div>
+              <div class="prod-feat">Ajustes de color en tiempo real</div>
+              <div class="prod-feat">Desmontaje al finalizar</div>
+              <div class="prod-feat">Extensiones incluidas</div>
+            </div>
+          </div>
+
+          <div class="prod-process">
+            <h3 class="prod-process__title">Así funciona el servicio</h3>
+            <div class="prod-steps">
+              <div class="prod-step">
+                <span class="prod-step__num">1</span>
+                <div class="prod-step__content">
+                  <h4 class="prod-step__name">Dinos las dimensiones de tu espacio</h4>
+                  <p class="prod-step__desc">Con las medidas del salón o carpa diseñamos la distribución de los 8 par LED para cobertura uniforme. Si el techo es muy alto o hay columnas, lo contemplamos en el diseño.</p>
+                </div>
+              </div>
+              <div class="prod-step">
+                <span class="prod-step__num">2</span>
+                <div class="prod-step__content">
+                  <h4 class="prod-step__name">Cotización confirmada en 24 horas</h4>
+                  <p class="prod-step__desc">Precio final con todo incluido. Si tu evento está fuera de CDMX, el costo de traslado queda claro en la cotización. Sin sorpresas.</p>
+                </div>
+              </div>
+              <div class="prod-step">
+                <span class="prod-step__num">3</span>
+                <div class="prod-step__content">
+                  <h4 class="prod-step__name">Aparta tu fecha con anticipo</h4>
+                  <p class="prod-step__desc">Reserva con 50% de anticipo. La fecha queda confirmada al instante. Aceptamos transferencia, efectivo o tarjeta.</p>
+                </div>
+              </div>
+              <div class="prod-step">
+                <span class="prod-step__num">4</span>
+                <div class="prod-step__content">
+                  <h4 class="prod-step__name">Instalamos y nos quedamos hasta el final</h4>
+                  <p class="prod-step__desc">El equipo llega 1.5 horas antes, instala y calibra la temperatura de color. El técnico opera durante el evento y ajusta según los momentos. Al terminar, desmontamos.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="prod-compare">
+            <h3 class="prod-compare__title">¿8 par LED o la iluminación estándar del salón?</h3>
+            <div class="prod-compare__grid">
+              <div class="prod-compare__col prod-compare__col--them">
+                <span class="prod-compare__label">Iluminación estándar del salón</span>
+                <ul class="prod-compare__list">
+                  <li>Focos fijos sin ajuste de intensidad</li>
+                  <li>Zonas más brillantes y más oscuras</li>
+                  <li>Temperatura fría o amarillenta sin control</li>
+                  <li>Sombras duras que aplanan las fotos</li>
+                  <li>Mismo ambiente todo el evento</li>
+                </ul>
+              </div>
+              <div class="prod-compare__col prod-compare__col--us">
+                <span class="prod-compare__label">8 Par LED City Light</span>
+                <ul class="prod-compare__list">
+                  <li>Intensidad graduable según momento</li>
+                  <li>Luz uniforme de punta a punta</li>
+                  <li>Temperatura cálida, fría o color a elección</li>
+                  <li>Luz suave sin sombras duras</li>
+                  <li>El ambiente evoluciona durante el evento</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="prod-proof">
+            <blockquote class="prod-quote">
+              <p class="prod-quote__text">"Contraté el paquete de 8 par LED para el baby shower de mi hija en un jardín con carpa en Coyoacán. Nunca pensé que la diferencia fuera tan grande — el salón de mi vecina que no tuvo iluminación adicional se veía completamente diferente en las fotos. El mío se veía como revista. Y el precio fue muy accesible para lo que logró."</p>
+              <footer class="prod-quote__footer">
+                <span class="prod-quote__name">Patricia Sánchez</span>
+                <span class="prod-quote__event">Baby Shower en jardín privado — Coyoacán, CDMX</span>
+              </footer>
+            </blockquote>
+          </div>
+
+        </div>
+
+        <aside class="prod-sidebar">
+
+          <div class="ps-widget">
+            <h3 class="ps-widget__title">Especificaciones</h3>
+            <dl class="ps-specs">
+              <div class="ps-specs__row"><dt>Luminarias</dt><dd>8 par LED RGBW</dd></div>
+              <div class="ps-specs__row"><dt>Tipo</dt><dd>Par LED profesional</dd></div>
+              <div class="ps-specs__row"><dt>Cobertura</dt><dd>Hasta 80 m²</dd></div>
+              <div class="ps-specs__row"><dt>Control</dt><dd>Intensidad y color</dd></div>
+              <div class="ps-specs__row"><dt>Temperatura</dt><dd>Ajustable RGBW</dd></div>
+              <div class="ps-specs__row"><dt>Técnico</dt><dd>Incluido</dd></div>
+              <div class="ps-specs__row"><dt>Instalación</dt><dd>Incluida</dd></div>
+              <div class="ps-specs__row"><dt>Desmontaje</dt><dd>Incluido</dd></div>
+              <div class="ps-specs__row"><dt>Zona</dt><dd>CDMX + Edomex</dd></div>
+            </dl>
+          </div>
+
+          <div class="ps-widget">
+            <h3 class="ps-widget__title">Ideal para</h3>
+            <div class="ps-tags">
+              <span class="ps-tag">Baby showers</span>
+              <span class="ps-tag">Cumpleaños íntimos</span>
+              <span class="ps-tag">Salones hasta 80 m²</span>
+              <span class="ps-tag">Carpas pequeñas</span>
+              <span class="ps-tag">Reuniones corporativas</span>
+              <span class="ps-tag">Cenas privadas</span>
+              <span class="ps-tag">Eventos hasta 60 invitados</span>
+              <span class="ps-tag">Jardines con carpa</span>
+            </div>
+          </div>
+
+          <div class="ps-widget">
+            <h3 class="ps-widget__title">Otros paquetes</h3>
+            <a href="/renta-de-iluminacion/city-light/paquete-16-par-led/" class="ps-pkg">
+              <img src="/img/img-index/city-light.avif" alt="16 Par LED City Light" width="80" height="60" loading="lazy" class="ps-pkg__img" />
+              <div class="ps-pkg__info">
+                <span class="ps-pkg__name">16 Par LED</span>
+                <span class="ps-pkg__price">$4,200 MXN</span>
+              </div>
+            </a>
+            <a href="/renta-de-iluminacion/city-light/paquete-24-par-led/" class="ps-pkg">
+              <img src="/img/img-index/city-light.avif" alt="24 Par LED City Light" width="80" height="60" loading="lazy" class="ps-pkg__img" />
+              <div class="ps-pkg__info">
+                <span class="ps-pkg__name">24 Par LED</span>
+                <span class="ps-pkg__price">$6,000 MXN</span>
+              </div>
+            </a>
+            <a href="/renta-de-iluminacion/city-light/paquete-produccion/" class="ps-pkg">
+              <img src="/img/img-index/city-light.avif" alt="Producción 40+ Par LED" width="80" height="60" loading="lazy" class="ps-pkg__img" />
+              <div class="ps-pkg__info">
+                <span class="ps-pkg__name">Producción — 40+</span>
+                <span class="ps-pkg__price">$11,000 MXN</span>
+              </div>
+            </a>
+            <div class="ps-upsell">
+              <p class="ps-upsell__text">¿Tu salón es más grande o tienes jardín + carpa? El paquete de 16 par LED cubre hasta 180 m² con la misma uniformidad.</p>
+              <a href="/renta-de-iluminacion/city-light/paquete-16-par-led/" class="ps-upsell__link">Ver paquete 16 Par LED →</a>
+            </div>
+          </div>
+
+          <div class="ps-widget ps-widget--dark">
+            <h3 class="ps-widget__title ps-widget__title--light">Cotiza tu evento</h3>
+            <p class="ps-widget__desc">Cotización personalizada en menos de 24 horas. Sin compromiso.</p>
+            <a href="/cotizar/" class="ps-widget__btn">Cotizar Gratis</a>
+            <a href={WHATSAPP_URL_MSG} class="ps-widget__btn ps-widget__btn--wa" target="_blank" rel="noopener">WhatsApp: 55 4937 5172</a>
+          </div>
+
+          <div class="ps-widget">
+            <h3 class="ps-widget__title">Servicios relacionados</h3>
+            <div class="ps-links">
+              <a href="/renta-de-iluminacion/city-color/" class="ps-link">City Color LED — Cañones</a>
+              <a href="/renta-de-iluminacion/guirnaldas/" class="ps-link">Guirnaldas LED Edison</a>
+              <a href="/renta-de-iluminacion/luces-arquitectonicas/" class="ps-link">Uplighting arquitectónico</a>
+              <a href="/renta-de-iluminacion/luz-neon/" class="ps-link">Luz Neón LED</a>
+              <a href="/equipos-para-eventos/maquina-de-burbujas/" class="ps-link">Máquina de Burbujas</a>
+              <a href="/equipos-para-eventos/humo-bajo/" class="ps-link">Humo Bajo</a>
+            </div>
+          </div>
+
+          <div class="ps-widget">
+            <h3 class="ps-widget__title">Contacto</h3>
+            <div class="ps-contact">
+              <p><a href="tel:+525549375172">55 4937 5172</a></p>
+              <p><a href="mailto:contacto@redeil.com">contacto@redeil.com</a></p>
+              <p>Lun-Vie 9:00-19:00 | Sáb 10:00-15:00</p>
+            </div>
+          </div>
+
+        </aside>
+      </div>
     </div>
   </section>
 
   <FaqSection items={faqItems} />
-
-  <!-- CTA FINAL -->
 
   <Footer />
   <WhatsAppBubble />
 </Base>
 
 <style>
-  .section__title {
-    font-size: clamp(1.5rem, 3vw, 2rem);
-    font-weight: 800;
-    color: var(--color-text);
-    margin-bottom: 0.5rem;
-  }
-  .section__subtitle {
-    font-size: var(--font-size-base);
-    color: var(--color-text-light);
-    margin-bottom: 2rem;
-  }
-  .features-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 0.75rem;
-    margin-bottom: 2rem;
-  }
-  .feature-item {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    padding: 0.875rem 1rem;
-    border-radius: var(--border-radius);
-    font-size: var(--font-size-sm);
-  }
-  .feature-item--yes {
-    background: #f0fdf4;
-    color: #166534;
-  }
-  .feature-item--no {
-    background: var(--color-bg);
-    color: var(--color-text-light);
-  }
-  .feature-icon {
-    font-weight: 700;
-    font-size: 1.125rem;
-    flex-shrink: 0;
-  }
-  .price-highlight {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 2rem;
-    background: var(--color-bg);
-    border-radius: var(--border-radius-lg);
-    text-align: center;
-  }
-  .price-highlight__label {
-    font-size: var(--font-size-sm);
-    color: var(--color-text-light);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-  }
-  .price-highlight__amount {
-    font-size: clamp(2rem, 5vw, 3rem);
-    font-weight: 800;
-    color: var(--color-text);
-  }
-  .price-highlight__note {
-    font-size: var(--font-size-sm);
-    color: var(--color-text-light);
-    margin-bottom: 0.5rem;
-  }
-  .content-prose {
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  .content-prose h2 {
-    font-size: clamp(1.5rem, 3vw, 2rem);
-    font-weight: 800;
-    color: var(--color-text);
-    margin-bottom: 1rem;
-  }
-  .content-prose h3 {
-    font-size: var(--font-size-xl);
-    font-weight: 700;
-    color: var(--color-text);
-    margin: 2rem 0 0.75rem;
-  }
-  .content-prose p {
-    font-size: var(--font-size-base);
-    color: var(--color-text-light);
-    line-height: 1.8;
-    margin-bottom: 1rem;
-  }
+  .prod-layout { display: grid; grid-template-columns: 1fr; gap: 2rem; }
+  @media (min-width: 1024px) { .prod-layout { grid-template-columns: 1fr 340px; gap: 2.5rem; } }
+  .prod-gallery { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; margin-bottom: 2rem; border-radius: 14px; overflow: hidden; }
+  .prod-gallery__main { grid-row: span 2; }
+  .prod-gallery__main img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .prod-gallery__side { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; }
+  .prod-gallery__side img { width: 100%; height: 100%; object-fit: cover; display: block; aspect-ratio: 3/2; }
+  .prod-info { margin-bottom: 2.5rem; }
+  .prod-info__badge { display: inline-block; font-size: 0.75rem; font-weight: 700; color: var(--color-accent); text-transform: uppercase; letter-spacing: 0.08em; padding: 0.375rem 1rem; background: rgba(0,113,227,0.08); border: 1px solid rgba(0,113,227,0.12); border-radius: 6px; margin-bottom: 0.75rem; }
+  .prod-info__title { font-size: clamp(1.375rem, 3vw, 1.75rem); font-weight: 800; color: var(--color-text); line-height: 1.2; letter-spacing: -0.02em; margin: 0 0 1.25rem; }
+  .prod-price { background: var(--color-bg); border-radius: 12px; padding: 1.25rem 1.5rem; margin-bottom: 1.25rem; border-left: 4px solid var(--color-accent); }
+  .prod-price__amount { font-size: 2.25rem; font-weight: 800; color: var(--color-primary); font-variant-numeric: tabular-nums; }
+  .prod-price__currency { font-size: 0.875rem; color: var(--color-text-light); margin-left: 0.5rem; }
+  .prod-price__note { font-size: 0.8125rem; color: var(--color-text-light); margin: 0.5rem 0 0; }
+  .prod-ctas { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+  .prod-btn { display: inline-flex; align-items: center; justify-content: center; padding: 0.875rem 1.75rem; border-radius: 6px; font-size: 0.9375rem; font-weight: 600; text-decoration: none; transition: background 0.2s ease, border-color 0.2s ease; }
+  .prod-btn--wa { background: #25D366; color: #fff; }
+  .prod-btn--wa:hover { background: #1DA851; }
+  .prod-btn--outline { background: none; color: var(--color-text); border: 2px solid var(--color-border); }
+  .prod-btn--outline:hover { border-color: var(--color-accent); color: var(--color-accent); }
+  .prod-selling { margin-bottom: 2.5rem; }
+  .prod-selling__headline { font-size: clamp(1.25rem, 3vw, 1.5rem); font-weight: 800; color: var(--color-text); line-height: 1.25; letter-spacing: -0.02em; margin: 0 0 0.75rem; }
+  .prod-selling__intro { font-size: 0.9375rem; color: var(--color-text-light); line-height: 1.75; margin: 0 0 1.75rem; max-width: 65ch; }
+  .prod-highlights { display: flex; flex-direction: column; gap: 1.25rem; }
+  .prod-hl { display: flex; gap: 1rem; align-items: stretch; }
+  .prod-hl__bar { flex-shrink: 0; width: 3px; background: var(--color-accent); border-radius: 2px; }
+  .prod-hl__content { display: flex; flex-direction: column; gap: 0.25rem; }
+  .prod-hl__title { font-size: 0.9375rem; font-weight: 700; color: var(--color-text); margin: 0; line-height: 1.3; }
+  .prod-hl__desc { font-size: 0.8125rem; color: var(--color-text-light); line-height: 1.65; margin: 0; }
+  .prod-includes { background: var(--color-bg); border-radius: 14px; padding: 1.75rem 2rem; }
+  .prod-includes__title { font-size: 1.0625rem; font-weight: 700; color: var(--color-text); margin: 0 0 1rem; }
+  .prod-includes__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; }
+  .prod-feat { font-size: 0.875rem; color: var(--color-text-light); padding-left: 1.25rem; position: relative; line-height: 1.5; }
+  .prod-feat::before { content: ""; position: absolute; left: 0; top: 0.45rem; width: 6px; height: 6px; border-radius: 50%; background: var(--color-accent); }
+  @media (max-width: 640px) { .prod-includes__grid { grid-template-columns: 1fr; } }
+  .prod-sidebar { display: flex; flex-direction: column; gap: 1.25rem; }
+  @media (min-width: 1024px) { .prod-sidebar { position: sticky; top: calc(var(--header-height) + var(--topbar-height) + 1.5rem); align-self: start; } }
+  .ps-widget { background: var(--color-white); border: 1px solid var(--color-border); border-radius: 12px; padding: 1.25rem; }
+  .ps-widget--dark { background: var(--color-primary); color: #fff; border: none; }
+  .ps-widget__title { font-size: 0.875rem; font-weight: 700; color: var(--color-text); text-transform: uppercase; letter-spacing: 0.05em; margin: 0 0 0.75rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--color-accent); }
+  .ps-widget__title--light { color: #fff; }
+  .ps-widget__desc { font-size: 0.8125rem; color: rgba(255,255,255,0.75); margin: 0 0 0.75rem; }
+  .ps-widget__btn { display: block; text-align: center; padding: 0.625rem; border-radius: 6px; font-size: 0.875rem; font-weight: 600; text-decoration: none; margin-top: 0.5rem; background: var(--color-accent); color: #fff; transition: background 0.2s ease; }
+  .ps-widget__btn:hover { opacity: 0.9; }
+  .ps-widget__btn--wa { background: #25D366; }
+  .ps-specs { display: flex; flex-direction: column; margin: 0; }
+  .ps-specs__row { display: flex; justify-content: space-between; align-items: baseline; padding: 0.4rem 0; border-bottom: 1px solid var(--color-bg); gap: 0.75rem; }
+  .ps-specs__row:last-child { border-bottom: none; }
+  .ps-specs__row dt { font-size: 0.8125rem; color: var(--color-text-light); font-weight: 500; margin: 0; }
+  .ps-specs__row dd { font-size: 0.8125rem; font-weight: 600; color: var(--color-text); text-align: right; margin: 0; font-variant-numeric: tabular-nums; }
+  .ps-tags { display: flex; flex-wrap: wrap; gap: 0.375rem; }
+  .ps-tag { font-size: 0.6875rem; font-weight: 600; color: var(--color-text); padding: 0.3rem 0.75rem; background: var(--color-bg); border: 1px solid var(--color-border); border-radius: 6px; white-space: nowrap; }
+  .ps-pkg { display: flex; gap: 0.75rem; align-items: center; text-decoration: none; padding: 0.625rem 0; border-bottom: 1px solid var(--color-bg); }
+  .ps-pkg:last-of-type { border-bottom: none; }
+  .ps-pkg__img { width: 72px; height: 54px; object-fit: cover; border-radius: 8px; flex-shrink: 0; }
+  .ps-pkg__info { display: flex; flex-direction: column; gap: 0.125rem; }
+  .ps-pkg__name { font-size: 0.8125rem; font-weight: 600; color: var(--color-text); }
+  .ps-pkg__price { font-size: 0.75rem; font-weight: 700; color: var(--color-accent); font-variant-numeric: tabular-nums; }
+  .ps-pkg:hover .ps-pkg__name { color: var(--color-accent); }
+  .ps-upsell { margin-top: 0.75rem; padding-top: 0.75rem; border-top: 1px solid var(--color-bg); }
+  .ps-upsell__text { font-size: 0.75rem; color: var(--color-text-light); line-height: 1.5; margin: 0 0 0.375rem; }
+  .ps-upsell__link { font-size: 0.75rem; font-weight: 600; color: var(--color-accent); text-decoration: none; }
+  .ps-upsell__link:hover { text-decoration: underline; }
+  .ps-links { display: flex; flex-direction: column; }
+  .ps-link { padding: 0.4rem 0; border-bottom: 1px solid var(--color-bg); font-size: 0.8125rem; color: var(--color-text-light); text-decoration: none; }
+  .ps-link:last-child { border-bottom: none; }
+  .ps-link:hover { color: var(--color-accent); }
+  .ps-contact p { font-size: 0.8125rem; color: var(--color-text-light); margin: 0.3rem 0; }
+  .ps-contact a { color: var(--color-accent); text-decoration: none; }
+  .prod-process { margin: 2.5rem 0; }
+  .prod-process__title { font-size: 1.125rem; font-weight: 800; color: var(--color-text); letter-spacing: -0.02em; margin: 0 0 1.25rem; }
+  .prod-steps { display: flex; flex-direction: column; gap: 0; }
+  .prod-step { display: flex; gap: 1rem; padding: 1rem 0; border-bottom: 1px solid var(--color-border); }
+  .prod-step:last-child { border-bottom: none; }
+  .prod-step__num { flex-shrink: 0; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; background: var(--color-accent); color: #fff; font-size: 0.8125rem; font-weight: 700; border-radius: 50%; }
+  .prod-step__content { display: flex; flex-direction: column; gap: 0.2rem; }
+  .prod-step__name { font-size: 0.9375rem; font-weight: 700; color: var(--color-text); margin: 0; line-height: 1.3; }
+  .prod-step__desc { font-size: 0.8125rem; color: var(--color-text-light); line-height: 1.6; margin: 0; }
+  .prod-compare { margin: 2.5rem 0; }
+  .prod-compare__title { font-size: 1.125rem; font-weight: 800; color: var(--color-text); letter-spacing: -0.02em; margin: 0 0 1.25rem; }
+  .prod-compare__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+  @media (max-width: 640px) { .prod-compare__grid { grid-template-columns: 1fr; } }
+  .prod-compare__col { border-radius: 12px; padding: 1.25rem; }
+  .prod-compare__col--them { background: #fef2f2; border: 1px solid #fecaca; }
+  .prod-compare__col--us { background: #eff6ff; border: 1px solid #bfdbfe; }
+  .prod-compare__label { display: block; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.75rem; }
+  .prod-compare__col--them .prod-compare__label { color: #991b1b; }
+  .prod-compare__col--us .prod-compare__label { color: var(--color-primary); }
+  .prod-compare__list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.5rem; }
+  .prod-compare__list li { font-size: 0.8125rem; color: var(--color-text); line-height: 1.4; padding-left: 1.125rem; position: relative; }
+  .prod-compare__col--them .prod-compare__list li::before { content: "–"; position: absolute; left: 0; color: #dc2626; font-size: 0.75rem; font-weight: 700; }
+  .prod-compare__col--us .prod-compare__list li::before { content: "✓"; position: absolute; left: 0; color: var(--color-accent); font-size: 0.75rem; font-weight: 700; }
+  .prod-proof { margin-top: 2.5rem; }
+  .prod-quote { background: var(--color-bg); border-radius: 14px; padding: 1.75rem 2rem; border-left: 4px solid var(--color-accent); margin: 0; }
+  .prod-quote__text { font-size: 0.9375rem; color: var(--color-text); line-height: 1.75; font-style: italic; margin: 0 0 1rem; }
+  .prod-quote__footer { display: flex; flex-direction: column; gap: 0.125rem; }
+  .prod-quote__name { font-size: 0.875rem; font-weight: 700; color: var(--color-text); font-style: normal; }
+  .prod-quote__event { font-size: 0.75rem; color: var(--color-text-light); font-style: normal; }
 </style>

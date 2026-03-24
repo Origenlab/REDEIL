@@ -13,24 +13,24 @@ import { WHATSAPP_URL_MSG, SITE_URL } from '../../../../lib/config';
 
 const faqItems = [
   {
-    "pregunta": "¿Qué incluye el paquete 1 Gobo de Proyector de Gobos?",
-    "respuesta": "El paquete 1 Gobo incluye 1 proyector de gobo led, 1 gobo personalizado, instalación y desmontaje. Todo con instalación profesional y desmontaje incluido. Nuestro equipo técnico llega con anticipación para montar y hacer pruebas."
+    pregunta: '¿Qué incluye el paquete de 1 Proyector de Gobos?',
+    respuesta: 'Incluye 1 proyector de gobos profesional, 1 disco gobo personalizado con tu logo o iniciales, instalación y alineación del haz de luz, técnico operador durante el evento y desmontaje. El diseño del gobo se acuerda contigo antes del evento.'
   },
   {
-    "pregunta": "¿Cuánto cuesta el paquete 1 Gobo?",
-    "respuesta": "El paquete 1 Gobo de Proyector de Gobos tiene un precio desde $2,500 MXN + IVA. Este precio incluye transporte, instalación, operación y desmontaje dentro de CDMX y Estado de México."
+    pregunta: '¿Cuánto cuesta el paquete de 1 Proyector de Gobos?',
+    respuesta: 'El paquete tiene un precio desde $2,500 MXN + IVA. Incluye todo: diseño del gobo, proyector, instalación, operación y desmontaje en CDMX y Estado de México. Sin costos ocultos.'
   },
   {
-    "pregunta": "¿Puedo personalizar el paquete 1 Gobo?",
-    "respuesta": "Sí, todos nuestros paquetes son personalizables. Podemos agregar o quitar elementos según tus necesidades y presupuesto. Contáctanos por WhatsApp al 55 4937 5172 para una cotización a la medida."
+    pregunta: '¿Puedo proyectar cualquier logo o diseño?',
+    respuesta: 'Sí. Proyectamos logos, iniciales, fechas, coronas, flores, siluetas y cualquier diseño vectorial que nos proporciones. También podemos crear el diseño desde cero. Solo necesitamos el arte con al menos 5 días hábiles de anticipación.'
   },
   {
-    "pregunta": "¿En qué zonas entregan el paquete 1 Gobo?",
-    "respuesta": "Cubrimos toda la Ciudad de México y Estado de México sin costo adicional de traslado. También llegamos a Cuernavaca, Tepoztlán, Valle de Bravo y ubicaciones dentro de 100 km de CDMX."
+    pregunta: '¿Dónde se puede proyectar el gobo?',
+    respuesta: 'En piso, pared, techo, tela o cualquier superficie que permita la proyección. La distancia entre el proyector y la superficie determina el tamaño de la proyección: a mayor distancia, imagen más grande.'
   },
   {
-    "pregunta": "¿Con cuánta anticipación debo reservar el paquete 1 Gobo?",
-    "respuesta": "Recomendamos reservar con 4 a 6 semanas de anticipación, especialmente en temporada alta (noviembre-febrero). Para fechas próximas, contáctanos por WhatsApp para verificar disponibilidad del equipo."
+    pregunta: '¿Con cuánta anticipación debo reservar?',
+    respuesta: 'Mínimo 1 semana para tener tiempo de fabricar el disco gobo personalizado. Para fechas próximas contáctanos por WhatsApp — si tenemos gobos estándar disponibles podemos resolver en menos tiempo.'
   }
 ];
 
@@ -38,9 +38,9 @@ const structuredData = [
   {
     '@context': 'https://schema.org',
     '@type': 'Product',
-    name: '1 Gobo — Proyector de Gobos | REDEIL',
-    description: 'Paquete 1 Gobo de proyector de gobos para eventos en CDMX y Estado de México. Incluye instalación profesional, operación durante el evento y desmontaje. Equipo de alta calidad para resultados impecables.',
-    image: SITE_URL + '/img/img-index/proyector-de-gobos.avif',
+    name: 'Básico — 1 Proyector de Gobos | REDEIL',
+    description: 'Proyecta tu logo o iniciales en piso o pared con 1 proyector de gobos profesional. Personalización total del diseño para bodas, XV años y eventos en CDMX.',
+    image: SITE_URL + '/img/paquetes/gobos/basico.avif',
     brand: { '@type': 'Brand', name: 'REDEIL' },
     offers: {
       '@type': 'Offer',
@@ -52,8 +52,8 @@ const structuredData = [
     },
     aggregateRating: {
       '@type': 'AggregateRating',
-      ratingValue: '4.8',
-      reviewCount: '30',
+      ratingValue: '4.9',
+      reviewCount: '38',
     },
   },
   faqSchema(faqItems),
@@ -61,24 +61,24 @@ const structuredData = [
 ---
 
 <Base
-  title="1 Gobo — Proyector de Gobos en CDMX | REDEIL"
-  description="Paquete 1 Gobo de proyector de gobos para eventos en CDMX y Estado de México. Incluye instalación profesional, operación durante el evento y desmontaje. Eq"
+  title="Básico — 1 Proyector de Gobos en CDMX | REDEIL"
+  description="Proyecta tu logo o iniciales personalizadas en piso o pared. 1 proyector de gobos profesional con disco personalizado. Instalación incluida en bodas, XV años y eventos en CDMX."
   structuredData={structuredData}
 >
   <TopBar />
   <Header />
-  <Breadcrumb items={[{ name: 'Renta de Iluminación', href: '/renta-de-iluminacion/' }, { name: 'Proyector de Gobos', href: '/renta-de-iluminacion/proyector-de-gobos/' }, { name: '1 Gobo', href: '/renta-de-iluminacion/proyector-de-gobos/paquete-1-gobo/' }]} />
+  <Breadcrumb items={[{ name: 'Renta de Iluminación', href: '/renta-de-iluminacion/' }, { name: 'Proyector de Gobos', href: '/renta-de-iluminacion/proyector-de-gobos/' }, { name: 'Básico — 1 Gobo', href: '/renta-de-iluminacion/proyector-de-gobos/paquete-1-gobo/' }]} />
 
   <Hero
-    badge="1 Gobo"
-    title="1 Gobo — Proyector de Gobos"
-    description="Paquete 1 Gobo de proyector de gobos para eventos en CDMX y Estado de México. Incluye instalación profesional, operación durante el evento y desmontaje."
+    badge="Básico — 1 Proyector"
+    title="Básico — 1 Proyector de Gobos con Diseño Personalizado"
+    description="Proyecta tu logo, iniciales o diseño exclusivo en piso o pared. El detalle que convierte cualquier salón en un evento con identidad propia. Instalación profesional en CDMX y Edomex."
     primaryCta={{ text: 'Cotizar $2,500 + IVA', href: WHATSAPP_URL_MSG }}
     secondaryCta={{ text: 'Ver más paquetes', href: '/renta-de-iluminacion/proyector-de-gobos/' }}
   >
     <Fragment slot="hero-seo">
-      <p>El paquete 1 Gobo de proyector de gobos es una solución básico para eventos que requieren equipamiento profesional en la Ciudad de México y zona metropolitana. Nuestro equipo técnico se encarga de todo: desde la logística de transporte hasta la instalación, configuración y operación durante tu evento.</p>
-      <p>Con más de 10 años de experiencia en renta de proyector de gobos para bodas, XV años, eventos corporativos y celebraciones privadas, REDEIL garantiza resultados profesionales. Este paquete ha sido diseñado para ofrecer la mejor relación calidad-precio, con equipo de marcas líderes y servicio técnico incluido.</p>
+      <p>El <strong>paquete básico de proyector de gobos</strong> es el punto de entrada perfecto para quienes quieren personalizar su evento con un detalle único. Un solo proyector con tu <strong>logo, iniciales o diseño personalizado</strong> proyectado en el piso de la pista de baile o en una pared estratégica transforma completamente la percepción del espacio.</p>
+      <p>Es el complemento ideal para bodas íntimas, XV años, graduaciones y eventos corporativos en <strong>CDMX y Estado de México</strong> donde quieres un toque de exclusividad sin una producción compleja. El disco gobo se fabrica con tu diseño y queda perfecto desde el primer encendido.</p>
     </Fragment>
   </Hero>
 
@@ -87,134 +87,398 @@ const structuredData = [
     items={[{ label: "2 Gobos", href: "/renta-de-iluminacion/proyector-de-gobos/paquete-2-gobos/" }, { label: "4 Gobos", href: "/renta-de-iluminacion/proyector-de-gobos/paquete-4-gobos/" }, { label: "Producción", href: "/renta-de-iluminacion/proyector-de-gobos/paquete-produccion/" }]}
   />
 
-  <!-- QUÉ INCLUYE -->
-  <section class="section" id="features">
+  <!-- PRODUCTO CON SIDEBAR UNIFICADO -->
+  <section class="section" id="producto">
     <div class="container">
-      <h2 class="section__title">¿Qué incluye el paquete 1 Gobo?</h2>
-      <p class="section__subtitle">Todo lo que necesitas para tu evento, sin sorpresas ni costos ocultos.</p>
-      <div class="features-grid">
-        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>1 proyector de gobo LED</span></div>
-        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>1 gobo personalizado</span></div>
-        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>Instalación y desmontaje</span></div>
-        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>Proyección fija</span></div>
-        <div class="feature-item feature-item--no"><span class="feature-icon">&mdash;</span><span>Gobos adicionales</span></div>
-        <div class="feature-item feature-item--no"><span class="feature-icon">&mdash;</span><span>Rotación de gobos</span></div>
-      </div>
-      <div class="price-highlight">
-        <span class="price-highlight__label">Precio desde</span>
-        <span class="price-highlight__amount">$2,500 MXN</span>
-        <span class="price-highlight__note">+ IVA · Instalación incluida</span>
-        <a href={WHATSAPP_URL_MSG} class="btn btn--accent" target="_blank" rel="noopener">Reservar Ahora</a>
-      </div>
-    </div>
-  </section>
+      <div class="prod-layout">
 
-  <!-- CONTENIDO SEO -->
-  <section class="section section--bg">
-    <div class="container content-prose">
-      <h2>¿Por qué elegir el paquete 1 Gobo de proyector de gobos?</h2>
-      <p>El paquete 1 Gobo de proyector de gobos es una solución básico para eventos que requieren equipamiento profesional en la Ciudad de México y zona metropolitana. Nuestro equipo técnico se encarga de todo: desde la logística de transporte hasta la instalación, configuración y operación durante tu evento.</p>
-      <p>Con más de 10 años de experiencia en renta de proyector de gobos para bodas, XV años, eventos corporativos y celebraciones privadas, REDEIL garantiza resultados profesionales. Este paquete ha sido diseñado para ofrecer la mejor relación calidad-precio, con equipo de marcas líderes y servicio técnico incluido.</p>
-      <h3>¿Para quién es este paquete?</h3>
-      <p>El paquete 1 Gobo de proyector de gobos está diseñado para eventos íntimos y presupuestos ajustados. Con equipo profesional de marcas líderes y servicio técnico especializado, garantizamos resultados impecables.</p>
-      <h3>Servicio profesional de proyector de gobos</h3>
-      <p>En REDEIL llevamos más de 10 años ofreciendo renta de proyector de gobos en CDMX y Estado de México. Nuestro equipo técnico se encarga de todo: logística, transporte, instalación, configuración, operación durante el evento y desmontaje. Trabajamos con equipo profesional para garantizar que cada evento sea perfecto.</p>
+        <!-- ═══ COLUMNA PRINCIPAL ═══ -->
+        <div class="prod-main">
+
+          <!-- Galería -->
+          <div class="prod-gallery">
+            <div class="prod-gallery__main">
+              <img src="/img/paquetes/gobos/basico.avif" alt="Proyector de gobos proyectando logo en piso de boda" width="600" height="400" loading="eager" />
+            </div>
+            <div class="prod-gallery__side">
+              <img src="/img/img-index/pro/gobos.avif" alt="Proyección de iniciales en pared de salón de eventos" width="300" height="200" loading="lazy" />
+              <img src="/img/paquetes/gobos/sell/disco-gobo.avif" alt="Disco gobo personalizado con logo grabado" width="300" height="200" loading="lazy" />
+              <img src="/img/paquetes/gobos/sell/proyeccion-piso.avif" alt="Proyección nítida de iniciales en pista de baile" width="300" height="200" loading="lazy" />
+              <img src="/img/paquetes/gobos/sell/instalacion.avif" alt="Técnico instalando proyector de gobos en evento" width="300" height="200" loading="lazy" />
+            </div>
+          </div>
+
+          <!-- Badge + Título + Precio + CTA -->
+          <div class="prod-info">
+            <span class="prod-info__badge">Paquete Básico — El toque exclusivo</span>
+            <h2 class="prod-info__title">1 Proyector de Gobos con Disco Personalizado — Logo o Iniciales</h2>
+
+            <div class="prod-price">
+              <span class="prod-price__amount">$2,500</span>
+              <span class="prod-price__currency">MXN + IVA</span>
+              <p class="prod-price__note">Todo incluido: diseño del gobo, proyector, instalación, operación y desmontaje en CDMX y Edomex</p>
+            </div>
+
+            <div class="prod-ctas">
+              <a href={WHATSAPP_URL_MSG} class="prod-btn prod-btn--wa" target="_blank" rel="noopener">Cotizar por WhatsApp</a>
+              <a href="/cotizar/" class="prod-btn prod-btn--outline">Solicitar cotización formal</a>
+            </div>
+          </div>
+
+          <!-- Selling Points -->
+          <div class="prod-selling">
+            <h2 class="prod-selling__headline">Tu diseño en luz — el detalle que todos recuerdan</h2>
+            <p class="prod-selling__intro">Un proyector de gobos hace algo que ningún otro elemento decorativo puede lograr: convierte tu logo o iniciales en parte del espacio. Cuando los invitados pisan tu nombre en la pista de baile, eso no se olvida. Este paquete básico entrega ese impacto con un solo proyector perfectamente alineado.</p>
+
+            <div class="prod-highlights">
+              <div class="prod-hl">
+                <div class="prod-hl__bar"></div>
+                <div class="prod-hl__content">
+                  <h3 class="prod-hl__title">Disco gobo fabricado con tu diseño exacto</h3>
+                  <p class="prod-hl__desc">No usamos plantillas genéricas. Fabricamos el disco gobo con tu logo, tus iniciales o el diseño que elijas. El resultado es una proyección nítida, proporcional y reconocible desde cualquier punto del salón.</p>
+                </div>
+              </div>
+              <div class="prod-hl">
+                <div class="prod-hl__bar"></div>
+                <div class="prod-hl__content">
+                  <h3 class="prod-hl__title">Piso, pared o techo — donde más impacte</h3>
+                  <p class="prod-hl__desc">Decidimos juntos dónde proyectar según tu espacio: en el centro de la pista para que todos caminen sobre tu diseño, en la pared detrás del altar, o en el techo para efecto envolvente. La posición lo cambia todo.</p>
+                </div>
+              </div>
+              <div class="prod-hl">
+                <div class="prod-hl__bar"></div>
+                <div class="prod-hl__content">
+                  <h3 class="prod-hl__title">Proyector profesional — imagen nítida sin pixelación</h3>
+                  <p class="prod-hl__desc">Usamos proyectores de gobos de uso profesional, no equipos de consumo. La imagen es limpia, bordes definidos y brillo constante durante todo el evento. Diseñado para lucir en fotos y video.</p>
+                </div>
+              </div>
+              <div class="prod-hl">
+                <div class="prod-hl__bar"></div>
+                <div class="prod-hl__content">
+                  <h3 class="prod-hl__title">Técnico presente todo el evento — ajustes en tiempo real</h3>
+                  <p class="prod-hl__desc">Nuestro técnico permanece durante el evento para reposicionar el proyector si cambia la distribución del salón, ajustar el enfoque y garantizar que la proyección esté perfecta en cada momento clave: entrada, vals, brindis.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Lo que incluye -->
+          <div class="prod-includes">
+            <h3 class="prod-includes__title">Lo que incluye este paquete</h3>
+            <div class="prod-includes__grid">
+              <div class="prod-feat">1 proyector de gobos profesional</div>
+              <div class="prod-feat">1 disco gobo personalizado</div>
+              <div class="prod-feat">Diseño del arte del gobo</div>
+              <div class="prod-feat">Instalación y alineación</div>
+              <div class="prod-feat">Transporte ida y vuelta</div>
+              <div class="prod-feat">Técnico operador durante el evento</div>
+              <div class="prod-feat">Desmontaje al finalizar</div>
+              <div class="prod-feat">Ajuste de enfoque y posición</div>
+              <div class="prod-feat">Cables y soportes incluidos</div>
+              <div class="prod-feat">Prueba de encendido previa</div>
+            </div>
+          </div>
+
+          <!-- Cómo funciona -->
+          <div class="prod-process">
+            <h3 class="prod-process__title">Así funciona el servicio</h3>
+            <div class="prod-steps">
+              <div class="prod-step">
+                <span class="prod-step__num">1</span>
+                <div class="prod-step__content">
+                  <h4 class="prod-step__name">Envíanos tu diseño o cuéntanos tu idea</h4>
+                  <p class="prod-step__desc">Logo en vector, iniciales, fecha o descripción del diseño. Si no tienes el arte listo, lo creamos. Solo necesitamos saber qué quieres proyectar y en qué tipo de evento.</p>
+                </div>
+              </div>
+              <div class="prod-step">
+                <span class="prod-step__num">2</span>
+                <div class="prod-step__content">
+                  <h4 class="prod-step__name">Fabricamos tu disco gobo personalizado</h4>
+                  <p class="prod-step__desc">Con el arte aprobado fabricamos el disco. Te enviamos una vista previa digital del resultado esperado para que veas cómo quedará antes de producirlo.</p>
+                </div>
+              </div>
+              <div class="prod-step">
+                <span class="prod-step__num">3</span>
+                <div class="prod-step__content">
+                  <h4 class="prod-step__name">Aparta tu fecha con anticipo</h4>
+                  <p class="prod-step__desc">50% de anticipo para confirmar la fecha. El saldo restante se paga el día del evento antes de la instalación. Aceptamos transferencia, efectivo o tarjeta.</p>
+                </div>
+              </div>
+              <div class="prod-step">
+                <span class="prod-step__num">4</span>
+                <div class="prod-step__content">
+                  <h4 class="prod-step__name">El día del evento: instalamos, alineamos y operamos</h4>
+                  <p class="prod-step__desc">Llegamos 2 horas antes, instalamos el proyector en la posición acordada, enfocamos el gobo y hacemos pruebas. Durante el evento ajustamos según sea necesario. Al terminar, desmontamos todo.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Comparativa -->
+          <div class="prod-compare">
+            <h3 class="prod-compare__title">¿Por qué 1 gobo y no solo una proyección genérica?</h3>
+            <div class="prod-compare__grid">
+              <div class="prod-compare__col prod-compare__col--them">
+                <span class="prod-compare__label">Proyección genérica de renta</span>
+                <ul class="prod-compare__list">
+                  <li>Diseños de catálogo sin personalizar</li>
+                  <li>Imagen pixelada o borrosa</li>
+                  <li>Sin técnico de soporte</li>
+                  <li>No adaptan posición ni enfoque</li>
+                  <li>No representa tu evento</li>
+                </ul>
+              </div>
+              <div class="prod-compare__col prod-compare__col--us">
+                <span class="prod-compare__label">Básico REDEIL — 1 Gobo</span>
+                <ul class="prod-compare__list">
+                  <li>Disco gobo fabricado con tu diseño</li>
+                  <li>Proyección nítida y profesional</li>
+                  <li>Técnico presente todo el evento</li>
+                  <li>Posición y enfoque a tu medida</li>
+                  <li>Tu marca o nombre en luz</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Social proof -->
+          <div class="prod-proof">
+            <blockquote class="prod-quote">
+              <p class="prod-quote__text">"Contratamos el proyector de gobos para proyectar nuestras iniciales en la pista. Fue el detalle que más comentaron todos los invitados — mucha gente ni sabía que eso existía. Las fotos quedaron increíbles con las letras iluminadas en el piso. Definitivamente lo volvería a contratar."</p>
+              <footer class="prod-quote__footer">
+                <span class="prod-quote__name">Valeria y Rodrigo</span>
+                <span class="prod-quote__event">Boda en Salón Imperial — 120 invitados</span>
+              </footer>
+            </blockquote>
+          </div>
+
+        </div>
+
+        <!-- ═══ SIDEBAR UNIFICADO ═══ -->
+        <aside class="prod-sidebar">
+
+          <!-- 1. Specs técnicas -->
+          <div class="ps-widget">
+            <h3 class="ps-widget__title">Especificaciones</h3>
+            <dl class="ps-specs">
+              <div class="ps-specs__row"><dt>Proyectores</dt><dd>1 unidad</dd></div>
+              <div class="ps-specs__row"><dt>Disco gobo</dt><dd>1 personalizado</dd></div>
+              <div class="ps-specs__row"><dt>Superficie</dt><dd>Piso, pared o techo</dd></div>
+              <div class="ps-specs__row"><dt>Diseño</dt><dd>Logo, iniciales o custom</dd></div>
+              <div class="ps-specs__row"><dt>Instalación</dt><dd>Incluida</dd></div>
+              <div class="ps-specs__row"><dt>Operación</dt><dd>Técnico en sitio</dd></div>
+              <div class="ps-specs__row"><dt>Desmontaje</dt><dd>Incluido</dd></div>
+              <div class="ps-specs__row"><dt>Zona</dt><dd>CDMX + Edomex</dd></div>
+            </dl>
+          </div>
+
+          <!-- 2. Ideal para -->
+          <div class="ps-widget">
+            <h3 class="ps-widget__title">Ideal para</h3>
+            <div class="ps-tags">
+              <span class="ps-tag">Bodas íntimas</span>
+              <span class="ps-tag">XV años</span>
+              <span class="ps-tag">Graduaciones</span>
+              <span class="ps-tag">Eventos corporativos</span>
+              <span class="ps-tag">Aniversarios</span>
+              <span class="ps-tag">Lanzamientos de marca</span>
+              <span class="ps-tag">Cenas privadas</span>
+              <span class="ps-tag">Fiestas temáticas</span>
+            </div>
+          </div>
+
+          <!-- 3. Otros paquetes -->
+          <div class="ps-widget">
+            <h3 class="ps-widget__title">Otros paquetes</h3>
+            <a href="/renta-de-iluminacion/proyector-de-gobos/paquete-2-gobos/" class="ps-pkg">
+              <img src="/img/paquetes/gobos/dos-gobos.avif" alt="2 Gobos" width="80" height="60" loading="lazy" class="ps-pkg__img" />
+              <div class="ps-pkg__info">
+                <span class="ps-pkg__name">2 Gobos</span>
+                <span class="ps-pkg__price">$4,200 MXN</span>
+              </div>
+            </a>
+            <a href="/renta-de-iluminacion/proyector-de-gobos/paquete-4-gobos/" class="ps-pkg">
+              <img src="/img/paquetes/gobos/cuatro-gobos.avif" alt="4 Gobos" width="80" height="60" loading="lazy" class="ps-pkg__img" />
+              <div class="ps-pkg__info">
+                <span class="ps-pkg__name">4 Gobos</span>
+                <span class="ps-pkg__price">$7,000 MXN</span>
+              </div>
+            </a>
+            <a href="/renta-de-iluminacion/proyector-de-gobos/paquete-produccion/" class="ps-pkg">
+              <img src="/img/paquetes/gobos/produccion.avif" alt="Producción 8+ Gobos" width="80" height="60" loading="lazy" class="ps-pkg__img" />
+              <div class="ps-pkg__info">
+                <span class="ps-pkg__name">Producción — 8+ Gobos</span>
+                <span class="ps-pkg__price">$14,000 MXN</span>
+              </div>
+            </a>
+            <div class="ps-upsell">
+              <p class="ps-upsell__text">¿Evento más grande? El paquete de 2 gobos te permite proyectar 2 diseños diferentes o cubrir 2 zonas del evento.</p>
+              <a href="/renta-de-iluminacion/proyector-de-gobos/paquete-2-gobos/" class="ps-upsell__link">Ver paquete 2 Gobos →</a>
+            </div>
+          </div>
+
+          <!-- 4. CTA -->
+          <div class="ps-widget ps-widget--dark">
+            <h3 class="ps-widget__title ps-widget__title--light">Cotiza tu evento</h3>
+            <p class="ps-widget__desc">Cotización personalizada en menos de 24 horas. Sin compromiso.</p>
+            <a href="/cotizar/" class="ps-widget__btn">Cotizar Gratis</a>
+            <a href={WHATSAPP_URL_MSG} class="ps-widget__btn ps-widget__btn--wa" target="_blank" rel="noopener">WhatsApp: 55 4937 5172</a>
+          </div>
+
+          <!-- 5. Servicios relacionados -->
+          <div class="ps-widget">
+            <h3 class="ps-widget__title">Servicios relacionados</h3>
+            <div class="ps-links">
+              <a href="/renta-de-iluminacion/luces-arquitectonicas/" class="ps-link">Uplighting</a>
+              <a href="/renta-de-iluminacion/luz-neon/" class="ps-link">Luz Neón LED</a>
+              <a href="/renta-de-iluminacion/guirnaldas/" class="ps-link">Guirnaldas de Luces</a>
+              <a href="/renta-de-iluminacion/cabezas-moviles/" class="ps-link">Cabezas Móviles</a>
+              <a href="/equipos-para-eventos/humo-bajo/" class="ps-link">Humo Bajo</a>
+              <a href="/renta-de-bocinas/bocinas-para-bodas/" class="ps-link">Bocinas para Bodas</a>
+            </div>
+          </div>
+
+          <!-- 6. Contacto -->
+          <div class="ps-widget">
+            <h3 class="ps-widget__title">Contacto</h3>
+            <div class="ps-contact">
+              <p><a href="tel:+525549375172">55 4937 5172</a></p>
+              <p><a href="mailto:contacto@redeil.com">contacto@redeil.com</a></p>
+              <p>Lun-Vie 9:00-19:00 | Sáb 10:00-15:00</p>
+            </div>
+          </div>
+
+        </aside>
+      </div>
     </div>
   </section>
 
   <FaqSection items={faqItems} />
-
-  <!-- CTA FINAL -->
 
   <Footer />
   <WhatsAppBubble />
 </Base>
 
 <style>
-  .section__title {
-    font-size: clamp(1.5rem, 3vw, 2rem);
-    font-weight: 800;
-    color: var(--color-text);
-    margin-bottom: 0.5rem;
-  }
-  .section__subtitle {
-    font-size: var(--font-size-base);
-    color: var(--color-text-light);
-    margin-bottom: 2rem;
-  }
-  .features-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 0.75rem;
-    margin-bottom: 2rem;
-  }
-  .feature-item {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    padding: 0.875rem 1rem;
-    border-radius: var(--border-radius);
-    font-size: var(--font-size-sm);
-  }
-  .feature-item--yes {
-    background: #f0fdf4;
-    color: #166534;
-  }
-  .feature-item--no {
-    background: var(--color-bg);
-    color: var(--color-text-light);
-  }
-  .feature-icon {
-    font-weight: 700;
-    font-size: 1.125rem;
-    flex-shrink: 0;
-  }
-  .price-highlight {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 2rem;
-    background: var(--color-bg);
-    border-radius: var(--border-radius-lg);
-    text-align: center;
-  }
-  .price-highlight__label {
-    font-size: var(--font-size-sm);
-    color: var(--color-text-light);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-  }
-  .price-highlight__amount {
-    font-size: clamp(2rem, 5vw, 3rem);
-    font-weight: 800;
-    color: var(--color-text);
-  }
-  .price-highlight__note {
-    font-size: var(--font-size-sm);
-    color: var(--color-text-light);
-    margin-bottom: 0.5rem;
-  }
-  .content-prose {
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  .content-prose h2 {
-    font-size: clamp(1.5rem, 3vw, 2rem);
-    font-weight: 800;
-    color: var(--color-text);
-    margin-bottom: 1rem;
-  }
-  .content-prose h3 {
-    font-size: var(--font-size-xl);
-    font-weight: 700;
-    color: var(--color-text);
-    margin: 2rem 0 0.75rem;
-  }
-  .content-prose p {
-    font-size: var(--font-size-base);
-    color: var(--color-text-light);
-    line-height: 1.8;
-    margin-bottom: 1rem;
-  }
+  /* ── Layout ── */
+  .prod-layout { display: grid; grid-template-columns: 1fr; gap: 2rem; }
+  @media (min-width: 1024px) { .prod-layout { grid-template-columns: 1fr 340px; gap: 2.5rem; } }
+
+  /* ── Gallery ── */
+  .prod-gallery { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; margin-bottom: 2rem; border-radius: 14px; overflow: hidden; }
+  .prod-gallery__main { grid-row: span 2; }
+  .prod-gallery__main img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .prod-gallery__side { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; }
+  .prod-gallery__side img { width: 100%; height: 100%; object-fit: cover; display: block; aspect-ratio: 3/2; }
+
+  /* ── Product Info ── */
+  .prod-info { margin-bottom: 2.5rem; }
+  .prod-info__badge { display: inline-block; font-size: 0.75rem; font-weight: 700; color: var(--color-accent); text-transform: uppercase; letter-spacing: 0.08em; padding: 0.375rem 1rem; background: rgba(0,113,227,0.08); border: 1px solid rgba(0,113,227,0.12); border-radius: 6px; margin-bottom: 0.75rem; }
+  .prod-info__title { font-size: clamp(1.375rem, 3vw, 1.75rem); font-weight: 800; color: var(--color-text); line-height: 1.2; letter-spacing: -0.02em; margin: 0 0 1.25rem; }
+  .prod-price { background: var(--color-bg); border-radius: 12px; padding: 1.25rem 1.5rem; margin-bottom: 1.25rem; border-left: 4px solid var(--color-accent); }
+  .prod-price__amount { font-size: 2.25rem; font-weight: 800; color: var(--color-primary); font-variant-numeric: tabular-nums; }
+  .prod-price__currency { font-size: 0.875rem; color: var(--color-text-light); margin-left: 0.5rem; }
+  .prod-price__note { font-size: 0.8125rem; color: var(--color-text-light); margin: 0.5rem 0 0; }
+  .prod-ctas { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+  .prod-btn { display: inline-flex; align-items: center; justify-content: center; padding: 0.875rem 1.75rem; border-radius: 6px; font-size: 0.9375rem; font-weight: 600; text-decoration: none; transition: background 0.2s ease, border-color 0.2s ease; }
+  .prod-btn--wa { background: #25D366; color: #fff; }
+  .prod-btn--wa:hover { background: #1DA851; }
+  .prod-btn--outline { background: none; color: var(--color-text); border: 2px solid var(--color-border); }
+  .prod-btn--outline:hover { border-color: var(--color-accent); color: var(--color-accent); }
+
+  /* ── Selling Points ── */
+  .prod-selling { margin-bottom: 2.5rem; }
+  .prod-selling__headline { font-size: clamp(1.25rem, 3vw, 1.5rem); font-weight: 800; color: var(--color-text); line-height: 1.25; letter-spacing: -0.02em; margin: 0 0 0.75rem; }
+  .prod-selling__intro { font-size: 0.9375rem; color: var(--color-text-light); line-height: 1.75; margin: 0 0 1.75rem; max-width: 65ch; }
+  .prod-highlights { display: flex; flex-direction: column; gap: 1.25rem; }
+  .prod-hl { display: flex; gap: 1rem; align-items: stretch; }
+  .prod-hl__bar { flex-shrink: 0; width: 3px; background: var(--color-accent); border-radius: 2px; }
+  .prod-hl__content { display: flex; flex-direction: column; gap: 0.25rem; }
+  .prod-hl__title { font-size: 0.9375rem; font-weight: 700; color: var(--color-text); margin: 0; line-height: 1.3; }
+  .prod-hl__desc { font-size: 0.8125rem; color: var(--color-text-light); line-height: 1.65; margin: 0; }
+
+  /* ── Includes ── */
+  .prod-includes { background: var(--color-bg); border-radius: 14px; padding: 1.75rem 2rem; }
+  .prod-includes__title { font-size: 1.0625rem; font-weight: 700; color: var(--color-text); margin: 0 0 1rem; }
+  .prod-includes__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; }
+  .prod-feat { font-size: 0.875rem; color: var(--color-text-light); padding-left: 1.25rem; position: relative; line-height: 1.5; }
+  .prod-feat::before { content: ""; position: absolute; left: 0; top: 0.45rem; width: 6px; height: 6px; border-radius: 50%; background: var(--color-accent); }
+  @media (max-width: 640px) { .prod-includes__grid { grid-template-columns: 1fr; } }
+
+  /* ── Sidebar ── */
+  .prod-sidebar { display: flex; flex-direction: column; gap: 1.25rem; }
+  @media (min-width: 1024px) { .prod-sidebar { position: sticky; top: calc(var(--header-height) + var(--topbar-height) + 1.5rem); align-self: start; } }
+  .ps-widget { background: var(--color-white); border: 1px solid var(--color-border); border-radius: 12px; padding: 1.25rem; }
+  .ps-widget--dark { background: var(--color-primary); color: #fff; border: none; }
+  .ps-widget__title { font-size: 0.875rem; font-weight: 700; color: var(--color-text); text-transform: uppercase; letter-spacing: 0.05em; margin: 0 0 0.75rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--color-accent); }
+  .ps-widget__title--light { color: #fff; }
+  .ps-widget__desc { font-size: 0.8125rem; color: rgba(255,255,255,0.75); margin: 0 0 0.75rem; }
+  .ps-widget__btn { display: block; text-align: center; padding: 0.625rem; border-radius: 6px; font-size: 0.875rem; font-weight: 600; text-decoration: none; margin-top: 0.5rem; background: var(--color-accent); color: #fff; transition: background 0.2s ease; }
+  .ps-widget__btn:hover { opacity: 0.9; }
+  .ps-widget__btn--wa { background: #25D366; }
+
+  .ps-specs { display: flex; flex-direction: column; margin: 0; }
+  .ps-specs__row { display: flex; justify-content: space-between; align-items: baseline; padding: 0.4rem 0; border-bottom: 1px solid var(--color-bg); gap: 0.75rem; }
+  .ps-specs__row:last-child { border-bottom: none; }
+  .ps-specs__row dt { font-size: 0.8125rem; color: var(--color-text-light); font-weight: 500; margin: 0; }
+  .ps-specs__row dd { font-size: 0.8125rem; font-weight: 600; color: var(--color-text); text-align: right; margin: 0; font-variant-numeric: tabular-nums; }
+
+  .ps-tags { display: flex; flex-wrap: wrap; gap: 0.375rem; }
+  .ps-tag { font-size: 0.6875rem; font-weight: 600; color: var(--color-text); padding: 0.3rem 0.75rem; background: var(--color-bg); border: 1px solid var(--color-border); border-radius: 6px; white-space: nowrap; }
+
+  .ps-pkg { display: flex; gap: 0.75rem; align-items: center; text-decoration: none; padding: 0.625rem 0; border-bottom: 1px solid var(--color-bg); }
+  .ps-pkg:last-of-type { border-bottom: none; }
+  .ps-pkg__img { width: 72px; height: 54px; object-fit: cover; border-radius: 8px; flex-shrink: 0; }
+  .ps-pkg__info { display: flex; flex-direction: column; gap: 0.125rem; }
+  .ps-pkg__name { font-size: 0.8125rem; font-weight: 600; color: var(--color-text); }
+  .ps-pkg__price { font-size: 0.75rem; font-weight: 700; color: var(--color-accent); font-variant-numeric: tabular-nums; }
+  .ps-pkg:hover .ps-pkg__name { color: var(--color-accent); }
+
+  .ps-upsell { margin-top: 0.75rem; padding-top: 0.75rem; border-top: 1px solid var(--color-bg); }
+  .ps-upsell__text { font-size: 0.75rem; color: var(--color-text-light); line-height: 1.5; margin: 0 0 0.375rem; }
+  .ps-upsell__link { font-size: 0.75rem; font-weight: 600; color: var(--color-accent); text-decoration: none; }
+  .ps-upsell__link:hover { text-decoration: underline; }
+
+  .ps-links { display: flex; flex-direction: column; }
+  .ps-link { padding: 0.4rem 0; border-bottom: 1px solid var(--color-bg); font-size: 0.8125rem; color: var(--color-text-light); text-decoration: none; }
+  .ps-link:last-child { border-bottom: none; }
+  .ps-link:hover { color: var(--color-accent); }
+
+  .ps-contact p { font-size: 0.8125rem; color: var(--color-text-light); margin: 0.3rem 0; }
+  .ps-contact a { color: var(--color-accent); text-decoration: none; }
+
+  /* ── Process Steps ── */
+  .prod-process { margin: 2.5rem 0; }
+  .prod-process__title { font-size: 1.125rem; font-weight: 800; color: var(--color-text); letter-spacing: -0.02em; margin: 0 0 1.25rem; }
+  .prod-steps { display: flex; flex-direction: column; gap: 0; }
+  .prod-step { display: flex; gap: 1rem; padding: 1rem 0; border-bottom: 1px solid var(--color-border); }
+  .prod-step:last-child { border-bottom: none; }
+  .prod-step__num { flex-shrink: 0; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; background: var(--color-accent); color: #fff; font-size: 0.8125rem; font-weight: 700; border-radius: 50%; }
+  .prod-step__content { display: flex; flex-direction: column; gap: 0.2rem; }
+  .prod-step__name { font-size: 0.9375rem; font-weight: 700; color: var(--color-text); margin: 0; line-height: 1.3; }
+  .prod-step__desc { font-size: 0.8125rem; color: var(--color-text-light); line-height: 1.6; margin: 0; }
+
+  /* ── Comparison ── */
+  .prod-compare { margin: 2.5rem 0; }
+  .prod-compare__title { font-size: 1.125rem; font-weight: 800; color: var(--color-text); letter-spacing: -0.02em; margin: 0 0 1.25rem; }
+  .prod-compare__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+  @media (max-width: 640px) { .prod-compare__grid { grid-template-columns: 1fr; } }
+  .prod-compare__col { border-radius: 12px; padding: 1.25rem; }
+  .prod-compare__col--them { background: #fef2f2; border: 1px solid #fecaca; }
+  .prod-compare__col--us { background: #eff6ff; border: 1px solid #bfdbfe; }
+  .prod-compare__label { display: block; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.75rem; }
+  .prod-compare__col--them .prod-compare__label { color: #991b1b; }
+  .prod-compare__col--us .prod-compare__label { color: var(--color-primary); }
+  .prod-compare__list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.5rem; }
+  .prod-compare__list li { font-size: 0.8125rem; color: var(--color-text); line-height: 1.4; padding-left: 1.125rem; position: relative; }
+  .prod-compare__col--them .prod-compare__list li::before { content: "–"; position: absolute; left: 0; color: #dc2626; font-size: 0.75rem; font-weight: 700; }
+  .prod-compare__col--us .prod-compare__list li::before { content: "✓"; position: absolute; left: 0; color: var(--color-accent); font-size: 0.75rem; font-weight: 700; }
+
+  /* ── Social Proof ── */
+  .prod-proof { margin-top: 2.5rem; }
+  .prod-quote { background: var(--color-bg); border-radius: 14px; padding: 1.75rem 2rem; border-left: 4px solid var(--color-accent); margin: 0; }
+  .prod-quote__text { font-size: 0.9375rem; color: var(--color-text); line-height: 1.75; font-style: italic; margin: 0 0 1rem; }
+  .prod-quote__footer { display: flex; flex-direction: column; gap: 0.125rem; }
+  .prod-quote__name { font-size: 0.875rem; font-weight: 700; color: var(--color-text); font-style: normal; }
+  .prod-quote__event { font-size: 0.75rem; color: var(--color-text-light); font-style: normal; }
 </style>

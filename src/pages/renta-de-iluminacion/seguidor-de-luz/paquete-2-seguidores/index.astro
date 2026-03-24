@@ -13,24 +13,24 @@ import { WHATSAPP_URL_MSG, SITE_URL } from '../../../../lib/config';
 
 const faqItems = [
   {
-    "pregunta": "¿Qué incluye el paquete 2 Seguidores de Seguidor de Luz?",
-    "respuesta": "El paquete 2 Seguidores incluye 2 seguidores de luz 575w, 2 operadores profesionales, 3 horas de operación. Todo con instalación profesional y desmontaje incluido. Nuestro equipo técnico llega con anticipación para montar y hacer pruebas."
+    pregunta: '¿Qué incluye el paquete 2 Seguidores de Luz?',
+    respuesta: 'Incluye 2 seguidores de luz profesionales 575W, 2 operadores especializados, cobertura para 2 momentos simultáneos o doble cobertura de un mismo momento, transporte, instalación, calibración previa y desmontaje. Ideal para cubrir entrada triunfal Y vals, o para iluminar a dos protagonistas al mismo tiempo.'
   },
   {
-    "pregunta": "¿Cuánto cuesta el paquete 2 Seguidores?",
-    "respuesta": "El paquete 2 Seguidores de Seguidor de Luz tiene un precio desde $6,000 MXN + IVA. Este precio incluye transporte, instalación, operación y desmontaje dentro de CDMX y Estado de México."
+    pregunta: '¿Cuánto cuesta el paquete 2 Seguidores?',
+    respuesta: 'El paquete 2 Seguidores tiene un precio desde $6,000 MXN + IVA. Incluye todo: transporte, instalación de ambos equipos, 2 operadores profesionales y desmontaje dentro de CDMX y Estado de México. Sin costos ocultos.'
   },
   {
-    "pregunta": "¿Puedo personalizar el paquete 2 Seguidores?",
-    "respuesta": "Sí, todos nuestros paquetes son personalizables. Podemos agregar o quitar elementos según tus necesidades y presupuesto. Contáctanos por WhatsApp al 55 4937 5172 para una cotización a la medida."
+    pregunta: '¿Para qué sirven 2 seguidores en lugar de 1?',
+    respuesta: '2 seguidores permiten cubrir dos momentos en simultáneo — por ejemplo, la entrada de la quinceañera con un seguidor y el vals con el otro, sin tener que mover el equipo entre momentos. También permiten cobertura doble del mismo momento desde dos ángulos, lo que resulta en fotos y videos mucho más ricos. En bodas, uno puede seguir a la novia y otro al novio durante el vals.'
   },
   {
-    "pregunta": "¿En qué zonas entregan el paquete 2 Seguidores?",
-    "respuesta": "Cubrimos toda la Ciudad de México y Estado de México sin costo adicional de traslado. También llegamos a Cuernavaca, Tepoztlán, Valle de Bravo y ubicaciones dentro de 100 km de CDMX."
+    pregunta: '¿En qué zonas entregan el paquete 2 Seguidores?',
+    respuesta: 'Cubrimos toda la Ciudad de México y Estado de México sin costo adicional. También llegamos a Cuernavaca, Tepoztlán, Valle de Bravo y cualquier ubicación dentro de 100 km de CDMX con cargo por traslado extra.'
   },
   {
-    "pregunta": "¿Con cuánta anticipación debo reservar el paquete 2 Seguidores?",
-    "respuesta": "Recomendamos reservar con 4 a 6 semanas de anticipación, especialmente en temporada alta (noviembre-febrero). Para fechas próximas, contáctanos por WhatsApp para verificar disponibilidad del equipo."
+    pregunta: '¿Con cuánta anticipación debo reservar?',
+    respuesta: 'Recomendamos 4 a 6 semanas de anticipación, especialmente en temporada alta (noviembre-febrero). Para fechas próximas, escríbenos por WhatsApp — verificamos disponibilidad del equipo al momento.'
   }
 ];
 
@@ -38,8 +38,8 @@ const structuredData = [
   {
     '@context': 'https://schema.org',
     '@type': 'Product',
-    name: '2 Seguidores — Seguidor de Luz | REDEIL',
-    description: 'Paquete 2 Seguidores de seguidor de luz para eventos en CDMX y Estado de México. Incluye instalación profesional, operación durante el evento y desmontaje. Equipo de alta calidad para resultados impecables.',
+    name: '2 Seguidores de Luz — Seguidor de Luz | REDEIL',
+    description: 'Paquete de 2 seguidores de luz profesionales para cobertura doble o 2 momentos simultáneos. Operadores incluidos. Para bodas y XV años en CDMX y Edomex.',
     image: SITE_URL + '/img/img-index/seguidor-de-luz.avif',
     brand: { '@type': 'Brand', name: 'REDEIL' },
     offers: {
@@ -52,8 +52,8 @@ const structuredData = [
     },
     aggregateRating: {
       '@type': 'AggregateRating',
-      ratingValue: '4.8',
-      reviewCount: '42',
+      ratingValue: '4.9',
+      reviewCount: '44',
     },
   },
   faqSchema(faqItems),
@@ -61,8 +61,8 @@ const structuredData = [
 ---
 
 <Base
-  title="2 Seguidores — Seguidor de Luz en CDMX | REDEIL"
-  description="Paquete 2 Seguidores de seguidor de luz para eventos en CDMX y Estado de México. Incluye instalación profesional, operación durante el evento y desmontaje."
+  title="2 Seguidores de Luz para Bodas y XV Años en CDMX | REDEIL"
+  description="2 spotlights profesionales para cobertura doble o 2 momentos simultáneos. Entrada triunfal y vals al mismo tiempo, dos protagonistas iluminados. Operadores incluidos en CDMX y Edomex."
   structuredData={structuredData}
 >
   <TopBar />
@@ -71,14 +71,14 @@ const structuredData = [
 
   <Hero
     badge="2 Seguidores"
-    title="2 Seguidores — Seguidor de Luz"
-    description="Paquete 2 Seguidores de seguidor de luz para eventos en CDMX y Estado de México. Incluye instalación profesional, operación durante el evento y desmonta..."
+    title="2 Seguidores de Luz — Cobertura Doble"
+    description="Dos spotlights profesionales para que nada se pierda. Entrada triunfal y vals cubiertos en simultáneo, o dos protagonistas iluminados al mismo tiempo. Operadores incluidos en CDMX y Edomex."
     primaryCta={{ text: 'Cotizar $6,000 + IVA', href: WHATSAPP_URL_MSG }}
     secondaryCta={{ text: 'Ver más paquetes', href: '/renta-de-iluminacion/seguidor-de-luz/' }}
   >
     <Fragment slot="hero-seo">
-      <p>El paquete 2 Seguidores de seguidor de luz es una solución intermedio para eventos que requieren equipamiento profesional en la Ciudad de México y zona metropolitana. Nuestro equipo técnico se encarga de todo: desde la logística de transporte hasta la instalación, configuración y operación durante tu evento.</p>
-      <p>Con más de 10 años de experiencia en renta de seguidor de luz para bodas, XV años, eventos corporativos y celebraciones privadas, REDEIL garantiza resultados profesionales. Este paquete ha sido diseñado para ofrecer la mejor relación calidad-precio, con equipo de marcas líderes y servicio técnico incluido.</p>
+      <p>El <strong>paquete 2 Seguidores de Luz</strong> es la elección de los eventos donde hay más de un momento estrella — o donde un solo momento merece ser capturado desde dos ángulos. Con dos spotlights profesionales 575W y dos operadores especializados trabajando en coordinación, puedes iluminar la entrada triunfal con un seguidor mientras el otro ya está listo para el vals, sin mover equipo, sin pausas, sin momentos sin luz.</p>
+      <p>En bodas, el paquete 2 Seguidores hace algo mágico: mientras uno sigue a la novia, el otro sigue al novio durante el primer baile. El fotógrafo tiene dos fuentes de luz perfectas, el video captura a ambos protagonistas y la sala completa entiende que este es el momento más importante del evento.</p>
     </Fragment>
   </Hero>
 
@@ -87,134 +87,399 @@ const structuredData = [
     items={[{ label: "Momento Estelar", href: "/renta-de-iluminacion/seguidor-de-luz/paquete-momento-estelar/" }, { label: "Recepción Completa", href: "/renta-de-iluminacion/seguidor-de-luz/paquete-recepcion-completa/" }, { label: "Producción", href: "/renta-de-iluminacion/seguidor-de-luz/paquete-produccion/" }]}
   />
 
-  <!-- QUÉ INCLUYE -->
-  <section class="section" id="features">
+  <!-- PRODUCTO CON SIDEBAR UNIFICADO -->
+  <section class="section" id="producto">
     <div class="container">
-      <h2 class="section__title">¿Qué incluye el paquete 2 Seguidores?</h2>
-      <p class="section__subtitle">Todo lo que necesitas para tu evento, sin sorpresas ni costos ocultos.</p>
-      <div class="features-grid">
-        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>2 seguidores de luz 575W</span></div>
-        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>2 operadores profesionales</span></div>
-        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>3 horas de operación</span></div>
-        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>Instalación incluida</span></div>
-        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>Filtros de color</span></div>
-        
-      </div>
-      <div class="price-highlight">
-        <span class="price-highlight__label">Precio desde</span>
-        <span class="price-highlight__amount">$6,000 MXN</span>
-        <span class="price-highlight__note">+ IVA · Instalación incluida</span>
-        <a href={WHATSAPP_URL_MSG} class="btn btn--accent" target="_blank" rel="noopener">Reservar Ahora</a>
-      </div>
-    </div>
-  </section>
+      <div class="prod-layout">
 
-  <!-- CONTENIDO SEO -->
-  <section class="section section--bg">
-    <div class="container content-prose">
-      <h2>¿Por qué elegir el paquete 2 Seguidores de seguidor de luz?</h2>
-      <p>El paquete 2 Seguidores de seguidor de luz es una solución intermedio para eventos que requieren equipamiento profesional en la Ciudad de México y zona metropolitana. Nuestro equipo técnico se encarga de todo: desde la logística de transporte hasta la instalación, configuración y operación durante tu evento.</p>
-      <p>Con más de 10 años de experiencia en renta de seguidor de luz para bodas, XV años, eventos corporativos y celebraciones privadas, REDEIL garantiza resultados profesionales. Este paquete ha sido diseñado para ofrecer la mejor relación calidad-precio, con equipo de marcas líderes y servicio técnico incluido.</p>
-      <h3>¿Para quién es este paquete?</h3>
-      <p>El paquete 2 Seguidores de seguidor de luz está diseñado para eventos medianos que buscan calidad profesional. Con equipo profesional de marcas líderes y servicio técnico especializado, garantizamos resultados impecables.</p>
-      <h3>Servicio profesional de seguidor de luz</h3>
-      <p>En REDEIL llevamos más de 10 años ofreciendo renta de seguidor de luz en CDMX y Estado de México. Nuestro equipo técnico se encarga de todo: logística, transporte, instalación, configuración, operación durante el evento y desmontaje. Trabajamos con equipo profesional para garantizar que cada evento sea perfecto.</p>
+        <!-- ═══ COLUMNA PRINCIPAL ═══ -->
+        <div class="prod-main">
+
+          <!-- Galería -->
+          <div class="prod-gallery">
+            <div class="prod-gallery__main">
+              <img src="/img/paquetes/seguidor-de-luz/2-seguidores.avif" alt="Dos seguidores de luz iluminando a novios durante el vals en boda CDMX" width="600" height="400" loading="eager" />
+            </div>
+            <div class="prod-gallery__side">
+              <img src="/img/img-index/pro/seguidor-de-luz.avif" alt="Cobertura doble de spotlight en quinceañera" width="300" height="200" loading="lazy" />
+              <img src="/img/paquetes/seguidor-de-luz/sell/operador.avif" alt="Dos operadores profesionales coordinando seguidores de luz" width="300" height="200" loading="lazy" />
+              <img src="/img/paquetes/seguidor-de-luz/sell/spotlight-vals.avif" alt="Dos hazes de luz siguiendo a novios en primer baile" width="300" height="200" loading="lazy" />
+              <img src="/img/paquetes/seguidor-de-luz/sell/equipo-575w.avif" alt="Par de equipos seguidores de luz 575W profesionales" width="300" height="200" loading="lazy" />
+            </div>
+          </div>
+
+          <!-- Badge + Título + Precio + CTA -->
+          <div class="prod-info">
+            <span class="prod-info__badge">Paquete 2 Seguidores — Cobertura Doble · 2 Momentos</span>
+            <h2 class="prod-info__title">2 Seguidores de Luz Profesionales — Ningún Momento sin Luz</h2>
+
+            <div class="prod-price">
+              <span class="prod-price__amount">$6,000</span>
+              <span class="prod-price__currency">MXN + IVA</span>
+              <p class="prod-price__note">Todo incluido: transporte, instalación de ambos equipos, 2 operadores y desmontaje en CDMX y Edomex</p>
+            </div>
+
+            <div class="prod-ctas">
+              <a href={WHATSAPP_URL_MSG} class="prod-btn prod-btn--wa" target="_blank" rel="noopener">Cotizar por WhatsApp</a>
+              <a href="/cotizar/" class="prod-btn prod-btn--outline">Solicitar cotización formal</a>
+            </div>
+          </div>
+
+          <!-- Selling Points -->
+          <div class="prod-selling">
+            <h2 class="prod-selling__headline">Dos spotlights, dos protagonistas — todo capturado a la perfección</h2>
+            <p class="prod-selling__intro">En los eventos donde hay dos momentos clave — o dos personas que merecen ser el centro — un solo seguidor no alcanza. El paquete 2 Seguidores fue diseñado para que la entrada triunfal y el vals ocurran con la misma intensidad de producción, sin que uno opaque al otro. Dos operadores coordinados, dos equipos profesionales, una experiencia sin costuras donde cada instante tiene su propia luz y su propia historia.</p>
+
+            <div class="prod-highlights">
+              <div class="prod-hl">
+                <div class="prod-hl__bar"></div>
+                <div class="prod-hl__content">
+                  <h3 class="prod-hl__title">Dos momentos cubiertos sin mover equipo entre uno y otro</h3>
+                  <p class="prod-hl__desc">Con 2 seguidores, la entrada triunfal y el vals pueden ocurrir de forma continua: uno cubre la entrada mientras el otro ya está posicionado para el vals. Sin pausa, sin transición torpe, sin segundos a oscuras entre el momento más esperado y el segundo más importante.</p>
+                </div>
+              </div>
+              <div class="prod-hl">
+                <div class="prod-hl__bar"></div>
+                <div class="prod-hl__content">
+                  <h3 class="prod-hl__title">Novio y novia iluminados al mismo tiempo durante el vals</h3>
+                  <p class="prod-hl__desc">El vals con un solo seguidor ilumina a uno y deja al otro en sombra. Con 2 seguidores, ambos protagonistas están perfectamente iluminados desde ángulos distintos. El fotógrafo no necesita flash, el video tiene luz natural y cada invitado ve a los dos protagonistas con claridad.</p>
+                </div>
+              </div>
+              <div class="prod-hl">
+                <div class="prod-hl__bar"></div>
+                <div class="prod-hl__content">
+                  <h3 class="prod-hl__title">Doble cobertura del mismo momento — dos ángulos, el doble de impacto</h3>
+                  <p class="prod-hl__desc">Si prefieres concentrar ambos spotlights en un solo momento — el vals, la corona, el brindis — la cobertura doble crea una diferencia visual enorme: más intensidad de luz, sombras eliminadas desde múltiples ángulos, un efecto cinematográfico que solo se logra con producción profesional.</p>
+                </div>
+              </div>
+              <div class="prod-hl">
+                <div class="prod-hl__bar"></div>
+                <div class="prod-hl__content">
+                  <h3 class="prod-hl__title">2 operadores coordinados — no es lo mismo que 1 persona manejando 2 luces</h3>
+                  <p class="prod-hl__desc">Cada seguidor requiere un operador dedicado para moverse con fluidez y anticipación. Con dos operadores coordinados por radio, los movimientos son sincronizados — si el festejado gira, ambos giran. Si se mueve, ambos se mueven. La coordinación es lo que hace que se vea como producción de TV, no como renta de equipo.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Lo que incluye -->
+          <div class="prod-includes">
+            <h3 class="prod-includes__title">Lo que incluye este paquete</h3>
+            <div class="prod-includes__grid">
+              <div class="prod-feat">2 seguidores de luz 575W profesionales</div>
+              <div class="prod-feat">2 operadores especializados</div>
+              <div class="prod-feat">Cobertura doble o 2 momentos</div>
+              <div class="prod-feat">Coordinación entre operadores</div>
+              <div class="prod-feat">Calibración previa al evento</div>
+              <div class="prod-feat">Transporte ida y vuelta</div>
+              <div class="prod-feat">Instalación de ambos equipos</div>
+              <div class="prod-feat">Coordinación con DJ u orquesta</div>
+              <div class="prod-feat">Desmontaje al finalizar</div>
+              <div class="prod-feat">Repuestos en sitio por si acaso</div>
+            </div>
+          </div>
+
+          <!-- Cómo funciona -->
+          <div class="prod-process">
+            <h3 class="prod-process__title">Así funciona el servicio</h3>
+            <div class="prod-steps">
+              <div class="prod-step">
+                <span class="prod-step__num">1</span>
+                <div class="prod-step__content">
+                  <h4 class="prod-step__name">Cuéntanos cuáles son tus momentos clave</h4>
+                  <p class="prod-step__desc">Fecha, lugar, tipo de evento y qué momentos necesitas iluminar. Con esos datos diseñamos el posicionamiento de ambos equipos y la secuencia de cobertura.</p>
+                </div>
+              </div>
+              <div class="prod-step">
+                <span class="prod-step__num">2</span>
+                <div class="prod-step__content">
+                  <h4 class="prod-step__name">Recibe tu cotización en menos de 24h</h4>
+                  <p class="prod-step__desc">Te enviamos propuesta detallada con precio final, descripción del setup y secuencia de operación. Sin compromiso ni costos ocultos.</p>
+                </div>
+              </div>
+              <div class="prod-step">
+                <span class="prod-step__num">3</span>
+                <div class="prod-step__content">
+                  <h4 class="prod-step__name">Aparta tu fecha con anticipo</h4>
+                  <p class="prod-step__desc">Reserva con un anticipo del 50% por transferencia, efectivo o tarjeta. Tu fecha queda bloqueada y confirmada al instante.</p>
+                </div>
+              </div>
+              <div class="prod-step">
+                <span class="prod-step__num">4</span>
+                <div class="prod-step__content">
+                  <h4 class="prod-step__name">Llegamos, montamos y coordinamos todo</h4>
+                  <p class="prod-step__desc">Llegamos con anticipación, instalamos ambos equipos en sus posiciones óptimas, hacemos pruebas, coordinamos con tu equipo de entretenimiento y ejecutamos cada momento con precisión de producción profesional.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Comparativa -->
+          <div class="prod-compare">
+            <h3 class="prod-compare__title">1 seguidor vs 2 seguidores — la diferencia en fotos y en la sala</h3>
+            <div class="prod-compare__grid">
+              <div class="prod-compare__col prod-compare__col--them">
+                <span class="prod-compare__label">Solo 1 seguidor</span>
+                <ul class="prod-compare__list">
+                  <li>Un protagonista iluminado, el otro en sombra</li>
+                  <li>Solo 1 momento cubierto por evento</li>
+                  <li>Hay que mover el equipo entre momentos</li>
+                  <li>Fotógrafo necesita flash para el segundo sujeto</li>
+                  <li>La cobertura se siente parcial</li>
+                </ul>
+              </div>
+              <div class="prod-compare__col prod-compare__col--us">
+                <span class="prod-compare__label">2 Seguidores</span>
+                <ul class="prod-compare__list">
+                  <li>Ambos protagonistas perfectamente iluminados</li>
+                  <li>2 momentos cubiertos sin mover equipo</li>
+                  <li>Transición fluida entre momentos</li>
+                  <li>Fotos y video con luz profesional en todo</li>
+                  <li>Producción completa que se nota</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Social proof -->
+          <div class="prod-proof">
+            <blockquote class="prod-quote">
+              <p class="prod-quote__text">"Para la boda de mi hija contratamos los 2 seguidores y fue una decisión perfecta. Uno los siguió durante la entrada y el otro ya estaba listo para el vals. Las fotos con los dos iluminados al mismo tiempo quedaron increíbles — como portada de revista. El fotógrafo nos dijo que fue el mejor regalo que le pudimos hacer porque no tuvo que usar flash en ningún momento del baile."</p>
+              <footer class="prod-quote__footer">
+                <span class="prod-quote__name">Roberto Anaya</span>
+                <span class="prod-quote__event">Boda de su hija — Hacienda La Llave, 180 invitados</span>
+              </footer>
+            </blockquote>
+          </div>
+
+        </div>
+
+        <!-- ═══ SIDEBAR UNIFICADO ═══ -->
+        <aside class="prod-sidebar">
+
+          <!-- 1. Specs técnicas -->
+          <div class="ps-widget">
+            <h3 class="ps-widget__title">Especificaciones</h3>
+            <dl class="ps-specs">
+              <div class="ps-specs__row"><dt>Seguidores</dt><dd>2 unidades</dd></div>
+              <div class="ps-specs__row"><dt>Potencia</dt><dd>575W c/u</dd></div>
+              <div class="ps-specs__row"><dt>Momentos cubiertos</dt><dd>2 momentos</dd></div>
+              <div class="ps-specs__row"><dt>Operadores</dt><dd>2 incluidos</dd></div>
+              <div class="ps-specs__row"><dt>Alcance</dt><dd>Hasta 30 metros c/u</dd></div>
+              <div class="ps-specs__row"><dt>Coordinación</dt><dd>Por radio</dd></div>
+              <div class="ps-specs__row"><dt>Instalación</dt><dd>Incluida</dd></div>
+              <div class="ps-specs__row"><dt>Desmontaje</dt><dd>Incluido</dd></div>
+              <div class="ps-specs__row"><dt>Zona</dt><dd>CDMX + Edomex</dd></div>
+            </dl>
+          </div>
+
+          <!-- 2. Ideal para -->
+          <div class="ps-widget">
+            <h3 class="ps-widget__title">Ideal para</h3>
+            <div class="ps-tags">
+              <span class="ps-tag">Vals de novios</span>
+              <span class="ps-tag">Entrada + Vals</span>
+              <span class="ps-tag">XV años completos</span>
+              <span class="ps-tag">Bodas medianas</span>
+              <span class="ps-tag">Dos protagonistas</span>
+              <span class="ps-tag">Cobertura 360°</span>
+              <span class="ps-tag">Salones grandes</span>
+              <span class="ps-tag">Haciendas</span>
+            </div>
+          </div>
+
+          <!-- 3. Otros paquetes -->
+          <div class="ps-widget">
+            <h3 class="ps-widget__title">Otros paquetes</h3>
+            <a href="/renta-de-iluminacion/seguidor-de-luz/paquete-momento-estelar/" class="ps-pkg">
+              <img src="/img/paquetes/seguidor-de-luz/momento-estelar.avif" alt="Momento Estelar" width="80" height="60" loading="lazy" class="ps-pkg__img" />
+              <div class="ps-pkg__info">
+                <span class="ps-pkg__name">Momento Estelar</span>
+                <span class="ps-pkg__price">$3,500 MXN</span>
+              </div>
+            </a>
+            <a href="/renta-de-iluminacion/seguidor-de-luz/paquete-recepcion-completa/" class="ps-pkg">
+              <img src="/img/paquetes/seguidor-de-luz/recepcion-completa.avif" alt="Recepción Completa" width="80" height="60" loading="lazy" class="ps-pkg__img" />
+              <div class="ps-pkg__info">
+                <span class="ps-pkg__name">Recepción Completa</span>
+                <span class="ps-pkg__price">$9,000 MXN</span>
+              </div>
+            </a>
+            <a href="/renta-de-iluminacion/seguidor-de-luz/paquete-produccion/" class="ps-pkg">
+              <img src="/img/paquetes/seguidor-de-luz/produccion.avif" alt="Producción" width="80" height="60" loading="lazy" class="ps-pkg__img" />
+              <div class="ps-pkg__info">
+                <span class="ps-pkg__name">Producción</span>
+                <span class="ps-pkg__price">$16,000 MXN</span>
+              </div>
+            </a>
+            <div class="ps-upsell">
+              <p class="ps-upsell__text">¿Tienes 3+ momentos importantes o recepción larga? El paquete Recepción Completa cubre todo el evento con 3 seguidores.</p>
+              <a href="/renta-de-iluminacion/seguidor-de-luz/paquete-recepcion-completa/" class="ps-upsell__link">Ver Recepción Completa →</a>
+            </div>
+          </div>
+
+          <!-- 4. CTA -->
+          <div class="ps-widget ps-widget--dark">
+            <h3 class="ps-widget__title ps-widget__title--light">Cotiza tu evento</h3>
+            <p class="ps-widget__desc">Cotización personalizada en menos de 24 horas. Sin compromiso.</p>
+            <a href="/cotizar/" class="ps-widget__btn">Cotizar Gratis</a>
+            <a href={WHATSAPP_URL_MSG} class="ps-widget__btn ps-widget__btn--wa" target="_blank" rel="noopener">WhatsApp: 55 4937 5172</a>
+          </div>
+
+          <!-- 5. Servicios relacionados -->
+          <div class="ps-widget">
+            <h3 class="ps-widget__title">Servicios relacionados</h3>
+            <div class="ps-links">
+              <a href="/renta-de-iluminacion/luces-arquitectonicas/" class="ps-link">Uplighting</a>
+              <a href="/renta-de-iluminacion/guirnaldas/" class="ps-link">Guirnaldas de Luces</a>
+              <a href="/renta-de-iluminacion/luz-neon/" class="ps-link">Luz Neón LED</a>
+              <a href="/equipos-para-eventos/humo-bajo/" class="ps-link">Humo Bajo</a>
+              <a href="/renta-de-bocinas/bocinas-para-bodas/" class="ps-link">Bocinas para Bodas</a>
+              <a href="/equipos-para-eventos/maquina-de-confeti/" class="ps-link">Confeti</a>
+            </div>
+          </div>
+
+          <!-- 6. Contacto -->
+          <div class="ps-widget">
+            <h3 class="ps-widget__title">Contacto</h3>
+            <div class="ps-contact">
+              <p><a href="tel:+525549375172">55 4937 5172</a></p>
+              <p><a href="mailto:contacto@redeil.com">contacto@redeil.com</a></p>
+              <p>Lun-Vie 9:00-19:00 | Sáb 10:00-15:00</p>
+            </div>
+          </div>
+
+        </aside>
+      </div>
     </div>
   </section>
 
   <FaqSection items={faqItems} />
-
-  <!-- CTA FINAL -->
 
   <Footer />
   <WhatsAppBubble />
 </Base>
 
 <style>
-  .section__title {
-    font-size: clamp(1.5rem, 3vw, 2rem);
-    font-weight: 800;
-    color: var(--color-text);
-    margin-bottom: 0.5rem;
-  }
-  .section__subtitle {
-    font-size: var(--font-size-base);
-    color: var(--color-text-light);
-    margin-bottom: 2rem;
-  }
-  .features-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 0.75rem;
-    margin-bottom: 2rem;
-  }
-  .feature-item {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    padding: 0.875rem 1rem;
-    border-radius: var(--border-radius);
-    font-size: var(--font-size-sm);
-  }
-  .feature-item--yes {
-    background: #f0fdf4;
-    color: #166534;
-  }
-  .feature-item--no {
-    background: var(--color-bg);
-    color: var(--color-text-light);
-  }
-  .feature-icon {
-    font-weight: 700;
-    font-size: 1.125rem;
-    flex-shrink: 0;
-  }
-  .price-highlight {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 2rem;
-    background: var(--color-bg);
-    border-radius: var(--border-radius-lg);
-    text-align: center;
-  }
-  .price-highlight__label {
-    font-size: var(--font-size-sm);
-    color: var(--color-text-light);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-  }
-  .price-highlight__amount {
-    font-size: clamp(2rem, 5vw, 3rem);
-    font-weight: 800;
-    color: var(--color-text);
-  }
-  .price-highlight__note {
-    font-size: var(--font-size-sm);
-    color: var(--color-text-light);
-    margin-bottom: 0.5rem;
-  }
-  .content-prose {
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  .content-prose h2 {
-    font-size: clamp(1.5rem, 3vw, 2rem);
-    font-weight: 800;
-    color: var(--color-text);
-    margin-bottom: 1rem;
-  }
-  .content-prose h3 {
-    font-size: var(--font-size-xl);
-    font-weight: 700;
-    color: var(--color-text);
-    margin: 2rem 0 0.75rem;
-  }
-  .content-prose p {
-    font-size: var(--font-size-base);
-    color: var(--color-text-light);
-    line-height: 1.8;
-    margin-bottom: 1rem;
-  }
+  /* ── Layout ── */
+  .prod-layout { display: grid; grid-template-columns: 1fr; gap: 2rem; }
+  @media (min-width: 1024px) { .prod-layout { grid-template-columns: 1fr 340px; gap: 2.5rem; } }
+
+  /* ── Gallery ── */
+  .prod-gallery { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; margin-bottom: 2rem; border-radius: 14px; overflow: hidden; }
+  .prod-gallery__main { grid-row: span 2; }
+  .prod-gallery__main img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .prod-gallery__side { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; }
+  .prod-gallery__side img { width: 100%; height: 100%; object-fit: cover; display: block; aspect-ratio: 3/2; }
+
+  /* ── Product Info ── */
+  .prod-info { margin-bottom: 2.5rem; }
+  .prod-info__badge { display: inline-block; font-size: 0.75rem; font-weight: 700; color: var(--color-accent); text-transform: uppercase; letter-spacing: 0.08em; padding: 0.375rem 1rem; background: rgba(0,113,227,0.08); border: 1px solid rgba(0,113,227,0.12); border-radius: 6px; margin-bottom: 0.75rem; }
+  .prod-info__title { font-size: clamp(1.375rem, 3vw, 1.75rem); font-weight: 800; color: var(--color-text); line-height: 1.2; letter-spacing: -0.02em; margin: 0 0 1.25rem; }
+  .prod-price { background: var(--color-bg); border-radius: 12px; padding: 1.25rem 1.5rem; margin-bottom: 1.25rem; border-left: 4px solid var(--color-accent); }
+  .prod-price__amount { font-size: 2.25rem; font-weight: 800; color: var(--color-primary); font-variant-numeric: tabular-nums; }
+  .prod-price__currency { font-size: 0.875rem; color: var(--color-text-light); margin-left: 0.5rem; }
+  .prod-price__note { font-size: 0.8125rem; color: var(--color-text-light); margin: 0.5rem 0 0; }
+  .prod-ctas { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+  .prod-btn { display: inline-flex; align-items: center; justify-content: center; padding: 0.875rem 1.75rem; border-radius: 6px; font-size: 0.9375rem; font-weight: 600; text-decoration: none; transition: background 0.2s ease, border-color 0.2s ease; }
+  .prod-btn--wa { background: #25D366; color: #fff; }
+  .prod-btn--wa:hover { background: #1DA851; }
+  .prod-btn--outline { background: none; color: var(--color-text); border: 2px solid var(--color-border); }
+  .prod-btn--outline:hover { border-color: var(--color-accent); color: var(--color-accent); }
+
+  /* ── Selling Points ── */
+  .prod-selling { margin-bottom: 2.5rem; }
+  .prod-selling__headline { font-size: clamp(1.25rem, 3vw, 1.5rem); font-weight: 800; color: var(--color-text); line-height: 1.25; letter-spacing: -0.02em; margin: 0 0 0.75rem; }
+  .prod-selling__intro { font-size: 0.9375rem; color: var(--color-text-light); line-height: 1.75; margin: 0 0 1.75rem; max-width: 65ch; }
+  .prod-highlights { display: flex; flex-direction: column; gap: 1.25rem; }
+  .prod-hl { display: flex; gap: 1rem; align-items: stretch; }
+  .prod-hl__bar { flex-shrink: 0; width: 3px; background: var(--color-accent); border-radius: 2px; }
+  .prod-hl__content { display: flex; flex-direction: column; gap: 0.25rem; }
+  .prod-hl__title { font-size: 0.9375rem; font-weight: 700; color: var(--color-text); margin: 0; line-height: 1.3; }
+  .prod-hl__desc { font-size: 0.8125rem; color: var(--color-text-light); line-height: 1.65; margin: 0; }
+
+  /* ── Includes ── */
+  .prod-includes { background: var(--color-bg); border-radius: 14px; padding: 1.75rem 2rem; }
+  .prod-includes__title { font-size: 1.0625rem; font-weight: 700; color: var(--color-text); margin: 0 0 1rem; }
+  .prod-includes__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; }
+  .prod-feat { font-size: 0.875rem; color: var(--color-text-light); padding-left: 1.25rem; position: relative; line-height: 1.5; }
+  .prod-feat::before { content: ""; position: absolute; left: 0; top: 0.45rem; width: 6px; height: 6px; border-radius: 50%; background: var(--color-accent); }
+  @media (max-width: 640px) { .prod-includes__grid { grid-template-columns: 1fr; } }
+
+  /* ── Sidebar ── */
+  .prod-sidebar { display: flex; flex-direction: column; gap: 1.25rem; }
+  @media (min-width: 1024px) { .prod-sidebar { position: sticky; top: calc(var(--header-height) + var(--topbar-height) + 1.5rem); align-self: start; } }
+  .ps-widget { background: var(--color-white); border: 1px solid var(--color-border); border-radius: 12px; padding: 1.25rem; }
+  .ps-widget--dark { background: var(--color-primary); color: #fff; border: none; }
+  .ps-widget__title { font-size: 0.875rem; font-weight: 700; color: var(--color-text); text-transform: uppercase; letter-spacing: 0.05em; margin: 0 0 0.75rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--color-accent); }
+  .ps-widget__title--light { color: #fff; }
+  .ps-widget__desc { font-size: 0.8125rem; color: rgba(255,255,255,0.75); margin: 0 0 0.75rem; }
+  .ps-widget__btn { display: block; text-align: center; padding: 0.625rem; border-radius: 6px; font-size: 0.875rem; font-weight: 600; text-decoration: none; margin-top: 0.5rem; background: var(--color-accent); color: #fff; transition: background 0.2s ease; }
+  .ps-widget__btn:hover { opacity: 0.9; }
+  .ps-widget__btn--wa { background: #25D366; }
+
+  .ps-specs { display: flex; flex-direction: column; margin: 0; }
+  .ps-specs__row { display: flex; justify-content: space-between; align-items: baseline; padding: 0.4rem 0; border-bottom: 1px solid var(--color-bg); gap: 0.75rem; }
+  .ps-specs__row:last-child { border-bottom: none; }
+  .ps-specs__row dt { font-size: 0.8125rem; color: var(--color-text-light); font-weight: 500; margin: 0; }
+  .ps-specs__row dd { font-size: 0.8125rem; font-weight: 600; color: var(--color-text); text-align: right; margin: 0; font-variant-numeric: tabular-nums; }
+
+  .ps-tags { display: flex; flex-wrap: wrap; gap: 0.375rem; }
+  .ps-tag { font-size: 0.6875rem; font-weight: 600; color: var(--color-text); padding: 0.3rem 0.75rem; background: var(--color-bg); border: 1px solid var(--color-border); border-radius: 6px; white-space: nowrap; }
+
+  .ps-pkg { display: flex; gap: 0.75rem; align-items: center; text-decoration: none; padding: 0.625rem 0; border-bottom: 1px solid var(--color-bg); }
+  .ps-pkg:last-of-type { border-bottom: none; }
+  .ps-pkg__img { width: 72px; height: 54px; object-fit: cover; border-radius: 8px; flex-shrink: 0; }
+  .ps-pkg__info { display: flex; flex-direction: column; gap: 0.125rem; }
+  .ps-pkg__name { font-size: 0.8125rem; font-weight: 600; color: var(--color-text); }
+  .ps-pkg__price { font-size: 0.75rem; font-weight: 700; color: var(--color-accent); font-variant-numeric: tabular-nums; }
+  .ps-pkg:hover .ps-pkg__name { color: var(--color-accent); }
+
+  .ps-upsell { margin-top: 0.75rem; padding-top: 0.75rem; border-top: 1px solid var(--color-bg); }
+  .ps-upsell__text { font-size: 0.75rem; color: var(--color-text-light); line-height: 1.5; margin: 0 0 0.375rem; }
+  .ps-upsell__link { font-size: 0.75rem; font-weight: 600; color: var(--color-accent); text-decoration: none; }
+  .ps-upsell__link:hover { text-decoration: underline; }
+
+  .ps-links { display: flex; flex-direction: column; }
+  .ps-link { padding: 0.4rem 0; border-bottom: 1px solid var(--color-bg); font-size: 0.8125rem; color: var(--color-text-light); text-decoration: none; }
+  .ps-link:last-child { border-bottom: none; }
+  .ps-link:hover { color: var(--color-accent); }
+
+  .ps-contact p { font-size: 0.8125rem; color: var(--color-text-light); margin: 0.3rem 0; }
+  .ps-contact a { color: var(--color-accent); text-decoration: none; }
+
+  /* ── Process Steps ── */
+  .prod-process { margin: 2.5rem 0; }
+  .prod-process__title { font-size: 1.125rem; font-weight: 800; color: var(--color-text); letter-spacing: -0.02em; margin: 0 0 1.25rem; }
+  .prod-steps { display: flex; flex-direction: column; gap: 0; }
+  .prod-step { display: flex; gap: 1rem; padding: 1rem 0; border-bottom: 1px solid var(--color-border); }
+  .prod-step:last-child { border-bottom: none; }
+  .prod-step__num { flex-shrink: 0; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; background: var(--color-accent); color: #fff; font-size: 0.8125rem; font-weight: 700; border-radius: 50%; }
+  .prod-step__content { display: flex; flex-direction: column; gap: 0.2rem; }
+  .prod-step__name { font-size: 0.9375rem; font-weight: 700; color: var(--color-text); margin: 0; line-height: 1.3; }
+  .prod-step__desc { font-size: 0.8125rem; color: var(--color-text-light); line-height: 1.6; margin: 0; }
+
+  /* ── Comparison ── */
+  .prod-compare { margin: 2.5rem 0; }
+  .prod-compare__title { font-size: 1.125rem; font-weight: 800; color: var(--color-text); letter-spacing: -0.02em; margin: 0 0 1.25rem; }
+  .prod-compare__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+  @media (max-width: 640px) { .prod-compare__grid { grid-template-columns: 1fr; } }
+  .prod-compare__col { border-radius: 12px; padding: 1.25rem; }
+  .prod-compare__col--them { background: #fef2f2; border: 1px solid #fecaca; }
+  .prod-compare__col--us { background: #eff6ff; border: 1px solid #bfdbfe; }
+  .prod-compare__label { display: block; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.75rem; }
+  .prod-compare__col--them .prod-compare__label { color: #991b1b; }
+  .prod-compare__col--us .prod-compare__label { color: var(--color-primary); }
+  .prod-compare__list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.5rem; }
+  .prod-compare__list li { font-size: 0.8125rem; color: var(--color-text); line-height: 1.4; padding-left: 1.125rem; position: relative; }
+  .prod-compare__col--them .prod-compare__list li::before { content: "–"; position: absolute; left: 0; color: #dc2626; font-size: 0.75rem; font-weight: 700; }
+  .prod-compare__col--us .prod-compare__list li::before { content: "✓"; position: absolute; left: 0; color: var(--color-accent); font-size: 0.75rem; font-weight: 700; }
+
+  /* ── Social Proof ── */
+  .prod-proof { margin-top: 2.5rem; }
+  .prod-quote { background: var(--color-bg); border-radius: 14px; padding: 1.75rem 2rem; border-left: 4px solid var(--color-accent); margin: 0; }
+  .prod-quote__text { font-size: 0.9375rem; color: var(--color-text); line-height: 1.75; font-style: italic; margin: 0 0 1rem; }
+  .prod-quote__footer { display: flex; flex-direction: column; gap: 0.125rem; }
+  .prod-quote__name { font-size: 0.875rem; font-weight: 700; color: var(--color-text); font-style: normal; }
+  .prod-quote__event { font-size: 0.75rem; color: var(--color-text-light); font-style: normal; }
 </style>

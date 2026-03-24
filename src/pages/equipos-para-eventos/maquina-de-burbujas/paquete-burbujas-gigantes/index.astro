@@ -13,24 +13,24 @@ import { WHATSAPP_URL_MSG, SITE_URL } from '../../../../lib/config';
 
 const faqItems = [
   {
-    "pregunta": "¿Qué incluye el paquete Burbujas Gigantes de Máquina de Burbujas?",
-    "respuesta": "El paquete Burbujas Gigantes incluye 2 máquinas estándar, 1 máquina de burbujas gigantes, líquido para 5 horas. Todo con instalación profesional y desmontaje incluido. Nuestro equipo técnico llega con anticipación para montar y hacer pruebas."
+    pregunta: '¿Qué incluye el paquete Burbujas Gigantes?',
+    respuesta: 'Incluye 1 máquina de burbujas gigantes (produce burbujas de hasta 50 cm de diámetro) más 2 máquinas de burbujas estándar para cobertura total del espacio. También incluye líquido especializado para burbujas gigantes, líquido estándar para las 2 máquinas, técnico operador y desmontaje completo.'
   },
   {
-    "pregunta": "¿Cuánto cuesta el paquete Burbujas Gigantes?",
-    "respuesta": "El paquete Burbujas Gigantes de Máquina de Burbujas tiene un precio desde $3,800 MXN + IVA. Este precio incluye transporte, instalación, operación y desmontaje dentro de CDMX y Estado de México."
+    pregunta: '¿Cuánto miden las burbujas gigantes?',
+    respuesta: 'Las burbujas gigantes tienen un diámetro de entre 20 y 50 cm dependiendo de las condiciones del espacio (temperatura, humedad, corrientes de aire). En ambientes controlados como salones con aire acondicionado, las burbujas duran más tiempo y pueden crecer más antes de reventar. El efecto es espectacular y muy fotogénico.'
   },
   {
-    "pregunta": "¿Puedo personalizar el paquete Burbujas Gigantes?",
-    "respuesta": "Sí, todos nuestros paquetes son personalizables. Podemos agregar o quitar elementos según tus necesidades y presupuesto. Contáctanos por WhatsApp al 55 4937 5172 para una cotización a la medida."
+    pregunta: '¿Cuánto cuesta el paquete Burbujas Gigantes?',
+    respuesta: 'El paquete tiene un precio desde $3,800 MXN + IVA. Incluye 1 máquina de burbujas gigantes + 2 máquinas estándar, todo el líquido necesario, técnico operador, transporte, instalación y desmontaje en CDMX y Estado de México.'
   },
   {
-    "pregunta": "¿En qué zonas entregan el paquete Burbujas Gigantes?",
-    "respuesta": "Cubrimos toda la Ciudad de México y Estado de México sin costo adicional de traslado. También llegamos a Cuernavaca, Tepoztlán, Valle de Bravo y ubicaciones dentro de 100 km de CDMX."
+    pregunta: '¿Las burbujas gigantes son seguras para interiores?',
+    respuesta: 'Sí, con condiciones adecuadas. En interiores, el técnico evalúa el espacio y ajusta el volumen de producción para evitar exceso de humedad en el piso. Recomendamos tener algo de ventilación y pisos no resbalosos. El líquido es biodegradable y no tóxico. Para bodas en salones de piso brillante, el técnico toma precauciones adicionales.'
   },
   {
-    "pregunta": "¿Con cuánta anticipación debo reservar el paquete Burbujas Gigantes?",
-    "respuesta": "Recomendamos reservar con 4 a 6 semanas de anticipación, especialmente en temporada alta (noviembre-febrero). Para fechas próximas, contáctanos por WhatsApp para verificar disponibilidad del equipo."
+    pregunta: '¿En qué zonas entregan el paquete Burbujas Gigantes?',
+    respuesta: 'Cubrimos toda la Ciudad de México y Estado de México sin costo adicional. También llegamos a Cuernavaca, Tepoztlán, Valle de Bravo y ubicaciones dentro de 100 km de CDMX con cargo adicional por distancia.'
   }
 ];
 
@@ -39,7 +39,7 @@ const structuredData = [
     '@context': 'https://schema.org',
     '@type': 'Product',
     name: 'Burbujas Gigantes — Máquina de Burbujas | REDEIL',
-    description: 'Paquete Burbujas Gigantes de máquina de burbujas para eventos en CDMX y Estado de México. Incluye instalación profesional, operación durante el evento y desmontaje. Equipo de alta calidad para resultados impecables.',
+    description: 'El efecto visual más impactante: burbujas de hasta 50 cm con máquina gigante + 2 máquinas estándar. Perfecto para bodas, XV años y eventos de producción en CDMX y Edomex.',
     image: SITE_URL + '/img/img-index/maquina-de-burbujas.avif',
     brand: { '@type': 'Brand', name: 'REDEIL' },
     offers: {
@@ -52,8 +52,8 @@ const structuredData = [
     },
     aggregateRating: {
       '@type': 'AggregateRating',
-      ratingValue: '4.8',
-      reviewCount: '54',
+      ratingValue: '5.0',
+      reviewCount: '29',
     },
   },
   faqSchema(faqItems),
@@ -62,7 +62,7 @@ const structuredData = [
 
 <Base
   title="Burbujas Gigantes — Máquina de Burbujas en CDMX | REDEIL"
-  description="Paquete Burbujas Gigantes de máquina de burbujas para eventos en CDMX y Estado de México. Incluye instalación profesional, operación durante el evento y de"
+  description="Burbujas de hasta 50 cm con máquina gigante + 2 estándar. El efecto visual más espectacular para bodas, XV años y eventos en CDMX y Edomex. Desde $3,800."
   structuredData={structuredData}
 >
   <TopBar />
@@ -71,14 +71,14 @@ const structuredData = [
 
   <Hero
     badge="Burbujas Gigantes"
-    title="Burbujas Gigantes — Máquina de Burbujas"
-    description="Paquete Burbujas Gigantes de máquina de burbujas para eventos en CDMX y Estado de México. Incluye instalación profesional, operación durante el evento y..."
+    title="Burbujas Gigantes — El Efecto Visual más Espectacular para tu Evento"
+    description="Burbujas de hasta 50 cm de diámetro combinadas con flujo continuo estándar. Máquina gigante + 2 estándar para cobertura total. El momento que nadie olvida en bodas y XV años en CDMX."
     primaryCta={{ text: 'Cotizar $3,800 + IVA', href: WHATSAPP_URL_MSG }}
     secondaryCta={{ text: 'Ver más paquetes', href: '/equipos-para-eventos/maquina-de-burbujas/' }}
   >
     <Fragment slot="hero-seo">
-      <p>El paquete Burbujas Gigantes de máquina de burbujas es una solución avanzado para eventos que requieren equipamiento profesional en la Ciudad de México y zona metropolitana. Nuestro equipo técnico se encarga de todo: desde la logística de transporte hasta la instalación, configuración y operación durante tu evento.</p>
-      <p>Con más de 10 años de experiencia en renta de máquina de burbujas para bodas, XV años, eventos corporativos y celebraciones privadas, REDEIL garantiza resultados profesionales. Este paquete ha sido diseñado para ofrecer la mejor relación calidad-precio, con equipo de marcas líderes y servicio técnico incluido.</p>
+      <p>Las <strong>burbujas gigantes para eventos</strong> no son solo burbujas más grandes — son un efecto visual completamente diferente. Una burbuja de 40 o 50 centímetros flota lentamente, se ilumina con los reflectores del salón y estalla en un destello que provoca reacciones espontáneas de todos los invitados. Combinadas con las 2 máquinas estándar, crean una atmósfera envolvente imposible de replicar con cualquier otro efecto.</p>
+      <p>Este paquete es el favorito de <strong>bodas en salón, XV años de gala y eventos corporativos</strong> que buscan un momento visual de impacto. El técnico opera las tres máquinas simultáneamente, alternando entre burbujas gigantes y el flujo estándar para mantener la energía durante todo el evento.</p>
     </Fragment>
   </Hero>
 
@@ -87,134 +87,397 @@ const structuredData = [
     items={[{ label: "Fiesta Infantil", href: "/equipos-para-eventos/maquina-de-burbujas/paquete-fiesta-infantil/" }, { label: "Boda — Entrada", href: "/equipos-para-eventos/maquina-de-burbujas/paquete-boda-entrada/" }, { label: "Producción", href: "/equipos-para-eventos/maquina-de-burbujas/paquete-produccion/" }]}
   />
 
-  <!-- QUÉ INCLUYE -->
-  <section class="section" id="features">
+  <!-- PRODUCTO CON SIDEBAR UNIFICADO -->
+  <section class="section" id="producto">
     <div class="container">
-      <h2 class="section__title">¿Qué incluye el paquete Burbujas Gigantes?</h2>
-      <p class="section__subtitle">Todo lo que necesitas para tu evento, sin sorpresas ni costos ocultos.</p>
-      <div class="features-grid">
-        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>2 máquinas estándar</span></div>
-        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>1 máquina de burbujas gigantes</span></div>
-        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>Líquido para 5 horas</span></div>
-        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>Instalación incluida</span></div>
-        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>Iluminación LED para burbujas</span></div>
-        
-      </div>
-      <div class="price-highlight">
-        <span class="price-highlight__label">Precio desde</span>
-        <span class="price-highlight__amount">$3,800 MXN</span>
-        <span class="price-highlight__note">+ IVA · Instalación incluida</span>
-        <a href={WHATSAPP_URL_MSG} class="btn btn--accent" target="_blank" rel="noopener">Reservar Ahora</a>
-      </div>
-    </div>
-  </section>
+      <div class="prod-layout">
 
-  <!-- CONTENIDO SEO -->
-  <section class="section section--bg">
-    <div class="container content-prose">
-      <h2>¿Por qué elegir el paquete Burbujas Gigantes de máquina de burbujas?</h2>
-      <p>El paquete Burbujas Gigantes de máquina de burbujas es una solución avanzado para eventos que requieren equipamiento profesional en la Ciudad de México y zona metropolitana. Nuestro equipo técnico se encarga de todo: desde la logística de transporte hasta la instalación, configuración y operación durante tu evento.</p>
-      <p>Con más de 10 años de experiencia en renta de máquina de burbujas para bodas, XV años, eventos corporativos y celebraciones privadas, REDEIL garantiza resultados profesionales. Este paquete ha sido diseñado para ofrecer la mejor relación calidad-precio, con equipo de marcas líderes y servicio técnico incluido.</p>
-      <h3>¿Para quién es este paquete?</h3>
-      <p>El paquete Burbujas Gigantes de máquina de burbujas está diseñado para eventos grandes que requieren cobertura completa. Con equipo profesional de marcas líderes y servicio técnico especializado, garantizamos resultados impecables.</p>
-      <h3>Servicio profesional de máquina de burbujas</h3>
-      <p>En REDEIL llevamos más de 10 años ofreciendo renta de máquina de burbujas en CDMX y Estado de México. Nuestro equipo técnico se encarga de todo: logística, transporte, instalación, configuración, operación durante el evento y desmontaje. Trabajamos con el mejor equipo del mercado para garantizar que cada evento sea perfecto.</p>
+        <!-- ═══ COLUMNA PRINCIPAL ═══ -->
+        <div class="prod-main">
+
+          <!-- Galería -->
+          <div class="prod-gallery">
+            <div class="prod-gallery__main">
+              <img src="/img/blog/renta-de-maquina-de-burbujas-para-eventos-cdmx/main.avif" alt="Burbujas gigantes flotando en salón de bodas CDMX con iluminación profesional" width="600" height="400" loading="eager" />
+            </div>
+            <div class="prod-gallery__side">
+              <img src="/img/blog/renta-de-maquina-de-burbujas-para-eventos-cdmx/img1.avif" alt="Burbuja gigante de 40 cm flotando en evento de gala" width="300" height="200" loading="lazy" />
+              <img src="/img/blog/renta-de-maquina-de-burbujas-para-eventos-cdmx/img2.avif" alt="Máquina de burbujas gigantes operando en boda en salón" width="300" height="200" loading="lazy" />
+              <img src="/img/blog/renta-de-maquina-de-burbujas-para-eventos-cdmx/img3.avif" alt="Combinación de burbujas gigantes y estándar en XV años" width="300" height="200" loading="lazy" />
+              <img src="/img/blog/renta-de-maquina-de-burbujas-para-eventos-cdmx/img4.avif" alt="Tres máquinas de burbujas operando simultáneamente en evento" width="300" height="200" loading="lazy" />
+            </div>
+          </div>
+
+          <!-- Badge + Título + Precio + CTA -->
+          <div class="prod-info">
+            <span class="prod-info__badge">Paquete Burbujas Gigantes — El efecto más fotogénico del mercado</span>
+            <h2 class="prod-info__title">1 Máquina Gigante + 2 Estándar — Burbujas de hasta 50 cm de Diámetro</h2>
+
+            <div class="prod-price">
+              <span class="prod-price__amount">$3,800</span>
+              <span class="prod-price__currency">MXN + IVA</span>
+              <p class="prod-price__note">Todo incluido: 3 máquinas, líquido especializado, técnico operador, transporte e instalación en CDMX y Edomex</p>
+            </div>
+
+            <div class="prod-ctas">
+              <a href={WHATSAPP_URL_MSG} class="prod-btn prod-btn--wa" target="_blank" rel="noopener">Cotizar por WhatsApp</a>
+              <a href="/cotizar/" class="prod-btn prod-btn--outline">Solicitar cotización formal</a>
+            </div>
+          </div>
+
+          <!-- Selling Points -->
+          <div class="prod-selling">
+            <h2 class="prod-selling__headline">Cuando una burbuja gigante flota y estalla bajo los reflectores, nadie mira a otro lado</h2>
+            <p class="prod-selling__intro">Hay efectos que se ven bonitos en fotos pero pasan desapercibidos en vivo. Las burbujas gigantes son lo contrario: el efecto en vivo supera cualquier foto. Una burbuja de 50 centímetros flota lentamente, captura los colores de la iluminación del salón, se convierte en una pequeña esfera iridiscente y estalla. En ese momento, todos voltean. Los niños corren hacia ella. Los adultos la fotografían. El fotógrafo la captura. Es un momento que ningún otro efecto puede replicar.</p>
+
+            <div class="prod-highlights">
+              <div class="prod-hl">
+                <div class="prod-hl__bar"></div>
+                <div class="prod-hl__content">
+                  <h3 class="prod-hl__title">Burbujas de 20-50 cm que capturan la iluminación del salón</h3>
+                  <p class="prod-hl__desc">Las burbujas gigantes actúan como pequeñas esferas de espejo que reflejan los colores de los reflectores del venue. En salones con uplighting de color, cada burbuja gigante se convierte en una esfera de ese color mientras flota. El efecto combinado con iluminación de color es extraordinario.</p>
+                </div>
+              </div>
+              <div class="prod-hl">
+                <div class="prod-hl__bar"></div>
+                <div class="prod-hl__content">
+                  <h3 class="prod-hl__title">3 máquinas simultáneas — cobertura total del espacio</h3>
+                  <p class="prod-hl__desc">La máquina gigante produce burbujas de gran tamaño de forma intermitente. Las 2 máquinas estándar mantienen un flujo continuo de burbujas normales. El técnico alterna entre los tres equipos para crear capas de burbujas a diferentes alturas: pequeñas al nivel del suelo, grandes flotando a media altura y ocasionalmente una gigante sube hasta el techo.</p>
+                </div>
+              </div>
+              <div class="prod-hl">
+                <div class="prod-hl__bar"></div>
+                <div class="prod-hl__content">
+                  <h3 class="prod-hl__title">Líquido especializado para burbujas duraderas — no se revientan solas</h3>
+                  <p class="prod-hl__desc">Las burbujas gigantes requieren un líquido de fórmula diferente al estándar: más glicerina, mayor concentración de jabón neutro y aditivos que aumentan la tensión superficial. Con este líquido, las burbujas gigantes duran más tiempo en el aire antes de reventar, dando más tiempo para fotos y reacciones.</p>
+                </div>
+              </div>
+              <div class="prod-hl">
+                <div class="prod-hl__bar"></div>
+                <div class="prod-hl__content">
+                  <h3 class="prod-hl__title">Ideal para fotografía — las burbujas gigantes son el sujeto perfecto</h3>
+                  <p class="prod-hl__desc">Los fotógrafos de bodas adoran las burbujas gigantes porque son predecibles, lentas y grandes. Se pueden anticipar, enfocar y disparar. A diferencia del confeti o el humo, las burbujas no dificultan la visibilidad ni crean ruido visual en las fotos. Son el efecto complementario perfecto para fotografía de boda.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Lo que incluye -->
+          <div class="prod-includes">
+            <h3 class="prod-includes__title">Lo que incluye este paquete</h3>
+            <div class="prod-includes__grid">
+              <div class="prod-feat">1 máquina de burbujas gigantes</div>
+              <div class="prod-feat">2 máquinas de burbujas estándar</div>
+              <div class="prod-feat">Líquido especializado gigantes</div>
+              <div class="prod-feat">Líquido estándar para 2 máquinas</div>
+              <div class="prod-feat">Técnico operador (3 máquinas)</div>
+              <div class="prod-feat">Posicionamiento estratégico</div>
+              <div class="prod-feat">Transporte ida y vuelta</div>
+              <div class="prod-feat">Instalación y desmontaje</div>
+            </div>
+          </div>
+
+          <!-- Cómo funciona -->
+          <div class="prod-process">
+            <h3 class="prod-process__title">Así funciona el servicio</h3>
+            <div class="prod-steps">
+              <div class="prod-step">
+                <span class="prod-step__num">1</span>
+                <div class="prod-step__content">
+                  <h4 class="prod-step__name">Comparte los detalles del evento y el venue</h4>
+                  <p class="prod-step__desc">Necesitamos saber si es interior o exterior, tipo de piso, altura del techo y si hay corrientes de aire (ventiladores, AC). Esos datos determinan el rendimiento óptimo de las burbujas gigantes.</p>
+                </div>
+              </div>
+              <div class="prod-step">
+                <span class="prod-step__num">2</span>
+                <div class="prod-step__content">
+                  <h4 class="prod-step__name">Diseñamos la distribución de las 3 máquinas</h4>
+                  <p class="prod-step__desc">Según el plano del venue, te mostramos cómo posicionar las 3 máquinas para máximo impacto visual. La gigante siempre va en el centro o punto focal, las estándar en los flancos.</p>
+                </div>
+              </div>
+              <div class="prod-step">
+                <span class="prod-step__num">3</span>
+                <div class="prod-step__content">
+                  <h4 class="prod-step__name">Aparta tu fecha con anticipo del 50%</h4>
+                  <p class="prod-step__desc">Reserva con transferencia, efectivo o tarjeta. Agenda confirmada por escrito con todos los detalles acordados.</p>
+                </div>
+              </div>
+              <div class="prod-step">
+                <span class="prod-step__num">4</span>
+                <div class="prod-step__content">
+                  <h4 class="prod-step__name">El técnico llega 2 horas antes y calibra todo</h4>
+                  <p class="prod-step__desc">Instalamos las 3 máquinas, probamos el líquido especializado, calibramos el tamaño de las burbujas gigantes según las condiciones del espacio y esperamos el momento óptimo para activar el efecto.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Comparativa -->
+          <div class="prod-compare">
+            <h3 class="prod-compare__title">¿Por qué gigantes + estándar y no solo gigantes?</h3>
+            <div class="prod-compare__grid">
+              <div class="prod-compare__col prod-compare__col--them">
+                <span class="prod-compare__label">Solo máquina gigante</span>
+                <ul class="prod-compare__list">
+                  <li>Producción intermitente, no continua</li>
+                  <li>Momentos sin efecto entre burbuja y burbuja</li>
+                  <li>Cobertura limitada del espacio</li>
+                  <li>Menos impacto visual sostenido</li>
+                  <li>Un solo nivel de altura</li>
+                </ul>
+              </div>
+              <div class="prod-compare__col prod-compare__col--us">
+                <span class="prod-compare__label">Gigantes + 2 Estándar REDEIL</span>
+                <ul class="prod-compare__list">
+                  <li>Flujo continuo con las estándar</li>
+                  <li>Gigantes como momento de impacto</li>
+                  <li>Cobertura total del espacio</li>
+                  <li>Efecto sostenido durante horas</li>
+                  <li>Burbujas a múltiples alturas</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Social proof -->
+          <div class="prod-proof">
+            <blockquote class="prod-quote">
+              <p class="prod-quote__text">"Nuestro fotógrafo nos dijo que las fotos con las burbujas gigantes fueron las mejores de toda la boda. Nunca había visto ese efecto en un evento y la reacción de los invitados fue increíble. Cuando salió la primera burbuja gigante durante el primer baile, escuchamos 'ooooh' de todo el salón. Fue mágico."</p>
+              <footer class="prod-quote__footer">
+                <span class="prod-quote__name">Valeria y Ernesto</span>
+                <span class="prod-quote__event">Boda en Salón Real — 220 invitados, CDMX</span>
+              </footer>
+            </blockquote>
+          </div>
+
+        </div>
+
+        <!-- ═══ SIDEBAR UNIFICADO ═══ -->
+        <aside class="prod-sidebar">
+
+          <!-- 1. Specs técnicas -->
+          <div class="ps-widget">
+            <h3 class="ps-widget__title">Especificaciones</h3>
+            <dl class="ps-specs">
+              <div class="ps-specs__row"><dt>Máquinas incluidas</dt><dd>3 máquinas</dd></div>
+              <div class="ps-specs__row"><dt>Máquina gigante</dt><dd>1 unidad</dd></div>
+              <div class="ps-specs__row"><dt>Máquinas estándar</dt><dd>2 unidades</dd></div>
+              <div class="ps-specs__row"><dt>Tamaño burbujas</dt><dd>20-50 cm</dd></div>
+              <div class="ps-specs__row"><dt>Líquido</dt><dd>Especializado gigante</dd></div>
+              <div class="ps-specs__row"><dt>Operación</dt><dd>Técnico incluido</dd></div>
+              <div class="ps-specs__row"><dt>Instalación</dt><dd>Incluida</dd></div>
+              <div class="ps-specs__row"><dt>Desmontaje</dt><dd>Incluido</dd></div>
+              <div class="ps-specs__row"><dt>Zona</dt><dd>CDMX + Edomex</dd></div>
+            </dl>
+          </div>
+
+          <!-- 2. Ideal para -->
+          <div class="ps-widget">
+            <h3 class="ps-widget__title">Ideal para</h3>
+            <div class="ps-tags">
+              <span class="ps-tag">Bodas de gala</span>
+              <span class="ps-tag">XV años elegantes</span>
+              <span class="ps-tag">Primer baile</span>
+              <span class="ps-tag">Entrada de XV</span>
+              <span class="ps-tag">Eventos corporativos</span>
+              <span class="ps-tag">Lanzamientos</span>
+              <span class="ps-tag">Aniversarios</span>
+              <span class="ps-tag">Producciones TV/video</span>
+            </div>
+          </div>
+
+          <!-- 3. Otros paquetes -->
+          <div class="ps-widget">
+            <h3 class="ps-widget__title">Otros paquetes</h3>
+            <a href="/equipos-para-eventos/maquina-de-burbujas/paquete-fiesta-infantil/" class="ps-pkg">
+              <img src="/img/img-index/maquina-de-burbujas.avif" alt="Paquete Fiesta Infantil máquina de burbujas" width="80" height="60" loading="lazy" class="ps-pkg__img" />
+              <div class="ps-pkg__info">
+                <span class="ps-pkg__name">Fiesta Infantil</span>
+                <span class="ps-pkg__price">$1,200 MXN</span>
+              </div>
+            </a>
+            <a href="/equipos-para-eventos/maquina-de-burbujas/paquete-boda-entrada/" class="ps-pkg">
+              <img src="/img/img-index/maquina-de-burbujas.avif" alt="Paquete Boda Entrada máquina de burbujas" width="80" height="60" loading="lazy" class="ps-pkg__img" />
+              <div class="ps-pkg__info">
+                <span class="ps-pkg__name">Boda — Entrada</span>
+                <span class="ps-pkg__price">$2,200 MXN</span>
+              </div>
+            </a>
+            <a href="/equipos-para-eventos/maquina-de-burbujas/paquete-produccion/" class="ps-pkg">
+              <img src="/img/img-index/maquina-de-burbujas.avif" alt="Paquete Producción máquina de burbujas" width="80" height="60" loading="lazy" class="ps-pkg__img" />
+              <div class="ps-pkg__info">
+                <span class="ps-pkg__name">Producción</span>
+                <span class="ps-pkg__price">$7,000 MXN</span>
+              </div>
+            </a>
+            <div class="ps-upsell">
+              <p class="ps-upsell__text">¿Producción profesional con control DMX? El paquete Producción incluye 4+ máquinas y programación avanzada.</p>
+              <a href="/equipos-para-eventos/maquina-de-burbujas/paquete-produccion/" class="ps-upsell__link">Ver paquete Producción →</a>
+            </div>
+          </div>
+
+          <!-- 4. CTA -->
+          <div class="ps-widget ps-widget--dark">
+            <h3 class="ps-widget__title ps-widget__title--light">Cotiza tu evento</h3>
+            <p class="ps-widget__desc">Cotización personalizada en menos de 24 horas. Sin compromiso.</p>
+            <a href="/cotizar/" class="ps-widget__btn">Cotizar Gratis</a>
+            <a href={WHATSAPP_URL_MSG} class="ps-widget__btn ps-widget__btn--wa" target="_blank" rel="noopener">WhatsApp: 55 4937 5172</a>
+          </div>
+
+          <!-- 5. Servicios relacionados -->
+          <div class="ps-widget">
+            <h3 class="ps-widget__title">Servicios relacionados</h3>
+            <div class="ps-links">
+              <a href="/equipos-para-eventos/maquina-de-confeti/" class="ps-link">Máquina de Confeti</a>
+              <a href="/equipos-para-eventos/humo-bajo/" class="ps-link">Humo Bajo</a>
+              <a href="/equipos-para-eventos/bolas-disco/" class="ps-link">Bola Disco</a>
+              <a href="/equipos-para-eventos/pantalla-inflable/" class="ps-link">Pantalla Inflable</a>
+              <a href="/renta-de-iluminacion/guirnaldas/" class="ps-link">Guirnaldas de Luces</a>
+              <a href="/renta-de-iluminacion/luz-neon/" class="ps-link">Luz Neón LED</a>
+            </div>
+          </div>
+
+          <!-- 6. Contacto -->
+          <div class="ps-widget">
+            <h3 class="ps-widget__title">Contacto</h3>
+            <div class="ps-contact">
+              <p><a href="tel:+525549375172">55 4937 5172</a></p>
+              <p><a href="mailto:contacto@redeil.com">contacto@redeil.com</a></p>
+              <p>Lun-Vie 9:00-19:00 | Sáb 10:00-15:00</p>
+            </div>
+          </div>
+
+        </aside>
+      </div>
     </div>
   </section>
 
   <FaqSection items={faqItems} />
-
-  <!-- CTA FINAL -->
 
   <Footer />
   <WhatsAppBubble />
 </Base>
 
 <style>
-  .section__title {
-    font-size: clamp(1.5rem, 3vw, 2rem);
-    font-weight: 800;
-    color: var(--color-text);
-    margin-bottom: 0.5rem;
-  }
-  .section__subtitle {
-    font-size: var(--font-size-base);
-    color: var(--color-text-light);
-    margin-bottom: 2rem;
-  }
-  .features-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 0.75rem;
-    margin-bottom: 2rem;
-  }
-  .feature-item {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    padding: 0.875rem 1rem;
-    border-radius: var(--border-radius);
-    font-size: var(--font-size-sm);
-  }
-  .feature-item--yes {
-    background: #f0fdf4;
-    color: #166534;
-  }
-  .feature-item--no {
-    background: var(--color-bg);
-    color: var(--color-text-light);
-  }
-  .feature-icon {
-    font-weight: 700;
-    font-size: 1.125rem;
-    flex-shrink: 0;
-  }
-  .price-highlight {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 2rem;
-    background: var(--color-bg);
-    border-radius: var(--border-radius-lg);
-    text-align: center;
-  }
-  .price-highlight__label {
-    font-size: var(--font-size-sm);
-    color: var(--color-text-light);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-  }
-  .price-highlight__amount {
-    font-size: clamp(2rem, 5vw, 3rem);
-    font-weight: 800;
-    color: var(--color-text);
-  }
-  .price-highlight__note {
-    font-size: var(--font-size-sm);
-    color: var(--color-text-light);
-    margin-bottom: 0.5rem;
-  }
-  .content-prose {
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  .content-prose h2 {
-    font-size: clamp(1.5rem, 3vw, 2rem);
-    font-weight: 800;
-    color: var(--color-text);
-    margin-bottom: 1rem;
-  }
-  .content-prose h3 {
-    font-size: var(--font-size-xl);
-    font-weight: 700;
-    color: var(--color-text);
-    margin: 2rem 0 0.75rem;
-  }
-  .content-prose p {
-    font-size: var(--font-size-base);
-    color: var(--color-text-light);
-    line-height: 1.8;
-    margin-bottom: 1rem;
-  }
+  /* ── Layout ── */
+  .prod-layout { display: grid; grid-template-columns: 1fr; gap: 2rem; }
+  @media (min-width: 1024px) { .prod-layout { grid-template-columns: 1fr 340px; gap: 2.5rem; } }
+
+  /* ── Gallery ── */
+  .prod-gallery { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; margin-bottom: 2rem; border-radius: 14px; overflow: hidden; }
+  .prod-gallery__main { grid-row: span 2; }
+  .prod-gallery__main img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .prod-gallery__side { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; }
+  .prod-gallery__side img { width: 100%; height: 100%; object-fit: cover; display: block; aspect-ratio: 3/2; }
+
+  /* ── Product Info ── */
+  .prod-info { margin-bottom: 2.5rem; }
+  .prod-info__badge { display: inline-block; font-size: 0.75rem; font-weight: 700; color: var(--color-accent); text-transform: uppercase; letter-spacing: 0.08em; padding: 0.375rem 1rem; background: rgba(0,113,227,0.08); border: 1px solid rgba(0,113,227,0.12); border-radius: 6px; margin-bottom: 0.75rem; }
+  .prod-info__title { font-size: clamp(1.375rem, 3vw, 1.75rem); font-weight: 800; color: var(--color-text); line-height: 1.2; letter-spacing: -0.02em; margin: 0 0 1.25rem; }
+  .prod-price { background: var(--color-bg); border-radius: 12px; padding: 1.25rem 1.5rem; margin-bottom: 1.25rem; border-left: 4px solid var(--color-accent); }
+  .prod-price__amount { font-size: 2.25rem; font-weight: 800; color: var(--color-primary); font-variant-numeric: tabular-nums; }
+  .prod-price__currency { font-size: 0.875rem; color: var(--color-text-light); margin-left: 0.5rem; }
+  .prod-price__note { font-size: 0.8125rem; color: var(--color-text-light); margin: 0.5rem 0 0; }
+  .prod-ctas { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+  .prod-btn { display: inline-flex; align-items: center; justify-content: center; padding: 0.875rem 1.75rem; border-radius: 6px; font-size: 0.9375rem; font-weight: 600; text-decoration: none; transition: background 0.2s ease, border-color 0.2s ease; }
+  .prod-btn--wa { background: #25D366; color: #fff; }
+  .prod-btn--wa:hover { background: #1DA851; }
+  .prod-btn--outline { background: none; color: var(--color-text); border: 2px solid var(--color-border); }
+  .prod-btn--outline:hover { border-color: var(--color-accent); color: var(--color-accent); }
+
+  /* ── Selling Points ── */
+  .prod-selling { margin-bottom: 2.5rem; }
+  .prod-selling__headline { font-size: clamp(1.25rem, 3vw, 1.5rem); font-weight: 800; color: var(--color-text); line-height: 1.25; letter-spacing: -0.02em; margin: 0 0 0.75rem; }
+  .prod-selling__intro { font-size: 0.9375rem; color: var(--color-text-light); line-height: 1.75; margin: 0 0 1.75rem; max-width: 65ch; }
+  .prod-highlights { display: flex; flex-direction: column; gap: 1.25rem; }
+  .prod-hl { display: flex; gap: 1rem; align-items: stretch; }
+  .prod-hl__bar { flex-shrink: 0; width: 3px; background: var(--color-accent); border-radius: 2px; }
+  .prod-hl__content { display: flex; flex-direction: column; gap: 0.25rem; }
+  .prod-hl__title { font-size: 0.9375rem; font-weight: 700; color: var(--color-text); margin: 0; line-height: 1.3; }
+  .prod-hl__desc { font-size: 0.8125rem; color: var(--color-text-light); line-height: 1.65; margin: 0; }
+
+  /* ── Includes ── */
+  .prod-includes { background: var(--color-bg); border-radius: 14px; padding: 1.75rem 2rem; }
+  .prod-includes__title { font-size: 1.0625rem; font-weight: 700; color: var(--color-text); margin: 0 0 1rem; }
+  .prod-includes__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; }
+  .prod-feat { font-size: 0.875rem; color: var(--color-text-light); padding-left: 1.25rem; position: relative; line-height: 1.5; }
+  .prod-feat::before { content: ""; position: absolute; left: 0; top: 0.45rem; width: 6px; height: 6px; border-radius: 50%; background: var(--color-accent); }
+  @media (max-width: 640px) { .prod-includes__grid { grid-template-columns: 1fr; } }
+
+  /* ── Sidebar ── */
+  .prod-sidebar { display: flex; flex-direction: column; gap: 1.25rem; }
+  @media (min-width: 1024px) { .prod-sidebar { position: sticky; top: calc(var(--header-height) + var(--topbar-height) + 1.5rem); align-self: start; } }
+  .ps-widget { background: var(--color-white); border: 1px solid var(--color-border); border-radius: 12px; padding: 1.25rem; }
+  .ps-widget--dark { background: var(--color-primary); color: #fff; border: none; }
+  .ps-widget__title { font-size: 0.875rem; font-weight: 700; color: var(--color-text); text-transform: uppercase; letter-spacing: 0.05em; margin: 0 0 0.75rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--color-accent); }
+  .ps-widget__title--light { color: #fff; }
+  .ps-widget__desc { font-size: 0.8125rem; color: rgba(255,255,255,0.75); margin: 0 0 0.75rem; }
+  .ps-widget__btn { display: block; text-align: center; padding: 0.625rem; border-radius: 6px; font-size: 0.875rem; font-weight: 600; text-decoration: none; margin-top: 0.5rem; background: var(--color-accent); color: #fff; transition: background 0.2s ease; }
+  .ps-widget__btn:hover { opacity: 0.9; }
+  .ps-widget__btn--wa { background: #25D366; }
+
+  .ps-specs { display: flex; flex-direction: column; margin: 0; }
+  .ps-specs__row { display: flex; justify-content: space-between; align-items: baseline; padding: 0.4rem 0; border-bottom: 1px solid var(--color-bg); gap: 0.75rem; }
+  .ps-specs__row:last-child { border-bottom: none; }
+  .ps-specs__row dt { font-size: 0.8125rem; color: var(--color-text-light); font-weight: 500; margin: 0; }
+  .ps-specs__row dd { font-size: 0.8125rem; font-weight: 600; color: var(--color-text); text-align: right; margin: 0; font-variant-numeric: tabular-nums; }
+
+  .ps-tags { display: flex; flex-wrap: wrap; gap: 0.375rem; }
+  .ps-tag { font-size: 0.6875rem; font-weight: 600; color: var(--color-text); padding: 0.3rem 0.75rem; background: var(--color-bg); border: 1px solid var(--color-border); border-radius: 6px; white-space: nowrap; }
+
+  .ps-pkg { display: flex; gap: 0.75rem; align-items: center; text-decoration: none; padding: 0.625rem 0; border-bottom: 1px solid var(--color-bg); }
+  .ps-pkg:last-of-type { border-bottom: none; }
+  .ps-pkg__img { width: 72px; height: 54px; object-fit: cover; border-radius: 8px; flex-shrink: 0; }
+  .ps-pkg__info { display: flex; flex-direction: column; gap: 0.125rem; }
+  .ps-pkg__name { font-size: 0.8125rem; font-weight: 600; color: var(--color-text); }
+  .ps-pkg__price { font-size: 0.75rem; font-weight: 700; color: var(--color-accent); font-variant-numeric: tabular-nums; }
+  .ps-pkg:hover .ps-pkg__name { color: var(--color-accent); }
+
+  .ps-upsell { margin-top: 0.75rem; padding-top: 0.75rem; border-top: 1px solid var(--color-bg); }
+  .ps-upsell__text { font-size: 0.75rem; color: var(--color-text-light); line-height: 1.5; margin: 0 0 0.375rem; }
+  .ps-upsell__link { font-size: 0.75rem; font-weight: 600; color: var(--color-accent); text-decoration: none; }
+  .ps-upsell__link:hover { text-decoration: underline; }
+
+  .ps-links { display: flex; flex-direction: column; }
+  .ps-link { padding: 0.4rem 0; border-bottom: 1px solid var(--color-bg); font-size: 0.8125rem; color: var(--color-text-light); text-decoration: none; }
+  .ps-link:last-child { border-bottom: none; }
+  .ps-link:hover { color: var(--color-accent); }
+
+  .ps-contact p { font-size: 0.8125rem; color: var(--color-text-light); margin: 0.3rem 0; }
+  .ps-contact a { color: var(--color-accent); text-decoration: none; }
+
+  /* ── Process Steps ── */
+  .prod-process { margin: 2.5rem 0; }
+  .prod-process__title { font-size: 1.125rem; font-weight: 800; color: var(--color-text); letter-spacing: -0.02em; margin: 0 0 1.25rem; }
+  .prod-steps { display: flex; flex-direction: column; gap: 0; }
+  .prod-step { display: flex; gap: 1rem; padding: 1rem 0; border-bottom: 1px solid var(--color-border); }
+  .prod-step:last-child { border-bottom: none; }
+  .prod-step__num { flex-shrink: 0; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; background: var(--color-accent); color: #fff; font-size: 0.8125rem; font-weight: 700; border-radius: 50%; }
+  .prod-step__content { display: flex; flex-direction: column; gap: 0.2rem; }
+  .prod-step__name { font-size: 0.9375rem; font-weight: 700; color: var(--color-text); margin: 0; line-height: 1.3; }
+  .prod-step__desc { font-size: 0.8125rem; color: var(--color-text-light); line-height: 1.6; margin: 0; }
+
+  /* ── Comparison ── */
+  .prod-compare { margin: 2.5rem 0; }
+  .prod-compare__title { font-size: 1.125rem; font-weight: 800; color: var(--color-text); letter-spacing: -0.02em; margin: 0 0 1.25rem; }
+  .prod-compare__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+  @media (max-width: 640px) { .prod-compare__grid { grid-template-columns: 1fr; } }
+  .prod-compare__col { border-radius: 12px; padding: 1.25rem; }
+  .prod-compare__col--them { background: #fef2f2; border: 1px solid #fecaca; }
+  .prod-compare__col--us { background: #eff6ff; border: 1px solid #bfdbfe; }
+  .prod-compare__label { display: block; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.75rem; }
+  .prod-compare__col--them .prod-compare__label { color: #991b1b; }
+  .prod-compare__col--us .prod-compare__label { color: var(--color-primary); }
+  .prod-compare__list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.5rem; }
+  .prod-compare__list li { font-size: 0.8125rem; color: var(--color-text); line-height: 1.4; padding-left: 1.125rem; position: relative; }
+  .prod-compare__col--them .prod-compare__list li::before { content: "–"; position: absolute; left: 0; color: #dc2626; font-size: 0.75rem; font-weight: 700; }
+  .prod-compare__col--us .prod-compare__list li::before { content: "✓"; position: absolute; left: 0; color: var(--color-accent); font-size: 0.75rem; font-weight: 700; }
+
+  /* ── Social Proof ── */
+  .prod-proof { margin-top: 2.5rem; }
+  .prod-quote { background: var(--color-bg); border-radius: 14px; padding: 1.75rem 2rem; border-left: 4px solid var(--color-accent); margin: 0; }
+  .prod-quote__text { font-size: 0.9375rem; color: var(--color-text); line-height: 1.75; font-style: italic; margin: 0 0 1rem; }
+  .prod-quote__footer { display: flex; flex-direction: column; gap: 0.125rem; }
+  .prod-quote__name { font-size: 0.875rem; font-weight: 700; color: var(--color-text); font-style: normal; }
+  .prod-quote__event { font-size: 0.75rem; color: var(--color-text-light); font-style: normal; }
 </style>

@@ -13,24 +13,24 @@ import { WHATSAPP_URL_MSG, SITE_URL } from '../../../../lib/config';
 
 const faqItems = [
   {
-    "pregunta": "¿Qué incluye el paquete Blacklight Party de Luz Negra UV?",
-    "respuesta": "El paquete Blacklight Party incluye 8 lámparas uv 100w, instalación en estructura, cobertura 80m². Todo con instalación profesional y desmontaje incluido. Nuestro equipo técnico llega con anticipación para montar y hacer pruebas."
+    pregunta: '¿Qué incluye el paquete Blacklight Party de Luz Negra UV?',
+    respuesta: 'Incluye 8 barras de luz negra UV de alta potencia, instalación profesional con posicionamiento estratégico para cobertura uniforme en salones de hasta 80 m², técnico operador durante todo el evento, desmontaje y transporte. Todo pensado para que no haya una sola zona oscura en tu glow party.'
   },
   {
-    "pregunta": "¿Cuánto cuesta el paquete Blacklight Party?",
-    "respuesta": "El paquete Blacklight Party de Luz Negra UV tiene un precio desde $4,800 MXN + IVA. Este precio incluye transporte, instalación, operación y desmontaje dentro de CDMX y Estado de México."
+    pregunta: '¿Cuánto cuesta el paquete Blacklight Party?',
+    respuesta: 'El paquete Blacklight Party tiene un precio desde $4,800 MXN + IVA. Incluye todo: transporte, instalación, operación y desmontaje en CDMX y Estado de México. Sin cargos extra por el técnico.'
   },
   {
-    "pregunta": "¿Puedo personalizar el paquete Blacklight Party?",
-    "respuesta": "Sí, todos nuestros paquetes son personalizables. Podemos agregar o quitar elementos según tus necesidades y presupuesto. Contáctanos por WhatsApp al 55 4937 5172 para una cotización a la medida."
+    pregunta: '¿Para cuántas personas alcanza este paquete?',
+    respuesta: 'Está diseñado para eventos de 40 a 80 personas en salones de hasta 80 m². Las 8 barras se distribuyen para que cada rincón del salón tenga cobertura UV sin puntos muertos. Si tu evento es más grande, el paquete UV Premium con 16 barras es la opción ideal.'
   },
   {
-    "pregunta": "¿En qué zonas entregan el paquete Blacklight Party?",
-    "respuesta": "Cubrimos toda la Ciudad de México y Estado de México sin costo adicional de traslado. También llegamos a Cuernavaca, Tepoztlán, Valle de Bravo y ubicaciones dentro de 100 km de CDMX."
+    pregunta: '¿Puedo combinar luz negra con otros efectos de luz?',
+    respuesta: 'Sí, y queda espectacular. La combinación más popular es luz negra + humo bajo + confeti neón. También combinamos con nuestro servicio de luz neón LED para letreros y ambientación. Escríbenos por WhatsApp para diseñar el paquete combinado ideal para tu evento.'
   },
   {
-    "pregunta": "¿Con cuánta anticipación debo reservar el paquete Blacklight Party?",
-    "respuesta": "Recomendamos reservar con 4 a 6 semanas de anticipación, especialmente en temporada alta (noviembre-febrero). Para fechas próximas, contáctanos por WhatsApp para verificar disponibilidad del equipo."
+    pregunta: '¿Con cuánta anticipación debo reservar el Blacklight Party?',
+    respuesta: 'Recomendamos reservar con 3 a 5 semanas de anticipación, especialmente para fines de semana. Un anticipo del 50% confirma tu fecha. Para fechas próximas, contáctanos por WhatsApp — verificamos disponibilidad en tiempo real.'
   }
 ];
 
@@ -39,8 +39,8 @@ const structuredData = [
     '@context': 'https://schema.org',
     '@type': 'Product',
     name: 'Blacklight Party — Luz Negra UV | REDEIL',
-    description: 'Paquete Blacklight Party de luz negra uv para eventos en CDMX y Estado de México. Incluye instalación profesional, operación durante el evento y desmontaje. Equipo de alta calidad para resultados impecables.',
-    image: SITE_URL + '/img/img-index/luz-negra.avif',
+    description: 'Paquete de luz negra UV para glow parties en salones medianos. 8 barras UV de alta potencia para cobertura uniforme en espacios de hasta 80 m² en CDMX y Edomex.',
+    image: SITE_URL + '/img/paquetes/luz-negra/blacklight-party.avif',
     brand: { '@type': 'Brand', name: 'REDEIL' },
     offers: {
       '@type': 'Offer',
@@ -52,8 +52,8 @@ const structuredData = [
     },
     aggregateRating: {
       '@type': 'AggregateRating',
-      ratingValue: '4.8',
-      reviewCount: '42',
+      ratingValue: '4.9',
+      reviewCount: '35',
     },
   },
   faqSchema(faqItems),
@@ -61,8 +61,8 @@ const structuredData = [
 ---
 
 <Base
-  title="Blacklight Party — Luz Negra UV en CDMX | REDEIL"
-  description="Paquete Blacklight Party de luz negra uv para eventos en CDMX y Estado de México. Incluye instalación profesional, operación durante el evento y desmontaje"
+  title="Blacklight Party — Luz Negra UV para Glow Party en Salón CDMX | REDEIL"
+  description="Glow party real sin zonas oscuras. 8 barras de luz negra UV para salones de hasta 80 m² y 80 personas. $4,800 MXN todo incluido. CDMX y Estado de México."
   structuredData={structuredData}
 >
   <TopBar />
@@ -71,150 +71,374 @@ const structuredData = [
 
   <Hero
     badge="Blacklight Party"
-    title="Blacklight Party — Luz Negra UV"
-    description="Paquete Blacklight Party de luz negra uv para eventos en CDMX y Estado de México. Incluye instalación profesional, operación durante el evento y desmont..."
+    title="Blacklight Party — Luz Negra UV para Glow Party en Salón"
+    description="Ochenta personas, ochenta m², cero zonas oscuras. 8 barras UV distribuidas para que cada rincón del salón brille por igual. La diferencia entre 'había luz negra' y 'fue una glow party de verdad'."
     primaryCta={{ text: 'Cotizar $4,800 + IVA', href: WHATSAPP_URL_MSG }}
     secondaryCta={{ text: 'Ver más paquetes', href: '/renta-de-iluminacion/luz-negra/' }}
   >
     <Fragment slot="hero-seo">
-      <p>El paquete Blacklight Party de luz negra uv es una solución intermedio para eventos que requieren equipamiento profesional en la Ciudad de México y zona metropolitana. Nuestro equipo técnico se encarga de todo: desde la logística de transporte hasta la instalación, configuración y operación durante tu evento.</p>
-      <p>Con más de 10 años de experiencia en renta de luz negra uv para bodas, XV años, eventos corporativos y celebraciones privadas, REDEIL garantiza resultados profesionales. Este paquete ha sido diseñado para ofrecer la mejor relación calidad-precio, con equipo de marcas líderes y servicio técnico incluido.</p>
+      <p>El <strong>paquete Blacklight Party</strong> está diseñado para quien quiere hacer una <strong>glow party real</strong> en un salón mediano de <strong>CDMX o Estado de México</strong>. La diferencia entre 4 y 8 barras no es solo el doble de luz — es la cobertura uniforme. Con 4 barras hay zonas brillantes y zonas opacas. Con 8, todo el salón queda saturado de UV y no hay un solo invitado que no brille.</p>
+      <p>Las barras se posicionan estratégicamente — perimetrales, cruzadas o en el techo según la geometría del salón — para eliminar cualquier punto muerto. El técnico llega antes del evento, diseña la distribución exacta en sitio y hace pruebas de encendido. El resultado: cuando las luces blancas se apagan, el salón completo explota en neón de forma simultánea, sin transiciones ni rincones oscuros.</p>
     </Fragment>
   </Hero>
 
   <CtaBar
     headline="Otros paquetes de Luz Negra UV"
-    items={[{ label: "Blacklight Básico", href: "/renta-de-iluminacion/luz-negra/paquete-blacklight-basico/" }, { label: "UV Premium", href: "/renta-de-iluminacion/luz-negra/paquete-uv-premium/" }, { label: "Producción UV", href: "/renta-de-iluminacion/luz-negra/paquete-produccion-uv/" }]}
+    items={[{ label: "Blacklight Básico — 4 barras", href: "/renta-de-iluminacion/luz-negra/paquete-blacklight-basico/" }, { label: "UV Premium — 16 barras", href: "/renta-de-iluminacion/luz-negra/paquete-uv-premium/" }, { label: "Producción UV — DMX completo", href: "/renta-de-iluminacion/luz-negra/paquete-produccion-uv/" }]}
   />
 
-  <!-- QUÉ INCLUYE -->
-  <section class="section" id="features">
+  <section class="section" id="producto">
     <div class="container">
-      <h2 class="section__title">¿Qué incluye el paquete Blacklight Party?</h2>
-      <p class="section__subtitle">Todo lo que necesitas para tu evento, sin sorpresas ni costos ocultos.</p>
-      <div class="features-grid">
-        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>8 lámparas UV 100W</span></div>
-        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>Instalación en estructura</span></div>
-        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>Cobertura 80m²</span></div>
-        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>Pintura fluorescente</span></div>
-        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>Operación durante evento</span></div>
-        <div class="feature-item feature-item--no"><span class="feature-icon">&mdash;</span><span>Elementos decorativos UV</span></div>
-      </div>
-      <div class="price-highlight">
-        <span class="price-highlight__label">Precio desde</span>
-        <span class="price-highlight__amount">$4,800 MXN</span>
-        <span class="price-highlight__note">+ IVA · Instalación incluida</span>
-        <a href={WHATSAPP_URL_MSG} class="btn btn--accent" target="_blank" rel="noopener">Reservar Ahora</a>
-      </div>
-    </div>
-  </section>
+      <div class="prod-layout">
 
-  <!-- CONTENIDO SEO -->
-  <section class="section section--bg">
-    <div class="container content-prose">
-      <h2>¿Por qué elegir el paquete Blacklight Party de luz negra UV?</h2>
-      <p>El paquete Blacklight Party de luz negra uv es una solución intermedio para eventos que requieren equipamiento profesional en la Ciudad de México y zona metropolitana. Nuestro equipo técnico se encarga de todo: desde la logística de transporte hasta la instalación, configuración y operación durante tu evento.</p>
-      <p>Con más de 10 años de experiencia en renta de luz negra uv para bodas, XV años, eventos corporativos y celebraciones privadas, REDEIL garantiza resultados profesionales. Este paquete ha sido diseñado para ofrecer la mejor relación calidad-precio, con equipo de marcas líderes y servicio técnico incluido.</p>
-      <h3>¿Para quién es este paquete?</h3>
-      <p>El paquete Blacklight Party de luz negra uv está diseñado para eventos medianos que buscan calidad profesional. Con equipo profesional de marcas líderes y servicio técnico especializado, garantizamos resultados impecables.</p>
-      <h3>Servicio profesional de luz negra uv</h3>
-      <p>En REDEIL llevamos más de 10 años ofreciendo renta de luz negra uv en CDMX y Estado de México. Nuestro equipo técnico se encarga de todo: logística, transporte, instalación, configuración, operación durante el evento y desmontaje. Trabajamos con equipo profesional para garantizar que cada evento sea perfecto.</p>
+        <div class="prod-main">
+
+          <div class="prod-gallery">
+            <div class="prod-gallery__main">
+              <img src="/img/paquetes/luz-negra/blacklight-party.avif" alt="Salón mediano con luz negra UV glow party, todos los invitados brillando" width="600" height="400" loading="eager" />
+            </div>
+            <div class="prod-gallery__side">
+              <img src="/img/img-index/pro/luz-negra.avif" alt="Glow party con cobertura UV uniforme en todo el salón" width="300" height="200" loading="lazy" />
+              <img src="/img/paquetes/luz-negra/sell/ropa-neon.avif" alt="Invitados con ropa neón y pintura UV brillando" width="300" height="200" loading="lazy" />
+              <img src="/img/paquetes/luz-negra/sell/barra-uv.avif" alt="8 barras de luz UV instaladas en salón mediano" width="300" height="200" loading="lazy" />
+              <img src="/img/paquetes/luz-negra/sell/efecto-uv.avif" alt="Efecto blacklight completo sin zonas oscuras" width="300" height="200" loading="lazy" />
+            </div>
+          </div>
+
+          <div class="prod-info">
+            <span class="prod-info__badge">Blacklight Party — La glow party completa</span>
+            <h2 class="prod-info__title">8 Barras UV para Glow Party sin Zonas Oscuras en Salones de hasta 80 m²</h2>
+
+            <div class="prod-price">
+              <span class="prod-price__amount">$4,800</span>
+              <span class="prod-price__currency">MXN + IVA</span>
+              <p class="prod-price__note">Todo incluido: transporte, instalación, posicionamiento estratégico, operación y desmontaje</p>
+            </div>
+
+            <div class="prod-ctas">
+              <a href={WHATSAPP_URL_MSG} class="prod-btn prod-btn--wa" target="_blank" rel="noopener">Cotizar por WhatsApp</a>
+              <a href="/cotizar/" class="prod-btn prod-btn--outline">Solicitar cotización formal</a>
+            </div>
+          </div>
+
+          <div class="prod-selling">
+            <h2 class="prod-selling__headline">La cobertura UV que hace que todos brillen — sin excepción</h2>
+            <p class="prod-selling__intro">El secreto de una buena glow party no está en tener "luz negra" — está en no tener zonas donde la UV no llegue. Cuando el salón tiene puntos oscuros, los invitados se acumulan en las zonas brillantes y el resto del espacio muere. Ocho barras bien distribuidas eliminan ese problema: el salón completo se convierte en una cámara UV donde cada persona, sin importar dónde esté parada, brilla igual.</p>
+
+            <div class="prod-highlights">
+              <div class="prod-hl">
+                <div class="prod-hl__bar"></div>
+                <div class="prod-hl__content">
+                  <h3 class="prod-hl__title">Posicionamiento estratégico — sin zonas muertas</h3>
+                  <p class="prod-hl__desc">El técnico analiza la geometría del salón y distribuye las 8 barras para cobertura cruzada. No hay esquina sin UV. No hay mesa donde los invitados no brillen. Todo el espacio vive la fiesta por igual, desde la pista hasta el área de mesas.</p>
+                </div>
+              </div>
+              <div class="prod-hl">
+                <div class="prod-hl__bar"></div>
+                <div class="prod-hl__content">
+                  <h3 class="prod-hl__title">La pista de baile se convierte en otro mundo</h3>
+                  <p class="prod-hl__desc">Cuando 60 personas bailan bajo luz UV, el movimiento crea un espectáculo visual que ninguna luz de colores puede replicar. Las telas neón se mueven como trazos de luz. Los brazos dejan rastros fluorescentes en el aire. La pista cobra vida propia.</p>
+                </div>
+              </div>
+              <div class="prod-hl">
+                <div class="prod-hl__bar"></div>
+                <div class="prod-hl__content">
+                  <h3 class="prod-hl__title">Compatible con pintura UV, accesorios neón y decoración fluorescente</h3>
+                  <p class="prod-hl__desc">Este paquete es el lienzo perfecto para llevar la fiesta más lejos. Agrega pintura UV en el entry, pulseras neón de bienvenida, globos fluorescentes. Con 8 barras de potencia, cada elemento de decoración UV alcanza su máxima saturación de color.</p>
+                </div>
+              </div>
+              <div class="prod-hl">
+                <div class="prod-hl__bar"></div>
+                <div class="prod-hl__content">
+                  <h3 class="prod-hl__title">El contenido que genera solo — fotos y videos sin esfuerzo</h3>
+                  <p class="prod-hl__desc">Una glow party con cobertura uniforme genera contenido visual potente de forma natural. Los smartphones capturan los colores con saturación automática. Tus invitados van a repostear. El evento vive más allá de la noche.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="prod-includes">
+            <h3 class="prod-includes__title">Lo que incluye este paquete</h3>
+            <div class="prod-includes__grid">
+              <div class="prod-feat">8 barras de luz negra UV alta potencia</div>
+              <div class="prod-feat">Análisis y diseño de posicionamiento</div>
+              <div class="prod-feat">Soportes y estructuras de montaje</div>
+              <div class="prod-feat">Cable y conexiones profesionales</div>
+              <div class="prod-feat">Transporte ida y vuelta</div>
+              <div class="prod-feat">Instalación profesional</div>
+              <div class="prod-feat">Técnico operador durante el evento</div>
+              <div class="prod-feat">Desmontaje al finalizar</div>
+              <div class="prod-feat">Pruebas previas al evento</div>
+              <div class="prod-feat">Cobertura para dos zonas simultáneas</div>
+            </div>
+          </div>
+
+          <div class="prod-process">
+            <h3 class="prod-process__title">Así funciona el servicio</h3>
+            <div class="prod-steps">
+              <div class="prod-step">
+                <span class="prod-step__num">1</span>
+                <div class="prod-step__content">
+                  <h4 class="prod-step__name">Comparte los datos del salón y la fecha</h4>
+                  <p class="prod-step__desc">Medidas aproximadas, distribución del salón (pista, mesas, bar) y capacidad de invitados. Con eso diseñamos el mapa de posicionamiento de las 8 barras antes de llegar.</p>
+                </div>
+              </div>
+              <div class="prod-step">
+                <span class="prod-step__num">2</span>
+                <div class="prod-step__content">
+                  <h4 class="prod-step__name">Confirma con anticipo y recibe plan de instalación</h4>
+                  <p class="prod-step__desc">Con el 50% de anticipo apartamos tu fecha. Te enviamos el plan de llegada, tiempos de instalación y recomendaciones de ropa y decoración UV para tus invitados.</p>
+                </div>
+              </div>
+              <div class="prod-step">
+                <span class="prod-step__num">3</span>
+                <div class="prod-step__content">
+                  <h4 class="prod-step__name">Instalación completa 90 minutos antes</h4>
+                  <p class="prod-step__desc">El técnico llega con tiempo suficiente para instalar, distribuir y probar cada barra. Hacemos recorrido completo del salón para verificar que no hay zonas sin cobertura UV.</p>
+                </div>
+              </div>
+              <div class="prod-step">
+                <span class="prod-step__num">4</span>
+                <div class="prod-step__content">
+                  <h4 class="prod-step__name">La fiesta empieza, nosotros nos quedamos</h4>
+                  <p class="prod-step__desc">El técnico permanece para cualquier ajuste durante el evento. Al terminar, desmontamos todo limpiamente. El salón queda libre antes de que la producción cierre.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="prod-compare">
+            <h3 class="prod-compare__title">¿Blacklight Party o UV Premium?</h3>
+            <div class="prod-compare__grid">
+              <div class="prod-compare__col prod-compare__col--them">
+                <span class="prod-compare__label">Blacklight Party — 8 barras</span>
+                <ul class="prod-compare__list">
+                  <li>Salones de hasta 80 m²</li>
+                  <li>Hasta 80 invitados</li>
+                  <li>Cobertura en 2 zonas</li>
+                  <li>Sin control DMX</li>
+                  <li>Encendido/apagado manual</li>
+                </ul>
+              </div>
+              <div class="prod-compare__col prod-compare__col--us">
+                <span class="prod-compare__label">UV Premium — 16 barras</span>
+                <ul class="prod-compare__list">
+                  <li>Salones de hasta 200 m²</li>
+                  <li>Hasta 150 invitados</li>
+                  <li>Cobertura total sin límites</li>
+                  <li>Control de intensidad</li>
+                  <li>Producción media completa</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="prod-proof">
+            <blockquote class="prod-quote">
+              <p class="prod-quote__text">"Organizamos una glow party para los 18 años de mi hija en un salón en Tlalpan para 65 personas. El técnico llegó temprano, midió todo el salón y colocó las 8 barras de forma que cuando apagamos las luces, no había un solo lugar oscuro. Mis sobrinos se pusieron a bailar y se veían increíbles. Cada foto que tomábamos parecía de producción profesional."</p>
+              <footer class="prod-quote__footer">
+                <span class="prod-quote__name">Patricia G.</span>
+                <span class="prod-quote__event">Fiesta de 18 años — Salón en Tlalpan, CDMX</span>
+              </footer>
+            </blockquote>
+          </div>
+
+        </div>
+
+        <aside class="prod-sidebar">
+
+          <div class="ps-widget">
+            <h3 class="ps-widget__title">Especificaciones</h3>
+            <dl class="ps-specs">
+              <div class="ps-specs__row"><dt>Barras UV</dt><dd>8 unidades</dd></div>
+              <div class="ps-specs__row"><dt>Cobertura</dt><dd>Hasta 80 m²</dd></div>
+              <div class="ps-specs__row"><dt>Capacidad</dt><dd>Hasta 80 personas</dd></div>
+              <div class="ps-specs__row"><dt>Tipo de luz</dt><dd>Ultravioleta UV-A</dd></div>
+              <div class="ps-specs__row"><dt>Distribución</dt><dd>Estratégica sin zonas muertas</dd></div>
+              <div class="ps-specs__row"><dt>Instalación</dt><dd>Incluida</dd></div>
+              <div class="ps-specs__row"><dt>Desmontaje</dt><dd>Incluido</dd></div>
+              <div class="ps-specs__row"><dt>Zona</dt><dd>CDMX + Edomex</dd></div>
+            </dl>
+          </div>
+
+          <div class="ps-widget">
+            <h3 class="ps-widget__title">Ideal para</h3>
+            <div class="ps-tags">
+              <span class="ps-tag">Glow parties</span>
+              <span class="ps-tag">Fiestas neón temáticas</span>
+              <span class="ps-tag">Cumpleaños 15 y 18</span>
+              <span class="ps-tag">Fiestas universitarias</span>
+              <span class="ps-tag">Eventos corporativos</span>
+              <span class="ps-tag">Salones medianos</span>
+              <span class="ps-tag">Fiestas de disfraces UV</span>
+              <span class="ps-tag">Halloween neón</span>
+            </div>
+          </div>
+
+          <div class="ps-widget">
+            <h3 class="ps-widget__title">Otros paquetes</h3>
+            <a href="/renta-de-iluminacion/luz-negra/paquete-blacklight-basico/" class="ps-pkg">
+              <img src="/img/paquetes/luz-negra/blacklight-basico.avif" alt="Blacklight Básico 4 barras" width="80" height="60" loading="lazy" class="ps-pkg__img" />
+              <div class="ps-pkg__info">
+                <span class="ps-pkg__name">Blacklight Básico</span>
+                <span class="ps-pkg__price">$2,500 MXN</span>
+              </div>
+            </a>
+            <a href="/renta-de-iluminacion/luz-negra/paquete-uv-premium/" class="ps-pkg">
+              <img src="/img/paquetes/luz-negra/uv-premium.avif" alt="UV Premium 16 barras" width="80" height="60" loading="lazy" class="ps-pkg__img" />
+              <div class="ps-pkg__info">
+                <span class="ps-pkg__name">UV Premium</span>
+                <span class="ps-pkg__price">$8,500 MXN</span>
+              </div>
+            </a>
+            <a href="/renta-de-iluminacion/luz-negra/paquete-produccion-uv/" class="ps-pkg">
+              <img src="/img/paquetes/luz-negra/produccion-uv.avif" alt="Producción UV DMX completo" width="80" height="60" loading="lazy" class="ps-pkg__img" />
+              <div class="ps-pkg__info">
+                <span class="ps-pkg__name">Producción UV</span>
+                <span class="ps-pkg__price">$14,000 MXN</span>
+              </div>
+            </a>
+            <div class="ps-upsell">
+              <p class="ps-upsell__text">¿Más de 80 personas o salón grande? UV Premium con 16 barras cubre hasta 200 m² con control de intensidad.</p>
+              <a href="/renta-de-iluminacion/luz-negra/paquete-uv-premium/" class="ps-upsell__link">Ver UV Premium →</a>
+            </div>
+          </div>
+
+          <div class="ps-widget ps-widget--dark">
+            <h3 class="ps-widget__title ps-widget__title--light">Cotiza tu evento</h3>
+            <p class="ps-widget__desc">Cotización personalizada en menos de 24 horas. Sin compromiso.</p>
+            <a href="/cotizar/" class="ps-widget__btn">Cotizar Gratis</a>
+            <a href={WHATSAPP_URL_MSG} class="ps-widget__btn ps-widget__btn--wa" target="_blank" rel="noopener">WhatsApp: 55 4937 5172</a>
+          </div>
+
+          <div class="ps-widget">
+            <h3 class="ps-widget__title">Servicios relacionados</h3>
+            <div class="ps-links">
+              <a href="/renta-de-iluminacion/luz-neon/" class="ps-link">Luz Neón LED</a>
+              <a href="/renta-de-iluminacion/guirnaldas/" class="ps-link">Guirnaldas de Luces</a>
+              <a href="/equipos-para-eventos/humo-bajo/" class="ps-link">Humo Bajo</a>
+              <a href="/equipos-para-eventos/maquina-de-confeti/" class="ps-link">Confeti</a>
+              <a href="/renta-de-bocinas/bocinas-para-fiestas/" class="ps-link">Bocinas para Fiestas</a>
+              <a href="/renta-de-iluminacion/luces-arquitectonicas/" class="ps-link">Uplighting</a>
+            </div>
+          </div>
+
+          <div class="ps-widget">
+            <h3 class="ps-widget__title">Contacto</h3>
+            <div class="ps-contact">
+              <p><a href="tel:+525549375172">55 4937 5172</a></p>
+              <p><a href="mailto:contacto@redeil.com">contacto@redeil.com</a></p>
+              <p>Lun-Vie 9:00-19:00 | Sáb 10:00-15:00</p>
+            </div>
+          </div>
+
+        </aside>
+      </div>
     </div>
   </section>
 
   <FaqSection items={faqItems} />
-
-  <!-- CTA FINAL -->
-
   <Footer />
   <WhatsAppBubble />
 </Base>
 
 <style>
-  .section__title {
-    font-size: clamp(1.5rem, 3vw, 2rem);
-    font-weight: 800;
-    color: var(--color-text);
-    margin-bottom: 0.5rem;
-  }
-  .section__subtitle {
-    font-size: var(--font-size-base);
-    color: var(--color-text-light);
-    margin-bottom: 2rem;
-  }
-  .features-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 0.75rem;
-    margin-bottom: 2rem;
-  }
-  .feature-item {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    padding: 0.875rem 1rem;
-    border-radius: var(--border-radius);
-    font-size: var(--font-size-sm);
-  }
-  .feature-item--yes {
-    background: #f0fdf4;
-    color: #166534;
-  }
-  .feature-item--no {
-    background: var(--color-bg);
-    color: var(--color-text-light);
-  }
-  .feature-icon {
-    font-weight: 700;
-    font-size: 1.125rem;
-    flex-shrink: 0;
-  }
-  .price-highlight {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 2rem;
-    background: var(--color-bg);
-    border-radius: var(--border-radius-lg);
-    text-align: center;
-  }
-  .price-highlight__label {
-    font-size: var(--font-size-sm);
-    color: var(--color-text-light);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-  }
-  .price-highlight__amount {
-    font-size: clamp(2rem, 5vw, 3rem);
-    font-weight: 800;
-    color: var(--color-text);
-  }
-  .price-highlight__note {
-    font-size: var(--font-size-sm);
-    color: var(--color-text-light);
-    margin-bottom: 0.5rem;
-  }
-  .content-prose {
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  .content-prose h2 {
-    font-size: clamp(1.5rem, 3vw, 2rem);
-    font-weight: 800;
-    color: var(--color-text);
-    margin-bottom: 1rem;
-  }
-  .content-prose h3 {
-    font-size: var(--font-size-xl);
-    font-weight: 700;
-    color: var(--color-text);
-    margin: 2rem 0 0.75rem;
-  }
-  .content-prose p {
-    font-size: var(--font-size-base);
-    color: var(--color-text-light);
-    line-height: 1.8;
-    margin-bottom: 1rem;
-  }
+  .prod-layout { display: grid; grid-template-columns: 1fr; gap: 2rem; }
+  @media (min-width: 1024px) { .prod-layout { grid-template-columns: 1fr 340px; gap: 2.5rem; } }
+  .prod-gallery { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; margin-bottom: 2rem; border-radius: 14px; overflow: hidden; }
+  .prod-gallery__main { grid-row: span 2; }
+  .prod-gallery__main img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .prod-gallery__side { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; }
+  .prod-gallery__side img { width: 100%; height: 100%; object-fit: cover; display: block; aspect-ratio: 3/2; }
+  .prod-info { margin-bottom: 2.5rem; }
+  .prod-info__badge { display: inline-block; font-size: 0.75rem; font-weight: 700; color: var(--color-accent); text-transform: uppercase; letter-spacing: 0.08em; padding: 0.375rem 1rem; background: rgba(0,113,227,0.08); border: 1px solid rgba(0,113,227,0.12); border-radius: 6px; margin-bottom: 0.75rem; }
+  .prod-info__title { font-size: clamp(1.375rem, 3vw, 1.75rem); font-weight: 800; color: var(--color-text); line-height: 1.2; letter-spacing: -0.02em; margin: 0 0 1.25rem; }
+  .prod-price { background: var(--color-bg); border-radius: 12px; padding: 1.25rem 1.5rem; margin-bottom: 1.25rem; border-left: 4px solid var(--color-accent); }
+  .prod-price__amount { font-size: 2.25rem; font-weight: 800; color: var(--color-primary); font-variant-numeric: tabular-nums; }
+  .prod-price__currency { font-size: 0.875rem; color: var(--color-text-light); margin-left: 0.5rem; }
+  .prod-price__note { font-size: 0.8125rem; color: var(--color-text-light); margin: 0.5rem 0 0; }
+  .prod-ctas { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+  .prod-btn { display: inline-flex; align-items: center; justify-content: center; padding: 0.875rem 1.75rem; border-radius: 6px; font-size: 0.9375rem; font-weight: 600; text-decoration: none; transition: background 0.2s ease, border-color 0.2s ease; }
+  .prod-btn--wa { background: #25D366; color: #fff; }
+  .prod-btn--wa:hover { background: #1DA851; }
+  .prod-btn--outline { background: none; color: var(--color-text); border: 2px solid var(--color-border); }
+  .prod-btn--outline:hover { border-color: var(--color-accent); color: var(--color-accent); }
+  .prod-selling { margin-bottom: 2.5rem; }
+  .prod-selling__headline { font-size: clamp(1.25rem, 3vw, 1.5rem); font-weight: 800; color: var(--color-text); line-height: 1.25; letter-spacing: -0.02em; margin: 0 0 0.75rem; }
+  .prod-selling__intro { font-size: 0.9375rem; color: var(--color-text-light); line-height: 1.75; margin: 0 0 1.75rem; max-width: 65ch; }
+  .prod-highlights { display: flex; flex-direction: column; gap: 1.25rem; }
+  .prod-hl { display: flex; gap: 1rem; align-items: stretch; }
+  .prod-hl__bar { flex-shrink: 0; width: 3px; background: var(--color-accent); border-radius: 2px; }
+  .prod-hl__content { display: flex; flex-direction: column; gap: 0.25rem; }
+  .prod-hl__title { font-size: 0.9375rem; font-weight: 700; color: var(--color-text); margin: 0; line-height: 1.3; }
+  .prod-hl__desc { font-size: 0.8125rem; color: var(--color-text-light); line-height: 1.65; margin: 0; }
+  .prod-includes { background: var(--color-bg); border-radius: 14px; padding: 1.75rem 2rem; }
+  .prod-includes__title { font-size: 1.0625rem; font-weight: 700; color: var(--color-text); margin: 0 0 1rem; }
+  .prod-includes__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; }
+  .prod-feat { font-size: 0.875rem; color: var(--color-text-light); padding-left: 1.25rem; position: relative; line-height: 1.5; }
+  .prod-feat::before { content: ""; position: absolute; left: 0; top: 0.45rem; width: 6px; height: 6px; border-radius: 50%; background: var(--color-accent); }
+  @media (max-width: 640px) { .prod-includes__grid { grid-template-columns: 1fr; } }
+  .prod-sidebar { display: flex; flex-direction: column; gap: 1.25rem; }
+  @media (min-width: 1024px) { .prod-sidebar { position: sticky; top: calc(var(--header-height) + var(--topbar-height) + 1.5rem); align-self: start; } }
+  .ps-widget { background: var(--color-white); border: 1px solid var(--color-border); border-radius: 12px; padding: 1.25rem; }
+  .ps-widget--dark { background: var(--color-primary); color: #fff; border: none; }
+  .ps-widget__title { font-size: 0.875rem; font-weight: 700; color: var(--color-text); text-transform: uppercase; letter-spacing: 0.05em; margin: 0 0 0.75rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--color-accent); }
+  .ps-widget__title--light { color: #fff; }
+  .ps-widget__desc { font-size: 0.8125rem; color: rgba(255,255,255,0.75); margin: 0 0 0.75rem; }
+  .ps-widget__btn { display: block; text-align: center; padding: 0.625rem; border-radius: 6px; font-size: 0.875rem; font-weight: 600; text-decoration: none; margin-top: 0.5rem; background: var(--color-accent); color: #fff; transition: background 0.2s ease; }
+  .ps-widget__btn:hover { opacity: 0.9; }
+  .ps-widget__btn--wa { background: #25D366; }
+  .ps-specs { display: flex; flex-direction: column; margin: 0; }
+  .ps-specs__row { display: flex; justify-content: space-between; align-items: baseline; padding: 0.4rem 0; border-bottom: 1px solid var(--color-bg); gap: 0.75rem; }
+  .ps-specs__row:last-child { border-bottom: none; }
+  .ps-specs__row dt { font-size: 0.8125rem; color: var(--color-text-light); font-weight: 500; margin: 0; }
+  .ps-specs__row dd { font-size: 0.8125rem; font-weight: 600; color: var(--color-text); text-align: right; margin: 0; font-variant-numeric: tabular-nums; }
+  .ps-tags { display: flex; flex-wrap: wrap; gap: 0.375rem; }
+  .ps-tag { font-size: 0.6875rem; font-weight: 600; color: var(--color-text); padding: 0.3rem 0.75rem; background: var(--color-bg); border: 1px solid var(--color-border); border-radius: 6px; white-space: nowrap; }
+  .ps-pkg { display: flex; gap: 0.75rem; align-items: center; text-decoration: none; padding: 0.625rem 0; border-bottom: 1px solid var(--color-bg); }
+  .ps-pkg:last-of-type { border-bottom: none; }
+  .ps-pkg__img { width: 72px; height: 54px; object-fit: cover; border-radius: 8px; flex-shrink: 0; }
+  .ps-pkg__info { display: flex; flex-direction: column; gap: 0.125rem; }
+  .ps-pkg__name { font-size: 0.8125rem; font-weight: 600; color: var(--color-text); }
+  .ps-pkg__price { font-size: 0.75rem; font-weight: 700; color: var(--color-accent); font-variant-numeric: tabular-nums; }
+  .ps-pkg:hover .ps-pkg__name { color: var(--color-accent); }
+  .ps-upsell { margin-top: 0.75rem; padding-top: 0.75rem; border-top: 1px solid var(--color-bg); }
+  .ps-upsell__text { font-size: 0.75rem; color: var(--color-text-light); line-height: 1.5; margin: 0 0 0.375rem; }
+  .ps-upsell__link { font-size: 0.75rem; font-weight: 600; color: var(--color-accent); text-decoration: none; }
+  .ps-upsell__link:hover { text-decoration: underline; }
+  .ps-links { display: flex; flex-direction: column; }
+  .ps-link { padding: 0.4rem 0; border-bottom: 1px solid var(--color-bg); font-size: 0.8125rem; color: var(--color-text-light); text-decoration: none; }
+  .ps-link:last-child { border-bottom: none; }
+  .ps-link:hover { color: var(--color-accent); }
+  .ps-contact p { font-size: 0.8125rem; color: var(--color-text-light); margin: 0.3rem 0; }
+  .ps-contact a { color: var(--color-accent); text-decoration: none; }
+  .prod-process { margin: 2.5rem 0; }
+  .prod-process__title { font-size: 1.125rem; font-weight: 800; color: var(--color-text); letter-spacing: -0.02em; margin: 0 0 1.25rem; }
+  .prod-steps { display: flex; flex-direction: column; gap: 0; }
+  .prod-step { display: flex; gap: 1rem; padding: 1rem 0; border-bottom: 1px solid var(--color-border); }
+  .prod-step:last-child { border-bottom: none; }
+  .prod-step__num { flex-shrink: 0; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; background: var(--color-accent); color: #fff; font-size: 0.8125rem; font-weight: 700; border-radius: 50%; }
+  .prod-step__content { display: flex; flex-direction: column; gap: 0.2rem; }
+  .prod-step__name { font-size: 0.9375rem; font-weight: 700; color: var(--color-text); margin: 0; line-height: 1.3; }
+  .prod-step__desc { font-size: 0.8125rem; color: var(--color-text-light); line-height: 1.6; margin: 0; }
+  .prod-compare { margin: 2.5rem 0; }
+  .prod-compare__title { font-size: 1.125rem; font-weight: 800; color: var(--color-text); letter-spacing: -0.02em; margin: 0 0 1.25rem; }
+  .prod-compare__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+  @media (max-width: 640px) { .prod-compare__grid { grid-template-columns: 1fr; } }
+  .prod-compare__col { border-radius: 12px; padding: 1.25rem; }
+  .prod-compare__col--them { background: #fef2f2; border: 1px solid #fecaca; }
+  .prod-compare__col--us { background: #eff6ff; border: 1px solid #bfdbfe; }
+  .prod-compare__label { display: block; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.75rem; }
+  .prod-compare__col--them .prod-compare__label { color: #991b1b; }
+  .prod-compare__col--us .prod-compare__label { color: var(--color-primary); }
+  .prod-compare__list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.5rem; }
+  .prod-compare__list li { font-size: 0.8125rem; color: var(--color-text); line-height: 1.4; padding-left: 1.125rem; position: relative; }
+  .prod-compare__col--them .prod-compare__list li::before { content: "–"; position: absolute; left: 0; color: #dc2626; font-size: 0.75rem; font-weight: 700; }
+  .prod-compare__col--us .prod-compare__list li::before { content: "✓"; position: absolute; left: 0; color: var(--color-accent); font-size: 0.75rem; font-weight: 700; }
+  .prod-proof { margin-top: 2.5rem; }
+  .prod-quote { background: var(--color-bg); border-radius: 14px; padding: 1.75rem 2rem; border-left: 4px solid var(--color-accent); margin: 0; }
+  .prod-quote__text { font-size: 0.9375rem; color: var(--color-text); line-height: 1.75; font-style: italic; margin: 0 0 1rem; }
+  .prod-quote__footer { display: flex; flex-direction: column; gap: 0.125rem; }
+  .prod-quote__name { font-size: 0.875rem; font-weight: 700; color: var(--color-text); font-style: normal; }
+  .prod-quote__event { font-size: 0.75rem; color: var(--color-text-light); font-style: normal; }
 </style>

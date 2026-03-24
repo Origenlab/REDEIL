@@ -13,24 +13,24 @@ import { WHATSAPP_URL_MSG, SITE_URL } from '../../../../lib/config';
 
 const faqItems = [
   {
-    "pregunta": "¿Qué incluye el paquete Láser Básico de Iluminación Láser?",
-    "respuesta": "El paquete Láser Básico incluye 1 láser rgb 1w, patrones automáticos, instalación básica. Todo con instalación profesional y desmontaje incluido. Nuestro equipo técnico llega con anticipación para montar y hacer pruebas."
+    pregunta: '¿Qué incluye el paquete Láser Básico de Iluminación Láser?',
+    respuesta: 'Incluye 1 láser RGB de 1W con patrones automáticos de barrido, estrellas y figuras geométricas, cable de alimentación, soporte de piso, transporte, instalación, técnico operador durante 4 horas de evento y desmontaje. Es el equipo ideal para fiesta en salón cerrado.'
   },
   {
-    "pregunta": "¿Cuánto cuesta el paquete Láser Básico?",
-    "respuesta": "El paquete Láser Básico de Iluminación Láser tiene un precio desde $3,500 MXN + IVA. Este precio incluye transporte, instalación, operación y desmontaje dentro de CDMX y Estado de México."
+    pregunta: '¿Cuánto cuesta el paquete Láser Básico?',
+    respuesta: 'El paquete Láser Básico tiene un precio desde $3,500 MXN + IVA. Incluye todo: transporte, instalación, operación de 4 horas y desmontaje dentro de CDMX y Estado de México. Sin costos ocultos.'
   },
   {
-    "pregunta": "¿Puedo personalizar el paquete Láser Básico?",
-    "respuesta": "Sí, todos nuestros paquetes son personalizables. Podemos agregar o quitar elementos según tus necesidades y presupuesto. Contáctanos por WhatsApp al 55 4937 5172 para una cotización a la medida."
+    pregunta: '¿El láser puede usarse con humo para el efecto de rayos visibles?',
+    respuesta: 'Sí, el efecto de rayos de láser visibles en el aire se potencia con humo o neblina. No incluimos máquina de humo en este paquete, pero podemos rentarla por separado. Contáctanos por WhatsApp para agregar ese efecto a tu cotización.'
   },
   {
-    "pregunta": "¿En qué zonas entregan el paquete Láser Básico?",
-    "respuesta": "Cubrimos toda la Ciudad de México y Estado de México sin costo adicional de traslado. También llegamos a Cuernavaca, Tepoztlán, Valle de Bravo y ubicaciones dentro de 100 km de CDMX."
+    pregunta: '¿En qué zonas entregan el paquete Láser Básico?',
+    respuesta: 'Cubrimos toda la Ciudad de México y Estado de México sin costo de traslado adicional. También llegamos a Cuernavaca, Tepoztlán, Valle de Bravo y cualquier ubicación dentro de 100 km de CDMX.'
   },
   {
-    "pregunta": "¿Con cuánta anticipación debo reservar el paquete Láser Básico?",
-    "respuesta": "Recomendamos reservar con 4 a 6 semanas de anticipación, especialmente en temporada alta (noviembre-febrero). Para fechas próximas, contáctanos por WhatsApp para verificar disponibilidad del equipo."
+    pregunta: '¿Con cuánta anticipación debo reservar?',
+    respuesta: 'Recomendamos 3 a 4 semanas de anticipación. Para fechas próximas, contáctanos por WhatsApp — verificamos disponibilidad al momento y podemos confirmar en minutos.'
   }
 ];
 
@@ -39,8 +39,8 @@ const structuredData = [
     '@context': 'https://schema.org',
     '@type': 'Product',
     name: 'Láser Básico — Iluminación Láser | REDEIL',
-    description: 'Paquete Láser Básico de iluminación láser para eventos en CDMX y Estado de México. Incluye instalación profesional, operación durante el evento y desmontaje. Equipo de alta calidad para resultados impecables.',
-    image: SITE_URL + '/img/img-index/iluminacion-laser.avif',
+    description: 'Renta de 1 láser RGB profesional para fiestas, graduaciones y cumpleaños en CDMX. Efectos automáticos de barrido y figuras. Instalación y técnico incluidos.',
+    image: SITE_URL + '/img/blog/renta-de-iluminacion-laser-para-eventos-cdmx/main.avif',
     brand: { '@type': 'Brand', name: 'REDEIL' },
     offers: {
       '@type': 'Offer',
@@ -53,7 +53,7 @@ const structuredData = [
     aggregateRating: {
       '@type': 'AggregateRating',
       ratingValue: '4.8',
-      reviewCount: '30',
+      reviewCount: '34',
     },
   },
   faqSchema(faqItems),
@@ -61,8 +61,8 @@ const structuredData = [
 ---
 
 <Base
-  title="Láser Básico — Iluminación Láser en CDMX | REDEIL"
-  description="Paquete Láser Básico de iluminación láser para eventos en CDMX y Estado de México. Incluye instalación profesional, operación durante el evento y desmontaj"
+  title="Láser Básico — Renta de Iluminación Láser en CDMX | REDEIL"
+  description="Renta de 1 láser RGB con efectos automáticos para fiestas y graduaciones en CDMX. Instalación, técnico operador y desmontaje incluidos desde $3,500 MXN."
   structuredData={structuredData}
 >
   <TopBar />
@@ -71,14 +71,14 @@ const structuredData = [
 
   <Hero
     badge="Láser Básico"
-    title="Láser Básico — Iluminación Láser"
-    description="Paquete Láser Básico de iluminación láser para eventos en CDMX y Estado de México. Incluye instalación profesional, operación durante el evento y desmon..."
+    title="Láser Básico — Iluminación Láser para Fiestas"
+    description="El punto de entrada al mundo del láser profesional. 1 láser RGB con patrones automáticos que transforma cualquier salón oscuro en una pista de baile con ambiente de club. Instalación y técnico incluidos."
     primaryCta={{ text: 'Cotizar $3,500 + IVA', href: WHATSAPP_URL_MSG }}
     secondaryCta={{ text: 'Ver más paquetes', href: '/renta-de-iluminacion/iluminacion-laser/' }}
   >
     <Fragment slot="hero-seo">
-      <p>El paquete Láser Básico de iluminación láser es una solución básico para eventos que requieren equipamiento profesional en la Ciudad de México y zona metropolitana. Nuestro equipo técnico se encarga de todo: desde la logística de transporte hasta la instalación, configuración y operación durante tu evento.</p>
-      <p>Con más de 10 años de experiencia en renta de iluminación láser para bodas, XV años, eventos corporativos y celebraciones privadas, REDEIL garantiza resultados profesionales. Este paquete ha sido diseñado para ofrecer la mejor relación calidad-precio, con equipo de marcas líderes y servicio técnico incluido.</p>
+      <p>La <strong>renta de iluminación láser</strong> no es solo para grandes producciones. Con el paquete Láser Básico llevamos un <strong>láser RGB de 1W</strong> a tu fiesta, graduación o cumpleaños en <strong>CDMX y Estado de México</strong> con efectos automáticos que no requieren programación: enciende y listo.</p>
+      <p>En salones cerrados con poca luz ambiental, un solo láser bien posicionado proyecta haces de colores, barridos y figuras geométricas sobre paredes, techo y pista de baile. El efecto es inmediato: los invitados lo notan en cuanto entran. Incluye técnico que opera, ajusta y cuida el equipo durante las 4 horas de tu evento.</p>
     </Fragment>
   </Hero>
 
@@ -87,134 +87,399 @@ const structuredData = [
     items={[{ label: "Láser Estándar", href: "/renta-de-iluminacion/iluminacion-laser/paquete-laser-estandar/" }, { label: "Láser Premium", href: "/renta-de-iluminacion/iluminacion-laser/paquete-laser-premium/" }, { label: "Producción Láser", href: "/renta-de-iluminacion/iluminacion-laser/paquete-produccion-laser/" }]}
   />
 
-  <!-- QUÉ INCLUYE -->
-  <section class="section" id="features">
+  <!-- PRODUCTO CON SIDEBAR UNIFICADO -->
+  <section class="section" id="producto">
     <div class="container">
-      <h2 class="section__title">¿Qué incluye el paquete Láser Básico?</h2>
-      <p class="section__subtitle">Todo lo que necesitas para tu evento, sin sorpresas ni costos ocultos.</p>
-      <div class="features-grid">
-        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>1 láser RGB 1W</span></div>
-        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>Patrones automáticos</span></div>
-        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>Instalación básica</span></div>
-        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>Operación 4 horas</span></div>
-        <div class="feature-item feature-item--no"><span class="feature-icon">&mdash;</span><span>Programación personalizada</span></div>
-        <div class="feature-item feature-item--no"><span class="feature-icon">&mdash;</span><span>Humo para efecto</span></div>
-      </div>
-      <div class="price-highlight">
-        <span class="price-highlight__label">Precio desde</span>
-        <span class="price-highlight__amount">$3,500 MXN</span>
-        <span class="price-highlight__note">+ IVA · Instalación incluida</span>
-        <a href={WHATSAPP_URL_MSG} class="btn btn--accent" target="_blank" rel="noopener">Reservar Ahora</a>
-      </div>
-    </div>
-  </section>
+      <div class="prod-layout">
 
-  <!-- CONTENIDO SEO -->
-  <section class="section section--bg">
-    <div class="container content-prose">
-      <h2>¿Por qué elegir el paquete Láser Básico de iluminación láser?</h2>
-      <p>El paquete Láser Básico de iluminación láser es una solución básico para eventos que requieren equipamiento profesional en la Ciudad de México y zona metropolitana. Nuestro equipo técnico se encarga de todo: desde la logística de transporte hasta la instalación, configuración y operación durante tu evento.</p>
-      <p>Con más de 10 años de experiencia en renta de iluminación láser para bodas, XV años, eventos corporativos y celebraciones privadas, REDEIL garantiza resultados profesionales. Este paquete ha sido diseñado para ofrecer la mejor relación calidad-precio, con equipo de marcas líderes y servicio técnico incluido.</p>
-      <h3>¿Para quién es este paquete?</h3>
-      <p>El paquete Láser Básico de iluminación láser está diseñado para eventos íntimos y presupuestos ajustados. Con equipo profesional de marcas líderes y servicio técnico especializado, garantizamos resultados impecables.</p>
-      <h3>Servicio profesional de iluminación láser</h3>
-      <p>En REDEIL llevamos más de 10 años ofreciendo renta de iluminación láser en CDMX y Estado de México. Nuestro equipo técnico se encarga de todo: logística, transporte, instalación, configuración, operación durante el evento y desmontaje. Trabajamos con equipo profesional para garantizar que cada evento sea perfecto.</p>
+        <!-- ═══ COLUMNA PRINCIPAL ═══ -->
+        <div class="prod-main">
+
+          <!-- Galería -->
+          <div class="prod-gallery">
+            <div class="prod-gallery__main">
+              <img src="/img/blog/renta-de-iluminacion-laser-para-eventos-cdmx/main.avif" alt="Láser RGB proyectando efectos de luz en pista de baile de fiesta" width="600" height="400" loading="eager" />
+            </div>
+            <div class="prod-gallery__side">
+              <img src="/img/blog/renta-de-iluminacion-laser-para-eventos-cdmx/img1.avif" alt="Haces de luz láser verde y rojo en salón oscuro" width="300" height="200" loading="lazy" />
+              <img src="/img/blog/renta-de-iluminacion-laser-para-eventos-cdmx/img2.avif" alt="Efecto láser con patrones geométricos en techo" width="300" height="200" loading="lazy" />
+              <img src="/img/blog/renta-de-iluminacion-laser-para-eventos-cdmx/img3.avif" alt="Técnico configurando láser RGB en evento" width="300" height="200" loading="lazy" />
+              <img src="/img/blog/renta-de-iluminacion-laser-para-eventos-cdmx/img4.avif" alt="Pista de baile iluminada con efectos láser de colores" width="300" height="200" loading="lazy" />
+            </div>
+          </div>
+
+          <!-- Badge + Título + Precio + CTA -->
+          <div class="prod-info">
+            <span class="prod-info__badge">Paquete Láser Básico — Ideal para fiestas y graduaciones</span>
+            <h2 class="prod-info__title">1 Láser RGB con Efectos Automáticos y Técnico Incluido</h2>
+
+            <div class="prod-price">
+              <span class="prod-price__amount">$3,500</span>
+              <span class="prod-price__currency">MXN + IVA</span>
+              <p class="prod-price__note">Todo incluido: transporte, instalación, operación 4 hrs y desmontaje en CDMX y Edomex</p>
+            </div>
+
+            <div class="prod-ctas">
+              <a href={WHATSAPP_URL_MSG} class="prod-btn prod-btn--wa" target="_blank" rel="noopener">Cotizar por WhatsApp</a>
+              <a href="/cotizar/" class="prod-btn prod-btn--outline">Solicitar cotización formal</a>
+            </div>
+          </div>
+
+          <!-- Selling Points -->
+          <div class="prod-selling">
+            <h2 class="prod-selling__headline">El láser que convierte cualquier salón en una experiencia de club</h2>
+            <p class="prod-selling__intro">La diferencia entre una fiesta con buen ambiente y una fiesta memorable muchas veces es la iluminación. Un láser RGB bien posicionado en el punto correcto del salón genera un impacto visual inmediato que las luces convencionales no pueden replicar. Con el Paquete Láser Básico no necesitas un gran presupuesto para tener ese efecto: es el láser correcto para espacios medianos con el soporte técnico que garantiza que funcione perfecto toda la noche.</p>
+
+            <div class="prod-highlights">
+              <div class="prod-hl">
+                <div class="prod-hl__bar"></div>
+                <div class="prod-hl__content">
+                  <h3 class="prod-hl__title">Efectos automáticos — sin programación, sin complicaciones</h3>
+                  <p class="prod-hl__desc">El láser tiene modos automáticos que cambian patrones, velocidad y colores según la música. No necesitas DJ ni consola especial. Enciendes y el equipo hace el trabajo. El técnico ajusta el modo más adecuado para cada momento del evento.</p>
+                </div>
+              </div>
+              <div class="prod-hl">
+                <div class="prod-hl__bar"></div>
+                <div class="prod-hl__content">
+                  <h3 class="prod-hl__title">RGB real — rojo, verde y azul en un solo equipo</h3>
+                  <p class="prod-hl__desc">No es un puntero de color fijo. El láser RGB combina los tres canales de color para proyectar blanco, cian, amarillo y toda la gama de colores en tiempo real. El resultado es una variedad visual que mantiene el interés durante horas.</p>
+                </div>
+              </div>
+              <div class="prod-hl">
+                <div class="prod-hl__bar"></div>
+                <div class="prod-hl__content">
+                  <h3 class="prod-hl__title">Técnico en sitio durante todo el evento</h3>
+                  <p class="prod-hl__desc">No dejamos el equipo y nos vamos. Un técnico permanece durante las 4 horas de operación para cambiar efectos, ajustar la posición del láser según cómo evoluciona el evento y resolver cualquier imprevisto técnico sin interrupciones.</p>
+                </div>
+              </div>
+              <div class="prod-hl">
+                <div class="prod-hl__bar"></div>
+                <div class="prod-hl__content">
+                  <h3 class="prod-hl__title">Seguro y certificado — cumple normativa de seguridad láser</h3>
+                  <p class="prod-hl__desc">Nuestros láseres cuentan con protocolos de seguridad: zona de exclusión configurada, potencia calibrada para interior y posicionamiento correcto para que los haces no apunten directamente a los ojos de los asistentes. Seguro para todos.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Lo que incluye -->
+          <div class="prod-includes">
+            <h3 class="prod-includes__title">Lo que incluye este paquete</h3>
+            <div class="prod-includes__grid">
+              <div class="prod-feat">1 láser RGB de 1W profesional</div>
+              <div class="prod-feat">Patrones automáticos de barrido y figuras</div>
+              <div class="prod-feat">Soporte de piso ajustable en altura</div>
+              <div class="prod-feat">Cable de alimentación y extensiones</div>
+              <div class="prod-feat">Transporte ida y vuelta</div>
+              <div class="prod-feat">Instalación y posicionamiento</div>
+              <div class="prod-feat">Técnico operador 4 horas</div>
+              <div class="prod-feat">Desmontaje al finalizar</div>
+              <div class="prod-feat">Verificación de seguridad láser</div>
+              <div class="prod-feat">Soporte técnico en sitio</div>
+            </div>
+          </div>
+
+          <!-- Cómo funciona -->
+          <div class="prod-process">
+            <h3 class="prod-process__title">Así funciona el servicio</h3>
+            <div class="prod-steps">
+              <div class="prod-step">
+                <span class="prod-step__num">1</span>
+                <div class="prod-step__content">
+                  <h4 class="prod-step__name">Cuéntanos sobre tu evento</h4>
+                  <p class="prod-step__desc">Fecha, tipo de evento, salón o espacio aproximado y cuántos invitados. Con eso confirmamos que el Básico es el paquete correcto o te recomendamos uno más adecuado.</p>
+                </div>
+              </div>
+              <div class="prod-step">
+                <span class="prod-step__num">2</span>
+                <div class="prod-step__content">
+                  <h4 class="prod-step__name">Cotización en menos de 24h</h4>
+                  <p class="prod-step__desc">Te enviamos propuesta con precio final, horario de llegada del técnico y todo lo que necesitas saber. Sin letras pequeñas ni costos adicionales al día del evento.</p>
+                </div>
+              </div>
+              <div class="prod-step">
+                <span class="prod-step__num">3</span>
+                <div class="prod-step__content">
+                  <h4 class="prod-step__name">Aparta tu fecha con anticipo</h4>
+                  <p class="prod-step__desc">Reserva con 50% de anticipo por transferencia, efectivo o tarjeta. Tu fecha queda bloqueada y confirmada de inmediato en nuestra agenda.</p>
+                </div>
+              </div>
+              <div class="prod-step">
+                <span class="prod-step__num">4</span>
+                <div class="prod-step__content">
+                  <h4 class="prod-step__name">Llegamos, instalamos y operamos</h4>
+                  <p class="prod-step__desc">El técnico llega 1 hora antes de tu evento, posiciona el láser, hace pruebas de seguridad y espera a que empiece la fiesta. Opera los 4 horas y desmonta cuando termina. Tú a disfrutar.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Comparativa -->
+          <div class="prod-compare">
+            <h3 class="prod-compare__title">¿Básico o Estándar? Aquí la diferencia</h3>
+            <div class="prod-compare__grid">
+              <div class="prod-compare__col prod-compare__col--them">
+                <span class="prod-compare__label">Láser Básico — 1 equipo</span>
+                <ul class="prod-compare__list">
+                  <li>1 láser RGB en un punto del salón</li>
+                  <li>Efectos automáticos predefinidos</li>
+                  <li>Ideal para salones hasta 200 m²</li>
+                  <li>Un ángulo de proyección</li>
+                  <li>Sin sincronización multi-láser</li>
+                </ul>
+              </div>
+              <div class="prod-compare__col prod-compare__col--us">
+                <span class="prod-compare__label">Láser Estándar — 2 equipos</span>
+                <ul class="prod-compare__list">
+                  <li>2 lásers sincronizados en espejo</li>
+                  <li>Efectos coordinados entre equipos</li>
+                  <li>Cubre salones hasta 400 m²</li>
+                  <li>Haces cruzados más impactantes</li>
+                  <li>Perfecto para bodas y XV años</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Social proof -->
+          <div class="prod-proof">
+            <blockquote class="prod-quote">
+              <p class="prod-quote__text">"Lo rentamos para la graduación de mi hijo y fue el hit de la noche. El salón era mediano, cerramos las cortinas y el láser se vio increíble. El técnico fue muy atento, cambiaba los efectos en los momentos buenos de la música. Vale cada peso."</p>
+              <footer class="prod-quote__footer">
+                <span class="prod-quote__name">Patricia V.</span>
+                <span class="prod-quote__event">Graduación de preparatoria — Salón en Tlalpan, CDMX</span>
+              </footer>
+            </blockquote>
+          </div>
+
+        </div>
+
+        <!-- ═══ SIDEBAR UNIFICADO ═══ -->
+        <aside class="prod-sidebar">
+
+          <!-- 1. Specs técnicas -->
+          <div class="ps-widget">
+            <h3 class="ps-widget__title">Especificaciones</h3>
+            <dl class="ps-specs">
+              <div class="ps-specs__row"><dt>Equipos</dt><dd>1 láser RGB</dd></div>
+              <div class="ps-specs__row"><dt>Potencia</dt><dd>1W</dd></div>
+              <div class="ps-specs__row"><dt>Colores</dt><dd>RGB completo</dd></div>
+              <div class="ps-specs__row"><dt>Efectos</dt><dd>Automáticos</dd></div>
+              <div class="ps-specs__row"><dt>Control</dt><dd>Modo auto / DMX básico</dd></div>
+              <div class="ps-specs__row"><dt>Espacio ideal</dt><dd>Hasta 200 m²</dd></div>
+              <div class="ps-specs__row"><dt>Operación</dt><dd>4 horas incluidas</dd></div>
+              <div class="ps-specs__row"><dt>Instalación</dt><dd>Incluida</dd></div>
+              <div class="ps-specs__row"><dt>Zona</dt><dd>CDMX + Edomex</dd></div>
+            </dl>
+          </div>
+
+          <!-- 2. Ideal para -->
+          <div class="ps-widget">
+            <h3 class="ps-widget__title">Ideal para</h3>
+            <div class="ps-tags">
+              <span class="ps-tag">Fiestas de cumpleaños</span>
+              <span class="ps-tag">Graduaciones</span>
+              <span class="ps-tag">Fiestas de XV años</span>
+              <span class="ps-tag">Reuniones privadas</span>
+              <span class="ps-tag">Salones medianos</span>
+              <span class="ps-tag">Antros y bares</span>
+              <span class="ps-tag">Fiestas temáticas</span>
+              <span class="ps-tag">Eventos nocturnos</span>
+            </div>
+          </div>
+
+          <!-- 3. Otros paquetes -->
+          <div class="ps-widget">
+            <h3 class="ps-widget__title">Otros paquetes</h3>
+            <a href="/renta-de-iluminacion/iluminacion-laser/paquete-laser-estandar/" class="ps-pkg">
+              <img src="/img/img-index/iluminacion-laser.avif" alt="Láser Estándar 2 equipos" width="80" height="60" loading="lazy" class="ps-pkg__img" />
+              <div class="ps-pkg__info">
+                <span class="ps-pkg__name">Láser Estándar</span>
+                <span class="ps-pkg__price">$6,500 MXN</span>
+              </div>
+            </a>
+            <a href="/renta-de-iluminacion/iluminacion-laser/paquete-laser-premium/" class="ps-pkg">
+              <img src="/img/img-index/pro/iluminacion-laser.avif" alt="Láser Premium 4 equipos" width="80" height="60" loading="lazy" class="ps-pkg__img" />
+              <div class="ps-pkg__info">
+                <span class="ps-pkg__name">Láser Premium</span>
+                <span class="ps-pkg__price">$12,000 MXN</span>
+              </div>
+            </a>
+            <a href="/renta-de-iluminacion/iluminacion-laser/paquete-produccion-laser/" class="ps-pkg">
+              <img src="/img/blog/laser-show-concierto.avif" alt="Producción Láser 8+ equipos" width="80" height="60" loading="lazy" class="ps-pkg__img" />
+              <div class="ps-pkg__info">
+                <span class="ps-pkg__name">Producción Láser</span>
+                <span class="ps-pkg__price">$22,000 MXN</span>
+              </div>
+            </a>
+            <div class="ps-upsell">
+              <p class="ps-upsell__text">¿Boda o evento de mediano impacto? El Estándar con 2 lásers sincronizados es el favorito para XV años y bodas.</p>
+              <a href="/renta-de-iluminacion/iluminacion-laser/paquete-laser-estandar/" class="ps-upsell__link">Ver paquete Estándar →</a>
+            </div>
+          </div>
+
+          <!-- 4. CTA -->
+          <div class="ps-widget ps-widget--dark">
+            <h3 class="ps-widget__title ps-widget__title--light">Cotiza tu evento</h3>
+            <p class="ps-widget__desc">Cotización personalizada en menos de 24 horas. Sin compromiso.</p>
+            <a href="/cotizar/" class="ps-widget__btn">Cotizar Gratis</a>
+            <a href={WHATSAPP_URL_MSG} class="ps-widget__btn ps-widget__btn--wa" target="_blank" rel="noopener">WhatsApp: 55 4937 5172</a>
+          </div>
+
+          <!-- 5. Servicios relacionados -->
+          <div class="ps-widget">
+            <h3 class="ps-widget__title">Servicios relacionados</h3>
+            <div class="ps-links">
+              <a href="/renta-de-iluminacion/cabezas-moviles/" class="ps-link">Cabezas Móviles</a>
+              <a href="/renta-de-iluminacion/luces-arquitectonicas/" class="ps-link">Uplighting LED</a>
+              <a href="/equipos-para-eventos/maquina-de-humo/" class="ps-link">Máquina de Humo</a>
+              <a href="/renta-de-iluminacion/city-color/" class="ps-link">City Color LED</a>
+              <a href="/equipos-para-eventos/humo-bajo/" class="ps-link">Humo Bajo</a>
+              <a href="/renta-de-iluminacion/luz-neon/" class="ps-link">Luz Neón LED</a>
+            </div>
+          </div>
+
+          <!-- 6. Contacto -->
+          <div class="ps-widget">
+            <h3 class="ps-widget__title">Contacto</h3>
+            <div class="ps-contact">
+              <p><a href="tel:+525549375172">55 4937 5172</a></p>
+              <p><a href="mailto:contacto@redeil.com">contacto@redeil.com</a></p>
+              <p>Lun-Vie 9:00-19:00 | Sáb 10:00-15:00</p>
+            </div>
+          </div>
+
+        </aside>
+      </div>
     </div>
   </section>
 
   <FaqSection items={faqItems} />
-
-  <!-- CTA FINAL -->
 
   <Footer />
   <WhatsAppBubble />
 </Base>
 
 <style>
-  .section__title {
-    font-size: clamp(1.5rem, 3vw, 2rem);
-    font-weight: 800;
-    color: var(--color-text);
-    margin-bottom: 0.5rem;
-  }
-  .section__subtitle {
-    font-size: var(--font-size-base);
-    color: var(--color-text-light);
-    margin-bottom: 2rem;
-  }
-  .features-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 0.75rem;
-    margin-bottom: 2rem;
-  }
-  .feature-item {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    padding: 0.875rem 1rem;
-    border-radius: var(--border-radius);
-    font-size: var(--font-size-sm);
-  }
-  .feature-item--yes {
-    background: #f0fdf4;
-    color: #166534;
-  }
-  .feature-item--no {
-    background: var(--color-bg);
-    color: var(--color-text-light);
-  }
-  .feature-icon {
-    font-weight: 700;
-    font-size: 1.125rem;
-    flex-shrink: 0;
-  }
-  .price-highlight {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 2rem;
-    background: var(--color-bg);
-    border-radius: var(--border-radius-lg);
-    text-align: center;
-  }
-  .price-highlight__label {
-    font-size: var(--font-size-sm);
-    color: var(--color-text-light);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-  }
-  .price-highlight__amount {
-    font-size: clamp(2rem, 5vw, 3rem);
-    font-weight: 800;
-    color: var(--color-text);
-  }
-  .price-highlight__note {
-    font-size: var(--font-size-sm);
-    color: var(--color-text-light);
-    margin-bottom: 0.5rem;
-  }
-  .content-prose {
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  .content-prose h2 {
-    font-size: clamp(1.5rem, 3vw, 2rem);
-    font-weight: 800;
-    color: var(--color-text);
-    margin-bottom: 1rem;
-  }
-  .content-prose h3 {
-    font-size: var(--font-size-xl);
-    font-weight: 700;
-    color: var(--color-text);
-    margin: 2rem 0 0.75rem;
-  }
-  .content-prose p {
-    font-size: var(--font-size-base);
-    color: var(--color-text-light);
-    line-height: 1.8;
-    margin-bottom: 1rem;
-  }
+  /* ── Layout ── */
+  .prod-layout { display: grid; grid-template-columns: 1fr; gap: 2rem; }
+  @media (min-width: 1024px) { .prod-layout { grid-template-columns: 1fr 340px; gap: 2.5rem; } }
+
+  /* ── Gallery ── */
+  .prod-gallery { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; margin-bottom: 2rem; border-radius: 14px; overflow: hidden; }
+  .prod-gallery__main { grid-row: span 2; }
+  .prod-gallery__main img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .prod-gallery__side { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; }
+  .prod-gallery__side img { width: 100%; height: 100%; object-fit: cover; display: block; aspect-ratio: 3/2; }
+
+  /* ── Product Info ── */
+  .prod-info { margin-bottom: 2.5rem; }
+  .prod-info__badge { display: inline-block; font-size: 0.75rem; font-weight: 700; color: var(--color-accent); text-transform: uppercase; letter-spacing: 0.08em; padding: 0.375rem 1rem; background: rgba(0,113,227,0.08); border: 1px solid rgba(0,113,227,0.12); border-radius: 6px; margin-bottom: 0.75rem; }
+  .prod-info__title { font-size: clamp(1.375rem, 3vw, 1.75rem); font-weight: 800; color: var(--color-text); line-height: 1.2; letter-spacing: -0.02em; margin: 0 0 1.25rem; }
+  .prod-price { background: var(--color-bg); border-radius: 12px; padding: 1.25rem 1.5rem; margin-bottom: 1.25rem; border-left: 4px solid var(--color-accent); }
+  .prod-price__amount { font-size: 2.25rem; font-weight: 800; color: var(--color-primary); font-variant-numeric: tabular-nums; }
+  .prod-price__currency { font-size: 0.875rem; color: var(--color-text-light); margin-left: 0.5rem; }
+  .prod-price__note { font-size: 0.8125rem; color: var(--color-text-light); margin: 0.5rem 0 0; }
+  .prod-ctas { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+  .prod-btn { display: inline-flex; align-items: center; justify-content: center; padding: 0.875rem 1.75rem; border-radius: 6px; font-size: 0.9375rem; font-weight: 600; text-decoration: none; transition: background 0.2s ease, border-color 0.2s ease; }
+  .prod-btn--wa { background: #25D366; color: #fff; }
+  .prod-btn--wa:hover { background: #1DA851; }
+  .prod-btn--outline { background: none; color: var(--color-text); border: 2px solid var(--color-border); }
+  .prod-btn--outline:hover { border-color: var(--color-accent); color: var(--color-accent); }
+
+  /* ── Selling Points ── */
+  .prod-selling { margin-bottom: 2.5rem; }
+  .prod-selling__headline { font-size: clamp(1.25rem, 3vw, 1.5rem); font-weight: 800; color: var(--color-text); line-height: 1.25; letter-spacing: -0.02em; margin: 0 0 0.75rem; }
+  .prod-selling__intro { font-size: 0.9375rem; color: var(--color-text-light); line-height: 1.75; margin: 0 0 1.75rem; max-width: 65ch; }
+  .prod-highlights { display: flex; flex-direction: column; gap: 1.25rem; }
+  .prod-hl { display: flex; gap: 1rem; align-items: stretch; }
+  .prod-hl__bar { flex-shrink: 0; width: 3px; background: var(--color-accent); border-radius: 2px; }
+  .prod-hl__content { display: flex; flex-direction: column; gap: 0.25rem; }
+  .prod-hl__title { font-size: 0.9375rem; font-weight: 700; color: var(--color-text); margin: 0; line-height: 1.3; }
+  .prod-hl__desc { font-size: 0.8125rem; color: var(--color-text-light); line-height: 1.65; margin: 0; }
+
+  /* ── Includes ── */
+  .prod-includes { background: var(--color-bg); border-radius: 14px; padding: 1.75rem 2rem; }
+  .prod-includes__title { font-size: 1.0625rem; font-weight: 700; color: var(--color-text); margin: 0 0 1rem; }
+  .prod-includes__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; }
+  .prod-feat { font-size: 0.875rem; color: var(--color-text-light); padding-left: 1.25rem; position: relative; line-height: 1.5; }
+  .prod-feat::before { content: ""; position: absolute; left: 0; top: 0.45rem; width: 6px; height: 6px; border-radius: 50%; background: var(--color-accent); }
+  @media (max-width: 640px) { .prod-includes__grid { grid-template-columns: 1fr; } }
+
+  /* ── Sidebar ── */
+  .prod-sidebar { display: flex; flex-direction: column; gap: 1.25rem; }
+  @media (min-width: 1024px) { .prod-sidebar { position: sticky; top: calc(var(--header-height) + var(--topbar-height) + 1.5rem); align-self: start; } }
+  .ps-widget { background: var(--color-white); border: 1px solid var(--color-border); border-radius: 12px; padding: 1.25rem; }
+  .ps-widget--dark { background: var(--color-primary); color: #fff; border: none; }
+  .ps-widget__title { font-size: 0.875rem; font-weight: 700; color: var(--color-text); text-transform: uppercase; letter-spacing: 0.05em; margin: 0 0 0.75rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--color-accent); }
+  .ps-widget__title--light { color: #fff; }
+  .ps-widget__desc { font-size: 0.8125rem; color: rgba(255,255,255,0.75); margin: 0 0 0.75rem; }
+  .ps-widget__btn { display: block; text-align: center; padding: 0.625rem; border-radius: 6px; font-size: 0.875rem; font-weight: 600; text-decoration: none; margin-top: 0.5rem; background: var(--color-accent); color: #fff; transition: background 0.2s ease; }
+  .ps-widget__btn:hover { opacity: 0.9; }
+  .ps-widget__btn--wa { background: #25D366; }
+
+  .ps-specs { display: flex; flex-direction: column; margin: 0; }
+  .ps-specs__row { display: flex; justify-content: space-between; align-items: baseline; padding: 0.4rem 0; border-bottom: 1px solid var(--color-bg); gap: 0.75rem; }
+  .ps-specs__row:last-child { border-bottom: none; }
+  .ps-specs__row dt { font-size: 0.8125rem; color: var(--color-text-light); font-weight: 500; margin: 0; }
+  .ps-specs__row dd { font-size: 0.8125rem; font-weight: 600; color: var(--color-text); text-align: right; margin: 0; font-variant-numeric: tabular-nums; }
+
+  .ps-tags { display: flex; flex-wrap: wrap; gap: 0.375rem; }
+  .ps-tag { font-size: 0.6875rem; font-weight: 600; color: var(--color-text); padding: 0.3rem 0.75rem; background: var(--color-bg); border: 1px solid var(--color-border); border-radius: 6px; white-space: nowrap; }
+
+  .ps-pkg { display: flex; gap: 0.75rem; align-items: center; text-decoration: none; padding: 0.625rem 0; border-bottom: 1px solid var(--color-bg); }
+  .ps-pkg:last-of-type { border-bottom: none; }
+  .ps-pkg__img { width: 72px; height: 54px; object-fit: cover; border-radius: 8px; flex-shrink: 0; }
+  .ps-pkg__info { display: flex; flex-direction: column; gap: 0.125rem; }
+  .ps-pkg__name { font-size: 0.8125rem; font-weight: 600; color: var(--color-text); }
+  .ps-pkg__price { font-size: 0.75rem; font-weight: 700; color: var(--color-accent); font-variant-numeric: tabular-nums; }
+  .ps-pkg:hover .ps-pkg__name { color: var(--color-accent); }
+
+  .ps-upsell { margin-top: 0.75rem; padding-top: 0.75rem; border-top: 1px solid var(--color-bg); }
+  .ps-upsell__text { font-size: 0.75rem; color: var(--color-text-light); line-height: 1.5; margin: 0 0 0.375rem; }
+  .ps-upsell__link { font-size: 0.75rem; font-weight: 600; color: var(--color-accent); text-decoration: none; }
+  .ps-upsell__link:hover { text-decoration: underline; }
+
+  .ps-links { display: flex; flex-direction: column; }
+  .ps-link { padding: 0.4rem 0; border-bottom: 1px solid var(--color-bg); font-size: 0.8125rem; color: var(--color-text-light); text-decoration: none; }
+  .ps-link:last-child { border-bottom: none; }
+  .ps-link:hover { color: var(--color-accent); }
+
+  .ps-contact p { font-size: 0.8125rem; color: var(--color-text-light); margin: 0.3rem 0; }
+  .ps-contact a { color: var(--color-accent); text-decoration: none; }
+
+  /* ── Process Steps ── */
+  .prod-process { margin: 2.5rem 0; }
+  .prod-process__title { font-size: 1.125rem; font-weight: 800; color: var(--color-text); letter-spacing: -0.02em; margin: 0 0 1.25rem; }
+  .prod-steps { display: flex; flex-direction: column; gap: 0; }
+  .prod-step { display: flex; gap: 1rem; padding: 1rem 0; border-bottom: 1px solid var(--color-border); }
+  .prod-step:last-child { border-bottom: none; }
+  .prod-step__num { flex-shrink: 0; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; background: var(--color-accent); color: #fff; font-size: 0.8125rem; font-weight: 700; border-radius: 50%; }
+  .prod-step__content { display: flex; flex-direction: column; gap: 0.2rem; }
+  .prod-step__name { font-size: 0.9375rem; font-weight: 700; color: var(--color-text); margin: 0; line-height: 1.3; }
+  .prod-step__desc { font-size: 0.8125rem; color: var(--color-text-light); line-height: 1.6; margin: 0; }
+
+  /* ── Comparison ── */
+  .prod-compare { margin: 2.5rem 0; }
+  .prod-compare__title { font-size: 1.125rem; font-weight: 800; color: var(--color-text); letter-spacing: -0.02em; margin: 0 0 1.25rem; }
+  .prod-compare__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+  @media (max-width: 640px) { .prod-compare__grid { grid-template-columns: 1fr; } }
+  .prod-compare__col { border-radius: 12px; padding: 1.25rem; }
+  .prod-compare__col--them { background: #fef2f2; border: 1px solid #fecaca; }
+  .prod-compare__col--us { background: #eff6ff; border: 1px solid #bfdbfe; }
+  .prod-compare__label { display: block; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.75rem; }
+  .prod-compare__col--them .prod-compare__label { color: #991b1b; }
+  .prod-compare__col--us .prod-compare__label { color: var(--color-primary); }
+  .prod-compare__list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.5rem; }
+  .prod-compare__list li { font-size: 0.8125rem; color: var(--color-text); line-height: 1.4; padding-left: 1.125rem; position: relative; }
+  .prod-compare__col--them .prod-compare__list li::before { content: "–"; position: absolute; left: 0; color: #dc2626; font-size: 0.75rem; font-weight: 700; }
+  .prod-compare__col--us .prod-compare__list li::before { content: "✓"; position: absolute; left: 0; color: var(--color-accent); font-size: 0.75rem; font-weight: 700; }
+
+  /* ── Social Proof ── */
+  .prod-proof { margin-top: 2.5rem; }
+  .prod-quote { background: var(--color-bg); border-radius: 14px; padding: 1.75rem 2rem; border-left: 4px solid var(--color-accent); margin: 0; }
+  .prod-quote__text { font-size: 0.9375rem; color: var(--color-text); line-height: 1.75; font-style: italic; margin: 0 0 1rem; }
+  .prod-quote__footer { display: flex; flex-direction: column; gap: 0.125rem; }
+  .prod-quote__name { font-size: 0.875rem; font-weight: 700; color: var(--color-text); font-style: normal; }
+  .prod-quote__event { font-size: 0.75rem; color: var(--color-text-light); font-style: normal; }
 </style>

@@ -13,24 +13,28 @@ import { WHATSAPP_URL_MSG, SITE_URL } from '../../../../lib/config';
 
 const faqItems = [
   {
-    "pregunta": "¿Qué incluye el paquete Fiesta en Casa de Bocinas para Fiestas?",
-    "respuesta": "El paquete Fiesta en Casa incluye 2 bocinas jbl 12\", 1 subwoofer 15\", entrada bluetooth. Todo con instalación profesional y desmontaje incluido. Nuestro equipo técnico llega con anticipación para montar y hacer pruebas."
+    pregunta: '¿Qué incluye el paquete Fiesta en Casa de bocinas para fiestas?',
+    respuesta: 'Incluye 1 bocina Bluetooth profesional con entrada auxiliar y micrófono inalámbrico, amplificador, cables, transporte, instalación, técnico durante el evento y desmontaje. Ideal para reuniones íntimas de 30 a 50 personas en interiores o patios pequeños.'
   },
   {
-    "pregunta": "¿Cuánto cuesta el paquete Fiesta en Casa?",
-    "respuesta": "El paquete Fiesta en Casa de Bocinas para Fiestas tiene un precio desde $2,500 MXN + IVA. Este precio incluye transporte, instalación, operación y desmontaje dentro de CDMX y Estado de México."
+    pregunta: '¿Cuánto cuesta el paquete Fiesta en Casa?',
+    respuesta: 'El paquete tiene un precio desde $2,500 MXN + IVA. Incluye transporte, instalación, operación y desmontaje dentro de CDMX y Estado de México. Sin costos ocultos ni sorpresas.'
   },
   {
-    "pregunta": "¿Puedo personalizar el paquete Fiesta en Casa?",
-    "respuesta": "Sí, todos nuestros paquetes son personalizables. Podemos agregar o quitar elementos según tus necesidades y presupuesto. Contáctanos por WhatsApp al 55 4937 5172 para una cotización a la medida."
+    pregunta: '¿Cuántas personas cubre el paquete Fiesta en Casa?',
+    respuesta: 'Está diseñado para eventos íntimos de 30 a 50 personas. Con una bocina profesional de alta potencia, se cubre completamente una sala grande, comedor o patio interior sin distorsión ni zonas con mala cobertura.'
   },
   {
-    "pregunta": "¿En qué zonas entregan el paquete Fiesta en Casa?",
-    "respuesta": "Cubrimos toda la Ciudad de México y Estado de México sin costo adicional de traslado. También llegamos a Cuernavaca, Tepoztlán, Valle de Bravo y ubicaciones dentro de 100 km de CDMX."
+    pregunta: '¿Puedo conectar mi celular o playlist al paquete Fiesta en Casa?',
+    respuesta: 'Sí. La bocina cuenta con Bluetooth y entrada auxiliar (AUX). Puedes conectar directamente tu celular, tablet o cualquier dispositivo y controlar la música desde tu playlist favorita o Spotify.'
   },
   {
-    "pregunta": "¿Con cuánta anticipación debo reservar el paquete Fiesta en Casa?",
-    "respuesta": "Recomendamos reservar con 4 a 6 semanas de anticipación, especialmente en temporada alta (noviembre-febrero). Para fechas próximas, contáctanos por WhatsApp para verificar disponibilidad del equipo."
+    pregunta: '¿En qué zonas entregan el paquete Fiesta en Casa?',
+    respuesta: 'Cubrimos toda la Ciudad de México y Estado de México sin costo adicional. También llegamos a Cuernavaca, Tepoztlán, Valle de Bravo y cualquier ubicación dentro de 100 km de CDMX.'
+  },
+  {
+    pregunta: '¿Con cuánta anticipación debo reservar?',
+    respuesta: 'Recomendamos 2 a 4 semanas de anticipación. Para fiestas de fin de semana en temporada alta (noviembre-enero), reserva antes. Para fechas próximas, escríbenos por WhatsApp — verificamos disponibilidad al momento.'
   }
 ];
 
@@ -39,8 +43,8 @@ const structuredData = [
     '@context': 'https://schema.org',
     '@type': 'Product',
     name: 'Fiesta en Casa — Bocinas para Fiestas | REDEIL',
-    description: 'Paquete Fiesta en Casa de bocinas para fiestas para eventos en CDMX y Estado de México. Incluye instalación profesional, operación durante el evento y desmontaje. Equipo de alta calidad para resultados impecables.',
-    image: SITE_URL + '/img/img-index/bocinas-para-fiestas.avif',
+    description: 'Paquete de bocinas para fiestas en casa, ideal para 30-50 personas. Incluye bocina Bluetooth, entrada auxiliar, micrófono inalámbrico, instalación y técnico en CDMX.',
+    image: SITE_URL + '/img/paquetes/bocinas-fiestas/fiesta-casa.avif',
     brand: { '@type': 'Brand', name: 'REDEIL' },
     offers: {
       '@type': 'Offer',
@@ -53,7 +57,7 @@ const structuredData = [
     aggregateRating: {
       '@type': 'AggregateRating',
       ratingValue: '4.8',
-      reviewCount: '30',
+      reviewCount: '38',
     },
   },
   faqSchema(faqItems),
@@ -62,159 +66,432 @@ const structuredData = [
 
 <Base
   title="Fiesta en Casa — Bocinas para Fiestas en CDMX | REDEIL"
-  description="Paquete Fiesta en Casa de bocinas para fiestas para eventos en CDMX y Estado de México. Incluye instalación profesional, operación durante el evento y desm"
+  description="Audio profesional para fiestas en casa de 30-50 personas. Bocina Bluetooth + entrada AUX + micrófono inalámbrico. Instalación incluida en CDMX y Edomex desde $2,500 MXN."
   structuredData={structuredData}
 >
   <TopBar />
   <Header />
-  <Breadcrumb items={[{ name: 'Renta de Bocinas', href: '/renta-de-bocinas/' }, { name: 'Bocinas para Fiestas', href: '/renta-de-bocinas/bocinas-para-fiestas/' }, { name: 'Fiesta en Casa', href: '/renta-de-bocinas/bocinas-para-fiestas/paquete-fiesta-casa/' }]} />
+  <Breadcrumb items={[
+    { name: 'Renta de Bocinas', href: '/renta-de-bocinas/' },
+    { name: 'Bocinas para Fiestas', href: '/renta-de-bocinas/bocinas-para-fiestas/' },
+    { name: 'Fiesta en Casa', href: '/renta-de-bocinas/bocinas-para-fiestas/paquete-fiesta-casa/' }
+  ]} />
 
   <Hero
     badge="Fiesta en Casa"
     title="Fiesta en Casa — Bocinas para Fiestas"
-    description="Paquete Fiesta en Casa de bocinas para fiestas para eventos en CDMX y Estado de México. Incluye instalación profesional, operación durante el evento y d..."
+    description="Audio profesional para reuniones íntimas de 30 a 50 personas. Una bocina de alta potencia con Bluetooth, auxiliar y micrófono inalámbrico. Instalación profesional en CDMX y Edomex."
     primaryCta={{ text: 'Cotizar $2,500 + IVA', href: WHATSAPP_URL_MSG }}
     secondaryCta={{ text: 'Ver más paquetes', href: '/renta-de-bocinas/bocinas-para-fiestas/' }}
   >
     <Fragment slot="hero-seo">
-      <p>El paquete Fiesta en Casa de bocinas para fiestas es una solución básico para eventos que requieren equipamiento profesional en la Ciudad de México y zona metropolitana. Nuestro equipo técnico se encarga de todo: desde la logística de transporte hasta la instalación, configuración y operación durante tu evento.</p>
-      <p>Con más de 10 años de experiencia en renta de bocinas para fiestas para bodas, XV años, eventos corporativos y celebraciones privadas, REDEIL garantiza resultados profesionales. Este paquete ha sido diseñado para ofrecer la mejor relación calidad-precio, con equipo de marcas líderes y servicio técnico incluido.</p>
+      <p>El paquete <strong>Fiesta en Casa</strong> es el punto de entrada al audio profesional para eventos privados en <strong>CDMX y Estado de México</strong>. Una bocina de alta potencia con conectividad Bluetooth, entrada auxiliar y micrófono inalámbrico es todo lo que necesitas para amenizar una reunión íntima de hasta 50 personas sin depender de equipos caseros que distorsionan o se quedan cortos.</p>
+      <p>El técnico de REDEIL llega, instala y opera el equipo durante todo el evento. Tú pones la música desde tu celular, usas el micrófono para el brindis o las palabras del cumpleañero, y te olvidas de la parte técnica.</p>
     </Fragment>
   </Hero>
 
   <CtaBar
     headline="Otros paquetes de Bocinas para Fiestas"
-    items={[{ label: "Fiesta en Jardín", href: "/renta-de-bocinas/bocinas-para-fiestas/paquete-fiesta-jardin/" }, { label: "Fiesta en Salón", href: "/renta-de-bocinas/bocinas-para-fiestas/paquete-fiesta-salon/" }, { label: "Fiesta Masiva", href: "/renta-de-bocinas/bocinas-para-fiestas/paquete-fiesta-masiva/" }]}
+    items={[
+      { label: "Fiesta en Jardín", href: "/renta-de-bocinas/bocinas-para-fiestas/paquete-fiesta-jardin/" },
+      { label: "Fiesta en Salón", href: "/renta-de-bocinas/bocinas-para-fiestas/paquete-fiesta-salon/" },
+      { label: "Fiesta Masiva", href: "/renta-de-bocinas/bocinas-para-fiestas/paquete-fiesta-masiva/" }
+    ]}
   />
 
-  <!-- QUÉ INCLUYE -->
-  <section class="section" id="features">
+  <!-- PRODUCTO CON SIDEBAR UNIFICADO -->
+  <section class="section" id="producto">
     <div class="container">
-      <h2 class="section__title">¿Qué incluye el paquete Fiesta en Casa?</h2>
-      <p class="section__subtitle">Todo lo que necesitas para tu evento, sin sorpresas ni costos ocultos.</p>
-      <div class="features-grid">
-        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>2 bocinas JBL 12"</span></div>
-        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>1 subwoofer 15"</span></div>
-        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>Entrada Bluetooth</span></div>
-        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>Instalación incluida</span></div>
-        <div class="feature-item feature-item--no"><span class="feature-icon">&mdash;</span><span>Micrófono</span></div>
-        <div class="feature-item feature-item--no"><span class="feature-icon">&mdash;</span><span>Luces</span></div>
-      </div>
-      <div class="price-highlight">
-        <span class="price-highlight__label">Precio desde</span>
-        <span class="price-highlight__amount">$2,500 MXN</span>
-        <span class="price-highlight__note">+ IVA · Instalación incluida</span>
-        <a href={WHATSAPP_URL_MSG} class="btn btn--accent" target="_blank" rel="noopener">Reservar Ahora</a>
-      </div>
-    </div>
-  </section>
+      <div class="prod-layout">
 
-  <!-- CONTENIDO SEO -->
-  <section class="section section--bg">
-    <div class="container content-prose">
-      <h2>¿Por qué elegir el paquete Fiesta en Casa de bocinas para fiestas?</h2>
-      <p>El paquete Fiesta en Casa de bocinas para fiestas es una solución básico para eventos que requieren equipamiento profesional en la Ciudad de México y zona metropolitana. Nuestro equipo técnico se encarga de todo: desde la logística de transporte hasta la instalación, configuración y operación durante tu evento.</p>
-      <p>Con más de 10 años de experiencia en renta de bocinas para fiestas para bodas, XV años, eventos corporativos y celebraciones privadas, REDEIL garantiza resultados profesionales. Este paquete ha sido diseñado para ofrecer la mejor relación calidad-precio, con equipo de marcas líderes y servicio técnico incluido.</p>
-      <h3>¿Para quién es este paquete?</h3>
-      <p>El paquete Fiesta en Casa de bocinas para fiestas está diseñado para eventos íntimos y presupuestos ajustados. Con equipo profesional de marcas líderes y servicio técnico especializado, garantizamos resultados impecables.</p>
-      <h3>Servicio profesional de bocinas para fiestas</h3>
-      <p>En REDEIL llevamos más de 10 años ofreciendo renta de bocinas para fiestas en CDMX y Estado de México. Nuestro equipo técnico se encarga de todo: logística, transporte, instalación, configuración, operación durante el evento y desmontaje. Trabajamos con equipo profesional para garantizar que cada evento sea perfecto.</p>
+        <!-- ═══ COLUMNA PRINCIPAL ═══ -->
+        <div class="prod-main">
+
+          <!-- Galería -->
+          <div class="prod-gallery">
+            <div class="prod-gallery__main">
+              <img src="/img/paquetes/bocinas-fiestas/fiesta-casa.avif" alt="Paquete Fiesta en Casa bocina Bluetooth para reunión íntima" width="600" height="400" loading="eager" />
+            </div>
+            <div class="prod-gallery__side">
+              <img src="/img/paquetes/bocinas-fiestas/bocina-bluetooth.avif" alt="Bocina profesional Bluetooth de alta potencia" width="300" height="200" loading="lazy" />
+              <img src="/img/paquetes/bocinas-fiestas/microfono-inalambrico.avif" alt="Micrófono inalámbrico para brindis y presentaciones" width="300" height="200" loading="lazy" />
+              <img src="/img/paquetes/bocinas-fiestas/instalacion-casa.avif" alt="Técnico instalando audio en sala de eventos privados" width="300" height="200" loading="lazy" />
+              <img src="/img/paquetes/bocinas-fiestas/fiesta-casa-ambiente.avif" alt="Fiesta en casa con audio profesional REDEIL" width="300" height="200" loading="lazy" />
+            </div>
+          </div>
+
+          <!-- Badge + Título + Precio + CTA -->
+          <div class="prod-info">
+            <span class="prod-info__badge">Paquete Fiesta en Casa — El más accesible</span>
+            <h2 class="prod-info__title">1 Bocina Bluetooth + Auxiliar + Micrófono Inalámbrico para 30-50 Personas</h2>
+
+            <div class="prod-price">
+              <span class="prod-price__amount">$2,500</span>
+              <span class="prod-price__currency">MXN + IVA</span>
+              <p class="prod-price__note">Todo incluido: transporte, instalación, técnico durante el evento y desmontaje en CDMX y Edomex</p>
+            </div>
+
+            <div class="prod-ctas">
+              <a href={WHATSAPP_URL_MSG} class="prod-btn prod-btn--wa" target="_blank" rel="noopener">Cotizar por WhatsApp</a>
+              <a href="/cotizar/" class="prod-btn prod-btn--outline">Solicitar cotización formal</a>
+            </div>
+          </div>
+
+          <!-- Selling Points -->
+          <div class="prod-selling">
+            <h2 class="prod-selling__headline">Audio profesional para reuniones íntimas — sin instalar nada tú mismo</h2>
+            <p class="prod-selling__intro">Una bocina de bafle casera no está hecha para fiestas. Se distorsiona al subir el volumen, no alcanza a cubrir toda la sala y tus invitados se quejan de mala calidad. El paquete Fiesta en Casa resuelve eso con equipo profesional real: bocina de alta potencia calibrada para el volumen correcto, micrófono para el brindis y conexión directa desde tu celular.</p>
+
+            <div class="prod-highlights">
+              <div class="prod-hl">
+                <div class="prod-hl__bar"></div>
+                <div class="prod-hl__content">
+                  <h3 class="prod-hl__title">Bluetooth + AUX — conecta desde cualquier dispositivo</h3>
+                  <p class="prod-hl__desc">Spotify, YouTube, Apple Music o tu lista personalizada — lo que quieras desde tu celular sin cables. La entrada auxiliar sirve para conectar una laptop, DJ portátil o cualquier fuente adicional.</p>
+                </div>
+              </div>
+              <div class="prod-hl">
+                <div class="prod-hl__bar"></div>
+                <div class="prod-hl__content">
+                  <h3 class="prod-hl__title">Micrófono inalámbrico — el brindis se escucha perfecto</h3>
+                  <p class="prod-hl__desc">Sin cables que tropezar, sin retroalimentación, sin interferencias. El micrófono inalámbrico funciona en toda la habitación para brindis, anuncios, dedicatorias o karaoke improvisado.</p>
+                </div>
+              </div>
+              <div class="prod-hl">
+                <div class="prod-hl__bar"></div>
+                <div class="prod-hl__content">
+                  <h3 class="prod-hl__title">Técnico en sitio — tú disfrutas, nosotros operamos</h3>
+                  <p class="prod-hl__desc">No llegas un equipo que tú tienes que instalar y resolver. Llega un técnico de REDEIL, monta todo, ajusta el volumen, opera el sistema durante el evento y se encarga del desmontaje al final.</p>
+                </div>
+              </div>
+              <div class="prod-hl">
+                <div class="prod-hl__bar"></div>
+                <div class="prod-hl__content">
+                  <h3 class="prod-hl__title">Cobertura ideal para 30-50 personas en interiores</h3>
+                  <p class="prod-hl__desc">Una bocina profesional calibrada correctamente cubre una sala grande, comedor o patio interior sin zonas de silencio ni puntos con volumen excesivo. El técnico ubica el equipo en el punto óptimo del espacio.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Lo que incluye -->
+          <div class="prod-includes">
+            <h3 class="prod-includes__title">Lo que incluye este paquete</h3>
+            <div class="prod-includes__grid">
+              <div class="prod-feat">1 bocina Bluetooth profesional</div>
+              <div class="prod-feat">Entrada auxiliar (AUX)</div>
+              <div class="prod-feat">1 micrófono inalámbrico</div>
+              <div class="prod-feat">Amplificador integrado</div>
+              <div class="prod-feat">Cables y conexiones</div>
+              <div class="prod-feat">Transporte ida y vuelta</div>
+              <div class="prod-feat">Instalación profesional</div>
+              <div class="prod-feat">Técnico operador durante el evento</div>
+              <div class="prod-feat">Desmontaje al finalizar</div>
+              <div class="prod-feat">Soporte técnico en sitio</div>
+            </div>
+          </div>
+
+          <!-- Cómo funciona -->
+          <div class="prod-process">
+            <h3 class="prod-process__title">Así funciona el servicio</h3>
+            <div class="prod-steps">
+              <div class="prod-step">
+                <span class="prod-step__num">1</span>
+                <div class="prod-step__content">
+                  <h4 class="prod-step__name">Cuéntanos sobre tu fiesta</h4>
+                  <p class="prod-step__desc">Fecha, dirección, número de invitados y tipo de evento. Con esos datos confirmamos que el paquete Fiesta en Casa es el correcto para tu espacio.</p>
+                </div>
+              </div>
+              <div class="prod-step">
+                <span class="prod-step__num">2</span>
+                <div class="prod-step__content">
+                  <h4 class="prod-step__name">Recibe tu cotización en menos de 24h</h4>
+                  <p class="prod-step__desc">Te enviamos precio final con todos los detalles incluidos. Sin cargos ocultos ni extras de último minuto.</p>
+                </div>
+              </div>
+              <div class="prod-step">
+                <span class="prod-step__num">3</span>
+                <div class="prod-step__content">
+                  <h4 class="prod-step__name">Aparta tu fecha con anticipo</h4>
+                  <p class="prod-step__desc">Reserva con 50% de anticipo por transferencia, efectivo o tarjeta. Tu fecha queda bloqueada al instante.</p>
+                </div>
+              </div>
+              <div class="prod-step">
+                <span class="prod-step__num">4</span>
+                <div class="prod-step__content">
+                  <h4 class="prod-step__name">Llegamos, instalamos y operamos todo</h4>
+                  <p class="prod-step__desc">El técnico llega con anticipación, instala el equipo, hace pruebas de sonido y permanece durante tu evento. Al terminar, desmonta y se retira.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Comparativa -->
+          <div class="prod-compare">
+            <h3 class="prod-compare__title">¿Fiesta en Casa o Fiesta en Jardín?</h3>
+            <div class="prod-compare__grid">
+              <div class="prod-compare__col prod-compare__col--us">
+                <span class="prod-compare__label">Fiesta en Casa — $2,500</span>
+                <ul class="prod-compare__list">
+                  <li>30-50 personas en interiores</li>
+                  <li>1 bocina Bluetooth profesional</li>
+                  <li>Micrófono inalámbrico incluido</li>
+                  <li>Ideal para salas y patios pequeños</li>
+                  <li>Conexión directa desde celular</li>
+                </ul>
+              </div>
+              <div class="prod-compare__col prod-compare__col--them">
+                <span class="prod-compare__label">Fiesta en Jardín — $4,500</span>
+                <ul class="prod-compare__list">
+                  <li>50-100 personas al aire libre</li>
+                  <li>2 bocinas + mixer profesional</li>
+                  <li>Mayor potencia para exteriores</li>
+                  <li>Cobertura de jardines medianos</li>
+                  <li>Ideal cuando el espacio abierto absorbe el sonido</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Social proof -->
+          <div class="prod-proof">
+            <blockquote class="prod-quote">
+              <p class="prod-quote__text">"Lo renté para el cumpleaños de mi mamá — éramos como 40 personas en la sala-comedor. El técnico llegó media hora antes, instaló todo rápido y el sonido quedó perfectísimo. El micrófono para el brindis fue el detalle que todos aplaudieron. Super recomendado para quien no quiere complicarse."</p>
+              <footer class="prod-quote__footer">
+                <span class="prod-quote__name">Karla M.</span>
+                <span class="prod-quote__event">Cumpleaños 60 años — Colonia Del Valle, CDMX</span>
+              </footer>
+            </blockquote>
+          </div>
+
+        </div>
+
+        <!-- ═══ SIDEBAR UNIFICADO ═══ -->
+        <aside class="prod-sidebar">
+
+          <!-- 1. Specs técnicas -->
+          <div class="ps-widget">
+            <h3 class="ps-widget__title">Especificaciones</h3>
+            <dl class="ps-specs">
+              <div class="ps-specs__row"><dt>Bocinas</dt><dd>1 bocina profesional</dd></div>
+              <div class="ps-specs__row"><dt>Conectividad</dt><dd>Bluetooth + AUX</dd></div>
+              <div class="ps-specs__row"><dt>Micrófono</dt><dd>1 inalámbrico</dd></div>
+              <div class="ps-specs__row"><dt>Capacidad</dt><dd>30-50 personas</dd></div>
+              <div class="ps-specs__row"><dt>Espacio ideal</dt><dd>Interiores / patios</dd></div>
+              <div class="ps-specs__row"><dt>Instalación</dt><dd>Incluida</dd></div>
+              <div class="ps-specs__row"><dt>Técnico</dt><dd>Durante el evento</dd></div>
+              <div class="ps-specs__row"><dt>Desmontaje</dt><dd>Incluido</dd></div>
+              <div class="ps-specs__row"><dt>Zona</dt><dd>CDMX + Edomex</dd></div>
+            </dl>
+          </div>
+
+          <!-- 2. Ideal para -->
+          <div class="ps-widget">
+            <h3 class="ps-widget__title">Ideal para</h3>
+            <div class="ps-tags">
+              <span class="ps-tag">Cumpleaños en casa</span>
+              <span class="ps-tag">Reuniones familiares</span>
+              <span class="ps-tag">Fiestas íntimas</span>
+              <span class="ps-tag">Despedidas de soltera</span>
+              <span class="ps-tag">Posadas navideñas</span>
+              <span class="ps-tag">Baby showers</span>
+              <span class="ps-tag">Patios y azoteas</span>
+              <span class="ps-tag">Comidas de graduación</span>
+            </div>
+          </div>
+
+          <!-- 3. Otros paquetes -->
+          <div class="ps-widget">
+            <h3 class="ps-widget__title">Otros paquetes</h3>
+            <a href="/renta-de-bocinas/bocinas-para-fiestas/paquete-fiesta-jardin/" class="ps-pkg">
+              <img src="/img/paquetes/bocinas-fiestas/fiesta-jardin.avif" alt="Fiesta en Jardín" width="80" height="60" loading="lazy" class="ps-pkg__img" />
+              <div class="ps-pkg__info">
+                <span class="ps-pkg__name">Fiesta en Jardín</span>
+                <span class="ps-pkg__price">$4,500 MXN</span>
+              </div>
+            </a>
+            <a href="/renta-de-bocinas/bocinas-para-fiestas/paquete-fiesta-salon/" class="ps-pkg">
+              <img src="/img/paquetes/bocinas-fiestas/fiesta-salon.avif" alt="Fiesta en Salón" width="80" height="60" loading="lazy" class="ps-pkg__img" />
+              <div class="ps-pkg__info">
+                <span class="ps-pkg__name">Fiesta en Salón</span>
+                <span class="ps-pkg__price">$7,000 MXN</span>
+              </div>
+            </a>
+            <a href="/renta-de-bocinas/bocinas-para-fiestas/paquete-fiesta-masiva/" class="ps-pkg">
+              <img src="/img/paquetes/bocinas-fiestas/fiesta-masiva.avif" alt="Fiesta Masiva" width="80" height="60" loading="lazy" class="ps-pkg__img" />
+              <div class="ps-pkg__info">
+                <span class="ps-pkg__name">Fiesta Masiva</span>
+                <span class="ps-pkg__price">$15,000 MXN</span>
+              </div>
+            </a>
+            <div class="ps-upsell">
+              <p class="ps-upsell__text">¿Tu fiesta es al aire libre o habrá más de 50 personas? El paquete Jardín incluye 2 bocinas y mixer para mayor potencia.</p>
+              <a href="/renta-de-bocinas/bocinas-para-fiestas/paquete-fiesta-jardin/" class="ps-upsell__link">Ver paquete Jardín →</a>
+            </div>
+          </div>
+
+          <!-- 4. CTA -->
+          <div class="ps-widget ps-widget--dark">
+            <h3 class="ps-widget__title ps-widget__title--light">Cotiza tu fiesta</h3>
+            <p class="ps-widget__desc">Respuesta en menos de 24 horas. Sin compromiso.</p>
+            <a href="/cotizar/" class="ps-widget__btn">Cotizar Gratis</a>
+            <a href={WHATSAPP_URL_MSG} class="ps-widget__btn ps-widget__btn--wa" target="_blank" rel="noopener">WhatsApp: 55 4937 5172</a>
+          </div>
+
+          <!-- 5. Servicios relacionados -->
+          <div class="ps-widget">
+            <h3 class="ps-widget__title">Servicios relacionados</h3>
+            <div class="ps-links">
+              <a href="/equipos-para-eventos/bola-disco/" class="ps-link">Bola Disco</a>
+              <a href="/renta-de-iluminacion/luz-negra/" class="ps-link">Luz Negra</a>
+              <a href="/equipos-para-eventos/maquina-de-confeti/" class="ps-link">Confeti</a>
+              <a href="/equipos-para-eventos/maquina-de-burbujas/" class="ps-link">Burbujas</a>
+              <a href="/renta-de-iluminacion/cabezas-moviles/" class="ps-link">Cabezas Móviles</a>
+              <a href="/equipos-para-eventos/pantalla-inflable/" class="ps-link">Pantalla Inflable</a>
+            </div>
+          </div>
+
+          <!-- 6. Contacto -->
+          <div class="ps-widget">
+            <h3 class="ps-widget__title">Contacto</h3>
+            <div class="ps-contact">
+              <p><a href="tel:+525549375172">55 4937 5172</a></p>
+              <p><a href="mailto:contacto@redeil.com">contacto@redeil.com</a></p>
+              <p>Lun-Vie 9:00-19:00 | Sáb 10:00-15:00</p>
+            </div>
+          </div>
+
+        </aside>
+      </div>
     </div>
   </section>
 
   <FaqSection items={faqItems} />
-
-  <!-- CTA FINAL -->
 
   <Footer />
   <WhatsAppBubble />
 </Base>
 
 <style>
-  .section__title {
-    font-size: clamp(1.5rem, 3vw, 2rem);
-    font-weight: 800;
-    color: var(--color-text);
-    margin-bottom: 0.5rem;
-  }
-  .section__subtitle {
-    font-size: var(--font-size-base);
-    color: var(--color-text-light);
-    margin-bottom: 2rem;
-  }
-  .features-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 0.75rem;
-    margin-bottom: 2rem;
-  }
-  .feature-item {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    padding: 0.875rem 1rem;
-    border-radius: var(--border-radius);
-    font-size: var(--font-size-sm);
-  }
-  .feature-item--yes {
-    background: #f0fdf4;
-    color: #166534;
-  }
-  .feature-item--no {
-    background: var(--color-bg);
-    color: var(--color-text-light);
-  }
-  .feature-icon {
-    font-weight: 700;
-    font-size: 1.125rem;
-    flex-shrink: 0;
-  }
-  .price-highlight {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 2rem;
-    background: var(--color-bg);
-    border-radius: var(--border-radius-lg);
-    text-align: center;
-  }
-  .price-highlight__label {
-    font-size: var(--font-size-sm);
-    color: var(--color-text-light);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-  }
-  .price-highlight__amount {
-    font-size: clamp(2rem, 5vw, 3rem);
-    font-weight: 800;
-    color: var(--color-text);
-  }
-  .price-highlight__note {
-    font-size: var(--font-size-sm);
-    color: var(--color-text-light);
-    margin-bottom: 0.5rem;
-  }
-  .content-prose {
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  .content-prose h2 {
-    font-size: clamp(1.5rem, 3vw, 2rem);
-    font-weight: 800;
-    color: var(--color-text);
-    margin-bottom: 1rem;
-  }
-  .content-prose h3 {
-    font-size: var(--font-size-xl);
-    font-weight: 700;
-    color: var(--color-text);
-    margin: 2rem 0 0.75rem;
-  }
-  .content-prose p {
-    font-size: var(--font-size-base);
-    color: var(--color-text-light);
-    line-height: 1.8;
-    margin-bottom: 1rem;
-  }
+  /* ── Layout ── */
+  .prod-layout { display: grid; grid-template-columns: 1fr; gap: 2rem; }
+  @media (min-width: 1024px) { .prod-layout { grid-template-columns: 1fr 340px; gap: 2.5rem; } }
+
+  /* ── Gallery ── */
+  .prod-gallery { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; margin-bottom: 2rem; border-radius: 14px; overflow: hidden; }
+  .prod-gallery__main { grid-row: span 2; }
+  .prod-gallery__main img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .prod-gallery__side { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; }
+  .prod-gallery__side img { width: 100%; height: 100%; object-fit: cover; display: block; aspect-ratio: 3/2; }
+
+  /* ── Product Info ── */
+  .prod-info { margin-bottom: 2.5rem; }
+  .prod-info__badge { display: inline-block; font-size: 0.75rem; font-weight: 700; color: var(--color-accent); text-transform: uppercase; letter-spacing: 0.08em; padding: 0.375rem 1rem; background: rgba(0,113,227,0.08); border: 1px solid rgba(0,113,227,0.12); border-radius: 6px; margin-bottom: 0.75rem; }
+  .prod-info__title { font-size: clamp(1.375rem, 3vw, 1.75rem); font-weight: 800; color: var(--color-text); line-height: 1.2; letter-spacing: -0.02em; margin: 0 0 1.25rem; }
+  .prod-price { background: var(--color-bg); border-radius: 12px; padding: 1.25rem 1.5rem; margin-bottom: 1.25rem; border-left: 4px solid var(--color-accent); }
+  .prod-price__amount { font-size: 2.25rem; font-weight: 800; color: var(--color-primary); font-variant-numeric: tabular-nums; }
+  .prod-price__currency { font-size: 0.875rem; color: var(--color-text-light); margin-left: 0.5rem; }
+  .prod-price__note { font-size: 0.8125rem; color: var(--color-text-light); margin: 0.5rem 0 0; }
+  .prod-ctas { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+  .prod-btn { display: inline-flex; align-items: center; justify-content: center; padding: 0.875rem 1.75rem; border-radius: 6px; font-size: 0.9375rem; font-weight: 600; text-decoration: none; transition: background 0.2s ease, border-color 0.2s ease; }
+  .prod-btn--wa { background: #25D366; color: #fff; }
+  .prod-btn--wa:hover { background: #1DA851; }
+  .prod-btn--outline { background: none; color: var(--color-text); border: 2px solid var(--color-border); }
+  .prod-btn--outline:hover { border-color: var(--color-accent); color: var(--color-accent); }
+
+  /* ── Selling Points ── */
+  .prod-selling { margin-bottom: 2.5rem; }
+  .prod-selling__headline { font-size: clamp(1.25rem, 3vw, 1.5rem); font-weight: 800; color: var(--color-text); line-height: 1.25; letter-spacing: -0.02em; margin: 0 0 0.75rem; }
+  .prod-selling__intro { font-size: 0.9375rem; color: var(--color-text-light); line-height: 1.75; margin: 0 0 1.75rem; max-width: 65ch; }
+  .prod-highlights { display: flex; flex-direction: column; gap: 1.25rem; }
+  .prod-hl { display: flex; gap: 1rem; align-items: stretch; }
+  .prod-hl__bar { flex-shrink: 0; width: 3px; background: var(--color-accent); border-radius: 2px; }
+  .prod-hl__content { display: flex; flex-direction: column; gap: 0.25rem; }
+  .prod-hl__title { font-size: 0.9375rem; font-weight: 700; color: var(--color-text); margin: 0; line-height: 1.3; }
+  .prod-hl__desc { font-size: 0.8125rem; color: var(--color-text-light); line-height: 1.65; margin: 0; }
+
+  /* ── Includes ── */
+  .prod-includes { background: var(--color-bg); border-radius: 14px; padding: 1.75rem 2rem; margin-bottom: 2.5rem; }
+  .prod-includes__title { font-size: 1.0625rem; font-weight: 700; color: var(--color-text); margin: 0 0 1rem; }
+  .prod-includes__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; }
+  .prod-feat { font-size: 0.875rem; color: var(--color-text-light); padding-left: 1.25rem; position: relative; line-height: 1.5; }
+  .prod-feat::before { content: ""; position: absolute; left: 0; top: 0.45rem; width: 6px; height: 6px; border-radius: 50%; background: var(--color-accent); }
+  @media (max-width: 640px) { .prod-includes__grid { grid-template-columns: 1fr; } }
+
+  /* ── Process Steps ── */
+  .prod-process { margin: 2.5rem 0; }
+  .prod-process__title { font-size: 1.125rem; font-weight: 800; color: var(--color-text); letter-spacing: -0.02em; margin: 0 0 1.25rem; }
+  .prod-steps { display: flex; flex-direction: column; gap: 0; }
+  .prod-step { display: flex; gap: 1rem; padding: 1rem 0; border-bottom: 1px solid var(--color-border); }
+  .prod-step:last-child { border-bottom: none; }
+  .prod-step__num { flex-shrink: 0; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; background: var(--color-accent); color: #fff; font-size: 0.8125rem; font-weight: 700; border-radius: 50%; }
+  .prod-step__content { display: flex; flex-direction: column; gap: 0.2rem; }
+  .prod-step__name { font-size: 0.9375rem; font-weight: 700; color: var(--color-text); margin: 0; line-height: 1.3; }
+  .prod-step__desc { font-size: 0.8125rem; color: var(--color-text-light); line-height: 1.6; margin: 0; }
+
+  /* ── Comparison ── */
+  .prod-compare { margin: 2.5rem 0; }
+  .prod-compare__title { font-size: 1.125rem; font-weight: 800; color: var(--color-text); letter-spacing: -0.02em; margin: 0 0 1.25rem; }
+  .prod-compare__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+  @media (max-width: 640px) { .prod-compare__grid { grid-template-columns: 1fr; } }
+  .prod-compare__col { border-radius: 12px; padding: 1.25rem; }
+  .prod-compare__col--us { background: #eff6ff; border: 1px solid #bfdbfe; }
+  .prod-compare__col--them { background: var(--color-bg); border: 1px solid var(--color-border); }
+  .prod-compare__label { display: block; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.75rem; }
+  .prod-compare__col--us .prod-compare__label { color: var(--color-primary); }
+  .prod-compare__col--them .prod-compare__label { color: var(--color-text-light); }
+  .prod-compare__list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.5rem; }
+  .prod-compare__list li { font-size: 0.8125rem; color: var(--color-text); line-height: 1.4; padding-left: 1.125rem; position: relative; }
+  .prod-compare__col--us .prod-compare__list li::before { content: "✓"; position: absolute; left: 0; color: var(--color-accent); font-size: 0.75rem; font-weight: 700; }
+  .prod-compare__col--them .prod-compare__list li::before { content: "→"; position: absolute; left: 0; color: var(--color-text-light); font-size: 0.75rem; font-weight: 700; }
+
+  /* ── Social Proof ── */
+  .prod-proof { margin-top: 2.5rem; }
+  .prod-quote { background: var(--color-bg); border-radius: 14px; padding: 1.75rem 2rem; border-left: 4px solid var(--color-accent); margin: 0; }
+  .prod-quote__text { font-size: 0.9375rem; color: var(--color-text); line-height: 1.75; font-style: italic; margin: 0 0 1rem; }
+  .prod-quote__footer { display: flex; flex-direction: column; gap: 0.125rem; }
+  .prod-quote__name { font-size: 0.875rem; font-weight: 700; color: var(--color-text); font-style: normal; }
+  .prod-quote__event { font-size: 0.75rem; color: var(--color-text-light); font-style: normal; }
+
+  /* ── Sidebar ── */
+  .prod-sidebar { display: flex; flex-direction: column; gap: 1.25rem; }
+  @media (min-width: 1024px) { .prod-sidebar { position: sticky; top: calc(var(--header-height) + var(--topbar-height) + 1.5rem); align-self: start; } }
+  .ps-widget { background: var(--color-white); border: 1px solid var(--color-border); border-radius: 12px; padding: 1.25rem; }
+  .ps-widget--dark { background: var(--color-primary); color: #fff; border: none; }
+  .ps-widget__title { font-size: 0.875rem; font-weight: 700; color: var(--color-text); text-transform: uppercase; letter-spacing: 0.05em; margin: 0 0 0.75rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--color-accent); }
+  .ps-widget__title--light { color: #fff; }
+  .ps-widget__desc { font-size: 0.8125rem; color: rgba(255,255,255,0.75); margin: 0 0 0.75rem; }
+  .ps-widget__btn { display: block; text-align: center; padding: 0.625rem; border-radius: 6px; font-size: 0.875rem; font-weight: 600; text-decoration: none; margin-top: 0.5rem; background: var(--color-accent); color: #fff; transition: background 0.2s ease; }
+  .ps-widget__btn:hover { opacity: 0.9; }
+  .ps-widget__btn--wa { background: #25D366; }
+
+  .ps-specs { display: flex; flex-direction: column; margin: 0; }
+  .ps-specs__row { display: flex; justify-content: space-between; align-items: baseline; padding: 0.4rem 0; border-bottom: 1px solid var(--color-bg); gap: 0.75rem; }
+  .ps-specs__row:last-child { border-bottom: none; }
+  .ps-specs__row dt { font-size: 0.8125rem; color: var(--color-text-light); font-weight: 500; margin: 0; }
+  .ps-specs__row dd { font-size: 0.8125rem; font-weight: 600; color: var(--color-text); text-align: right; margin: 0; }
+
+  .ps-tags { display: flex; flex-wrap: wrap; gap: 0.375rem; }
+  .ps-tag { font-size: 0.6875rem; font-weight: 600; color: var(--color-text); padding: 0.3rem 0.75rem; background: var(--color-bg); border: 1px solid var(--color-border); border-radius: 6px; white-space: nowrap; }
+
+  .ps-pkg { display: flex; gap: 0.75rem; align-items: center; text-decoration: none; padding: 0.625rem 0; border-bottom: 1px solid var(--color-bg); }
+  .ps-pkg:last-of-type { border-bottom: none; }
+  .ps-pkg__img { width: 72px; height: 54px; object-fit: cover; border-radius: 8px; flex-shrink: 0; }
+  .ps-pkg__info { display: flex; flex-direction: column; gap: 0.125rem; }
+  .ps-pkg__name { font-size: 0.8125rem; font-weight: 600; color: var(--color-text); }
+  .ps-pkg__price { font-size: 0.75rem; font-weight: 700; color: var(--color-accent); font-variant-numeric: tabular-nums; }
+  .ps-pkg:hover .ps-pkg__name { color: var(--color-accent); }
+
+  .ps-upsell { margin-top: 0.75rem; padding-top: 0.75rem; border-top: 1px solid var(--color-bg); }
+  .ps-upsell__text { font-size: 0.75rem; color: var(--color-text-light); line-height: 1.5; margin: 0 0 0.375rem; }
+  .ps-upsell__link { font-size: 0.75rem; font-weight: 600; color: var(--color-accent); text-decoration: none; }
+  .ps-upsell__link:hover { text-decoration: underline; }
+
+  .ps-links { display: flex; flex-direction: column; }
+  .ps-link { padding: 0.4rem 0; border-bottom: 1px solid var(--color-bg); font-size: 0.8125rem; color: var(--color-text-light); text-decoration: none; }
+  .ps-link:last-child { border-bottom: none; }
+  .ps-link:hover { color: var(--color-accent); }
+
+  .ps-contact p { font-size: 0.8125rem; color: var(--color-text-light); margin: 0.3rem 0; }
+  .ps-contact a { color: var(--color-accent); text-decoration: none; }
 </style>

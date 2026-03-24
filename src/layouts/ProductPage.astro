@@ -1,0 +1,380 @@
+---
+/**
+ * ProductPage Layout — Nivel 4 (Paquete/Producto)
+ * 
+ * Un layout completo que recibe SOLO datos y genera la página entera.
+ * Cero CSS repetido, cero HTML copiado entre 96 paquetes.
+ * 
+ * Importar en cada paquete:
+ *   import ProductPage from '../../layouts/ProductPage.astro';
+ *   <ProductPage {...data} />
+ */
+
+import Base from './Base.astro';
+import TopBar from '../components/TopBar.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+import CtaBar from '../components/CtaBar.astro';
+import FaqSection from '../components/FaqSection.astro';
+import Footer from '../components/Footer.astro';
+import WhatsAppBubble from '../components/WhatsAppBubble.astro';
+import { faqSchema } from '../lib/seo';
+import { WHATSAPP_URL_MSG, SITE_URL } from '../lib/config';
+import '../styles/product-page.css';
+
+interface Highlight {
+  title: string;
+  desc: string;
+}
+
+interface Spec {
+  label: string;
+  value: string;
+}
+
+interface FaqItem {
+  pregunta: string;
+  respuesta: string;
+}
+
+interface OtherPackage {
+  name: string;
+  price: string;
+  href: string;
+  image: string;
+}
+
+interface CompareItem {
+  label: string;
+  items: string[];
+}
+
+interface Testimonial {
+  text: string;
+  name: string;
+  event: string;
+}
+
+interface Props {
+  /* SEO & Meta */
+  title: string;
+  description: string;
+  
+  /* Breadcrumb */
+  breadcrumb: Array<{ name: string; href: string }>;
+  
+  /* Hero */
+  heroBadge: string;
+  heroTitle: string;
+  heroDescription: string;
+  heroPrice: string;
+  heroSeo1: string;
+  heroSeo2: string;
+  parentHref: string;
+  
+  /* CtaBar — otros paquetes del mismo servicio */
+  ctaBarItems: Array<{ label: string; href: string }>;
+  
+  /* Galería */
+  gallery: {
+    main: { src: string; alt: string };
+    side: Array<{ src: string; alt: string }>;
+  };
+  
+  /* Producto */
+  badge: string;
+  productTitle: string;
+  price: string;
+  priceNote: string;
+  
+  /* Selling Points */
+  sellingHeadline: string;
+  sellingIntro: string;
+  highlights: Highlight[];
+  
+  /* Incluye */
+  includes: string[];
+  
+  /* Proceso (4 pasos) */
+  steps: Array<{ name: string; desc: string }>;
+  
+  /* Comparativa */
+  compareThem: CompareItem;
+  compareUs: CompareItem;
+  compareTitle: string;
+  
+  /* Testimonial */
+  testimonial: Testimonial;
+  
+  /* Sidebar — Specs */
+  specs: Spec[];
+  
+  /* Sidebar — Ideal para */
+  idealFor: string[];
+  
+  /* Sidebar — Otros paquetes */
+  otherPackages: OtherPackage[];
+  upsellText?: string;
+  upsellHref?: string;
+  upsellLabel?: string;
+  
+  /* Sidebar — Servicios relacionados */
+  relatedServices: Array<{ name: string; href: string }>;
+  
+  /* FAQ */
+  faqItems: FaqItem[];
+  
+  /* Structured Data */
+  schemaProduct: {
+    name: string;
+    description: string;
+    image: string;
+    price: string;
+    ratingValue: string;
+    reviewCount: string;
+  };
+}
+
+const props = Astro.props;
+
+const structuredData = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Product',
+    name: props.schemaProduct.name,
+    description: props.schemaProduct.description,
+    image: SITE_URL + props.schemaProduct.image,
+    brand: { '@type': 'Brand', name: 'REDEIL' },
+    offers: {
+      '@type': 'Offer',
+      price: props.schemaProduct.price,
+      priceCurrency: 'MXN',
+      availability: 'https://schema.org/InStock',
+      priceValidUntil: '2027-12-31',
+      url: SITE_URL + Astro.url.pathname,
+    },
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: props.schemaProduct.ratingValue,
+      reviewCount: props.schemaProduct.reviewCount,
+    },
+  },
+  faqSchema(props.faqItems),
+];
+---
+
+<Base
+  title={props.title}
+  description={props.description}
+  structuredData={structuredData}
+>
+  <TopBar />
+  <Header />
+  <Breadcrumb items={props.breadcrumb} />
+
+  <Hero
+    badge={props.heroBadge}
+    title={props.heroTitle}
+    description={props.heroDescription}
+    primaryCta={{ text: `Cotizar ${props.heroPrice}`, href: WHATSAPP_URL_MSG }}
+    secondaryCta={{ text: 'Ver más paquetes', href: props.parentHref }}
+  >
+    <Fragment slot="hero-seo">
+      <p set:html={props.heroSeo1} />
+      <p set:html={props.heroSeo2} />
+    </Fragment>
+  </Hero>
+
+  <CtaBar
+    headline="Otros paquetes disponibles"
+    items={props.ctaBarItems}
+  />
+
+  <!-- PRODUCTO CON SIDEBAR UNIFICADO -->
+  <section class="section" id="producto">
+    <div class="container">
+      <div class="prod-layout">
+
+        <!-- ═══ COLUMNA PRINCIPAL ═══ -->
+        <div class="prod-main">
+
+          <!-- Galería -->
+          <div class="prod-gallery">
+            <div class="prod-gallery__main">
+              <img src={props.gallery.main.src} alt={props.gallery.main.alt} width="600" height="400" loading="eager" />
+            </div>
+            <div class="prod-gallery__side">
+              {props.gallery.side.map((img) => (
+                <img src={img.src} alt={img.alt} width="300" height="200" loading="lazy" />
+              ))}
+            </div>
+          </div>
+
+          <!-- Badge + Título + Precio + CTA -->
+          <div class="prod-info">
+            <span class="prod-info__badge">{props.badge}</span>
+            <h2 class="prod-info__title">{props.productTitle}</h2>
+
+            <div class="prod-price">
+              <span class="prod-price__amount">{props.price}</span>
+              <span class="prod-price__currency">MXN + IVA</span>
+              <p class="prod-price__note">{props.priceNote}</p>
+            </div>
+
+            <div class="prod-ctas">
+              <a href={WHATSAPP_URL_MSG} class="prod-btn prod-btn--wa" target="_blank" rel="noopener">Cotizar por WhatsApp</a>
+              <a href="/cotizar/" class="prod-btn prod-btn--outline">Solicitar cotización formal</a>
+            </div>
+          </div>
+
+          <!-- Selling Points -->
+          <div class="prod-selling">
+            <h2 class="prod-selling__headline">{props.sellingHeadline}</h2>
+            <p class="prod-selling__intro">{props.sellingIntro}</p>
+
+            <div class="prod-highlights">
+              {props.highlights.map((h) => (
+                <div class="prod-hl">
+                  <div class="prod-hl__bar"></div>
+                  <div class="prod-hl__content">
+                    <h3 class="prod-hl__title">{h.title}</h3>
+                    <p class="prod-hl__desc">{h.desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <!-- Lo que incluye -->
+          <div class="prod-includes">
+            <h3 class="prod-includes__title">Lo que incluye este paquete</h3>
+            <div class="prod-includes__grid">
+              {props.includes.map((item) => (
+                <div class="prod-feat">{item}</div>
+              ))}
+            </div>
+          </div>
+
+          <!-- Cómo funciona -->
+          <div class="prod-process">
+            <h3 class="prod-process__title">Así funciona el servicio</h3>
+            <div class="prod-steps">
+              {props.steps.map((step, i) => (
+                <div class="prod-step">
+                  <span class="prod-step__num">{i + 1}</span>
+                  <div class="prod-step__content">
+                    <h4 class="prod-step__name">{step.name}</h4>
+                    <p class="prod-step__desc">{step.desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <!-- Comparativa -->
+          <div class="prod-compare">
+            <h3 class="prod-compare__title">{props.compareTitle}</h3>
+            <div class="prod-compare__grid">
+              <div class="prod-compare__col prod-compare__col--them">
+                <span class="prod-compare__label">{props.compareThem.label}</span>
+                <ul class="prod-compare__list">
+                  {props.compareThem.items.map((item) => <li>{item}</li>)}
+                </ul>
+              </div>
+              <div class="prod-compare__col prod-compare__col--us">
+                <span class="prod-compare__label">{props.compareUs.label}</span>
+                <ul class="prod-compare__list">
+                  {props.compareUs.items.map((item) => <li>{item}</li>)}
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Social proof -->
+          <div class="prod-proof">
+            <blockquote class="prod-quote">
+              <p class="prod-quote__text">"{props.testimonial.text}"</p>
+              <footer class="prod-quote__footer">
+                <span class="prod-quote__name">{props.testimonial.name}</span>
+                <span class="prod-quote__event">{props.testimonial.event}</span>
+              </footer>
+            </blockquote>
+          </div>
+
+        </div>
+
+        <!-- ═══ SIDEBAR UNIFICADO ═══ -->
+        <aside class="prod-sidebar">
+
+          <div class="ps-widget">
+            <h3 class="ps-widget__title">Especificaciones</h3>
+            <dl class="ps-specs">
+              {props.specs.map((s) => (
+                <div class="ps-specs__row"><dt>{s.label}</dt><dd>{s.value}</dd></div>
+              ))}
+            </dl>
+          </div>
+
+          <div class="ps-widget">
+            <h3 class="ps-widget__title">Ideal para</h3>
+            <div class="ps-tags">
+              {props.idealFor.map((item) => (
+                <span class="ps-tag">{item}</span>
+              ))}
+            </div>
+          </div>
+
+          <div class="ps-widget">
+            <h3 class="ps-widget__title">Otros paquetes</h3>
+            {props.otherPackages.map((pkg) => (
+              <a href={pkg.href} class="ps-pkg">
+                <img src={pkg.image} alt={pkg.name} width="80" height="60" loading="lazy" class="ps-pkg__img" />
+                <div class="ps-pkg__info">
+                  <span class="ps-pkg__name">{pkg.name}</span>
+                  <span class="ps-pkg__price">{pkg.price}</span>
+                </div>
+              </a>
+            ))}
+            {props.upsellText && (
+              <div class="ps-upsell">
+                <p class="ps-upsell__text">{props.upsellText}</p>
+                {props.upsellHref && <a href={props.upsellHref} class="ps-upsell__link">{props.upsellLabel} →</a>}
+              </div>
+            )}
+          </div>
+
+          <div class="ps-widget ps-widget--dark">
+            <h3 class="ps-widget__title ps-widget__title--light">Cotiza tu evento</h3>
+            <p class="ps-widget__desc">Cotización personalizada en menos de 24 horas. Sin compromiso.</p>
+            <a href="/cotizar/" class="ps-widget__btn">Cotizar Gratis</a>
+            <a href={WHATSAPP_URL_MSG} class="ps-widget__btn ps-widget__btn--wa" target="_blank" rel="noopener">WhatsApp: 55 4937 5172</a>
+          </div>
+
+          <div class="ps-widget">
+            <h3 class="ps-widget__title">Servicios relacionados</h3>
+            <div class="ps-links">
+              {props.relatedServices.map((svc) => (
+                <a href={svc.href} class="ps-link">{svc.name}</a>
+              ))}
+            </div>
+          </div>
+
+          <div class="ps-widget">
+            <h3 class="ps-widget__title">Contacto</h3>
+            <div class="ps-contact">
+              <p><a href="tel:+525549375172">55 4937 5172</a></p>
+              <p><a href="mailto:contacto@redeil.com">contacto@redeil.com</a></p>
+              <p>Lun-Vie 9:00-19:00 | Sáb 10:00-15:00</p>
+            </div>
+          </div>
+
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <FaqSection items={props.faqItems} />
+  <Footer />
+  <WhatsAppBubble />
+</Base>

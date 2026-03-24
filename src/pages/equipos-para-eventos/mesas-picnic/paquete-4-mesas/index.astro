@@ -13,24 +13,24 @@ import { WHATSAPP_URL_MSG, SITE_URL } from '../../../../lib/config';
 
 const faqItems = [
   {
-    "pregunta": "¿Qué incluye el paquete 4 Mesas de Mesas Picnic?",
-    "respuesta": "El paquete 4 Mesas incluye 4 mesas picnic madera, capacidad 32 personas, transporte incluido. Todo con instalación profesional y desmontaje incluido. Nuestro equipo técnico llega con anticipación para montar y hacer pruebas."
+    pregunta: '¿Qué incluye el paquete 4 Mesas de Mesas Picnic?',
+    respuesta: 'Incluye 4 mesas picnic de madera estilo vintage, suficientes para 16 a 20 personas, más transporte, instalación profesional, técnico en sitio durante el evento y desmontaje al finalizar. Las mesas llegan limpias, niveladas y listas para decorar.'
   },
   {
-    "pregunta": "¿Cuánto cuesta el paquete 4 Mesas?",
-    "respuesta": "El paquete 4 Mesas de Mesas Picnic tiene un precio desde $2,000 MXN + IVA. Este precio incluye transporte, instalación, operación y desmontaje dentro de CDMX y Estado de México."
+    pregunta: '¿Cuánto cuesta el paquete 4 Mesas?',
+    respuesta: 'El paquete tiene un precio desde $2,000 MXN + IVA. Este precio incluye todo: transporte, instalación, operación y desmontaje dentro de CDMX y Estado de México. Sin costos ocultos.'
   },
   {
-    "pregunta": "¿Puedo personalizar el paquete 4 Mesas?",
-    "respuesta": "Sí, todos nuestros paquetes son personalizables. Podemos agregar o quitar elementos según tus necesidades y presupuesto. Contáctanos por WhatsApp al 55 4937 5172 para una cotización a la medida."
+    pregunta: '¿Puedo personalizar el paquete 4 Mesas?',
+    respuesta: 'Sí. Podemos agregar manteles, centros de mesa o combinar con guirnaldas de luces y otros equipos para crear una ambientación completa. Escríbenos por WhatsApp al 55 4937 5172 para una cotización personalizada.'
   },
   {
-    "pregunta": "¿En qué zonas entregan el paquete 4 Mesas?",
-    "respuesta": "Cubrimos toda la Ciudad de México y Estado de México sin costo adicional de traslado. También llegamos a Cuernavaca, Tepoztlán, Valle de Bravo y ubicaciones dentro de 100 km de CDMX."
+    pregunta: '¿En qué zonas entregan el paquete 4 Mesas?',
+    respuesta: 'Cubrimos toda la Ciudad de México y Estado de México sin costo adicional. También llegamos a Cuernavaca, Tepoztlán, Valle de Bravo y cualquier ubicación dentro de 100 km de CDMX.'
   },
   {
-    "pregunta": "¿Con cuánta anticipación debo reservar el paquete 4 Mesas?",
-    "respuesta": "Recomendamos reservar con 4 a 6 semanas de anticipación, especialmente en temporada alta (noviembre-febrero). Para fechas próximas, contáctanos por WhatsApp para verificar disponibilidad del equipo."
+    pregunta: '¿Con cuánta anticipación debo reservar?',
+    respuesta: 'Recomendamos 3 a 4 semanas de anticipación para garantizar disponibilidad. En temporada alta (noviembre-febrero) es mejor reservar antes. Para fechas próximas, escríbenos por WhatsApp y verificamos disponibilidad al momento.'
   }
 ];
 
@@ -38,9 +38,9 @@ const structuredData = [
   {
     '@context': 'https://schema.org',
     '@type': 'Product',
-    name: '4 Mesas — Mesas Picnic | REDEIL',
-    description: 'Paquete 4 Mesas de mesas picnic para eventos en CDMX y Estado de México. Incluye instalación profesional, operación durante el evento y desmontaje. Equipo de alta calidad para resultados impecables.',
-    image: SITE_URL + '/img/img-index/mesas-picnic.avif',
+    name: 'Paquete 4 Mesas Picnic | REDEIL',
+    description: 'Renta de 4 mesas picnic en CDMX para eventos íntimos de 16 a 20 personas. Ideal para baby showers, cumpleaños en jardín y reuniones al aire libre. Incluye instalación y desmontaje.',
+    image: SITE_URL + '/img/paquetes/mesas-picnic/paquete-4-mesas.avif',
     brand: { '@type': 'Brand', name: 'REDEIL' },
     offers: {
       '@type': 'Offer',
@@ -53,7 +53,7 @@ const structuredData = [
     aggregateRating: {
       '@type': 'AggregateRating',
       ratingValue: '4.8',
-      reviewCount: '30',
+      reviewCount: '28',
     },
   },
   faqSchema(faqItems),
@@ -61,24 +61,24 @@ const structuredData = [
 ---
 
 <Base
-  title="4 Mesas — Mesas Picnic en CDMX | REDEIL"
-  description="Paquete 4 Mesas de mesas picnic para eventos en CDMX y Estado de México. Incluye instalación profesional, operación durante el evento y desmontaje. Equipo "
+  title="Paquete 4 Mesas Picnic en CDMX | Renta para 16-20 Personas | REDEIL"
+  description="Renta 4 mesas picnic en CDMX para eventos íntimos de 16 a 20 personas. Baby showers, cumpleaños y reuniones al aire libre con estilo. Instalación incluida. Desde $2,000 MXN."
   structuredData={structuredData}
 >
   <TopBar />
   <Header />
-  <Breadcrumb items={[{ name: 'Equipos para Eventos', href: '/equipos-para-eventos/' }, { name: 'Mesas Picnic', href: '/equipos-para-eventos/mesas-picnic/' }, { name: '4 Mesas', href: '/equipos-para-eventos/mesas-picnic/paquete-4-mesas/' }]} />
+  <Breadcrumb items={[{ name: 'Equipos para Eventos', href: '/equipos-para-eventos/' }, { name: 'Mesas Picnic', href: '/equipos-para-eventos/mesas-picnic/' }, { name: 'Paquete 4 Mesas', href: '/equipos-para-eventos/mesas-picnic/paquete-4-mesas/' }]} />
 
   <Hero
-    badge="4 Mesas"
-    title="4 Mesas — Mesas Picnic"
-    description="Paquete 4 Mesas de mesas picnic para eventos en CDMX y Estado de México. Incluye instalación profesional, operación durante el evento y desmontaje."
+    badge="Paquete Íntimo — 4 Mesas"
+    title="Paquete 4 Mesas Picnic — Para Eventos de 16 a 20 Personas"
+    description="El punto de entrada perfecto para eventos al aire libre con estilo. 4 mesas picnic de madera para 16 a 20 invitados. Instalación profesional en jardines y terrazas de CDMX y Edomex."
     primaryCta={{ text: 'Cotizar $2,000 + IVA', href: WHATSAPP_URL_MSG }}
     secondaryCta={{ text: 'Ver más paquetes', href: '/equipos-para-eventos/mesas-picnic/' }}
   >
     <Fragment slot="hero-seo">
-      <p>El paquete 4 Mesas de mesas picnic es una solución básico para eventos que requieren equipamiento profesional en la Ciudad de México y zona metropolitana. Nuestro equipo técnico se encarga de todo: desde la logística de transporte hasta la instalación, configuración y operación durante tu evento.</p>
-      <p>Con más de 10 años de experiencia en renta de mesas picnic para bodas, XV años, eventos corporativos y celebraciones privadas, REDEIL garantiza resultados profesionales. Este paquete ha sido diseñado para ofrecer la mejor relación calidad-precio, con equipo de marcas líderes y servicio técnico incluido.</p>
+      <p>Las <strong>mesas picnic de madera</strong> transforman cualquier jardín, patio o terraza en un espacio con personalidad. Este paquete de <strong>4 mesas en CDMX</strong> está pensado para celebraciones íntimas donde cada detalle importa: baby showers, cumpleaños en casa, sesiones de fotos o reuniones familiares al aire libre.</p>
+      <p>No necesitas una finca entera para que tu evento se vea increíble. Con 4 mesas picnic bien colocadas, buena iluminación y decoración, cualquier espacio pequeño se convierte en escenario. REDEIL entrega, instala y desmonta — tú solo disfruta.</p>
     </Fragment>
   </Hero>
 
@@ -87,134 +87,396 @@ const structuredData = [
     items={[{ label: "8 Mesas", href: "/equipos-para-eventos/mesas-picnic/paquete-8-mesas/" }, { label: "12 Mesas", href: "/equipos-para-eventos/mesas-picnic/paquete-12-mesas/" }, { label: "Evento Completo", href: "/equipos-para-eventos/mesas-picnic/paquete-evento-completo/" }]}
   />
 
-  <!-- QUÉ INCLUYE -->
-  <section class="section" id="features">
+  <!-- PRODUCTO CON SIDEBAR UNIFICADO -->
+  <section class="section" id="producto">
     <div class="container">
-      <h2 class="section__title">¿Qué incluye el paquete 4 Mesas?</h2>
-      <p class="section__subtitle">Todo lo que necesitas para tu evento, sin sorpresas ni costos ocultos.</p>
-      <div class="features-grid">
-        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>4 mesas picnic madera</span></div>
-        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>Capacidad 32 personas</span></div>
-        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>Transporte incluido</span></div>
-        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>Instalación incluida</span></div>
-        <div class="feature-item feature-item--no"><span class="feature-icon">&mdash;</span><span>Manteles</span></div>
-        <div class="feature-item feature-item--no"><span class="feature-icon">&mdash;</span><span>Centros de mesa</span></div>
-      </div>
-      <div class="price-highlight">
-        <span class="price-highlight__label">Precio desde</span>
-        <span class="price-highlight__amount">$2,000 MXN</span>
-        <span class="price-highlight__note">+ IVA · Instalación incluida</span>
-        <a href={WHATSAPP_URL_MSG} class="btn btn--accent" target="_blank" rel="noopener">Reservar Ahora</a>
-      </div>
-    </div>
-  </section>
+      <div class="prod-layout">
 
-  <!-- CONTENIDO SEO -->
-  <section class="section section--bg">
-    <div class="container content-prose">
-      <h2>¿Por qué elegir el paquete 4 Mesas de mesas picnic?</h2>
-      <p>El paquete 4 Mesas de mesas picnic es una solución básico para eventos que requieren equipamiento profesional en la Ciudad de México y zona metropolitana. Nuestro equipo técnico se encarga de todo: desde la logística de transporte hasta la instalación, configuración y operación durante tu evento.</p>
-      <p>Con más de 10 años de experiencia en renta de mesas picnic para bodas, XV años, eventos corporativos y celebraciones privadas, REDEIL garantiza resultados profesionales. Este paquete ha sido diseñado para ofrecer la mejor relación calidad-precio, con equipo de marcas líderes y servicio técnico incluido.</p>
-      <h3>¿Para quién es este paquete?</h3>
-      <p>El paquete 4 Mesas de mesas picnic está diseñado para eventos íntimos y presupuestos ajustados. Con equipo profesional de marcas líderes y servicio técnico especializado, garantizamos resultados impecables.</p>
-      <h3>Servicio profesional de mesas picnic</h3>
-      <p>En REDEIL llevamos más de 10 años ofreciendo renta de mesas picnic en CDMX y Estado de México. Nuestro equipo técnico se encarga de todo: logística, transporte, instalación, configuración, operación durante el evento y desmontaje. Trabajamos con equipo profesional para garantizar que cada evento sea perfecto.</p>
+        <!-- ═══ COLUMNA PRINCIPAL ═══ -->
+        <div class="prod-main">
+
+          <!-- Galería -->
+          <div class="prod-gallery">
+            <div class="prod-gallery__main">
+              <img src="/img/paquetes/mesas-picnic/paquete-4-mesas.avif" alt="Paquete 4 mesas picnic de madera en jardín para evento íntimo" width="600" height="400" loading="eager" />
+            </div>
+            <div class="prod-gallery__side">
+              <img src="/img/img-index/mesas-picnic.avif" alt="Mesas picnic estilo vintage en terraza" width="300" height="200" loading="lazy" />
+              <img src="/img/paquetes/mesas-picnic/sell/madera-detalle.avif" alt="Detalle madera natural mesas picnic" width="300" height="200" loading="lazy" />
+              <img src="/img/paquetes/mesas-picnic/sell/montaje.avif" alt="Técnico montando mesas picnic en jardín" width="300" height="200" loading="lazy" />
+              <img src="/img/paquetes/mesas-picnic/sell/evento-intimo.avif" alt="Evento íntimo con mesas picnic decoradas" width="300" height="200" loading="lazy" />
+            </div>
+          </div>
+
+          <!-- Badge + Título + Precio + CTA -->
+          <div class="prod-info">
+            <span class="prod-info__badge">Paquete Íntimo — Ideal para 16-20 personas</span>
+            <h2 class="prod-info__title">4 Mesas Picnic de Madera con Instalación Incluida</h2>
+
+            <div class="prod-price">
+              <span class="prod-price__amount">$2,000</span>
+              <span class="prod-price__currency">MXN + IVA</span>
+              <p class="prod-price__note">Todo incluido: transporte, instalación, operación y desmontaje en CDMX y Edomex</p>
+            </div>
+
+            <div class="prod-ctas">
+              <a href={WHATSAPP_URL_MSG} class="prod-btn prod-btn--wa" target="_blank" rel="noopener">Cotizar por WhatsApp</a>
+              <a href="/cotizar/" class="prod-btn prod-btn--outline">Solicitar cotización formal</a>
+            </div>
+          </div>
+
+          <!-- Selling Points -->
+          <div class="prod-selling">
+            <h2 class="prod-selling__headline">4 mesas que convierten cualquier jardín en un evento de revista</h2>
+            <p class="prod-selling__intro">No hace falta un salón enorme ni una producción descomunal. Las mesas picnic de madera tienen un poder único: con solo 4 unidades bien dispuestas en un jardín o terraza, la diferencia visual es inmediata. La madera crea calidez, el formato abierto invita a convivir, y el resultado final fotograría sola.</p>
+
+            <div class="prod-highlights">
+              <div class="prod-hl">
+                <div class="prod-hl__bar"></div>
+                <div class="prod-hl__content">
+                  <h3 class="prod-hl__title">Mesas de madera maciza — la estética que todo el mundo quiere</h3>
+                  <p class="prod-hl__desc">No son mesas de plástico pintadas. Son mesas picnic de madera natural tratada, estilo vintage-rústico, que combinan con cualquier paleta de colores y decoración. Da igual si tu evento es minimalista, bohemio o lleno de globos.</p>
+                </div>
+              </div>
+              <div class="prod-hl">
+                <div class="prod-hl__bar"></div>
+                <div class="prod-hl__content">
+                  <h3 class="prod-hl__title">Perfecto para espacios pequeños — máximo impacto por metro cuadrado</h3>
+                  <p class="prod-hl__desc">4 mesas caben cómodamente en jardines de 40 m² o más. Al ser mesas con banca integrada, no necesitas sillas adicionales — menos piezas, mismo resultado. Ideal cuando el espacio es limitado pero quieres que se vea abundante.</p>
+                </div>
+              </div>
+              <div class="prod-hl">
+                <div class="prod-hl__bar"></div>
+                <div class="prod-hl__content">
+                  <h3 class="prod-hl__title">Combinable con guirnaldas, burbujas o pantalla inflable</h3>
+                  <p class="prod-hl__desc">Las mesas picnic son la base de una producción completa. Agrégales guirnaldas de luces Edison arriba, una máquina de burbujas al fondo y ya tienes otro nivel. REDEIL maneja todos los servicios — cotiza todo junto y te damos un mejor precio.</p>
+                </div>
+              </div>
+              <div class="prod-hl">
+                <div class="prod-hl__bar"></div>
+                <div class="prod-hl__content">
+                  <h3 class="prod-hl__title">Instalación y desmontaje sin que tú muevas un dedo</h3>
+                  <p class="prod-hl__desc">Nuestro equipo llega con anticipación, coloca las mesas según el diseño acordado, nivela, revisa y deja todo listo. Al terminar el evento, regresamos a desmontar. Sin esfuerzo de tu parte.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Lo que incluye -->
+          <div class="prod-includes">
+            <h3 class="prod-includes__title">Lo que incluye este paquete</h3>
+            <div class="prod-includes__grid">
+              <div class="prod-feat">4 mesas picnic de madera</div>
+              <div class="prod-feat">Bancas integradas (sin sillas extra)</div>
+              <div class="prod-feat">Capacidad para 16-20 personas</div>
+              <div class="prod-feat">Transporte ida y vuelta</div>
+              <div class="prod-feat">Instalación profesional</div>
+              <div class="prod-feat">Nivelación en sitio</div>
+              <div class="prod-feat">Técnico disponible durante el evento</div>
+              <div class="prod-feat">Desmontaje al finalizar</div>
+            </div>
+          </div>
+
+          <!-- Cómo funciona -->
+          <div class="prod-process">
+            <h3 class="prod-process__title">Así funciona el servicio</h3>
+            <div class="prod-steps">
+              <div class="prod-step">
+                <span class="prod-step__num">1</span>
+                <div class="prod-step__content">
+                  <h4 class="prod-step__name">Cuéntanos sobre tu evento</h4>
+                  <p class="prod-step__desc">Fecha, lugar, tipo de evento y cuántos invitados esperas. Con esos datos diseñamos la distribución exacta de las 4 mesas en tu espacio.</p>
+                </div>
+              </div>
+              <div class="prod-step">
+                <span class="prod-step__num">2</span>
+                <div class="prod-step__content">
+                  <h4 class="prod-step__name">Recibe tu cotización en menos de 24h</h4>
+                  <p class="prod-step__desc">Te enviamos propuesta detallada con precio final, distribución y opciones de personalización. Sin compromiso ni costos ocultos.</p>
+                </div>
+              </div>
+              <div class="prod-step">
+                <span class="prod-step__num">3</span>
+                <div class="prod-step__content">
+                  <h4 class="prod-step__name">Aparta tu fecha con anticipo</h4>
+                  <p class="prod-step__desc">Reserva con un anticipo del 50% por transferencia, efectivo o tarjeta. Tu fecha queda bloqueada y confirmada al instante.</p>
+                </div>
+              </div>
+              <div class="prod-step">
+                <span class="prod-step__num">4</span>
+                <div class="prod-step__content">
+                  <h4 class="prod-step__name">Nosotros nos encargamos de todo</h4>
+                  <p class="prod-step__desc">Llegamos antes, instalamos según el diseño acordado, hacemos pruebas y permanecemos disponibles durante el evento. Al terminar, desmontamos.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Comparativa -->
+          <div class="prod-compare">
+            <h3 class="prod-compare__title">¿4 mesas o 8 mesas?</h3>
+            <div class="prod-compare__grid">
+              <div class="prod-compare__col prod-compare__col--them">
+                <span class="prod-compare__label">Paquete 4 Mesas</span>
+                <ul class="prod-compare__list">
+                  <li>16-20 invitados</li>
+                  <li>Jardines pequeños y medianos</li>
+                  <li>Baby showers y cumpleaños</li>
+                  <li>Desde $2,000 MXN</li>
+                  <li>Ideal para celebraciones íntimas</li>
+                </ul>
+              </div>
+              <div class="prod-compare__col prod-compare__col--us">
+                <span class="prod-compare__label">Paquete 8 Mesas</span>
+                <ul class="prod-compare__list">
+                  <li>32-40 invitados</li>
+                  <li>Jardines medianos y grandes</li>
+                  <li>Cumpleaños y baby showers amplios</li>
+                  <li>Desde $3,500 MXN</li>
+                  <li>Más metros, mismo estilo</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Social proof -->
+          <div class="prod-proof">
+            <blockquote class="prod-quote">
+              <p class="prod-quote__text">"Rentamos 4 mesas picnic para el baby shower de mi hermana en el jardín de la casa. La verdad no esperábamos que se viera tan bien. Las mesas de madera le dieron un look completamente diferente al espacio. El montaje fue súper rápido y el equipo de REDEIL fue muy amable. Definitivamente lo recomendamos."</p>
+              <footer class="prod-quote__footer">
+                <span class="prod-quote__name">Fernanda G.</span>
+                <span class="prod-quote__event">Baby Shower en jardín privado — Coyoacán, CDMX</span>
+              </footer>
+            </blockquote>
+          </div>
+
+        </div>
+
+        <!-- ═══ SIDEBAR UNIFICADO ═══ -->
+        <aside class="prod-sidebar">
+
+          <!-- 1. Specs técnicas -->
+          <div class="ps-widget">
+            <h3 class="ps-widget__title">Especificaciones</h3>
+            <dl class="ps-specs">
+              <div class="ps-specs__row"><dt>Número de mesas</dt><dd>4 mesas</dd></div>
+              <div class="ps-specs__row"><dt>Capacidad</dt><dd>16-20 personas</dd></div>
+              <div class="ps-specs__row"><dt>Material</dt><dd>Madera natural tratada</dd></div>
+              <div class="ps-specs__row"><dt>Estilo</dt><dd>Vintage rústico</dd></div>
+              <div class="ps-specs__row"><dt>Bancas</dt><dd>Integradas</dd></div>
+              <div class="ps-specs__row"><dt>Instalación</dt><dd>Incluida</dd></div>
+              <div class="ps-specs__row"><dt>Desmontaje</dt><dd>Incluido</dd></div>
+              <div class="ps-specs__row"><dt>Zona</dt><dd>CDMX + Edomex</dd></div>
+            </dl>
+          </div>
+
+          <!-- 2. Ideal para -->
+          <div class="ps-widget">
+            <h3 class="ps-widget__title">Ideal para</h3>
+            <div class="ps-tags">
+              <span class="ps-tag">Baby showers</span>
+              <span class="ps-tag">Cumpleaños íntimos</span>
+              <span class="ps-tag">Reuniones familiares</span>
+              <span class="ps-tag">Sesiones de fotos</span>
+              <span class="ps-tag">Brunch al aire libre</span>
+              <span class="ps-tag">Jardines pequeños</span>
+              <span class="ps-tag">Terrazas</span>
+              <span class="ps-tag">Eventos bohemios</span>
+            </div>
+          </div>
+
+          <!-- 3. Otros paquetes -->
+          <div class="ps-widget">
+            <h3 class="ps-widget__title">Otros paquetes</h3>
+            <a href="/equipos-para-eventos/mesas-picnic/paquete-8-mesas/" class="ps-pkg">
+              <img src="/img/paquetes/mesas-picnic/paquete-8-mesas.avif" alt="8 Mesas Picnic" width="80" height="60" loading="lazy" class="ps-pkg__img" />
+              <div class="ps-pkg__info">
+                <span class="ps-pkg__name">8 Mesas</span>
+                <span class="ps-pkg__price">$3,500 MXN</span>
+              </div>
+            </a>
+            <a href="/equipos-para-eventos/mesas-picnic/paquete-12-mesas/" class="ps-pkg">
+              <img src="/img/paquetes/mesas-picnic/paquete-12-mesas.avif" alt="12 Mesas Picnic" width="80" height="60" loading="lazy" class="ps-pkg__img" />
+              <div class="ps-pkg__info">
+                <span class="ps-pkg__name">12 Mesas</span>
+                <span class="ps-pkg__price">$5,000 MXN</span>
+              </div>
+            </a>
+            <a href="/equipos-para-eventos/mesas-picnic/paquete-evento-completo/" class="ps-pkg">
+              <img src="/img/paquetes/mesas-picnic/paquete-evento-completo.avif" alt="Evento Completo Mesas Picnic" width="80" height="60" loading="lazy" class="ps-pkg__img" />
+              <div class="ps-pkg__info">
+                <span class="ps-pkg__name">Evento Completo</span>
+                <span class="ps-pkg__price">$9,000 MXN</span>
+              </div>
+            </a>
+            <div class="ps-upsell">
+              <p class="ps-upsell__text">¿Más invitados? El paquete de 8 mesas cubre hasta 40 personas con el mismo estilo.</p>
+              <a href="/equipos-para-eventos/mesas-picnic/paquete-8-mesas/" class="ps-upsell__link">Ver paquete 8 Mesas →</a>
+            </div>
+          </div>
+
+          <!-- 4. CTA -->
+          <div class="ps-widget ps-widget--dark">
+            <h3 class="ps-widget__title ps-widget__title--light">Cotiza tu evento</h3>
+            <p class="ps-widget__desc">Cotización personalizada en menos de 24 horas. Sin compromiso.</p>
+            <a href="/cotizar/" class="ps-widget__btn">Cotizar Gratis</a>
+            <a href={WHATSAPP_URL_MSG} class="ps-widget__btn ps-widget__btn--wa" target="_blank" rel="noopener">WhatsApp: 55 4937 5172</a>
+          </div>
+
+          <!-- 5. Servicios relacionados -->
+          <div class="ps-widget">
+            <h3 class="ps-widget__title">Servicios relacionados</h3>
+            <div class="ps-links">
+              <a href="/renta-de-iluminacion/guirnaldas/" class="ps-link">Guirnaldas de Luces</a>
+              <a href="/equipos-para-eventos/pantalla-inflable/" class="ps-link">Pantalla Inflable</a>
+              <a href="/equipos-para-eventos/maquina-de-burbujas/" class="ps-link">Máquina de Burbujas</a>
+              <a href="/renta-de-iluminacion/luces-arquitectonicas/" class="ps-link">Iluminación Arquitectónica</a>
+              <a href="/equipos-para-eventos/humo-bajo/" class="ps-link">Humo Bajo</a>
+              <a href="/equipos-para-eventos/maquina-de-confeti/" class="ps-link">Confeti</a>
+            </div>
+          </div>
+
+          <!-- 6. Contacto -->
+          <div class="ps-widget">
+            <h3 class="ps-widget__title">Contacto</h3>
+            <div class="ps-contact">
+              <p><a href="tel:+525549375172">55 4937 5172</a></p>
+              <p><a href="mailto:contacto@redeil.com">contacto@redeil.com</a></p>
+              <p>Lun-Vie 9:00-19:00 | Sáb 10:00-15:00</p>
+            </div>
+          </div>
+
+        </aside>
+      </div>
     </div>
   </section>
 
   <FaqSection items={faqItems} />
-
-  <!-- CTA FINAL -->
 
   <Footer />
   <WhatsAppBubble />
 </Base>
 
 <style>
-  .section__title {
-    font-size: clamp(1.5rem, 3vw, 2rem);
-    font-weight: 800;
-    color: var(--color-text);
-    margin-bottom: 0.5rem;
-  }
-  .section__subtitle {
-    font-size: var(--font-size-base);
-    color: var(--color-text-light);
-    margin-bottom: 2rem;
-  }
-  .features-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 0.75rem;
-    margin-bottom: 2rem;
-  }
-  .feature-item {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    padding: 0.875rem 1rem;
-    border-radius: var(--border-radius);
-    font-size: var(--font-size-sm);
-  }
-  .feature-item--yes {
-    background: #f0fdf4;
-    color: #166534;
-  }
-  .feature-item--no {
-    background: var(--color-bg);
-    color: var(--color-text-light);
-  }
-  .feature-icon {
-    font-weight: 700;
-    font-size: 1.125rem;
-    flex-shrink: 0;
-  }
-  .price-highlight {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 2rem;
-    background: var(--color-bg);
-    border-radius: var(--border-radius-lg);
-    text-align: center;
-  }
-  .price-highlight__label {
-    font-size: var(--font-size-sm);
-    color: var(--color-text-light);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-  }
-  .price-highlight__amount {
-    font-size: clamp(2rem, 5vw, 3rem);
-    font-weight: 800;
-    color: var(--color-text);
-  }
-  .price-highlight__note {
-    font-size: var(--font-size-sm);
-    color: var(--color-text-light);
-    margin-bottom: 0.5rem;
-  }
-  .content-prose {
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  .content-prose h2 {
-    font-size: clamp(1.5rem, 3vw, 2rem);
-    font-weight: 800;
-    color: var(--color-text);
-    margin-bottom: 1rem;
-  }
-  .content-prose h3 {
-    font-size: var(--font-size-xl);
-    font-weight: 700;
-    color: var(--color-text);
-    margin: 2rem 0 0.75rem;
-  }
-  .content-prose p {
-    font-size: var(--font-size-base);
-    color: var(--color-text-light);
-    line-height: 1.8;
-    margin-bottom: 1rem;
-  }
+  /* ── Layout ── */
+  .prod-layout { display: grid; grid-template-columns: 1fr; gap: 2rem; }
+  @media (min-width: 1024px) { .prod-layout { grid-template-columns: 1fr 340px; gap: 2.5rem; } }
+
+  /* ── Gallery ── */
+  .prod-gallery { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; margin-bottom: 2rem; border-radius: 14px; overflow: hidden; }
+  .prod-gallery__main { grid-row: span 2; }
+  .prod-gallery__main img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .prod-gallery__side { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; }
+  .prod-gallery__side img { width: 100%; height: 100%; object-fit: cover; display: block; aspect-ratio: 3/2; }
+
+  /* ── Product Info ── */
+  .prod-info { margin-bottom: 2.5rem; }
+  .prod-info__badge { display: inline-block; font-size: 0.75rem; font-weight: 700; color: var(--color-accent); text-transform: uppercase; letter-spacing: 0.08em; padding: 0.375rem 1rem; background: rgba(0,113,227,0.08); border: 1px solid rgba(0,113,227,0.12); border-radius: 6px; margin-bottom: 0.75rem; }
+  .prod-info__title { font-size: clamp(1.375rem, 3vw, 1.75rem); font-weight: 800; color: var(--color-text); line-height: 1.2; letter-spacing: -0.02em; margin: 0 0 1.25rem; }
+  .prod-price { background: var(--color-bg); border-radius: 12px; padding: 1.25rem 1.5rem; margin-bottom: 1.25rem; border-left: 4px solid var(--color-accent); }
+  .prod-price__amount { font-size: 2.25rem; font-weight: 800; color: var(--color-primary); font-variant-numeric: tabular-nums; }
+  .prod-price__currency { font-size: 0.875rem; color: var(--color-text-light); margin-left: 0.5rem; }
+  .prod-price__note { font-size: 0.8125rem; color: var(--color-text-light); margin: 0.5rem 0 0; }
+  .prod-ctas { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+  .prod-btn { display: inline-flex; align-items: center; justify-content: center; padding: 0.875rem 1.75rem; border-radius: 6px; font-size: 0.9375rem; font-weight: 600; text-decoration: none; transition: background 0.2s ease, border-color 0.2s ease; }
+  .prod-btn--wa { background: #25D366; color: #fff; }
+  .prod-btn--wa:hover { background: #1DA851; }
+  .prod-btn--outline { background: none; color: var(--color-text); border: 2px solid var(--color-border); }
+  .prod-btn--outline:hover { border-color: var(--color-accent); color: var(--color-accent); }
+
+  /* ── Selling Points ── */
+  .prod-selling { margin-bottom: 2.5rem; }
+  .prod-selling__headline { font-size: clamp(1.25rem, 3vw, 1.5rem); font-weight: 800; color: var(--color-text); line-height: 1.25; letter-spacing: -0.02em; margin: 0 0 0.75rem; }
+  .prod-selling__intro { font-size: 0.9375rem; color: var(--color-text-light); line-height: 1.75; margin: 0 0 1.75rem; max-width: 65ch; }
+  .prod-highlights { display: flex; flex-direction: column; gap: 1.25rem; }
+  .prod-hl { display: flex; gap: 1rem; align-items: stretch; }
+  .prod-hl__bar { flex-shrink: 0; width: 3px; background: var(--color-accent); border-radius: 2px; }
+  .prod-hl__content { display: flex; flex-direction: column; gap: 0.25rem; }
+  .prod-hl__title { font-size: 0.9375rem; font-weight: 700; color: var(--color-text); margin: 0; line-height: 1.3; }
+  .prod-hl__desc { font-size: 0.8125rem; color: var(--color-text-light); line-height: 1.65; margin: 0; }
+
+  /* ── Includes ── */
+  .prod-includes { background: var(--color-bg); border-radius: 14px; padding: 1.75rem 2rem; margin-bottom: 2.5rem; }
+  .prod-includes__title { font-size: 1.0625rem; font-weight: 700; color: var(--color-text); margin: 0 0 1rem; }
+  .prod-includes__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; }
+  .prod-feat { font-size: 0.875rem; color: var(--color-text-light); padding-left: 1.25rem; position: relative; line-height: 1.5; }
+  .prod-feat::before { content: ""; position: absolute; left: 0; top: 0.45rem; width: 6px; height: 6px; border-radius: 50%; background: var(--color-accent); }
+  @media (max-width: 640px) { .prod-includes__grid { grid-template-columns: 1fr; } }
+
+  /* ── Sidebar ── */
+  .prod-sidebar { display: flex; flex-direction: column; gap: 1.25rem; }
+  @media (min-width: 1024px) { .prod-sidebar { position: sticky; top: calc(var(--header-height) + var(--topbar-height) + 1.5rem); align-self: start; } }
+  .ps-widget { background: var(--color-white); border: 1px solid var(--color-border); border-radius: 12px; padding: 1.25rem; }
+  .ps-widget--dark { background: var(--color-primary); color: #fff; border: none; }
+  .ps-widget__title { font-size: 0.875rem; font-weight: 700; color: var(--color-text); text-transform: uppercase; letter-spacing: 0.05em; margin: 0 0 0.75rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--color-accent); }
+  .ps-widget__title--light { color: #fff; }
+  .ps-widget__desc { font-size: 0.8125rem; color: rgba(255,255,255,0.75); margin: 0 0 0.75rem; }
+  .ps-widget__btn { display: block; text-align: center; padding: 0.625rem; border-radius: 6px; font-size: 0.875rem; font-weight: 600; text-decoration: none; margin-top: 0.5rem; background: var(--color-accent); color: #fff; transition: background 0.2s ease; }
+  .ps-widget__btn:hover { opacity: 0.9; }
+  .ps-widget__btn--wa { background: #25D366; }
+
+  .ps-specs { display: flex; flex-direction: column; margin: 0; }
+  .ps-specs__row { display: flex; justify-content: space-between; align-items: baseline; padding: 0.4rem 0; border-bottom: 1px solid var(--color-bg); gap: 0.75rem; }
+  .ps-specs__row:last-child { border-bottom: none; }
+  .ps-specs__row dt { font-size: 0.8125rem; color: var(--color-text-light); font-weight: 500; margin: 0; }
+  .ps-specs__row dd { font-size: 0.8125rem; font-weight: 600; color: var(--color-text); text-align: right; margin: 0; font-variant-numeric: tabular-nums; }
+
+  .ps-tags { display: flex; flex-wrap: wrap; gap: 0.375rem; }
+  .ps-tag { font-size: 0.6875rem; font-weight: 600; color: var(--color-text); padding: 0.3rem 0.75rem; background: var(--color-bg); border: 1px solid var(--color-border); border-radius: 6px; white-space: nowrap; }
+
+  .ps-pkg { display: flex; gap: 0.75rem; align-items: center; text-decoration: none; padding: 0.625rem 0; border-bottom: 1px solid var(--color-bg); }
+  .ps-pkg:last-of-type { border-bottom: none; }
+  .ps-pkg__img { width: 72px; height: 54px; object-fit: cover; border-radius: 8px; flex-shrink: 0; }
+  .ps-pkg__info { display: flex; flex-direction: column; gap: 0.125rem; }
+  .ps-pkg__name { font-size: 0.8125rem; font-weight: 600; color: var(--color-text); }
+  .ps-pkg__price { font-size: 0.75rem; font-weight: 700; color: var(--color-accent); font-variant-numeric: tabular-nums; }
+  .ps-pkg:hover .ps-pkg__name { color: var(--color-accent); }
+
+  .ps-upsell { margin-top: 0.75rem; padding-top: 0.75rem; border-top: 1px solid var(--color-bg); }
+  .ps-upsell__text { font-size: 0.75rem; color: var(--color-text-light); line-height: 1.5; margin: 0 0 0.375rem; }
+  .ps-upsell__link { font-size: 0.75rem; font-weight: 600; color: var(--color-accent); text-decoration: none; }
+  .ps-upsell__link:hover { text-decoration: underline; }
+
+  .ps-links { display: flex; flex-direction: column; }
+  .ps-link { padding: 0.4rem 0; border-bottom: 1px solid var(--color-bg); font-size: 0.8125rem; color: var(--color-text-light); text-decoration: none; }
+  .ps-link:last-child { border-bottom: none; }
+  .ps-link:hover { color: var(--color-accent); }
+
+  .ps-contact p { font-size: 0.8125rem; color: var(--color-text-light); margin: 0.3rem 0; }
+  .ps-contact a { color: var(--color-accent); text-decoration: none; }
+
+  /* ── Process Steps ── */
+  .prod-process { margin: 2.5rem 0; }
+  .prod-process__title { font-size: 1.125rem; font-weight: 800; color: var(--color-text); letter-spacing: -0.02em; margin: 0 0 1.25rem; }
+  .prod-steps { display: flex; flex-direction: column; gap: 0; }
+  .prod-step { display: flex; gap: 1rem; padding: 1rem 0; border-bottom: 1px solid var(--color-border); }
+  .prod-step:last-child { border-bottom: none; }
+  .prod-step__num { flex-shrink: 0; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; background: var(--color-accent); color: #fff; font-size: 0.8125rem; font-weight: 700; border-radius: 50%; }
+  .prod-step__content { display: flex; flex-direction: column; gap: 0.2rem; }
+  .prod-step__name { font-size: 0.9375rem; font-weight: 700; color: var(--color-text); margin: 0; line-height: 1.3; }
+  .prod-step__desc { font-size: 0.8125rem; color: var(--color-text-light); line-height: 1.6; margin: 0; }
+
+  /* ── Comparison ── */
+  .prod-compare { margin: 2.5rem 0; }
+  .prod-compare__title { font-size: 1.125rem; font-weight: 800; color: var(--color-text); letter-spacing: -0.02em; margin: 0 0 1.25rem; }
+  .prod-compare__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+  @media (max-width: 640px) { .prod-compare__grid { grid-template-columns: 1fr; } }
+  .prod-compare__col { border-radius: 12px; padding: 1.25rem; }
+  .prod-compare__col--them { background: #fef2f2; border: 1px solid #fecaca; }
+  .prod-compare__col--us { background: #eff6ff; border: 1px solid #bfdbfe; }
+  .prod-compare__label { display: block; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.75rem; }
+  .prod-compare__col--them .prod-compare__label { color: #991b1b; }
+  .prod-compare__col--us .prod-compare__label { color: var(--color-primary); }
+  .prod-compare__list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.5rem; }
+  .prod-compare__list li { font-size: 0.8125rem; color: var(--color-text); line-height: 1.4; padding-left: 1.125rem; position: relative; }
+  .prod-compare__col--them .prod-compare__list li::before { content: "–"; position: absolute; left: 0; color: #dc2626; font-size: 0.75rem; font-weight: 700; }
+  .prod-compare__col--us .prod-compare__list li::before { content: "✓"; position: absolute; left: 0; color: var(--color-accent); font-size: 0.75rem; font-weight: 700; }
+
+  /* ── Social Proof ── */
+  .prod-proof { margin-top: 2.5rem; }
+  .prod-quote { background: var(--color-bg); border-radius: 14px; padding: 1.75rem 2rem; border-left: 4px solid var(--color-accent); margin: 0; }
+  .prod-quote__text { font-size: 0.9375rem; color: var(--color-text); line-height: 1.75; font-style: italic; margin: 0 0 1rem; }
+  .prod-quote__footer { display: flex; flex-direction: column; gap: 0.125rem; }
+  .prod-quote__name { font-size: 0.875rem; font-weight: 700; color: var(--color-text); font-style: normal; }
+  .prod-quote__event { font-size: 0.75rem; color: var(--color-text-light); font-style: normal; }
 </style>

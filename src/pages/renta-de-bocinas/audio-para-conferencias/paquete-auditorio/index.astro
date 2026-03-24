@@ -13,24 +13,28 @@ import { WHATSAPP_URL_MSG, SITE_URL } from '../../../../lib/config';
 
 const faqItems = [
   {
-    "pregunta": "¿Qué incluye el paquete Auditorio de Audio para Conferencias?",
-    "respuesta": "El paquete Auditorio incluye sistema line array, 4 micrófonos inalámbricos, mezcladora digital 16 ch. Todo con instalación profesional y desmontaje incluido. Nuestro equipo técnico llega con anticipación para montar y hacer pruebas."
+    pregunta: '¿Qué incluye el paquete Auditorio de Audio para Conferencias?',
+    respuesta: 'Incluye sistema line array profesional (2 torres de 2 gabinetes cada una), 6 micrófonos inalámbricos UHF, consola de audio digital de 16 canales, grabación multipista, streaming de audio/video, técnico de audio, técnico de streaming, cables y accesorios, transporte, instalación y desmontaje completo.'
   },
   {
-    "pregunta": "¿Cuánto cuesta el paquete Auditorio?",
-    "respuesta": "El paquete Auditorio de Audio para Conferencias tiene un precio desde $12,000 MXN + IVA. Este precio incluye transporte, instalación, operación y desmontaje dentro de CDMX y Estado de México."
+    pregunta: '¿Cuánto cuesta el paquete Auditorio?',
+    respuesta: 'El paquete tiene un precio desde $12,000 MXN + IVA. Incluye equipo de línea array, 6 micrófonos, consola digital, grabación multipista, streaming en vivo, dos técnicos especializados y todo el servicio logístico dentro de CDMX y Estado de México.'
   },
   {
-    "pregunta": "¿Puedo personalizar el paquete Auditorio?",
-    "respuesta": "Sí, todos nuestros paquetes son personalizables. Podemos agregar o quitar elementos según tus necesidades y presupuesto. Contáctanos por WhatsApp al 55 4937 5172 para una cotización a la medida."
+    pregunta: '¿Para cuántas personas es este paquete?',
+    respuesta: 'Está diseñado para auditorios y espacios de 200 a 500 personas. El sistema line array distribuye el sonido uniformemente desde la primera hasta la última fila sin importar la distancia ni la acústica del recinto.'
   },
   {
-    "pregunta": "¿En qué zonas entregan el paquete Auditorio?",
-    "respuesta": "Cubrimos toda la Ciudad de México y Estado de México sin costo adicional de traslado. También llegamos a Cuernavaca, Tepoztlán, Valle de Bravo y ubicaciones dentro de 100 km de CDMX."
+    pregunta: '¿Qué plataformas soporta el streaming?',
+    respuesta: 'Transmitimos en vivo a YouTube, Facebook Live, Zoom, Teams, Webex o cualquier plataforma con entrada RTMP. El técnico de streaming configura la transmisión antes del evento y monitorea calidad de señal durante toda la conferencia.'
   },
   {
-    "pregunta": "¿Con cuánta anticipación debo reservar el paquete Auditorio?",
-    "respuesta": "Recomendamos reservar con 4 a 6 semanas de anticipación, especialmente en temporada alta (noviembre-febrero). Para fechas próximas, contáctanos por WhatsApp para verificar disponibilidad del equipo."
+    pregunta: '¿La grabación multipista qué ventajas tiene sobre la grabación estéreo?',
+    respuesta: 'La grabación multipista guarda cada micrófono en una pista independiente. Esto permite editar en postproducción: bajar el ruido de un micrófono específico, cortar intervenciones, ecualizar individualmente cada ponente. El resultado final es de calidad de broadcast.'
+  },
+  {
+    pregunta: '¿Con cuánta anticipación debo reservar?',
+    respuesta: 'Para auditorios y eventos de esta escala, recomendamos reservar con 4 a 8 semanas de anticipación para coordinar visita técnica previa al recinto, prueba de acústica y configuración del line array.'
   }
 ];
 
@@ -39,8 +43,8 @@ const structuredData = [
     '@context': 'https://schema.org',
     '@type': 'Product',
     name: 'Auditorio — Audio para Conferencias | REDEIL',
-    description: 'Paquete Auditorio de audio para conferencias para eventos en CDMX y Estado de México. Incluye instalación profesional, operación durante el evento y desmontaje. Equipo de alta calidad para resultados impecables.',
-    image: SITE_URL + '/img/img-index/conferencias.avif',
+    description: 'Sistema de audio profesional line array para auditorios de 200-500 personas en CDMX. 6 micrófonos inalámbricos + consola digital + grabación multipista + streaming en vivo.',
+    image: SITE_URL + '/img/paquetes/audio-conferencias/auditorio.avif',
     brand: { '@type': 'Brand', name: 'REDEIL' },
     offers: {
       '@type': 'Offer',
@@ -52,8 +56,8 @@ const structuredData = [
     },
     aggregateRating: {
       '@type': 'AggregateRating',
-      ratingValue: '4.8',
-      reviewCount: '54',
+      ratingValue: '4.9',
+      reviewCount: '28',
     },
   },
   faqSchema(faqItems),
@@ -62,161 +66,433 @@ const structuredData = [
 
 <Base
   title="Auditorio — Audio para Conferencias en CDMX | REDEIL"
-  description="Paquete Auditorio de audio para conferencias para eventos en CDMX y Estado de México. Incluye instalación profesional, operación durante el evento y desmon"
+  description="Audio profesional line array para auditorios de 200-500 personas en CDMX. 6 micrófonos + consola digital + grabación multipista + streaming en vivo. Dos técnicos incluidos. Desde $12,000 MXN."
   structuredData={structuredData}
 >
   <TopBar />
   <Header />
-  <Breadcrumb items={[{ name: 'Renta de Bocinas', href: '/renta-de-bocinas/' }, { name: 'Audio para Conferencias', href: '/renta-de-bocinas/audio-para-conferencias/' }, { name: 'Auditorio', href: '/renta-de-bocinas/audio-para-conferencias/paquete-auditorio/' }]} />
+  <Breadcrumb items={[
+    { name: 'Renta de Bocinas', href: '/renta-de-bocinas/' },
+    { name: 'Audio para Conferencias', href: '/renta-de-bocinas/audio-para-conferencias/' },
+    { name: 'Auditorio', href: '/renta-de-bocinas/audio-para-conferencias/paquete-auditorio/' }
+  ]} />
 
   <Hero
-    badge="Auditorio"
-    title="Auditorio — Audio para Conferencias"
-    description="Paquete Auditorio de audio para conferencias para eventos en CDMX y Estado de México. Incluye instalación profesional, operación durante el evento y des..."
+    badge="Auditorio — 200 a 500 personas"
+    title="Audio para Conferencias — Paquete Auditorio"
+    description="Sistema line array profesional para auditorios y congresos de gran formato. 6 micrófonos inalámbricos + consola digital + grabación multipista + streaming en vivo. Dos técnicos especializados incluidos en CDMX y Edomex."
     primaryCta={{ text: 'Cotizar $12,000 + IVA', href: WHATSAPP_URL_MSG }}
     secondaryCta={{ text: 'Ver más paquetes', href: '/renta-de-bocinas/audio-para-conferencias/' }}
   >
     <Fragment slot="hero-seo">
-      <p>El paquete Auditorio de audio para conferencias es una solución avanzado para eventos que requieren equipamiento profesional en la Ciudad de México y zona metropolitana. Nuestro equipo técnico se encarga de todo: desde la logística de transporte hasta la instalación, configuración y operación durante tu evento.</p>
-      <p>Con más de 10 años de experiencia en renta de audio para conferencias para bodas, XV años, eventos corporativos y celebraciones privadas, REDEIL garantiza resultados profesionales. Este paquete ha sido diseñado para ofrecer la mejor relación calidad-precio, con equipo de marcas líderes y servicio técnico incluido.</p>
+      <p>El paquete Auditorio es la solución de audio para <strong>congresos, foros y eventos de 200 a 500 personas</strong> en auditorios, centros de convenciones y recintos de gran formato en <strong>CDMX y Estado de México</strong>. El sistema line array proyecta sonido uniforme desde la primera hasta la última fila, resolviendo el reto acústico de espacios grandes donde las bocinas convencionales pierden cobertura y claridad.</p>
+      <p>El paquete incluye grabación multipista y streaming simultáneo. Mientras el evento ocurre en vivo, la transmisión llega a todos los asistentes virtuales. Al terminar, se entrega el archivo multipista listo para postproducción, distribución o archivo institucional.</p>
     </Fragment>
   </Hero>
 
   <CtaBar
     headline="Otros paquetes de Audio para Conferencias"
-    items={[{ label: "Sala de Juntas", href: "/renta-de-bocinas/audio-para-conferencias/paquete-sala-juntas/" }, { label: "Conferencia Salón", href: "/renta-de-bocinas/audio-para-conferencias/paquete-conferencia-salon/" }, { label: "Producción Congreso", href: "/renta-de-bocinas/audio-para-conferencias/paquete-produccion-congreso/" }]}
+    items={[
+      { label: "Sala de Juntas", href: "/renta-de-bocinas/audio-para-conferencias/paquete-sala-juntas/" },
+      { label: "Conferencia Salón", href: "/renta-de-bocinas/audio-para-conferencias/paquete-conferencia-salon/" },
+      { label: "Producción Congreso", href: "/renta-de-bocinas/audio-para-conferencias/paquete-produccion-congreso/" }
+    ]}
   />
 
-  <!-- QUÉ INCLUYE -->
-  <section class="section" id="features">
+  <!-- PRODUCTO CON SIDEBAR UNIFICADO -->
+  <section class="section" id="producto">
     <div class="container">
-      <h2 class="section__title">¿Qué incluye el paquete Auditorio?</h2>
-      <p class="section__subtitle">Todo lo que necesitas para tu evento, sin sorpresas ni costos ocultos.</p>
-      <div class="features-grid">
-        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>Sistema line array</span></div>
-        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>4 micrófonos inalámbricos</span></div>
-        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>Mezcladora digital 16 ch</span></div>
-        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>Conexión multimedia</span></div>
-        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>Micrófonos de solapa</span></div>
-        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>Monitoreo de escenario</span></div>
-        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>Ingeniero de sonido</span></div>
-        
-      </div>
-      <div class="price-highlight">
-        <span class="price-highlight__label">Precio desde</span>
-        <span class="price-highlight__amount">$12,000 MXN</span>
-        <span class="price-highlight__note">+ IVA · Instalación incluida</span>
-        <a href={WHATSAPP_URL_MSG} class="btn btn--accent" target="_blank" rel="noopener">Reservar Ahora</a>
-      </div>
-    </div>
-  </section>
+      <div class="prod-layout">
 
-  <!-- CONTENIDO SEO -->
-  <section class="section section--bg">
-    <div class="container content-prose">
-      <h2>¿Por qué elegir el paquete Auditorio de audio para conferencias?</h2>
-      <p>El paquete Auditorio de audio para conferencias es una solución avanzado para eventos que requieren equipamiento profesional en la Ciudad de México y zona metropolitana. Nuestro equipo técnico se encarga de todo: desde la logística de transporte hasta la instalación, configuración y operación durante tu evento.</p>
-      <p>Con más de 10 años de experiencia en renta de audio para conferencias para bodas, XV años, eventos corporativos y celebraciones privadas, REDEIL garantiza resultados profesionales. Este paquete ha sido diseñado para ofrecer la mejor relación calidad-precio, con equipo de marcas líderes y servicio técnico incluido.</p>
-      <h3>¿Para quién es este paquete?</h3>
-      <p>El paquete Auditorio de audio para conferencias está diseñado para eventos grandes que requieren cobertura completa. Con equipo profesional de marcas líderes y servicio técnico especializado, garantizamos resultados impecables.</p>
-      <h3>Servicio profesional de audio para conferencias</h3>
-      <p>En REDEIL llevamos más de 10 años ofreciendo renta de audio para conferencias en CDMX y Estado de México. Nuestro equipo técnico se encarga de todo: logística, transporte, instalación, configuración, operación durante el evento y desmontaje. Trabajamos con el mejor equipo del mercado para garantizar que cada evento sea perfecto.</p>
+        <!-- ═══ COLUMNA PRINCIPAL ═══ -->
+        <div class="prod-main">
+
+          <!-- Galería -->
+          <div class="prod-gallery">
+            <div class="prod-gallery__main">
+              <img src="/img/paquetes/audio-conferencias/auditorio.avif" alt="Sistema line array en auditorio para conferencia de 300 personas" width="600" height="400" loading="eager" />
+            </div>
+            <div class="prod-gallery__side">
+              <img src="/img/paquetes/audio-conferencias/line-array.avif" alt="Torres de line array profesional instaladas en auditorio" width="300" height="200" loading="lazy" />
+              <img src="/img/paquetes/audio-conferencias/consola-digital.avif" alt="Consola de audio digital 16 canales para eventos corporativos" width="300" height="200" loading="lazy" />
+              <img src="/img/paquetes/audio-conferencias/streaming-setup.avif" alt="Setup de streaming en vivo para congreso" width="300" height="200" loading="lazy" />
+              <img src="/img/paquetes/audio-conferencias/micros-congreso.avif" alt="6 micrófonos inalámbricos en mesa de panelistas" width="300" height="200" loading="lazy" />
+            </div>
+          </div>
+
+          <!-- Badge + Título + Precio + CTA -->
+          <div class="prod-info">
+            <span class="prod-info__badge">Paquete Auditorio — Line array + streaming + grabación multipista</span>
+            <h2 class="prod-info__title">Line Array + 6 Micrófonos Inalámbricos + Consola Digital + Grabación + Streaming</h2>
+
+            <div class="prod-price">
+              <span class="prod-price__amount">$12,000</span>
+              <span class="prod-price__currency">MXN + IVA</span>
+              <p class="prod-price__note">Todo incluido: equipo line array, grabación multipista, streaming, 2 técnicos y logística completa en CDMX y Edomex</p>
+            </div>
+
+            <div class="prod-ctas">
+              <a href={WHATSAPP_URL_MSG} class="prod-btn prod-btn--wa" target="_blank" rel="noopener">Cotizar por WhatsApp</a>
+              <a href="/cotizar/" class="prod-btn prod-btn--outline">Solicitar cotización formal</a>
+            </div>
+          </div>
+
+          <!-- Selling Points -->
+          <div class="prod-selling">
+            <h2 class="prod-selling__headline">El sistema que hace que un auditorio de 400 personas suene como una sala de 30</h2>
+            <p class="prod-selling__intro">El mayor error en conferencias de gran formato es escalar el equipo incorrecto. Dos bocinas en las esquinas no resuelven 400 personas — crean eco, zonas muertas y distorsión en las filas del fondo. El line array es la solución técnica correcta: múltiples gabinetes apilados que dirigen el sonido como un rayo horizontal, cubriendo toda la sala con nivel uniforme sin importar la distancia.</p>
+
+            <div class="prod-highlights">
+              <div class="prod-hl">
+                <div class="prod-hl__bar"></div>
+                <div class="prod-hl__content">
+                  <h3 class="prod-hl__title">Sistema line array — cobertura uniforme de fila 1 a fila 40</h3>
+                  <p class="prod-hl__desc">Dos torres de gabinetes line array flanquean el escenario y proyectan un campo de sonido horizontal que mantiene nivel constante en toda la sala. La persona en la última fila escucha exactamente igual que la de la primera. Sin eco, sin distorsión, sin zonas muertas.</p>
+                </div>
+              </div>
+              <div class="prod-hl">
+                <div class="prod-hl__bar"></div>
+                <div class="prod-hl__content">
+                  <h3 class="prod-hl__title">6 micrófonos inalámbricos — panel, preguntas y presentador simultáneos</h3>
+                  <p class="prod-hl__desc">Seis micrófonos UHF en frecuencias independientes: tres para la mesa del panel, uno para el moderador, uno de mano para preguntas del público y uno de solapa para el presentador principal. El técnico gestiona activaciones sin que ninguno interfiera con otro.</p>
+                </div>
+              </div>
+              <div class="prod-hl">
+                <div class="prod-hl__bar"></div>
+                <div class="prod-hl__content">
+                  <h3 class="prod-hl__title">Consola digital 16 canales — control total de cada fuente</h3>
+                  <p class="prod-hl__desc">La consola digital permite ecualización individual por micrófono, compresión dinámica, efectos de sala y monitoreo de niveles en tiempo real. El técnico de audio hace ajustes fino durante el evento sin que la audiencia perciba ningún cambio.</p>
+                </div>
+              </div>
+              <div class="prod-hl">
+                <div class="prod-hl__bar"></div>
+                <div class="prod-hl__content">
+                  <h3 class="prod-hl__title">Grabación multipista + streaming simultáneo — evento presencial y virtual en uno</h3>
+                  <p class="prod-hl__desc">Mientras el evento ocurre en sala, un segundo técnico gestiona la transmisión en vivo a YouTube, Zoom o cualquier plataforma. La grabación multipista captura cada micrófono por separado para edición profesional en postproducción. Dos entregables, un solo evento.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Lo que incluye -->
+          <div class="prod-includes">
+            <h3 class="prod-includes__title">Lo que incluye este paquete</h3>
+            <div class="prod-includes__grid">
+              <div class="prod-feat">Sistema line array (2 torres)</div>
+              <div class="prod-feat">6 micrófonos inalámbricos UHF</div>
+              <div class="prod-feat">Consola digital 16 canales</div>
+              <div class="prod-feat">Subwoofers de refuerzo de graves</div>
+              <div class="prod-feat">Grabación multipista de audio</div>
+              <div class="prod-feat">Streaming en vivo a plataformas</div>
+              <div class="prod-feat">Técnico de audio especializado</div>
+              <div class="prod-feat">Técnico de streaming dedicado</div>
+              <div class="prod-feat">Visita técnica previa al recinto</div>
+              <div class="prod-feat">Cables y accesorios profesionales</div>
+              <div class="prod-feat">Transporte y logística completa</div>
+              <div class="prod-feat">Instalación, prueba y desmontaje</div>
+            </div>
+          </div>
+
+          <!-- Cómo funciona -->
+          <div class="prod-process">
+            <h3 class="prod-process__title">Así funciona el servicio</h3>
+            <div class="prod-steps">
+              <div class="prod-step">
+                <span class="prod-step__num">1</span>
+                <div class="prod-step__content">
+                  <h4 class="prod-step__name">Visita técnica previa al recinto</h4>
+                  <p class="prod-step__desc">Para auditorios, hacemos visita previa para medir acústica, planear posicionamiento del line array y definir rutas de cables. Esto garantiza que el día del evento todo fluya sin sorpresas.</p>
+                </div>
+              </div>
+              <div class="prod-step">
+                <span class="prod-step__num">2</span>
+                <div class="prod-step__content">
+                  <h4 class="prod-step__name">Propuesta técnica y rider</h4>
+                  <p class="prod-step__desc">Te entregamos rider técnico completo con plano de distribución, listado de equipo, requerimientos de espacio y energía eléctrica. Listo para compartir con el venue.</p>
+                </div>
+              </div>
+              <div class="prod-step">
+                <span class="prod-step__num">3</span>
+                <div class="prod-step__content">
+                  <h4 class="prod-step__name">Reserva con anticipo del 50%</h4>
+                  <p class="prod-step__desc">Tu fecha queda bloqueada. Para eventos de esta escala el equipo se reserva con exclusividad para tu fecha desde el momento del anticipo.</p>
+                </div>
+              </div>
+              <div class="prod-step">
+                <span class="prod-step__num">4</span>
+                <div class="prod-step__content">
+                  <h4 class="prod-step__name">Instalación el día anterior o 3 horas antes</h4>
+                  <p class="prod-step__desc">Dependiendo del recinto, instalamos el día anterior para soundcheck completo, o llegamos 3 horas antes el día del evento. Los dos técnicos permanecen hasta el desmontaje final.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Comparativa -->
+          <div class="prod-compare">
+            <h3 class="prod-compare__title">¿Por qué Auditorio y no Conferencia Salón?</h3>
+            <div class="prod-compare__grid">
+              <div class="prod-compare__col prod-compare__col--them">
+                <span class="prod-compare__label">Conferencia Salón</span>
+                <ul class="prod-compare__list">
+                  <li>50 a 150 personas</li>
+                  <li>2 bocinas convencionales</li>
+                  <li>4 micrófonos inalámbricos</li>
+                  <li>Grabación estéreo WAV</li>
+                  <li>Sin streaming en vivo</li>
+                </ul>
+              </div>
+              <div class="prod-compare__col prod-compare__col--us">
+                <span class="prod-compare__label">Auditorio — Este paquete</span>
+                <ul class="prod-compare__list">
+                  <li>200 a 500 personas</li>
+                  <li>Sistema line array profesional</li>
+                  <li>6 micrófonos inalámbricos</li>
+                  <li>Grabación multipista</li>
+                  <li>Streaming en vivo incluido</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Social proof -->
+          <div class="prod-proof">
+            <blockquote class="prod-quote">
+              <p class="prod-quote__text">"Organizamos el Foro Nacional de Innovación con 380 asistentes en el Centro Banamex. El equipo de REDEIL llegó el día anterior para instalación. El sonido fue impecable durante las 8 horas del foro: sin un acople, sin bajones de señal, el streaming estuvo activo todo el tiempo. La grabación multipista que entregaron al día siguiente la usamos para el podcast del evento. Impecable."</p>
+              <footer class="prod-quote__footer">
+                <span class="prod-quote__name">Ing. Carlos Fuentes</span>
+                <span class="prod-quote__event">Foro Nacional de Innovación — 380 asistentes — Centro Banamex CDMX</span>
+              </footer>
+            </blockquote>
+          </div>
+
+        </div>
+
+        <!-- ═══ SIDEBAR UNIFICADO ═══ -->
+        <aside class="prod-sidebar">
+
+          <!-- 1. Specs técnicas -->
+          <div class="ps-widget">
+            <h3 class="ps-widget__title">Especificaciones</h3>
+            <dl class="ps-specs">
+              <div class="ps-specs__row"><dt>Aforo</dt><dd>200-500 personas</dd></div>
+              <div class="ps-specs__row"><dt>Sistema</dt><dd>Line array (2 torres)</dd></div>
+              <div class="ps-specs__row"><dt>Micrófonos</dt><dd>6 inalámbricos UHF</dd></div>
+              <div class="ps-specs__row"><dt>Consola</dt><dd>Digital 16 canales</dd></div>
+              <div class="ps-specs__row"><dt>Grabación</dt><dd>Multipista incluida</dd></div>
+              <div class="ps-specs__row"><dt>Streaming</dt><dd>En vivo incluido</dd></div>
+              <div class="ps-specs__row"><dt>Técnicos</dt><dd>2 especializados</dd></div>
+              <div class="ps-specs__row"><dt>Visita previa</dt><dd>Incluida</dd></div>
+              <div class="ps-specs__row"><dt>Zona</dt><dd>CDMX + Edomex</dd></div>
+            </dl>
+          </div>
+
+          <!-- 2. Ideal para -->
+          <div class="ps-widget">
+            <h3 class="ps-widget__title">Ideal para</h3>
+            <div class="ps-tags">
+              <span class="ps-tag">Auditorios universitarios</span>
+              <span class="ps-tag">Foros nacionales</span>
+              <span class="ps-tag">Congresos anuales</span>
+              <span class="ps-tag">Lanzamientos de producto</span>
+              <span class="ps-tag">Eventos híbridos</span>
+              <span class="ps-tag">Convenciones gremiales</span>
+              <span class="ps-tag">Keynotes corporativos</span>
+              <span class="ps-tag">Seminarios broadcast</span>
+            </div>
+          </div>
+
+          <!-- 3. Otros paquetes -->
+          <div class="ps-widget">
+            <h3 class="ps-widget__title">Otros paquetes</h3>
+            <a href="/renta-de-bocinas/audio-para-conferencias/paquete-sala-juntas/" class="ps-pkg">
+              <img src="/img/paquetes/audio-conferencias/sala-juntas.avif" alt="Paquete Sala de Juntas" width="80" height="60" loading="lazy" class="ps-pkg__img" />
+              <div class="ps-pkg__info">
+                <span class="ps-pkg__name">Sala de Juntas</span>
+                <span class="ps-pkg__price">$3,000 MXN</span>
+              </div>
+            </a>
+            <a href="/renta-de-bocinas/audio-para-conferencias/paquete-conferencia-salon/" class="ps-pkg">
+              <img src="/img/paquetes/audio-conferencias/conferencia-salon.avif" alt="Paquete Conferencia Salón" width="80" height="60" loading="lazy" class="ps-pkg__img" />
+              <div class="ps-pkg__info">
+                <span class="ps-pkg__name">Conferencia Salón</span>
+                <span class="ps-pkg__price">$6,000 MXN</span>
+              </div>
+            </a>
+            <a href="/renta-de-bocinas/audio-para-conferencias/paquete-produccion-congreso/" class="ps-pkg">
+              <img src="/img/paquetes/audio-conferencias/produccion-congreso.avif" alt="Paquete Producción Congreso" width="80" height="60" loading="lazy" class="ps-pkg__img" />
+              <div class="ps-pkg__info">
+                <span class="ps-pkg__name">Producción Congreso</span>
+                <span class="ps-pkg__price">$25,000 MXN</span>
+              </div>
+            </a>
+            <div class="ps-upsell">
+              <p class="ps-upsell__text">¿500+ personas o multi-sala? El paquete Producción Congreso incluye traducción simultánea y director de producción.</p>
+              <a href="/renta-de-bocinas/audio-para-conferencias/paquete-produccion-congreso/" class="ps-upsell__link">Ver Producción Congreso →</a>
+            </div>
+          </div>
+
+          <!-- 4. CTA -->
+          <div class="ps-widget ps-widget--dark">
+            <h3 class="ps-widget__title ps-widget__title--light">Cotiza tu auditorio</h3>
+            <p class="ps-widget__desc">Cotización + rider técnico en menos de 24 horas. Sin compromiso.</p>
+            <a href="/cotizar/" class="ps-widget__btn">Cotizar Gratis</a>
+            <a href={WHATSAPP_URL_MSG} class="ps-widget__btn ps-widget__btn--wa" target="_blank" rel="noopener">WhatsApp: 55 4937 5172</a>
+          </div>
+
+          <!-- 5. Servicios relacionados -->
+          <div class="ps-widget">
+            <h3 class="ps-widget__title">Servicios relacionados</h3>
+            <div class="ps-links">
+              <a href="/equipos-para-eventos/gobos/" class="ps-link">Gobos (Logo Empresa)</a>
+              <a href="/renta-de-iluminacion/luces-arquitectonicas/" class="ps-link">Uplighting</a>
+              <a href="/equipos-para-eventos/podium/" class="ps-link">Podium</a>
+              <a href="/equipos-para-eventos/pantalla-inflable/" class="ps-link">Pantalla Inflable</a>
+              <a href="/equipos-para-eventos/city-light/" class="ps-link">City Light</a>
+            </div>
+          </div>
+
+          <!-- 6. Contacto -->
+          <div class="ps-widget">
+            <h3 class="ps-widget__title">Contacto</h3>
+            <div class="ps-contact">
+              <p><a href="tel:+525549375172">55 4937 5172</a></p>
+              <p><a href="mailto:contacto@redeil.com">contacto@redeil.com</a></p>
+              <p>Lun-Vie 9:00-19:00 | Sáb 10:00-15:00</p>
+            </div>
+          </div>
+
+        </aside>
+      </div>
     </div>
   </section>
 
   <FaqSection items={faqItems} />
-
-  <!-- CTA FINAL -->
 
   <Footer />
   <WhatsAppBubble />
 </Base>
 
 <style>
-  .section__title {
-    font-size: clamp(1.5rem, 3vw, 2rem);
-    font-weight: 800;
-    color: var(--color-text);
-    margin-bottom: 0.5rem;
-  }
-  .section__subtitle {
-    font-size: var(--font-size-base);
-    color: var(--color-text-light);
-    margin-bottom: 2rem;
-  }
-  .features-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 0.75rem;
-    margin-bottom: 2rem;
-  }
-  .feature-item {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    padding: 0.875rem 1rem;
-    border-radius: var(--border-radius);
-    font-size: var(--font-size-sm);
-  }
-  .feature-item--yes {
-    background: #f0fdf4;
-    color: #166534;
-  }
-  .feature-item--no {
-    background: var(--color-bg);
-    color: var(--color-text-light);
-  }
-  .feature-icon {
-    font-weight: 700;
-    font-size: 1.125rem;
-    flex-shrink: 0;
-  }
-  .price-highlight {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 2rem;
-    background: var(--color-bg);
-    border-radius: var(--border-radius-lg);
-    text-align: center;
-  }
-  .price-highlight__label {
-    font-size: var(--font-size-sm);
-    color: var(--color-text-light);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-  }
-  .price-highlight__amount {
-    font-size: clamp(2rem, 5vw, 3rem);
-    font-weight: 800;
-    color: var(--color-text);
-  }
-  .price-highlight__note {
-    font-size: var(--font-size-sm);
-    color: var(--color-text-light);
-    margin-bottom: 0.5rem;
-  }
-  .content-prose {
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  .content-prose h2 {
-    font-size: clamp(1.5rem, 3vw, 2rem);
-    font-weight: 800;
-    color: var(--color-text);
-    margin-bottom: 1rem;
-  }
-  .content-prose h3 {
-    font-size: var(--font-size-xl);
-    font-weight: 700;
-    color: var(--color-text);
-    margin: 2rem 0 0.75rem;
-  }
-  .content-prose p {
-    font-size: var(--font-size-base);
-    color: var(--color-text-light);
-    line-height: 1.8;
-    margin-bottom: 1rem;
-  }
+  /* ── Layout ── */
+  .prod-layout { display: grid; grid-template-columns: 1fr; gap: 2rem; }
+  @media (min-width: 1024px) { .prod-layout { grid-template-columns: 1fr 340px; gap: 2.5rem; } }
+
+  /* ── Gallery ── */
+  .prod-gallery { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; margin-bottom: 2rem; border-radius: 14px; overflow: hidden; }
+  .prod-gallery__main { grid-row: span 2; }
+  .prod-gallery__main img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .prod-gallery__side { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; }
+  .prod-gallery__side img { width: 100%; height: 100%; object-fit: cover; display: block; aspect-ratio: 3/2; }
+
+  /* ── Product Info ── */
+  .prod-info { margin-bottom: 2.5rem; }
+  .prod-info__badge { display: inline-block; font-size: 0.75rem; font-weight: 700; color: var(--color-accent); text-transform: uppercase; letter-spacing: 0.08em; padding: 0.375rem 1rem; background: rgba(0,113,227,0.08); border: 1px solid rgba(0,113,227,0.12); border-radius: 6px; margin-bottom: 0.75rem; }
+  .prod-info__title { font-size: clamp(1.375rem, 3vw, 1.75rem); font-weight: 800; color: var(--color-text); line-height: 1.2; letter-spacing: -0.02em; margin: 0 0 1.25rem; }
+  .prod-price { background: var(--color-bg); border-radius: 12px; padding: 1.25rem 1.5rem; margin-bottom: 1.25rem; border-left: 4px solid var(--color-accent); }
+  .prod-price__amount { font-size: 2.25rem; font-weight: 800; color: var(--color-primary); font-variant-numeric: tabular-nums; }
+  .prod-price__currency { font-size: 0.875rem; color: var(--color-text-light); margin-left: 0.5rem; }
+  .prod-price__note { font-size: 0.8125rem; color: var(--color-text-light); margin: 0.5rem 0 0; }
+  .prod-ctas { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+  .prod-btn { display: inline-flex; align-items: center; justify-content: center; padding: 0.875rem 1.75rem; border-radius: 6px; font-size: 0.9375rem; font-weight: 600; text-decoration: none; transition: background 0.2s ease, border-color 0.2s ease; }
+  .prod-btn--wa { background: #25D366; color: #fff; }
+  .prod-btn--wa:hover { background: #1DA851; }
+  .prod-btn--outline { background: none; color: var(--color-text); border: 2px solid var(--color-border); }
+  .prod-btn--outline:hover { border-color: var(--color-accent); color: var(--color-accent); }
+
+  /* ── Selling Points ── */
+  .prod-selling { margin-bottom: 2.5rem; }
+  .prod-selling__headline { font-size: clamp(1.25rem, 3vw, 1.5rem); font-weight: 800; color: var(--color-text); line-height: 1.25; letter-spacing: -0.02em; margin: 0 0 0.75rem; }
+  .prod-selling__intro { font-size: 0.9375rem; color: var(--color-text-light); line-height: 1.75; margin: 0 0 1.75rem; max-width: 65ch; }
+  .prod-highlights { display: flex; flex-direction: column; gap: 1.25rem; }
+  .prod-hl { display: flex; gap: 1rem; align-items: stretch; }
+  .prod-hl__bar { flex-shrink: 0; width: 3px; background: var(--color-accent); border-radius: 2px; }
+  .prod-hl__content { display: flex; flex-direction: column; gap: 0.25rem; }
+  .prod-hl__title { font-size: 0.9375rem; font-weight: 700; color: var(--color-text); margin: 0; line-height: 1.3; }
+  .prod-hl__desc { font-size: 0.8125rem; color: var(--color-text-light); line-height: 1.65; margin: 0; }
+
+  /* ── Includes ── */
+  .prod-includes { background: var(--color-bg); border-radius: 14px; padding: 1.75rem 2rem; }
+  .prod-includes__title { font-size: 1.0625rem; font-weight: 700; color: var(--color-text); margin: 0 0 1rem; }
+  .prod-includes__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; }
+  .prod-feat { font-size: 0.875rem; color: var(--color-text-light); padding-left: 1.25rem; position: relative; line-height: 1.5; }
+  .prod-feat::before { content: ""; position: absolute; left: 0; top: 0.45rem; width: 6px; height: 6px; border-radius: 50%; background: var(--color-accent); }
+  @media (max-width: 640px) { .prod-includes__grid { grid-template-columns: 1fr; } }
+
+  /* ── Sidebar ── */
+  .prod-sidebar { display: flex; flex-direction: column; gap: 1.25rem; }
+  @media (min-width: 1024px) { .prod-sidebar { position: sticky; top: calc(var(--header-height) + var(--topbar-height) + 1.5rem); align-self: start; } }
+  .ps-widget { background: var(--color-white); border: 1px solid var(--color-border); border-radius: 12px; padding: 1.25rem; }
+  .ps-widget--dark { background: var(--color-primary); color: #fff; border: none; }
+  .ps-widget__title { font-size: 0.875rem; font-weight: 700; color: var(--color-text); text-transform: uppercase; letter-spacing: 0.05em; margin: 0 0 0.75rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--color-accent); }
+  .ps-widget__title--light { color: #fff; }
+  .ps-widget__desc { font-size: 0.8125rem; color: rgba(255,255,255,0.75); margin: 0 0 0.75rem; }
+  .ps-widget__btn { display: block; text-align: center; padding: 0.625rem; border-radius: 6px; font-size: 0.875rem; font-weight: 600; text-decoration: none; margin-top: 0.5rem; background: var(--color-accent); color: #fff; transition: background 0.2s ease; }
+  .ps-widget__btn:hover { opacity: 0.9; }
+  .ps-widget__btn--wa { background: #25D366; }
+
+  .ps-specs { display: flex; flex-direction: column; margin: 0; }
+  .ps-specs__row { display: flex; justify-content: space-between; align-items: baseline; padding: 0.4rem 0; border-bottom: 1px solid var(--color-bg); gap: 0.75rem; }
+  .ps-specs__row:last-child { border-bottom: none; }
+  .ps-specs__row dt { font-size: 0.8125rem; color: var(--color-text-light); font-weight: 500; margin: 0; }
+  .ps-specs__row dd { font-size: 0.8125rem; font-weight: 600; color: var(--color-text); text-align: right; margin: 0; font-variant-numeric: tabular-nums; }
+
+  .ps-tags { display: flex; flex-wrap: wrap; gap: 0.375rem; }
+  .ps-tag { font-size: 0.6875rem; font-weight: 600; color: var(--color-text); padding: 0.3rem 0.75rem; background: var(--color-bg); border: 1px solid var(--color-border); border-radius: 6px; white-space: nowrap; }
+
+  .ps-pkg { display: flex; gap: 0.75rem; align-items: center; text-decoration: none; padding: 0.625rem 0; border-bottom: 1px solid var(--color-bg); }
+  .ps-pkg:last-of-type { border-bottom: none; }
+  .ps-pkg__img { width: 72px; height: 54px; object-fit: cover; border-radius: 8px; flex-shrink: 0; }
+  .ps-pkg__info { display: flex; flex-direction: column; gap: 0.125rem; }
+  .ps-pkg__name { font-size: 0.8125rem; font-weight: 600; color: var(--color-text); }
+  .ps-pkg__price { font-size: 0.75rem; font-weight: 700; color: var(--color-accent); font-variant-numeric: tabular-nums; }
+  .ps-pkg:hover .ps-pkg__name { color: var(--color-accent); }
+
+  .ps-upsell { margin-top: 0.75rem; padding-top: 0.75rem; border-top: 1px solid var(--color-bg); }
+  .ps-upsell__text { font-size: 0.75rem; color: var(--color-text-light); line-height: 1.5; margin: 0 0 0.375rem; }
+  .ps-upsell__link { font-size: 0.75rem; font-weight: 600; color: var(--color-accent); text-decoration: none; }
+  .ps-upsell__link:hover { text-decoration: underline; }
+
+  .ps-links { display: flex; flex-direction: column; }
+  .ps-link { padding: 0.4rem 0; border-bottom: 1px solid var(--color-bg); font-size: 0.8125rem; color: var(--color-text-light); text-decoration: none; }
+  .ps-link:last-child { border-bottom: none; }
+  .ps-link:hover { color: var(--color-accent); }
+
+  .ps-contact p { font-size: 0.8125rem; color: var(--color-text-light); margin: 0.3rem 0; }
+  .ps-contact a { color: var(--color-accent); text-decoration: none; }
+
+  /* ── Process Steps ── */
+  .prod-process { margin: 2.5rem 0; }
+  .prod-process__title { font-size: 1.125rem; font-weight: 800; color: var(--color-text); letter-spacing: -0.02em; margin: 0 0 1.25rem; }
+  .prod-steps { display: flex; flex-direction: column; gap: 0; }
+  .prod-step { display: flex; gap: 1rem; padding: 1rem 0; border-bottom: 1px solid var(--color-border); }
+  .prod-step:last-child { border-bottom: none; }
+  .prod-step__num { flex-shrink: 0; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; background: var(--color-accent); color: #fff; font-size: 0.8125rem; font-weight: 700; border-radius: 50%; }
+  .prod-step__content { display: flex; flex-direction: column; gap: 0.2rem; }
+  .prod-step__name { font-size: 0.9375rem; font-weight: 700; color: var(--color-text); margin: 0; line-height: 1.3; }
+  .prod-step__desc { font-size: 0.8125rem; color: var(--color-text-light); line-height: 1.6; margin: 0; }
+
+  /* ── Comparison ── */
+  .prod-compare { margin: 2.5rem 0; }
+  .prod-compare__title { font-size: 1.125rem; font-weight: 800; color: var(--color-text); letter-spacing: -0.02em; margin: 0 0 1.25rem; }
+  .prod-compare__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+  @media (max-width: 640px) { .prod-compare__grid { grid-template-columns: 1fr; } }
+  .prod-compare__col { border-radius: 12px; padding: 1.25rem; }
+  .prod-compare__col--them { background: #fef2f2; border: 1px solid #fecaca; }
+  .prod-compare__col--us { background: #eff6ff; border: 1px solid #bfdbfe; }
+  .prod-compare__label { display: block; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.75rem; }
+  .prod-compare__col--them .prod-compare__label { color: #991b1b; }
+  .prod-compare__col--us .prod-compare__label { color: var(--color-primary); }
+  .prod-compare__list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.5rem; }
+  .prod-compare__list li { font-size: 0.8125rem; color: var(--color-text); line-height: 1.4; padding-left: 1.125rem; position: relative; }
+  .prod-compare__col--them .prod-compare__list li::before { content: "–"; position: absolute; left: 0; color: #dc2626; font-size: 0.75rem; font-weight: 700; }
+  .prod-compare__col--us .prod-compare__list li::before { content: "✓"; position: absolute; left: 0; color: var(--color-accent); font-size: 0.75rem; font-weight: 700; }
+
+  /* ── Social Proof ── */
+  .prod-proof { margin-top: 2.5rem; }
+  .prod-quote { background: var(--color-bg); border-radius: 14px; padding: 1.75rem 2rem; border-left: 4px solid var(--color-accent); margin: 0; }
+  .prod-quote__text { font-size: 0.9375rem; color: var(--color-text); line-height: 1.75; font-style: italic; margin: 0 0 1rem; }
+  .prod-quote__footer { display: flex; flex-direction: column; gap: 0.125rem; }
+  .prod-quote__name { font-size: 0.875rem; font-weight: 700; color: var(--color-text); font-style: normal; }
+  .prod-quote__event { font-size: 0.75rem; color: var(--color-text-light); font-style: normal; }
 </style>

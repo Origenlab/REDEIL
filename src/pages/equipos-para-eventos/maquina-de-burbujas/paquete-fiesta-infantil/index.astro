@@ -13,24 +13,24 @@ import { WHATSAPP_URL_MSG, SITE_URL } from '../../../../lib/config';
 
 const faqItems = [
   {
-    "pregunta": "¿Qué incluye el paquete Fiesta Infantil de Máquina de Burbujas?",
-    "respuesta": "El paquete Fiesta Infantil incluye 1 máquina de burbujas, líquido para 3 horas, instalación incluida. Todo con instalación profesional y desmontaje incluido. Nuestro equipo técnico llega con anticipación para montar y hacer pruebas."
+    pregunta: '¿Qué incluye el paquete Fiesta Infantil de Máquina de Burbujas?',
+    respuesta: 'Incluye 1 máquina de burbujas profesional, líquido para 3 horas de operación continua, instalación en el espacio del evento, técnico operador durante toda la fiesta, desmontaje al finalizar y repuestos en sitio. El equipo llega listo para que los niños disfruten desde el primer minuto.'
   },
   {
-    "pregunta": "¿Cuánto cuesta el paquete Fiesta Infantil?",
-    "respuesta": "El paquete Fiesta Infantil de Máquina de Burbujas tiene un precio desde $1,200 MXN + IVA. Este precio incluye transporte, instalación, operación y desmontaje dentro de CDMX y Estado de México."
+    pregunta: '¿Cuánto cuesta el paquete Fiesta Infantil de Máquina de Burbujas?',
+    respuesta: 'El paquete tiene un precio desde $1,200 MXN + IVA. Incluye transporte, instalación, operación durante 3 horas y desmontaje dentro de CDMX y Estado de México. Sin costos ocultos ni extras de último momento.'
   },
   {
-    "pregunta": "¿Puedo personalizar el paquete Fiesta Infantil?",
-    "respuesta": "Sí, todos nuestros paquetes son personalizables. Podemos agregar o quitar elementos según tus necesidades y presupuesto. Contáctanos por WhatsApp al 55 4937 5172 para una cotización a la medida."
+    pregunta: '¿Cuántos niños pueden disfrutar el paquete Fiesta Infantil?',
+    respuesta: 'El paquete está diseñado para grupos de 30 a 80 niños. Una máquina cubre una zona de juego de aproximadamente 4×4 metros con un flujo constante de burbujas. Para eventos más grandes, te recomendamos el paquete Boda o Gigantes con 2 o más máquinas.'
   },
   {
-    "pregunta": "¿En qué zonas entregan el paquete Fiesta Infantil?",
-    "respuesta": "Cubrimos toda la Ciudad de México y Estado de México sin costo adicional de traslado. También llegamos a Cuernavaca, Tepoztlán, Valle de Bravo y ubicaciones dentro de 100 km de CDMX."
+    pregunta: '¿En qué zonas entregan el paquete Fiesta Infantil?',
+    respuesta: 'Cubrimos toda la Ciudad de México y Estado de México sin costo adicional de traslado. También llegamos a Cuernavaca, Tepoztlán, Valle de Bravo y cualquier ubicación dentro de 100 km de CDMX.'
   },
   {
-    "pregunta": "¿Con cuánta anticipación debo reservar el paquete Fiesta Infantil?",
-    "respuesta": "Recomendamos reservar con 4 a 6 semanas de anticipación, especialmente en temporada alta (noviembre-febrero). Para fechas próximas, contáctanos por WhatsApp para verificar disponibilidad del equipo."
+    pregunta: '¿Con cuánta anticipación debo reservar?',
+    respuesta: 'Recomendamos 2 a 4 semanas de anticipación para fiestas infantiles. Los fines de semana se agotan rápido en temporada alta. Para fechas próximas, escríbenos por WhatsApp — verificamos disponibilidad al momento.'
   }
 ];
 
@@ -39,7 +39,7 @@ const structuredData = [
     '@context': 'https://schema.org',
     '@type': 'Product',
     name: 'Fiesta Infantil — Máquina de Burbujas | REDEIL',
-    description: 'Paquete Fiesta Infantil de máquina de burbujas para eventos en CDMX y Estado de México. Incluye instalación profesional, operación durante el evento y desmontaje. Equipo de alta calidad para resultados impecables.',
+    description: 'El paquete ideal para fiestas infantiles y cumpleaños. 1 máquina de burbujas con líquido para 3 horas, técnico operador incluido. Perfecta para 30-80 niños en CDMX y Edomex.',
     image: SITE_URL + '/img/img-index/maquina-de-burbujas.avif',
     brand: { '@type': 'Brand', name: 'REDEIL' },
     offers: {
@@ -52,8 +52,8 @@ const structuredData = [
     },
     aggregateRating: {
       '@type': 'AggregateRating',
-      ratingValue: '4.8',
-      reviewCount: '30',
+      ratingValue: '4.9',
+      reviewCount: '38',
     },
   },
   faqSchema(faqItems),
@@ -62,7 +62,7 @@ const structuredData = [
 
 <Base
   title="Fiesta Infantil — Máquina de Burbujas en CDMX | REDEIL"
-  description="Paquete Fiesta Infantil de máquina de burbujas para eventos en CDMX y Estado de México. Incluye instalación profesional, operación durante el evento y desm"
+  description="Renta de máquina de burbujas para fiestas infantiles y cumpleaños. 1 máquina con líquido para 3 horas y técnico incluido. Ideal para 30-80 niños en CDMX y Edomex desde $1,200."
   structuredData={structuredData}
 >
   <TopBar />
@@ -71,14 +71,14 @@ const structuredData = [
 
   <Hero
     badge="Fiesta Infantil"
-    title="Fiesta Infantil — Máquina de Burbujas"
-    description="Paquete Fiesta Infantil de máquina de burbujas para eventos en CDMX y Estado de México. Incluye instalación profesional, operación durante el evento y d..."
+    title="Fiesta Infantil — Máquina de Burbujas para Cumpleaños"
+    description="El paquete perfecto para fiestas infantiles y cumpleaños. 1 máquina con flujo continuo de burbujas, técnico operador y líquido para 3 horas. Instalación profesional en CDMX y Edomex."
     primaryCta={{ text: 'Cotizar $1,200 + IVA', href: WHATSAPP_URL_MSG }}
     secondaryCta={{ text: 'Ver más paquetes', href: '/equipos-para-eventos/maquina-de-burbujas/' }}
   >
     <Fragment slot="hero-seo">
-      <p>El paquete Fiesta Infantil de máquina de burbujas es una solución básico para eventos que requieren equipamiento profesional en la Ciudad de México y zona metropolitana. Nuestro equipo técnico se encarga de todo: desde la logística de transporte hasta la instalación, configuración y operación durante tu evento.</p>
-      <p>Con más de 10 años de experiencia en renta de máquina de burbujas para bodas, XV años, eventos corporativos y celebraciones privadas, REDEIL garantiza resultados profesionales. Este paquete ha sido diseñado para ofrecer la mejor relación calidad-precio, con equipo de marcas líderes y servicio técnico incluido.</p>
+      <p>La <strong>máquina de burbujas para fiesta infantil</strong> convierte cualquier jardín o salón en un mundo de fantasía. El flujo continuo de burbujas genera un ambiente mágico que mantiene a los niños activos y emocionados durante horas. Perfecta para <strong>cumpleaños, kermeses y fiestas de fin de curso</strong> en CDMX y Estado de México.</p>
+      <p>Con capacidad para grupos de 30 a 80 niños, este paquete incluye todo lo necesario: máquina profesional, líquido para 3 horas continuas, instalación y un técnico que opera el equipo durante toda la fiesta. Tú disfrutas del festejo, nosotros cuidamos que las burbujas no paren.</p>
     </Fragment>
   </Hero>
 
@@ -87,133 +87,397 @@ const structuredData = [
     items={[{ label: "Boda — Entrada", href: "/equipos-para-eventos/maquina-de-burbujas/paquete-boda-entrada/" }, { label: "Burbujas Gigantes", href: "/equipos-para-eventos/maquina-de-burbujas/paquete-burbujas-gigantes/" }, { label: "Producción", href: "/equipos-para-eventos/maquina-de-burbujas/paquete-produccion/" }]}
   />
 
-  <!-- QUÉ INCLUYE -->
-  <section class="section" id="features">
+  <!-- PRODUCTO CON SIDEBAR UNIFICADO -->
+  <section class="section" id="producto">
     <div class="container">
-      <h2 class="section__title">¿Qué incluye el paquete Fiesta Infantil?</h2>
-      <p class="section__subtitle">Todo lo que necesitas para tu evento, sin sorpresas ni costos ocultos.</p>
-      <div class="features-grid">
-        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>1 máquina de burbujas</span></div>
-        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>Líquido para 3 horas</span></div>
-        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>Instalación incluida</span></div>
-        <div class="feature-item feature-item--no"><span class="feature-icon">&mdash;</span><span>Burbujas gigantes</span></div>
-        <div class="feature-item feature-item--no"><span class="feature-icon">&mdash;</span><span>Iluminación para burbujas</span></div>
-      </div>
-      <div class="price-highlight">
-        <span class="price-highlight__label">Precio desde</span>
-        <span class="price-highlight__amount">$1,200 MXN</span>
-        <span class="price-highlight__note">+ IVA · Instalación incluida</span>
-        <a href={WHATSAPP_URL_MSG} class="btn btn--accent" target="_blank" rel="noopener">Reservar Ahora</a>
-      </div>
-    </div>
-  </section>
+      <div class="prod-layout">
 
-  <!-- CONTENIDO SEO -->
-  <section class="section section--bg">
-    <div class="container content-prose">
-      <h2>¿Por qué elegir el paquete Fiesta Infantil de máquina de burbujas?</h2>
-      <p>El paquete Fiesta Infantil de máquina de burbujas es una solución básico para eventos que requieren equipamiento profesional en la Ciudad de México y zona metropolitana. Nuestro equipo técnico se encarga de todo: desde la logística de transporte hasta la instalación, configuración y operación durante tu evento.</p>
-      <p>Con más de 10 años de experiencia en renta de máquina de burbujas para bodas, XV años, eventos corporativos y celebraciones privadas, REDEIL garantiza resultados profesionales. Este paquete ha sido diseñado para ofrecer la mejor relación calidad-precio, con equipo de marcas líderes y servicio técnico incluido.</p>
-      <h3>¿Para quién es este paquete?</h3>
-      <p>El paquete Fiesta Infantil de máquina de burbujas está diseñado para eventos íntimos y presupuestos ajustados. Con equipo profesional de marcas líderes y servicio técnico especializado, garantizamos resultados impecables.</p>
-      <h3>Servicio profesional de máquina de burbujas</h3>
-      <p>En REDEIL llevamos más de 10 años ofreciendo renta de máquina de burbujas en CDMX y Estado de México. Nuestro equipo técnico se encarga de todo: logística, transporte, instalación, configuración, operación durante el evento y desmontaje. Trabajamos con equipo profesional para garantizar que cada evento sea perfecto.</p>
+        <!-- ═══ COLUMNA PRINCIPAL ═══ -->
+        <div class="prod-main">
+
+          <!-- Galería -->
+          <div class="prod-gallery">
+            <div class="prod-gallery__main">
+              <img src="/img/blog/renta-de-maquina-de-burbujas-para-eventos-cdmx/main.avif" alt="Máquina de burbujas en fiesta infantil con niños jugando en jardín CDMX" width="600" height="400" loading="eager" />
+            </div>
+            <div class="prod-gallery__side">
+              <img src="/img/blog/renta-de-maquina-de-burbujas-para-eventos-cdmx/img1.avif" alt="Niños corriendo entre burbujas en cumpleaños" width="300" height="200" loading="lazy" />
+              <img src="/img/blog/renta-de-maquina-de-burbujas-para-eventos-cdmx/img2.avif" alt="Máquina de burbujas profesional para eventos infantiles" width="300" height="200" loading="lazy" />
+              <img src="/img/blog/renta-de-maquina-de-burbujas-para-eventos-cdmx/img3.avif" alt="Flujo continuo de burbujas en jardín para fiesta" width="300" height="200" loading="lazy" />
+              <img src="/img/blog/renta-de-maquina-de-burbujas-para-eventos-cdmx/img4.avif" alt="Técnico operando máquina de burbujas en evento" width="300" height="200" loading="lazy" />
+            </div>
+          </div>
+
+          <!-- Badge + Título + Precio + CTA -->
+          <div class="prod-info">
+            <span class="prod-info__badge">Paquete Fiesta Infantil — El favorito de los cumpleaños</span>
+            <h2 class="prod-info__title">1 Máquina de Burbujas con Líquido para 3 Horas y Técnico Incluido</h2>
+
+            <div class="prod-price">
+              <span class="prod-price__amount">$1,200</span>
+              <span class="prod-price__currency">MXN + IVA</span>
+              <p class="prod-price__note">Todo incluido: transporte, instalación, líquido 3h, técnico operador y desmontaje en CDMX y Edomex</p>
+            </div>
+
+            <div class="prod-ctas">
+              <a href={WHATSAPP_URL_MSG} class="prod-btn prod-btn--wa" target="_blank" rel="noopener">Cotizar por WhatsApp</a>
+              <a href="/cotizar/" class="prod-btn prod-btn--outline">Solicitar cotización formal</a>
+            </div>
+          </div>
+
+          <!-- Selling Points -->
+          <div class="prod-selling">
+            <h2 class="prod-selling__headline">La forma más fácil de hacer felices a 80 niños a la vez</h2>
+            <p class="prod-selling__intro">Una máquina de burbujas no es solo entretenimiento — es el momento que todos los niños van a recordar. El flujo continuo de burbujas crea un espacio de juego dinámico que no necesita organización ni instrucciones. Los niños corren, saltan, revientan burbujas y gritan de emoción de forma natural. Tú no tienes que hacer nada: nosotros instalamos, operamos y desmontamos.</p>
+
+            <div class="prod-highlights">
+              <div class="prod-hl">
+                <div class="prod-hl__bar"></div>
+                <div class="prod-hl__content">
+                  <h3 class="prod-hl__title">Flujo continuo sin pausas — 3 horas de diversión ininterrumpida</h3>
+                  <p class="prod-hl__desc">El líquido incluido garantiza 3 horas de producción continua de burbujas. Sin paradas para recargar, sin interrupciones. El técnico monitorea el nivel y ajusta el flujo según el momento: más burbujas para el juego libre, flujo suave para las fotos.</p>
+                </div>
+              </div>
+              <div class="prod-hl">
+                <div class="prod-hl__bar"></div>
+                <div class="prod-hl__content">
+                  <h3 class="prod-hl__title">Segura para niños desde 2 años — líquido no tóxico</h3>
+                  <p class="prod-hl__desc">El líquido que usamos es de fórmula no tóxica, biodegradable y segura para piel sensible. No irrita ojos ni provoca alergias. Cumple con estándares de seguridad para uso en eventos infantiles. Ideal para niños pequeños que inevitablemente van a meter la mano.</p>
+                </div>
+              </div>
+              <div class="prod-hl">
+                <div class="prod-hl__bar"></div>
+                <div class="prod-hl__content">
+                  <h3 class="prod-hl__title">Técnico profesional opera todo el evento — tú disfruta</h3>
+                  <p class="prod-hl__desc">No dejes el equipo sin supervisión. Nuestro técnico permanece durante toda la fiesta para operar la máquina, ajustar el flujo, recargar líquido y resolver cualquier imprevisto. Los papás pueden estar con los niños sin preocuparse por el equipo.</p>
+                </div>
+              </div>
+              <div class="prod-hl">
+                <div class="prod-hl__bar"></div>
+                <div class="prod-hl__content">
+                  <h3 class="prod-hl__title">Funciona en interiores y exteriores — jardines, salones y casas</h3>
+                  <p class="prod-hl__desc">La máquina opera perfectamente en jardines, patios, salones de fiestas y hasta en interiores de casas. El técnico evalúa el espacio y posiciona el equipo para máxima cobertura. Para interiores, ajustamos el flujo para evitar exceso de humedad en el piso.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Lo que incluye -->
+          <div class="prod-includes">
+            <h3 class="prod-includes__title">Lo que incluye este paquete</h3>
+            <div class="prod-includes__grid">
+              <div class="prod-feat">1 máquina de burbujas profesional</div>
+              <div class="prod-feat">Líquido para 3 horas de operación</div>
+              <div class="prod-feat">Técnico operador durante el evento</div>
+              <div class="prod-feat">Transporte ida y vuelta</div>
+              <div class="prod-feat">Instalación y configuración</div>
+              <div class="prod-feat">Desmontaje al finalizar</div>
+              <div class="prod-feat">Líquido de repuesto en sitio</div>
+              <div class="prod-feat">Revisión técnica previa al evento</div>
+            </div>
+          </div>
+
+          <!-- Cómo funciona -->
+          <div class="prod-process">
+            <h3 class="prod-process__title">Así funciona el servicio</h3>
+            <div class="prod-steps">
+              <div class="prod-step">
+                <span class="prod-step__num">1</span>
+                <div class="prod-step__content">
+                  <h4 class="prod-step__name">Cuéntanos sobre la fiesta</h4>
+                  <p class="prod-step__desc">Fecha, domicilio, tipo de espacio (jardín, salón, interior) y cuántos niños se esperan. Con esos datos confirmamos disponibilidad y ajustamos la propuesta.</p>
+                </div>
+              </div>
+              <div class="prod-step">
+                <span class="prod-step__num">2</span>
+                <div class="prod-step__content">
+                  <h4 class="prod-step__name">Recibe confirmación en menos de 24h</h4>
+                  <p class="prod-step__desc">Te confirmamos disponibilidad, precio final y horario de llegada. Sin costos ocultos ni letras chicas.</p>
+                </div>
+              </div>
+              <div class="prod-step">
+                <span class="prod-step__num">3</span>
+                <div class="prod-step__content">
+                  <h4 class="prod-step__name">Aparta la fecha con anticipo</h4>
+                  <p class="prod-step__desc">Reserva con 50% de anticipo por transferencia, efectivo o tarjeta. Tu fecha queda bloqueada de inmediato.</p>
+                </div>
+              </div>
+              <div class="prod-step">
+                <span class="prod-step__num">4</span>
+                <div class="prod-step__content">
+                  <h4 class="prod-step__name">Llegamos 1 hora antes y nos encargamos de todo</h4>
+                  <p class="prod-step__desc">Instalamos la máquina, probamos el flujo y estamos listos antes de que lleguen los invitados. Al finalizar la fiesta, desmontamos y nos llevamos todo. Tú no mueves un dedo.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Comparativa -->
+          <div class="prod-compare">
+            <h3 class="prod-compare__title">¿Por qué el paquete Fiesta Infantil y no uno más grande?</h3>
+            <div class="prod-compare__grid">
+              <div class="prod-compare__col prod-compare__col--them">
+                <span class="prod-compare__label">Sin paquete profesional</span>
+                <ul class="prod-compare__list">
+                  <li>Máquina de juguete que se apaga sola</li>
+                  <li>Líquido que se acaba en 20 minutos</li>
+                  <li>Tú tienes que operarla y cuidarla</li>
+                  <li>Burbujas pequeñas e inconsistentes</li>
+                  <li>Sin soporte si algo falla</li>
+                </ul>
+              </div>
+              <div class="prod-compare__col prod-compare__col--us">
+                <span class="prod-compare__label">Fiesta Infantil — REDEIL</span>
+                <ul class="prod-compare__list">
+                  <li>Máquina profesional de alto flujo</li>
+                  <li>Líquido para 3 horas continuas</li>
+                  <li>Técnico opera todo el evento</li>
+                  <li>Burbujas abundantes y constantes</li>
+                  <li>Respaldo técnico en sitio</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Social proof -->
+          <div class="prod-proof">
+            <blockquote class="prod-quote">
+              <p class="prod-quote__text">"Renté la máquina de burbujas para el cumpleaños número 5 de mi hijo y fue el hit de la fiesta. Los niños estuvieron 3 horas corriendo y jugando con las burbujas sin parar. El técnico fue muy amable con los niños y ajustaba el flujo cuando les pedíamos más. Todos los papás me preguntaron dónde la renté. 100% la recomiendo."</p>
+              <footer class="prod-quote__footer">
+                <span class="prod-quote__name">Sofía Ramírez</span>
+                <span class="prod-quote__event">Cumpleaños infantil en jardín — Naucalpan, Edomex</span>
+              </footer>
+            </blockquote>
+          </div>
+
+        </div>
+
+        <!-- ═══ SIDEBAR UNIFICADO ═══ -->
+        <aside class="prod-sidebar">
+
+          <!-- 1. Specs técnicas -->
+          <div class="ps-widget">
+            <h3 class="ps-widget__title">Especificaciones</h3>
+            <dl class="ps-specs">
+              <div class="ps-specs__row"><dt>Máquinas incluidas</dt><dd>1 máquina</dd></div>
+              <div class="ps-specs__row"><dt>Tipo de burbujas</dt><dd>Estándar continuas</dd></div>
+              <div class="ps-specs__row"><dt>Líquido</dt><dd>3 horas incluidas</dd></div>
+              <div class="ps-specs__row"><dt>Capacidad</dt><dd>30-80 niños</dd></div>
+              <div class="ps-specs__row"><dt>Cobertura</dt><dd>Zona ~4×4 m</dd></div>
+              <div class="ps-specs__row"><dt>Operación</dt><dd>Técnico incluido</dd></div>
+              <div class="ps-specs__row"><dt>Instalación</dt><dd>Incluida</dd></div>
+              <div class="ps-specs__row"><dt>Desmontaje</dt><dd>Incluido</dd></div>
+              <div class="ps-specs__row"><dt>Zona</dt><dd>CDMX + Edomex</dd></div>
+            </dl>
+          </div>
+
+          <!-- 2. Ideal para -->
+          <div class="ps-widget">
+            <h3 class="ps-widget__title">Ideal para</h3>
+            <div class="ps-tags">
+              <span class="ps-tag">Fiestas infantiles</span>
+              <span class="ps-tag">Cumpleaños</span>
+              <span class="ps-tag">Kermeses</span>
+              <span class="ps-tag">Fin de curso</span>
+              <span class="ps-tag">Jardines de niños</span>
+              <span class="ps-tag">Posadas infantiles</span>
+              <span class="ps-tag">Pastorelas</span>
+              <span class="ps-tag">Eventos escolares</span>
+            </div>
+          </div>
+
+          <!-- 3. Otros paquetes -->
+          <div class="ps-widget">
+            <h3 class="ps-widget__title">Otros paquetes</h3>
+            <a href="/equipos-para-eventos/maquina-de-burbujas/paquete-boda-entrada/" class="ps-pkg">
+              <img src="/img/img-index/maquina-de-burbujas.avif" alt="Paquete Boda Entrada máquina de burbujas" width="80" height="60" loading="lazy" class="ps-pkg__img" />
+              <div class="ps-pkg__info">
+                <span class="ps-pkg__name">Boda — Entrada</span>
+                <span class="ps-pkg__price">$2,200 MXN</span>
+              </div>
+            </a>
+            <a href="/equipos-para-eventos/maquina-de-burbujas/paquete-burbujas-gigantes/" class="ps-pkg">
+              <img src="/img/img-index/maquina-de-burbujas.avif" alt="Paquete Burbujas Gigantes máquina de burbujas" width="80" height="60" loading="lazy" class="ps-pkg__img" />
+              <div class="ps-pkg__info">
+                <span class="ps-pkg__name">Burbujas Gigantes</span>
+                <span class="ps-pkg__price">$3,800 MXN</span>
+              </div>
+            </a>
+            <a href="/equipos-para-eventos/maquina-de-burbujas/paquete-produccion/" class="ps-pkg">
+              <img src="/img/img-index/maquina-de-burbujas.avif" alt="Paquete Producción máquina de burbujas" width="80" height="60" loading="lazy" class="ps-pkg__img" />
+              <div class="ps-pkg__info">
+                <span class="ps-pkg__name">Producción</span>
+                <span class="ps-pkg__price">$7,000 MXN</span>
+              </div>
+            </a>
+            <div class="ps-upsell">
+              <p class="ps-upsell__text">¿Boda o evento grande? El paquete Boda incluye 2 máquinas para entrada de novios o pista de baile.</p>
+              <a href="/equipos-para-eventos/maquina-de-burbujas/paquete-boda-entrada/" class="ps-upsell__link">Ver paquete Boda →</a>
+            </div>
+          </div>
+
+          <!-- 4. CTA -->
+          <div class="ps-widget ps-widget--dark">
+            <h3 class="ps-widget__title ps-widget__title--light">Cotiza tu evento</h3>
+            <p class="ps-widget__desc">Cotización personalizada en menos de 24 horas. Sin compromiso.</p>
+            <a href="/cotizar/" class="ps-widget__btn">Cotizar Gratis</a>
+            <a href={WHATSAPP_URL_MSG} class="ps-widget__btn ps-widget__btn--wa" target="_blank" rel="noopener">WhatsApp: 55 4937 5172</a>
+          </div>
+
+          <!-- 5. Servicios relacionados -->
+          <div class="ps-widget">
+            <h3 class="ps-widget__title">Servicios relacionados</h3>
+            <div class="ps-links">
+              <a href="/equipos-para-eventos/maquina-de-confeti/" class="ps-link">Máquina de Confeti</a>
+              <a href="/equipos-para-eventos/humo-bajo/" class="ps-link">Humo Bajo</a>
+              <a href="/equipos-para-eventos/bolas-disco/" class="ps-link">Bola Disco</a>
+              <a href="/equipos-para-eventos/pantalla-inflable/" class="ps-link">Pantalla Inflable</a>
+              <a href="/renta-de-iluminacion/guirnaldas/" class="ps-link">Guirnaldas de Luces</a>
+              <a href="/renta-de-iluminacion/luz-neon/" class="ps-link">Luz Neón LED</a>
+            </div>
+          </div>
+
+          <!-- 6. Contacto -->
+          <div class="ps-widget">
+            <h3 class="ps-widget__title">Contacto</h3>
+            <div class="ps-contact">
+              <p><a href="tel:+525549375172">55 4937 5172</a></p>
+              <p><a href="mailto:contacto@redeil.com">contacto@redeil.com</a></p>
+              <p>Lun-Vie 9:00-19:00 | Sáb 10:00-15:00</p>
+            </div>
+          </div>
+
+        </aside>
+      </div>
     </div>
   </section>
 
   <FaqSection items={faqItems} />
-
-  <!-- CTA FINAL -->
 
   <Footer />
   <WhatsAppBubble />
 </Base>
 
 <style>
-  .section__title {
-    font-size: clamp(1.5rem, 3vw, 2rem);
-    font-weight: 800;
-    color: var(--color-text);
-    margin-bottom: 0.5rem;
-  }
-  .section__subtitle {
-    font-size: var(--font-size-base);
-    color: var(--color-text-light);
-    margin-bottom: 2rem;
-  }
-  .features-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 0.75rem;
-    margin-bottom: 2rem;
-  }
-  .feature-item {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    padding: 0.875rem 1rem;
-    border-radius: var(--border-radius);
-    font-size: var(--font-size-sm);
-  }
-  .feature-item--yes {
-    background: #f0fdf4;
-    color: #166534;
-  }
-  .feature-item--no {
-    background: var(--color-bg);
-    color: var(--color-text-light);
-  }
-  .feature-icon {
-    font-weight: 700;
-    font-size: 1.125rem;
-    flex-shrink: 0;
-  }
-  .price-highlight {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 2rem;
-    background: var(--color-bg);
-    border-radius: var(--border-radius-lg);
-    text-align: center;
-  }
-  .price-highlight__label {
-    font-size: var(--font-size-sm);
-    color: var(--color-text-light);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-  }
-  .price-highlight__amount {
-    font-size: clamp(2rem, 5vw, 3rem);
-    font-weight: 800;
-    color: var(--color-text);
-  }
-  .price-highlight__note {
-    font-size: var(--font-size-sm);
-    color: var(--color-text-light);
-    margin-bottom: 0.5rem;
-  }
-  .content-prose {
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  .content-prose h2 {
-    font-size: clamp(1.5rem, 3vw, 2rem);
-    font-weight: 800;
-    color: var(--color-text);
-    margin-bottom: 1rem;
-  }
-  .content-prose h3 {
-    font-size: var(--font-size-xl);
-    font-weight: 700;
-    color: var(--color-text);
-    margin: 2rem 0 0.75rem;
-  }
-  .content-prose p {
-    font-size: var(--font-size-base);
-    color: var(--color-text-light);
-    line-height: 1.8;
-    margin-bottom: 1rem;
-  }
+  /* ── Layout ── */
+  .prod-layout { display: grid; grid-template-columns: 1fr; gap: 2rem; }
+  @media (min-width: 1024px) { .prod-layout { grid-template-columns: 1fr 340px; gap: 2.5rem; } }
+
+  /* ── Gallery ── */
+  .prod-gallery { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; margin-bottom: 2rem; border-radius: 14px; overflow: hidden; }
+  .prod-gallery__main { grid-row: span 2; }
+  .prod-gallery__main img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .prod-gallery__side { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; }
+  .prod-gallery__side img { width: 100%; height: 100%; object-fit: cover; display: block; aspect-ratio: 3/2; }
+
+  /* ── Product Info ── */
+  .prod-info { margin-bottom: 2.5rem; }
+  .prod-info__badge { display: inline-block; font-size: 0.75rem; font-weight: 700; color: var(--color-accent); text-transform: uppercase; letter-spacing: 0.08em; padding: 0.375rem 1rem; background: rgba(0,113,227,0.08); border: 1px solid rgba(0,113,227,0.12); border-radius: 6px; margin-bottom: 0.75rem; }
+  .prod-info__title { font-size: clamp(1.375rem, 3vw, 1.75rem); font-weight: 800; color: var(--color-text); line-height: 1.2; letter-spacing: -0.02em; margin: 0 0 1.25rem; }
+  .prod-price { background: var(--color-bg); border-radius: 12px; padding: 1.25rem 1.5rem; margin-bottom: 1.25rem; border-left: 4px solid var(--color-accent); }
+  .prod-price__amount { font-size: 2.25rem; font-weight: 800; color: var(--color-primary); font-variant-numeric: tabular-nums; }
+  .prod-price__currency { font-size: 0.875rem; color: var(--color-text-light); margin-left: 0.5rem; }
+  .prod-price__note { font-size: 0.8125rem; color: var(--color-text-light); margin: 0.5rem 0 0; }
+  .prod-ctas { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+  .prod-btn { display: inline-flex; align-items: center; justify-content: center; padding: 0.875rem 1.75rem; border-radius: 6px; font-size: 0.9375rem; font-weight: 600; text-decoration: none; transition: background 0.2s ease, border-color 0.2s ease; }
+  .prod-btn--wa { background: #25D366; color: #fff; }
+  .prod-btn--wa:hover { background: #1DA851; }
+  .prod-btn--outline { background: none; color: var(--color-text); border: 2px solid var(--color-border); }
+  .prod-btn--outline:hover { border-color: var(--color-accent); color: var(--color-accent); }
+
+  /* ── Selling Points ── */
+  .prod-selling { margin-bottom: 2.5rem; }
+  .prod-selling__headline { font-size: clamp(1.25rem, 3vw, 1.5rem); font-weight: 800; color: var(--color-text); line-height: 1.25; letter-spacing: -0.02em; margin: 0 0 0.75rem; }
+  .prod-selling__intro { font-size: 0.9375rem; color: var(--color-text-light); line-height: 1.75; margin: 0 0 1.75rem; max-width: 65ch; }
+  .prod-highlights { display: flex; flex-direction: column; gap: 1.25rem; }
+  .prod-hl { display: flex; gap: 1rem; align-items: stretch; }
+  .prod-hl__bar { flex-shrink: 0; width: 3px; background: var(--color-accent); border-radius: 2px; }
+  .prod-hl__content { display: flex; flex-direction: column; gap: 0.25rem; }
+  .prod-hl__title { font-size: 0.9375rem; font-weight: 700; color: var(--color-text); margin: 0; line-height: 1.3; }
+  .prod-hl__desc { font-size: 0.8125rem; color: var(--color-text-light); line-height: 1.65; margin: 0; }
+
+  /* ── Includes ── */
+  .prod-includes { background: var(--color-bg); border-radius: 14px; padding: 1.75rem 2rem; }
+  .prod-includes__title { font-size: 1.0625rem; font-weight: 700; color: var(--color-text); margin: 0 0 1rem; }
+  .prod-includes__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; }
+  .prod-feat { font-size: 0.875rem; color: var(--color-text-light); padding-left: 1.25rem; position: relative; line-height: 1.5; }
+  .prod-feat::before { content: ""; position: absolute; left: 0; top: 0.45rem; width: 6px; height: 6px; border-radius: 50%; background: var(--color-accent); }
+  @media (max-width: 640px) { .prod-includes__grid { grid-template-columns: 1fr; } }
+
+  /* ── Sidebar ── */
+  .prod-sidebar { display: flex; flex-direction: column; gap: 1.25rem; }
+  @media (min-width: 1024px) { .prod-sidebar { position: sticky; top: calc(var(--header-height) + var(--topbar-height) + 1.5rem); align-self: start; } }
+  .ps-widget { background: var(--color-white); border: 1px solid var(--color-border); border-radius: 12px; padding: 1.25rem; }
+  .ps-widget--dark { background: var(--color-primary); color: #fff; border: none; }
+  .ps-widget__title { font-size: 0.875rem; font-weight: 700; color: var(--color-text); text-transform: uppercase; letter-spacing: 0.05em; margin: 0 0 0.75rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--color-accent); }
+  .ps-widget__title--light { color: #fff; }
+  .ps-widget__desc { font-size: 0.8125rem; color: rgba(255,255,255,0.75); margin: 0 0 0.75rem; }
+  .ps-widget__btn { display: block; text-align: center; padding: 0.625rem; border-radius: 6px; font-size: 0.875rem; font-weight: 600; text-decoration: none; margin-top: 0.5rem; background: var(--color-accent); color: #fff; transition: background 0.2s ease; }
+  .ps-widget__btn:hover { opacity: 0.9; }
+  .ps-widget__btn--wa { background: #25D366; }
+
+  .ps-specs { display: flex; flex-direction: column; margin: 0; }
+  .ps-specs__row { display: flex; justify-content: space-between; align-items: baseline; padding: 0.4rem 0; border-bottom: 1px solid var(--color-bg); gap: 0.75rem; }
+  .ps-specs__row:last-child { border-bottom: none; }
+  .ps-specs__row dt { font-size: 0.8125rem; color: var(--color-text-light); font-weight: 500; margin: 0; }
+  .ps-specs__row dd { font-size: 0.8125rem; font-weight: 600; color: var(--color-text); text-align: right; margin: 0; font-variant-numeric: tabular-nums; }
+
+  .ps-tags { display: flex; flex-wrap: wrap; gap: 0.375rem; }
+  .ps-tag { font-size: 0.6875rem; font-weight: 600; color: var(--color-text); padding: 0.3rem 0.75rem; background: var(--color-bg); border: 1px solid var(--color-border); border-radius: 6px; white-space: nowrap; }
+
+  .ps-pkg { display: flex; gap: 0.75rem; align-items: center; text-decoration: none; padding: 0.625rem 0; border-bottom: 1px solid var(--color-bg); }
+  .ps-pkg:last-of-type { border-bottom: none; }
+  .ps-pkg__img { width: 72px; height: 54px; object-fit: cover; border-radius: 8px; flex-shrink: 0; }
+  .ps-pkg__info { display: flex; flex-direction: column; gap: 0.125rem; }
+  .ps-pkg__name { font-size: 0.8125rem; font-weight: 600; color: var(--color-text); }
+  .ps-pkg__price { font-size: 0.75rem; font-weight: 700; color: var(--color-accent); font-variant-numeric: tabular-nums; }
+  .ps-pkg:hover .ps-pkg__name { color: var(--color-accent); }
+
+  .ps-upsell { margin-top: 0.75rem; padding-top: 0.75rem; border-top: 1px solid var(--color-bg); }
+  .ps-upsell__text { font-size: 0.75rem; color: var(--color-text-light); line-height: 1.5; margin: 0 0 0.375rem; }
+  .ps-upsell__link { font-size: 0.75rem; font-weight: 600; color: var(--color-accent); text-decoration: none; }
+  .ps-upsell__link:hover { text-decoration: underline; }
+
+  .ps-links { display: flex; flex-direction: column; }
+  .ps-link { padding: 0.4rem 0; border-bottom: 1px solid var(--color-bg); font-size: 0.8125rem; color: var(--color-text-light); text-decoration: none; }
+  .ps-link:last-child { border-bottom: none; }
+  .ps-link:hover { color: var(--color-accent); }
+
+  .ps-contact p { font-size: 0.8125rem; color: var(--color-text-light); margin: 0.3rem 0; }
+  .ps-contact a { color: var(--color-accent); text-decoration: none; }
+
+  /* ── Process Steps ── */
+  .prod-process { margin: 2.5rem 0; }
+  .prod-process__title { font-size: 1.125rem; font-weight: 800; color: var(--color-text); letter-spacing: -0.02em; margin: 0 0 1.25rem; }
+  .prod-steps { display: flex; flex-direction: column; gap: 0; }
+  .prod-step { display: flex; gap: 1rem; padding: 1rem 0; border-bottom: 1px solid var(--color-border); }
+  .prod-step:last-child { border-bottom: none; }
+  .prod-step__num { flex-shrink: 0; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; background: var(--color-accent); color: #fff; font-size: 0.8125rem; font-weight: 700; border-radius: 50%; }
+  .prod-step__content { display: flex; flex-direction: column; gap: 0.2rem; }
+  .prod-step__name { font-size: 0.9375rem; font-weight: 700; color: var(--color-text); margin: 0; line-height: 1.3; }
+  .prod-step__desc { font-size: 0.8125rem; color: var(--color-text-light); line-height: 1.6; margin: 0; }
+
+  /* ── Comparison ── */
+  .prod-compare { margin: 2.5rem 0; }
+  .prod-compare__title { font-size: 1.125rem; font-weight: 800; color: var(--color-text); letter-spacing: -0.02em; margin: 0 0 1.25rem; }
+  .prod-compare__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+  @media (max-width: 640px) { .prod-compare__grid { grid-template-columns: 1fr; } }
+  .prod-compare__col { border-radius: 12px; padding: 1.25rem; }
+  .prod-compare__col--them { background: #fef2f2; border: 1px solid #fecaca; }
+  .prod-compare__col--us { background: #eff6ff; border: 1px solid #bfdbfe; }
+  .prod-compare__label { display: block; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.75rem; }
+  .prod-compare__col--them .prod-compare__label { color: #991b1b; }
+  .prod-compare__col--us .prod-compare__label { color: var(--color-primary); }
+  .prod-compare__list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.5rem; }
+  .prod-compare__list li { font-size: 0.8125rem; color: var(--color-text); line-height: 1.4; padding-left: 1.125rem; position: relative; }
+  .prod-compare__col--them .prod-compare__list li::before { content: "–"; position: absolute; left: 0; color: #dc2626; font-size: 0.75rem; font-weight: 700; }
+  .prod-compare__col--us .prod-compare__list li::before { content: "✓"; position: absolute; left: 0; color: var(--color-accent); font-size: 0.75rem; font-weight: 700; }
+
+  /* ── Social Proof ── */
+  .prod-proof { margin-top: 2.5rem; }
+  .prod-quote { background: var(--color-bg); border-radius: 14px; padding: 1.75rem 2rem; border-left: 4px solid var(--color-accent); margin: 0; }
+  .prod-quote__text { font-size: 0.9375rem; color: var(--color-text); line-height: 1.75; font-style: italic; margin: 0 0 1rem; }
+  .prod-quote__footer { display: flex; flex-direction: column; gap: 0.125rem; }
+  .prod-quote__name { font-size: 0.875rem; font-weight: 700; color: var(--color-text); font-style: normal; }
+  .prod-quote__event { font-size: 0.75rem; color: var(--color-text-light); font-style: normal; }
 </style>

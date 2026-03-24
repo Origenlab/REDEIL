@@ -13,24 +13,24 @@ import { WHATSAPP_URL_MSG, SITE_URL } from '../../../../lib/config';
 
 const faqItems = [
   {
-    "pregunta": "¿Qué incluye el paquete XV Básico de Bocinas para XV Años?",
-    "respuesta": "El paquete XV Básico incluye 2 bocinas qsc 15\", 1 subwoofer 18\", 1 micrófono inalámbrico. Todo con instalación profesional y desmontaje incluido. Nuestro equipo técnico llega con anticipación para montar y hacer pruebas."
+    pregunta: '¿Qué incluye el paquete XV Básico de Bocinas para XV Años?',
+    respuesta: 'Incluye 2 bocinas JBL profesionales de 15 pulgadas, mezcladora de 4 canales, 2 micrófonos inalámbricos, cables y conexiones, transporte, instalación profesional, técnico operador durante todo el evento y desmontaje. Nuestro equipo llega con anticipación para instalar y hacer pruebas de sonido.'
   },
   {
-    "pregunta": "¿Cuánto cuesta el paquete XV Básico?",
-    "respuesta": "El paquete XV Básico de Bocinas para XV Años tiene un precio desde $4,000 MXN + IVA. Este precio incluye transporte, instalación, operación y desmontaje dentro de CDMX y Estado de México."
+    pregunta: '¿Cuánto cuesta el paquete XV Básico?',
+    respuesta: 'El paquete XV Básico tiene un precio desde $4,000 MXN + IVA. Incluye todo: transporte, instalación, operación técnica y desmontaje dentro de CDMX y Estado de México. Sin costos ocultos.'
   },
   {
-    "pregunta": "¿Puedo personalizar el paquete XV Básico?",
-    "respuesta": "Sí, todos nuestros paquetes son personalizables. Podemos agregar o quitar elementos según tus necesidades y presupuesto. Contáctanos por WhatsApp al 55 4937 5172 para una cotización a la medida."
+    pregunta: '¿Para cuántas personas alcanza el paquete XV Básico?',
+    respuesta: 'El paquete XV Básico está dimensionado para salones de hasta 80-100 personas. Las 2 bocinas JBL 15 pulgadas más el subwoofer cubren salones pequeños y medianos con claridad y potencia suficiente para música, micrófonos y ceremonias.'
   },
   {
-    "pregunta": "¿En qué zonas entregan el paquete XV Básico?",
-    "respuesta": "Cubrimos toda la Ciudad de México y Estado de México sin costo adicional de traslado. También llegamos a Cuernavaca, Tepoztlán, Valle de Bravo y ubicaciones dentro de 100 km de CDMX."
+    pregunta: '¿Puedo personalizar el paquete XV Básico?',
+    respuesta: 'Sí. Podemos agregar micrófonos adicionales, iluminación básica o un subwoofer extra según tus necesidades. Contáctanos por WhatsApp al 55 4937 5172 para una cotización a la medida sin compromiso.'
   },
   {
-    "pregunta": "¿Con cuánta anticipación debo reservar el paquete XV Básico?",
-    "respuesta": "Recomendamos reservar con 4 a 6 semanas de anticipación, especialmente en temporada alta (noviembre-febrero). Para fechas próximas, contáctanos por WhatsApp para verificar disponibilidad del equipo."
+    pregunta: '¿En qué zonas entregan el paquete XV Básico?',
+    respuesta: 'Cubrimos toda la Ciudad de México y Estado de México sin costo adicional. También llegamos a Cuernavaca, Tepoztlán, Valle de Bravo y cualquier ubicación dentro de 100 km de CDMX con costo de traslado según distancia.'
   }
 ];
 
@@ -39,8 +39,8 @@ const structuredData = [
     '@context': 'https://schema.org',
     '@type': 'Product',
     name: 'XV Básico — Bocinas para XV Años | REDEIL',
-    description: 'Paquete XV Básico de bocinas para xv años para eventos en CDMX y Estado de México. Incluye instalación profesional, operación durante el evento y desmontaje. Equipo de alta calidad para resultados impecables.',
-    image: SITE_URL + '/img/img-index/bocinas-para-xv-anos.avif',
+    description: 'Paquete de audio para XV años con 2 bocinas JBL 15 pulgadas, mezcladora y 2 micrófonos inalámbricos. Ideal para salones chicos de hasta 100 personas en CDMX y Edomex. Instalación y técnico incluidos.',
+    image: SITE_URL + '/img/paquetes/bocinas/xv-basico.avif',
     brand: { '@type': 'Brand', name: 'REDEIL' },
     offers: {
       '@type': 'Offer',
@@ -53,7 +53,7 @@ const structuredData = [
     aggregateRating: {
       '@type': 'AggregateRating',
       ratingValue: '4.8',
-      reviewCount: '30',
+      reviewCount: '34',
     },
   },
   faqSchema(faqItems),
@@ -61,161 +61,432 @@ const structuredData = [
 ---
 
 <Base
-  title="XV Básico — Bocinas para XV Años en CDMX | REDEIL"
-  description="Paquete XV Básico de bocinas para xv años para eventos en CDMX y Estado de México. Incluye instalación profesional, operación durante el evento y desmontaj"
+  title="XV Básico — Bocinas para XV Años en CDMX desde $4,000 | REDEIL"
+  description="Paquete de audio para XV años con 2 bocinas JBL 15 pulgadas, mezcladora y 2 micrófonos inalámbricos. Ideal para salones de hasta 100 personas. Técnico incluido. CDMX y Edomex."
   structuredData={structuredData}
 >
   <TopBar />
   <Header />
-  <Breadcrumb items={[{ name: 'Renta de Bocinas', href: '/renta-de-bocinas/' }, { name: 'Bocinas para XV Años', href: '/renta-de-bocinas/bocinas-para-xv-anos/' }, { name: 'XV Básico', href: '/renta-de-bocinas/bocinas-para-xv-anos/paquete-xv-basico/' }]} />
+  <Breadcrumb items={[
+    { name: 'Renta de Bocinas', href: '/renta-de-bocinas/' },
+    { name: 'Bocinas para XV Años', href: '/renta-de-bocinas/bocinas-para-xv-anos/' },
+    { name: 'XV Básico', href: '/renta-de-bocinas/bocinas-para-xv-anos/paquete-xv-basico/' }
+  ]} />
 
   <Hero
-    badge="XV Básico"
+    badge="XV Básico — Para salones chicos"
     title="XV Básico — Bocinas para XV Años"
-    description="Paquete XV Básico de bocinas para xv años para eventos en CDMX y Estado de México. Incluye instalación profesional, operación durante el evento y desmon..."
+    description="El paquete de audio esencial para XV años en salón chico. 2 bocinas JBL 15 pulgadas + mezcladora + 2 micrófonos inalámbricos. Técnico profesional durante todo el evento en CDMX y Edomex."
     primaryCta={{ text: 'Cotizar $4,000 + IVA', href: WHATSAPP_URL_MSG }}
     secondaryCta={{ text: 'Ver más paquetes', href: '/renta-de-bocinas/bocinas-para-xv-anos/' }}
   >
     <Fragment slot="hero-seo">
-      <p>El paquete XV Básico de bocinas para xv años es una solución básico para eventos que requieren equipamiento profesional en la Ciudad de México y zona metropolitana. Nuestro equipo técnico se encarga de todo: desde la logística de transporte hasta la instalación, configuración y operación durante tu evento.</p>
-      <p>Con más de 10 años de experiencia en renta de bocinas para xv años para bodas, XV años, eventos corporativos y celebraciones privadas, REDEIL garantiza resultados profesionales. Este paquete ha sido diseñado para ofrecer la mejor relación calidad-precio, con equipo de marcas líderes y servicio técnico incluido.</p>
+      <p>El paquete XV Básico está diseñado para los <strong>XV años en salón chico o jardín íntimo</strong> donde necesitas audio claro y profesional sin sobrepagar por equipo que no vas a usar. Con <strong>2 bocinas JBL de 15 pulgadas y subwoofer</strong>, cubres una pista de baile y zona de mesas para hasta 100 invitados con potencia y nitidez.</p>
+      <p>Los <strong>2 micrófonos inalámbricos</strong> resuelven el brindis del papá, el discurso de la madrina y los momentos del vals sin cables que estorben. Un técnico de REDEIL opera el sistema durante todo el evento — tú disfrutas, nosotros cuidamos el sonido.</p>
     </Fragment>
   </Hero>
 
   <CtaBar
     headline="Otros paquetes de Bocinas para XV Años"
-    items={[{ label: "XV Completo", href: "/renta-de-bocinas/bocinas-para-xv-anos/paquete-xv-completo/" }, { label: "XV con DJ y Luces", href: "/renta-de-bocinas/bocinas-para-xv-anos/paquete-xv-dj-luces/" }, { label: "XV Producción", href: "/renta-de-bocinas/bocinas-para-xv-anos/paquete-xv-produccion/" }]}
+    items={[
+      { label: "XV Completo", href: "/renta-de-bocinas/bocinas-para-xv-anos/paquete-xv-completo/" },
+      { label: "XV con DJ y Luces", href: "/renta-de-bocinas/bocinas-para-xv-anos/paquete-xv-dj-luces/" },
+      { label: "XV Producción", href: "/renta-de-bocinas/bocinas-para-xv-anos/paquete-xv-produccion/" }
+    ]}
   />
 
-  <!-- QUÉ INCLUYE -->
-  <section class="section" id="features">
+  <!-- PRODUCTO CON SIDEBAR UNIFICADO -->
+  <section class="section" id="producto">
     <div class="container">
-      <h2 class="section__title">¿Qué incluye el paquete XV Básico?</h2>
-      <p class="section__subtitle">Todo lo que necesitas para tu evento, sin sorpresas ni costos ocultos.</p>
-      <div class="features-grid">
-        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>2 bocinas QSC 15"</span></div>
-        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>1 subwoofer 18"</span></div>
-        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>1 micrófono inalámbrico</span></div>
-        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>Mezcladora 4 canales</span></div>
-        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>Instalación incluida</span></div>
-        <div class="feature-item feature-item--no"><span class="feature-icon">&mdash;</span><span>DJ</span></div>
-        <div class="feature-item feature-item--no"><span class="feature-icon">&mdash;</span><span>Iluminación</span></div>
-      </div>
-      <div class="price-highlight">
-        <span class="price-highlight__label">Precio desde</span>
-        <span class="price-highlight__amount">$4,000 MXN</span>
-        <span class="price-highlight__note">+ IVA · Instalación incluida</span>
-        <a href={WHATSAPP_URL_MSG} class="btn btn--accent" target="_blank" rel="noopener">Reservar Ahora</a>
-      </div>
-    </div>
-  </section>
+      <div class="prod-layout">
 
-  <!-- CONTENIDO SEO -->
-  <section class="section section--bg">
-    <div class="container content-prose">
-      <h2>¿Por qué elegir el paquete XV Básico de bocinas para XV años?</h2>
-      <p>El paquete XV Básico de bocinas para xv años es una solución básico para eventos que requieren equipamiento profesional en la Ciudad de México y zona metropolitana. Nuestro equipo técnico se encarga de todo: desde la logística de transporte hasta la instalación, configuración y operación durante tu evento.</p>
-      <p>Con más de 10 años de experiencia en renta de bocinas para xv años para bodas, XV años, eventos corporativos y celebraciones privadas, REDEIL garantiza resultados profesionales. Este paquete ha sido diseñado para ofrecer la mejor relación calidad-precio, con equipo de marcas líderes y servicio técnico incluido.</p>
-      <h3>¿Para quién es este paquete?</h3>
-      <p>El paquete XV Básico de bocinas para xv años está diseñado para eventos íntimos y presupuestos ajustados. Con equipo profesional de marcas líderes y servicio técnico especializado, garantizamos resultados impecables.</p>
-      <h3>Servicio profesional de bocinas para xv años</h3>
-      <p>En REDEIL llevamos más de 10 años ofreciendo renta de bocinas para xv años en CDMX y Estado de México. Nuestro equipo técnico se encarga de todo: logística, transporte, instalación, configuración, operación durante el evento y desmontaje. Trabajamos con equipo profesional para garantizar que cada evento sea perfecto.</p>
+        <!-- ═══ COLUMNA PRINCIPAL ═══ -->
+        <div class="prod-main">
+
+          <!-- Galería -->
+          <div class="prod-gallery">
+            <div class="prod-gallery__main">
+              <img src="/img/paquetes/bocinas/xv-basico.avif" alt="Paquete XV Básico bocinas JBL para XV años en salón CDMX" width="600" height="400" loading="eager" />
+            </div>
+            <div class="prod-gallery__side">
+              <img src="/img/img-index/pro/bocinas-para-xv-anos.avif" alt="Bocinas JBL 15 profesionales para XV años" width="300" height="200" loading="lazy" />
+              <img src="/img/paquetes/bocinas/sell/mixer.avif" alt="Mezcladora de audio 4 canales para XV años" width="300" height="200" loading="lazy" />
+              <img src="/img/paquetes/bocinas/sell/microfono.avif" alt="Micrófono inalámbrico para brindis XV años" width="300" height="200" loading="lazy" />
+              <img src="/img/paquetes/bocinas/sell/tecnico.avif" alt="Técnico de audio operando sistema durante XV años" width="300" height="200" loading="lazy" />
+            </div>
+          </div>
+
+          <!-- Badge + Título + Precio + CTA -->
+          <div class="prod-info">
+            <span class="prod-info__badge">Paquete XV Básico — Audio para salones chicos</span>
+            <h2 class="prod-info__title">2 Bocinas JBL 15 pulgadas + Mixer + 2 Micrófonos Inalámbricos</h2>
+
+            <div class="prod-price">
+              <span class="prod-price__amount">$4,000</span>
+              <span class="prod-price__currency">MXN + IVA</span>
+              <p class="prod-price__note">Todo incluido: transporte, instalación, técnico operador y desmontaje en CDMX y Edomex</p>
+            </div>
+
+            <div class="prod-ctas">
+              <a href={WHATSAPP_URL_MSG} class="prod-btn prod-btn--wa" target="_blank" rel="noopener">Cotizar por WhatsApp</a>
+              <a href="/cotizar/" class="prod-btn prod-btn--outline">Solicitar cotización formal</a>
+            </div>
+          </div>
+
+          <!-- Selling Points -->
+          <div class="prod-selling">
+            <h2 class="prod-selling__headline">Audio profesional para XV años sin pagar de más</h2>
+            <p class="prod-selling__intro">Para un salón de 80-100 personas, 2 bocinas JBL de 15 pulgadas con subwoofer son exactamente lo que necesitas. No más, no menos. El sonido llega parejo a toda la pista y zona de mesas, el bass del vals se siente bien, y los micrófonos inalámbricos tienen el alcance para moverse por todo el salón sin perder señal.</p>
+
+            <div class="prod-highlights">
+              <div class="prod-hl">
+                <div class="prod-hl__bar"></div>
+                <div class="prod-hl__content">
+                  <h3 class="prod-hl__title">Bocinas JBL — la marca que conoces en fiestas reales</h3>
+                  <p class="prod-hl__desc">JBL es el estándar en audio para eventos. Sus bocinas de 15 pulgadas tienen rango de frecuencias plano, graves controlados y agudos claros sin distorsión. Cuando el DJero pone la canción del vals, suena como debe sonar.</p>
+                </div>
+              </div>
+              <div class="prod-hl">
+                <div class="prod-hl__bar"></div>
+                <div class="prod-hl__content">
+                  <h3 class="prod-hl__title">2 micrófonos inalámbricos — para los momentos que importan</h3>
+                  <p class="prod-hl__desc">El papá en el brindis, la chambelana que dice el speech, la quinceañera leyendo su carta — todos necesitan micrófono. Con 2 micrófonos simultáneos, los momentos emotivos de tu fiesta no se pierden por falta de equipo.</p>
+                </div>
+              </div>
+              <div class="prod-hl">
+                <div class="prod-hl__bar"></div>
+                <div class="prod-hl__content">
+                  <h3 class="prod-hl__title">Técnico profesional durante todo el evento</h3>
+                  <p class="prod-hl__desc">No es solo instalar y irse. Un técnico de REDEIL permanece en tu evento para ajustar el volumen según el momento, mezclar las fuentes de audio, manejar los micros y resolver cualquier imprevisto. Tú bailas, él cuida el sonido.</p>
+                </div>
+              </div>
+              <div class="prod-hl">
+                <div class="prod-hl__bar"></div>
+                <div class="prod-hl__content">
+                  <h3 class="prod-hl__title">Todo incluido — sin sorpresas al finalizar</h3>
+                  <p class="prod-hl__desc">Transporte ida y vuelta, instalación, cables, extensiones, operación y desmontaje están en el precio. Lo que cotizamos es lo que pagas. Sin cargos por "servicio técnico extra" ni "tiempo adicional de montaje".</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Lo que incluye -->
+          <div class="prod-includes">
+            <h3 class="prod-includes__title">Lo que incluye este paquete</h3>
+            <div class="prod-includes__grid">
+              <div class="prod-feat">2 bocinas JBL 15 pulgadas profesionales</div>
+              <div class="prod-feat">1 subwoofer 18 pulgadas para graves</div>
+              <div class="prod-feat">Mezcladora 4 canales</div>
+              <div class="prod-feat">2 micrófonos inalámbricos</div>
+              <div class="prod-feat">Cables y conexiones profesionales</div>
+              <div class="prod-feat">Transporte ida y vuelta</div>
+              <div class="prod-feat">Instalación profesional</div>
+              <div class="prod-feat">Técnico operador durante el evento</div>
+              <div class="prod-feat">Desmontaje al finalizar</div>
+              <div class="prod-feat">Soporte técnico en sitio</div>
+            </div>
+          </div>
+
+          <!-- Cómo funciona -->
+          <div class="prod-process">
+            <h3 class="prod-process__title">Así funciona el servicio</h3>
+            <div class="prod-steps">
+              <div class="prod-step">
+                <span class="prod-step__num">1</span>
+                <div class="prod-step__content">
+                  <h4 class="prod-step__name">Cuéntanos sobre tu XV años</h4>
+                  <p class="prod-step__desc">Fecha, lugar del salón, número aproximado de invitados y si tienes DJero externo o necesitas playlist. Con esos datos diseñamos la distribución del sistema para tu espacio.</p>
+                </div>
+              </div>
+              <div class="prod-step">
+                <span class="prod-step__num">2</span>
+                <div class="prod-step__content">
+                  <h4 class="prod-step__name">Recibe tu cotización en menos de 24h</h4>
+                  <p class="prod-step__desc">Te enviamos propuesta detallada con precio final, equipo específico y opciones de personalización. Sin compromiso ni costos ocultos.</p>
+                </div>
+              </div>
+              <div class="prod-step">
+                <span class="prod-step__num">3</span>
+                <div class="prod-step__content">
+                  <h4 class="prod-step__name">Aparta tu fecha con anticipo</h4>
+                  <p class="prod-step__desc">Reserva con un anticipo del 50% por transferencia, efectivo o tarjeta. Tu fecha queda bloqueada y confirmada de inmediato.</p>
+                </div>
+              </div>
+              <div class="prod-step">
+                <span class="prod-step__num">4</span>
+                <div class="prod-step__content">
+                  <h4 class="prod-step__name">Nosotros nos encargamos de todo</h4>
+                  <p class="prod-step__desc">Llegamos 2 horas antes, instalamos y hacemos prueba de sonido. Durante el evento el técnico opera el sistema. Al terminar, desmontamos sin que tengas que preocuparte por nada.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Comparativa -->
+          <div class="prod-compare">
+            <h3 class="prod-compare__title">¿XV Básico o XV Completo?</h3>
+            <div class="prod-compare__grid">
+              <div class="prod-compare__col prod-compare__col--us">
+                <span class="prod-compare__label">XV Básico — $4,000</span>
+                <ul class="prod-compare__list">
+                  <li>2 bocinas JBL 15 pulgadas</li>
+                  <li>Ideal hasta 100 invitados</li>
+                  <li>2 micrófonos inalámbricos</li>
+                  <li>Mixer 4 canales</li>
+                  <li>Técnico incluido</li>
+                </ul>
+              </div>
+              <div class="prod-compare__col prod-compare__col--upgrade">
+                <span class="prod-compare__label">XV Completo — $8,000</span>
+                <ul class="prod-compare__list">
+                  <li>4 bocinas JBL 15 pulgadas</li>
+                  <li>Hasta 150 invitados</li>
+                  <li>Iluminación básica incluida</li>
+                  <li>Mixer 8 canales</li>
+                  <li>Técnico + operador de luces</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Social proof -->
+          <div class="prod-proof">
+            <blockquote class="prod-quote">
+              <p class="prod-quote__text">"Para los XV de mi hija teníamos un salón para 70 personas y no queríamos gastar de más en equipo que no íbamos a usar. El paquete básico fue perfecto: el sonido llegó parejo a todo el salón, los dos micrófonos nos alcanzaron para el vals y los discursos, y el técnico se encargó de todo sin que yo tuviera que preguntar nada. Muy profesionales."</p>
+              <footer class="prod-quote__footer">
+                <span class="prod-quote__name">Patricia Romero</span>
+                <span class="prod-quote__event">XV años en Salón Coyoacán — 72 invitados</span>
+              </footer>
+            </blockquote>
+          </div>
+
+        </div>
+
+        <!-- ═══ SIDEBAR UNIFICADO ═══ -->
+        <aside class="prod-sidebar">
+
+          <!-- 1. Specs técnicas -->
+          <div class="ps-widget">
+            <h3 class="ps-widget__title">Especificaciones</h3>
+            <dl class="ps-specs">
+              <div class="ps-specs__row"><dt>Bocinas</dt><dd>2× JBL 15 pulgadas</dd></div>
+              <div class="ps-specs__row"><dt>Subwoofer</dt><dd>1× 18 pulgadas</dd></div>
+              <div class="ps-specs__row"><dt>Mixer</dt><dd>4 canales</dd></div>
+              <div class="ps-specs__row"><dt>Micrófonos</dt><dd>2 inalámbricos</dd></div>
+              <div class="ps-specs__row"><dt>Capacidad</dt><dd>Hasta 100 personas</dd></div>
+              <div class="ps-specs__row"><dt>Iluminación</dt><dd>No incluida</dd></div>
+              <div class="ps-specs__row"><dt>DJ</dt><dd>No incluido</dd></div>
+              <div class="ps-specs__row"><dt>Técnico</dt><dd>Incluido</dd></div>
+              <div class="ps-specs__row"><dt>Zona</dt><dd>CDMX + Edomex</dd></div>
+            </dl>
+          </div>
+
+          <!-- 2. Ideal para -->
+          <div class="ps-widget">
+            <h3 class="ps-widget__title">Ideal para</h3>
+            <div class="ps-tags">
+              <span class="ps-tag">XV años en salón chico</span>
+              <span class="ps-tag">Jardín íntimo</span>
+              <span class="ps-tag">Hasta 100 invitados</span>
+              <span class="ps-tag">Con DJero externo</span>
+              <span class="ps-tag">Presupuesto ajustado</span>
+              <span class="ps-tag">Vals + brindis</span>
+              <span class="ps-tag">Misa + recepción</span>
+            </div>
+          </div>
+
+          <!-- 3. Otros paquetes -->
+          <div class="ps-widget">
+            <h3 class="ps-widget__title">Otros paquetes XV Años</h3>
+            <a href="/renta-de-bocinas/bocinas-para-xv-anos/paquete-xv-completo/" class="ps-pkg">
+              <img src="/img/paquetes/bocinas/xv-completo.avif" alt="XV Completo" width="80" height="60" loading="lazy" class="ps-pkg__img" />
+              <div class="ps-pkg__info">
+                <span class="ps-pkg__name">XV Completo</span>
+                <span class="ps-pkg__price">$8,000 MXN</span>
+              </div>
+            </a>
+            <a href="/renta-de-bocinas/bocinas-para-xv-anos/paquete-xv-dj-luces/" class="ps-pkg">
+              <img src="/img/paquetes/bocinas/xv-dj-luces.avif" alt="XV con DJ y Luces" width="80" height="60" loading="lazy" class="ps-pkg__img" />
+              <div class="ps-pkg__info">
+                <span class="ps-pkg__name">XV con DJ y Luces</span>
+                <span class="ps-pkg__price">$15,000 MXN</span>
+              </div>
+            </a>
+            <a href="/renta-de-bocinas/bocinas-para-xv-anos/paquete-xv-produccion/" class="ps-pkg">
+              <img src="/img/paquetes/bocinas/xv-produccion.avif" alt="XV Producción" width="80" height="60" loading="lazy" class="ps-pkg__img" />
+              <div class="ps-pkg__info">
+                <span class="ps-pkg__name">XV Producción</span>
+                <span class="ps-pkg__price">$28,000 MXN</span>
+              </div>
+            </a>
+            <div class="ps-upsell">
+              <p class="ps-upsell__text">¿Quieres iluminación incluida? El XV Completo agrega 4 bocinas + PAR LEDs por solo $4,000 más.</p>
+              <a href="/renta-de-bocinas/bocinas-para-xv-anos/paquete-xv-completo/" class="ps-upsell__link">Ver XV Completo →</a>
+            </div>
+          </div>
+
+          <!-- 4. CTA -->
+          <div class="ps-widget ps-widget--dark">
+            <h3 class="ps-widget__title ps-widget__title--light">Cotiza tu XV años</h3>
+            <p class="ps-widget__desc">Cotización personalizada en menos de 24 horas. Sin compromiso.</p>
+            <a href="/cotizar/" class="ps-widget__btn">Cotizar Gratis</a>
+            <a href={WHATSAPP_URL_MSG} class="ps-widget__btn ps-widget__btn--wa" target="_blank" rel="noopener">WhatsApp: 55 4937 5172</a>
+          </div>
+
+          <!-- 5. Servicios relacionados -->
+          <div class="ps-widget">
+            <h3 class="ps-widget__title">Servicios relacionados</h3>
+            <div class="ps-links">
+              <a href="/equipos-para-eventos/cabezas-moviles/" class="ps-link">Cabezas Móviles</a>
+              <a href="/equipos-para-eventos/sky-tracker/" class="ps-link">Sky Tracker</a>
+              <a href="/equipos-para-eventos/humo-bajo/" class="ps-link">Humo Bajo</a>
+              <a href="/equipos-para-eventos/maquina-de-confeti/" class="ps-link">Confeti</a>
+              <a href="/renta-de-iluminacion/luz-neon/" class="ps-link">Luz Neón</a>
+              <a href="/equipos-para-eventos/bola-disco/" class="ps-link">Bola Disco</a>
+            </div>
+          </div>
+
+          <!-- 6. Contacto -->
+          <div class="ps-widget">
+            <h3 class="ps-widget__title">Contacto</h3>
+            <div class="ps-contact">
+              <p><a href="tel:+525549375172">55 4937 5172</a></p>
+              <p><a href="mailto:contacto@redeil.com">contacto@redeil.com</a></p>
+              <p>Lun-Vie 9:00-19:00 | Sáb 10:00-15:00</p>
+            </div>
+          </div>
+
+        </aside>
+      </div>
     </div>
   </section>
 
   <FaqSection items={faqItems} />
-
-  <!-- CTA FINAL -->
 
   <Footer />
   <WhatsAppBubble />
 </Base>
 
 <style>
-  .section__title {
-    font-size: clamp(1.5rem, 3vw, 2rem);
-    font-weight: 800;
-    color: var(--color-text);
-    margin-bottom: 0.5rem;
-  }
-  .section__subtitle {
-    font-size: var(--font-size-base);
-    color: var(--color-text-light);
-    margin-bottom: 2rem;
-  }
-  .features-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 0.75rem;
-    margin-bottom: 2rem;
-  }
-  .feature-item {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    padding: 0.875rem 1rem;
-    border-radius: var(--border-radius);
-    font-size: var(--font-size-sm);
-  }
-  .feature-item--yes {
-    background: #f0fdf4;
-    color: #166534;
-  }
-  .feature-item--no {
-    background: var(--color-bg);
-    color: var(--color-text-light);
-  }
-  .feature-icon {
-    font-weight: 700;
-    font-size: 1.125rem;
-    flex-shrink: 0;
-  }
-  .price-highlight {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 2rem;
-    background: var(--color-bg);
-    border-radius: var(--border-radius-lg);
-    text-align: center;
-  }
-  .price-highlight__label {
-    font-size: var(--font-size-sm);
-    color: var(--color-text-light);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-  }
-  .price-highlight__amount {
-    font-size: clamp(2rem, 5vw, 3rem);
-    font-weight: 800;
-    color: var(--color-text);
-  }
-  .price-highlight__note {
-    font-size: var(--font-size-sm);
-    color: var(--color-text-light);
-    margin-bottom: 0.5rem;
-  }
-  .content-prose {
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  .content-prose h2 {
-    font-size: clamp(1.5rem, 3vw, 2rem);
-    font-weight: 800;
-    color: var(--color-text);
-    margin-bottom: 1rem;
-  }
-  .content-prose h3 {
-    font-size: var(--font-size-xl);
-    font-weight: 700;
-    color: var(--color-text);
-    margin: 2rem 0 0.75rem;
-  }
-  .content-prose p {
-    font-size: var(--font-size-base);
-    color: var(--color-text-light);
-    line-height: 1.8;
-    margin-bottom: 1rem;
-  }
+  /* ── Layout ── */
+  .prod-layout { display: grid; grid-template-columns: 1fr; gap: 2rem; }
+  @media (min-width: 1024px) { .prod-layout { grid-template-columns: 1fr 340px; gap: 2.5rem; } }
+
+  /* ── Gallery ── */
+  .prod-gallery { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; margin-bottom: 2rem; border-radius: 14px; overflow: hidden; }
+  .prod-gallery__main { grid-row: span 2; }
+  .prod-gallery__main img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .prod-gallery__side { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; }
+  .prod-gallery__side img { width: 100%; height: 100%; object-fit: cover; display: block; aspect-ratio: 3/2; }
+
+  /* ── Product Info ── */
+  .prod-info { margin-bottom: 2.5rem; }
+  .prod-info__badge { display: inline-block; font-size: 0.75rem; font-weight: 700; color: var(--color-accent); text-transform: uppercase; letter-spacing: 0.08em; padding: 0.375rem 1rem; background: rgba(0,113,227,0.08); border: 1px solid rgba(0,113,227,0.12); border-radius: 6px; margin-bottom: 0.75rem; }
+  .prod-info__title { font-size: clamp(1.375rem, 3vw, 1.75rem); font-weight: 800; color: var(--color-text); line-height: 1.2; letter-spacing: -0.02em; margin: 0 0 1.25rem; }
+  .prod-price { background: var(--color-bg); border-radius: 12px; padding: 1.25rem 1.5rem; margin-bottom: 1.25rem; border-left: 4px solid var(--color-accent); }
+  .prod-price__amount { font-size: 2.25rem; font-weight: 800; color: var(--color-primary); font-variant-numeric: tabular-nums; }
+  .prod-price__currency { font-size: 0.875rem; color: var(--color-text-light); margin-left: 0.5rem; }
+  .prod-price__note { font-size: 0.8125rem; color: var(--color-text-light); margin: 0.5rem 0 0; }
+  .prod-ctas { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+  .prod-btn { display: inline-flex; align-items: center; justify-content: center; padding: 0.875rem 1.75rem; border-radius: 6px; font-size: 0.9375rem; font-weight: 600; text-decoration: none; transition: background 0.2s ease, border-color 0.2s ease; }
+  .prod-btn--wa { background: #25D366; color: #fff; }
+  .prod-btn--wa:hover { background: #1DA851; }
+  .prod-btn--outline { background: none; color: var(--color-text); border: 2px solid var(--color-border); }
+  .prod-btn--outline:hover { border-color: var(--color-accent); color: var(--color-accent); }
+
+  /* ── Selling Points ── */
+  .prod-selling { margin-bottom: 2.5rem; }
+  .prod-selling__headline { font-size: clamp(1.25rem, 3vw, 1.5rem); font-weight: 800; color: var(--color-text); line-height: 1.25; letter-spacing: -0.02em; margin: 0 0 0.75rem; }
+  .prod-selling__intro { font-size: 0.9375rem; color: var(--color-text-light); line-height: 1.75; margin: 0 0 1.75rem; max-width: 65ch; }
+  .prod-highlights { display: flex; flex-direction: column; gap: 1.25rem; }
+  .prod-hl { display: flex; gap: 1rem; align-items: stretch; }
+  .prod-hl__bar { flex-shrink: 0; width: 3px; background: var(--color-accent); border-radius: 2px; }
+  .prod-hl__content { display: flex; flex-direction: column; gap: 0.25rem; }
+  .prod-hl__title { font-size: 0.9375rem; font-weight: 700; color: var(--color-text); margin: 0; line-height: 1.3; }
+  .prod-hl__desc { font-size: 0.8125rem; color: var(--color-text-light); line-height: 1.65; margin: 0; }
+
+  /* ── Includes ── */
+  .prod-includes { background: var(--color-bg); border-radius: 14px; padding: 1.75rem 2rem; margin-bottom: 2.5rem; }
+  .prod-includes__title { font-size: 1.0625rem; font-weight: 700; color: var(--color-text); margin: 0 0 1rem; }
+  .prod-includes__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; }
+  .prod-feat { font-size: 0.875rem; color: var(--color-text-light); padding-left: 1.25rem; position: relative; line-height: 1.5; }
+  .prod-feat::before { content: ""; position: absolute; left: 0; top: 0.45rem; width: 6px; height: 6px; border-radius: 50%; background: var(--color-accent); }
+  @media (max-width: 640px) { .prod-includes__grid { grid-template-columns: 1fr; } }
+
+  /* ── Sidebar ── */
+  .prod-sidebar { display: flex; flex-direction: column; gap: 1.25rem; }
+  @media (min-width: 1024px) { .prod-sidebar { position: sticky; top: calc(var(--header-height) + var(--topbar-height) + 1.5rem); align-self: start; } }
+  .ps-widget { background: var(--color-white); border: 1px solid var(--color-border); border-radius: 12px; padding: 1.25rem; }
+  .ps-widget--dark { background: var(--color-primary); color: #fff; border: none; }
+  .ps-widget__title { font-size: 0.875rem; font-weight: 700; color: var(--color-text); text-transform: uppercase; letter-spacing: 0.05em; margin: 0 0 0.75rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--color-accent); }
+  .ps-widget__title--light { color: #fff; }
+  .ps-widget__desc { font-size: 0.8125rem; color: rgba(255,255,255,0.75); margin: 0 0 0.75rem; }
+  .ps-widget__btn { display: block; text-align: center; padding: 0.625rem; border-radius: 6px; font-size: 0.875rem; font-weight: 600; text-decoration: none; margin-top: 0.5rem; background: var(--color-accent); color: #fff; transition: background 0.2s ease; }
+  .ps-widget__btn:hover { opacity: 0.9; }
+  .ps-widget__btn--wa { background: #25D366; }
+
+  .ps-specs { display: flex; flex-direction: column; margin: 0; }
+  .ps-specs__row { display: flex; justify-content: space-between; align-items: baseline; padding: 0.4rem 0; border-bottom: 1px solid var(--color-bg); gap: 0.75rem; }
+  .ps-specs__row:last-child { border-bottom: none; }
+  .ps-specs__row dt { font-size: 0.8125rem; color: var(--color-text-light); font-weight: 500; margin: 0; }
+  .ps-specs__row dd { font-size: 0.8125rem; font-weight: 600; color: var(--color-text); text-align: right; margin: 0; font-variant-numeric: tabular-nums; }
+
+  .ps-tags { display: flex; flex-wrap: wrap; gap: 0.375rem; }
+  .ps-tag { font-size: 0.6875rem; font-weight: 600; color: var(--color-text); padding: 0.3rem 0.75rem; background: var(--color-bg); border: 1px solid var(--color-border); border-radius: 6px; white-space: nowrap; }
+
+  .ps-pkg { display: flex; gap: 0.75rem; align-items: center; text-decoration: none; padding: 0.625rem 0; border-bottom: 1px solid var(--color-bg); }
+  .ps-pkg:last-of-type { border-bottom: none; }
+  .ps-pkg__img { width: 72px; height: 54px; object-fit: cover; border-radius: 8px; flex-shrink: 0; }
+  .ps-pkg__info { display: flex; flex-direction: column; gap: 0.125rem; }
+  .ps-pkg__name { font-size: 0.8125rem; font-weight: 600; color: var(--color-text); }
+  .ps-pkg__price { font-size: 0.75rem; font-weight: 700; color: var(--color-accent); font-variant-numeric: tabular-nums; }
+  .ps-pkg:hover .ps-pkg__name { color: var(--color-accent); }
+
+  .ps-upsell { margin-top: 0.75rem; padding-top: 0.75rem; border-top: 1px solid var(--color-bg); }
+  .ps-upsell__text { font-size: 0.75rem; color: var(--color-text-light); line-height: 1.5; margin: 0 0 0.375rem; }
+  .ps-upsell__link { font-size: 0.75rem; font-weight: 600; color: var(--color-accent); text-decoration: none; }
+  .ps-upsell__link:hover { text-decoration: underline; }
+
+  .ps-links { display: flex; flex-direction: column; }
+  .ps-link { padding: 0.4rem 0; border-bottom: 1px solid var(--color-bg); font-size: 0.8125rem; color: var(--color-text-light); text-decoration: none; }
+  .ps-link:last-child { border-bottom: none; }
+  .ps-link:hover { color: var(--color-accent); }
+
+  .ps-contact p { font-size: 0.8125rem; color: var(--color-text-light); margin: 0.3rem 0; }
+  .ps-contact a { color: var(--color-accent); text-decoration: none; }
+
+  /* ── Process Steps ── */
+  .prod-process { margin: 2.5rem 0; }
+  .prod-process__title { font-size: 1.125rem; font-weight: 800; color: var(--color-text); letter-spacing: -0.02em; margin: 0 0 1.25rem; }
+  .prod-steps { display: flex; flex-direction: column; gap: 0; }
+  .prod-step { display: flex; gap: 1rem; padding: 1rem 0; border-bottom: 1px solid var(--color-border); }
+  .prod-step:last-child { border-bottom: none; }
+  .prod-step__num { flex-shrink: 0; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; background: var(--color-accent); color: #fff; font-size: 0.8125rem; font-weight: 700; border-radius: 50%; }
+  .prod-step__content { display: flex; flex-direction: column; gap: 0.2rem; }
+  .prod-step__name { font-size: 0.9375rem; font-weight: 700; color: var(--color-text); margin: 0; line-height: 1.3; }
+  .prod-step__desc { font-size: 0.8125rem; color: var(--color-text-light); line-height: 1.6; margin: 0; }
+
+  /* ── Comparison ── */
+  .prod-compare { margin: 2.5rem 0; }
+  .prod-compare__title { font-size: 1.125rem; font-weight: 800; color: var(--color-text); letter-spacing: -0.02em; margin: 0 0 1.25rem; }
+  .prod-compare__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+  @media (max-width: 640px) { .prod-compare__grid { grid-template-columns: 1fr; } }
+  .prod-compare__col { border-radius: 12px; padding: 1.25rem; }
+  .prod-compare__col--us { background: #eff6ff; border: 2px solid var(--color-accent); }
+  .prod-compare__col--upgrade { background: #f0fdf4; border: 1px solid #86efac; }
+  .prod-compare__label { display: block; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.75rem; }
+  .prod-compare__col--us .prod-compare__label { color: var(--color-primary); }
+  .prod-compare__col--upgrade .prod-compare__label { color: #166534; }
+  .prod-compare__list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.5rem; }
+  .prod-compare__list li { font-size: 0.8125rem; color: var(--color-text); line-height: 1.4; padding-left: 1.125rem; position: relative; }
+  .prod-compare__col--us .prod-compare__list li::before { content: "✓"; position: absolute; left: 0; color: var(--color-accent); font-size: 0.75rem; font-weight: 700; }
+  .prod-compare__col--upgrade .prod-compare__list li::before { content: "✓"; position: absolute; left: 0; color: #16a34a; font-size: 0.75rem; font-weight: 700; }
+
+  /* ── Social Proof ── */
+  .prod-proof { margin-top: 2.5rem; }
+  .prod-quote { background: var(--color-bg); border-radius: 14px; padding: 1.75rem 2rem; border-left: 4px solid var(--color-accent); margin: 0; }
+  .prod-quote__text { font-size: 0.9375rem; color: var(--color-text); line-height: 1.75; font-style: italic; margin: 0 0 1rem; }
+  .prod-quote__footer { display: flex; flex-direction: column; gap: 0.125rem; }
+  .prod-quote__name { font-size: 0.875rem; font-weight: 700; color: var(--color-text); font-style: normal; }
+  .prod-quote__event { font-size: 0.75rem; color: var(--color-text-light); font-style: normal; }
 </style>

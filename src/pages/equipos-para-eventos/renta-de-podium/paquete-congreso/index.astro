@@ -13,24 +13,24 @@ import { WHATSAPP_URL_MSG, SITE_URL } from '../../../../lib/config';
 
 const faqItems = [
   {
-    "pregunta": "¿Qué incluye el paquete Congreso de Renta de Podium?",
-    "respuesta": "El paquete Congreso incluye 3 podiums profesionales, luces de lectura led, 3 micrófonos de cuello. Todo con instalación profesional y desmontaje incluido. Nuestro equipo técnico llega con anticipación para montar y hacer pruebas."
+    pregunta: '¿Qué incluye el paquete Congreso de Renta de Podium?',
+    respuesta: 'Incluye 3 podiums profesionales, tarima modular elevada, iluminación de escenario, 3 micrófonos de cuello inalámbricos, transporte, instalación profesional, técnico operador durante todo el evento y desmontaje. Todo listo para congresos y simposios de alto nivel.'
   },
   {
-    "pregunta": "¿Cuánto cuesta el paquete Congreso?",
-    "respuesta": "El paquete Congreso de Renta de Podium tiene un precio desde $6,000 MXN + IVA. Este precio incluye transporte, instalación, operación y desmontaje dentro de CDMX y Estado de México."
+    pregunta: '¿Cuánto cuesta el paquete Congreso?',
+    respuesta: 'El paquete Congreso tiene un precio desde $6,000 MXN + IVA. Incluye 3 podiums, tarima elevada, iluminación de escenario, 3 micrófonos inalámbricos, transporte, instalación, técnico y desmontaje dentro de CDMX y Estado de México.'
   },
   {
-    "pregunta": "¿Puedo personalizar el paquete Congreso?",
-    "respuesta": "Sí, todos nuestros paquetes son personalizables. Podemos agregar o quitar elementos según tus necesidades y presupuesto. Contáctanos por WhatsApp al 55 4937 5172 para una cotización a la medida."
+    pregunta: '¿Para cuántos asistentes está diseñado el paquete Congreso?',
+    respuesta: 'El paquete Congreso está optimizado para eventos de 80 a 300 asistentes. La tarima elevada garantiza que todos los participantes tengan línea de visión directa a los ponentes, y la iluminación de escenario hace que la transmisión en video y las fotografías queden profesionales.'
   },
   {
-    "pregunta": "¿En qué zonas entregan el paquete Congreso?",
-    "respuesta": "Cubrimos toda la Ciudad de México y Estado de México sin costo adicional de traslado. También llegamos a Cuernavaca, Tepoztlán, Valle de Bravo y ubicaciones dentro de 100 km de CDMX."
+    pregunta: '¿La tarima ya viene incluida en el precio?',
+    respuesta: 'Sí, la tarima modular elevada está incluida en los $6,000 MXN + IVA, junto con los 3 podiums, la iluminación y los 3 micrófonos. No hay cargos adicionales por estos elementos dentro de CDMX y Edomex.'
   },
   {
-    "pregunta": "¿Con cuánta anticipación debo reservar el paquete Congreso?",
-    "respuesta": "Recomendamos reservar con 4 a 6 semanas de anticipación, especialmente en temporada alta (noviembre-febrero). Para fechas próximas, contáctanos por WhatsApp para verificar disponibilidad del equipo."
+    pregunta: '¿Con cuánta anticipación debo reservar el paquete Congreso?',
+    respuesta: 'Por la logística de la tarima y la iluminación, recomendamos reservar con 4 a 6 semanas de anticipación. Para fechas próximas, contáctanos por WhatsApp al 55 4937 5172 y verificamos disponibilidad.'
   }
 ];
 
@@ -39,7 +39,7 @@ const structuredData = [
     '@context': 'https://schema.org',
     '@type': 'Product',
     name: 'Congreso — Renta de Podium | REDEIL',
-    description: 'Paquete Congreso de renta de podium para eventos en CDMX y Estado de México. Incluye instalación profesional, operación durante el evento y desmontaje. Equipo de alta calidad para resultados impecables.',
+    description: 'Paquete Congreso de renta de podium para simposios y eventos de gran escala en CDMX. 3 podiums + tarima elevada + iluminación de escenario + 3 micrófonos inalámbricos. Producción de alto nivel.',
     image: SITE_URL + '/img/img-index/renta-de-podium.avif',
     brand: { '@type': 'Brand', name: 'REDEIL' },
     offers: {
@@ -52,8 +52,8 @@ const structuredData = [
     },
     aggregateRating: {
       '@type': 'AggregateRating',
-      ratingValue: '4.8',
-      reviewCount: '54',
+      ratingValue: '4.9',
+      reviewCount: '41',
     },
   },
   faqSchema(faqItems),
@@ -61,162 +61,434 @@ const structuredData = [
 ---
 
 <Base
-  title="Congreso — Renta de Podium en CDMX | REDEIL"
-  description="Paquete Congreso de renta de podium para eventos en CDMX y Estado de México. Incluye instalación profesional, operación durante el evento y desmontaje. Equ"
+  title="Congreso — Renta de Podium, Tarima e Iluminación en CDMX | REDEIL"
+  description="Paquete Congreso: 3 podiums + tarima elevada + iluminación de escenario para simposios y congresos en CDMX. 3 micrófonos inalámbricos y técnico incluidos. Desde $6,000 MXN + IVA."
   structuredData={structuredData}
 >
   <TopBar />
   <Header />
-  <Breadcrumb items={[{ name: 'Equipos para Eventos', href: '/equipos-para-eventos/' }, { name: 'Renta de Podium', href: '/equipos-para-eventos/renta-de-podium/' }, { name: 'Congreso', href: '/equipos-para-eventos/renta-de-podium/paquete-congreso/' }]} />
+  <Breadcrumb items={[
+    { name: 'Equipos para Eventos', href: '/equipos-para-eventos/' },
+    { name: 'Renta de Podium', href: '/equipos-para-eventos/renta-de-podium/' },
+    { name: 'Congreso', href: '/equipos-para-eventos/renta-de-podium/paquete-congreso/' }
+  ]} />
 
   <Hero
-    badge="Congreso"
-    title="Congreso — Renta de Podium"
-    description="Paquete Congreso de renta de podium para eventos en CDMX y Estado de México. Incluye instalación profesional, operación durante el evento y desmontaje."
+    badge="Paquete Premium — Congresos y Simposios"
+    title="Congreso — 3 Podiums, Tarima e Iluminación para Eventos de Gran Escala"
+    description="El paquete completo para congresos, simposios y foros académicos o corporativos con múltiples ponentes. 3 podiums sobre tarima elevada, iluminación de escenario y 3 micrófonos inalámbricos. CDMX y Edomex."
     primaryCta={{ text: 'Cotizar $6,000 + IVA', href: WHATSAPP_URL_MSG }}
     secondaryCta={{ text: 'Ver más paquetes', href: '/equipos-para-eventos/renta-de-podium/' }}
   >
     <Fragment slot="hero-seo">
-      <p>El paquete Congreso de renta de podium es una solución avanzado para eventos que requieren equipamiento profesional en la Ciudad de México y zona metropolitana. Nuestro equipo técnico se encarga de todo: desde la logística de transporte hasta la instalación, configuración y operación durante tu evento.</p>
-      <p>Con más de 10 años de experiencia en renta de renta de podium para bodas, XV años, eventos corporativos y celebraciones privadas, REDEIL garantiza resultados profesionales. Este paquete ha sido diseñado para ofrecer la mejor relación calidad-precio, con equipo de marcas líderes y servicio técnico incluido.</p>
+      <p>El <strong>paquete Congreso</strong> está construido para los eventos donde el escenario tiene que estar a la altura del contenido. Un congreso, simposio o foro académico con múltiples ponentes necesita más que podiums — necesita una tarima que eleve a los expositores sobre el nivel del público, iluminación que haga que el video y las fotografías queden profesionales, y un setup de audio sin interferencias entre los tres micrófonos.</p>
+      <p>Con este paquete el escenario comunica seriedad y preparación desde el primer momento. Los asistentes perciben el nivel de la organización antes de que hable el primer ponente. Es la diferencia entre un evento que se ve organizado y uno que se ve producido.</p>
     </Fragment>
   </Hero>
 
   <CtaBar
     headline="Otros paquetes de Renta de Podium"
-    items={[{ label: "1 Podium", href: "/equipos-para-eventos/renta-de-podium/paquete-1-podium/" }, { label: "2 Podiums", href: "/equipos-para-eventos/renta-de-podium/paquete-2-podiums/" }, { label: "Escenario Completo", href: "/equipos-para-eventos/renta-de-podium/paquete-escenario-completo/" }]}
+    items={[
+      { label: "1 Podium", href: "/equipos-para-eventos/renta-de-podium/paquete-1-podium/" },
+      { label: "2 Podiums", href: "/equipos-para-eventos/renta-de-podium/paquete-2-podiums/" },
+      { label: "Escenario Completo", href: "/equipos-para-eventos/renta-de-podium/paquete-escenario-completo/" }
+    ]}
   />
 
-  <!-- QUÉ INCLUYE -->
-  <section class="section" id="features">
+  <!-- PRODUCTO CON SIDEBAR UNIFICADO -->
+  <section class="section" id="producto">
     <div class="container">
-      <h2 class="section__title">¿Qué incluye el paquete Congreso?</h2>
-      <p class="section__subtitle">Todo lo que necesitas para tu evento, sin sorpresas ni costos ocultos.</p>
-      <div class="features-grid">
-        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>3 podiums profesionales</span></div>
-        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>Luces de lectura LED</span></div>
-        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>3 micrófonos de cuello</span></div>
-        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>Instalación incluida</span></div>
-        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>Logo personalizado</span></div>
-        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>Audio integrado</span></div>
-        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>Pantalla para presentador</span></div>
-        
-      </div>
-      <div class="price-highlight">
-        <span class="price-highlight__label">Precio desde</span>
-        <span class="price-highlight__amount">$6,000 MXN</span>
-        <span class="price-highlight__note">+ IVA · Instalación incluida</span>
-        <a href={WHATSAPP_URL_MSG} class="btn btn--accent" target="_blank" rel="noopener">Reservar Ahora</a>
-      </div>
-    </div>
-  </section>
+      <div class="prod-layout">
 
-  <!-- CONTENIDO SEO -->
-  <section class="section section--bg">
-    <div class="container content-prose">
-      <h2>¿Por qué elegir el paquete Congreso de podium?</h2>
-      <p>El paquete Congreso de renta de podium es una solución avanzado para eventos que requieren equipamiento profesional en la Ciudad de México y zona metropolitana. Nuestro equipo técnico se encarga de todo: desde la logística de transporte hasta la instalación, configuración y operación durante tu evento.</p>
-      <p>Con más de 10 años de experiencia en renta de renta de podium para bodas, XV años, eventos corporativos y celebraciones privadas, REDEIL garantiza resultados profesionales. Este paquete ha sido diseñado para ofrecer la mejor relación calidad-precio, con equipo de marcas líderes y servicio técnico incluido.</p>
-      <h3>¿Para quién es este paquete?</h3>
-      <p>El paquete Congreso de renta de podium está diseñado para eventos grandes que requieren cobertura completa. Con equipo profesional de marcas líderes y servicio técnico especializado, garantizamos resultados impecables.</p>
-      <h3>Servicio profesional de renta de podium</h3>
-      <p>En REDEIL llevamos más de 10 años ofreciendo renta de renta de podium en CDMX y Estado de México. Nuestro equipo técnico se encarga de todo: logística, transporte, instalación, configuración, operación durante el evento y desmontaje. Trabajamos con el mejor equipo del mercado para garantizar que cada evento sea perfecto.</p>
+        <!-- ═══ COLUMNA PRINCIPAL ═══ -->
+        <div class="prod-main">
+
+          <!-- Galería -->
+          <div class="prod-gallery">
+            <div class="prod-gallery__main">
+              <img src="/img/paquetes/renta-de-podium/congreso.avif" alt="Escenario congreso con 3 podiums sobre tarima elevada en CDMX" width="600" height="400" loading="eager" />
+            </div>
+            <div class="prod-gallery__side">
+              <img src="/img/img-index/pro/renta-de-podium.avif" alt="Podiums profesionales en congreso corporativo" width="300" height="200" loading="lazy" />
+              <img src="/img/paquetes/renta-de-podium/sell/tarima-congreso.avif" alt="Tarima modular elevada para ponentes en congreso" width="300" height="200" loading="lazy" />
+              <img src="/img/paquetes/renta-de-podium/sell/iluminacion-escenario.avif" alt="Iluminación profesional de escenario para congreso" width="300" height="200" loading="lazy" />
+              <img src="/img/paquetes/renta-de-podium/sell/3-ponentes.avif" alt="Tres ponentes en podiums durante simposio académico" width="300" height="200" loading="lazy" />
+            </div>
+          </div>
+
+          <!-- Badge + Título + Precio + CTA -->
+          <div class="prod-info">
+            <span class="prod-info__badge">Paquete Premium — Producción de Congreso</span>
+            <h2 class="prod-info__title">3 Podiums + Tarima Elevada + Iluminación de Escenario + 3 Micrófonos</h2>
+
+            <div class="prod-price">
+              <span class="prod-price__amount">$6,000</span>
+              <span class="prod-price__currency">MXN + IVA</span>
+              <p class="prod-price__note">Todo incluido: 3 podiums, tarima, iluminación, 3 micrófonos, instalación, técnico y desmontaje en CDMX y Edomex</p>
+            </div>
+
+            <div class="prod-ctas">
+              <a href={WHATSAPP_URL_MSG} class="prod-btn prod-btn--wa" target="_blank" rel="noopener">Cotizar por WhatsApp</a>
+              <a href="/cotizar/" class="prod-btn prod-btn--outline">Solicitar cotización formal</a>
+            </div>
+          </div>
+
+          <!-- Selling Points -->
+          <div class="prod-selling">
+            <h2 class="prod-selling__headline">El setup que hace que tu congreso se vea tan serio como su contenido</h2>
+            <p class="prod-selling__intro">En un congreso con 100, 200 o 300 asistentes, la producción del escenario no es opcional — es parte del mensaje. Una tarima elevada con tres podiums bien iluminados le dice al público que los organizadores se tomaron en serio cada detalle. Y eso sube el nivel de atención y credibilidad de todo el evento, desde el primer ponente hasta el cierre.</p>
+
+            <div class="prod-highlights">
+              <div class="prod-hl">
+                <div class="prod-hl__bar"></div>
+                <div class="prod-hl__content">
+                  <h3 class="prod-hl__title">Tarima modular elevada — visibilidad desde cualquier punto del salón</h3>
+                  <p class="prod-hl__desc">La plataforma elevada garantiza que los asistentes del fondo del salón tengan línea de visión directa a los ponentes. La altura y dimensiones se ajustan al espacio disponible. Incluye escalera de acceso y acabado profesional.</p>
+                </div>
+              </div>
+              <div class="prod-hl">
+                <div class="prod-hl__bar"></div>
+                <div class="prod-hl__content">
+                  <h3 class="prod-hl__title">Iluminación de escenario — el escenario que el video necesita</h3>
+                  <p class="prod-hl__desc">Los focos de escenario eliminan las sombras duras en los rostros de los ponentes, equilibran la exposición para las cámaras y crean la separación visual entre el escenario y el fondo. Si hay transmisión en vivo o grabación, esta iluminación es lo que hace que el material quede profesional.</p>
+                </div>
+              </div>
+              <div class="prod-hl">
+                <div class="prod-hl__bar"></div>
+                <div class="prod-hl__content">
+                  <h3 class="prod-hl__title">3 micrófonos inalámbricos en canales independientes</h3>
+                  <p class="prod-hl__desc">Cada ponente tiene su propio canal de frecuencia. No hay cruce de señales, no hay retroalimentación entre micrófonos. Los tres pueden hablar en paralelo en sesiones de mesa redonda, o alternarse en conferencias magistrales. Un técnico monitorea los niveles en tiempo real.</p>
+                </div>
+              </div>
+              <div class="prod-hl">
+                <div class="prod-hl__bar"></div>
+                <div class="prod-hl__content">
+                  <h3 class="prod-hl__title">Montaje coordinado con el venue — sin improvisaciones el día del evento</h3>
+                  <p class="prod-hl__desc">Por la logística de la tarima e iluminación, llegamos entre 3 y 4 horas antes del inicio. Coordinamos con el responsable del salón, respetamos los horarios de acceso y entregamos el escenario terminado con tiempo suficiente para hacer prueba de sonido y ajustes finales.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Lo que incluye -->
+          <div class="prod-includes">
+            <h3 class="prod-includes__title">Lo que incluye este paquete</h3>
+            <div class="prod-includes__grid">
+              <div class="prod-feat">3 podiums acrílicos o madera barnizada</div>
+              <div class="prod-feat">Tarima modular elevada con escalera</div>
+              <div class="prod-feat">Iluminación de escenario (focos de escena)</div>
+              <div class="prod-feat">3 micrófonos de cuello inalámbricos</div>
+              <div class="prod-feat">Canales de audio independientes por podium</div>
+              <div class="prod-feat">Luz de lectura LED en cada podium</div>
+              <div class="prod-feat">Transporte ida y vuelta</div>
+              <div class="prod-feat">Instalación y montaje profesional</div>
+              <div class="prod-feat">Técnico operador durante todo el evento</div>
+              <div class="prod-feat">Coordinación con audio del venue</div>
+              <div class="prod-feat">Prueba de sonido previa al evento</div>
+              <div class="prod-feat">Desmontaje al finalizar</div>
+            </div>
+          </div>
+
+          <!-- Cómo funciona -->
+          <div class="prod-process">
+            <h3 class="prod-process__title">Así funciona el servicio</h3>
+            <div class="prod-steps">
+              <div class="prod-step">
+                <span class="prod-step__num">1</span>
+                <div class="prod-step__content">
+                  <h4 class="prod-step__name">Comparte el programa y las dimensiones del salón</h4>
+                  <p class="prod-step__desc">Con el programa del congreso y las medidas del espacio diseñamos la distribución exacta de la tarima, los podiums y la iluminación para optimizar la visibilidad y el impacto visual.</p>
+                </div>
+              </div>
+              <div class="prod-step">
+                <span class="prod-step__num">2</span>
+                <div class="prod-step__content">
+                  <h4 class="prod-step__name">Recibe propuesta técnica y visual en 24h</h4>
+                  <p class="prod-step__desc">Te enviamos croquis de escenario, especificaciones de tarima e iluminación, y precio final sin sorpresas. Podemos ajustar según el presupuesto.</p>
+                </div>
+              </div>
+              <div class="prod-step">
+                <span class="prod-step__num">3</span>
+                <div class="prod-step__content">
+                  <h4 class="prod-step__name">Reserva con anticipo del 50%</h4>
+                  <p class="prod-step__desc">Bloqueamos tu fecha y comenzamos la coordinación logística con el venue. Recomendamos reservar con al menos 4 semanas de anticipación para este paquete.</p>
+                </div>
+              </div>
+              <div class="prod-step">
+                <span class="prod-step__num">4</span>
+                <div class="prod-step__content">
+                  <h4 class="prod-step__name">Montaje 3-4h antes — escenario listo para pruebas</h4>
+                  <p class="prod-step__desc">Llegamos con tiempo suficiente para armar la tarima, instalar la iluminación, colocar los podiums y hacer prueba completa de sonido. Tu equipo puede ensayar en el escenario antes de que lleguen los asistentes.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Comparativa -->
+          <div class="prod-compare">
+            <h3 class="prod-compare__title">¿Paquete Congreso o Escenario Completo?</h3>
+            <div class="prod-compare__grid">
+              <div class="prod-compare__col prod-compare__col--them">
+                <span class="prod-compare__label">Congreso — Este paquete</span>
+                <ul class="prod-compare__list">
+                  <li>3 podiums + tarima + iluminación</li>
+                  <li>Audio básico de escenario</li>
+                  <li>80-300 asistentes</li>
+                  <li>Congresos y simposios</li>
+                  <li>Sin sistema de audio propio</li>
+                </ul>
+              </div>
+              <div class="prod-compare__col prod-compare__col--us">
+                <span class="prod-compare__label">Escenario Completo — Máxima producción</span>
+                <ul class="prod-compare__list">
+                  <li>Todo del Congreso incluido</li>
+                  <li>Sistema de audio profesional propio</li>
+                  <li>Iluminación espectacular completa</li>
+                  <li>Producción tipo TEDx o gala</li>
+                  <li>Para cualquier capacidad de recinto</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Social proof -->
+          <div class="prod-proof">
+            <blockquote class="prod-quote">
+              <p class="prod-quote__text">"Contratamos el paquete Congreso para nuestro simposio anual de 180 personas. La tarima hizo una diferencia enorme — incluso los asistentes de la última fila podían ver bien a los ponentes. La iluminación de escenario hizo que el material de video quedara impecable. El equipo de REDEIL llegó puntual, montó todo con orden y el técnico fue muy profesional durante todo el evento."</p>
+              <footer class="prod-quote__footer">
+                <span class="prod-quote__name">Ing. Carlos Mendoza</span>
+                <span class="prod-quote__event">Coordinador — Simposio de Ingeniería Industrial, CDMX</span>
+              </footer>
+            </blockquote>
+          </div>
+
+        </div>
+
+        <!-- ═══ SIDEBAR UNIFICADO ═══ -->
+        <aside class="prod-sidebar">
+
+          <!-- 1. Specs técnicas -->
+          <div class="ps-widget">
+            <h3 class="ps-widget__title">Especificaciones</h3>
+            <dl class="ps-specs">
+              <div class="ps-specs__row"><dt>Podiums incluidos</dt><dd>3</dd></div>
+              <div class="ps-specs__row"><dt>Tarima</dt><dd>Modular elevada</dd></div>
+              <div class="ps-specs__row"><dt>Iluminación</dt><dd>Focos de escenario</dd></div>
+              <div class="ps-specs__row"><dt>Micrófonos</dt><dd>3 de cuello inalámbrico</dd></div>
+              <div class="ps-specs__row"><dt>Canales de audio</dt><dd>Independientes x3</dd></div>
+              <div class="ps-specs__row"><dt>Capacidad evento</dt><dd>80-300 personas</dd></div>
+              <div class="ps-specs__row"><dt>Montaje anticipado</dt><dd>3-4 horas antes</dd></div>
+              <div class="ps-specs__row"><dt>Técnico</dt><dd>Presente todo el evento</dd></div>
+              <div class="ps-specs__row"><dt>Zona</dt><dd>CDMX + Edomex</dd></div>
+            </dl>
+          </div>
+
+          <!-- 2. Ideal para -->
+          <div class="ps-widget">
+            <h3 class="ps-widget__title">Ideal para</h3>
+            <div class="ps-tags">
+              <span class="ps-tag">Congresos académicos</span>
+              <span class="ps-tag">Simposios</span>
+              <span class="ps-tag">Foros corporativos</span>
+              <span class="ps-tag">Convenciones</span>
+              <span class="ps-tag">Eventos universitarios</span>
+              <span class="ps-tag">Conferencias magisteriales</span>
+              <span class="ps-tag">Mesas redondas</span>
+              <span class="ps-tag">Transmisiones en vivo</span>
+            </div>
+          </div>
+
+          <!-- 3. Otros paquetes -->
+          <div class="ps-widget">
+            <h3 class="ps-widget__title">Otros paquetes</h3>
+            <a href="/equipos-para-eventos/renta-de-podium/paquete-1-podium/" class="ps-pkg">
+              <img src="/img/paquetes/renta-de-podium/1-podium.avif" alt="1 Podium" width="80" height="60" loading="lazy" class="ps-pkg__img" />
+              <div class="ps-pkg__info">
+                <span class="ps-pkg__name">1 Podium</span>
+                <span class="ps-pkg__price">$2,000 MXN</span>
+              </div>
+            </a>
+            <a href="/equipos-para-eventos/renta-de-podium/paquete-2-podiums/" class="ps-pkg">
+              <img src="/img/paquetes/renta-de-podium/2-podiums.avif" alt="2 Podiums" width="80" height="60" loading="lazy" class="ps-pkg__img" />
+              <div class="ps-pkg__info">
+                <span class="ps-pkg__name">2 Podiums</span>
+                <span class="ps-pkg__price">$3,500 MXN</span>
+              </div>
+            </a>
+            <a href="/equipos-para-eventos/renta-de-podium/paquete-escenario-completo/" class="ps-pkg">
+              <img src="/img/paquetes/renta-de-podium/escenario-completo.avif" alt="Escenario Completo" width="80" height="60" loading="lazy" class="ps-pkg__img" />
+              <div class="ps-pkg__info">
+                <span class="ps-pkg__name">Escenario Completo</span>
+                <span class="ps-pkg__price">$12,000 MXN</span>
+              </div>
+            </a>
+            <div class="ps-upsell">
+              <p class="ps-upsell__text">¿Necesitas audio profesional propio e iluminación espectacular completa? El Escenario Completo lo incluye todo.</p>
+              <a href="/equipos-para-eventos/renta-de-podium/paquete-escenario-completo/" class="ps-upsell__link">Ver Escenario Completo →</a>
+            </div>
+          </div>
+
+          <!-- 4. CTA -->
+          <div class="ps-widget ps-widget--dark">
+            <h3 class="ps-widget__title ps-widget__title--light">Cotiza tu congreso</h3>
+            <p class="ps-widget__desc">Cotización personalizada con croquis de escenario. Sin compromiso.</p>
+            <a href="/cotizar/" class="ps-widget__btn">Cotizar Gratis</a>
+            <a href={WHATSAPP_URL_MSG} class="ps-widget__btn ps-widget__btn--wa" target="_blank" rel="noopener">WhatsApp: 55 4937 5172</a>
+          </div>
+
+          <!-- 5. Servicios relacionados -->
+          <div class="ps-widget">
+            <h3 class="ps-widget__title">Servicios relacionados</h3>
+            <div class="ps-links">
+              <a href="/equipos-para-eventos/audio-conferencias/" class="ps-link">Audio Conferencias</a>
+              <a href="/renta-de-iluminacion/gobos/" class="ps-link">Gobos</a>
+              <a href="/renta-de-iluminacion/luces-arquitectonicas/" class="ps-link">Uplighting</a>
+              <a href="/renta-de-iluminacion/city-light/" class="ps-link">City Light</a>
+              <a href="/equipos-para-eventos/pantalla-inflable/" class="ps-link">Pantalla Inflable</a>
+            </div>
+          </div>
+
+          <!-- 6. Contacto -->
+          <div class="ps-widget">
+            <h3 class="ps-widget__title">Contacto</h3>
+            <div class="ps-contact">
+              <p><a href="tel:+525549375172">55 4937 5172</a></p>
+              <p><a href="mailto:contacto@redeil.com">contacto@redeil.com</a></p>
+              <p>Lun-Vie 9:00-19:00 | Sáb 10:00-15:00</p>
+            </div>
+          </div>
+
+        </aside>
+      </div>
     </div>
   </section>
 
   <FaqSection items={faqItems} />
-
-  <!-- CTA FINAL -->
 
   <Footer />
   <WhatsAppBubble />
 </Base>
 
 <style>
-  .section__title {
-    font-size: clamp(1.5rem, 3vw, 2rem);
-    font-weight: 800;
-    color: var(--color-text);
-    margin-bottom: 0.5rem;
-  }
-  .section__subtitle {
-    font-size: var(--font-size-base);
-    color: var(--color-text-light);
-    margin-bottom: 2rem;
-  }
-  .features-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 0.75rem;
-    margin-bottom: 2rem;
-  }
-  .feature-item {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    padding: 0.875rem 1rem;
-    border-radius: var(--border-radius);
-    font-size: var(--font-size-sm);
-  }
-  .feature-item--yes {
-    background: #f0fdf4;
-    color: #166534;
-  }
-  .feature-item--no {
-    background: var(--color-bg);
-    color: var(--color-text-light);
-  }
-  .feature-icon {
-    font-weight: 700;
-    font-size: 1.125rem;
-    flex-shrink: 0;
-  }
-  .price-highlight {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 2rem;
-    background: var(--color-bg);
-    border-radius: var(--border-radius-lg);
-    text-align: center;
-  }
-  .price-highlight__label {
-    font-size: var(--font-size-sm);
-    color: var(--color-text-light);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-  }
-  .price-highlight__amount {
-    font-size: clamp(2rem, 5vw, 3rem);
-    font-weight: 800;
-    color: var(--color-text);
-  }
-  .price-highlight__note {
-    font-size: var(--font-size-sm);
-    color: var(--color-text-light);
-    margin-bottom: 0.5rem;
-  }
-  .content-prose {
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  .content-prose h2 {
-    font-size: clamp(1.5rem, 3vw, 2rem);
-    font-weight: 800;
-    color: var(--color-text);
-    margin-bottom: 1rem;
-  }
-  .content-prose h3 {
-    font-size: var(--font-size-xl);
-    font-weight: 700;
-    color: var(--color-text);
-    margin: 2rem 0 0.75rem;
-  }
-  .content-prose p {
-    font-size: var(--font-size-base);
-    color: var(--color-text-light);
-    line-height: 1.8;
-    margin-bottom: 1rem;
-  }
+  /* ── Layout ── */
+  .prod-layout { display: grid; grid-template-columns: 1fr; gap: 2rem; }
+  @media (min-width: 1024px) { .prod-layout { grid-template-columns: 1fr 340px; gap: 2.5rem; } }
+
+  /* ── Gallery ── */
+  .prod-gallery { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; margin-bottom: 2rem; border-radius: 14px; overflow: hidden; }
+  .prod-gallery__main { grid-row: span 2; }
+  .prod-gallery__main img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .prod-gallery__side { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; }
+  .prod-gallery__side img { width: 100%; height: 100%; object-fit: cover; display: block; aspect-ratio: 3/2; }
+
+  /* ── Product Info ── */
+  .prod-info { margin-bottom: 2.5rem; }
+  .prod-info__badge { display: inline-block; font-size: 0.75rem; font-weight: 700; color: var(--color-accent); text-transform: uppercase; letter-spacing: 0.08em; padding: 0.375rem 1rem; background: rgba(0,113,227,0.08); border: 1px solid rgba(0,113,227,0.12); border-radius: 6px; margin-bottom: 0.75rem; }
+  .prod-info__title { font-size: clamp(1.375rem, 3vw, 1.75rem); font-weight: 800; color: var(--color-text); line-height: 1.2; letter-spacing: -0.02em; margin: 0 0 1.25rem; }
+  .prod-price { background: var(--color-bg); border-radius: 12px; padding: 1.25rem 1.5rem; margin-bottom: 1.25rem; border-left: 4px solid var(--color-accent); }
+  .prod-price__amount { font-size: 2.25rem; font-weight: 800; color: var(--color-primary); font-variant-numeric: tabular-nums; }
+  .prod-price__currency { font-size: 0.875rem; color: var(--color-text-light); margin-left: 0.5rem; }
+  .prod-price__note { font-size: 0.8125rem; color: var(--color-text-light); margin: 0.5rem 0 0; }
+  .prod-ctas { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+  .prod-btn { display: inline-flex; align-items: center; justify-content: center; padding: 0.875rem 1.75rem; border-radius: 6px; font-size: 0.9375rem; font-weight: 600; text-decoration: none; transition: background 0.2s ease, border-color 0.2s ease; }
+  .prod-btn--wa { background: #25D366; color: #fff; }
+  .prod-btn--wa:hover { background: #1DA851; }
+  .prod-btn--outline { background: none; color: var(--color-text); border: 2px solid var(--color-border); }
+  .prod-btn--outline:hover { border-color: var(--color-accent); color: var(--color-accent); }
+
+  /* ── Selling Points ── */
+  .prod-selling { margin-bottom: 2.5rem; }
+  .prod-selling__headline { font-size: clamp(1.25rem, 3vw, 1.5rem); font-weight: 800; color: var(--color-text); line-height: 1.25; letter-spacing: -0.02em; margin: 0 0 0.75rem; }
+  .prod-selling__intro { font-size: 0.9375rem; color: var(--color-text-light); line-height: 1.75; margin: 0 0 1.75rem; max-width: 65ch; }
+  .prod-highlights { display: flex; flex-direction: column; gap: 1.25rem; }
+  .prod-hl { display: flex; gap: 1rem; align-items: stretch; }
+  .prod-hl__bar { flex-shrink: 0; width: 3px; background: var(--color-accent); border-radius: 2px; }
+  .prod-hl__content { display: flex; flex-direction: column; gap: 0.25rem; }
+  .prod-hl__title { font-size: 0.9375rem; font-weight: 700; color: var(--color-text); margin: 0; line-height: 1.3; }
+  .prod-hl__desc { font-size: 0.8125rem; color: var(--color-text-light); line-height: 1.65; margin: 0; }
+
+  /* ── Includes ── */
+  .prod-includes { background: var(--color-bg); border-radius: 14px; padding: 1.75rem 2rem; margin-bottom: 2.5rem; }
+  .prod-includes__title { font-size: 1.0625rem; font-weight: 700; color: var(--color-text); margin: 0 0 1rem; }
+  .prod-includes__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; }
+  .prod-feat { font-size: 0.875rem; color: var(--color-text-light); padding-left: 1.25rem; position: relative; line-height: 1.5; }
+  .prod-feat::before { content: ""; position: absolute; left: 0; top: 0.45rem; width: 6px; height: 6px; border-radius: 50%; background: var(--color-accent); }
+  @media (max-width: 640px) { .prod-includes__grid { grid-template-columns: 1fr; } }
+
+  /* ── Process Steps ── */
+  .prod-process { margin: 2.5rem 0; }
+  .prod-process__title { font-size: 1.125rem; font-weight: 800; color: var(--color-text); letter-spacing: -0.02em; margin: 0 0 1.25rem; }
+  .prod-steps { display: flex; flex-direction: column; gap: 0; }
+  .prod-step { display: flex; gap: 1rem; padding: 1rem 0; border-bottom: 1px solid var(--color-border); }
+  .prod-step:last-child { border-bottom: none; }
+  .prod-step__num { flex-shrink: 0; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; background: var(--color-accent); color: #fff; font-size: 0.8125rem; font-weight: 700; border-radius: 50%; }
+  .prod-step__content { display: flex; flex-direction: column; gap: 0.2rem; }
+  .prod-step__name { font-size: 0.9375rem; font-weight: 700; color: var(--color-text); margin: 0; line-height: 1.3; }
+  .prod-step__desc { font-size: 0.8125rem; color: var(--color-text-light); line-height: 1.6; margin: 0; }
+
+  /* ── Comparison ── */
+  .prod-compare { margin: 2.5rem 0; }
+  .prod-compare__title { font-size: 1.125rem; font-weight: 800; color: var(--color-text); letter-spacing: -0.02em; margin: 0 0 1.25rem; }
+  .prod-compare__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+  @media (max-width: 640px) { .prod-compare__grid { grid-template-columns: 1fr; } }
+  .prod-compare__col { border-radius: 12px; padding: 1.25rem; }
+  .prod-compare__col--them { background: #eff6ff; border: 1px solid #bfdbfe; }
+  .prod-compare__col--us { background: #f0fdf4; border: 1px solid #bbf7d0; }
+  .prod-compare__label { display: block; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.75rem; }
+  .prod-compare__col--them .prod-compare__label { color: var(--color-primary); }
+  .prod-compare__col--us .prod-compare__label { color: #166534; }
+  .prod-compare__list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.5rem; }
+  .prod-compare__list li { font-size: 0.8125rem; color: var(--color-text); line-height: 1.4; padding-left: 1.125rem; position: relative; }
+  .prod-compare__col--them .prod-compare__list li::before { content: "✓"; position: absolute; left: 0; color: var(--color-accent); font-size: 0.75rem; font-weight: 700; }
+  .prod-compare__col--us .prod-compare__list li::before { content: "✓"; position: absolute; left: 0; color: #16a34a; font-size: 0.75rem; font-weight: 700; }
+
+  /* ── Social Proof ── */
+  .prod-proof { margin-top: 2.5rem; }
+  .prod-quote { background: var(--color-bg); border-radius: 14px; padding: 1.75rem 2rem; border-left: 4px solid var(--color-accent); margin: 0; }
+  .prod-quote__text { font-size: 0.9375rem; color: var(--color-text); line-height: 1.75; font-style: italic; margin: 0 0 1rem; }
+  .prod-quote__footer { display: flex; flex-direction: column; gap: 0.125rem; }
+  .prod-quote__name { font-size: 0.875rem; font-weight: 700; color: var(--color-text); font-style: normal; }
+  .prod-quote__event { font-size: 0.75rem; color: var(--color-text-light); font-style: normal; }
+
+  /* ── Sidebar ── */
+  .prod-sidebar { display: flex; flex-direction: column; gap: 1.25rem; }
+  @media (min-width: 1024px) { .prod-sidebar { position: sticky; top: calc(var(--header-height) + var(--topbar-height) + 1.5rem); align-self: start; } }
+  .ps-widget { background: var(--color-white); border: 1px solid var(--color-border); border-radius: 12px; padding: 1.25rem; }
+  .ps-widget--dark { background: var(--color-primary); color: #fff; border: none; }
+  .ps-widget__title { font-size: 0.875rem; font-weight: 700; color: var(--color-text); text-transform: uppercase; letter-spacing: 0.05em; margin: 0 0 0.75rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--color-accent); }
+  .ps-widget__title--light { color: #fff; }
+  .ps-widget__desc { font-size: 0.8125rem; color: rgba(255,255,255,0.75); margin: 0 0 0.75rem; }
+  .ps-widget__btn { display: block; text-align: center; padding: 0.625rem; border-radius: 6px; font-size: 0.875rem; font-weight: 600; text-decoration: none; margin-top: 0.5rem; background: var(--color-accent); color: #fff; transition: background 0.2s ease; }
+  .ps-widget__btn:hover { opacity: 0.9; }
+  .ps-widget__btn--wa { background: #25D366; }
+
+  .ps-specs { display: flex; flex-direction: column; margin: 0; }
+  .ps-specs__row { display: flex; justify-content: space-between; align-items: baseline; padding: 0.4rem 0; border-bottom: 1px solid var(--color-bg); gap: 0.75rem; }
+  .ps-specs__row:last-child { border-bottom: none; }
+  .ps-specs__row dt { font-size: 0.8125rem; color: var(--color-text-light); font-weight: 500; margin: 0; }
+  .ps-specs__row dd { font-size: 0.8125rem; font-weight: 600; color: var(--color-text); text-align: right; margin: 0; font-variant-numeric: tabular-nums; }
+
+  .ps-tags { display: flex; flex-wrap: wrap; gap: 0.375rem; }
+  .ps-tag { font-size: 0.6875rem; font-weight: 600; color: var(--color-text); padding: 0.3rem 0.75rem; background: var(--color-bg); border: 1px solid var(--color-border); border-radius: 6px; white-space: nowrap; }
+
+  .ps-pkg { display: flex; gap: 0.75rem; align-items: center; text-decoration: none; padding: 0.625rem 0; border-bottom: 1px solid var(--color-bg); }
+  .ps-pkg:last-of-type { border-bottom: none; }
+  .ps-pkg__img { width: 72px; height: 54px; object-fit: cover; border-radius: 8px; flex-shrink: 0; }
+  .ps-pkg__info { display: flex; flex-direction: column; gap: 0.125rem; }
+  .ps-pkg__name { font-size: 0.8125rem; font-weight: 600; color: var(--color-text); }
+  .ps-pkg__price { font-size: 0.75rem; font-weight: 700; color: var(--color-accent); font-variant-numeric: tabular-nums; }
+  .ps-pkg:hover .ps-pkg__name { color: var(--color-accent); }
+
+  .ps-upsell { margin-top: 0.75rem; padding-top: 0.75rem; border-top: 1px solid var(--color-bg); }
+  .ps-upsell__text { font-size: 0.75rem; color: var(--color-text-light); line-height: 1.5; margin: 0 0 0.375rem; }
+  .ps-upsell__link { font-size: 0.75rem; font-weight: 600; color: var(--color-accent); text-decoration: none; }
+  .ps-upsell__link:hover { text-decoration: underline; }
+
+  .ps-links { display: flex; flex-direction: column; }
+  .ps-link { padding: 0.4rem 0; border-bottom: 1px solid var(--color-bg); font-size: 0.8125rem; color: var(--color-text-light); text-decoration: none; }
+  .ps-link:last-child { border-bottom: none; }
+  .ps-link:hover { color: var(--color-accent); }
+
+  .ps-contact p { font-size: 0.8125rem; color: var(--color-text-light); margin: 0.3rem 0; }
+  .ps-contact a { color: var(--color-accent); text-decoration: none; }
 </style>

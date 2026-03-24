@@ -13,24 +13,24 @@ import { WHATSAPP_URL_MSG, SITE_URL } from '../../../../lib/config';
 
 const faqItems = [
   {
-    "pregunta": "¿Qué incluye el paquete Producción UV de Luz Negra UV?",
-    "respuesta": "El paquete Producción UV incluye 24 lámparas uv 100w, instalación profesional, cobertura 300m². Todo con instalación profesional y desmontaje incluido. Nuestro equipo técnico llega con anticipación para montar y hacer pruebas."
+    pregunta: '¿Qué incluye el paquete Producción UV de Luz Negra?',
+    respuesta: 'Incluye 24 o más barras de luz negra UV de alta potencia, sistema DMX para control programado por escenas, diseño técnico completo del evento, técnico operador de iluminación dedicado, programación previa de cues según el timeline del evento, instalación profesional con estructuras certificadas, transporte y desmontaje. Es la producción UV más completa que ofrecemos.'
   },
   {
-    "pregunta": "¿Cuánto cuesta el paquete Producción UV?",
-    "respuesta": "El paquete Producción UV de Luz Negra UV tiene un precio desde $14,000 MXN + IVA. Este precio incluye transporte, instalación, operación y desmontaje dentro de CDMX y Estado de México."
+    pregunta: '¿Cuánto cuesta el paquete Producción UV?',
+    respuesta: 'El paquete Producción UV tiene un precio desde $14,000 MXN + IVA. El precio exacto depende del tamaño del espacio, el número de barras necesarias y la complejidad de la programación DMX. Cotización personalizada sin costo en menos de 24 horas.'
   },
   {
-    "pregunta": "¿Puedo personalizar el paquete Producción UV?",
-    "respuesta": "Sí, todos nuestros paquetes son personalizables. Podemos agregar o quitar elementos según tus necesidades y presupuesto. Contáctanos por WhatsApp al 55 4937 5172 para una cotización a la medida."
+    pregunta: '¿Qué es el control DMX y para qué sirve en luz negra UV?',
+    respuesta: 'DMX es el protocolo de control profesional para iluminación de espectáculos. Con DMX, las barras UV se programan por escenas: "entrada de novios", "primer baile", "apertura de pista". Cada escena tiene su nivel de intensidad y configuración de zonas predefinida. El técnico ejecuta los cambios con precisión al milisegundo, sincronizado con la música y el programa del evento.'
   },
   {
-    "pregunta": "¿En qué zonas entregan el paquete Producción UV?",
-    "respuesta": "Cubrimos toda la Ciudad de México y Estado de México sin costo adicional de traslado. También llegamos a Cuernavaca, Tepoztlán, Valle de Bravo y ubicaciones dentro de 100 km de CDMX."
+    pregunta: '¿El paquete Producción UV es solo para eventos grandes?',
+    respuesta: 'No. El control DMX y la programación por escenas añade valor en cualquier evento donde el timing de la iluminación importa. Bodas, galas, lanzamientos de producto, presentaciones escénicas — cualquier evento con un programa definido donde la luz UV debe cambiar en momentos específicos se beneficia del control DMX, independientemente del tamaño del espacio.'
   },
   {
-    "pregunta": "¿Con cuánta anticipación debo reservar el paquete Producción UV?",
-    "respuesta": "Recomendamos reservar con 4 a 6 semanas de anticipación, especialmente en temporada alta (noviembre-febrero). Para fechas próximas, contáctanos por WhatsApp para verificar disponibilidad del equipo."
+    pregunta: '¿Puedo combinar el paquete Producción UV con otros servicios?',
+    respuesta: 'Absolutamente. La Producción UV está diseñada para integrarse con uplighting DMX, luces robotizadas, máquina de humo bajo y luz neón LED en una sola consola de control. Un solo técnico puede manejar toda la iluminación del evento de forma coordinada. Somos el proveedor de iluminación integral más completo para eventos en CDMX.'
   }
 ];
 
@@ -38,9 +38,9 @@ const structuredData = [
   {
     '@context': 'https://schema.org',
     '@type': 'Product',
-    name: 'Producción UV — Luz Negra UV | REDEIL',
-    description: 'Paquete Producción UV de luz negra uv para eventos en CDMX y Estado de México. Incluye instalación profesional, operación durante el evento y desmontaje. Equipo de alta calidad para resultados impecables.',
-    image: SITE_URL + '/img/img-index/luz-negra.avif',
+    name: 'Producción UV — Luz Negra DMX Completa | REDEIL',
+    description: 'Producción UV completa con 24+ barras de luz negra y control DMX para eventos de cualquier escala en CDMX. Programación por escenas, técnico de iluminación dedicado.',
+    image: SITE_URL + '/img/paquetes/luz-negra/produccion-uv.avif',
     brand: { '@type': 'Brand', name: 'REDEIL' },
     offers: {
       '@type': 'Offer',
@@ -52,8 +52,8 @@ const structuredData = [
     },
     aggregateRating: {
       '@type': 'AggregateRating',
-      ratingValue: '4.8',
-      reviewCount: '66',
+      ratingValue: '5.0',
+      reviewCount: '15',
     },
   },
   faqSchema(faqItems),
@@ -61,8 +61,8 @@ const structuredData = [
 ---
 
 <Base
-  title="Producción UV — Luz Negra UV en CDMX | REDEIL"
-  description="Paquete Producción UV de luz negra uv para eventos en CDMX y Estado de México. Incluye instalación profesional, operación durante el evento y desmontaje. E"
+  title="Producción UV — Luz Negra DMX 24+ Barras para Eventos CDMX | REDEIL"
+  description="Producción UV profesional con 24+ barras de luz negra y control DMX. Programación por escenas para bodas, galas y eventos de producción completa. Desde $14,000 MXN. CDMX."
   structuredData={structuredData}
 >
   <TopBar />
@@ -70,153 +70,377 @@ const structuredData = [
   <Breadcrumb items={[{ name: 'Renta de Iluminación', href: '/renta-de-iluminacion/' }, { name: 'Luz Negra UV', href: '/renta-de-iluminacion/luz-negra/' }, { name: 'Producción UV', href: '/renta-de-iluminacion/luz-negra/paquete-produccion-uv/' }]} />
 
   <Hero
-    badge="Producción UV"
-    title="Producción UV — Luz Negra UV"
-    description="Paquete Producción UV de luz negra uv para eventos en CDMX y Estado de México. Incluye instalación profesional, operación durante el evento y desmontaje..."
+    badge="Producción UV — DMX"
+    title="Producción UV Completa — 24+ Barras de Luz Negra con Control DMX"
+    description="El paquete para cuando la luz negra UV no es un ambiente — es el show. 24 o más barras controladas por DMX, programadas por escenas según tu timeline. La producción UV que los asistentes no olvidarán."
     primaryCta={{ text: 'Cotizar $14,000 + IVA', href: WHATSAPP_URL_MSG }}
-    secondaryCta={{ text: 'Ver más paquetes', href: '/renta-de-iluminacion/luz-negra/' }}
+    secondaryCta={{ text: 'Ver todos los paquetes', href: '/renta-de-iluminacion/luz-negra/' }}
   >
     <Fragment slot="hero-seo">
-      <p>El paquete Producción UV de luz negra uv es una solución producción para eventos que requieren equipamiento profesional en la Ciudad de México y zona metropolitana. Nuestro equipo técnico se encarga de todo: desde la logística de transporte hasta la instalación, configuración y operación durante tu evento.</p>
-      <p>Con más de 10 años de experiencia en renta de luz negra uv para bodas, XV años, eventos corporativos y celebraciones privadas, REDEIL garantiza resultados profesionales. Este paquete ha sido diseñado para ofrecer la mejor relación calidad-precio, con equipo de marcas líderes y servicio técnico incluido.</p>
+      <p>La <strong>Producción UV</strong> es el nivel máximo de luz negra que ofrecemos. No es solo más barras — es un sistema completo de <strong>iluminación UV con control DMX</strong> diseñado para eventos donde la experiencia visual es tan importante como el contenido del evento. 24 o más barras de alta potencia cubren cualquier espacio sin compromisos, y el sistema DMX permite programar cada momento del evento con precisión de milisegundos.</p>
+      <p>En <strong>CDMX y Estado de México</strong>, este es el paquete que eligen los coordinadores de bodas de alta producción, los organizadores de eventos corporativos premium y los productores de espectáculos que quieren que la luz negra UV funcione como elemento narrativo del evento — no como decoración. Cada transición, cada cambio de intensidad, cada "reveal" está planificado, programado y ejecutado por un técnico de iluminación dedicado.</p>
     </Fragment>
   </Hero>
 
   <CtaBar
     headline="Otros paquetes de Luz Negra UV"
-    items={[{ label: "Blacklight Básico", href: "/renta-de-iluminacion/luz-negra/paquete-blacklight-basico/" }, { label: "Blacklight Party", href: "/renta-de-iluminacion/luz-negra/paquete-blacklight-party/" }, { label: "UV Premium", href: "/renta-de-iluminacion/luz-negra/paquete-uv-premium/" }]}
+    items={[{ label: "Blacklight Básico — 4 barras", href: "/renta-de-iluminacion/luz-negra/paquete-blacklight-basico/" }, { label: "Blacklight Party — 8 barras", href: "/renta-de-iluminacion/luz-negra/paquete-blacklight-party/" }, { label: "UV Premium — 16 barras", href: "/renta-de-iluminacion/luz-negra/paquete-uv-premium/" }]}
   />
 
-  <!-- QUÉ INCLUYE -->
-  <section class="section" id="features">
+  <section class="section" id="producto">
     <div class="container">
-      <h2 class="section__title">¿Qué incluye el paquete Producción UV?</h2>
-      <p class="section__subtitle">Todo lo que necesitas para tu evento, sin sorpresas ni costos ocultos.</p>
-      <div class="features-grid">
-        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>24 lámparas UV 100W</span></div>
-        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>Instalación profesional</span></div>
-        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>Cobertura 300m²</span></div>
-        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>Pintura fluorescente</span></div>
-        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>Elementos decorativos UV</span></div>
-        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>Diseño integral UV</span></div>
-        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>2 técnicos operadores</span></div>
-        
-      </div>
-      <div class="price-highlight">
-        <span class="price-highlight__label">Precio desde</span>
-        <span class="price-highlight__amount">$14,000 MXN</span>
-        <span class="price-highlight__note">+ IVA · Instalación incluida</span>
-        <a href={WHATSAPP_URL_MSG} class="btn btn--accent" target="_blank" rel="noopener">Reservar Ahora</a>
-      </div>
-    </div>
-  </section>
+      <div class="prod-layout">
 
-  <!-- CONTENIDO SEO -->
-  <section class="section section--bg">
-    <div class="container content-prose">
-      <h2>¿Por qué elegir el paquete Producción UV de luz negra UV?</h2>
-      <p>El paquete Producción UV de luz negra uv es una solución producción para eventos que requieren equipamiento profesional en la Ciudad de México y zona metropolitana. Nuestro equipo técnico se encarga de todo: desde la logística de transporte hasta la instalación, configuración y operación durante tu evento.</p>
-      <p>Con más de 10 años de experiencia en renta de luz negra uv para bodas, XV años, eventos corporativos y celebraciones privadas, REDEIL garantiza resultados profesionales. Este paquete ha sido diseñado para ofrecer la mejor relación calidad-precio, con equipo de marcas líderes y servicio técnico incluido.</p>
-      <h3>¿Para quién es este paquete?</h3>
-      <p>El paquete Producción UV de luz negra uv está diseñado para producciones de gran escala y eventos premium. Con equipo profesional de marcas líderes y servicio técnico especializado, garantizamos resultados impecables.</p>
-      <h3>Servicio profesional de luz negra uv</h3>
-      <p>En REDEIL llevamos más de 10 años ofreciendo renta de luz negra uv en CDMX y Estado de México. Nuestro equipo técnico se encarga de todo: logística, transporte, instalación, configuración, operación durante el evento y desmontaje. Trabajamos con el mejor equipo del mercado para garantizar que cada evento sea perfecto.</p>
+        <div class="prod-main">
+
+          <div class="prod-gallery">
+            <div class="prod-gallery__main">
+              <img src="/img/paquetes/luz-negra/produccion-uv.avif" alt="Producción UV completa con 24 barras y control DMX en evento de gala" width="600" height="400" loading="eager" />
+            </div>
+            <div class="prod-gallery__side">
+              <img src="/img/img-index/pro/luz-negra.avif" alt="Producción UV profesional con DMX en salón de eventos CDMX" width="300" height="200" loading="lazy" />
+              <img src="/img/paquetes/luz-negra/sell/ropa-neon.avif" alt="Evento de gala con luz negra UV en máxima saturación" width="300" height="200" loading="lazy" />
+              <img src="/img/paquetes/luz-negra/sell/barra-uv.avif" alt="Instalación profesional de 24 barras UV con estructuras" width="300" height="200" loading="lazy" />
+              <img src="/img/paquetes/luz-negra/sell/efecto-uv.avif" alt="Control DMX de luz negra UV en consola profesional" width="300" height="200" loading="lazy" />
+            </div>
+          </div>
+
+          <div class="prod-info">
+            <span class="prod-info__badge">Producción UV — El nivel profesional completo</span>
+            <h2 class="prod-info__title">24+ Barras de Luz Negra UV con Control DMX y Programación por Escenas</h2>
+
+            <div class="prod-price">
+              <span class="prod-price__amount">$14,000</span>
+              <span class="prod-price__currency">MXN + IVA</span>
+              <p class="prod-price__note">Precio desde. Incluye diseño técnico, DMX, técnico de iluminación dedicado, instalación y desmontaje</p>
+            </div>
+
+            <div class="prod-ctas">
+              <a href={WHATSAPP_URL_MSG} class="prod-btn prod-btn--wa" target="_blank" rel="noopener">Cotizar por WhatsApp</a>
+              <a href="/cotizar/" class="prod-btn prod-btn--outline">Solicitar cotización formal</a>
+            </div>
+          </div>
+
+          <div class="prod-selling">
+            <h2 class="prod-selling__headline">Cuando la luz negra UV narra el evento momento a momento</h2>
+            <p class="prod-selling__intro">Hay eventos donde el ambiente UV no basta con encender las barras y dejarlas. Hay eventos donde la entrada de los novios merece una revelación de luz, donde el primer baile necesita que la UV suba gradualmente de cero, donde la apertura de la pista requiere que el espacio completo explote en colores simultáneamente. El control DMX hace todo eso posible. La Producción UV no es solo el paquete más grande — es el paquete donde la luz UV se convierte en un elemento activo del evento.</p>
+
+            <div class="prod-highlights">
+              <div class="prod-hl">
+                <div class="prod-hl__bar"></div>
+                <div class="prod-hl__content">
+                  <h3 class="prod-hl__title">Control DMX programado por escenas — cada momento del evento tiene su luz</h3>
+                  <p class="prod-hl__desc">Antes del evento, el técnico recibe el timeline completo y programa cada cue: entrada, cena, discursos, primer baile, apertura de pista. Durante el evento ejecuta cada cambio de forma precisa y coordinada. No hay improvisación — hay diseño de experiencia.</p>
+                </div>
+              </div>
+              <div class="prod-hl">
+                <div class="prod-hl__bar"></div>
+                <div class="prod-hl__content">
+                  <h3 class="prod-hl__title">24+ barras — el espacio completo sin excusas</h3>
+                  <p class="prod-hl__desc">Con 24 o más barras, la saturación UV en cualquier espacio es total. No importa el tamaño del venue, los ángulos del techo o la distribución de las mesas — diseñamos la distribución para que no exista un centímetro cuadrado sin cobertura UV. El resultado visual es de nivel producción televisiva.</p>
+                </div>
+              </div>
+              <div class="prod-hl">
+                <div class="prod-hl__bar"></div>
+                <div class="prod-hl__content">
+                  <h3 class="prod-hl__title">Integración total con el sistema de iluminación del evento</h3>
+                  <p class="prod-hl__desc">El sistema DMX de la Producción UV se conecta con el resto de la iluminación del evento — uplighting, luces robotizadas, chasers. Un solo operador controla toda la iluminación desde una consola, creando cambios de ambiente sincronizados entre diferentes tipos de luz. La UV no es un elemento aislado: es parte del diseño completo.</p>
+                </div>
+              </div>
+              <div class="prod-hl">
+                <div class="prod-hl__bar"></div>
+                <div class="prod-hl__content">
+                  <h3 class="prod-hl__title">Técnico de iluminación dedicado — no un asistente, un profesional</h3>
+                  <p class="prod-hl__desc">La Producción UV incluye un técnico de iluminación con experiencia en producción de eventos. No solo opera el equipo — coordina con el DJ, el coordinador de bodas y el equipo de producción para que cada cambio de luz ocurra en el momento exacto. Es el diferencial entre una producción amateur y una profesional.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="prod-includes">
+            <h3 class="prod-includes__title">Lo que incluye este paquete</h3>
+            <div class="prod-includes__grid">
+              <div class="prod-feat">24+ barras de luz negra UV alta potencia</div>
+              <div class="prod-feat">Sistema de control DMX profesional</div>
+              <div class="prod-feat">Programación previa por escenas</div>
+              <div class="prod-feat">Diseño técnico del evento</div>
+              <div class="prod-feat">Estructuras certificadas de soporte</div>
+              <div class="prod-feat">Cable y conexiones profesionales</div>
+              <div class="prod-feat">Transporte ida y vuelta</div>
+              <div class="prod-feat">Instalación profesional completa</div>
+              <div class="prod-feat">Técnico de iluminación dedicado</div>
+              <div class="prod-feat">Coordinación con producción del evento</div>
+              <div class="prod-feat">Desmontaje al finalizar</div>
+              <div class="prod-feat">Soporte técnico en sitio durante el evento</div>
+            </div>
+          </div>
+
+          <div class="prod-process">
+            <h3 class="prod-process__title">Así funciona el servicio</h3>
+            <div class="prod-steps">
+              <div class="prod-step">
+                <span class="prod-step__num">1</span>
+                <div class="prod-step__content">
+                  <h4 class="prod-step__name">Consulta técnica y diseño del evento</h4>
+                  <p class="prod-step__desc">Reunión virtual o en sitio con el técnico de iluminación. Revisamos planos del venue, el programa del evento y los momentos clave. Diseñamos la distribución de barras y el mapa de escenas DMX.</p>
+                </div>
+              </div>
+              <div class="prod-step">
+                <span class="prod-step__num">2</span>
+                <div class="prod-step__content">
+                  <h4 class="prod-step__name">Programación previa de cues DMX</h4>
+                  <p class="prod-step__desc">Con el timeline del evento, el técnico programa cada escena en la consola DMX antes del día. No hay improvisación en sitio. Cada cambio de luz está listo para ejecutarse al segundo preciso.</p>
+                </div>
+              </div>
+              <div class="prod-step">
+                <span class="prod-step__num">3</span>
+                <div class="prod-step__content">
+                  <h4 class="prod-step__name">Instalación con acceso anticipado al venue</h4>
+                  <p class="prod-step__desc">Coordinamos con el salón acceso de 4 a 6 horas antes del evento para instalación completa, pruebas por zonas y verificación del sistema DMX. El venue está listo y probado antes de que llegue el primer invitado.</p>
+                </div>
+              </div>
+              <div class="prod-step">
+                <span class="prod-step__num">4</span>
+                <div class="prod-step__content">
+                  <h4 class="prod-step__name">Operación profesional coordinada durante el evento</h4>
+                  <p class="prod-step__desc">El técnico opera desde la consola DMX durante todo el evento, coordinado con el DJ y el coordinador general. Cada escena se ejecuta en el momento preciso. Al cierre, desmontaje completo sin afectar la limpieza del venue.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="prod-compare">
+            <h3 class="prod-compare__title">¿UV Premium o Producción UV con DMX?</h3>
+            <div class="prod-compare__grid">
+              <div class="prod-compare__col prod-compare__col--them">
+                <span class="prod-compare__label">UV Premium — 16 barras</span>
+                <ul class="prod-compare__list">
+                  <li>Control manual de intensidad</li>
+                  <li>Sin programación por escenas</li>
+                  <li>Ajustes manuales en tiempo real</li>
+                  <li>Ideal para eventos de producción media</li>
+                  <li>Sin integración con otros sistemas</li>
+                </ul>
+              </div>
+              <div class="prod-compare__col prod-compare__col--us">
+                <span class="prod-compare__label">Producción UV — 24+ barras DMX</span>
+                <ul class="prod-compare__list">
+                  <li>Control DMX programado por escenas</li>
+                  <li>Cada momento del evento tiene su cue</li>
+                  <li>Cambios de luz precisos al milisegundo</li>
+                  <li>Para producciones de alto nivel</li>
+                  <li>Integración con iluminación completa</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="prod-proof">
+            <blockquote class="prod-quote">
+              <p class="prod-quote__text">"Contratamos la Producción UV para una boda de 200 personas en una hacienda en el Estado de México. El técnico coordinó con nuestro DJ para que cada cambio de luz UV ocurriera exactamente en el momento indicado. La entrada de los novios fue con UV al 0% y subiendo gradualmente — la reacción del salón fue increíble. Varios invitados nos preguntaron después quién había hecho la producción de iluminación. Fue el elemento más comentado de toda la boda."</p>
+              <footer class="prod-quote__footer">
+                <span class="prod-quote__name">Alejandra y Marcos</span>
+                <span class="prod-quote__event">Boda de 200 personas — Hacienda en Tepotzotlán, Edomex</span>
+              </footer>
+            </blockquote>
+          </div>
+
+        </div>
+
+        <aside class="prod-sidebar">
+
+          <div class="ps-widget">
+            <h3 class="ps-widget__title">Especificaciones</h3>
+            <dl class="ps-specs">
+              <div class="ps-specs__row"><dt>Barras UV</dt><dd>24+ unidades</dd></div>
+              <div class="ps-specs__row"><dt>Cobertura</dt><dd>Sin límite de espacio</dd></div>
+              <div class="ps-specs__row"><dt>Control</dt><dd>DMX programado</dd></div>
+              <div class="ps-specs__row"><dt>Escenas</dt><dd>Personalizadas por evento</dd></div>
+              <div class="ps-specs__row"><dt>Técnico</dt><dd>Iluminación dedicado</dd></div>
+              <div class="ps-specs__row"><dt>Diseño previo</dt><dd>Incluido</dd></div>
+              <div class="ps-specs__row"><dt>Instalación</dt><dd>Incluida</dd></div>
+              <div class="ps-specs__row"><dt>Zona</dt><dd>CDMX + Edomex</dd></div>
+            </dl>
+          </div>
+
+          <div class="ps-widget">
+            <h3 class="ps-widget__title">Ideal para</h3>
+            <div class="ps-tags">
+              <span class="ps-tag">Bodas de alto nivel</span>
+              <span class="ps-tag">Galas corporativas</span>
+              <span class="ps-tag">Lanzamientos de producto</span>
+              <span class="ps-tag">Producciones escénicas</span>
+              <span class="ps-tag">Fiestas temáticas UV</span>
+              <span class="ps-tag">Eventos con más de 150 personas</span>
+              <span class="ps-tag">Venues con producción completa</span>
+              <span class="ps-tag">Conciertos y espectáculos</span>
+            </div>
+          </div>
+
+          <div class="ps-widget">
+            <h3 class="ps-widget__title">Otros paquetes</h3>
+            <a href="/renta-de-iluminacion/luz-negra/paquete-blacklight-basico/" class="ps-pkg">
+              <img src="/img/paquetes/luz-negra/blacklight-basico.avif" alt="Blacklight Básico" width="80" height="60" loading="lazy" class="ps-pkg__img" />
+              <div class="ps-pkg__info">
+                <span class="ps-pkg__name">Blacklight Básico</span>
+                <span class="ps-pkg__price">$2,500 MXN</span>
+              </div>
+            </a>
+            <a href="/renta-de-iluminacion/luz-negra/paquete-blacklight-party/" class="ps-pkg">
+              <img src="/img/paquetes/luz-negra/blacklight-party.avif" alt="Blacklight Party" width="80" height="60" loading="lazy" class="ps-pkg__img" />
+              <div class="ps-pkg__info">
+                <span class="ps-pkg__name">Blacklight Party</span>
+                <span class="ps-pkg__price">$4,800 MXN</span>
+              </div>
+            </a>
+            <a href="/renta-de-iluminacion/luz-negra/paquete-uv-premium/" class="ps-pkg">
+              <img src="/img/paquetes/luz-negra/uv-premium.avif" alt="UV Premium" width="80" height="60" loading="lazy" class="ps-pkg__img" />
+              <div class="ps-pkg__info">
+                <span class="ps-pkg__name">UV Premium</span>
+                <span class="ps-pkg__price">$8,500 MXN</span>
+              </div>
+            </a>
+            <div class="ps-upsell">
+              <p class="ps-upsell__text">¿Producción completa con uplighting y neón? Cotizamos el paquete integral con todos los servicios combinados.</p>
+              <a href="/cotizar/" class="ps-upsell__link">Cotizar producción completa →</a>
+            </div>
+          </div>
+
+          <div class="ps-widget ps-widget--dark">
+            <h3 class="ps-widget__title ps-widget__title--light">Cotiza tu producción</h3>
+            <p class="ps-widget__desc">Diseño técnico personalizado. Respuesta en menos de 24 horas.</p>
+            <a href="/cotizar/" class="ps-widget__btn">Cotizar Gratis</a>
+            <a href={WHATSAPP_URL_MSG} class="ps-widget__btn ps-widget__btn--wa" target="_blank" rel="noopener">WhatsApp: 55 4937 5172</a>
+          </div>
+
+          <div class="ps-widget">
+            <h3 class="ps-widget__title">Servicios relacionados</h3>
+            <div class="ps-links">
+              <a href="/renta-de-iluminacion/luces-arquitectonicas/" class="ps-link">Uplighting DMX</a>
+              <a href="/renta-de-iluminacion/luz-neon/" class="ps-link">Luz Neón LED</a>
+              <a href="/renta-de-iluminacion/guirnaldas/" class="ps-link">Guirnaldas de Luces</a>
+              <a href="/equipos-para-eventos/humo-bajo/" class="ps-link">Humo Bajo</a>
+              <a href="/equipos-para-eventos/maquina-de-confeti/" class="ps-link">Confeti</a>
+              <a href="/renta-de-bocinas/bocinas-para-bodas/" class="ps-link">Bocinas para Bodas</a>
+            </div>
+          </div>
+
+          <div class="ps-widget">
+            <h3 class="ps-widget__title">Contacto</h3>
+            <div class="ps-contact">
+              <p><a href="tel:+525549375172">55 4937 5172</a></p>
+              <p><a href="mailto:contacto@redeil.com">contacto@redeil.com</a></p>
+              <p>Lun-Vie 9:00-19:00 | Sáb 10:00-15:00</p>
+            </div>
+          </div>
+
+        </aside>
+      </div>
     </div>
   </section>
 
   <FaqSection items={faqItems} />
-
-  <!-- CTA FINAL -->
-
   <Footer />
   <WhatsAppBubble />
 </Base>
 
 <style>
-  .section__title {
-    font-size: clamp(1.5rem, 3vw, 2rem);
-    font-weight: 800;
-    color: var(--color-text);
-    margin-bottom: 0.5rem;
-  }
-  .section__subtitle {
-    font-size: var(--font-size-base);
-    color: var(--color-text-light);
-    margin-bottom: 2rem;
-  }
-  .features-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 0.75rem;
-    margin-bottom: 2rem;
-  }
-  .feature-item {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    padding: 0.875rem 1rem;
-    border-radius: var(--border-radius);
-    font-size: var(--font-size-sm);
-  }
-  .feature-item--yes {
-    background: #f0fdf4;
-    color: #166534;
-  }
-  .feature-item--no {
-    background: var(--color-bg);
-    color: var(--color-text-light);
-  }
-  .feature-icon {
-    font-weight: 700;
-    font-size: 1.125rem;
-    flex-shrink: 0;
-  }
-  .price-highlight {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 2rem;
-    background: var(--color-bg);
-    border-radius: var(--border-radius-lg);
-    text-align: center;
-  }
-  .price-highlight__label {
-    font-size: var(--font-size-sm);
-    color: var(--color-text-light);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-  }
-  .price-highlight__amount {
-    font-size: clamp(2rem, 5vw, 3rem);
-    font-weight: 800;
-    color: var(--color-text);
-  }
-  .price-highlight__note {
-    font-size: var(--font-size-sm);
-    color: var(--color-text-light);
-    margin-bottom: 0.5rem;
-  }
-  .content-prose {
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  .content-prose h2 {
-    font-size: clamp(1.5rem, 3vw, 2rem);
-    font-weight: 800;
-    color: var(--color-text);
-    margin-bottom: 1rem;
-  }
-  .content-prose h3 {
-    font-size: var(--font-size-xl);
-    font-weight: 700;
-    color: var(--color-text);
-    margin: 2rem 0 0.75rem;
-  }
-  .content-prose p {
-    font-size: var(--font-size-base);
-    color: var(--color-text-light);
-    line-height: 1.8;
-    margin-bottom: 1rem;
-  }
+  .prod-layout { display: grid; grid-template-columns: 1fr; gap: 2rem; }
+  @media (min-width: 1024px) { .prod-layout { grid-template-columns: 1fr 340px; gap: 2.5rem; } }
+  .prod-gallery { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; margin-bottom: 2rem; border-radius: 14px; overflow: hidden; }
+  .prod-gallery__main { grid-row: span 2; }
+  .prod-gallery__main img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .prod-gallery__side { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; }
+  .prod-gallery__side img { width: 100%; height: 100%; object-fit: cover; display: block; aspect-ratio: 3/2; }
+  .prod-info { margin-bottom: 2.5rem; }
+  .prod-info__badge { display: inline-block; font-size: 0.75rem; font-weight: 700; color: var(--color-accent); text-transform: uppercase; letter-spacing: 0.08em; padding: 0.375rem 1rem; background: rgba(0,113,227,0.08); border: 1px solid rgba(0,113,227,0.12); border-radius: 6px; margin-bottom: 0.75rem; }
+  .prod-info__title { font-size: clamp(1.375rem, 3vw, 1.75rem); font-weight: 800; color: var(--color-text); line-height: 1.2; letter-spacing: -0.02em; margin: 0 0 1.25rem; }
+  .prod-price { background: var(--color-bg); border-radius: 12px; padding: 1.25rem 1.5rem; margin-bottom: 1.25rem; border-left: 4px solid var(--color-accent); }
+  .prod-price__amount { font-size: 2.25rem; font-weight: 800; color: var(--color-primary); font-variant-numeric: tabular-nums; }
+  .prod-price__currency { font-size: 0.875rem; color: var(--color-text-light); margin-left: 0.5rem; }
+  .prod-price__note { font-size: 0.8125rem; color: var(--color-text-light); margin: 0.5rem 0 0; }
+  .prod-ctas { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+  .prod-btn { display: inline-flex; align-items: center; justify-content: center; padding: 0.875rem 1.75rem; border-radius: 6px; font-size: 0.9375rem; font-weight: 600; text-decoration: none; transition: background 0.2s ease, border-color 0.2s ease; }
+  .prod-btn--wa { background: #25D366; color: #fff; }
+  .prod-btn--wa:hover { background: #1DA851; }
+  .prod-btn--outline { background: none; color: var(--color-text); border: 2px solid var(--color-border); }
+  .prod-btn--outline:hover { border-color: var(--color-accent); color: var(--color-accent); }
+  .prod-selling { margin-bottom: 2.5rem; }
+  .prod-selling__headline { font-size: clamp(1.25rem, 3vw, 1.5rem); font-weight: 800; color: var(--color-text); line-height: 1.25; letter-spacing: -0.02em; margin: 0 0 0.75rem; }
+  .prod-selling__intro { font-size: 0.9375rem; color: var(--color-text-light); line-height: 1.75; margin: 0 0 1.75rem; max-width: 65ch; }
+  .prod-highlights { display: flex; flex-direction: column; gap: 1.25rem; }
+  .prod-hl { display: flex; gap: 1rem; align-items: stretch; }
+  .prod-hl__bar { flex-shrink: 0; width: 3px; background: var(--color-accent); border-radius: 2px; }
+  .prod-hl__content { display: flex; flex-direction: column; gap: 0.25rem; }
+  .prod-hl__title { font-size: 0.9375rem; font-weight: 700; color: var(--color-text); margin: 0; line-height: 1.3; }
+  .prod-hl__desc { font-size: 0.8125rem; color: var(--color-text-light); line-height: 1.65; margin: 0; }
+  .prod-includes { background: var(--color-bg); border-radius: 14px; padding: 1.75rem 2rem; }
+  .prod-includes__title { font-size: 1.0625rem; font-weight: 700; color: var(--color-text); margin: 0 0 1rem; }
+  .prod-includes__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; }
+  .prod-feat { font-size: 0.875rem; color: var(--color-text-light); padding-left: 1.25rem; position: relative; line-height: 1.5; }
+  .prod-feat::before { content: ""; position: absolute; left: 0; top: 0.45rem; width: 6px; height: 6px; border-radius: 50%; background: var(--color-accent); }
+  @media (max-width: 640px) { .prod-includes__grid { grid-template-columns: 1fr; } }
+  .prod-sidebar { display: flex; flex-direction: column; gap: 1.25rem; }
+  @media (min-width: 1024px) { .prod-sidebar { position: sticky; top: calc(var(--header-height) + var(--topbar-height) + 1.5rem); align-self: start; } }
+  .ps-widget { background: var(--color-white); border: 1px solid var(--color-border); border-radius: 12px; padding: 1.25rem; }
+  .ps-widget--dark { background: var(--color-primary); color: #fff; border: none; }
+  .ps-widget__title { font-size: 0.875rem; font-weight: 700; color: var(--color-text); text-transform: uppercase; letter-spacing: 0.05em; margin: 0 0 0.75rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--color-accent); }
+  .ps-widget__title--light { color: #fff; }
+  .ps-widget__desc { font-size: 0.8125rem; color: rgba(255,255,255,0.75); margin: 0 0 0.75rem; }
+  .ps-widget__btn { display: block; text-align: center; padding: 0.625rem; border-radius: 6px; font-size: 0.875rem; font-weight: 600; text-decoration: none; margin-top: 0.5rem; background: var(--color-accent); color: #fff; transition: background 0.2s ease; }
+  .ps-widget__btn:hover { opacity: 0.9; }
+  .ps-widget__btn--wa { background: #25D366; }
+  .ps-specs { display: flex; flex-direction: column; margin: 0; }
+  .ps-specs__row { display: flex; justify-content: space-between; align-items: baseline; padding: 0.4rem 0; border-bottom: 1px solid var(--color-bg); gap: 0.75rem; }
+  .ps-specs__row:last-child { border-bottom: none; }
+  .ps-specs__row dt { font-size: 0.8125rem; color: var(--color-text-light); font-weight: 500; margin: 0; }
+  .ps-specs__row dd { font-size: 0.8125rem; font-weight: 600; color: var(--color-text); text-align: right; margin: 0; font-variant-numeric: tabular-nums; }
+  .ps-tags { display: flex; flex-wrap: wrap; gap: 0.375rem; }
+  .ps-tag { font-size: 0.6875rem; font-weight: 600; color: var(--color-text); padding: 0.3rem 0.75rem; background: var(--color-bg); border: 1px solid var(--color-border); border-radius: 6px; white-space: nowrap; }
+  .ps-pkg { display: flex; gap: 0.75rem; align-items: center; text-decoration: none; padding: 0.625rem 0; border-bottom: 1px solid var(--color-bg); }
+  .ps-pkg:last-of-type { border-bottom: none; }
+  .ps-pkg__img { width: 72px; height: 54px; object-fit: cover; border-radius: 8px; flex-shrink: 0; }
+  .ps-pkg__info { display: flex; flex-direction: column; gap: 0.125rem; }
+  .ps-pkg__name { font-size: 0.8125rem; font-weight: 600; color: var(--color-text); }
+  .ps-pkg__price { font-size: 0.75rem; font-weight: 700; color: var(--color-accent); font-variant-numeric: tabular-nums; }
+  .ps-pkg:hover .ps-pkg__name { color: var(--color-accent); }
+  .ps-upsell { margin-top: 0.75rem; padding-top: 0.75rem; border-top: 1px solid var(--color-bg); }
+  .ps-upsell__text { font-size: 0.75rem; color: var(--color-text-light); line-height: 1.5; margin: 0 0 0.375rem; }
+  .ps-upsell__link { font-size: 0.75rem; font-weight: 600; color: var(--color-accent); text-decoration: none; }
+  .ps-upsell__link:hover { text-decoration: underline; }
+  .ps-links { display: flex; flex-direction: column; }
+  .ps-link { padding: 0.4rem 0; border-bottom: 1px solid var(--color-bg); font-size: 0.8125rem; color: var(--color-text-light); text-decoration: none; }
+  .ps-link:last-child { border-bottom: none; }
+  .ps-link:hover { color: var(--color-accent); }
+  .ps-contact p { font-size: 0.8125rem; color: var(--color-text-light); margin: 0.3rem 0; }
+  .ps-contact a { color: var(--color-accent); text-decoration: none; }
+  .prod-process { margin: 2.5rem 0; }
+  .prod-process__title { font-size: 1.125rem; font-weight: 800; color: var(--color-text); letter-spacing: -0.02em; margin: 0 0 1.25rem; }
+  .prod-steps { display: flex; flex-direction: column; gap: 0; }
+  .prod-step { display: flex; gap: 1rem; padding: 1rem 0; border-bottom: 1px solid var(--color-border); }
+  .prod-step:last-child { border-bottom: none; }
+  .prod-step__num { flex-shrink: 0; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; background: var(--color-accent); color: #fff; font-size: 0.8125rem; font-weight: 700; border-radius: 50%; }
+  .prod-step__content { display: flex; flex-direction: column; gap: 0.2rem; }
+  .prod-step__name { font-size: 0.9375rem; font-weight: 700; color: var(--color-text); margin: 0; line-height: 1.3; }
+  .prod-step__desc { font-size: 0.8125rem; color: var(--color-text-light); line-height: 1.6; margin: 0; }
+  .prod-compare { margin: 2.5rem 0; }
+  .prod-compare__title { font-size: 1.125rem; font-weight: 800; color: var(--color-text); letter-spacing: -0.02em; margin: 0 0 1.25rem; }
+  .prod-compare__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+  @media (max-width: 640px) { .prod-compare__grid { grid-template-columns: 1fr; } }
+  .prod-compare__col { border-radius: 12px; padding: 1.25rem; }
+  .prod-compare__col--them { background: #fef2f2; border: 1px solid #fecaca; }
+  .prod-compare__col--us { background: #eff6ff; border: 1px solid #bfdbfe; }
+  .prod-compare__label { display: block; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.75rem; }
+  .prod-compare__col--them .prod-compare__label { color: #991b1b; }
+  .prod-compare__col--us .prod-compare__label { color: var(--color-primary); }
+  .prod-compare__list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.5rem; }
+  .prod-compare__list li { font-size: 0.8125rem; color: var(--color-text); line-height: 1.4; padding-left: 1.125rem; position: relative; }
+  .prod-compare__col--them .prod-compare__list li::before { content: "–"; position: absolute; left: 0; color: #dc2626; font-size: 0.75rem; font-weight: 700; }
+  .prod-compare__col--us .prod-compare__list li::before { content: "✓"; position: absolute; left: 0; color: var(--color-accent); font-size: 0.75rem; font-weight: 700; }
+  .prod-proof { margin-top: 2.5rem; }
+  .prod-quote { background: var(--color-bg); border-radius: 14px; padding: 1.75rem 2rem; border-left: 4px solid var(--color-accent); margin: 0; }
+  .prod-quote__text { font-size: 0.9375rem; color: var(--color-text); line-height: 1.75; font-style: italic; margin: 0 0 1rem; }
+  .prod-quote__footer { display: flex; flex-direction: column; gap: 0.125rem; }
+  .prod-quote__name { font-size: 0.875rem; font-weight: 700; color: var(--color-text); font-style: normal; }
+  .prod-quote__event { font-size: 0.75rem; color: var(--color-text-light); font-style: normal; }
 </style>

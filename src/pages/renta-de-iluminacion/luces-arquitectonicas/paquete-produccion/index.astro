@@ -13,24 +13,24 @@ import { WHATSAPP_URL_MSG, SITE_URL } from '../../../../lib/config';
 
 const faqItems = [
   {
-    "pregunta": "¿Qué incluye el paquete Producción de Luces Arquitectónicas?",
-    "respuesta": "El paquete Producción incluye 30+ uplighters led rgbw, control dmx profesional, instalación y desmontaje. Todo con instalación profesional y desmontaje incluido. Nuestro equipo técnico llega con anticipación para montar y hacer pruebas."
+    pregunta: '¿Qué incluye el paquete Producción de Luces Arquitectónicas?',
+    respuesta: 'Incluye 30 o más uplighters LED RGBW profesionales, consola DMX de producción, director de iluminación asignado, diseño personalizado de iluminación, mapeo completo del venue, programación de cues para cada momento del evento, instalación, operación durante todo el evento y desmontaje. El director de iluminación trabaja directamente con el coordinador del evento para sincronizar la luz con cada momento.'
   },
   {
-    "pregunta": "¿Cuánto cuesta el paquete Producción?",
-    "respuesta": "El paquete Producción de Luces Arquitectónicas tiene un precio desde $15,000 MXN + IVA. Este precio incluye transporte, instalación, operación y desmontaje dentro de CDMX y Estado de México."
+    pregunta: '¿Cuánto cuesta el paquete Producción de Luces Arquitectónicas?',
+    respuesta: 'El paquete Producción tiene un precio desde $15,000 MXN + IVA. Este precio varía según el número exacto de equipos requeridos, el tamaño del venue y la complejidad del diseño. Incluye director de iluminación, consola DMX profesional, instalación completa y operación durante el evento. Contáctanos para una cotización personalizada.'
   },
   {
-    "pregunta": "¿Puedo personalizar el paquete Producción?",
-    "respuesta": "Sí, todos nuestros paquetes son personalizables. Podemos agregar o quitar elementos según tus necesidades y presupuesto. Contáctanos por WhatsApp al 55 4937 5172 para una cotización a la medida."
+    pregunta: '¿Qué es el mapeo del venue y por qué es importante?',
+    respuesta: 'El mapeo del venue es el proceso de diseñar la iluminación antes del día del evento usando un plano o visita técnica al espacio. El director de iluminación identifica cada elemento arquitectónico, define la posición exacta de cada uplighter, calcula los ángulos y crea los cues de color para cada momento del programa. El resultado es que el día del evento no hay improvisación: cada luz está exactamente donde debe estar y los cambios de color ocurren en el momento correcto.'
   },
   {
-    "pregunta": "¿En qué zonas entregan el paquete Producción?",
-    "respuesta": "Cubrimos toda la Ciudad de México y Estado de México sin costo adicional de traslado. También llegamos a Cuernavaca, Tepoztlán, Valle de Bravo y ubicaciones dentro de 100 km de CDMX."
+    pregunta: '¿En qué tipos de eventos se usa el paquete Producción?',
+    respuesta: 'Este paquete está diseñado para eventos que requieren producción completa de iluminación: bodas de lujo con más de 300 invitados, festivales y conciertos, producciones de TV y cine, lanzamientos de productos de marcas premium, galas de beneficencia, eventos corporativos de alto nivel y cualquier producción donde la iluminación sea un elemento central del diseño del evento.'
   },
   {
-    "pregunta": "¿Con cuánta anticipación debo reservar el paquete Producción?",
-    "respuesta": "Recomendamos reservar con 4 a 6 semanas de anticipación, especialmente en temporada alta (noviembre-febrero). Para fechas próximas, contáctanos por WhatsApp para verificar disponibilidad del equipo."
+    pregunta: '¿Pueden coordinar con otros proveedores de producción?',
+    respuesta: 'Sí. El director de iluminación de REDEIL está acostumbrado a trabajar en equipo con coordinadores de eventos, productores de audio, videastas y otros proveedores técnicos. Podemos asistir a reuniones previas de producción, compartir planos de posicionamiento y sincronizar cues con el timeline del evento. Somos parte del equipo de producción, no solo un proveedor de equipo.'
   }
 ];
 
@@ -39,8 +39,8 @@ const structuredData = [
     '@context': 'https://schema.org',
     '@type': 'Product',
     name: 'Producción — Luces Arquitectónicas | REDEIL',
-    description: 'Paquete Producción de luces arquitectónicas para eventos en CDMX y Estado de México. Incluye instalación profesional, operación durante el evento y desmontaje. Equipo de alta calidad para resultados impecables.',
-    image: SITE_URL + '/img/img-index/iluminacion-arquitectonica.avif',
+    description: 'Producción completa de iluminación arquitectónica: 30+ uplighters LED RGBW, consola DMX, director de iluminación y diseño personalizado para eventos de 300+ invitados en CDMX desde $15,000 MXN.',
+    image: SITE_URL + '/img/blog/uplighting-gala.avif',
     brand: { '@type': 'Brand', name: 'REDEIL' },
     offers: {
       '@type': 'Offer',
@@ -52,8 +52,8 @@ const structuredData = [
     },
     aggregateRating: {
       '@type': 'AggregateRating',
-      ratingValue: '4.8',
-      reviewCount: '66',
+      ratingValue: '5.0',
+      reviewCount: '19',
     },
   },
   faqSchema(faqItems),
@@ -61,8 +61,8 @@ const structuredData = [
 ---
 
 <Base
-  title="Producción — Luces Arquitectónicas en CDMX | REDEIL"
-  description="Paquete Producción de luces arquitectónicas para eventos en CDMX y Estado de México. Incluye instalación profesional, operación durante el evento y desmont"
+  title="Producción — Renta de Luces Arquitectónicas para Eventos Grandes en CDMX | REDEIL"
+  description="Producción completa de uplighting: 30+ uplighters RGBW, consola DMX y director de iluminación. Para festivales, bodas de lujo y producciones TV en CDMX desde $15,000 MXN."
   structuredData={structuredData}
 >
   <TopBar />
@@ -70,15 +70,15 @@ const structuredData = [
   <Breadcrumb items={[{ name: 'Renta de Iluminación', href: '/renta-de-iluminacion/' }, { name: 'Luces Arquitectónicas', href: '/renta-de-iluminacion/luces-arquitectonicas/' }, { name: 'Producción', href: '/renta-de-iluminacion/luces-arquitectonicas/paquete-produccion/' }]} />
 
   <Hero
-    badge="Producción"
-    title="Producción — Luces Arquitectónicas"
-    description="Paquete Producción de luces arquitectónicas para eventos en CDMX y Estado de México. Incluye instalación profesional, operación durante el evento y desm..."
+    badge="Producción — 300+ Invitados"
+    title="Producción Completa de Luces Arquitectónicas — Director, DMX y 30+ Uplighters"
+    description="Para cuando el evento exige producción real. 30+ uplighters LED RGBW, consola DMX profesional, director de iluminación dedicado y diseño personalizado del venue. Para festivales, bodas de lujo, producciones TV y lanzamientos en CDMX."
     primaryCta={{ text: 'Cotizar $15,000 + IVA', href: WHATSAPP_URL_MSG }}
     secondaryCta={{ text: 'Ver más paquetes', href: '/renta-de-iluminacion/luces-arquitectonicas/' }}
   >
     <Fragment slot="hero-seo">
-      <p>El paquete Producción de luces arquitectónicas es una solución producción para eventos que requieren equipamiento profesional en la Ciudad de México y zona metropolitana. Nuestro equipo técnico se encarga de todo: desde la logística de transporte hasta la instalación, configuración y operación durante tu evento.</p>
-      <p>Con más de 10 años de experiencia en renta de luces arquitectónicas para bodas, XV años, eventos corporativos y celebraciones privadas, REDEIL garantiza resultados profesionales. Este paquete ha sido diseñado para ofrecer la mejor relación calidad-precio, con equipo de marcas líderes y servicio técnico incluido.</p>
+      <p>El paquete Producción es una categoría aparte. No es "más uplighters" — es un servicio completo de <strong>diseño y dirección de iluminación</strong>. Un director especializado mapea el venue, diseña la narrativa de luz para cada momento del programa y opera la consola DMX durante el evento. Los <strong>30 o más uplighters LED RGBW</strong> cubren el venue completo con precisión milimétrica.</p>
+      <p>Este es el paquete para <strong>festivales, bodas de lujo con 300+ invitados, producciones de TV, lanzamientos de marcas premium</strong> y cualquier evento donde la iluminación no es un detalle — es parte del diseño del espectáculo. Servicio en <strong>CDMX, Edomex y resto del país</strong> con cotización de traslado incluida.</p>
     </Fragment>
   </Hero>
 
@@ -87,136 +87,362 @@ const structuredData = [
     items={[{ label: "6 Uplighters", href: "/renta-de-iluminacion/luces-arquitectonicas/paquete-6-uplighters/" }, { label: "12 Uplighters", href: "/renta-de-iluminacion/luces-arquitectonicas/paquete-12-uplighters/" }, { label: "20 Uplighters", href: "/renta-de-iluminacion/luces-arquitectonicas/paquete-20-uplighters/" }]}
   />
 
-  <!-- QUÉ INCLUYE -->
-  <section class="section" id="features">
+  <section class="section" id="producto">
     <div class="container">
-      <h2 class="section__title">¿Qué incluye el paquete Producción?</h2>
-      <p class="section__subtitle">Todo lo que necesitas para tu evento, sin sorpresas ni costos ocultos.</p>
-      <div class="features-grid">
-        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>30+ uplighters LED RGBW</span></div>
-        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>Control DMX profesional</span></div>
-        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>Instalación y desmontaje</span></div>
-        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>Diseño de iluminación</span></div>
-        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>Programación personalizada</span></div>
-        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>Cambio dinámico por escena</span></div>
-        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>2 técnicos operadores</span></div>
-        
-      </div>
-      <div class="price-highlight">
-        <span class="price-highlight__label">Precio desde</span>
-        <span class="price-highlight__amount">$15,000 MXN</span>
-        <span class="price-highlight__note">+ IVA · Instalación incluida</span>
-        <a href={WHATSAPP_URL_MSG} class="btn btn--accent" target="_blank" rel="noopener">Reservar Ahora</a>
-      </div>
-    </div>
-  </section>
+      <div class="prod-layout">
 
-  <!-- CONTENIDO SEO -->
-  <section class="section section--bg">
-    <div class="container content-prose">
-      <h2>¿Por qué elegir el paquete Producción de luces arquitectónicas?</h2>
-      <p>El paquete Producción de luces arquitectónicas es una solución producción para eventos que requieren equipamiento profesional en la Ciudad de México y zona metropolitana. Nuestro equipo técnico se encarga de todo: desde la logística de transporte hasta la instalación, configuración y operación durante tu evento.</p>
-      <p>Con más de 10 años de experiencia en renta de luces arquitectónicas para bodas, XV años, eventos corporativos y celebraciones privadas, REDEIL garantiza resultados profesionales. Este paquete ha sido diseñado para ofrecer la mejor relación calidad-precio, con equipo de marcas líderes y servicio técnico incluido.</p>
-      <h3>¿Para quién es este paquete?</h3>
-      <p>El paquete Producción de luces arquitectónicas está diseñado para producciones de gran escala y eventos premium. Con equipo profesional de marcas líderes y servicio técnico especializado, garantizamos resultados impecables.</p>
-      <h3>Servicio profesional de luces arquitectónicas</h3>
-      <p>En REDEIL llevamos más de 10 años ofreciendo renta de luces arquitectónicas en CDMX y Estado de México. Nuestro equipo técnico se encarga de todo: logística, transporte, instalación, configuración, operación durante el evento y desmontaje. Trabajamos con el mejor equipo del mercado para garantizar que cada evento sea perfecto.</p>
+        <div class="prod-main">
+
+          <div class="prod-gallery">
+            <div class="prod-gallery__main">
+              <img src="/img/blog/uplighting-gala.avif" alt="Producción completa de uplighting en gala de lujo con 30+ equipos CDMX" width="600" height="400" loading="eager" />
+            </div>
+            <div class="prod-gallery__side">
+              <img src="/img/blog/renta-de-luces-arquitectonicas-para-eventos-cdmx/main.avif" alt="Director de iluminación operando consola DMX en producción de evento" width="300" height="200" loading="lazy" />
+              <img src="/img/blog/renta-de-luces-arquitectonicas-para-eventos-cdmx/img1.avif" alt="30 uplighters LED RGBW cubriendo venue completo en boda de lujo" width="300" height="200" loading="lazy" />
+              <img src="/img/blog/renta-de-luces-arquitectonicas-para-eventos-cdmx/img2.avif" alt="Producción de uplighting en festival con múltiples zonas de color" width="300" height="200" loading="lazy" />
+              <img src="/img/blog/renta-de-luces-arquitectonicas-para-eventos-cdmx/img3.avif" alt="Mapeo de venue con uplighters posicionados estratégicamente" width="300" height="200" loading="lazy" />
+            </div>
+          </div>
+
+          <div class="prod-info">
+            <span class="prod-info__badge">Paquete Producción — Director de iluminación incluido</span>
+            <h2 class="prod-info__title">Producción Completa: 30+ Uplighters RGBW + Consola DMX + Director de Iluminación</h2>
+
+            <div class="prod-price">
+              <span class="prod-price__amount">$15,000</span>
+              <span class="prod-price__currency">MXN + IVA</span>
+              <p class="prod-price__note">Producción completa: director, consola DMX, 30+ uplighters, mapeo del venue, instalación y operación en CDMX y Edomex</p>
+            </div>
+
+            <div class="prod-ctas">
+              <a href={WHATSAPP_URL_MSG} class="prod-btn prod-btn--wa" target="_blank" rel="noopener">Cotizar por WhatsApp</a>
+              <a href="/cotizar/" class="prod-btn prod-btn--outline">Solicitar cotización formal</a>
+            </div>
+          </div>
+
+          <div class="prod-selling">
+            <h2 class="prod-selling__headline">Cuando la luz no es un detalle — es parte del espectáculo</h2>
+            <p class="prod-selling__intro">En un evento de producción, la iluminación arquitectónica no trabaja sola. Trabaja en sincronía con el programa del evento, con el audio, con los momentos de la noche. El director de iluminación de REDEIL viene a las reuniones previas de producción, mapea el venue antes del día del evento, programa los cues de color para cada momento exacto del programa y opera la consola DMX en tiempo real. Cuando el presentador dice "y ahora, los novios", la luz ya cambió. No hay retraso, no hay imprecisión. Solo producción profesional.</p>
+
+            <div class="prod-highlights">
+              <div class="prod-hl">
+                <div class="prod-hl__bar"></div>
+                <div class="prod-hl__content">
+                  <h3 class="prod-hl__title">Director de iluminación dedicado — no solo un técnico</h3>
+                  <p class="prod-hl__desc">La diferencia entre un técnico y un director de iluminación es la diferencia entre alguien que opera equipo y alguien que diseña experiencias. El director asignado a tu evento tiene criterio artístico, experiencia en producción y la capacidad de tomar decisiones en tiempo real que mejoran el evento. Es parte del equipo creativo, no solo proveedor de servicio.</p>
+                </div>
+              </div>
+              <div class="prod-hl">
+                <div class="prod-hl__bar"></div>
+                <div class="prod-hl__content">
+                  <h3 class="prod-hl__title">Mapeo completo del venue — cero improvisación el día del evento</h3>
+                  <p class="prod-hl__desc">Con plano o visita técnica previa, el director mapea cada metro del venue: qué elemento arquitectónico requiere iluminación, en qué ángulo, con qué color, a qué intensidad. El día del evento, el equipo llega con todo planificado. No hay "a ver cómo se ve". Hay un plan de producción ejecutado con precisión.</p>
+                </div>
+              </div>
+              <div class="prod-hl">
+                <div class="prod-hl__bar"></div>
+                <div class="prod-hl__content">
+                  <h3 class="prod-hl__title">Consola DMX de producción — control total sobre 30+ canales</h3>
+                  <p class="prod-hl__desc">Una consola DMX de producción no es el controlador básico de los paquetes menores. Permite programar cientos de cues, transiciones complejas, efectos de estroboscopio y fade graduado, sincronización con audio, y múltiples escenas predefinidas que el director activa con un botón en el momento exacto del programa.</p>
+                </div>
+              </div>
+              <div class="prod-hl">
+                <div class="prod-hl__bar"></div>
+                <div class="prod-hl__content">
+                  <h3 class="prod-hl__title">Cobertura total para 300+ invitados — venue completo tratado</h3>
+                  <p class="prod-hl__desc">Con 30 o más equipos, cada zona del venue queda cubierta: entrada y fachada, jardín de ceremonia, área de cóctel, salón principal, cabina de DJ, zonas de foto y cualquier elemento arquitectónico relevante. Tus invitados tienen coherencia visual en todo el venue durante todo el evento.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="prod-includes">
+            <h3 class="prod-includes__title">Lo que incluye este paquete</h3>
+            <div class="prod-includes__grid">
+              <div class="prod-feat">30+ uplighters LED RGBW profesionales</div>
+              <div class="prod-feat">Consola DMX de producción</div>
+              <div class="prod-feat">Director de iluminación dedicado</div>
+              <div class="prod-feat">Diseño personalizado de iluminación</div>
+              <div class="prod-feat">Mapeo completo del venue</div>
+              <div class="prod-feat">Visita técnica previa (si aplica)</div>
+              <div class="prod-feat">Programación de cues para el programa</div>
+              <div class="prod-feat">Transporte ida y vuelta</div>
+              <div class="prod-feat">Instalación profesional completa</div>
+              <div class="prod-feat">Operación en tiempo real todo el evento</div>
+              <div class="prod-feat">Coordinación con equipo de producción</div>
+              <div class="prod-feat">Desmontaje al finalizar</div>
+            </div>
+          </div>
+
+          <div class="prod-process">
+            <h3 class="prod-process__title">Así funciona el servicio de Producción</h3>
+            <div class="prod-steps">
+              <div class="prod-step">
+                <span class="prod-step__num">1</span>
+                <div class="prod-step__content">
+                  <h4 class="prod-step__name">Reunión de producción inicial</h4>
+                  <p class="prod-step__desc">Plano o fotos del venue, número de invitados, programa del evento, paleta de colores y cualquier requerimiento específico de producción. El director de iluminación asignado participa desde este paso.</p>
+                </div>
+              </div>
+              <div class="prod-step">
+                <span class="prod-step__num">2</span>
+                <div class="prod-step__content">
+                  <h4 class="prod-step__name">Diseño de iluminación y cotización detallada</h4>
+                  <p class="prod-step__desc">Recibes propuesta con número exacto de equipos, mapa de posicionamiento, descripción de cues por momento del programa y precio final. Todo documentado antes de comprometerte.</p>
+                </div>
+              </div>
+              <div class="prod-step">
+                <span class="prod-step__num">3</span>
+                <div class="prod-step__content">
+                  <h4 class="prod-step__name">Visita técnica al venue (para producciones grandes)</h4>
+                  <p class="prod-step__desc">Para eventos de 300+ invitados o venues que nunca hemos trabajado, el director hace visita técnica previa para medir, fotografiar y resolver cualquier detalle de instalación antes del día del evento.</p>
+                </div>
+              </div>
+              <div class="prod-step">
+                <span class="prod-step__num">4</span>
+                <div class="prod-step__content">
+                  <h4 class="prod-step__name">Producción completa el día del evento</h4>
+                  <p class="prod-step__desc">El equipo llega 4-5 horas antes. Instalación sistemática según el mapa, programación de la consola, pruebas de todos los cues y coordinación con el resto del equipo de producción. El director opera en tiempo real durante el evento.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="prod-compare">
+            <h3 class="prod-compare__title">Producción vs 20 Uplighters: ¿cuándo necesitas director de iluminación?</h3>
+            <div class="prod-compare__grid">
+              <div class="prod-compare__col prod-compare__col--them">
+                <span class="prod-compare__label">20 Uplighters — Hacienda</span>
+                <ul class="prod-compare__list">
+                  <li>Técnico operador en sitio</li>
+                  <li>Hasta 300 invitados</li>
+                  <li>Color programado previo</li>
+                  <li>Cambios manuales básicos</li>
+                  <li>Sin diseño de producción</li>
+                </ul>
+              </div>
+              <div class="prod-compare__col prod-compare__col--us">
+                <span class="prod-compare__label">Producción — Director incluido</span>
+                <ul class="prod-compare__list">
+                  <li>Director de iluminación dedicado</li>
+                  <li>300+ invitados, sin límite</li>
+                  <li>Cues sincronizados con programa</li>
+                  <li>Consola DMX de producción</li>
+                  <li>Diseño y mapeo del venue</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="prod-proof">
+            <blockquote class="prod-quote">
+              <p class="prod-quote__text">"Producimos el lanzamiento de una colección de moda con 400 asistentes en una hacienda en Tepoztlán. El director de iluminación de REDEIL fue parte del equipo de producción desde la primera reunión. Mapeó el venue, diseñó una narrativa de luz para cada momento del show y operó la consola en perfecta sincronía con el audio. Varios asistentes preguntaron específicamente quién había hecho la iluminación. Es el nivel de detalle que hace la diferencia en un evento premium."</p>
+              <footer class="prod-quote__footer">
+                <span class="prod-quote__name">Daniela Vargas</span>
+                <span class="prod-quote__event">Directora de Producción — Lanzamiento de colección, Hacienda Tepoztlán</span>
+              </footer>
+            </blockquote>
+          </div>
+
+        </div>
+
+        <aside class="prod-sidebar">
+
+          <div class="ps-widget">
+            <h3 class="ps-widget__title">Especificaciones</h3>
+            <dl class="ps-specs">
+              <div class="ps-specs__row"><dt>Equipos</dt><dd>30+ uplighters LED</dd></div>
+              <div class="ps-specs__row"><dt>Tipo</dt><dd>RGBW profesional</dd></div>
+              <div class="ps-specs__row"><dt>Control</dt><dd>Consola DMX producción</dd></div>
+              <div class="ps-specs__row"><dt>Dirección</dt><dd>Director incluido</dd></div>
+              <div class="ps-specs__row"><dt>Cobertura</dt><dd>300+ invitados</dd></div>
+              <div class="ps-specs__row"><dt>Diseño</dt><dd>Personalizado + mapeo</dd></div>
+              <div class="ps-specs__row"><dt>Instalación</dt><dd>Incluida</dd></div>
+              <div class="ps-specs__row"><dt>Operación</dt><dd>Tiempo real todo el evento</dd></div>
+              <div class="ps-specs__row"><dt>Zona</dt><dd>CDMX + Nacional</dd></div>
+            </dl>
+          </div>
+
+          <div class="ps-widget">
+            <h3 class="ps-widget__title">Ideal para</h3>
+            <div class="ps-tags">
+              <span class="ps-tag">Festivales</span>
+              <span class="ps-tag">Bodas de lujo</span>
+              <span class="ps-tag">Producciones de TV</span>
+              <span class="ps-tag">Lanzamientos de marca</span>
+              <span class="ps-tag">Galas de beneficencia</span>
+              <span class="ps-tag">Corporativos premium</span>
+              <span class="ps-tag">300+ invitados</span>
+              <span class="ps-tag">Producciones completas</span>
+            </div>
+          </div>
+
+          <div class="ps-widget">
+            <h3 class="ps-widget__title">Otros paquetes</h3>
+            <a href="/renta-de-iluminacion/luces-arquitectonicas/paquete-6-uplighters/" class="ps-pkg">
+              <img src="/img/blog/renta-de-luces-arquitectonicas-para-eventos-cdmx/img3.avif" alt="6 Uplighters para entrada y acento focal" width="80" height="60" loading="lazy" class="ps-pkg__img" />
+              <div class="ps-pkg__info">
+                <span class="ps-pkg__name">6 Uplighters</span>
+                <span class="ps-pkg__price">$3,000 MXN</span>
+              </div>
+            </a>
+            <a href="/renta-de-iluminacion/luces-arquitectonicas/paquete-12-uplighters/" class="ps-pkg">
+              <img src="/img/img-index/iluminacion-arquitectonica.avif" alt="12 Uplighters para salón mediano" width="80" height="60" loading="lazy" class="ps-pkg__img" />
+              <div class="ps-pkg__info">
+                <span class="ps-pkg__name">12 Uplighters</span>
+                <span class="ps-pkg__price">$5,200 MXN</span>
+              </div>
+            </a>
+            <a href="/renta-de-iluminacion/luces-arquitectonicas/paquete-20-uplighters/" class="ps-pkg">
+              <img src="/img/blog/renta-de-luces-arquitectonicas-para-eventos-cdmx/main.avif" alt="20 Uplighters para hacienda grande" width="80" height="60" loading="lazy" class="ps-pkg__img" />
+              <div class="ps-pkg__info">
+                <span class="ps-pkg__name">20 Uplighters</span>
+                <span class="ps-pkg__price">$8,500 MXN</span>
+              </div>
+            </a>
+            <div class="ps-upsell">
+              <p class="ps-upsell__text">¿Necesitas cobertura para hacienda grande pero sin director? El paquete de 20 Uplighters con DMX es la opción ideal.</p>
+              <a href="/renta-de-iluminacion/luces-arquitectonicas/paquete-20-uplighters/" class="ps-upsell__link">Ver 20 Uplighters →</a>
+            </div>
+          </div>
+
+          <div class="ps-widget ps-widget--dark">
+            <h3 class="ps-widget__title ps-widget__title--light">Cotiza tu producción</h3>
+            <p class="ps-widget__desc">Cotización personalizada con diseño de iluminación incluido. Sin compromiso.</p>
+            <a href="/cotizar/" class="ps-widget__btn">Cotizar Gratis</a>
+            <a href={WHATSAPP_URL_MSG} class="ps-widget__btn ps-widget__btn--wa" target="_blank" rel="noopener">WhatsApp: 55 4937 5172</a>
+          </div>
+
+          <div class="ps-widget">
+            <h3 class="ps-widget__title">Servicios relacionados</h3>
+            <div class="ps-links">
+              <a href="/renta-de-iluminacion/guirnaldas/" class="ps-link">Guirnaldas de Luces</a>
+              <a href="/renta-de-iluminacion/cascadas-led/" class="ps-link">Cascadas LED</a>
+              <a href="/renta-de-iluminacion/iluminacion-laser/" class="ps-link">Iluminación Láser</a>
+              <a href="/renta-de-iluminacion/proyector-de-gobos/" class="ps-link">Proyector de Gobos</a>
+              <a href="/equipos-para-eventos/humo-bajo/" class="ps-link">Humo Bajo</a>
+              <a href="/renta-de-bocinas/bocinas-para-eventos/" class="ps-link">Bocinas para Eventos</a>
+            </div>
+          </div>
+
+          <div class="ps-widget">
+            <h3 class="ps-widget__title">Contacto</h3>
+            <div class="ps-contact">
+              <p><a href="tel:+525549375172">55 4937 5172</a></p>
+              <p><a href="mailto:contacto@redeil.com">contacto@redeil.com</a></p>
+              <p>Lun-Vie 9:00-19:00 | Sáb 10:00-15:00</p>
+            </div>
+          </div>
+
+        </aside>
+      </div>
     </div>
   </section>
 
   <FaqSection items={faqItems} />
-
-  <!-- CTA FINAL -->
 
   <Footer />
   <WhatsAppBubble />
 </Base>
 
 <style>
-  .section__title {
-    font-size: clamp(1.5rem, 3vw, 2rem);
-    font-weight: 800;
-    color: var(--color-text);
-    margin-bottom: 0.5rem;
-  }
-  .section__subtitle {
-    font-size: var(--font-size-base);
-    color: var(--color-text-light);
-    margin-bottom: 2rem;
-  }
-  .features-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 0.75rem;
-    margin-bottom: 2rem;
-  }
-  .feature-item {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    padding: 0.875rem 1rem;
-    border-radius: var(--border-radius);
-    font-size: var(--font-size-sm);
-  }
-  .feature-item--yes {
-    background: #f0fdf4;
-    color: #166534;
-  }
-  .feature-item--no {
-    background: var(--color-bg);
-    color: var(--color-text-light);
-  }
-  .feature-icon {
-    font-weight: 700;
-    font-size: 1.125rem;
-    flex-shrink: 0;
-  }
-  .price-highlight {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 2rem;
-    background: var(--color-bg);
-    border-radius: var(--border-radius-lg);
-    text-align: center;
-  }
-  .price-highlight__label {
-    font-size: var(--font-size-sm);
-    color: var(--color-text-light);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-  }
-  .price-highlight__amount {
-    font-size: clamp(2rem, 5vw, 3rem);
-    font-weight: 800;
-    color: var(--color-text);
-  }
-  .price-highlight__note {
-    font-size: var(--font-size-sm);
-    color: var(--color-text-light);
-    margin-bottom: 0.5rem;
-  }
-  .content-prose {
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  .content-prose h2 {
-    font-size: clamp(1.5rem, 3vw, 2rem);
-    font-weight: 800;
-    color: var(--color-text);
-    margin-bottom: 1rem;
-  }
-  .content-prose h3 {
-    font-size: var(--font-size-xl);
-    font-weight: 700;
-    color: var(--color-text);
-    margin: 2rem 0 0.75rem;
-  }
-  .content-prose p {
-    font-size: var(--font-size-base);
-    color: var(--color-text-light);
-    line-height: 1.8;
-    margin-bottom: 1rem;
-  }
+  .prod-layout { display: grid; grid-template-columns: 1fr; gap: 2rem; }
+  @media (min-width: 1024px) { .prod-layout { grid-template-columns: 1fr 340px; gap: 2.5rem; } }
+  .prod-gallery { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; margin-bottom: 2rem; border-radius: 14px; overflow: hidden; }
+  .prod-gallery__main { grid-row: span 2; }
+  .prod-gallery__main img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .prod-gallery__side { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; }
+  .prod-gallery__side img { width: 100%; height: 100%; object-fit: cover; display: block; aspect-ratio: 3/2; }
+  .prod-info { margin-bottom: 2.5rem; }
+  .prod-info__badge { display: inline-block; font-size: 0.75rem; font-weight: 700; color: var(--color-accent); text-transform: uppercase; letter-spacing: 0.08em; padding: 0.375rem 1rem; background: rgba(0,113,227,0.08); border: 1px solid rgba(0,113,227,0.12); border-radius: 6px; margin-bottom: 0.75rem; }
+  .prod-info__title { font-size: clamp(1.375rem, 3vw, 1.75rem); font-weight: 800; color: var(--color-text); line-height: 1.2; letter-spacing: -0.02em; margin: 0 0 1.25rem; }
+  .prod-price { background: var(--color-bg); border-radius: 12px; padding: 1.25rem 1.5rem; margin-bottom: 1.25rem; border-left: 4px solid var(--color-accent); }
+  .prod-price__amount { font-size: 2.25rem; font-weight: 800; color: var(--color-primary); font-variant-numeric: tabular-nums; }
+  .prod-price__currency { font-size: 0.875rem; color: var(--color-text-light); margin-left: 0.5rem; }
+  .prod-price__note { font-size: 0.8125rem; color: var(--color-text-light); margin: 0.5rem 0 0; }
+  .prod-ctas { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+  .prod-btn { display: inline-flex; align-items: center; justify-content: center; padding: 0.875rem 1.75rem; border-radius: 6px; font-size: 0.9375rem; font-weight: 600; text-decoration: none; transition: background 0.2s ease, border-color 0.2s ease; }
+  .prod-btn--wa { background: #25D366; color: #fff; }
+  .prod-btn--wa:hover { background: #1DA851; }
+  .prod-btn--outline { background: none; color: var(--color-text); border: 2px solid var(--color-border); }
+  .prod-btn--outline:hover { border-color: var(--color-accent); color: var(--color-accent); }
+  .prod-selling { margin-bottom: 2.5rem; }
+  .prod-selling__headline { font-size: clamp(1.25rem, 3vw, 1.5rem); font-weight: 800; color: var(--color-text); line-height: 1.25; letter-spacing: -0.02em; margin: 0 0 0.75rem; }
+  .prod-selling__intro { font-size: 0.9375rem; color: var(--color-text-light); line-height: 1.75; margin: 0 0 1.75rem; max-width: 65ch; }
+  .prod-highlights { display: flex; flex-direction: column; gap: 1.25rem; }
+  .prod-hl { display: flex; gap: 1rem; align-items: stretch; }
+  .prod-hl__bar { flex-shrink: 0; width: 3px; background: var(--color-accent); border-radius: 2px; }
+  .prod-hl__content { display: flex; flex-direction: column; gap: 0.25rem; }
+  .prod-hl__title { font-size: 0.9375rem; font-weight: 700; color: var(--color-text); margin: 0; line-height: 1.3; }
+  .prod-hl__desc { font-size: 0.8125rem; color: var(--color-text-light); line-height: 1.65; margin: 0; }
+  .prod-includes { background: var(--color-bg); border-radius: 14px; padding: 1.75rem 2rem; }
+  .prod-includes__title { font-size: 1.0625rem; font-weight: 700; color: var(--color-text); margin: 0 0 1rem; }
+  .prod-includes__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; }
+  .prod-feat { font-size: 0.875rem; color: var(--color-text-light); padding-left: 1.25rem; position: relative; line-height: 1.5; }
+  .prod-feat::before { content: ""; position: absolute; left: 0; top: 0.45rem; width: 6px; height: 6px; border-radius: 50%; background: var(--color-accent); }
+  @media (max-width: 640px) { .prod-includes__grid { grid-template-columns: 1fr; } }
+  .prod-sidebar { display: flex; flex-direction: column; gap: 1.25rem; }
+  @media (min-width: 1024px) { .prod-sidebar { position: sticky; top: calc(var(--header-height) + var(--topbar-height) + 1.5rem); align-self: start; } }
+  .ps-widget { background: var(--color-white); border: 1px solid var(--color-border); border-radius: 12px; padding: 1.25rem; }
+  .ps-widget--dark { background: var(--color-primary); color: #fff; border: none; }
+  .ps-widget__title { font-size: 0.875rem; font-weight: 700; color: var(--color-text); text-transform: uppercase; letter-spacing: 0.05em; margin: 0 0 0.75rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--color-accent); }
+  .ps-widget__title--light { color: #fff; }
+  .ps-widget__desc { font-size: 0.8125rem; color: rgba(255,255,255,0.75); margin: 0 0 0.75rem; }
+  .ps-widget__btn { display: block; text-align: center; padding: 0.625rem; border-radius: 6px; font-size: 0.875rem; font-weight: 600; text-decoration: none; margin-top: 0.5rem; background: var(--color-accent); color: #fff; transition: background 0.2s ease; }
+  .ps-widget__btn:hover { opacity: 0.9; }
+  .ps-widget__btn--wa { background: #25D366; }
+  .ps-specs { display: flex; flex-direction: column; margin: 0; }
+  .ps-specs__row { display: flex; justify-content: space-between; align-items: baseline; padding: 0.4rem 0; border-bottom: 1px solid var(--color-bg); gap: 0.75rem; }
+  .ps-specs__row:last-child { border-bottom: none; }
+  .ps-specs__row dt { font-size: 0.8125rem; color: var(--color-text-light); font-weight: 500; margin: 0; }
+  .ps-specs__row dd { font-size: 0.8125rem; font-weight: 600; color: var(--color-text); text-align: right; margin: 0; font-variant-numeric: tabular-nums; }
+  .ps-tags { display: flex; flex-wrap: wrap; gap: 0.375rem; }
+  .ps-tag { font-size: 0.6875rem; font-weight: 600; color: var(--color-text); padding: 0.3rem 0.75rem; background: var(--color-bg); border: 1px solid var(--color-border); border-radius: 6px; white-space: nowrap; }
+  .ps-pkg { display: flex; gap: 0.75rem; align-items: center; text-decoration: none; padding: 0.625rem 0; border-bottom: 1px solid var(--color-bg); }
+  .ps-pkg:last-of-type { border-bottom: none; }
+  .ps-pkg__img { width: 72px; height: 54px; object-fit: cover; border-radius: 8px; flex-shrink: 0; }
+  .ps-pkg__info { display: flex; flex-direction: column; gap: 0.125rem; }
+  .ps-pkg__name { font-size: 0.8125rem; font-weight: 600; color: var(--color-text); }
+  .ps-pkg__price { font-size: 0.75rem; font-weight: 700; color: var(--color-accent); font-variant-numeric: tabular-nums; }
+  .ps-pkg:hover .ps-pkg__name { color: var(--color-accent); }
+  .ps-upsell { margin-top: 0.75rem; padding-top: 0.75rem; border-top: 1px solid var(--color-bg); }
+  .ps-upsell__text { font-size: 0.75rem; color: var(--color-text-light); line-height: 1.5; margin: 0 0 0.375rem; }
+  .ps-upsell__link { font-size: 0.75rem; font-weight: 600; color: var(--color-accent); text-decoration: none; }
+  .ps-upsell__link:hover { text-decoration: underline; }
+  .ps-links { display: flex; flex-direction: column; }
+  .ps-link { padding: 0.4rem 0; border-bottom: 1px solid var(--color-bg); font-size: 0.8125rem; color: var(--color-text-light); text-decoration: none; }
+  .ps-link:last-child { border-bottom: none; }
+  .ps-link:hover { color: var(--color-accent); }
+  .ps-contact p { font-size: 0.8125rem; color: var(--color-text-light); margin: 0.3rem 0; }
+  .ps-contact a { color: var(--color-accent); text-decoration: none; }
+  .prod-process { margin: 2.5rem 0; }
+  .prod-process__title { font-size: 1.125rem; font-weight: 800; color: var(--color-text); letter-spacing: -0.02em; margin: 0 0 1.25rem; }
+  .prod-steps { display: flex; flex-direction: column; gap: 0; }
+  .prod-step { display: flex; gap: 1rem; padding: 1rem 0; border-bottom: 1px solid var(--color-border); }
+  .prod-step:last-child { border-bottom: none; }
+  .prod-step__num { flex-shrink: 0; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; background: var(--color-accent); color: #fff; font-size: 0.8125rem; font-weight: 700; border-radius: 50%; }
+  .prod-step__content { display: flex; flex-direction: column; gap: 0.2rem; }
+  .prod-step__name { font-size: 0.9375rem; font-weight: 700; color: var(--color-text); margin: 0; line-height: 1.3; }
+  .prod-step__desc { font-size: 0.8125rem; color: var(--color-text-light); line-height: 1.6; margin: 0; }
+  .prod-compare { margin: 2.5rem 0; }
+  .prod-compare__title { font-size: 1.125rem; font-weight: 800; color: var(--color-text); letter-spacing: -0.02em; margin: 0 0 1.25rem; }
+  .prod-compare__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+  @media (max-width: 640px) { .prod-compare__grid { grid-template-columns: 1fr; } }
+  .prod-compare__col { border-radius: 12px; padding: 1.25rem; }
+  .prod-compare__col--them { background: #fef2f2; border: 1px solid #fecaca; }
+  .prod-compare__col--us { background: #eff6ff; border: 1px solid #bfdbfe; }
+  .prod-compare__label { display: block; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.75rem; }
+  .prod-compare__col--them .prod-compare__label { color: #991b1b; }
+  .prod-compare__col--us .prod-compare__label { color: var(--color-primary); }
+  .prod-compare__list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.5rem; }
+  .prod-compare__list li { font-size: 0.8125rem; color: var(--color-text); line-height: 1.4; padding-left: 1.125rem; position: relative; }
+  .prod-compare__col--them .prod-compare__list li::before { content: "–"; position: absolute; left: 0; color: #dc2626; font-size: 0.75rem; font-weight: 700; }
+  .prod-compare__col--us .prod-compare__list li::before { content: "✓"; position: absolute; left: 0; color: var(--color-accent); font-size: 0.75rem; font-weight: 700; }
+  .prod-proof { margin-top: 2.5rem; }
+  .prod-quote { background: var(--color-bg); border-radius: 14px; padding: 1.75rem 2rem; border-left: 4px solid var(--color-accent); margin: 0; }
+  .prod-quote__text { font-size: 0.9375rem; color: var(--color-text); line-height: 1.75; font-style: italic; margin: 0 0 1rem; }
+  .prod-quote__footer { display: flex; flex-direction: column; gap: 0.125rem; }
+  .prod-quote__name { font-size: 0.875rem; font-weight: 700; color: var(--color-text); font-style: normal; }
+  .prod-quote__event { font-size: 0.75rem; color: var(--color-text-light); font-style: normal; }
 </style>

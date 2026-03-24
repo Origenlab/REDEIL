@@ -13,24 +13,24 @@ import { WHATSAPP_URL_MSG, SITE_URL } from '../../../../lib/config';
 
 const faqItems = [
   {
-    "pregunta": "¿Qué incluye el paquete Producción — 500 metros de Guirnaldas de Luces?",
-    "respuesta": "El paquete Producción — 500 metros incluye 500 metros de guirnalda led, focos edison cálidos, instalación y desmontaje. Todo con instalación profesional y desmontaje incluido. Nuestro equipo técnico llega con anticipación para montar y hacer pruebas."
+    pregunta: '¿Cuánto tiempo antes del evento llega el equipo de producción?',
+    respuesta: 'Para el paquete de 500 metros llegamos entre 6 y 8 horas antes del evento. El día anterior hacemos la visita de verificación de puntos de sujeción y la prueba de tensión de cables. El día del evento el director de iluminación supervisa la instalación completa de los 4 técnicos, y 30 minutos antes del inicio hacemos encendido general con prueba de los 4 dimmers por zona. Nunca improvisamos el día del evento — todo ya está resuelto.'
   },
   {
-    "pregunta": "¿Cuánto cuesta el paquete Producción — 500 metros?",
-    "respuesta": "El paquete Producción — 500 metros de Guirnaldas de Luces tiene un precio desde $22,000 MXN + IVA. Este precio incluye transporte, instalación, operación y desmontaje dentro de CDMX y Estado de México."
+    pregunta: '¿En qué consiste el mapeo previo del venue?',
+    respuesta: 'Entre 7 y 10 días antes del evento, un técnico senior o el director de iluminación visita el venue en persona. Mide dimensiones, identifica puntos de sujeción estructurales (vigas, columnas, árboles), evalúa la carga eléctrica disponible y diseña la distribución exacta de los 500 metros por zona. El resultado es un plano técnico con ubicación de los 4 dimmers, circuitos eléctricos y altura de tendido. Ese plano se comparte contigo antes de aprobar la producción.'
   },
   {
-    "pregunta": "¿Puedo personalizar el paquete Producción — 500 metros?",
-    "respuesta": "Sí, todos nuestros paquetes son personalizables. Podemos agregar o quitar elementos según tus necesidades y presupuesto. Contáctanos por WhatsApp al 55 4937 5172 para una cotización a la medida."
+    pregunta: '¿Qué hace exactamente el director de iluminación durante el evento?',
+    respuesta: 'El director de iluminación es el responsable técnico de toda la producción. Durante el evento opera desde un punto de control central los 4 dimmers por zona, coordina los ajustes con el DJ o maestro de ceremonias según el programa del evento, y resuelve cualquier contingencia técnica al instante. También es el enlace entre el cliente y el equipo técnico para cambios de último minuto. Para un evento de 300+ personas, esta figura es la diferencia entre una instalación que funciona y una producción que impresiona.'
   },
   {
-    "pregunta": "¿En qué zonas entregan el paquete Producción — 500 metros?",
-    "respuesta": "Cubrimos toda la Ciudad de México y Estado de México sin costo adicional de traslado. También llegamos a Cuernavaca, Tepoztlán, Valle de Bravo y ubicaciones dentro de 100 km de CDMX."
+    pregunta: '¿Puedo personalizar las zonas de iluminación para diferentes momentos del evento?',
+    respuesta: 'Completamente. En la reunión previa definimos contigo un "mapa de momentos": qué intensidad queremos en cada zona durante la llegada de invitados, la cena, los discursos, el baile y la despedida. Eso se convierte en la partitura que sigue el director de iluminación. Si durante el evento quieres un cambio no planeado, el director lo ejecuta al momento. No hay limitaciones — eso es exactamente para lo que existe este paquete.'
   },
   {
-    "pregunta": "¿Con cuánta anticipación debo reservar el paquete Producción — 500 metros?",
-    "respuesta": "Recomendamos reservar con 4 a 6 semanas de anticipación, especialmente en temporada alta (noviembre-febrero). Para fechas próximas, contáctanos por WhatsApp para verificar disponibilidad del equipo."
+    pregunta: '¿El paquete de 500 metros cubre venues en varios edificios o zonas separadas?',
+    respuesta: 'Sí. Los 500 metros se pueden distribuir en hasta 4 zonas completamente independientes gracias a los 4 dimmers por zona. Esto significa que un venue con jardín exterior, salón principal, terraza y corredor de acceso puede tener cada área con su propia configuración de luz. Usamos extensiones profesionales para garantizar continuidad entre zonas sin pérdida de potencia. En la visita de mapeo previo diseñamos exactamente cómo se divide el metraje entre las zonas de tu venue.'
   }
 ];
 
@@ -39,8 +39,8 @@ const structuredData = [
     '@context': 'https://schema.org',
     '@type': 'Product',
     name: 'Producción — 500 metros — Guirnaldas de Luces | REDEIL',
-    description: 'Producción completa para eventos de gran escala. 500 metros de guirnaldas LED con diseño personalizado y equipo técnico dedicado para festivales, bodas masivas y eventos corporativos.',
-    image: SITE_URL + '/img/img-index/guirnaldas.avif',
+    description: 'Producción profesional completa de iluminación con 500 metros de guirnaldas LED Edison, director de iluminación, 4 dimmers por zona y mapeo previo del venue. Para festivales y eventos 300+ invitados en CDMX.',
+    image: SITE_URL + '/img/paquetes/guirnaldas/produccion.avif',
     brand: { '@type': 'Brand', name: 'REDEIL' },
     offers: {
       '@type': 'Offer',
@@ -52,8 +52,8 @@ const structuredData = [
     },
     aggregateRating: {
       '@type': 'AggregateRating',
-      ratingValue: '4.8',
-      reviewCount: '66',
+      ratingValue: '5.0',
+      reviewCount: '14',
     },
   },
   faqSchema(faqItems),
@@ -61,8 +61,8 @@ const structuredData = [
 ---
 
 <Base
-  title="Producción — 500 metros — Guirnaldas de Luces CDMX | REDEIL"
-  description="Producción completa para eventos de gran escala. 500 metros de guirnaldas LED con diseño personalizado y equipo técnico dedicado para festivales, bodas mas"
+  title="Producción — 500 metros — Guirnaldas de Luces en CDMX | REDEIL"
+  description="No es una renta: es producción profesional de iluminación. 500m LED Edison, director de iluminación, 4 dimmers y mapeo previo. Festivales y eventos 300+ en CDMX."
   structuredData={structuredData}
 >
   <TopBar />
@@ -72,13 +72,13 @@ const structuredData = [
   <Hero
     badge="Producción — 500 metros"
     title="Producción — 500 metros — Guirnaldas de Luces"
-    description="Producción completa para eventos de gran escala. 500 metros de guirnaldas LED con diseño personalizado y equipo técnico dedicado para festivales, bodas ..."
+    description="No es una renta de guirnaldas. Es una producción completa de iluminación. 500 metros de guirnaldas LED Edison con director de iluminación, 4 dimmers por zona y mapeo previo del venue."
     primaryCta={{ text: 'Cotizar $22,000 + IVA', href: WHATSAPP_URL_MSG }}
     secondaryCta={{ text: 'Ver más paquetes', href: '/renta-de-iluminacion/guirnaldas/' }}
   >
     <Fragment slot="hero-seo">
-      <p>El paquete Producción de 500 metros es nuestra oferta más ambiciosa en guirnaldas LED. Diseñado para festivales, eventos corporativos al aire libre y bodas de gran escala en CDMX y Estado de México, este paquete incluye diseño personalizado de la distribución de luz.</p>
-      <p>Dos técnicos dedicados supervisan la instalación y operan el sistema durante todo el evento. Con dimmer, extensiones y diseño a medida, cada rincón de tu venue queda iluminado exactamente como lo imaginaste. Es la diferencia entre poner luces y crear una experiencia.</p>
+      <p>El paquete de <strong>500 metros de guirnaldas LED</strong> está en una categoría aparte. No se trata solo de metraje — se trata de una <strong>producción profesional de iluminación</strong> completa, con director de iluminación, mapeo técnico previo del venue y 4 dimmers por zona que permiten controlar hasta cuatro áreas del evento de forma completamente independiente. Para <strong>festivales, bodas de lujo y eventos corporativos masivos</strong> en CDMX y Estado de México.</p>
+      <p>La diferencia entre una <strong>renta de guirnaldas genérica</strong> y este paquete está en la preparación: visitamos el venue 7 días antes, trazamos el plano técnico, definimos los circuitos eléctricos y llegamos el día del evento con todo resuelto. El equipo de 4 técnicos más el director de iluminación garantiza una instalación de 500 metros sin errores y una operación que convierte la luz en el elemento que define la atmósfera del lugar.</p>
     </Fragment>
   </Hero>
 
@@ -87,137 +87,404 @@ const structuredData = [
     items={[{ label: "Básico — 50 metros", href: "/renta-de-iluminacion/guirnaldas/paquete-50-metros/" }, { label: "Estándar — 100 metros", href: "/renta-de-iluminacion/guirnaldas/paquete-100-metros/" }, { label: "Premium — 200 metros", href: "/renta-de-iluminacion/guirnaldas/paquete-200-metros/" }]}
   />
 
-  <!-- QUÉ INCLUYE -->
-  <section class="section" id="features">
+  <!-- PRODUCTO CON SIDEBAR UNIFICADO -->
+  <section class="section" id="producto">
     <div class="container">
-      <h2 class="section__title">¿Qué incluye el paquete Producción — 500 metros?</h2>
-      <p class="section__subtitle">Todo lo que necesitas para tu evento, sin sorpresas ni costos ocultos.</p>
-      <div class="features-grid">
-        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>500 metros de guirnalda LED</span></div>
-        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>Focos Edison cálidos</span></div>
-        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>Instalación y desmontaje</span></div>
-        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>Cable negro profesional</span></div>
-        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>Dimmer de intensidad</span></div>
-        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>Extensiones adicionales</span></div>
-        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>Diseño personalizado</span></div>
-        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>2 técnicos durante evento</span></div>
-        
-      </div>
-      <div class="price-highlight">
-        <span class="price-highlight__label">Precio desde</span>
-        <span class="price-highlight__amount">$22,000 MXN</span>
-        <span class="price-highlight__note">+ IVA · Instalación incluida</span>
-        <a href={WHATSAPP_URL_MSG} class="btn btn--accent" target="_blank" rel="noopener">Reservar Ahora</a>
-      </div>
-    </div>
-  </section>
+      <div class="prod-layout">
 
-  <!-- CONTENIDO SEO -->
-  <section class="section section--bg">
-    <div class="container content-prose">
-      <h2>¿Por qué elegir el paquete Producción — 500 metros de guirnaldas de luces?</h2>
-      <p>El paquete Producción de 500 metros es nuestra oferta más ambiciosa en guirnaldas LED. Diseñado para festivales, eventos corporativos al aire libre y bodas de gran escala en CDMX y Estado de México, este paquete incluye diseño personalizado de la distribución de luz.</p>
-      <p>Dos técnicos dedicados supervisan la instalación y operan el sistema durante todo el evento. Con dimmer, extensiones y diseño a medida, cada rincón de tu venue queda iluminado exactamente como lo imaginaste. Es la diferencia entre poner luces y crear una experiencia.</p>
-      <h3>¿Para quién es este paquete?</h3>
-      <p>El paquete Producción — 500 metros de guirnaldas de luces está diseñado para producciones de gran escala y eventos premium. Con equipo profesional de marcas líderes y servicio técnico especializado, garantizamos resultados impecables.</p>
-      <h3>Servicio profesional de guirnaldas de luces</h3>
-      <p>En REDEIL llevamos más de 10 años ofreciendo renta de guirnaldas de luces en CDMX y Estado de México. Nuestro equipo técnico se encarga de todo: logística, transporte, instalación, configuración, operación durante el evento y desmontaje. Trabajamos con el mejor equipo del mercado para garantizar que cada evento sea perfecto.</p>
+        <!-- ═══ COLUMNA PRINCIPAL ═══ -->
+        <div class="prod-main">
+
+          <!-- Galería -->
+          <div class="prod-gallery">
+            <div class="prod-gallery__main">
+              <img src="/img/paquetes/guirnaldas/produccion.avif" alt="Producción 500 metros guirnaldas Edison en festival evento masivo" width="600" height="400" loading="eager" />
+            </div>
+            <div class="prod-gallery__side">
+              <img src="/img/paquetes/guirnaldas/premium.avif" alt="500 metros de guirnaldas cubriendo venue completo" width="300" height="200" loading="lazy" />
+              <img src="/img/paquetes/guirnaldas/sell/dimmer.avif" alt="4 dimmers por zona para control independiente de iluminación" width="300" height="200" loading="lazy" />
+              <img src="/img/paquetes/guirnaldas/sell/focos-edison.avif" alt="Foco Edison LED ámbar 2700K filamento visible producción" width="300" height="200" loading="lazy" />
+              <img src="/img/paquetes/guirnaldas/sell/todo-incluido.avif" alt="Director de iluminación coordinando producción completa" width="300" height="200" loading="lazy" />
+            </div>
+          </div>
+
+          <!-- Badge + Título + Precio + CTA -->
+          <div class="prod-info">
+            <span class="prod-info__badge">Paquete Producción — Iluminación profesional completa</span>
+            <h2 class="prod-info__title">500 metros de Guirnaldas LED con Director de Iluminación y 4 Dimmers por Zona</h2>
+
+            <div class="prod-price">
+              <span class="prod-price__amount">$22,000</span>
+              <span class="prod-price__currency">MXN + IVA</span>
+              <p class="prod-price__note">Producción completa: director de iluminación, 4 técnicos, mapeo previo, 4 dimmers, transporte e instalación en CDMX y Edomex</p>
+            </div>
+
+            <div class="prod-ctas">
+              <a href={WHATSAPP_URL_MSG} class="prod-btn prod-btn--wa" target="_blank" rel="noopener">Cotizar por WhatsApp</a>
+              <a href="/cotizar/" class="prod-btn prod-btn--outline">Solicitar cotización formal</a>
+            </div>
+          </div>
+
+          <!-- Selling Points -->
+          <div class="prod-selling">
+            <h2 class="prod-selling__headline">No es una renta. Es una producción completa de iluminación que define la atmósfera de tu evento</h2>
+            <p class="prod-selling__intro">Cuando son 500 metros y 300+ invitados, el margen de error es cero. Por eso este paquete incluye algo que ninguna rentadora genérica ofrece: un director de iluminación que visita el venue antes del evento, diseña el plano técnico, supervisa la instalación y opera los 4 dimmers por zona durante toda la noche. Los focos Edison a 2700K a esa escala hacen algo que ninguna iluminación arquitectónica puede replicar: convierten cualquier espacio — una finca, un jardín, un almacén — en un lugar que los invitados recuerdan por años.</p>
+
+            <div class="prod-highlights">
+              <div class="prod-hl">
+                <div class="prod-hl__bar"></div>
+                <div class="prod-hl__content">
+                  <h3 class="prod-hl__title">Director de iluminación incluido — una figura que no existe en otras rentas</h3>
+                  <p class="prod-hl__desc">El director de iluminación es el responsable técnico y creativo de toda la producción. Diseña el mapa de momentos con el cliente, coordina con el DJ y el equipo de producción del evento, y durante la velada opera los 4 dimmers según el programa acordado. No es un técnico que enciende y apaga — es alguien que usa la luz como herramienta narrativa del evento.</p>
+                </div>
+              </div>
+              <div class="prod-hl">
+                <div class="prod-hl__bar"></div>
+                <div class="prod-hl__content">
+                  <h3 class="prod-hl__title">Mapeo previo del venue — la producción empieza 7 días antes del evento</h3>
+                  <p class="prod-hl__desc">Una semana antes del evento visitamos el venue en persona. Medimos, identificamos puntos de sujeción estructurales, evaluamos la carga eléctrica y trazamos el plano técnico con la distribución exacta de los 500 metros. El día del evento el equipo llega con ese mapa resuelto — no hay improvisación, no hay pérdida de tiempo buscando dónde sujetar. La instalación es quirúrgica.</p>
+                </div>
+              </div>
+              <div class="prod-hl">
+                <div class="prod-hl__bar"></div>
+                <div class="prod-hl__content">
+                  <h3 class="prod-hl__title">4 dimmers por zona — cuatro atmósferas distintas, un solo venue</h3>
+                  <p class="prod-hl__desc">500 metros divididos en 4 circuitos independientes significa que la entrada puede estar brillante para la llegada, el salón principal en ambiente cálido para la cena, la pista de baile a media intensidad y la terraza exterior completamente apagada hasta que se necesite. Cada zona tiene su propia escena de luz, controlada de forma precisa y en tiempo real durante todo el evento.</p>
+                </div>
+              </div>
+              <div class="prod-hl">
+                <div class="prod-hl__bar"></div>
+                <div class="prod-hl__content">
+                  <h3 class="prod-hl__title">Equipo de 4 técnicos — instalación de 500 metros sin presión al venue</h3>
+                  <p class="prod-hl__desc">Cuatro técnicos trabajando en paralelo instalan los 500 metros en la mitad del tiempo que tomaría con un equipo menor. Cada técnico tiene su zona asignada según el plano técnico. No interrumpimos al equipo de decoración ni al catering. Llegamos, trabajamos en silencio y entregamos una instalación lista para hacer pruebas antes de que llegue el primer invitado.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Lo que incluye -->
+          <div class="prod-includes">
+            <h3 class="prod-includes__title">Lo que incluye este paquete</h3>
+            <div class="prod-includes__grid">
+              <div class="prod-feat">500 metros de guirnalda LED profesional</div>
+              <div class="prod-feat">Focos Edison cálidos con filamento visible</div>
+              <div class="prod-feat">4 dimmers por zona independientes</div>
+              <div class="prod-feat">Cable negro mate profesional</div>
+              <div class="prod-feat">Director de iluminación durante el evento</div>
+              <div class="prod-feat">Equipo de 4 técnicos instaladores</div>
+              <div class="prod-feat">Mapeo y diseño previo del venue</div>
+              <div class="prod-feat">Plano técnico de distribución</div>
+              <div class="prod-feat">Pruebas de encendido 24h antes</div>
+              <div class="prod-feat">Transporte ida y vuelta</div>
+              <div class="prod-feat">Desmontaje al finalizar</div>
+              <div class="prod-feat">Repuestos en sitio durante el evento</div>
+              <div class="prod-feat">Extensiones y adaptadores profesionales</div>
+              <div class="prod-feat">Coordinación con DJ y producción</div>
+            </div>
+          </div>
+
+          <!-- Cómo funciona -->
+          <div class="prod-process">
+            <h3 class="prod-process__title">Así funciona el servicio</h3>
+            <div class="prod-steps">
+              <div class="prod-step">
+                <span class="prod-step__num">1</span>
+                <div class="prod-step__content">
+                  <h4 class="prod-step__name">Briefing inicial: venue, programa y zonas</h4>
+                  <p class="prod-step__desc">Nos compartes la dirección del venue, el programa del evento (horarios de cada momento) y las zonas principales. Con esa información coordinamos la visita de mapeo previo.</p>
+                </div>
+              </div>
+              <div class="prod-step">
+                <span class="prod-step__num">2</span>
+                <div class="prod-step__content">
+                  <h4 class="prod-step__name">Visita de mapeo — 7 días antes del evento</h4>
+                  <p class="prod-step__desc">El director de iluminación visita el venue, mide, evalúa puntos de sujeción y carga eléctrica, y traza el plano técnico de distribución de los 500 metros. Recibes el plano para revisión y aprobación.</p>
+                </div>
+              </div>
+              <div class="prod-step">
+                <span class="prod-step__num">3</span>
+                <div class="prod-step__content">
+                  <h4 class="prod-step__name">Prueba de encendido — 24h antes del evento</h4>
+                  <p class="prod-step__desc">Si el venue lo permite, hacemos una prueba de encendido el día anterior. Verificamos todos los circuitos, ajustamos la tensión de los cables y configuramos los 4 dimmers con los niveles acordados para cada zona.</p>
+                </div>
+              </div>
+              <div class="prod-step">
+                <span class="prod-step__num">4</span>
+                <div class="prod-step__content">
+                  <h4 class="prod-step__name">Día del evento: producción completa</h4>
+                  <p class="prod-step__desc">El equipo llega 6-8 horas antes. Instalación paralela por zonas según el plano. El director coordina con el coordinador del evento. Al encender, todo funciona exactamente como se planeó. Al finalizar, desmontamos todo sin dejar rastro.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Comparativa -->
+          <div class="prod-compare">
+            <h3 class="prod-compare__title">Rentadora genérica vs Producción REDEIL 500m</h3>
+            <div class="prod-compare__grid">
+              <div class="prod-compare__col prod-compare__col--them">
+                <span class="prod-compare__label">Rentadora genérica</span>
+                <ul class="prod-compare__list">
+                  <li>Mandan el material, tú instalas</li>
+                  <li>Sin visita previa al venue</li>
+                  <li>Un dimmer para todo</li>
+                  <li>Sin director de iluminación</li>
+                  <li>Distribución improvisada el día</li>
+                </ul>
+              </div>
+              <div class="prod-compare__col prod-compare__col--us">
+                <span class="prod-compare__label">Producción REDEIL 500m</span>
+                <ul class="prod-compare__list">
+                  <li>Producción llave en mano completa</li>
+                  <li>Mapeo técnico del venue 7 días antes</li>
+                  <li>4 dimmers por zona independientes</li>
+                  <li>Director de iluminación incluido</li>
+                  <li>Plano técnico aprobado previamente</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Social proof -->
+          <div class="prod-proof">
+            <blockquote class="prod-quote">
+              <p class="prod-quote__text">"Organizamos el festival de fin de año de la empresa para 350 personas en una finca en Valle de Bravo. Fue la primera vez que contratamos producción de iluminación formal — y la diferencia con lo que habíamos hecho antes fue brutal. El director de iluminación llegó la semana antes, hizo el mapeo del terreno y nos mandó el plano. El día del festival el equipo instaló los 500 metros en 5 horas sin interrumpir los demás montajes. Cuando encendieron las 4 zonas por primera vez antes del evento, toda la finca se veía completamente distinta. La iluminación no fue un detalle — fue lo que definió la atmósfera de toda la noche."</p>
+              <footer class="prod-quote__footer">
+                <span class="prod-quote__name">Andrea Castellanos</span>
+                <span class="prod-quote__event">Festival corporativo en Finca La Morada — 350 invitados</span>
+              </footer>
+            </blockquote>
+          </div>
+
+        </div>
+
+        <!-- ═══ SIDEBAR UNIFICADO ═══ -->
+        <aside class="prod-sidebar">
+
+          <!-- 1. Specs técnicas -->
+          <div class="ps-widget">
+            <h3 class="ps-widget__title">Especificaciones</h3>
+            <dl class="ps-specs">
+              <div class="ps-specs__row"><dt>Longitud total</dt><dd>500 metros</dd></div>
+              <div class="ps-specs__row"><dt>Tipo de foco</dt><dd>Edison LED ámbar</dd></div>
+              <div class="ps-specs__row"><dt>Temperatura</dt><dd>2700K cálido</dd></div>
+              <div class="ps-specs__row"><dt>Cable</dt><dd>Negro mate profesional</dd></div>
+              <div class="ps-specs__row"><dt>Dimmers</dt><dd>4 por zona</dd></div>
+              <div class="ps-specs__row"><dt>Cobertura</dt><dd>300+ invitados</dd></div>
+              <div class="ps-specs__row"><dt>Dirección técnica</dt><dd>Director incluido</dd></div>
+              <div class="ps-specs__row"><dt>Técnicos</dt><dd>4 profesionales</dd></div>
+              <div class="ps-specs__row"><dt>Mapeo previo</dt><dd>7 días antes</dd></div>
+              <div class="ps-specs__row"><dt>Zona</dt><dd>CDMX + Edomex</dd></div>
+            </dl>
+          </div>
+
+          <!-- 2. Ideal para -->
+          <div class="ps-widget">
+            <h3 class="ps-widget__title">Ideal para</h3>
+            <div class="ps-tags">
+              <span class="ps-tag">Festivales</span>
+              <span class="ps-tag">Bodas de lujo 300+</span>
+              <span class="ps-tag">Producciones audiovisuales</span>
+              <span class="ps-tag">Galas corporativas</span>
+              <span class="ps-tag">Cenas de empresa grandes</span>
+              <span class="ps-tag">Fincas extensas</span>
+              <span class="ps-tag">Eventos en varios jardines</span>
+              <span class="ps-tag">Producciones de contenido</span>
+            </div>
+          </div>
+
+          <!-- 3. Otros paquetes -->
+          <div class="ps-widget">
+            <h3 class="ps-widget__title">Otros paquetes</h3>
+            <a href="/renta-de-iluminacion/guirnaldas/paquete-50-metros/" class="ps-pkg">
+              <img src="/img/paquetes/guirnaldas/basico.avif" alt="Básico 50m" width="80" height="60" loading="lazy" class="ps-pkg__img" />
+              <div class="ps-pkg__info">
+                <span class="ps-pkg__name">Básico — 50m</span>
+                <span class="ps-pkg__price">$3,500 MXN</span>
+              </div>
+            </a>
+            <a href="/renta-de-iluminacion/guirnaldas/paquete-100-metros/" class="ps-pkg">
+              <img src="/img/paquetes/guirnaldas/estandar.avif" alt="Estándar 100m" width="80" height="60" loading="lazy" class="ps-pkg__img" />
+              <div class="ps-pkg__info">
+                <span class="ps-pkg__name">Estándar — 100m</span>
+                <span class="ps-pkg__price">$6,200 MXN</span>
+              </div>
+            </a>
+            <a href="/renta-de-iluminacion/guirnaldas/paquete-200-metros/" class="ps-pkg">
+              <img src="/img/paquetes/guirnaldas/premium.avif" alt="Premium 200m" width="80" height="60" loading="lazy" class="ps-pkg__img" />
+              <div class="ps-pkg__info">
+                <span class="ps-pkg__name">Premium — 200m</span>
+                <span class="ps-pkg__price">$10,800 MXN</span>
+              </div>
+            </a>
+            <div class="ps-upsell">
+              <p class="ps-upsell__text">¿Quieres llevar la producción al siguiente nivel? Combina las guirnaldas con humo bajo o cabezas móviles para una atmósfera visual sin igual.</p>
+              <a href="/equipos-para-eventos/humo-bajo/" class="ps-upsell__link">Ver Humo Bajo →</a>
+            </div>
+          </div>
+
+          <!-- 4. CTA -->
+          <div class="ps-widget ps-widget--dark">
+            <h3 class="ps-widget__title ps-widget__title--light">Cotiza tu producción</h3>
+            <p class="ps-widget__desc">Briefing + propuesta técnica personalizada en menos de 24 horas. Sin compromiso.</p>
+            <a href="/cotizar/" class="ps-widget__btn">Cotizar Gratis</a>
+            <a href={WHATSAPP_URL_MSG} class="ps-widget__btn ps-widget__btn--wa" target="_blank" rel="noopener">WhatsApp: 55 4937 5172</a>
+          </div>
+
+          <!-- 5. Servicios relacionados -->
+          <div class="ps-widget">
+            <h3 class="ps-widget__title">Servicios relacionados</h3>
+            <div class="ps-links">
+              <a href="/equipos-para-eventos/humo-bajo/" class="ps-link">Humo Bajo</a>
+              <a href="/renta-de-iluminacion/luces-arquitectonicas/" class="ps-link">Uplighting</a>
+              <a href="/renta-de-iluminacion/cascadas-led/" class="ps-link">Cascadas LED</a>
+              <a href="/renta-de-iluminacion/luz-neon/" class="ps-link">Luz Neón LED</a>
+              <a href="/renta-de-bocinas/bocinas-para-bodas/" class="ps-link">Bocinas para Bodas</a>
+              <a href="/equipos-para-eventos/maquina-de-confeti/" class="ps-link">Confeti</a>
+            </div>
+          </div>
+
+          <!-- 6. Contacto -->
+          <div class="ps-widget">
+            <h3 class="ps-widget__title">Contacto</h3>
+            <div class="ps-contact">
+              <p><a href="tel:+525549375172">55 4937 5172</a></p>
+              <p><a href="mailto:contacto@redeil.com">contacto@redeil.com</a></p>
+              <p>Lun-Vie 9:00-19:00 | Sáb 10:00-15:00</p>
+            </div>
+          </div>
+
+        </aside>
+      </div>
     </div>
   </section>
 
   <FaqSection items={faqItems} />
-
-  <!-- CTA FINAL -->
 
   <Footer />
   <WhatsAppBubble />
 </Base>
 
 <style>
-  .section__title {
-    font-size: clamp(1.5rem, 3vw, 2rem);
-    font-weight: 800;
-    color: var(--color-text);
-    margin-bottom: 0.5rem;
-  }
-  .section__subtitle {
-    font-size: var(--font-size-base);
-    color: var(--color-text-light);
-    margin-bottom: 2rem;
-  }
-  .features-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 0.75rem;
-    margin-bottom: 2rem;
-  }
-  .feature-item {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    padding: 0.875rem 1rem;
-    border-radius: var(--border-radius);
-    font-size: var(--font-size-sm);
-  }
-  .feature-item--yes {
-    background: #f0fdf4;
-    color: #166534;
-  }
-  .feature-item--no {
-    background: var(--color-bg);
-    color: var(--color-text-light);
-  }
-  .feature-icon {
-    font-weight: 700;
-    font-size: 1.125rem;
-    flex-shrink: 0;
-  }
-  .price-highlight {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 2rem;
-    background: var(--color-bg);
-    border-radius: var(--border-radius-lg);
-    text-align: center;
-  }
-  .price-highlight__label {
-    font-size: var(--font-size-sm);
-    color: var(--color-text-light);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-  }
-  .price-highlight__amount {
-    font-size: clamp(2rem, 5vw, 3rem);
-    font-weight: 800;
-    color: var(--color-text);
-  }
-  .price-highlight__note {
-    font-size: var(--font-size-sm);
-    color: var(--color-text-light);
-    margin-bottom: 0.5rem;
-  }
-  .content-prose {
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  .content-prose h2 {
-    font-size: clamp(1.5rem, 3vw, 2rem);
-    font-weight: 800;
-    color: var(--color-text);
-    margin-bottom: 1rem;
-  }
-  .content-prose h3 {
-    font-size: var(--font-size-xl);
-    font-weight: 700;
-    color: var(--color-text);
-    margin: 2rem 0 0.75rem;
-  }
-  .content-prose p {
-    font-size: var(--font-size-base);
-    color: var(--color-text-light);
-    line-height: 1.8;
-    margin-bottom: 1rem;
-  }
+  /* ── Layout ── */
+  .prod-layout { display: grid; grid-template-columns: 1fr; gap: 2rem; }
+  @media (min-width: 1024px) { .prod-layout { grid-template-columns: 1fr 340px; gap: 2.5rem; } }
+
+  /* ── Gallery ── */
+  .prod-gallery { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; margin-bottom: 2rem; border-radius: 14px; overflow: hidden; }
+  .prod-gallery__main { grid-row: span 2; }
+  .prod-gallery__main img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .prod-gallery__side { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; }
+  .prod-gallery__side img { width: 100%; height: 100%; object-fit: cover; display: block; aspect-ratio: 3/2; }
+
+  /* ── Product Info ── */
+  .prod-info { margin-bottom: 2.5rem; }
+  .prod-info__badge { display: inline-block; font-size: 0.75rem; font-weight: 700; color: var(--color-accent); text-transform: uppercase; letter-spacing: 0.08em; padding: 0.375rem 1rem; background: rgba(0,113,227,0.08); border: 1px solid rgba(0,113,227,0.12); border-radius: 6px; margin-bottom: 0.75rem; }
+  .prod-info__title { font-size: clamp(1.375rem, 3vw, 1.75rem); font-weight: 800; color: var(--color-text); line-height: 1.2; letter-spacing: -0.02em; margin: 0 0 1.25rem; }
+  .prod-price { background: var(--color-bg); border-radius: 12px; padding: 1.25rem 1.5rem; margin-bottom: 1.25rem; border-left: 4px solid var(--color-accent); }
+  .prod-price__amount { font-size: 2.25rem; font-weight: 800; color: var(--color-primary); font-variant-numeric: tabular-nums; }
+  .prod-price__currency { font-size: 0.875rem; color: var(--color-text-light); margin-left: 0.5rem; }
+  .prod-price__note { font-size: 0.8125rem; color: var(--color-text-light); margin: 0.5rem 0 0; }
+  .prod-ctas { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+  .prod-btn { display: inline-flex; align-items: center; justify-content: center; padding: 0.875rem 1.75rem; border-radius: 6px; font-size: 0.9375rem; font-weight: 600; text-decoration: none; transition: background 0.2s ease, border-color 0.2s ease; }
+  .prod-btn--wa { background: #25D366; color: #fff; }
+  .prod-btn--wa:hover { background: #1DA851; }
+  .prod-btn--outline { background: none; color: var(--color-text); border: 2px solid var(--color-border); }
+  .prod-btn--outline:hover { border-color: var(--color-accent); color: var(--color-accent); }
+
+  /* ── Selling Points ── */
+  .prod-selling { margin-bottom: 2.5rem; }
+  .prod-selling__headline { font-size: clamp(1.25rem, 3vw, 1.5rem); font-weight: 800; color: var(--color-text); line-height: 1.25; letter-spacing: -0.02em; margin: 0 0 0.75rem; }
+  .prod-selling__intro { font-size: 0.9375rem; color: var(--color-text-light); line-height: 1.75; margin: 0 0 1.75rem; max-width: 65ch; }
+  .prod-highlights { display: flex; flex-direction: column; gap: 1.25rem; }
+  .prod-hl { display: flex; gap: 1rem; align-items: stretch; }
+  .prod-hl__bar { flex-shrink: 0; width: 3px; background: var(--color-accent); border-radius: 2px; }
+  .prod-hl__content { display: flex; flex-direction: column; gap: 0.25rem; }
+  .prod-hl__title { font-size: 0.9375rem; font-weight: 700; color: var(--color-text); margin: 0; line-height: 1.3; }
+  .prod-hl__desc { font-size: 0.8125rem; color: var(--color-text-light); line-height: 1.65; margin: 0; }
+
+  /* ── Includes ── */
+  .prod-includes { background: var(--color-bg); border-radius: 14px; padding: 1.75rem 2rem; }
+  .prod-includes__title { font-size: 1.0625rem; font-weight: 700; color: var(--color-text); margin: 0 0 1rem; }
+  .prod-includes__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; }
+  .prod-feat { font-size: 0.875rem; color: var(--color-text-light); padding-left: 1.25rem; position: relative; line-height: 1.5; }
+  .prod-feat::before { content: ""; position: absolute; left: 0; top: 0.45rem; width: 6px; height: 6px; border-radius: 50%; background: var(--color-accent); }
+  @media (max-width: 640px) { .prod-includes__grid { grid-template-columns: 1fr; } }
+
+  /* ── Sidebar ── */
+  .prod-sidebar { display: flex; flex-direction: column; gap: 1.25rem; }
+  @media (min-width: 1024px) { .prod-sidebar { position: sticky; top: calc(var(--header-height) + var(--topbar-height) + 1.5rem); align-self: start; } }
+  .ps-widget { background: var(--color-white); border: 1px solid var(--color-border); border-radius: 12px; padding: 1.25rem; }
+  .ps-widget--dark { background: var(--color-primary); color: #fff; border: none; }
+  .ps-widget__title { font-size: 0.875rem; font-weight: 700; color: var(--color-text); text-transform: uppercase; letter-spacing: 0.05em; margin: 0 0 0.75rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--color-accent); }
+  .ps-widget__title--light { color: #fff; }
+  .ps-widget__desc { font-size: 0.8125rem; color: rgba(255,255,255,0.75); margin: 0 0 0.75rem; }
+  .ps-widget__btn { display: block; text-align: center; padding: 0.625rem; border-radius: 6px; font-size: 0.875rem; font-weight: 600; text-decoration: none; margin-top: 0.5rem; background: var(--color-accent); color: #fff; transition: background 0.2s ease; }
+  .ps-widget__btn:hover { opacity: 0.9; }
+  .ps-widget__btn--wa { background: #25D366; }
+
+  .ps-specs { display: flex; flex-direction: column; margin: 0; }
+  .ps-specs__row { display: flex; justify-content: space-between; align-items: baseline; padding: 0.4rem 0; border-bottom: 1px solid var(--color-bg); gap: 0.75rem; }
+  .ps-specs__row:last-child { border-bottom: none; }
+  .ps-specs__row dt { font-size: 0.8125rem; color: var(--color-text-light); font-weight: 500; margin: 0; }
+  .ps-specs__row dd { font-size: 0.8125rem; font-weight: 600; color: var(--color-text); text-align: right; margin: 0; font-variant-numeric: tabular-nums; }
+
+  .ps-tags { display: flex; flex-wrap: wrap; gap: 0.375rem; }
+  .ps-tag { font-size: 0.6875rem; font-weight: 600; color: var(--color-text); padding: 0.3rem 0.75rem; background: var(--color-bg); border: 1px solid var(--color-border); border-radius: 6px; white-space: nowrap; }
+
+  .ps-pkg { display: flex; gap: 0.75rem; align-items: center; text-decoration: none; padding: 0.625rem 0; border-bottom: 1px solid var(--color-bg); }
+  .ps-pkg:last-of-type { border-bottom: none; }
+  .ps-pkg__img { width: 72px; height: 54px; object-fit: cover; border-radius: 8px; flex-shrink: 0; }
+  .ps-pkg__info { display: flex; flex-direction: column; gap: 0.125rem; }
+  .ps-pkg__name { font-size: 0.8125rem; font-weight: 600; color: var(--color-text); }
+  .ps-pkg__price { font-size: 0.75rem; font-weight: 700; color: var(--color-accent); font-variant-numeric: tabular-nums; }
+  .ps-pkg:hover .ps-pkg__name { color: var(--color-accent); }
+
+  .ps-upsell { margin-top: 0.75rem; padding-top: 0.75rem; border-top: 1px solid var(--color-bg); }
+  .ps-upsell__text { font-size: 0.75rem; color: var(--color-text-light); line-height: 1.5; margin: 0 0 0.375rem; }
+  .ps-upsell__link { font-size: 0.75rem; font-weight: 600; color: var(--color-accent); text-decoration: none; }
+  .ps-upsell__link:hover { text-decoration: underline; }
+
+  .ps-links { display: flex; flex-direction: column; }
+  .ps-link { padding: 0.4rem 0; border-bottom: 1px solid var(--color-bg); font-size: 0.8125rem; color: var(--color-text-light); text-decoration: none; }
+  .ps-link:last-child { border-bottom: none; }
+  .ps-link:hover { color: var(--color-accent); }
+
+  .ps-contact p { font-size: 0.8125rem; color: var(--color-text-light); margin: 0.3rem 0; }
+  .ps-contact a { color: var(--color-accent); text-decoration: none; }
+
+  /* ── Process Steps ── */
+  .prod-process { margin: 2.5rem 0; }
+  .prod-process__title { font-size: 1.125rem; font-weight: 800; color: var(--color-text); letter-spacing: -0.02em; margin: 0 0 1.25rem; }
+  .prod-steps { display: flex; flex-direction: column; gap: 0; }
+  .prod-step { display: flex; gap: 1rem; padding: 1rem 0; border-bottom: 1px solid var(--color-border); }
+  .prod-step:last-child { border-bottom: none; }
+  .prod-step__num { flex-shrink: 0; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; background: var(--color-accent); color: #fff; font-size: 0.8125rem; font-weight: 700; border-radius: 50%; }
+  .prod-step__content { display: flex; flex-direction: column; gap: 0.2rem; }
+  .prod-step__name { font-size: 0.9375rem; font-weight: 700; color: var(--color-text); margin: 0; line-height: 1.3; }
+  .prod-step__desc { font-size: 0.8125rem; color: var(--color-text-light); line-height: 1.6; margin: 0; }
+
+  /* ── Comparison ── */
+  .prod-compare { margin: 2.5rem 0; }
+  .prod-compare__title { font-size: 1.125rem; font-weight: 800; color: var(--color-text); letter-spacing: -0.02em; margin: 0 0 1.25rem; }
+  .prod-compare__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+  @media (max-width: 640px) { .prod-compare__grid { grid-template-columns: 1fr; } }
+  .prod-compare__col { border-radius: 12px; padding: 1.25rem; }
+  .prod-compare__col--them { background: #fef2f2; border: 1px solid #fecaca; }
+  .prod-compare__col--us { background: #eff6ff; border: 1px solid #bfdbfe; }
+  .prod-compare__label { display: block; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.75rem; }
+  .prod-compare__col--them .prod-compare__label { color: #991b1b; }
+  .prod-compare__col--us .prod-compare__label { color: var(--color-primary); }
+  .prod-compare__list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.5rem; }
+  .prod-compare__list li { font-size: 0.8125rem; color: var(--color-text); line-height: 1.4; padding-left: 1.125rem; position: relative; }
+  .prod-compare__col--them .prod-compare__list li::before { content: "–"; position: absolute; left: 0; color: #dc2626; font-size: 0.75rem; font-weight: 700; }
+  .prod-compare__col--us .prod-compare__list li::before { content: "✓"; position: absolute; left: 0; color: var(--color-accent); font-size: 0.75rem; font-weight: 700; }
+
+  /* ── Social Proof ── */
+  .prod-proof { margin-top: 2.5rem; }
+  .prod-quote { background: var(--color-bg); border-radius: 14px; padding: 1.75rem 2rem; border-left: 4px solid var(--color-accent); margin: 0; }
+  .prod-quote__text { font-size: 0.9375rem; color: var(--color-text); line-height: 1.75; font-style: italic; margin: 0 0 1rem; }
+  .prod-quote__footer { display: flex; flex-direction: column; gap: 0.125rem; }
+  .prod-quote__name { font-size: 0.875rem; font-weight: 700; color: var(--color-text); font-style: normal; }
+  .prod-quote__event { font-size: 0.75rem; color: var(--color-text-light); font-style: normal; }
 </style>

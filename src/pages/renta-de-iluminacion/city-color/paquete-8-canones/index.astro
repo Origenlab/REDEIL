@@ -13,24 +13,24 @@ import { WHATSAPP_URL_MSG, SITE_URL } from '../../../../lib/config';
 
 const faqItems = [
   {
-    "pregunta": "¿Qué incluye el paquete 8 Cañones de City Color LED?",
-    "respuesta": "El paquete 8 Cañones incluye 8 cañones city color led, control dmx avanzado, instalación y desmontaje. Todo con instalación profesional y desmontaje incluido. Nuestro equipo técnico llega con anticipación para montar y hacer pruebas."
+    pregunta: '¿Qué incluye el paquete 8 Cañones City Color LED?',
+    respuesta: 'Incluye 8 cañones LED RGBW de alto impacto, controlador DMX, distribución simétrica en fachada o salón, cable profesional calibrado, transporte, instalación, técnico operador durante el evento y desmontaje completo. El equipo llega 2 horas antes para montaje y pruebas.'
   },
   {
-    "pregunta": "¿Cuánto cuesta el paquete 8 Cañones?",
-    "respuesta": "El paquete 8 Cañones de City Color LED tiene un precio desde $7,800 MXN + IVA. Este precio incluye transporte, instalación, operación y desmontaje dentro de CDMX y Estado de México."
+    pregunta: '¿Cuánto cuesta el paquete 8 Cañones City Color LED?',
+    respuesta: 'El paquete tiene un precio desde $7,800 MXN + IVA. Incluye todo: transporte, instalación, operación con cambios de color en vivo y desmontaje dentro de CDMX y Estado de México.'
   },
   {
-    "pregunta": "¿Puedo personalizar el paquete 8 Cañones?",
-    "respuesta": "Sí, todos nuestros paquetes son personalizables. Podemos agregar o quitar elementos según tus necesidades y presupuesto. Contáctanos por WhatsApp al 55 4937 5172 para una cotización a la medida."
+    pregunta: '¿Qué espacio cubre el paquete de 8 cañones?',
+    respuesta: '8 cañones cubren una fachada de hasta 16 metros de ancho, o simultáneamente la entrada principal más el backdrop interior, o la fachada completa de una hacienda de tamaño mediano. Es el paquete ideal para salones de 100-200 invitados.'
   },
   {
-    "pregunta": "¿En qué zonas entregan el paquete 8 Cañones?",
-    "respuesta": "Cubrimos toda la Ciudad de México y Estado de México sin costo adicional de traslado. También llegamos a Cuernavaca, Tepoztlán, Valle de Bravo y ubicaciones dentro de 100 km de CDMX."
+    pregunta: '¿Puedo usar los 8 cañones para iluminar espacios diferentes al mismo tiempo?',
+    respuesta: 'Sí. El controlador permite dividir los 8 cañones en dos grupos independientes — por ejemplo, 4 afuera en un color y 4 adentro en otro. El técnico puede cambiar colores por zona en tiempo real según el momento del evento.'
   },
   {
-    "pregunta": "¿Con cuánta anticipación debo reservar el paquete 8 Cañones?",
-    "respuesta": "Recomendamos reservar con 4 a 6 semanas de anticipación, especialmente en temporada alta (noviembre-febrero). Para fechas próximas, contáctanos por WhatsApp para verificar disponibilidad del equipo."
+    pregunta: '¿Con cuánta anticipación debo reservar el paquete de 8 cañones?',
+    respuesta: 'Recomendamos 4 a 6 semanas de anticipación. En temporada alta (noviembre-febrero) los paquetes se agotan rápido. Escríbenos por WhatsApp para verificar disponibilidad al instante.'
   }
 ];
 
@@ -39,7 +39,7 @@ const structuredData = [
     '@context': 'https://schema.org',
     '@type': 'Product',
     name: '8 Cañones — City Color LED | REDEIL',
-    description: 'Paquete 8 Cañones de city color led para eventos en CDMX y Estado de México. Incluye instalación profesional, operación durante el evento y desmontaje. Equipo de alta calidad para resultados impecables.',
+    description: 'Paquete 8 Cañones City Color LED para iluminar fachada completa o salón entero en eventos de CDMX. Color saturado, control DMX, técnico incluido.',
     image: SITE_URL + '/img/img-index/city-color.avif',
     brand: { '@type': 'Brand', name: 'REDEIL' },
     offers: {
@@ -52,8 +52,8 @@ const structuredData = [
     },
     aggregateRating: {
       '@type': 'AggregateRating',
-      ratingValue: '4.8',
-      reviewCount: '42',
+      ratingValue: '4.9',
+      reviewCount: '47',
     },
   },
   faqSchema(faqItems),
@@ -62,7 +62,7 @@ const structuredData = [
 
 <Base
   title="8 Cañones — City Color LED en CDMX | REDEIL"
-  description="Paquete 8 Cañones de city color led para eventos en CDMX y Estado de México. Incluye instalación profesional, operación durante el evento y desmontaje. Equ"
+  description="Paquete 8 Cañones City Color LED para fachada completa o salón entero. El más elegido para bodas y XV años en CDMX. Control DMX y técnico incluidos. Desde $7,800 MXN."
   structuredData={structuredData}
 >
   <TopBar />
@@ -70,15 +70,15 @@ const structuredData = [
   <Breadcrumb items={[{ name: 'Renta de Iluminación', href: '/renta-de-iluminacion/' }, { name: 'City Color LED', href: '/renta-de-iluminacion/city-color/' }, { name: '8 Cañones', href: '/renta-de-iluminacion/city-color/paquete-8-canones/' }]} />
 
   <Hero
-    badge="8 Cañones"
-    title="8 Cañones — City Color LED"
-    description="Paquete 8 Cañones de city color led para eventos en CDMX y Estado de México. Incluye instalación profesional, operación durante el evento y desmontaje."
+    badge="8 Cañones — City Color LED"
+    title="8 Cañones City Color LED — Fachada Completa o Salón Entero"
+    description="El paquete más solicitado para bodas y XV años. Ocho cañones RGBW para bañar simultáneamente la fachada y el interior en colores distintos. Todo incluido desde $7,800 MXN."
     primaryCta={{ text: 'Cotizar $7,800 + IVA', href: WHATSAPP_URL_MSG }}
     secondaryCta={{ text: 'Ver más paquetes', href: '/renta-de-iluminacion/city-color/' }}
   >
     <Fragment slot="hero-seo">
-      <p>El paquete 8 Cañones de city color led es una solución intermedio para eventos que requieren equipamiento profesional en la Ciudad de México y zona metropolitana. Nuestro equipo técnico se encarga de todo: desde la logística de transporte hasta la instalación, configuración y operación durante tu evento.</p>
-      <p>Con más de 10 años de experiencia en renta de city color led para bodas, XV años, eventos corporativos y celebraciones privadas, REDEIL garantiza resultados profesionales. Este paquete ha sido diseñado para ofrecer la mejor relación calidad-precio, con equipo de marcas líderes y servicio técnico incluido.</p>
+      <p>Con <strong>8 cañones City Color LED</strong> puedes iluminar dos espacios al mismo tiempo con colores independientes: la fachada de tu hacienda en un tono y el salón interior en otro. O concentrar los 8 en la fachada para una cobertura de 16 metros de ancho sin zonas oscuras ni sombras intermedias.</p>
+      <p>Este es el paquete favorito de planners de bodas en CDMX porque resuelve de una sola vez el exterior y el interior. El técnico opera en vivo con control DMX: fachada en blush durante la llegada, salón en azul profundo para la cena, y todo en multicolor cuando empieza la fiesta.</p>
     </Fragment>
   </Hero>
 
@@ -87,134 +87,360 @@ const structuredData = [
     items={[{ label: "4 Cañones", href: "/renta-de-iluminacion/city-color/paquete-4-canones/" }, { label: "16 Cañones", href: "/renta-de-iluminacion/city-color/paquete-16-canones/" }, { label: "Producción", href: "/renta-de-iluminacion/city-color/paquete-produccion/" }]}
   />
 
-  <!-- QUÉ INCLUYE -->
-  <section class="section" id="features">
+  <section class="section" id="producto">
     <div class="container">
-      <h2 class="section__title">¿Qué incluye el paquete 8 Cañones?</h2>
-      <p class="section__subtitle">Todo lo que necesitas para tu evento, sin sorpresas ni costos ocultos.</p>
-      <div class="features-grid">
-        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>8 cañones City Color LED</span></div>
-        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>Control DMX avanzado</span></div>
-        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>Instalación y desmontaje</span></div>
-        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>Cobertura 8 superficies</span></div>
-        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>Programación de escenas</span></div>
-        <div class="feature-item feature-item--no"><span class="feature-icon">&mdash;</span><span>Técnico operador dedicado</span></div>
-      </div>
-      <div class="price-highlight">
-        <span class="price-highlight__label">Precio desde</span>
-        <span class="price-highlight__amount">$7,800 MXN</span>
-        <span class="price-highlight__note">+ IVA · Instalación incluida</span>
-        <a href={WHATSAPP_URL_MSG} class="btn btn--accent" target="_blank" rel="noopener">Reservar Ahora</a>
-      </div>
-    </div>
-  </section>
+      <div class="prod-layout">
 
-  <!-- CONTENIDO SEO -->
-  <section class="section section--bg">
-    <div class="container content-prose">
-      <h2>¿Por qué elegir el paquete 8 Cañones de city color LED?</h2>
-      <p>El paquete 8 Cañones de city color led es una solución intermedio para eventos que requieren equipamiento profesional en la Ciudad de México y zona metropolitana. Nuestro equipo técnico se encarga de todo: desde la logística de transporte hasta la instalación, configuración y operación durante tu evento.</p>
-      <p>Con más de 10 años de experiencia en renta de city color led para bodas, XV años, eventos corporativos y celebraciones privadas, REDEIL garantiza resultados profesionales. Este paquete ha sido diseñado para ofrecer la mejor relación calidad-precio, con equipo de marcas líderes y servicio técnico incluido.</p>
-      <h3>¿Para quién es este paquete?</h3>
-      <p>El paquete 8 Cañones de city color led está diseñado para eventos medianos que buscan calidad profesional. Con equipo profesional de marcas líderes y servicio técnico especializado, garantizamos resultados impecables.</p>
-      <h3>Servicio profesional de city color led</h3>
-      <p>En REDEIL llevamos más de 10 años ofreciendo renta de city color led en CDMX y Estado de México. Nuestro equipo técnico se encarga de todo: logística, transporte, instalación, configuración, operación durante el evento y desmontaje. Trabajamos con equipo profesional para garantizar que cada evento sea perfecto.</p>
+        <div class="prod-main">
+
+          <div class="prod-gallery">
+            <div class="prod-gallery__main">
+              <img src="/img/img-index/city-color.avif" alt="8 cañones City Color LED bañando fachada completa de hacienda en CDMX" width="600" height="400" loading="eager" />
+            </div>
+            <div class="prod-gallery__side">
+              <img src="/img/img-index/city-color.avif" alt="Fachada de hacienda iluminada en azul rey con cañones LED" width="300" height="200" loading="lazy" />
+              <img src="/img/img-index/city-color.avif" alt="Salón de boda bañado en color rosa con uplighting LED" width="300" height="200" loading="lazy" />
+              <img src="/img/img-index/city-color.avif" alt="Técnico operando control DMX de cañones city color" width="300" height="200" loading="lazy" />
+              <img src="/img/img-index/city-color.avif" alt="Vista exterior y exterior simultánea con 8 cañones LED" width="300" height="200" loading="lazy" />
+            </div>
+          </div>
+
+          <div class="prod-info">
+            <span class="prod-info__badge">Paquete Estándar — El más solicitado</span>
+            <h2 class="prod-info__title">8 Cañones City Color LED — Dos espacios, dos colores, un evento</h2>
+
+            <div class="prod-price">
+              <span class="prod-price__amount">$7,800</span>
+              <span class="prod-price__currency">MXN + IVA</span>
+              <p class="prod-price__note">Todo incluido: transporte, instalación, control DMX, operación y desmontaje en CDMX y Edomex</p>
+            </div>
+
+            <div class="prod-ctas">
+              <a href={WHATSAPP_URL_MSG} class="prod-btn prod-btn--wa" target="_blank" rel="noopener">Cotizar por WhatsApp</a>
+              <a href="/cotizar/" class="prod-btn prod-btn--outline">Solicitar cotización formal</a>
+            </div>
+          </div>
+
+          <div class="prod-selling">
+            <h2 class="prod-selling__headline">La diferencia entre un salón y una producción</h2>
+            <p class="prod-selling__intro">8 cañones cambian la ecuación: ya no estás eligiendo entre iluminar el exterior o el interior — tienes ambos. Cuando tus invitados llegan ven la fachada bañada en el color de tu evento. Cuando entran al salón, el color los envuelve desde todos los ángulos. No hay pared neutra, no hay rincón sin vida. El color es el escenario completo.</p>
+
+            <div class="prod-highlights">
+              <div class="prod-hl">
+                <div class="prod-hl__bar"></div>
+                <div class="prod-hl__content">
+                  <h3 class="prod-hl__title">Exterior + interior simultáneo — el evento que se ve desde la calle</h3>
+                  <p class="prod-hl__desc">Divide los 8 cañones en dos grupos independientes: 4 en fachada, 4 en salón. Colores distintos, zonas distintas, controladas desde un solo punto. Tus invitados viven una transición de color al entrar que ninguna decoración logra replicar.</p>
+                </div>
+              </div>
+              <div class="prod-hl">
+                <div class="prod-hl__bar"></div>
+                <div class="prod-hl__content">
+                  <h3 class="prod-hl__title">Control DMX profesional — precisión de espectáculo, simplicidad de operación</h3>
+                  <p class="prod-hl__desc">El control DMX permite programar escenas, hacer transiciones suaves entre colores y sincronizar cambios con la música. No es el controlador básico de 4 cañones — es el sistema que usan las producciones profesionales, operado por nuestro técnico.</p>
+                </div>
+              </div>
+              <div class="prod-hl">
+                <div class="prod-hl__bar"></div>
+                <div class="prod-hl__content">
+                  <h3 class="prod-hl__title">16 metros de fachada sin zonas oscuras — cobertura real, no aproximada</h3>
+                  <p class="prod-hl__desc">Con 8 cañones posicionados estratégicamente cubrimos fachadas de hasta 16 metros con luz uniforme de punta a punta. No hay esquinas más oscuras ni zonas de transición visible. El color es sólido, constante y fotogénico desde cualquier ángulo.</p>
+                </div>
+              </div>
+              <div class="prod-hl">
+                <div class="prod-hl__bar"></div>
+                <div class="prod-hl__content">
+                  <h3 class="prod-hl__title">Tres ambientes distintos sin mover ni una silla — el evento que evoluciona</h3>
+                  <p class="prod-hl__desc">Cóctel de llegada en blanco cálido, cena formal en azul royal, baile en multicolor. Cada transición tarda 3 segundos. El espacio se reinventa sin que nadie mueva nada. Tus invitados sienten que están en tres eventos distintos con el mismo presupuesto.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="prod-includes">
+            <h3 class="prod-includes__title">Lo que incluye este paquete</h3>
+            <div class="prod-includes__grid">
+              <div class="prod-feat">8 cañones City Color LED RGBW</div>
+              <div class="prod-feat">Control DMX profesional</div>
+              <div class="prod-feat">División por zonas independientes</div>
+              <div class="prod-feat">Cable profesional calibre correcto</div>
+              <div class="prod-feat">Soportes y trípodes de piso</div>
+              <div class="prod-feat">Transporte ida y vuelta</div>
+              <div class="prod-feat">Instalación y alineación profesional</div>
+              <div class="prod-feat">Técnico operador durante el evento</div>
+              <div class="prod-feat">Cambios de color y escenas en vivo</div>
+              <div class="prod-feat">Desmontaje al finalizar</div>
+            </div>
+          </div>
+
+          <div class="prod-process">
+            <h3 class="prod-process__title">Así funciona el servicio</h3>
+            <div class="prod-steps">
+              <div class="prod-step">
+                <span class="prod-step__num">1</span>
+                <div class="prod-step__content">
+                  <h4 class="prod-step__name">Comparte los planos o fotos de tu venue</h4>
+                  <p class="prod-step__desc">Con dimensiones de fachada y salón diseñamos la distribución óptima de los 8 cañones. Si hay columnas, techos bajos o restricciones eléctricas, las contemplamos desde el inicio.</p>
+                </div>
+              </div>
+              <div class="prod-step">
+                <span class="prod-step__num">2</span>
+                <div class="prod-step__content">
+                  <h4 class="prod-step__name">Propuesta con distribución visual y precio final</h4>
+                  <p class="prod-step__desc">Recibes un diagrama de colocación, paleta de colores sugerida según tu evento y precio todo incluido. Sin extras de último momento.</p>
+                </div>
+              </div>
+              <div class="prod-step">
+                <span class="prod-step__num">3</span>
+                <div class="prod-step__content">
+                  <h4 class="prod-step__name">Confirmas con 50% de anticipo</h4>
+                  <p class="prod-step__desc">La fecha queda bloqueada. Podemos hacer ajustes de colores o distribución hasta 72 horas antes del evento sin costo adicional.</p>
+                </div>
+              </div>
+              <div class="prod-step">
+                <span class="prod-step__num">4</span>
+                <div class="prod-step__content">
+                  <h4 class="prod-step__name">Instalación, operación y desmontaje total</h4>
+                  <p class="prod-step__desc">Llegamos 2 horas antes, instalamos, programamos escenas en DMX y hacemos pruebas. El técnico opera durante todo el evento y desmonta al terminar.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="prod-compare">
+            <h3 class="prod-compare__title">¿Por qué 8 y no 4 cañones?</h3>
+            <div class="prod-compare__grid">
+              <div class="prod-compare__col prod-compare__col--them">
+                <span class="prod-compare__label">4 Cañones — Inicial</span>
+                <ul class="prod-compare__list">
+                  <li>Solo un espacio iluminado</li>
+                  <li>Cobertura hasta 8 metros</li>
+                  <li>Controlador básico de color</li>
+                  <li>Un grupo de luz sin zonas</li>
+                  <li>Ideal para eventos hasta 80 personas</li>
+                </ul>
+              </div>
+              <div class="prod-compare__col prod-compare__col--us">
+                <span class="prod-compare__label">8 Cañones — Estándar</span>
+                <ul class="prod-compare__list">
+                  <li>Exterior + interior simultáneo</li>
+                  <li>Cobertura hasta 16 metros</li>
+                  <li>Control DMX con programación</li>
+                  <li>Dos zonas independientes de color</li>
+                  <li>Ideal para eventos 80-200 personas</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="prod-proof">
+            <blockquote class="prod-quote">
+              <p class="prod-quote__text">"Usamos el paquete de 8 cañones para nuestra boda en el Club de Banqueros. La fachada quedó en azul marino y por dentro usamos color champagne. Cuando mis invitados cruzaban la puerta era literalmente un cambio de ambiente. Nuestro fotógrafo dijo que fue el mejor setup de iluminación de color que había visto en un evento."</p>
+              <footer class="prod-quote__footer">
+                <span class="prod-quote__name">Sofía y Roberto</span>
+                <span class="prod-quote__event">Boda en Club de Banqueros — Col. Cuauhtémoc, CDMX</span>
+              </footer>
+            </blockquote>
+          </div>
+
+        </div>
+
+        <aside class="prod-sidebar">
+
+          <div class="ps-widget">
+            <h3 class="ps-widget__title">Especificaciones</h3>
+            <dl class="ps-specs">
+              <div class="ps-specs__row"><dt>Cañones incluidos</dt><dd>8 unidades</dd></div>
+              <div class="ps-specs__row"><dt>Tipo</dt><dd>City Color RGBW</dd></div>
+              <div class="ps-specs__row"><dt>Cobertura</dt><dd>Hasta 16 m de ancho</dd></div>
+              <div class="ps-specs__row"><dt>Control</dt><dd>DMX profesional</dd></div>
+              <div class="ps-specs__row"><dt>Zonas</dt><dd>2 independientes</dd></div>
+              <div class="ps-specs__row"><dt>Colores</dt><dd>16M combinaciones</dd></div>
+              <div class="ps-specs__row"><dt>Técnico</dt><dd>Incluido</dd></div>
+              <div class="ps-specs__row"><dt>Instalación</dt><dd>Incluida</dd></div>
+              <div class="ps-specs__row"><dt>Zona</dt><dd>CDMX + Edomex</dd></div>
+            </dl>
+          </div>
+
+          <div class="ps-widget">
+            <h3 class="ps-widget__title">Ideal para</h3>
+            <div class="ps-tags">
+              <span class="ps-tag">Bodas en hacienda</span>
+              <span class="ps-tag">XV años grandes</span>
+              <span class="ps-tag">Salones medianos</span>
+              <span class="ps-tag">Eventos corporativos</span>
+              <span class="ps-tag">Fachadas completas</span>
+              <span class="ps-tag">Exterior + interior</span>
+              <span class="ps-tag">100-200 invitados</span>
+              <span class="ps-tag">Galas y cenas de gala</span>
+            </div>
+          </div>
+
+          <div class="ps-widget">
+            <h3 class="ps-widget__title">Otros paquetes</h3>
+            <a href="/renta-de-iluminacion/city-color/paquete-4-canones/" class="ps-pkg">
+              <img src="/img/img-index/city-color.avif" alt="4 Cañones City Color" width="80" height="60" loading="lazy" class="ps-pkg__img" />
+              <div class="ps-pkg__info">
+                <span class="ps-pkg__name">4 Cañones</span>
+                <span class="ps-pkg__price">$4,500 MXN</span>
+              </div>
+            </a>
+            <a href="/renta-de-iluminacion/city-color/paquete-16-canones/" class="ps-pkg">
+              <img src="/img/img-index/city-color.avif" alt="16 Cañones City Color" width="80" height="60" loading="lazy" class="ps-pkg__img" />
+              <div class="ps-pkg__info">
+                <span class="ps-pkg__name">16 Cañones</span>
+                <span class="ps-pkg__price">$13,500 MXN</span>
+              </div>
+            </a>
+            <a href="/renta-de-iluminacion/city-color/paquete-produccion/" class="ps-pkg">
+              <img src="/img/img-index/city-color.avif" alt="Producción 24+ cañones" width="80" height="60" loading="lazy" class="ps-pkg__img" />
+              <div class="ps-pkg__info">
+                <span class="ps-pkg__name">Producción — 24+</span>
+                <span class="ps-pkg__price">$22,000 MXN</span>
+              </div>
+            </a>
+            <div class="ps-upsell">
+              <p class="ps-upsell__text">¿Evento en hacienda entera o jardín grande? El paquete de 16 cañones cubre todo el perímetro sin dejar zonas sin color.</p>
+              <a href="/renta-de-iluminacion/city-color/paquete-16-canones/" class="ps-upsell__link">Ver paquete 16 Cañones →</a>
+            </div>
+          </div>
+
+          <div class="ps-widget ps-widget--dark">
+            <h3 class="ps-widget__title ps-widget__title--light">Cotiza tu evento</h3>
+            <p class="ps-widget__desc">Cotización personalizada en menos de 24 horas. Sin compromiso.</p>
+            <a href="/cotizar/" class="ps-widget__btn">Cotizar Gratis</a>
+            <a href={WHATSAPP_URL_MSG} class="ps-widget__btn ps-widget__btn--wa" target="_blank" rel="noopener">WhatsApp: 55 4937 5172</a>
+          </div>
+
+          <div class="ps-widget">
+            <h3 class="ps-widget__title">Servicios relacionados</h3>
+            <div class="ps-links">
+              <a href="/renta-de-iluminacion/city-light/" class="ps-link">City Light — Par LED</a>
+              <a href="/renta-de-iluminacion/luces-arquitectonicas/" class="ps-link">Uplighting arquitectónico</a>
+              <a href="/renta-de-iluminacion/cabezas-moviles/" class="ps-link">Cabezas móviles</a>
+              <a href="/renta-de-iluminacion/guirnaldas/" class="ps-link">Guirnaldas LED Edison</a>
+              <a href="/equipos-para-eventos/humo-bajo/" class="ps-link">Humo Bajo</a>
+              <a href="/equipos-para-eventos/maquina-de-confeti/" class="ps-link">Confeti</a>
+            </div>
+          </div>
+
+          <div class="ps-widget">
+            <h3 class="ps-widget__title">Contacto</h3>
+            <div class="ps-contact">
+              <p><a href="tel:+525549375172">55 4937 5172</a></p>
+              <p><a href="mailto:contacto@redeil.com">contacto@redeil.com</a></p>
+              <p>Lun-Vie 9:00-19:00 | Sáb 10:00-15:00</p>
+            </div>
+          </div>
+
+        </aside>
+      </div>
     </div>
   </section>
 
   <FaqSection items={faqItems} />
-
-  <!-- CTA FINAL -->
 
   <Footer />
   <WhatsAppBubble />
 </Base>
 
 <style>
-  .section__title {
-    font-size: clamp(1.5rem, 3vw, 2rem);
-    font-weight: 800;
-    color: var(--color-text);
-    margin-bottom: 0.5rem;
-  }
-  .section__subtitle {
-    font-size: var(--font-size-base);
-    color: var(--color-text-light);
-    margin-bottom: 2rem;
-  }
-  .features-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 0.75rem;
-    margin-bottom: 2rem;
-  }
-  .feature-item {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    padding: 0.875rem 1rem;
-    border-radius: var(--border-radius);
-    font-size: var(--font-size-sm);
-  }
-  .feature-item--yes {
-    background: #f0fdf4;
-    color: #166534;
-  }
-  .feature-item--no {
-    background: var(--color-bg);
-    color: var(--color-text-light);
-  }
-  .feature-icon {
-    font-weight: 700;
-    font-size: 1.125rem;
-    flex-shrink: 0;
-  }
-  .price-highlight {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 2rem;
-    background: var(--color-bg);
-    border-radius: var(--border-radius-lg);
-    text-align: center;
-  }
-  .price-highlight__label {
-    font-size: var(--font-size-sm);
-    color: var(--color-text-light);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-  }
-  .price-highlight__amount {
-    font-size: clamp(2rem, 5vw, 3rem);
-    font-weight: 800;
-    color: var(--color-text);
-  }
-  .price-highlight__note {
-    font-size: var(--font-size-sm);
-    color: var(--color-text-light);
-    margin-bottom: 0.5rem;
-  }
-  .content-prose {
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  .content-prose h2 {
-    font-size: clamp(1.5rem, 3vw, 2rem);
-    font-weight: 800;
-    color: var(--color-text);
-    margin-bottom: 1rem;
-  }
-  .content-prose h3 {
-    font-size: var(--font-size-xl);
-    font-weight: 700;
-    color: var(--color-text);
-    margin: 2rem 0 0.75rem;
-  }
-  .content-prose p {
-    font-size: var(--font-size-base);
-    color: var(--color-text-light);
-    line-height: 1.8;
-    margin-bottom: 1rem;
-  }
+  .prod-layout { display: grid; grid-template-columns: 1fr; gap: 2rem; }
+  @media (min-width: 1024px) { .prod-layout { grid-template-columns: 1fr 340px; gap: 2.5rem; } }
+  .prod-gallery { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; margin-bottom: 2rem; border-radius: 14px; overflow: hidden; }
+  .prod-gallery__main { grid-row: span 2; }
+  .prod-gallery__main img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .prod-gallery__side { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; }
+  .prod-gallery__side img { width: 100%; height: 100%; object-fit: cover; display: block; aspect-ratio: 3/2; }
+  .prod-info { margin-bottom: 2.5rem; }
+  .prod-info__badge { display: inline-block; font-size: 0.75rem; font-weight: 700; color: var(--color-accent); text-transform: uppercase; letter-spacing: 0.08em; padding: 0.375rem 1rem; background: rgba(0,113,227,0.08); border: 1px solid rgba(0,113,227,0.12); border-radius: 6px; margin-bottom: 0.75rem; }
+  .prod-info__title { font-size: clamp(1.375rem, 3vw, 1.75rem); font-weight: 800; color: var(--color-text); line-height: 1.2; letter-spacing: -0.02em; margin: 0 0 1.25rem; }
+  .prod-price { background: var(--color-bg); border-radius: 12px; padding: 1.25rem 1.5rem; margin-bottom: 1.25rem; border-left: 4px solid var(--color-accent); }
+  .prod-price__amount { font-size: 2.25rem; font-weight: 800; color: var(--color-primary); font-variant-numeric: tabular-nums; }
+  .prod-price__currency { font-size: 0.875rem; color: var(--color-text-light); margin-left: 0.5rem; }
+  .prod-price__note { font-size: 0.8125rem; color: var(--color-text-light); margin: 0.5rem 0 0; }
+  .prod-ctas { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+  .prod-btn { display: inline-flex; align-items: center; justify-content: center; padding: 0.875rem 1.75rem; border-radius: 6px; font-size: 0.9375rem; font-weight: 600; text-decoration: none; transition: background 0.2s ease, border-color 0.2s ease; }
+  .prod-btn--wa { background: #25D366; color: #fff; }
+  .prod-btn--wa:hover { background: #1DA851; }
+  .prod-btn--outline { background: none; color: var(--color-text); border: 2px solid var(--color-border); }
+  .prod-btn--outline:hover { border-color: var(--color-accent); color: var(--color-accent); }
+  .prod-selling { margin-bottom: 2.5rem; }
+  .prod-selling__headline { font-size: clamp(1.25rem, 3vw, 1.5rem); font-weight: 800; color: var(--color-text); line-height: 1.25; letter-spacing: -0.02em; margin: 0 0 0.75rem; }
+  .prod-selling__intro { font-size: 0.9375rem; color: var(--color-text-light); line-height: 1.75; margin: 0 0 1.75rem; max-width: 65ch; }
+  .prod-highlights { display: flex; flex-direction: column; gap: 1.25rem; }
+  .prod-hl { display: flex; gap: 1rem; align-items: stretch; }
+  .prod-hl__bar { flex-shrink: 0; width: 3px; background: var(--color-accent); border-radius: 2px; }
+  .prod-hl__content { display: flex; flex-direction: column; gap: 0.25rem; }
+  .prod-hl__title { font-size: 0.9375rem; font-weight: 700; color: var(--color-text); margin: 0; line-height: 1.3; }
+  .prod-hl__desc { font-size: 0.8125rem; color: var(--color-text-light); line-height: 1.65; margin: 0; }
+  .prod-includes { background: var(--color-bg); border-radius: 14px; padding: 1.75rem 2rem; }
+  .prod-includes__title { font-size: 1.0625rem; font-weight: 700; color: var(--color-text); margin: 0 0 1rem; }
+  .prod-includes__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; }
+  .prod-feat { font-size: 0.875rem; color: var(--color-text-light); padding-left: 1.25rem; position: relative; line-height: 1.5; }
+  .prod-feat::before { content: ""; position: absolute; left: 0; top: 0.45rem; width: 6px; height: 6px; border-radius: 50%; background: var(--color-accent); }
+  @media (max-width: 640px) { .prod-includes__grid { grid-template-columns: 1fr; } }
+  .prod-sidebar { display: flex; flex-direction: column; gap: 1.25rem; }
+  @media (min-width: 1024px) { .prod-sidebar { position: sticky; top: calc(var(--header-height) + var(--topbar-height) + 1.5rem); align-self: start; } }
+  .ps-widget { background: var(--color-white); border: 1px solid var(--color-border); border-radius: 12px; padding: 1.25rem; }
+  .ps-widget--dark { background: var(--color-primary); color: #fff; border: none; }
+  .ps-widget__title { font-size: 0.875rem; font-weight: 700; color: var(--color-text); text-transform: uppercase; letter-spacing: 0.05em; margin: 0 0 0.75rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--color-accent); }
+  .ps-widget__title--light { color: #fff; }
+  .ps-widget__desc { font-size: 0.8125rem; color: rgba(255,255,255,0.75); margin: 0 0 0.75rem; }
+  .ps-widget__btn { display: block; text-align: center; padding: 0.625rem; border-radius: 6px; font-size: 0.875rem; font-weight: 600; text-decoration: none; margin-top: 0.5rem; background: var(--color-accent); color: #fff; transition: background 0.2s ease; }
+  .ps-widget__btn:hover { opacity: 0.9; }
+  .ps-widget__btn--wa { background: #25D366; }
+  .ps-specs { display: flex; flex-direction: column; margin: 0; }
+  .ps-specs__row { display: flex; justify-content: space-between; align-items: baseline; padding: 0.4rem 0; border-bottom: 1px solid var(--color-bg); gap: 0.75rem; }
+  .ps-specs__row:last-child { border-bottom: none; }
+  .ps-specs__row dt { font-size: 0.8125rem; color: var(--color-text-light); font-weight: 500; margin: 0; }
+  .ps-specs__row dd { font-size: 0.8125rem; font-weight: 600; color: var(--color-text); text-align: right; margin: 0; font-variant-numeric: tabular-nums; }
+  .ps-tags { display: flex; flex-wrap: wrap; gap: 0.375rem; }
+  .ps-tag { font-size: 0.6875rem; font-weight: 600; color: var(--color-text); padding: 0.3rem 0.75rem; background: var(--color-bg); border: 1px solid var(--color-border); border-radius: 6px; white-space: nowrap; }
+  .ps-pkg { display: flex; gap: 0.75rem; align-items: center; text-decoration: none; padding: 0.625rem 0; border-bottom: 1px solid var(--color-bg); }
+  .ps-pkg:last-of-type { border-bottom: none; }
+  .ps-pkg__img { width: 72px; height: 54px; object-fit: cover; border-radius: 8px; flex-shrink: 0; }
+  .ps-pkg__info { display: flex; flex-direction: column; gap: 0.125rem; }
+  .ps-pkg__name { font-size: 0.8125rem; font-weight: 600; color: var(--color-text); }
+  .ps-pkg__price { font-size: 0.75rem; font-weight: 700; color: var(--color-accent); font-variant-numeric: tabular-nums; }
+  .ps-pkg:hover .ps-pkg__name { color: var(--color-accent); }
+  .ps-upsell { margin-top: 0.75rem; padding-top: 0.75rem; border-top: 1px solid var(--color-bg); }
+  .ps-upsell__text { font-size: 0.75rem; color: var(--color-text-light); line-height: 1.5; margin: 0 0 0.375rem; }
+  .ps-upsell__link { font-size: 0.75rem; font-weight: 600; color: var(--color-accent); text-decoration: none; }
+  .ps-upsell__link:hover { text-decoration: underline; }
+  .ps-links { display: flex; flex-direction: column; }
+  .ps-link { padding: 0.4rem 0; border-bottom: 1px solid var(--color-bg); font-size: 0.8125rem; color: var(--color-text-light); text-decoration: none; }
+  .ps-link:last-child { border-bottom: none; }
+  .ps-link:hover { color: var(--color-accent); }
+  .ps-contact p { font-size: 0.8125rem; color: var(--color-text-light); margin: 0.3rem 0; }
+  .ps-contact a { color: var(--color-accent); text-decoration: none; }
+  .prod-process { margin: 2.5rem 0; }
+  .prod-process__title { font-size: 1.125rem; font-weight: 800; color: var(--color-text); letter-spacing: -0.02em; margin: 0 0 1.25rem; }
+  .prod-steps { display: flex; flex-direction: column; gap: 0; }
+  .prod-step { display: flex; gap: 1rem; padding: 1rem 0; border-bottom: 1px solid var(--color-border); }
+  .prod-step:last-child { border-bottom: none; }
+  .prod-step__num { flex-shrink: 0; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; background: var(--color-accent); color: #fff; font-size: 0.8125rem; font-weight: 700; border-radius: 50%; }
+  .prod-step__content { display: flex; flex-direction: column; gap: 0.2rem; }
+  .prod-step__name { font-size: 0.9375rem; font-weight: 700; color: var(--color-text); margin: 0; line-height: 1.3; }
+  .prod-step__desc { font-size: 0.8125rem; color: var(--color-text-light); line-height: 1.6; margin: 0; }
+  .prod-compare { margin: 2.5rem 0; }
+  .prod-compare__title { font-size: 1.125rem; font-weight: 800; color: var(--color-text); letter-spacing: -0.02em; margin: 0 0 1.25rem; }
+  .prod-compare__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+  @media (max-width: 640px) { .prod-compare__grid { grid-template-columns: 1fr; } }
+  .prod-compare__col { border-radius: 12px; padding: 1.25rem; }
+  .prod-compare__col--them { background: #fef2f2; border: 1px solid #fecaca; }
+  .prod-compare__col--us { background: #eff6ff; border: 1px solid #bfdbfe; }
+  .prod-compare__label { display: block; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.75rem; }
+  .prod-compare__col--them .prod-compare__label { color: #991b1b; }
+  .prod-compare__col--us .prod-compare__label { color: var(--color-primary); }
+  .prod-compare__list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.5rem; }
+  .prod-compare__list li { font-size: 0.8125rem; color: var(--color-text); line-height: 1.4; padding-left: 1.125rem; position: relative; }
+  .prod-compare__col--them .prod-compare__list li::before { content: "–"; position: absolute; left: 0; color: #dc2626; font-size: 0.75rem; font-weight: 700; }
+  .prod-compare__col--us .prod-compare__list li::before { content: "✓"; position: absolute; left: 0; color: var(--color-accent); font-size: 0.75rem; font-weight: 700; }
+  .prod-proof { margin-top: 2.5rem; }
+  .prod-quote { background: var(--color-bg); border-radius: 14px; padding: 1.75rem 2rem; border-left: 4px solid var(--color-accent); margin: 0; }
+  .prod-quote__text { font-size: 0.9375rem; color: var(--color-text); line-height: 1.75; font-style: italic; margin: 0 0 1rem; }
+  .prod-quote__footer { display: flex; flex-direction: column; gap: 0.125rem; }
+  .prod-quote__name { font-size: 0.875rem; font-weight: 700; color: var(--color-text); font-style: normal; }
+  .prod-quote__event { font-size: 0.75rem; color: var(--color-text-light); font-style: normal; }
 </style>

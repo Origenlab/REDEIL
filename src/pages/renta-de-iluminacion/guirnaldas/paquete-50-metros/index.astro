@@ -89,13 +89,15 @@ const structuredData = [
     items={[{ label: "Estándar — 100 metros", href: "/renta-de-iluminacion/guirnaldas/paquete-100-metros/" }, { label: "Premium — 200 metros", href: "/renta-de-iluminacion/guirnaldas/paquete-200-metros/" }, { label: "Producción — 500 metros", href: "/renta-de-iluminacion/guirnaldas/paquete-500-metros/" }]}
   />
 
-    <!-- PRODUCTO CON SIDEBAR -->
+    <!-- PRODUCTO CON SIDEBAR UNIFICADO -->
   <section class="section" id="producto">
     <div class="container">
       <div class="prod-layout">
-        <!-- MAIN -->
+
+        <!-- ═══ COLUMNA PRINCIPAL ═══ -->
         <div class="prod-main">
-          <!-- Galería 2 columnas -->
+
+          <!-- Galería -->
           <div class="prod-gallery">
             <div class="prod-gallery__main">
               <img src="/img/paquetes/guirnaldas/basico.avif" alt="Paquete Básico 50 metros guirnaldas Edison" width="600" height="400" loading="eager" />
@@ -108,30 +110,15 @@ const structuredData = [
             </div>
           </div>
 
-          <!-- Info producto -->
+          <!-- Badge + Título + Precio + CTA -->
           <div class="prod-info">
             <span class="prod-info__badge">Paquete Básico</span>
             <h2 class="prod-info__title">50 metros de Guirnaldas LED con Focos Edison</h2>
-            <p class="prod-info__desc">El paquete ideal para bodas íntimas en jardín, cenas al aire libre y terrazas pequeñas. 50 metros de guirnalda con focos Edison de luz ámbar que transforman cualquier espacio en algo memorable. Nuestro equipo llega, instala, opera y desmonta — tú solo disfrutas.</p>
 
             <div class="prod-price">
               <span class="prod-price__amount">$3,500</span>
               <span class="prod-price__currency">MXN + IVA</span>
               <p class="prod-price__note">Todo incluido: transporte, instalación, operación y desmontaje en CDMX y Edomex</p>
-            </div>
-
-            <div class="prod-features">
-              <h3>Lo que incluye:</h3>
-              <div class="prod-features__grid">
-                <div class="prod-feat">50 metros de guirnalda LED profesional</div>
-                <div class="prod-feat">Focos Edison cálidos con filamento visible</div>
-                <div class="prod-feat">Cable negro profesional</div>
-                <div class="prod-feat">Transporte ida y vuelta</div>
-                <div class="prod-feat">Instalación profesional</div>
-                <div class="prod-feat">Técnico operador durante el evento</div>
-                <div class="prod-feat">Desmontaje al finalizar</div>
-                <div class="prod-feat">Repuestos en sitio por si acaso</div>
-              </div>
             </div>
 
             <div class="prod-ctas">
@@ -140,59 +127,167 @@ const structuredData = [
             </div>
           </div>
 
-          <!-- Product Showcase -->
-          <ProductShowcase
-            headline="50 metros que transforman cualquier rincón en el lugar que todos quieren fotografiar"
-            intro="Este no es solo un tendido de luces. Son 50 metros de atmósfera: focos Edison con filamento visible que proyectan una luz ámbar cálida, montados sobre cable negro profesional que desaparece contra el cielo nocturno. El resultado es ese efecto de jardín europeo que ves en Pinterest — pero real, en tu evento, en CDMX."
-            highlights={[
-              {
-                title: "Luz ámbar cálida sin deslumbrar",
-                desc: "Los focos Edison LED emiten 2700K — la temperatura exacta que favorece los tonos de piel en fotografías y crea intimidad sin oscurecer el espacio. Tus invitados se ven bien, tu evento se siente bien."
-              },
-              {
-                title: "Cable negro profesional: invisible de noche",
-                desc: "No usamos cable blanco ni transparente que refleja flash. El cable negro mate se mimetiza con el cielo nocturno, dejando visible solo la luz. El efecto: focos flotando en el aire."
-              },
-              {
-                title: "Instalación a medida de tu espacio",
-                desc: "Nuestro técnico evalúa la estructura del lugar — pérgolas, árboles, postes, techos — y diseña el recorrido óptimo de las guirnaldas. No es colgar cable: es iluminar arquitectura."
-              },
-              {
-                title: "Servicio puerta a puerta sin que muevas un dedo",
-                desc: "Llegamos 3 horas antes, instalamos, hacemos pruebas de encendido, operamos durante el evento y desmontamos al final. Tú llegas, todo está listo."
-              }
-            ]}
-            specs={[
-              { label: "Longitud total", value: "50 metros" },
-              { label: "Tipo de foco", value: "Edison LED ámbar" },
-              { label: "Temperatura de color", value: "2700K cálido" },
-              { label: "Cable", value: "Negro mate profesional" },
-              { label: "Cobertura aprox.", value: "30-50 invitados" },
-              { label: "Instalación", value: "Incluida" },
-              { label: "Desmontaje", value: "Incluido" },
-              { label: "Zona de servicio", value: "CDMX + Edomex" }
-            ]}
-            idealFor={[
-              "Bodas íntimas en jardín",
-              "Cenas al aire libre",
-              "Pedidas de mano",
-              "Aniversarios",
-              "Baby showers",
-              "Terrazas privadas",
-              "Marcos de fotografía",
-              "Pérgolas y pasillos"
-            ]}
-            comparison={{
-              text: "¿Tu espacio es más grande? El paquete Estándar de 100 metros duplica la cobertura e incluye dimmer para controlar la intensidad.",
-              href: "/renta-de-iluminacion/guirnaldas/paquete-100-metros/",
-              label: "Ver paquete Estándar — 100m"
-            }}
-          />
+          <!-- Selling Points -->
+          <div class="prod-selling">
+            <h2 class="prod-selling__headline">50 metros que transforman cualquier rincón en el lugar que todos quieren fotografiar</h2>
+            <p class="prod-selling__intro">Este no es solo un tendido de luces. Son 50 metros de atmósfera: focos Edison con filamento visible que proyectan una luz ámbar cálida, montados sobre cable negro profesional que desaparece contra el cielo nocturno. El resultado es ese efecto de jardín europeo que ves en Pinterest — pero real, en tu evento, en CDMX.</p>
+
+            <div class="prod-highlights">
+              <div class="prod-hl">
+                <div class="prod-hl__bar"></div>
+                <div class="prod-hl__content">
+                  <h3 class="prod-hl__title">Luz ámbar cálida sin deslumbrar</h3>
+                  <p class="prod-hl__desc">Los focos Edison LED emiten 2700K — la temperatura exacta que favorece los tonos de piel en fotografías y crea intimidad sin oscurecer el espacio. Tus invitados se ven bien, tu evento se siente bien.</p>
+                </div>
+              </div>
+              <div class="prod-hl">
+                <div class="prod-hl__bar"></div>
+                <div class="prod-hl__content">
+                  <h3 class="prod-hl__title">Cable negro profesional: invisible de noche</h3>
+                  <p class="prod-hl__desc">No usamos cable blanco ni transparente que refleja flash. El cable negro mate se mimetiza con el cielo nocturno, dejando visible solo la luz. El efecto: focos flotando en el aire.</p>
+                </div>
+              </div>
+              <div class="prod-hl">
+                <div class="prod-hl__bar"></div>
+                <div class="prod-hl__content">
+                  <h3 class="prod-hl__title">Instalación a medida de tu espacio</h3>
+                  <p class="prod-hl__desc">Nuestro técnico evalúa la estructura del lugar — pérgolas, árboles, postes, techos — y diseña el recorrido óptimo de las guirnaldas. No es colgar cable: es iluminar arquitectura.</p>
+                </div>
+              </div>
+              <div class="prod-hl">
+                <div class="prod-hl__bar"></div>
+                <div class="prod-hl__content">
+                  <h3 class="prod-hl__title">Servicio puerta a puerta sin que muevas un dedo</h3>
+                  <p class="prod-hl__desc">Llegamos 3 horas antes, instalamos, hacemos pruebas de encendido, operamos durante el evento y desmontamos al final. Tú llegas, todo está listo.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Lo que incluye -->
+          <div class="prod-includes">
+            <h3 class="prod-includes__title">Lo que incluye este paquete</h3>
+            <div class="prod-includes__grid">
+              <div class="prod-feat">50 metros de guirnalda LED profesional</div>
+              <div class="prod-feat">Focos Edison cálidos con filamento visible</div>
+              <div class="prod-feat">Cable negro mate profesional</div>
+              <div class="prod-feat">Transporte ida y vuelta</div>
+              <div class="prod-feat">Instalación profesional</div>
+              <div class="prod-feat">Técnico operador durante el evento</div>
+              <div class="prod-feat">Desmontaje al finalizar</div>
+              <div class="prod-feat">Repuestos en sitio por si acaso</div>
+            </div>
+          </div>
+
+          <!-- Cómo funciona -->
+          <div class="prod-process">
+            <h3 class="prod-process__title">Así funciona el servicio</h3>
+            <div class="prod-steps">
+              <div class="prod-step">
+                <span class="prod-step__num">1</span>
+                <div class="prod-step__content">
+                  <h4 class="prod-step__name">Cuéntanos sobre tu evento</h4>
+                  <p class="prod-step__desc">Fecha, lugar, tipo de evento y cuántos invitados esperas. Con esos datos diseñamos la propuesta exacta para tu espacio.</p>
+                </div>
+              </div>
+              <div class="prod-step">
+                <span class="prod-step__num">2</span>
+                <div class="prod-step__content">
+                  <h4 class="prod-step__name">Recibe tu cotización en menos de 24h</h4>
+                  <p class="prod-step__desc">Te enviamos propuesta detallada por WhatsApp con precio final, lo que incluye y opciones de personalización. Sin costos ocultos.</p>
+                </div>
+              </div>
+              <div class="prod-step">
+                <span class="prod-step__num">3</span>
+                <div class="prod-step__content">
+                  <h4 class="prod-step__name">Aparta tu fecha con anticipo</h4>
+                  <p class="prod-step__desc">Reserva con un anticipo del 50% por transferencia, efectivo o tarjeta. Tu fecha queda bloqueada y confirmada al instante.</p>
+                </div>
+              </div>
+              <div class="prod-step">
+                <span class="prod-step__num">4</span>
+                <div class="prod-step__content">
+                  <h4 class="prod-step__name">Nosotros nos encargamos de todo</h4>
+                  <p class="prod-step__desc">Llegamos 3 horas antes, instalamos las guirnaldas según el diseño acordado, hacemos pruebas y operamos durante el evento. Al terminar, desmontamos todo.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Comparativa rápida -->
+          <div class="prod-compare">
+            <h3 class="prod-compare__title">¿Por qué guirnaldas Edison y no series de luces normales?</h3>
+            <div class="prod-compare__grid">
+              <div class="prod-compare__col prod-compare__col--them">
+                <span class="prod-compare__label">Series de luces comerciales</span>
+                <ul class="prod-compare__list">
+                  <li>Luz blanca fría — parece bodega</li>
+                  <li>Cable visible y plástico delgado</li>
+                  <li>Se funden a mitad del evento</li>
+                  <li>Tú instalas, tú resuelves</li>
+                  <li>Focos pequeños sin carácter</li>
+                </ul>
+              </div>
+              <div class="prod-compare__col prod-compare__col--us">
+                <span class="prod-compare__label">Guirnaldas Edison REDEIL</span>
+                <ul class="prod-compare__list">
+                  <li>Luz ámbar 2700K — favorece fotos</li>
+                  <li>Cable negro mate invisible</li>
+                  <li>LED profesional, cero fallas</li>
+                  <li>Técnico opera todo el evento</li>
+                  <li>Focos Edison con filamento visible</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Social proof -->
+          <div class="prod-proof">
+            <blockquote class="prod-quote">
+              <p class="prod-quote__text">"Las guirnaldas fueron el detalle que todos nuestros invitados comentaron. El jardín parecía sacado de una revista. El equipo de REDEIL llegó temprano, montó todo en silencio y cuando empezó la cena el efecto era impresionante."</p>
+              <footer class="prod-quote__footer">
+                <span class="prod-quote__name">Andrea y Carlos</span>
+                <span class="prod-quote__event">Boda en Jardín Santa Fe — 45 invitados</span>
+              </footer>
+            </blockquote>
+          </div>
+
         </div>
 
-        <!-- SIDEBAR -->
+        <!-- ═══ SIDEBAR UNIFICADO ═══ -->
         <aside class="prod-sidebar">
-          <!-- Otros paquetes -->
+
+          <!-- 1. Specs técnicas -->
+          <div class="ps-widget">
+            <h3 class="ps-widget__title">Especificaciones</h3>
+            <dl class="ps-specs">
+              <div class="ps-specs__row"><dt>Longitud total</dt><dd>50 metros</dd></div>
+              <div class="ps-specs__row"><dt>Tipo de foco</dt><dd>Edison LED ámbar</dd></div>
+              <div class="ps-specs__row"><dt>Temperatura</dt><dd>2700K cálido</dd></div>
+              <div class="ps-specs__row"><dt>Cable</dt><dd>Negro mate profesional</dd></div>
+              <div class="ps-specs__row"><dt>Cobertura</dt><dd>30-50 invitados</dd></div>
+              <div class="ps-specs__row"><dt>Instalación</dt><dd>Incluida</dd></div>
+              <div class="ps-specs__row"><dt>Desmontaje</dt><dd>Incluido</dd></div>
+              <div class="ps-specs__row"><dt>Zona</dt><dd>CDMX + Edomex</dd></div>
+            </dl>
+          </div>
+
+          <!-- 2. Ideal para -->
+          <div class="ps-widget">
+            <h3 class="ps-widget__title">Ideal para</h3>
+            <div class="ps-tags">
+              <span class="ps-tag">Bodas íntimas en jardín</span>
+              <span class="ps-tag">Cenas al aire libre</span>
+              <span class="ps-tag">Pedidas de mano</span>
+              <span class="ps-tag">Aniversarios</span>
+              <span class="ps-tag">Baby showers</span>
+              <span class="ps-tag">Terrazas privadas</span>
+              <span class="ps-tag">Marcos de fotografía</span>
+              <span class="ps-tag">Pérgolas y pasillos</span>
+            </div>
+          </div>
+
+          <!-- 3. Otros paquetes -->
           <div class="ps-widget">
             <h3 class="ps-widget__title">Otros paquetes</h3>
             <a href="/renta-de-iluminacion/guirnaldas/paquete-100-metros/" class="ps-pkg">
@@ -216,9 +311,14 @@ const structuredData = [
                 <span class="ps-pkg__price">$22,000 MXN</span>
               </div>
             </a>
+            <!-- Upsell -->
+            <div class="ps-upsell">
+              <p class="ps-upsell__text">¿Tu espacio es más grande? El Estándar de 100m duplica cobertura e incluye dimmer.</p>
+              <a href="/renta-de-iluminacion/guirnaldas/paquete-100-metros/" class="ps-upsell__link">Ver paquete Estándar →</a>
+            </div>
           </div>
 
-          <!-- CTA -->
+          <!-- 4. CTA -->
           <div class="ps-widget ps-widget--dark">
             <h3 class="ps-widget__title ps-widget__title--light">Cotiza tu evento</h3>
             <p class="ps-widget__desc">Cotización personalizada en menos de 24 horas. Sin compromiso.</p>
@@ -226,7 +326,7 @@ const structuredData = [
             <a href={WHATSAPP_URL_MSG} class="ps-widget__btn ps-widget__btn--wa" target="_blank" rel="noopener">WhatsApp: 55 4937 5172</a>
           </div>
 
-          <!-- Otros servicios -->
+          <!-- 5. Servicios relacionados -->
           <div class="ps-widget">
             <h3 class="ps-widget__title">Servicios relacionados</h3>
             <div class="ps-links">
@@ -239,7 +339,7 @@ const structuredData = [
             </div>
           </div>
 
-          <!-- Contacto -->
+          <!-- 6. Contacto -->
           <div class="ps-widget">
             <h3 class="ps-widget__title">Contacto</h3>
             <div class="ps-contact">
@@ -248,6 +348,7 @@ const structuredData = [
               <p>Lun-Vie 9:00-19:00 | Sáb 10:00-15:00</p>
             </div>
           </div>
+
         </aside>
       </div>
     </div>
@@ -263,70 +364,135 @@ const structuredData = [
 </Base>
 
 <style>
-  /* Product layout with sidebar */
+  /* ── Layout ── */
   .prod-layout { display: grid; grid-template-columns: 1fr; gap: 2rem; }
   @media (min-width: 1024px) { .prod-layout { grid-template-columns: 1fr 340px; gap: 2.5rem; } }
-  
-  /* Gallery 2 cols: 1 grande + 4 chicas */
+
+  /* ── Gallery ── */
   .prod-gallery { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; margin-bottom: 2rem; border-radius: 14px; overflow: hidden; }
   .prod-gallery__main { grid-row: span 2; }
   .prod-gallery__main img { width: 100%; height: 100%; object-fit: cover; display: block; }
   .prod-gallery__side { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; }
   .prod-gallery__side img { width: 100%; height: 100%; object-fit: cover; display: block; aspect-ratio: 3/2; }
-  
-  /* Product info */
-  .prod-info__badge { display: inline-block; font-size: 0.75rem; font-weight: 700; color: #D4A04A; text-transform: uppercase; letter-spacing: 0.1em; padding: 0.375rem 1rem; background: rgba(212,160,74,0.1); border-radius: 6px; margin-bottom: 0.75rem; }
-  .prod-info__title { font-size: 1.5rem; font-weight: 800; color: #0F172A; line-height: 1.25; margin: 0 0 1rem; }
-  .prod-info__desc { font-size: 1rem; color: #475569; line-height: 1.7; margin: 0 0 1.5rem; }
-  
-  /* Price */
-  .prod-price { background: #FAFAF5; border-radius: 12px; padding: 1.25rem 1.5rem; margin-bottom: 1.5rem; border-left: 4px solid #D4A04A; }
-  .prod-price__amount { font-size: 2.25rem; font-weight: 800; color: #D4A04A; }
-  .prod-price__currency { font-size: 0.875rem; color: #94A3B8; margin-left: 0.5rem; }
-  .prod-price__note { font-size: 0.8125rem; color: #64748B; margin: 0.5rem 0 0; }
-  
-  /* Features */
-  .prod-features h3 { font-size: 1.0625rem; font-weight: 700; color: #0F172A; margin: 0 0 0.75rem; }
-  .prod-features__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; margin-bottom: 1.5rem; }
-  .prod-feat { font-size: 0.875rem; color: #475569; padding-left: 1.25rem; position: relative; line-height: 1.5; }
-  .prod-feat::before { content: ""; position: absolute; left: 0; top: 0.45rem; width: 6px; height: 6px; border-radius: 50%; background: #D4A04A; }
-  
-  /* CTAs */
-  .prod-ctas { display: flex; gap: 0.75rem; margin-bottom: 2.5rem; flex-wrap: wrap; }
-  .prod-btn { display: inline-flex; align-items: center; justify-content: center; padding: 0.875rem 1.75rem; border-radius: 10px; font-size: 0.9375rem; font-weight: 600; text-decoration: none; transition: background 0.2s; }
+
+  /* ── Product Info (badge + title + price + CTAs) ── */
+  .prod-info { margin-bottom: 2.5rem; }
+  .prod-info__badge { display: inline-block; font-size: 0.75rem; font-weight: 700; color: var(--color-accent); text-transform: uppercase; letter-spacing: 0.08em; padding: 0.375rem 1rem; background: rgba(0,113,227,0.08); border: 1px solid rgba(0,113,227,0.12); border-radius: 6px; margin-bottom: 0.75rem; }
+  .prod-info__title { font-size: clamp(1.375rem, 3vw, 1.75rem); font-weight: 800; color: var(--color-text); line-height: 1.2; letter-spacing: -0.02em; margin: 0 0 1.25rem; }
+
+  .prod-price { background: var(--color-bg); border-radius: 12px; padding: 1.25rem 1.5rem; margin-bottom: 1.25rem; border-left: 4px solid var(--color-accent); }
+  .prod-price__amount { font-size: 2.25rem; font-weight: 800; color: var(--color-primary); font-variant-numeric: tabular-nums; }
+  .prod-price__currency { font-size: 0.875rem; color: var(--color-text-light); margin-left: 0.5rem; }
+  .prod-price__note { font-size: 0.8125rem; color: var(--color-text-light); margin: 0.5rem 0 0; }
+
+  .prod-ctas { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+  .prod-btn { display: inline-flex; align-items: center; justify-content: center; padding: 0.875rem 1.75rem; border-radius: 6px; font-size: 0.9375rem; font-weight: 600; text-decoration: none; transition: background 0.2s ease, border-color 0.2s ease; }
   .prod-btn--wa { background: #25D366; color: #fff; }
   .prod-btn--wa:hover { background: #1DA851; }
-  .prod-btn--outline { background: none; color: #0F172A; border: 2px solid #E2E8F0; }
-  .prod-btn--outline:hover { border-color: #D4A04A; color: #D4A04A; }
-  
-  
-  
-  /* Sidebar */
-  .prod-sidebar { display: flex; flex-direction: column; gap: 1.5rem; }
-  .ps-widget { background: #fff; border-radius: 12px; padding: 1.25rem; box-shadow: 0 1px 4px rgba(0,0,0,0.06); }
-  .ps-widget--dark { background: #1A1A2E; color: #fff; }
-  .ps-widget__title { font-size: 1rem; font-weight: 700; color: #0F172A; margin: 0 0 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid #D4A04A; }
+  .prod-btn--outline { background: none; color: var(--color-text); border: 2px solid var(--color-border); }
+  .prod-btn--outline:hover { border-color: var(--color-accent); color: var(--color-accent); }
+
+  /* ── Selling Points ── */
+  .prod-selling { margin-bottom: 2.5rem; }
+  .prod-selling__headline { font-size: clamp(1.25rem, 3vw, 1.5rem); font-weight: 800; color: var(--color-text); line-height: 1.25; letter-spacing: -0.02em; margin: 0 0 0.75rem; }
+  .prod-selling__intro { font-size: 0.9375rem; color: var(--color-text-light); line-height: 1.75; margin: 0 0 1.75rem; max-width: 65ch; }
+
+  .prod-highlights { display: flex; flex-direction: column; gap: 1.25rem; }
+  .prod-hl { display: flex; gap: 1rem; align-items: stretch; }
+  .prod-hl__bar { flex-shrink: 0; width: 3px; background: var(--color-accent); border-radius: 2px; }
+  .prod-hl__content { display: flex; flex-direction: column; gap: 0.25rem; }
+  .prod-hl__title { font-size: 0.9375rem; font-weight: 700; color: var(--color-text); margin: 0; line-height: 1.3; }
+  .prod-hl__desc { font-size: 0.8125rem; color: var(--color-text-light); line-height: 1.65; margin: 0; }
+
+  /* ── Includes ── */
+  .prod-includes { background: var(--color-bg); border-radius: 14px; padding: 1.75rem 2rem; }
+  .prod-includes__title { font-size: 1.0625rem; font-weight: 700; color: var(--color-text); margin: 0 0 1rem; }
+  .prod-includes__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; }
+  .prod-feat { font-size: 0.875rem; color: var(--color-text-light); padding-left: 1.25rem; position: relative; line-height: 1.5; }
+  .prod-feat::before { content: ""; position: absolute; left: 0; top: 0.45rem; width: 6px; height: 6px; border-radius: 50%; background: var(--color-accent); }
+  @media (max-width: 640px) { .prod-includes__grid { grid-template-columns: 1fr; } }
+
+  /* ── Sidebar ── */
+  .prod-sidebar { display: flex; flex-direction: column; gap: 1.25rem; }
+  @media (min-width: 1024px) { .prod-sidebar { position: sticky; top: calc(var(--header-height) + var(--topbar-height) + 1.5rem); align-self: start; } }
+
+  .ps-widget { background: var(--color-white); border: 1px solid var(--color-border); border-radius: 12px; padding: 1.25rem; }
+  .ps-widget--dark { background: var(--color-primary); color: #fff; border: none; }
+  .ps-widget__title { font-size: 0.875rem; font-weight: 700; color: var(--color-text); text-transform: uppercase; letter-spacing: 0.05em; margin: 0 0 0.75rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--color-accent); }
   .ps-widget__title--light { color: #fff; }
   .ps-widget__desc { font-size: 0.8125rem; color: rgba(255,255,255,0.75); margin: 0 0 0.75rem; }
-  .ps-widget__btn { display: block; text-align: center; padding: 0.625rem; border-radius: 8px; font-size: 0.875rem; font-weight: 600; text-decoration: none; margin-top: 0.5rem; background: #D4A04A; color: #fff; }
+  .ps-widget__btn { display: block; text-align: center; padding: 0.625rem; border-radius: 6px; font-size: 0.875rem; font-weight: 600; text-decoration: none; margin-top: 0.5rem; background: var(--color-accent); color: #fff; transition: background 0.2s ease; }
+  .ps-widget__btn:hover { opacity: 0.9; }
   .ps-widget__btn--wa { background: #25D366; }
-  
-  /* Package cards in sidebar */
-  .ps-pkg { display: flex; gap: 0.75rem; align-items: center; text-decoration: none; padding: 0.75rem 0; border-bottom: 1px solid #F1F5F9; }
-  .ps-pkg:last-child { border-bottom: none; }
-  .ps-pkg__img { width: 80px; height: 60px; object-fit: cover; border-radius: 8px; flex-shrink: 0; }
+
+  /* Specs */
+  .ps-specs { display: flex; flex-direction: column; margin: 0; }
+  .ps-specs__row { display: flex; justify-content: space-between; align-items: baseline; padding: 0.4rem 0; border-bottom: 1px solid var(--color-bg); gap: 0.75rem; }
+  .ps-specs__row:last-child { border-bottom: none; }
+  .ps-specs__row dt { font-size: 0.8125rem; color: var(--color-text-light); font-weight: 500; margin: 0; }
+  .ps-specs__row dd { font-size: 0.8125rem; font-weight: 600; color: var(--color-text); text-align: right; margin: 0; font-variant-numeric: tabular-nums; }
+
+  /* Tags */
+  .ps-tags { display: flex; flex-wrap: wrap; gap: 0.375rem; }
+  .ps-tag { font-size: 0.6875rem; font-weight: 600; color: var(--color-text); padding: 0.3rem 0.75rem; background: var(--color-bg); border: 1px solid var(--color-border); border-radius: 6px; white-space: nowrap; }
+
+  /* Package cards */
+  .ps-pkg { display: flex; gap: 0.75rem; align-items: center; text-decoration: none; padding: 0.625rem 0; border-bottom: 1px solid var(--color-bg); }
+  .ps-pkg:last-of-type { border-bottom: none; }
+  .ps-pkg__img { width: 72px; height: 54px; object-fit: cover; border-radius: 8px; flex-shrink: 0; }
   .ps-pkg__info { display: flex; flex-direction: column; gap: 0.125rem; }
-  .ps-pkg__name { font-size: 0.875rem; font-weight: 600; color: #0F172A; }
-  .ps-pkg__price { font-size: 0.8125rem; font-weight: 700; color: #D4A04A; }
-  .ps-pkg:hover .ps-pkg__name { color: #D4A04A; }
-  
+  .ps-pkg__name { font-size: 0.8125rem; font-weight: 600; color: var(--color-text); }
+  .ps-pkg__price { font-size: 0.75rem; font-weight: 700; color: var(--color-accent); font-variant-numeric: tabular-nums; }
+  .ps-pkg:hover .ps-pkg__name { color: var(--color-accent); }
+
+  /* Upsell */
+  .ps-upsell { margin-top: 0.75rem; padding-top: 0.75rem; border-top: 1px solid var(--color-bg); }
+  .ps-upsell__text { font-size: 0.75rem; color: var(--color-text-light); line-height: 1.5; margin: 0 0 0.375rem; }
+  .ps-upsell__link { font-size: 0.75rem; font-weight: 600; color: var(--color-accent); text-decoration: none; }
+  .ps-upsell__link:hover { text-decoration: underline; }
+
   /* Service links */
   .ps-links { display: flex; flex-direction: column; }
-  .ps-link { padding: 0.5rem 0; border-bottom: 1px solid #F1F5F9; font-size: 0.875rem; color: #475569; text-decoration: none; }
+  .ps-link { padding: 0.4rem 0; border-bottom: 1px solid var(--color-bg); font-size: 0.8125rem; color: var(--color-text-light); text-decoration: none; }
   .ps-link:last-child { border-bottom: none; }
-  .ps-link:hover { color: #D4A04A; }
-  
+  .ps-link:hover { color: var(--color-accent); }
+
   /* Contact */
-  .ps-contact p { font-size: 0.875rem; color: #475569; margin: 0.375rem 0; }
-  .ps-contact a { color: #D4A04A; text-decoration: none; }
+  .ps-contact p { font-size: 0.8125rem; color: var(--color-text-light); margin: 0.3rem 0; }
+  .ps-contact a { color: var(--color-accent); text-decoration: none; }
+
+  /* ── Process Steps ── */
+  .prod-process { margin: 2.5rem 0; }
+  .prod-process__title { font-size: 1.125rem; font-weight: 800; color: var(--color-text); letter-spacing: -0.02em; margin: 0 0 1.25rem; }
+  .prod-steps { display: flex; flex-direction: column; gap: 0; }
+  .prod-step { display: flex; gap: 1rem; padding: 1rem 0; border-bottom: 1px solid var(--color-border); }
+  .prod-step:last-child { border-bottom: none; }
+  .prod-step__num { flex-shrink: 0; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; background: var(--color-accent); color: #fff; font-size: 0.8125rem; font-weight: 700; border-radius: 50%; }
+  .prod-step__content { display: flex; flex-direction: column; gap: 0.2rem; }
+  .prod-step__name { font-size: 0.9375rem; font-weight: 700; color: var(--color-text); margin: 0; line-height: 1.3; }
+  .prod-step__desc { font-size: 0.8125rem; color: var(--color-text-light); line-height: 1.6; margin: 0; }
+
+  /* ── Comparison ── */
+  .prod-compare { margin: 2.5rem 0; }
+  .prod-compare__title { font-size: 1.125rem; font-weight: 800; color: var(--color-text); letter-spacing: -0.02em; margin: 0 0 1.25rem; }
+  .prod-compare__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+  @media (max-width: 640px) { .prod-compare__grid { grid-template-columns: 1fr; } }
+  .prod-compare__col { border-radius: 12px; padding: 1.25rem; }
+  .prod-compare__col--them { background: #fef2f2; border: 1px solid #fecaca; }
+  .prod-compare__col--us { background: #eff6ff; border: 1px solid #bfdbfe; }
+  .prod-compare__label { display: block; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.75rem; }
+  .prod-compare__col--them .prod-compare__label { color: #991b1b; }
+  .prod-compare__col--us .prod-compare__label { color: var(--color-primary); }
+  .prod-compare__list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.5rem; }
+  .prod-compare__list li { font-size: 0.8125rem; color: var(--color-text); line-height: 1.4; padding-left: 1.125rem; position: relative; }
+  .prod-compare__col--them .prod-compare__list li::before { content: "✕"; position: absolute; left: 0; color: #dc2626; font-size: 0.75rem; font-weight: 700; }
+  .prod-compare__col--us .prod-compare__list li::before { content: "✓"; position: absolute; left: 0; color: var(--color-accent); font-size: 0.75rem; font-weight: 700; }
+
+  /* ── Social Proof ── */
+  .prod-proof { margin-top: 2.5rem; }
+  .prod-quote { background: var(--color-bg); border-radius: 14px; padding: 1.75rem 2rem; border-left: 4px solid var(--color-accent); margin: 0; }
+  .prod-quote__text { font-size: 0.9375rem; color: var(--color-text); line-height: 1.75; font-style: italic; margin: 0 0 1rem; }
+  .prod-quote__footer { display: flex; flex-direction: column; gap: 0.125rem; }
+  .prod-quote__name { font-size: 0.875rem; font-weight: 700; color: var(--color-text); font-style: normal; }
+  .prod-quote__event { font-size: 0.75rem; color: var(--color-text-light); font-style: normal; }
 </style>

@@ -13,24 +13,24 @@ import { WHATSAPP_URL_MSG, SITE_URL } from '../../../../lib/config';
 
 const faqItems = [
   {
-    "pregunta": "¿Qué incluye el paquete Escenario Completo de Renta de Podium?",
-    "respuesta": "El paquete Escenario Completo incluye 4+ podiums profesionales, iluminación de escenario, sistema de audio completo. Todo con instalación profesional y desmontaje incluido. Nuestro equipo técnico llega con anticipación para montar y hacer pruebas."
+    pregunta: '¿Qué incluye el paquete Escenario Completo de Renta de Podium?',
+    respuesta: 'Incluye escenario completo con tarima de diseño, múltiples podiums, sistema de audio profesional propio, iluminación espectacular de escenario, micrófonos inalámbricos, transporte, montaje profesional, técnico operador durante todo el evento y desmontaje. Es la producción más completa para galas, lanzamientos y eventos de gran formato.'
   },
   {
-    "pregunta": "¿Cuánto cuesta el paquete Escenario Completo?",
-    "respuesta": "El paquete Escenario Completo de Renta de Podium tiene un precio desde $12,000 MXN + IVA. Este precio incluye transporte, instalación, operación y desmontaje dentro de CDMX y Estado de México."
+    pregunta: '¿Cuánto cuesta el paquete Escenario Completo?',
+    respuesta: 'El paquete Escenario Completo tiene un precio desde $12,000 MXN + IVA. Por la magnitud del equipo y la producción involucrada, recomendamos solicitar cotización personalizada según el espacio y el número de asistentes.'
   },
   {
-    "pregunta": "¿Puedo personalizar el paquete Escenario Completo?",
-    "respuesta": "Sí, todos nuestros paquetes son personalizables. Podemos agregar o quitar elementos según tus necesidades y presupuesto. Contáctanos por WhatsApp al 55 4937 5172 para una cotización a la medida."
+    pregunta: '¿Para qué tipo de eventos está diseñado el Escenario Completo?',
+    respuesta: 'Está diseñado para eventos de gran formato: galas corporativas, lanzamientos de producto, premios empresariales, convenciones nacionales, eventos tipo TEDx, keynotes de alto perfil y cualquier producción donde el escenario sea el protagonista visual del evento.'
   },
   {
-    "pregunta": "¿En qué zonas entregan el paquete Escenario Completo?",
-    "respuesta": "Cubrimos toda la Ciudad de México y Estado de México sin costo adicional de traslado. También llegamos a Cuernavaca, Tepoztlán, Valle de Bravo y ubicaciones dentro de 100 km de CDMX."
+    pregunta: '¿El sistema de audio incluye bocinas para el salón?',
+    respuesta: 'Sí, el paquete Escenario Completo incluye sistema de audio profesional con bocinas de main PA según la capacidad del recinto, mezclador, y el equipo de amplificación necesario. No dependemos del audio del venue.'
   },
   {
-    "pregunta": "¿Con cuánta anticipación debo reservar el paquete Escenario Completo?",
-    "respuesta": "Recomendamos reservar con 4 a 6 semanas de anticipación, especialmente en temporada alta (noviembre-febrero). Para fechas próximas, contáctanos por WhatsApp para verificar disponibilidad del equipo."
+    pregunta: '¿Con cuánta anticipación debo reservar el Escenario Completo?',
+    respuesta: 'Por la logística de este paquete, recomendamos reservar con al menos 6 a 8 semanas de anticipación. Contáctanos por WhatsApp al 55 4937 5172 para iniciar la coordinación técnica de tu evento.'
   }
 ];
 
@@ -39,7 +39,7 @@ const structuredData = [
     '@context': 'https://schema.org',
     '@type': 'Product',
     name: 'Escenario Completo — Renta de Podium | REDEIL',
-    description: 'Paquete Escenario Completo de renta de podium para eventos en CDMX y Estado de México. Incluye instalación profesional, operación durante el evento y desmontaje. Equipo de alta calidad para resultados impecables.',
+    description: 'Producción completa de escenario para eventos de gran formato en CDMX. Tarima, podiums, sistema de audio profesional, iluminación espectacular y técnico. La solución total para galas, convenciones y keynotes.',
     image: SITE_URL + '/img/img-index/renta-de-podium.avif',
     brand: { '@type': 'Brand', name: 'REDEIL' },
     offers: {
@@ -52,8 +52,8 @@ const structuredData = [
     },
     aggregateRating: {
       '@type': 'AggregateRating',
-      ratingValue: '4.8',
-      reviewCount: '66',
+      ratingValue: '5.0',
+      reviewCount: '19',
     },
   },
   faqSchema(faqItems),
@@ -61,162 +61,434 @@ const structuredData = [
 ---
 
 <Base
-  title="Escenario Completo — Renta de Podium en CDMX | REDEIL"
-  description="Paquete Escenario Completo de renta de podium para eventos en CDMX y Estado de México. Incluye instalación profesional, operación durante el evento y desmo"
+  title="Escenario Completo — Renta de Podium, Audio e Iluminación en CDMX | REDEIL"
+  description="Producción completa de escenario para galas, convenciones y keynotes en CDMX. Tarima + podiums + audio profesional + iluminación espectacular. Todo incluido desde $12,000 MXN + IVA."
   structuredData={structuredData}
 >
   <TopBar />
   <Header />
-  <Breadcrumb items={[{ name: 'Equipos para Eventos', href: '/equipos-para-eventos/' }, { name: 'Renta de Podium', href: '/equipos-para-eventos/renta-de-podium/' }, { name: 'Escenario Completo', href: '/equipos-para-eventos/renta-de-podium/paquete-escenario-completo/' }]} />
+  <Breadcrumb items={[
+    { name: 'Equipos para Eventos', href: '/equipos-para-eventos/' },
+    { name: 'Renta de Podium', href: '/equipos-para-eventos/renta-de-podium/' },
+    { name: 'Escenario Completo', href: '/equipos-para-eventos/renta-de-podium/paquete-escenario-completo/' }
+  ]} />
 
   <Hero
-    badge="Escenario Completo"
-    title="Escenario Completo — Renta de Podium"
-    description="Paquete Escenario Completo de renta de podium para eventos en CDMX y Estado de México. Incluye instalación profesional, operación durante el evento y de..."
+    badge="Paquete Flagship — Máxima Producción"
+    title="Escenario Completo — Podiums, Audio Profesional e Iluminación Espectacular"
+    description="La producción más completa para eventos de gran formato. Escenario de diseño, podiums premium, sistema de audio propio e iluminación espectacular. Para galas, convenciones y keynotes que no admiten medias tintas. CDMX y Edomex."
     primaryCta={{ text: 'Cotizar $12,000 + IVA', href: WHATSAPP_URL_MSG }}
     secondaryCta={{ text: 'Ver más paquetes', href: '/equipos-para-eventos/renta-de-podium/' }}
   >
     <Fragment slot="hero-seo">
-      <p>El paquete Escenario Completo de renta de podium es una solución producción para eventos que requieren equipamiento profesional en la Ciudad de México y zona metropolitana. Nuestro equipo técnico se encarga de todo: desde la logística de transporte hasta la instalación, configuración y operación durante tu evento.</p>
-      <p>Con más de 10 años de experiencia en renta de renta de podium para bodas, XV años, eventos corporativos y celebraciones privadas, REDEIL garantiza resultados profesionales. Este paquete ha sido diseñado para ofrecer la mejor relación calidad-precio, con equipo de marcas líderes y servicio técnico incluido.</p>
+      <p>El <strong>paquete Escenario Completo</strong> es para los eventos donde el escenario tiene que ser el centro de atención: galas de premiación, lanzamientos de producto a nivel nacional, convenciones corporativas, keynotes de alto perfil o cualquier evento donde la producción visual y sonora tiene que estar a la altura del presupuesto y la audiencia.</p>
+      <p>A diferencia de los paquetes anteriores, el Escenario Completo trae su propio sistema de audio profesional. No dependemos de las bocinas del venue — instalamos el PA completo, el mezclador y todo el equipo de amplificación necesario para el tamaño del recinto. Combinado con la iluminación espectacular de escenario y los podiums premium, el resultado es una producción que comunica poder, seriedad y presupuesto desde el primer momento.</p>
     </Fragment>
   </Hero>
 
   <CtaBar
     headline="Otros paquetes de Renta de Podium"
-    items={[{ label: "1 Podium", href: "/equipos-para-eventos/renta-de-podium/paquete-1-podium/" }, { label: "2 Podiums", href: "/equipos-para-eventos/renta-de-podium/paquete-2-podiums/" }, { label: "Congreso", href: "/equipos-para-eventos/renta-de-podium/paquete-congreso/" }]}
+    items={[
+      { label: "1 Podium", href: "/equipos-para-eventos/renta-de-podium/paquete-1-podium/" },
+      { label: "2 Podiums", href: "/equipos-para-eventos/renta-de-podium/paquete-2-podiums/" },
+      { label: "Congreso", href: "/equipos-para-eventos/renta-de-podium/paquete-congreso/" }
+    ]}
   />
 
-  <!-- QUÉ INCLUYE -->
-  <section class="section" id="features">
+  <!-- PRODUCTO CON SIDEBAR UNIFICADO -->
+  <section class="section" id="producto">
     <div class="container">
-      <h2 class="section__title">¿Qué incluye el paquete Escenario Completo?</h2>
-      <p class="section__subtitle">Todo lo que necesitas para tu evento, sin sorpresas ni costos ocultos.</p>
-      <div class="features-grid">
-        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>4+ podiums profesionales</span></div>
-        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>Iluminación de escenario</span></div>
-        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>Sistema de audio completo</span></div>
-        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>Pantallas LED</span></div>
-        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>Logo personalizado</span></div>
-        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>Audio integrado</span></div>
-        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>Técnico en sitio</span></div>
-        
-      </div>
-      <div class="price-highlight">
-        <span class="price-highlight__label">Precio desde</span>
-        <span class="price-highlight__amount">$12,000 MXN</span>
-        <span class="price-highlight__note">+ IVA · Instalación incluida</span>
-        <a href={WHATSAPP_URL_MSG} class="btn btn--accent" target="_blank" rel="noopener">Reservar Ahora</a>
-      </div>
-    </div>
-  </section>
+      <div class="prod-layout">
 
-  <!-- CONTENIDO SEO -->
-  <section class="section section--bg">
-    <div class="container content-prose">
-      <h2>¿Por qué elegir el paquete Escenario Completo de podium?</h2>
-      <p>El paquete Escenario Completo de renta de podium es una solución producción para eventos que requieren equipamiento profesional en la Ciudad de México y zona metropolitana. Nuestro equipo técnico se encarga de todo: desde la logística de transporte hasta la instalación, configuración y operación durante tu evento.</p>
-      <p>Con más de 10 años de experiencia en renta de renta de podium para bodas, XV años, eventos corporativos y celebraciones privadas, REDEIL garantiza resultados profesionales. Este paquete ha sido diseñado para ofrecer la mejor relación calidad-precio, con equipo de marcas líderes y servicio técnico incluido.</p>
-      <h3>¿Para quién es este paquete?</h3>
-      <p>El paquete Escenario Completo de renta de podium está diseñado para producciones de gran escala y eventos premium. Con equipo profesional de marcas líderes y servicio técnico especializado, garantizamos resultados impecables.</p>
-      <h3>Servicio profesional de renta de podium</h3>
-      <p>En REDEIL llevamos más de 10 años ofreciendo renta de renta de podium en CDMX y Estado de México. Nuestro equipo técnico se encarga de todo: logística, transporte, instalación, configuración, operación durante el evento y desmontaje. Trabajamos con el mejor equipo del mercado para garantizar que cada evento sea perfecto.</p>
+        <!-- ═══ COLUMNA PRINCIPAL ═══ -->
+        <div class="prod-main">
+
+          <!-- Galería -->
+          <div class="prod-gallery">
+            <div class="prod-gallery__main">
+              <img src="/img/paquetes/renta-de-podium/escenario-completo.avif" alt="Escenario completo con podiums audio e iluminación para gala corporativa CDMX" width="600" height="400" loading="eager" />
+            </div>
+            <div class="prod-gallery__side">
+              <img src="/img/img-index/pro/renta-de-podium.avif" alt="Producción completa de escenario para evento corporativo" width="300" height="200" loading="lazy" />
+              <img src="/img/paquetes/renta-de-podium/sell/escenario-gala.avif" alt="Escenario de gala con iluminación espectacular y podiums premium" width="300" height="200" loading="lazy" />
+              <img src="/img/paquetes/renta-de-podium/sell/audio-profesional.avif" alt="Sistema de audio profesional PA para evento de gran formato" width="300" height="200" loading="lazy" />
+              <img src="/img/paquetes/renta-de-podium/sell/iluminacion-gala.avif" alt="Iluminación espectacular escenario convención nacional" width="300" height="200" loading="lazy" />
+            </div>
+          </div>
+
+          <!-- Badge + Título + Precio + CTA -->
+          <div class="prod-info">
+            <span class="prod-info__badge">Paquete Flagship — Producción Total de Escenario</span>
+            <h2 class="prod-info__title">Escenario de Diseño + Podiums Premium + Audio Profesional Propio + Iluminación Espectacular</h2>
+
+            <div class="prod-price">
+              <span class="prod-price__amount">$12,000</span>
+              <span class="prod-price__currency">MXN + IVA</span>
+              <p class="prod-price__note">Todo incluido: tarima, podiums, audio propio, iluminación, técnico y desmontaje. Cotización personalizada según el recinto y la capacidad.</p>
+            </div>
+
+            <div class="prod-ctas">
+              <a href={WHATSAPP_URL_MSG} class="prod-btn prod-btn--wa" target="_blank" rel="noopener">Cotizar por WhatsApp</a>
+              <a href="/cotizar/" class="prod-btn prod-btn--outline">Solicitar cotización formal</a>
+            </div>
+          </div>
+
+          <!-- Selling Points -->
+          <div class="prod-selling">
+            <h2 class="prod-selling__headline">Una producción que hace que tu evento se recuerde como de alto nivel</h2>
+            <p class="prod-selling__intro">Hay eventos que se organizan y eventos que se producen. El paquete Escenario Completo existe para los segundos: cuando el escenario no puede ser improvisado, cuando el audio tiene que funcionar sin depender del equipo del venue, cuando la iluminación tiene que crear atmósfera y no solo visibilidad. Para ese tipo de eventos, REDEIL despliega la producción completa.</p>
+
+            <div class="prod-highlights">
+              <div class="prod-hl">
+                <div class="prod-hl__bar"></div>
+                <div class="prod-hl__content">
+                  <h3 class="prod-hl__title">Sistema de audio propio — independencia total del venue</h3>
+                  <p class="prod-hl__desc">Main PA calibrado para el tamaño del recinto, mezclador digital, amplificación y procesamiento de señal. No dependemos de las bocinas del salón. Llegamos con todo el sistema, lo configuramos, hacemos pruebas y garantizamos el nivel de audio que el evento necesita.</p>
+                </div>
+              </div>
+              <div class="prod-hl">
+                <div class="prod-hl__bar"></div>
+                <div class="prod-hl__content">
+                  <h3 class="prod-hl__title">Iluminación espectacular — escenario que impresiona al entrar al recinto</h3>
+                  <p class="prod-hl__desc">Focos de escena, wash de color, iluminación de acento y efectos de entrada. El diseño lumínico crea la atmósfera del evento antes de que comience. El resultado en fotografía y video es una producción que justifica cualquier presupuesto.</p>
+                </div>
+              </div>
+              <div class="prod-hl">
+                <div class="prod-hl__bar"></div>
+                <div class="prod-hl__content">
+                  <h3 class="prod-hl__title">Podiums premium sobre tarima de diseño — impacto visual inmediato</h3>
+                  <p class="prod-hl__desc">La combinación de tarima con acabado profesional y podiums premium — acrílico de alta transparencia o madera barnizada con placa metálica — crea un escenario que se ve diferente desde el primer ángulo. Cada elemento está elegido para que funcione en conjunto como una unidad visual.</p>
+                </div>
+              </div>
+              <div class="prod-hl">
+                <div class="prod-hl__bar"></div>
+                <div class="prod-hl__content">
+                  <h3 class="prod-hl__title">Equipo técnico completo — director de escenario + técnico de audio</h3>
+                  <p class="prod-hl__desc">A diferencia de los paquetes menores, el Escenario Completo incluye un equipo técnico dedicado: director de escenario que coordina la producción en tiempo real, técnico de audio para el mezclador y operador de iluminación para los efectos durante el evento. Tres profesionales para que nada falle.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Lo que incluye -->
+          <div class="prod-includes">
+            <h3 class="prod-includes__title">Lo que incluye este paquete</h3>
+            <div class="prod-includes__grid">
+              <div class="prod-feat">Tarima de diseño con acabado profesional</div>
+              <div class="prod-feat">Múltiples podiums premium (acrílico o madera)</div>
+              <div class="prod-feat">Sistema de audio Main PA propio</div>
+              <div class="prod-feat">Mezclador digital y amplificación</div>
+              <div class="prod-feat">Iluminación espectacular de escenario</div>
+              <div class="prod-feat">Focos de escena + wash de color + efectos</div>
+              <div class="prod-feat">Micrófonos inalámbricos (cuello y de mano)</div>
+              <div class="prod-feat">Director de escenario incluido</div>
+              <div class="prod-feat">Técnico de audio en vivo</div>
+              <div class="prod-feat">Operador de iluminación</div>
+              <div class="prod-feat">Transporte logístico completo</div>
+              <div class="prod-feat">Montaje, pruebas y desmontaje incluidos</div>
+            </div>
+          </div>
+
+          <!-- Cómo funciona -->
+          <div class="prod-process">
+            <h3 class="prod-process__title">Así funciona el servicio</h3>
+            <div class="prod-steps">
+              <div class="prod-step">
+                <span class="prod-step__num">1</span>
+                <div class="prod-step__content">
+                  <h4 class="prod-step__name">Reunión técnica previa — visita al recinto o planos</h4>
+                  <p class="prod-step__desc">Para eventos de este nivel realizamos una visita de reconocimiento al venue o trabajamos con los planos del espacio para diseñar el escenario, la distribución del audio y el diseño lumínico antes del evento.</p>
+                </div>
+              </div>
+              <div class="prod-step">
+                <span class="prod-step__num">2</span>
+                <div class="prod-step__content">
+                  <h4 class="prod-step__name">Propuesta técnica y visual detallada</h4>
+                  <p class="prod-step__desc">Te entregamos un render o croquis del escenario, el rider técnico de audio e iluminación y el presupuesto final desglosado. Todo claro antes de que firmes.</p>
+                </div>
+              </div>
+              <div class="prod-step">
+                <span class="prod-step__num">3</span>
+                <div class="prod-step__content">
+                  <h4 class="prod-step__name">Reserva con anticipo — coordinación de 6-8 semanas</h4>
+                  <p class="prod-step__desc">Por la magnitud del equipo, recomendamos iniciar la coordinación con 6 a 8 semanas de anticipación. El anticipo del 50% bloquea la fecha y activa la logística del equipo.</p>
+                </div>
+              </div>
+              <div class="prod-step">
+                <span class="prod-step__num">4</span>
+                <div class="prod-step__content">
+                  <h4 class="prod-step__name">Montaje profesional — equipo completo en sitio</h4>
+                  <p class="prod-step__desc">El equipo de producción llega 4 a 6 horas antes del inicio del evento. Armamos el escenario, instalamos el audio y la iluminación, hacemos sound check completo y dejamos el setup listo para ensayo general antes de que lleguen los asistentes.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Comparativa -->
+          <div class="prod-compare">
+            <h3 class="prod-compare__title">¿Por qué el Escenario Completo y no el Congreso?</h3>
+            <div class="prod-compare__grid">
+              <div class="prod-compare__col prod-compare__col--them">
+                <span class="prod-compare__label">Congreso — 3 Podiums + Tarima</span>
+                <ul class="prod-compare__list">
+                  <li>Audio del venue</li>
+                  <li>Iluminación básica de escenario</li>
+                  <li>Un técnico de operación</li>
+                  <li>Eventos académicos y corporativos</li>
+                  <li>Hasta 300 asistentes</li>
+                </ul>
+              </div>
+              <div class="prod-compare__col prod-compare__col--us">
+                <span class="prod-compare__label">Escenario Completo — Producción Total</span>
+                <ul class="prod-compare__list">
+                  <li>Audio profesional propio (Main PA)</li>
+                  <li>Iluminación espectacular + efectos</li>
+                  <li>Director + técnico audio + iluminación</li>
+                  <li>Galas, convenciones, keynotes</li>
+                  <li>Cualquier capacidad de recinto</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Social proof -->
+          <div class="prod-proof">
+            <blockquote class="prod-quote">
+              <p class="prod-quote__text">"Contratamos el paquete Escenario Completo para nuestra convención anual de distribuidores — 250 personas en un salón de hotel en Polanco. El equipo de REDEIL llegó desde el día anterior para la instalación. La iluminación del escenario era exactamente lo que necesitábamos para que el video corporativo quedara bien, y el sistema de audio fue impecable en un salón de esa capacidad. Fue la producción más profesional que hemos tenido en los últimos años."</p>
+              <footer class="prod-quote__footer">
+                <span class="prod-quote__name">Lic. Patricia Gutiérrez</span>
+                <span class="prod-quote__event">Directora de Eventos — Convención Nacional de Distribuidores, Polanco CDMX</span>
+              </footer>
+            </blockquote>
+          </div>
+
+        </div>
+
+        <!-- ═══ SIDEBAR UNIFICADO ═══ -->
+        <aside class="prod-sidebar">
+
+          <!-- 1. Specs técnicas -->
+          <div class="ps-widget">
+            <h3 class="ps-widget__title">Especificaciones</h3>
+            <dl class="ps-specs">
+              <div class="ps-specs__row"><dt>Tarima</dt><dd>Diseño premium</dd></div>
+              <div class="ps-specs__row"><dt>Podiums</dt><dd>Múltiples premium</dd></div>
+              <div class="ps-specs__row"><dt>Audio</dt><dd>Main PA propio</dd></div>
+              <div class="ps-specs__row"><dt>Iluminación</dt><dd>Espectacular + efectos</dd></div>
+              <div class="ps-specs__row"><dt>Micrófonos</dt><dd>Inalámbricos (varios)</dd></div>
+              <div class="ps-specs__row"><dt>Equipo técnico</dt><dd>Director + 2 técnicos</dd></div>
+              <div class="ps-specs__row"><dt>Montaje anticipado</dt><dd>4-6 horas (o día previo)</dd></div>
+              <div class="ps-specs__row"><dt>Capacidad</dt><dd>Sin límite de recinto</dd></div>
+              <div class="ps-specs__row"><dt>Zona</dt><dd>CDMX + Edomex</dd></div>
+            </dl>
+          </div>
+
+          <!-- 2. Ideal para -->
+          <div class="ps-widget">
+            <h3 class="ps-widget__title">Ideal para</h3>
+            <div class="ps-tags">
+              <span class="ps-tag">Galas corporativas</span>
+              <span class="ps-tag">Lanzamientos de producto</span>
+              <span class="ps-tag">Convenciones nacionales</span>
+              <span class="ps-tag">Premios empresariales</span>
+              <span class="ps-tag">Keynotes de alto perfil</span>
+              <span class="ps-tag">Eventos tipo TEDx</span>
+              <span class="ps-tag">Cenas de gala 500+</span>
+              <span class="ps-tag">Aniversarios corporativos</span>
+            </div>
+          </div>
+
+          <!-- 3. Otros paquetes -->
+          <div class="ps-widget">
+            <h3 class="ps-widget__title">Otros paquetes</h3>
+            <a href="/equipos-para-eventos/renta-de-podium/paquete-1-podium/" class="ps-pkg">
+              <img src="/img/paquetes/renta-de-podium/1-podium.avif" alt="1 Podium" width="80" height="60" loading="lazy" class="ps-pkg__img" />
+              <div class="ps-pkg__info">
+                <span class="ps-pkg__name">1 Podium</span>
+                <span class="ps-pkg__price">$2,000 MXN</span>
+              </div>
+            </a>
+            <a href="/equipos-para-eventos/renta-de-podium/paquete-2-podiums/" class="ps-pkg">
+              <img src="/img/paquetes/renta-de-podium/2-podiums.avif" alt="2 Podiums" width="80" height="60" loading="lazy" class="ps-pkg__img" />
+              <div class="ps-pkg__info">
+                <span class="ps-pkg__name">2 Podiums</span>
+                <span class="ps-pkg__price">$3,500 MXN</span>
+              </div>
+            </a>
+            <a href="/equipos-para-eventos/renta-de-podium/paquete-congreso/" class="ps-pkg">
+              <img src="/img/paquetes/renta-de-podium/congreso.avif" alt="Congreso" width="80" height="60" loading="lazy" class="ps-pkg__img" />
+              <div class="ps-pkg__info">
+                <span class="ps-pkg__name">Congreso</span>
+                <span class="ps-pkg__price">$6,000 MXN</span>
+              </div>
+            </a>
+            <div class="ps-upsell">
+              <p class="ps-upsell__text">¿Buscas algo entre el Congreso y el Escenario Completo? Cuéntanos el tamaño del evento y lo cotizamos a tu medida.</p>
+              <a href={WHATSAPP_URL_MSG} class="ps-upsell__link">Cotizar a la medida →</a>
+            </div>
+          </div>
+
+          <!-- 4. CTA -->
+          <div class="ps-widget ps-widget--dark">
+            <h3 class="ps-widget__title ps-widget__title--light">Cotiza tu producción</h3>
+            <p class="ps-widget__desc">Propuesta técnica personalizada con diseño de escenario. Sin compromiso.</p>
+            <a href="/cotizar/" class="ps-widget__btn">Cotizar Gratis</a>
+            <a href={WHATSAPP_URL_MSG} class="ps-widget__btn ps-widget__btn--wa" target="_blank" rel="noopener">WhatsApp: 55 4937 5172</a>
+          </div>
+
+          <!-- 5. Servicios relacionados -->
+          <div class="ps-widget">
+            <h3 class="ps-widget__title">Servicios relacionados</h3>
+            <div class="ps-links">
+              <a href="/equipos-para-eventos/audio-conferencias/" class="ps-link">Audio Conferencias</a>
+              <a href="/renta-de-iluminacion/gobos/" class="ps-link">Gobos</a>
+              <a href="/renta-de-iluminacion/luces-arquitectonicas/" class="ps-link">Uplighting</a>
+              <a href="/renta-de-iluminacion/city-light/" class="ps-link">City Light</a>
+              <a href="/equipos-para-eventos/pantalla-inflable/" class="ps-link">Pantalla Inflable</a>
+            </div>
+          </div>
+
+          <!-- 6. Contacto -->
+          <div class="ps-widget">
+            <h3 class="ps-widget__title">Contacto</h3>
+            <div class="ps-contact">
+              <p><a href="tel:+525549375172">55 4937 5172</a></p>
+              <p><a href="mailto:contacto@redeil.com">contacto@redeil.com</a></p>
+              <p>Lun-Vie 9:00-19:00 | Sáb 10:00-15:00</p>
+            </div>
+          </div>
+
+        </aside>
+      </div>
     </div>
   </section>
 
   <FaqSection items={faqItems} />
-
-  <!-- CTA FINAL -->
 
   <Footer />
   <WhatsAppBubble />
 </Base>
 
 <style>
-  .section__title {
-    font-size: clamp(1.5rem, 3vw, 2rem);
-    font-weight: 800;
-    color: var(--color-text);
-    margin-bottom: 0.5rem;
-  }
-  .section__subtitle {
-    font-size: var(--font-size-base);
-    color: var(--color-text-light);
-    margin-bottom: 2rem;
-  }
-  .features-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 0.75rem;
-    margin-bottom: 2rem;
-  }
-  .feature-item {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    padding: 0.875rem 1rem;
-    border-radius: var(--border-radius);
-    font-size: var(--font-size-sm);
-  }
-  .feature-item--yes {
-    background: #f0fdf4;
-    color: #166534;
-  }
-  .feature-item--no {
-    background: var(--color-bg);
-    color: var(--color-text-light);
-  }
-  .feature-icon {
-    font-weight: 700;
-    font-size: 1.125rem;
-    flex-shrink: 0;
-  }
-  .price-highlight {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 2rem;
-    background: var(--color-bg);
-    border-radius: var(--border-radius-lg);
-    text-align: center;
-  }
-  .price-highlight__label {
-    font-size: var(--font-size-sm);
-    color: var(--color-text-light);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-  }
-  .price-highlight__amount {
-    font-size: clamp(2rem, 5vw, 3rem);
-    font-weight: 800;
-    color: var(--color-text);
-  }
-  .price-highlight__note {
-    font-size: var(--font-size-sm);
-    color: var(--color-text-light);
-    margin-bottom: 0.5rem;
-  }
-  .content-prose {
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  .content-prose h2 {
-    font-size: clamp(1.5rem, 3vw, 2rem);
-    font-weight: 800;
-    color: var(--color-text);
-    margin-bottom: 1rem;
-  }
-  .content-prose h3 {
-    font-size: var(--font-size-xl);
-    font-weight: 700;
-    color: var(--color-text);
-    margin: 2rem 0 0.75rem;
-  }
-  .content-prose p {
-    font-size: var(--font-size-base);
-    color: var(--color-text-light);
-    line-height: 1.8;
-    margin-bottom: 1rem;
-  }
+  /* ── Layout ── */
+  .prod-layout { display: grid; grid-template-columns: 1fr; gap: 2rem; }
+  @media (min-width: 1024px) { .prod-layout { grid-template-columns: 1fr 340px; gap: 2.5rem; } }
+
+  /* ── Gallery ── */
+  .prod-gallery { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; margin-bottom: 2rem; border-radius: 14px; overflow: hidden; }
+  .prod-gallery__main { grid-row: span 2; }
+  .prod-gallery__main img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .prod-gallery__side { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; }
+  .prod-gallery__side img { width: 100%; height: 100%; object-fit: cover; display: block; aspect-ratio: 3/2; }
+
+  /* ── Product Info ── */
+  .prod-info { margin-bottom: 2.5rem; }
+  .prod-info__badge { display: inline-block; font-size: 0.75rem; font-weight: 700; color: var(--color-accent); text-transform: uppercase; letter-spacing: 0.08em; padding: 0.375rem 1rem; background: rgba(0,113,227,0.08); border: 1px solid rgba(0,113,227,0.12); border-radius: 6px; margin-bottom: 0.75rem; }
+  .prod-info__title { font-size: clamp(1.375rem, 3vw, 1.75rem); font-weight: 800; color: var(--color-text); line-height: 1.2; letter-spacing: -0.02em; margin: 0 0 1.25rem; }
+  .prod-price { background: var(--color-bg); border-radius: 12px; padding: 1.25rem 1.5rem; margin-bottom: 1.25rem; border-left: 4px solid var(--color-accent); }
+  .prod-price__amount { font-size: 2.25rem; font-weight: 800; color: var(--color-primary); font-variant-numeric: tabular-nums; }
+  .prod-price__currency { font-size: 0.875rem; color: var(--color-text-light); margin-left: 0.5rem; }
+  .prod-price__note { font-size: 0.8125rem; color: var(--color-text-light); margin: 0.5rem 0 0; }
+  .prod-ctas { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+  .prod-btn { display: inline-flex; align-items: center; justify-content: center; padding: 0.875rem 1.75rem; border-radius: 6px; font-size: 0.9375rem; font-weight: 600; text-decoration: none; transition: background 0.2s ease, border-color 0.2s ease; }
+  .prod-btn--wa { background: #25D366; color: #fff; }
+  .prod-btn--wa:hover { background: #1DA851; }
+  .prod-btn--outline { background: none; color: var(--color-text); border: 2px solid var(--color-border); }
+  .prod-btn--outline:hover { border-color: var(--color-accent); color: var(--color-accent); }
+
+  /* ── Selling Points ── */
+  .prod-selling { margin-bottom: 2.5rem; }
+  .prod-selling__headline { font-size: clamp(1.25rem, 3vw, 1.5rem); font-weight: 800; color: var(--color-text); line-height: 1.25; letter-spacing: -0.02em; margin: 0 0 0.75rem; }
+  .prod-selling__intro { font-size: 0.9375rem; color: var(--color-text-light); line-height: 1.75; margin: 0 0 1.75rem; max-width: 65ch; }
+  .prod-highlights { display: flex; flex-direction: column; gap: 1.25rem; }
+  .prod-hl { display: flex; gap: 1rem; align-items: stretch; }
+  .prod-hl__bar { flex-shrink: 0; width: 3px; background: var(--color-accent); border-radius: 2px; }
+  .prod-hl__content { display: flex; flex-direction: column; gap: 0.25rem; }
+  .prod-hl__title { font-size: 0.9375rem; font-weight: 700; color: var(--color-text); margin: 0; line-height: 1.3; }
+  .prod-hl__desc { font-size: 0.8125rem; color: var(--color-text-light); line-height: 1.65; margin: 0; }
+
+  /* ── Includes ── */
+  .prod-includes { background: var(--color-bg); border-radius: 14px; padding: 1.75rem 2rem; margin-bottom: 2.5rem; }
+  .prod-includes__title { font-size: 1.0625rem; font-weight: 700; color: var(--color-text); margin: 0 0 1rem; }
+  .prod-includes__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; }
+  .prod-feat { font-size: 0.875rem; color: var(--color-text-light); padding-left: 1.25rem; position: relative; line-height: 1.5; }
+  .prod-feat::before { content: ""; position: absolute; left: 0; top: 0.45rem; width: 6px; height: 6px; border-radius: 50%; background: var(--color-accent); }
+  @media (max-width: 640px) { .prod-includes__grid { grid-template-columns: 1fr; } }
+
+  /* ── Process Steps ── */
+  .prod-process { margin: 2.5rem 0; }
+  .prod-process__title { font-size: 1.125rem; font-weight: 800; color: var(--color-text); letter-spacing: -0.02em; margin: 0 0 1.25rem; }
+  .prod-steps { display: flex; flex-direction: column; gap: 0; }
+  .prod-step { display: flex; gap: 1rem; padding: 1rem 0; border-bottom: 1px solid var(--color-border); }
+  .prod-step:last-child { border-bottom: none; }
+  .prod-step__num { flex-shrink: 0; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; background: var(--color-accent); color: #fff; font-size: 0.8125rem; font-weight: 700; border-radius: 50%; }
+  .prod-step__content { display: flex; flex-direction: column; gap: 0.2rem; }
+  .prod-step__name { font-size: 0.9375rem; font-weight: 700; color: var(--color-text); margin: 0; line-height: 1.3; }
+  .prod-step__desc { font-size: 0.8125rem; color: var(--color-text-light); line-height: 1.6; margin: 0; }
+
+  /* ── Comparison ── */
+  .prod-compare { margin: 2.5rem 0; }
+  .prod-compare__title { font-size: 1.125rem; font-weight: 800; color: var(--color-text); letter-spacing: -0.02em; margin: 0 0 1.25rem; }
+  .prod-compare__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+  @media (max-width: 640px) { .prod-compare__grid { grid-template-columns: 1fr; } }
+  .prod-compare__col { border-radius: 12px; padding: 1.25rem; }
+  .prod-compare__col--them { background: #eff6ff; border: 1px solid #bfdbfe; }
+  .prod-compare__col--us { background: #f0fdf4; border: 1px solid #bbf7d0; }
+  .prod-compare__label { display: block; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.75rem; }
+  .prod-compare__col--them .prod-compare__label { color: var(--color-primary); }
+  .prod-compare__col--us .prod-compare__label { color: #166534; }
+  .prod-compare__list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.5rem; }
+  .prod-compare__list li { font-size: 0.8125rem; color: var(--color-text); line-height: 1.4; padding-left: 1.125rem; position: relative; }
+  .prod-compare__col--them .prod-compare__list li::before { content: "✓"; position: absolute; left: 0; color: var(--color-accent); font-size: 0.75rem; font-weight: 700; }
+  .prod-compare__col--us .prod-compare__list li::before { content: "✓"; position: absolute; left: 0; color: #16a34a; font-size: 0.75rem; font-weight: 700; }
+
+  /* ── Social Proof ── */
+  .prod-proof { margin-top: 2.5rem; }
+  .prod-quote { background: var(--color-bg); border-radius: 14px; padding: 1.75rem 2rem; border-left: 4px solid var(--color-accent); margin: 0; }
+  .prod-quote__text { font-size: 0.9375rem; color: var(--color-text); line-height: 1.75; font-style: italic; margin: 0 0 1rem; }
+  .prod-quote__footer { display: flex; flex-direction: column; gap: 0.125rem; }
+  .prod-quote__name { font-size: 0.875rem; font-weight: 700; color: var(--color-text); font-style: normal; }
+  .prod-quote__event { font-size: 0.75rem; color: var(--color-text-light); font-style: normal; }
+
+  /* ── Sidebar ── */
+  .prod-sidebar { display: flex; flex-direction: column; gap: 1.25rem; }
+  @media (min-width: 1024px) { .prod-sidebar { position: sticky; top: calc(var(--header-height) + var(--topbar-height) + 1.5rem); align-self: start; } }
+  .ps-widget { background: var(--color-white); border: 1px solid var(--color-border); border-radius: 12px; padding: 1.25rem; }
+  .ps-widget--dark { background: var(--color-primary); color: #fff; border: none; }
+  .ps-widget__title { font-size: 0.875rem; font-weight: 700; color: var(--color-text); text-transform: uppercase; letter-spacing: 0.05em; margin: 0 0 0.75rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--color-accent); }
+  .ps-widget__title--light { color: #fff; }
+  .ps-widget__desc { font-size: 0.8125rem; color: rgba(255,255,255,0.75); margin: 0 0 0.75rem; }
+  .ps-widget__btn { display: block; text-align: center; padding: 0.625rem; border-radius: 6px; font-size: 0.875rem; font-weight: 600; text-decoration: none; margin-top: 0.5rem; background: var(--color-accent); color: #fff; transition: background 0.2s ease; }
+  .ps-widget__btn:hover { opacity: 0.9; }
+  .ps-widget__btn--wa { background: #25D366; }
+
+  .ps-specs { display: flex; flex-direction: column; margin: 0; }
+  .ps-specs__row { display: flex; justify-content: space-between; align-items: baseline; padding: 0.4rem 0; border-bottom: 1px solid var(--color-bg); gap: 0.75rem; }
+  .ps-specs__row:last-child { border-bottom: none; }
+  .ps-specs__row dt { font-size: 0.8125rem; color: var(--color-text-light); font-weight: 500; margin: 0; }
+  .ps-specs__row dd { font-size: 0.8125rem; font-weight: 600; color: var(--color-text); text-align: right; margin: 0; font-variant-numeric: tabular-nums; }
+
+  .ps-tags { display: flex; flex-wrap: wrap; gap: 0.375rem; }
+  .ps-tag { font-size: 0.6875rem; font-weight: 600; color: var(--color-text); padding: 0.3rem 0.75rem; background: var(--color-bg); border: 1px solid var(--color-border); border-radius: 6px; white-space: nowrap; }
+
+  .ps-pkg { display: flex; gap: 0.75rem; align-items: center; text-decoration: none; padding: 0.625rem 0; border-bottom: 1px solid var(--color-bg); }
+  .ps-pkg:last-of-type { border-bottom: none; }
+  .ps-pkg__img { width: 72px; height: 54px; object-fit: cover; border-radius: 8px; flex-shrink: 0; }
+  .ps-pkg__info { display: flex; flex-direction: column; gap: 0.125rem; }
+  .ps-pkg__name { font-size: 0.8125rem; font-weight: 600; color: var(--color-text); }
+  .ps-pkg__price { font-size: 0.75rem; font-weight: 700; color: var(--color-accent); font-variant-numeric: tabular-nums; }
+  .ps-pkg:hover .ps-pkg__name { color: var(--color-accent); }
+
+  .ps-upsell { margin-top: 0.75rem; padding-top: 0.75rem; border-top: 1px solid var(--color-bg); }
+  .ps-upsell__text { font-size: 0.75rem; color: var(--color-text-light); line-height: 1.5; margin: 0 0 0.375rem; }
+  .ps-upsell__link { font-size: 0.75rem; font-weight: 600; color: var(--color-accent); text-decoration: none; }
+  .ps-upsell__link:hover { text-decoration: underline; }
+
+  .ps-links { display: flex; flex-direction: column; }
+  .ps-link { padding: 0.4rem 0; border-bottom: 1px solid var(--color-bg); font-size: 0.8125rem; color: var(--color-text-light); text-decoration: none; }
+  .ps-link:last-child { border-bottom: none; }
+  .ps-link:hover { color: var(--color-accent); }
+
+  .ps-contact p { font-size: 0.8125rem; color: var(--color-text-light); margin: 0.3rem 0; }
+  .ps-contact a { color: var(--color-accent); text-decoration: none; }
 </style>

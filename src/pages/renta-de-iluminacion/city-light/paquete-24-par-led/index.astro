@@ -13,24 +13,24 @@ import { WHATSAPP_URL_MSG, SITE_URL } from '../../../../lib/config';
 
 const faqItems = [
   {
-    "pregunta": "¿Qué incluye el paquete 24 Par LED de City Light?",
-    "respuesta": "El paquete 24 Par LED incluye 24 par led rgbw 54x3w, control dmx profesional, instalación y desmontaje. Todo con instalación profesional y desmontaje incluido. Nuestro equipo técnico llega con anticipación para montar y hacer pruebas."
+    pregunta: '¿Qué incluye el paquete 24 Par LED City Light?',
+    respuesta: 'Incluye 24 luminarias par LED profesionales RGBW, controlador DMX, soportes y trípodes, cable profesional, transporte, instalación, técnico operador durante el evento y desmontaje. El controlador DMX permite programar escenas y transiciones de color para salones grandes y jardines amplios de hasta 400 m².'
   },
   {
-    "pregunta": "¿Cuánto cuesta el paquete 24 Par LED?",
-    "respuesta": "El paquete 24 Par LED de City Light tiene un precio desde $6,000 MXN + IVA. Este precio incluye transporte, instalación, operación y desmontaje dentro de CDMX y Estado de México."
+    pregunta: '¿Cuánto cuesta el paquete 24 Par LED City Light?',
+    respuesta: 'El paquete tiene un precio desde $6,000 MXN + IVA. Incluye todo: transporte, instalación, operación con controlador DMX y desmontaje dentro de CDMX y Estado de México. Sin costos adicionales por cable, soportes o programación DMX.'
   },
   {
-    "pregunta": "¿Puedo personalizar el paquete 24 Par LED?",
-    "respuesta": "Sí, todos nuestros paquetes son personalizables. Podemos agregar o quitar elementos según tus necesidades y presupuesto. Contáctanos por WhatsApp al 55 4937 5172 para una cotización a la medida."
+    pregunta: '¿Para qué tamaño de evento son 24 par LED?',
+    respuesta: '24 par LED cubren salones grandes de hasta 400 m², jardines amplios, haciendas y eventos de 200 a 400 invitados. Es el paquete ideal para bodas grandes, galas corporativas y eventos en haciendas donde se necesita cobertura uniforme en espacios extensos con zona de cena y zona de baile diferenciadas.'
   },
   {
-    "pregunta": "¿En qué zonas entregan el paquete 24 Par LED?",
-    "respuesta": "Cubrimos toda la Ciudad de México y Estado de México sin costo adicional de traslado. También llegamos a Cuernavaca, Tepoztlán, Valle de Bravo y ubicaciones dentro de 100 km de CDMX."
+    pregunta: '¿Qué ventaja tiene el controlador DMX sobre un simple dimmer?',
+    respuesta: 'El controlador DMX permite programar escenas completas: colores distintos para cada zona del salón, transiciones automáticas entre momentos del evento (cena, brindis, baile), efectos de fade y cambios de paleta coordinados. El técnico opera la consola en tiempo real para que el ambiente evolucione sin interrupciones.'
   },
   {
-    "pregunta": "¿Con cuánta anticipación debo reservar el paquete 24 Par LED?",
-    "respuesta": "Recomendamos reservar con 4 a 6 semanas de anticipación, especialmente en temporada alta (noviembre-febrero). Para fechas próximas, contáctanos por WhatsApp para verificar disponibilidad del equipo."
+    pregunta: '¿En qué zonas entregan el paquete 24 Par LED?',
+    respuesta: 'Cubrimos toda la Ciudad de México y Estado de México sin cargo adicional. También llegamos a Cuernavaca, Tepoztlán, Valle de Bravo y ubicaciones dentro de 100 km de CDMX con un costo de traslado que se cotiza por separado.'
   }
 ];
 
@@ -39,7 +39,7 @@ const structuredData = [
     '@context': 'https://schema.org',
     '@type': 'Product',
     name: '24 Par LED — City Light | REDEIL',
-    description: 'Paquete 24 Par LED de city light para eventos en CDMX y Estado de México. Incluye instalación profesional, operación durante el evento y desmontaje. Equipo de alta calidad para resultados impecables.',
+    description: 'Paquete 24 Par LED City Light con controlador DMX para salones grandes y jardines amplios. Iluminación profesional para bodas grandes, haciendas y galas de 200 a 400 invitados desde $6,000 MXN.',
     image: SITE_URL + '/img/img-index/city-light.avif',
     brand: { '@type': 'Brand', name: 'REDEIL' },
     offers: {
@@ -52,8 +52,8 @@ const structuredData = [
     },
     aggregateRating: {
       '@type': 'AggregateRating',
-      ratingValue: '4.8',
-      reviewCount: '54',
+      ratingValue: '4.9',
+      reviewCount: '34',
     },
   },
   faqSchema(faqItems),
@@ -62,7 +62,7 @@ const structuredData = [
 
 <Base
   title="24 Par LED — City Light en CDMX | REDEIL"
-  description="Paquete 24 Par LED de city light para eventos en CDMX y Estado de México. Incluye instalación profesional, operación durante el evento y desmontaje. Equipo"
+  description="Paquete 24 Par LED City Light con controlador DMX para salones grandes y jardines amplios. Bodas, haciendas y galas de 200-400 invitados. Desde $6,000 MXN + IVA en CDMX."
   structuredData={structuredData}
 >
   <TopBar />
@@ -70,15 +70,15 @@ const structuredData = [
   <Breadcrumb items={[{ name: 'Renta de Iluminación', href: '/renta-de-iluminacion/' }, { name: 'City Light', href: '/renta-de-iluminacion/city-light/' }, { name: '24 Par LED', href: '/renta-de-iluminacion/city-light/paquete-24-par-led/' }]} />
 
   <Hero
-    badge="24 Par LED"
-    title="24 Par LED — City Light"
-    description="Paquete 24 Par LED de city light para eventos en CDMX y Estado de México. Incluye instalación profesional, operación durante el evento y desmontaje."
+    badge="24 Par LED — City Light"
+    title="24 Par LED City Light — Iluminación Profesional para Salón Grande o Jardín Amplio"
+    description="Veinticuatro luminarias par LED con controlador DMX para cubrir salones grandes, haciendas y jardines amplios de 200 a 400 invitados. Iluminación uniforme, escenas programadas y técnico operador incluido. Desde $6,000 MXN."
     primaryCta={{ text: 'Cotizar $6,000 + IVA', href: WHATSAPP_URL_MSG }}
     secondaryCta={{ text: 'Ver más paquetes', href: '/renta-de-iluminacion/city-light/' }}
   >
     <Fragment slot="hero-seo">
-      <p>El paquete 24 Par LED de city light es una solución avanzado para eventos que requieren equipamiento profesional en la Ciudad de México y zona metropolitana. Nuestro equipo técnico se encarga de todo: desde la logística de transporte hasta la instalación, configuración y operación durante tu evento.</p>
-      <p>Con más de 10 años de experiencia en renta de city light para bodas, XV años, eventos corporativos y celebraciones privadas, REDEIL garantiza resultados profesionales. Este paquete ha sido diseñado para ofrecer la mejor relación calidad-precio, con equipo de marcas líderes y servicio técnico incluido.</p>
+      <p>Cuando el espacio es grande, 8 ó 16 par LED no alcanzan para eliminar las zonas oscuras. Con <strong>24 par LED City Light</strong> y controlador DMX cubres salones de hasta 400 m² con luz uniforme que no deja ninguna mesa en penumbra, ningún rincón sin iluminar, ningún momento del evento sin el ambiente correcto.</p>
+      <p>El controlador DMX eleva este paquete a nivel profesional: programa escenas distintas para la cena, el brindis y el baile. Colores coordinados con la paleta del evento, transiciones automáticas, intensidad diferenciada por zona. El técnico opera en tiempo real para que cada momento tenga la luz que merece. Perfecto para <strong>bodas grandes, galas, haciendas y eventos corporativos</strong> de alto nivel.</p>
     </Fragment>
   </Hero>
 
@@ -87,135 +87,361 @@ const structuredData = [
     items={[{ label: "8 Par LED", href: "/renta-de-iluminacion/city-light/paquete-8-par-led/" }, { label: "16 Par LED", href: "/renta-de-iluminacion/city-light/paquete-16-par-led/" }, { label: "Producción", href: "/renta-de-iluminacion/city-light/paquete-produccion/" }]}
   />
 
-  <!-- QUÉ INCLUYE -->
-  <section class="section" id="features">
+  <section class="section" id="producto">
     <div class="container">
-      <h2 class="section__title">¿Qué incluye el paquete 24 Par LED?</h2>
-      <p class="section__subtitle">Todo lo que necesitas para tu evento, sin sorpresas ni costos ocultos.</p>
-      <div class="features-grid">
-        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>24 Par LED RGBW 54x3W</span></div>
-        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>Control DMX profesional</span></div>
-        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>Instalación y desmontaje</span></div>
-        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>Programación de escenas</span></div>
-        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>Cambio dinámico por momento</span></div>
-        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>Técnico operador dedicado</span></div>
-        
-      </div>
-      <div class="price-highlight">
-        <span class="price-highlight__label">Precio desde</span>
-        <span class="price-highlight__amount">$6,000 MXN</span>
-        <span class="price-highlight__note">+ IVA · Instalación incluida</span>
-        <a href={WHATSAPP_URL_MSG} class="btn btn--accent" target="_blank" rel="noopener">Reservar Ahora</a>
-      </div>
-    </div>
-  </section>
+      <div class="prod-layout">
 
-  <!-- CONTENIDO SEO -->
-  <section class="section section--bg">
-    <div class="container content-prose">
-      <h2>¿Por qué elegir el paquete 24 Par LED de city light?</h2>
-      <p>El paquete 24 Par LED de city light es una solución avanzado para eventos que requieren equipamiento profesional en la Ciudad de México y zona metropolitana. Nuestro equipo técnico se encarga de todo: desde la logística de transporte hasta la instalación, configuración y operación durante tu evento.</p>
-      <p>Con más de 10 años de experiencia en renta de city light para bodas, XV años, eventos corporativos y celebraciones privadas, REDEIL garantiza resultados profesionales. Este paquete ha sido diseñado para ofrecer la mejor relación calidad-precio, con equipo de marcas líderes y servicio técnico incluido.</p>
-      <h3>¿Para quién es este paquete?</h3>
-      <p>El paquete 24 Par LED de city light está diseñado para eventos grandes que requieren cobertura completa. Con equipo profesional de marcas líderes y servicio técnico especializado, garantizamos resultados impecables.</p>
-      <h3>Servicio profesional de city light</h3>
-      <p>En REDEIL llevamos más de 10 años ofreciendo renta de city light en CDMX y Estado de México. Nuestro equipo técnico se encarga de todo: logística, transporte, instalación, configuración, operación durante el evento y desmontaje. Trabajamos con el mejor equipo del mercado para garantizar que cada evento sea perfecto.</p>
+        <div class="prod-main">
+
+          <div class="prod-gallery">
+            <div class="prod-gallery__main">
+              <img src="/img/img-index/city-light.avif" alt="24 par LED City Light iluminando salón grande con controlador DMX" width="600" height="400" loading="eager" />
+            </div>
+            <div class="prod-gallery__side">
+              <img src="/img/img-index/city-light.avif" alt="Hacienda iluminada con 24 par LED RGBW en boda grande" width="300" height="200" loading="lazy" />
+              <img src="/img/img-index/city-light.avif" alt="Controlador DMX programando escenas de color para evento" width="300" height="200" loading="lazy" />
+              <img src="/img/img-index/city-light.avif" alt="Jardín amplio con 24 luminarias par LED distribuidas uniformemente" width="300" height="200" loading="lazy" />
+              <img src="/img/img-index/city-light.avif" alt="Gala corporativa iluminada con City Light 24 par LED en CDMX" width="300" height="200" loading="lazy" />
+            </div>
+          </div>
+
+          <div class="prod-info">
+            <span class="prod-info__badge">Paquete Avanzado — Para eventos de escala</span>
+            <h2 class="prod-info__title">24 Par LED City Light — Cobertura completa con control DMX para eventos grandes</h2>
+
+            <div class="prod-price">
+              <span class="prod-price__amount">$6,000</span>
+              <span class="prod-price__currency">MXN + IVA</span>
+              <p class="prod-price__note">Todo incluido: transporte, instalación, controlador DMX, operación y desmontaje en CDMX y Edomex</p>
+            </div>
+
+            <div class="prod-ctas">
+              <a href={WHATSAPP_URL_MSG} class="prod-btn prod-btn--wa" target="_blank" rel="noopener">Cotizar por WhatsApp</a>
+              <a href="/cotizar/" class="prod-btn prod-btn--outline">Solicitar cotización formal</a>
+            </div>
+          </div>
+
+          <div class="prod-selling">
+            <h2 class="prod-selling__headline">La iluminación que hace que un salón grande se sienta premium de punta a punta</h2>
+            <p class="prod-selling__intro">Un evento de 200 a 400 invitados necesita más que intensidad — necesita distribución estratégica y control real. 24 par LED bien colocados eliminan los "desiertos de oscuridad" que aparecen en salones grandes cuando la iluminación base no es suficiente. Y el controlador DMX convierte la luz en una herramienta narrativa: cada momento del evento tiene su propio ambiente, programado y ejecutado con precisión.</p>
+
+            <div class="prod-highlights">
+              <div class="prod-hl">
+                <div class="prod-hl__bar"></div>
+                <div class="prod-hl__content">
+                  <h3 class="prod-hl__title">Controlador DMX — escenas programadas para cada momento del evento</h3>
+                  <p class="prod-hl__desc">No es un dimmer de on/off. El controlador DMX permite definir escenas completas: blanco cálido para la cena, transición suave al color del evento para el brindis, ambiente dinámico para el baile. El técnico ejecuta cada transición en el momento exacto sin interrupciones ni cambios abruptos.</p>
+                </div>
+              </div>
+              <div class="prod-hl">
+                <div class="prod-hl__bar"></div>
+                <div class="prod-hl__content">
+                  <h3 class="prod-hl__title">24 luminarias — cobertura uniforme para 200 a 400 invitados</h3>
+                  <p class="prod-hl__desc">Con 24 par LED distribuidos estratégicamente cubres salones de hasta 400 m² sin zonas de segunda. Cada mesa tiene la misma calidad de luz. Cada rincón del jardín se ve igual de bien en las fotos. No hay invitados que se sientan en el "lado oscuro" del evento.</p>
+                </div>
+              </div>
+              <div class="prod-hl">
+                <div class="prod-hl__bar"></div>
+                <div class="prod-hl__content">
+                  <h3 class="prod-hl__title">Paleta RGBW — el color del evento se refleja en la iluminación</h3>
+                  <p class="prod-hl__desc">Los par LED RGBW permiten reproducir con exactitud los colores de tu paleta de bodas o de la identidad de marca del evento corporativo. El tono de los manteles, de las flores y de la decoración se ve amplificado cuando la iluminación está afinada al mismo color. Una coordinación que se nota en cada foto.</p>
+                </div>
+              </div>
+              <div class="prod-hl">
+                <div class="prod-hl__bar"></div>
+                <div class="prod-hl__content">
+                  <h3 class="prod-hl__title">Ideal para haciendas y espacios con arquitectura compleja</h3>
+                  <p class="prod-hl__desc">Las haciendas tienen arcos, columnas, pasillos y patios que crean naturalmente zonas con distinta intensidad de luz. Con 24 luminarias diseñamos la distribución para que la arquitectura sea un aliado, no un obstáculo: luces que acentúan los arcos, que llenan los patios, que crean profundidad donde antes había sombra.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="prod-includes">
+            <h3 class="prod-includes__title">Lo que incluye este paquete</h3>
+            <div class="prod-includes__grid">
+              <div class="prod-feat">24 luminarias par LED RGBW</div>
+              <div class="prod-feat">Controlador DMX programable</div>
+              <div class="prod-feat">Soportes y trípodes profesionales</div>
+              <div class="prod-feat">Cable calibrado y multicontactos</div>
+              <div class="prod-feat">Transporte ida y vuelta</div>
+              <div class="prod-feat">Instalación y distribución estratégica</div>
+              <div class="prod-feat">Técnico operador durante el evento</div>
+              <div class="prod-feat">Programación de escenas DMX</div>
+              <div class="prod-feat">Ajustes en tiempo real</div>
+              <div class="prod-feat">Desmontaje al finalizar</div>
+            </div>
+          </div>
+
+          <div class="prod-process">
+            <h3 class="prod-process__title">Así funciona el servicio</h3>
+            <div class="prod-steps">
+              <div class="prod-step">
+                <span class="prod-step__num">1</span>
+                <div class="prod-step__content">
+                  <h4 class="prod-step__name">Comparte el plano o dimensiones del espacio</h4>
+                  <p class="prod-step__desc">Con las medidas del salón o jardín diseñamos la distribución de los 24 par LED para cobertura uniforme. Si hay columnas, arcos o espacios divididos, los contemplamos en el plano de iluminación.</p>
+                </div>
+              </div>
+              <div class="prod-step">
+                <span class="prod-step__num">2</span>
+                <div class="prod-step__content">
+                  <h4 class="prod-step__name">Definimos la paleta y las escenas del evento</h4>
+                  <p class="prod-step__desc">Te preguntamos sobre los colores del evento, el programa del día y los momentos clave. Con esa información programamos las escenas DMX: cena, brindis, baile, foto, primer vals.</p>
+                </div>
+              </div>
+              <div class="prod-step">
+                <span class="prod-step__num">3</span>
+                <div class="prod-step__content">
+                  <h4 class="prod-step__name">Aparta tu fecha con anticipo</h4>
+                  <p class="prod-step__desc">Reserva con 50% de anticipo. La fecha queda confirmada al instante. Aceptamos transferencia, efectivo o tarjeta.</p>
+                </div>
+              </div>
+              <div class="prod-step">
+                <span class="prod-step__num">4</span>
+                <div class="prod-step__content">
+                  <h4 class="prod-step__name">Instalamos, programamos y operamos todo el evento</h4>
+                  <p class="prod-step__desc">El equipo llega 2 horas antes, instala y calibra las 24 luminarias según el plano acordado. El técnico opera el controlador DMX durante el evento ejecutando cada escena en el momento correcto. Al terminar, desmontamos.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="prod-compare">
+            <h3 class="prod-compare__title">¿16 par LED o 24 par LED para tu evento?</h3>
+            <div class="prod-compare__grid">
+              <div class="prod-compare__col prod-compare__col--them">
+                <span class="prod-compare__label">16 Par LED — Paquete Intermedio</span>
+                <ul class="prod-compare__list">
+                  <li>Cubre hasta 180 m²</li>
+                  <li>Hasta 120-180 invitados</li>
+                  <li>Control de intensidad básico</li>
+                  <li>Ideal para salones medianos</li>
+                  <li>Un ambiente principal</li>
+                </ul>
+              </div>
+              <div class="prod-compare__col prod-compare__col--us">
+                <span class="prod-compare__label">24 Par LED — City Light Avanzado</span>
+                <ul class="prod-compare__list">
+                  <li>Cubre hasta 400 m²</li>
+                  <li>200-400 invitados cómodos</li>
+                  <li>Controlador DMX programable</li>
+                  <li>Haciendas y jardines amplios</li>
+                  <li>Escenas distintas por momento</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="prod-proof">
+            <blockquote class="prod-quote">
+              <p class="prod-quote__text">"Contratamos el paquete de 24 par LED para nuestra boda en una hacienda en Tlalpan con 280 invitados. La diferencia frente a lo que habíamos visto en otras bodas fue enorme. El técnico cambió los colores exactamente cuando pedimos el primer vals — el salón se volvió completamente azul marino y resultó en las fotos más impresionantes que podíamos imaginar. Totalmente recomendado para eventos de este tamaño."</p>
+              <footer class="prod-quote__footer">
+                <span class="prod-quote__name">Gabriela y Alejandro</span>
+                <span class="prod-quote__event">Boda en Hacienda — 280 invitados, Tlalpan CDMX</span>
+              </footer>
+            </blockquote>
+          </div>
+
+        </div>
+
+        <aside class="prod-sidebar">
+
+          <div class="ps-widget">
+            <h3 class="ps-widget__title">Especificaciones</h3>
+            <dl class="ps-specs">
+              <div class="ps-specs__row"><dt>Luminarias</dt><dd>24 par LED RGBW</dd></div>
+              <div class="ps-specs__row"><dt>Tipo</dt><dd>Par LED profesional</dd></div>
+              <div class="ps-specs__row"><dt>Cobertura</dt><dd>Hasta 400 m²</dd></div>
+              <div class="ps-specs__row"><dt>Control</dt><dd>Controlador DMX</dd></div>
+              <div class="ps-specs__row"><dt>Temperatura</dt><dd>Ajustable RGBW</dd></div>
+              <div class="ps-specs__row"><dt>Invitados</dt><dd>200-400</dd></div>
+              <div class="ps-specs__row"><dt>Técnico</dt><dd>Incluido</dd></div>
+              <div class="ps-specs__row"><dt>Instalación</dt><dd>Incluida</dd></div>
+              <div class="ps-specs__row"><dt>Desmontaje</dt><dd>Incluido</dd></div>
+              <div class="ps-specs__row"><dt>Zona</dt><dd>CDMX + Edomex</dd></div>
+            </dl>
+          </div>
+
+          <div class="ps-widget">
+            <h3 class="ps-widget__title">Ideal para</h3>
+            <div class="ps-tags">
+              <span class="ps-tag">Bodas grandes</span>
+              <span class="ps-tag">Haciendas</span>
+              <span class="ps-tag">Galas</span>
+              <span class="ps-tag">Eventos corporativos</span>
+              <span class="ps-tag">Salones 200-400 m²</span>
+              <span class="ps-tag">Jardines amplios</span>
+              <span class="ps-tag">XV años de gran escala</span>
+              <span class="ps-tag">200-400 invitados</span>
+            </div>
+          </div>
+
+          <div class="ps-widget">
+            <h3 class="ps-widget__title">Otros paquetes</h3>
+            <a href="/renta-de-iluminacion/city-light/paquete-8-par-led/" class="ps-pkg">
+              <img src="/img/img-index/city-light.avif" alt="8 Par LED City Light" width="80" height="60" loading="lazy" class="ps-pkg__img" />
+              <div class="ps-pkg__info">
+                <span class="ps-pkg__name">8 Par LED</span>
+                <span class="ps-pkg__price">$2,500 MXN</span>
+              </div>
+            </a>
+            <a href="/renta-de-iluminacion/city-light/paquete-16-par-led/" class="ps-pkg">
+              <img src="/img/img-index/city-light.avif" alt="16 Par LED City Light" width="80" height="60" loading="lazy" class="ps-pkg__img" />
+              <div class="ps-pkg__info">
+                <span class="ps-pkg__name">16 Par LED</span>
+                <span class="ps-pkg__price">$4,200 MXN</span>
+              </div>
+            </a>
+            <a href="/renta-de-iluminacion/city-light/paquete-produccion/" class="ps-pkg">
+              <img src="/img/img-index/city-light.avif" alt="Producción 40+ Par LED" width="80" height="60" loading="lazy" class="ps-pkg__img" />
+              <div class="ps-pkg__info">
+                <span class="ps-pkg__name">Producción — 40+</span>
+                <span class="ps-pkg__price">$11,000 MXN</span>
+              </div>
+            </a>
+            <div class="ps-upsell">
+              <p class="ps-upsell__text">¿Evento de 400+ invitados o producción profesional con consola DMX completa? El paquete Producción incluye 40+ luminarias y director de iluminación.</p>
+              <a href="/renta-de-iluminacion/city-light/paquete-produccion/" class="ps-upsell__link">Ver paquete Producción →</a>
+            </div>
+          </div>
+
+          <div class="ps-widget ps-widget--dark">
+            <h3 class="ps-widget__title ps-widget__title--light">Cotiza tu evento</h3>
+            <p class="ps-widget__desc">Cotización personalizada en menos de 24 horas. Sin compromiso.</p>
+            <a href="/cotizar/" class="ps-widget__btn">Cotizar Gratis</a>
+            <a href={WHATSAPP_URL_MSG} class="ps-widget__btn ps-widget__btn--wa" target="_blank" rel="noopener">WhatsApp: 55 4937 5172</a>
+          </div>
+
+          <div class="ps-widget">
+            <h3 class="ps-widget__title">Servicios relacionados</h3>
+            <div class="ps-links">
+              <a href="/renta-de-iluminacion/city-color/" class="ps-link">City Color LED — Cañones</a>
+              <a href="/renta-de-iluminacion/guirnaldas/" class="ps-link">Guirnaldas LED Edison</a>
+              <a href="/renta-de-iluminacion/luces-arquitectonicas/" class="ps-link">Uplighting arquitectónico</a>
+              <a href="/renta-de-iluminacion/luz-neon/" class="ps-link">Luz Neón LED</a>
+              <a href="/equipos-para-eventos/maquina-de-burbujas/" class="ps-link">Máquina de Burbujas</a>
+              <a href="/equipos-para-eventos/humo-bajo/" class="ps-link">Humo Bajo</a>
+            </div>
+          </div>
+
+          <div class="ps-widget">
+            <h3 class="ps-widget__title">Contacto</h3>
+            <div class="ps-contact">
+              <p><a href="tel:+525549375172">55 4937 5172</a></p>
+              <p><a href="mailto:contacto@redeil.com">contacto@redeil.com</a></p>
+              <p>Lun-Vie 9:00-19:00 | Sáb 10:00-15:00</p>
+            </div>
+          </div>
+
+        </aside>
+      </div>
     </div>
   </section>
 
   <FaqSection items={faqItems} />
-
-  <!-- CTA FINAL -->
 
   <Footer />
   <WhatsAppBubble />
 </Base>
 
 <style>
-  .section__title {
-    font-size: clamp(1.5rem, 3vw, 2rem);
-    font-weight: 800;
-    color: var(--color-text);
-    margin-bottom: 0.5rem;
-  }
-  .section__subtitle {
-    font-size: var(--font-size-base);
-    color: var(--color-text-light);
-    margin-bottom: 2rem;
-  }
-  .features-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 0.75rem;
-    margin-bottom: 2rem;
-  }
-  .feature-item {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    padding: 0.875rem 1rem;
-    border-radius: var(--border-radius);
-    font-size: var(--font-size-sm);
-  }
-  .feature-item--yes {
-    background: #f0fdf4;
-    color: #166534;
-  }
-  .feature-item--no {
-    background: var(--color-bg);
-    color: var(--color-text-light);
-  }
-  .feature-icon {
-    font-weight: 700;
-    font-size: 1.125rem;
-    flex-shrink: 0;
-  }
-  .price-highlight {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 2rem;
-    background: var(--color-bg);
-    border-radius: var(--border-radius-lg);
-    text-align: center;
-  }
-  .price-highlight__label {
-    font-size: var(--font-size-sm);
-    color: var(--color-text-light);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-  }
-  .price-highlight__amount {
-    font-size: clamp(2rem, 5vw, 3rem);
-    font-weight: 800;
-    color: var(--color-text);
-  }
-  .price-highlight__note {
-    font-size: var(--font-size-sm);
-    color: var(--color-text-light);
-    margin-bottom: 0.5rem;
-  }
-  .content-prose {
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  .content-prose h2 {
-    font-size: clamp(1.5rem, 3vw, 2rem);
-    font-weight: 800;
-    color: var(--color-text);
-    margin-bottom: 1rem;
-  }
-  .content-prose h3 {
-    font-size: var(--font-size-xl);
-    font-weight: 700;
-    color: var(--color-text);
-    margin: 2rem 0 0.75rem;
-  }
-  .content-prose p {
-    font-size: var(--font-size-base);
-    color: var(--color-text-light);
-    line-height: 1.8;
-    margin-bottom: 1rem;
-  }
+  .prod-layout { display: grid; grid-template-columns: 1fr; gap: 2rem; }
+  @media (min-width: 1024px) { .prod-layout { grid-template-columns: 1fr 340px; gap: 2.5rem; } }
+  .prod-gallery { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; margin-bottom: 2rem; border-radius: 14px; overflow: hidden; }
+  .prod-gallery__main { grid-row: span 2; }
+  .prod-gallery__main img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .prod-gallery__side { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; }
+  .prod-gallery__side img { width: 100%; height: 100%; object-fit: cover; display: block; aspect-ratio: 3/2; }
+  .prod-info { margin-bottom: 2.5rem; }
+  .prod-info__badge { display: inline-block; font-size: 0.75rem; font-weight: 700; color: var(--color-accent); text-transform: uppercase; letter-spacing: 0.08em; padding: 0.375rem 1rem; background: rgba(0,113,227,0.08); border: 1px solid rgba(0,113,227,0.12); border-radius: 6px; margin-bottom: 0.75rem; }
+  .prod-info__title { font-size: clamp(1.375rem, 3vw, 1.75rem); font-weight: 800; color: var(--color-text); line-height: 1.2; letter-spacing: -0.02em; margin: 0 0 1.25rem; }
+  .prod-price { background: var(--color-bg); border-radius: 12px; padding: 1.25rem 1.5rem; margin-bottom: 1.25rem; border-left: 4px solid var(--color-accent); }
+  .prod-price__amount { font-size: 2.25rem; font-weight: 800; color: var(--color-primary); font-variant-numeric: tabular-nums; }
+  .prod-price__currency { font-size: 0.875rem; color: var(--color-text-light); margin-left: 0.5rem; }
+  .prod-price__note { font-size: 0.8125rem; color: var(--color-text-light); margin: 0.5rem 0 0; }
+  .prod-ctas { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+  .prod-btn { display: inline-flex; align-items: center; justify-content: center; padding: 0.875rem 1.75rem; border-radius: 6px; font-size: 0.9375rem; font-weight: 600; text-decoration: none; transition: background 0.2s ease, border-color 0.2s ease; }
+  .prod-btn--wa { background: #25D366; color: #fff; }
+  .prod-btn--wa:hover { background: #1DA851; }
+  .prod-btn--outline { background: none; color: var(--color-text); border: 2px solid var(--color-border); }
+  .prod-btn--outline:hover { border-color: var(--color-accent); color: var(--color-accent); }
+  .prod-selling { margin-bottom: 2.5rem; }
+  .prod-selling__headline { font-size: clamp(1.25rem, 3vw, 1.5rem); font-weight: 800; color: var(--color-text); line-height: 1.25; letter-spacing: -0.02em; margin: 0 0 0.75rem; }
+  .prod-selling__intro { font-size: 0.9375rem; color: var(--color-text-light); line-height: 1.75; margin: 0 0 1.75rem; max-width: 65ch; }
+  .prod-highlights { display: flex; flex-direction: column; gap: 1.25rem; }
+  .prod-hl { display: flex; gap: 1rem; align-items: stretch; }
+  .prod-hl__bar { flex-shrink: 0; width: 3px; background: var(--color-accent); border-radius: 2px; }
+  .prod-hl__content { display: flex; flex-direction: column; gap: 0.25rem; }
+  .prod-hl__title { font-size: 0.9375rem; font-weight: 700; color: var(--color-text); margin: 0; line-height: 1.3; }
+  .prod-hl__desc { font-size: 0.8125rem; color: var(--color-text-light); line-height: 1.65; margin: 0; }
+  .prod-includes { background: var(--color-bg); border-radius: 14px; padding: 1.75rem 2rem; }
+  .prod-includes__title { font-size: 1.0625rem; font-weight: 700; color: var(--color-text); margin: 0 0 1rem; }
+  .prod-includes__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; }
+  .prod-feat { font-size: 0.875rem; color: var(--color-text-light); padding-left: 1.25rem; position: relative; line-height: 1.5; }
+  .prod-feat::before { content: ""; position: absolute; left: 0; top: 0.45rem; width: 6px; height: 6px; border-radius: 50%; background: var(--color-accent); }
+  @media (max-width: 640px) { .prod-includes__grid { grid-template-columns: 1fr; } }
+  .prod-sidebar { display: flex; flex-direction: column; gap: 1.25rem; }
+  @media (min-width: 1024px) { .prod-sidebar { position: sticky; top: calc(var(--header-height) + var(--topbar-height) + 1.5rem); align-self: start; } }
+  .ps-widget { background: var(--color-white); border: 1px solid var(--color-border); border-radius: 12px; padding: 1.25rem; }
+  .ps-widget--dark { background: var(--color-primary); color: #fff; border: none; }
+  .ps-widget__title { font-size: 0.875rem; font-weight: 700; color: var(--color-text); text-transform: uppercase; letter-spacing: 0.05em; margin: 0 0 0.75rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--color-accent); }
+  .ps-widget__title--light { color: #fff; }
+  .ps-widget__desc { font-size: 0.8125rem; color: rgba(255,255,255,0.75); margin: 0 0 0.75rem; }
+  .ps-widget__btn { display: block; text-align: center; padding: 0.625rem; border-radius: 6px; font-size: 0.875rem; font-weight: 600; text-decoration: none; margin-top: 0.5rem; background: var(--color-accent); color: #fff; transition: background 0.2s ease; }
+  .ps-widget__btn:hover { opacity: 0.9; }
+  .ps-widget__btn--wa { background: #25D366; }
+  .ps-specs { display: flex; flex-direction: column; margin: 0; }
+  .ps-specs__row { display: flex; justify-content: space-between; align-items: baseline; padding: 0.4rem 0; border-bottom: 1px solid var(--color-bg); gap: 0.75rem; }
+  .ps-specs__row:last-child { border-bottom: none; }
+  .ps-specs__row dt { font-size: 0.8125rem; color: var(--color-text-light); font-weight: 500; margin: 0; }
+  .ps-specs__row dd { font-size: 0.8125rem; font-weight: 600; color: var(--color-text); text-align: right; margin: 0; font-variant-numeric: tabular-nums; }
+  .ps-tags { display: flex; flex-wrap: wrap; gap: 0.375rem; }
+  .ps-tag { font-size: 0.6875rem; font-weight: 600; color: var(--color-text); padding: 0.3rem 0.75rem; background: var(--color-bg); border: 1px solid var(--color-border); border-radius: 6px; white-space: nowrap; }
+  .ps-pkg { display: flex; gap: 0.75rem; align-items: center; text-decoration: none; padding: 0.625rem 0; border-bottom: 1px solid var(--color-bg); }
+  .ps-pkg:last-of-type { border-bottom: none; }
+  .ps-pkg__img { width: 72px; height: 54px; object-fit: cover; border-radius: 8px; flex-shrink: 0; }
+  .ps-pkg__info { display: flex; flex-direction: column; gap: 0.125rem; }
+  .ps-pkg__name { font-size: 0.8125rem; font-weight: 600; color: var(--color-text); }
+  .ps-pkg__price { font-size: 0.75rem; font-weight: 700; color: var(--color-accent); font-variant-numeric: tabular-nums; }
+  .ps-pkg:hover .ps-pkg__name { color: var(--color-accent); }
+  .ps-upsell { margin-top: 0.75rem; padding-top: 0.75rem; border-top: 1px solid var(--color-bg); }
+  .ps-upsell__text { font-size: 0.75rem; color: var(--color-text-light); line-height: 1.5; margin: 0 0 0.375rem; }
+  .ps-upsell__link { font-size: 0.75rem; font-weight: 600; color: var(--color-accent); text-decoration: none; }
+  .ps-upsell__link:hover { text-decoration: underline; }
+  .ps-links { display: flex; flex-direction: column; }
+  .ps-link { padding: 0.4rem 0; border-bottom: 1px solid var(--color-bg); font-size: 0.8125rem; color: var(--color-text-light); text-decoration: none; }
+  .ps-link:last-child { border-bottom: none; }
+  .ps-link:hover { color: var(--color-accent); }
+  .ps-contact p { font-size: 0.8125rem; color: var(--color-text-light); margin: 0.3rem 0; }
+  .ps-contact a { color: var(--color-accent); text-decoration: none; }
+  .prod-process { margin: 2.5rem 0; }
+  .prod-process__title { font-size: 1.125rem; font-weight: 800; color: var(--color-text); letter-spacing: -0.02em; margin: 0 0 1.25rem; }
+  .prod-steps { display: flex; flex-direction: column; gap: 0; }
+  .prod-step { display: flex; gap: 1rem; padding: 1rem 0; border-bottom: 1px solid var(--color-border); }
+  .prod-step:last-child { border-bottom: none; }
+  .prod-step__num { flex-shrink: 0; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; background: var(--color-accent); color: #fff; font-size: 0.8125rem; font-weight: 700; border-radius: 50%; }
+  .prod-step__content { display: flex; flex-direction: column; gap: 0.2rem; }
+  .prod-step__name { font-size: 0.9375rem; font-weight: 700; color: var(--color-text); margin: 0; line-height: 1.3; }
+  .prod-step__desc { font-size: 0.8125rem; color: var(--color-text-light); line-height: 1.6; margin: 0; }
+  .prod-compare { margin: 2.5rem 0; }
+  .prod-compare__title { font-size: 1.125rem; font-weight: 800; color: var(--color-text); letter-spacing: -0.02em; margin: 0 0 1.25rem; }
+  .prod-compare__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+  @media (max-width: 640px) { .prod-compare__grid { grid-template-columns: 1fr; } }
+  .prod-compare__col { border-radius: 12px; padding: 1.25rem; }
+  .prod-compare__col--them { background: #fef2f2; border: 1px solid #fecaca; }
+  .prod-compare__col--us { background: #eff6ff; border: 1px solid #bfdbfe; }
+  .prod-compare__label { display: block; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.75rem; }
+  .prod-compare__col--them .prod-compare__label { color: #991b1b; }
+  .prod-compare__col--us .prod-compare__label { color: var(--color-primary); }
+  .prod-compare__list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.5rem; }
+  .prod-compare__list li { font-size: 0.8125rem; color: var(--color-text); line-height: 1.4; padding-left: 1.125rem; position: relative; }
+  .prod-compare__col--them .prod-compare__list li::before { content: "–"; position: absolute; left: 0; color: #dc2626; font-size: 0.75rem; font-weight: 700; }
+  .prod-compare__col--us .prod-compare__list li::before { content: "✓"; position: absolute; left: 0; color: var(--color-accent); font-size: 0.75rem; font-weight: 700; }
+  .prod-proof { margin-top: 2.5rem; }
+  .prod-quote { background: var(--color-bg); border-radius: 14px; padding: 1.75rem 2rem; border-left: 4px solid var(--color-accent); margin: 0; }
+  .prod-quote__text { font-size: 0.9375rem; color: var(--color-text); line-height: 1.75; font-style: italic; margin: 0 0 1rem; }
+  .prod-quote__footer { display: flex; flex-direction: column; gap: 0.125rem; }
+  .prod-quote__name { font-size: 0.875rem; font-weight: 700; color: var(--color-text); font-style: normal; }
+  .prod-quote__event { font-size: 0.75rem; color: var(--color-text-light); font-style: normal; }
 </style>

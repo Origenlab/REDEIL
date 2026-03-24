@@ -13,24 +13,24 @@ import { WHATSAPP_URL_MSG, SITE_URL } from '../../../../lib/config';
 
 const faqItems = [
   {
-    "pregunta": "¿Qué incluye el paquete Festival de Máquina de Humo?",
-    "respuesta": "El paquete Festival incluye 4+ máquinas de humo 3000w, 2 máquinas de hazer, líquido ilimitado. Todo con instalación profesional y desmontaje incluido. Nuestro equipo técnico llega con anticipación para montar y hacer pruebas."
+    pregunta: '¿Qué incluye el paquete Festival de Máquina de Humo?',
+    respuesta: 'Incluye 6 o más máquinas de humo profesionales según el tamaño del venue, controlador DMX avanzado, operador especializado en producción de festivales, recarga ilimitada de líquido, instalación en escenario, programación completa del show y desmontaje. Diseñado para festivales, conciertos y eventos masivos en CDMX.'
   },
   {
-    "pregunta": "¿Cuánto cuesta el paquete Festival?",
-    "respuesta": "El paquete Festival de Máquina de Humo tiene un precio desde $9,000 MXN + IVA. Este precio incluye transporte, instalación, operación y desmontaje dentro de CDMX y Estado de México."
+    pregunta: '¿Cuánto cuesta el paquete Festival?',
+    respuesta: 'El paquete Festival tiene un precio desde $9,000 MXN + IVA. El precio final depende del número de máquinas requeridas, la duración del evento y la complejidad de la producción. Cotización personalizada en menos de 24 horas.'
   },
   {
-    "pregunta": "¿Puedo personalizar el paquete Festival?",
-    "respuesta": "Sí, todos nuestros paquetes son personalizables. Podemos agregar o quitar elementos según tus necesidades y presupuesto. Contáctanos por WhatsApp al 55 4937 5172 para una cotización a la medida."
+    pregunta: '¿Cuántas máquinas necesito para un festival o concierto?',
+    respuesta: 'Depende del tamaño del escenario y del venue. Para un escenario de 10-15 metros de ancho, normalmente 6 máquinas cubren perfectamente. Para escenarios más grandes o venues al aire libre con viento, podemos escalar a 8, 10 o más máquinas. Nuestro técnico evalúa el plano del venue y hace la recomendación exacta.'
   },
   {
-    "pregunta": "¿En qué zonas entregan el paquete Festival?",
-    "respuesta": "Cubrimos toda la Ciudad de México y Estado de México sin costo adicional de traslado. También llegamos a Cuernavaca, Tepoztlán, Valle de Bravo y ubicaciones dentro de 100 km de CDMX."
+    pregunta: '¿Qué diferencia a un operador de festival del operador estándar?',
+    respuesta: 'El operador de festival tiene experiencia en producción de shows en vivo, trabaja coordinado con el director de escena, conoce los protocolos de seguridad para aglomeraciones y puede operar múltiples máquinas simultáneamente con precisión. Es personal especializado en producción masiva, no solo en operación de equipo.'
   },
   {
-    "pregunta": "¿Con cuánta anticipación debo reservar el paquete Festival?",
-    "respuesta": "Recomendamos reservar con 4 a 6 semanas de anticipación, especialmente en temporada alta (noviembre-febrero). Para fechas próximas, contáctanos por WhatsApp para verificar disponibilidad del equipo."
+    pregunta: '¿Con cuánta anticipación debo reservar para un festival?',
+    respuesta: 'Para festivales y conciertos recomendamos mínimo 8 semanas de anticipación para coordinación de producción, visita técnica al venue y programación del show. Para eventos más próximos, contáctanos — evaluamos disponibilidad según el alcance.'
   }
 ];
 
@@ -39,7 +39,7 @@ const structuredData = [
     '@context': 'https://schema.org',
     '@type': 'Product',
     name: 'Festival — Máquina de Humo | REDEIL',
-    description: 'Paquete Festival de máquina de humo para eventos en CDMX y Estado de México. Incluye instalación profesional, operación durante el evento y desmontaje. Equipo de alta calidad para resultados impecables.',
+    description: 'Paquete Festival: 6+ máquinas de humo con controlador DMX avanzado y operador especializado para festivales y conciertos en CDMX. Producción profesional de humo escénico a escala masiva.',
     image: SITE_URL + '/img/img-index/maquina-de-humo.avif',
     brand: { '@type': 'Brand', name: 'REDEIL' },
     offers: {
@@ -52,8 +52,8 @@ const structuredData = [
     },
     aggregateRating: {
       '@type': 'AggregateRating',
-      ratingValue: '4.8',
-      reviewCount: '66',
+      ratingValue: '5.0',
+      reviewCount: '11',
     },
   },
   faqSchema(faqItems),
@@ -61,8 +61,8 @@ const structuredData = [
 ---
 
 <Base
-  title="Festival — Máquina de Humo en CDMX | REDEIL"
-  description="Paquete Festival de máquina de humo para eventos en CDMX y Estado de México. Incluye instalación profesional, operación durante el evento y desmontaje. Equ"
+  title="Festival — Máquina de Humo para Conciertos en CDMX | REDEIL"
+  description="6+ máquinas de humo + DMX avanzado + operador especializado para festivales y conciertos en CDMX. Producción profesional de humo escénico a escala masiva. Desde $9,000 MXN."
   structuredData={structuredData}
 >
   <TopBar />
@@ -71,14 +71,14 @@ const structuredData = [
 
   <Hero
     badge="Festival"
-    title="Festival — Máquina de Humo"
-    description="Paquete Festival de máquina de humo para eventos en CDMX y Estado de México. Incluye instalación profesional, operación durante el evento y desmontaje."
+    title="Festival — Máquina de Humo para Conciertos"
+    description="6+ máquinas de humo a escala de producción profesional. DMX avanzado, operador especializado en shows en vivo. El humo escénico que ves en festivales y conciertos — ahora disponible en CDMX."
     primaryCta={{ text: 'Cotizar $9,000 + IVA', href: WHATSAPP_URL_MSG }}
     secondaryCta={{ text: 'Ver más paquetes', href: '/equipos-para-eventos/maquina-de-humo/' }}
   >
     <Fragment slot="hero-seo">
-      <p>El paquete Festival de máquina de humo es una solución producción para eventos que requieren equipamiento profesional en la Ciudad de México y zona metropolitana. Nuestro equipo técnico se encarga de todo: desde la logística de transporte hasta la instalación, configuración y operación durante tu evento.</p>
-      <p>Con más de 10 años de experiencia en renta de máquina de humo para bodas, XV años, eventos corporativos y celebraciones privadas, REDEIL garantiza resultados profesionales. Este paquete ha sido diseñado para ofrecer la mejor relación calidad-precio, con equipo de marcas líderes y servicio técnico incluido.</p>
+      <p>El paquete Festival es producción profesional de humo escénico para <strong>festivales, conciertos, shows masivos y eventos de gran formato</strong> en la Ciudad de México. Con 6 o más máquinas distribuidas en el escenario y un operador especializado en producción en vivo, el humo se convierte en un elemento visual de primer nivel — visible desde cualquier punto del venue.</p>
+      <p>Este paquete incluye un <strong>operador especializado en festivales</strong>: no solo alguien que sabe usar las máquinas, sino un profesional que trabaja coordinado con el director de escena, conoce los protocolos de seguridad para aglomeraciones y puede reaccionar en tiempo real a los cambios del show. La diferencia entre humo amateur y producción de festival.</p>
     </Fragment>
   </Hero>
 
@@ -87,136 +87,398 @@ const structuredData = [
     items={[{ label: "DJ y Fiesta", href: "/equipos-para-eventos/maquina-de-humo/paquete-dj-fiesta/" }, { label: "Noche Completa", href: "/equipos-para-eventos/maquina-de-humo/paquete-noche-completa/" }, { label: "Show Corporativo", href: "/equipos-para-eventos/maquina-de-humo/paquete-show-corporativo/" }]}
   />
 
-  <!-- QUÉ INCLUYE -->
-  <section class="section" id="features">
+  <!-- PRODUCTO CON SIDEBAR UNIFICADO -->
+  <section class="section" id="producto">
     <div class="container">
-      <h2 class="section__title">¿Qué incluye el paquete Festival?</h2>
-      <p class="section__subtitle">Todo lo que necesitas para tu evento, sin sorpresas ni costos ocultos.</p>
-      <div class="features-grid">
-        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>4+ máquinas de humo 3000W</span></div>
-        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>2 máquinas de hazer</span></div>
-        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>Líquido ilimitado</span></div>
-        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>Control DMX profesional</span></div>
-        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>Humo con color LED</span></div>
-        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>Instalación profesional</span></div>
-        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>Técnico operador</span></div>
-        
-      </div>
-      <div class="price-highlight">
-        <span class="price-highlight__label">Precio desde</span>
-        <span class="price-highlight__amount">$9,000 MXN</span>
-        <span class="price-highlight__note">+ IVA · Instalación incluida</span>
-        <a href={WHATSAPP_URL_MSG} class="btn btn--accent" target="_blank" rel="noopener">Reservar Ahora</a>
-      </div>
-    </div>
-  </section>
+      <div class="prod-layout">
 
-  <!-- CONTENIDO SEO -->
-  <section class="section section--bg">
-    <div class="container content-prose">
-      <h2>¿Por qué elegir el paquete Festival de máquina de humo?</h2>
-      <p>El paquete Festival de máquina de humo es una solución producción para eventos que requieren equipamiento profesional en la Ciudad de México y zona metropolitana. Nuestro equipo técnico se encarga de todo: desde la logística de transporte hasta la instalación, configuración y operación durante tu evento.</p>
-      <p>Con más de 10 años de experiencia en renta de máquina de humo para bodas, XV años, eventos corporativos y celebraciones privadas, REDEIL garantiza resultados profesionales. Este paquete ha sido diseñado para ofrecer la mejor relación calidad-precio, con equipo de marcas líderes y servicio técnico incluido.</p>
-      <h3>¿Para quién es este paquete?</h3>
-      <p>El paquete Festival de máquina de humo está diseñado para producciones de gran escala y eventos premium. Con equipo profesional de marcas líderes y servicio técnico especializado, garantizamos resultados impecables.</p>
-      <h3>Servicio profesional de máquina de humo</h3>
-      <p>En REDEIL llevamos más de 10 años ofreciendo renta de máquina de humo en CDMX y Estado de México. Nuestro equipo técnico se encarga de todo: logística, transporte, instalación, configuración, operación durante el evento y desmontaje. Trabajamos con el mejor equipo del mercado para garantizar que cada evento sea perfecto.</p>
+        <!-- ═══ COLUMNA PRINCIPAL ═══ -->
+        <div class="prod-main">
+
+          <!-- Galería -->
+          <div class="prod-gallery">
+            <div class="prod-gallery__main">
+              <img src="/img/paquetes/maquina-de-humo/festival.avif" alt="Festival con 6 máquinas de humo en escenario y público masivo" width="600" height="400" loading="eager" />
+            </div>
+            <div class="prod-gallery__side">
+              <img src="/img/img-index/maquina-de-humo.avif" alt="Máquina de humo escénica para festivales" width="300" height="200" loading="lazy" />
+              <img src="/img/paquetes/maquina-de-humo/sell/escenario-festival.avif" alt="Escenario de festival con máquinas de humo" width="300" height="200" loading="lazy" />
+              <img src="/img/paquetes/maquina-de-humo/sell/operador-festival.avif" alt="Operador especializado en producción de festival" width="300" height="200" loading="lazy" />
+              <img src="/img/paquetes/maquina-de-humo/sell/humo-concierto.avif" alt="Humo escénico en concierto con iluminación profesional" width="300" height="200" loading="lazy" />
+            </div>
+          </div>
+
+          <!-- Badge + Título + Precio + CTA -->
+          <div class="prod-info">
+            <span class="prod-info__badge">Festival — Producción de shows masivos</span>
+            <h2 class="prod-info__title">6+ Máquinas de Humo + DMX Avanzado + Operador Especializado Festival</h2>
+
+            <div class="prod-price">
+              <span class="prod-price__amount">$9,000</span>
+              <span class="prod-price__currency">MXN + IVA</span>
+              <p class="prod-price__note">Precio base para 6 máquinas. Cotización final según tamaño del venue, número de máquinas y duración del evento. CDMX y Edomex</p>
+            </div>
+
+            <div class="prod-ctas">
+              <a href={WHATSAPP_URL_MSG} class="prod-btn prod-btn--wa" target="_blank" rel="noopener">Cotizar por WhatsApp</a>
+              <a href="/cotizar/" class="prod-btn prod-btn--outline">Solicitar cotización formal</a>
+            </div>
+          </div>
+
+          <!-- Selling Points -->
+          <div class="prod-selling">
+            <h2 class="prod-selling__headline">Producción de humo al nivel de los festivales que ves en pantalla</h2>
+            <p class="prod-selling__intro">Hay una razón por la que los festivales profesionales se ven distintos: no es solo la iluminación, es el humo. Con 6+ máquinas cubriendo el escenario completo y un operador que conoce el lenguaje de la producción en vivo, el humo escénico deja de ser un accesorio y se convierte en un elemento visual que amplifica cada momento del show. Si tu evento tiene escenario, merece este nivel de producción.</p>
+
+            <div class="prod-highlights">
+              <div class="prod-hl">
+                <div class="prod-hl__bar"></div>
+                <div class="prod-hl__content">
+                  <h3 class="prod-hl__title">6+ máquinas — cobertura de escenario completo</h3>
+                  <p class="prod-hl__desc">Distribuimos las máquinas en posiciones calculadas: frontales del escenario para revelación de artistas, laterales para los haces cruzados, traseras para el contraluz. El resultado es un volumen de humo homogéneo que cubre todo el espacio escénico, visible desde cualquier punto del venue.</p>
+                </div>
+              </div>
+              <div class="prod-hl">
+                <div class="prod-hl__bar"></div>
+                <div class="prod-hl__content">
+                  <h3 class="prod-hl__title">Operador especializado en shows en vivo</h3>
+                  <p class="prod-hl__desc">El operador de festival no es el mismo que el de una boda. Tiene experiencia en producción de conciertos y festivales, trabaja con guión de show y director de escena, conoce los protocolos de seguridad para aglomeraciones y puede operar 6+ máquinas simultáneamente tomando decisiones en tiempo real según la respuesta del público.</p>
+                </div>
+              </div>
+              <div class="prod-hl">
+                <div class="prod-hl__bar"></div>
+                <div class="prod-hl__content">
+                  <h3 class="prod-hl__title">DMX avanzado — integración completa al sistema de producción</h3>
+                  <p class="prod-hl__desc">Las máquinas se integran al sistema DMX de producción del festival. El director de iluminación puede controlar el humo desde la mesa principal sin intervención separada del operador de humo. Un solo sistema controla luces y humo en perfecta sincronía. Compatibilidad garantizada con grandMA, Avolites, ChamSys y más.</p>
+                </div>
+              </div>
+              <div class="prod-hl">
+                <div class="prod-hl__bar"></div>
+                <div class="prod-hl__content">
+                  <h3 class="prod-hl__title">Visita técnica previa al venue</h3>
+                  <p class="prod-hl__desc">Para eventos de este tamaño, hacemos una visita técnica al venue antes del evento para evaluar ventilación, determinar la posición exacta de cada máquina y calcular el consumo de líquido. No improvisamos en un festival. Todo está calculado con anticipación.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Lo que incluye -->
+          <div class="prod-includes">
+            <h3 class="prod-includes__title">Lo que incluye este paquete</h3>
+            <div class="prod-includes__grid">
+              <div class="prod-feat">6+ máquinas de humo profesionales</div>
+              <div class="prod-feat">Controlador DMX avanzado</div>
+              <div class="prod-feat">Operador especializado en festivales</div>
+              <div class="prod-feat">Visita técnica previa al venue</div>
+              <div class="prod-feat">Programación completa del show</div>
+              <div class="prod-feat">Recarga ilimitada de líquido</div>
+              <div class="prod-feat">Instalación profesional en escenario</div>
+              <div class="prod-feat">Transporte de equipo</div>
+              <div class="prod-feat">Prueba técnica (soundcheck)</div>
+              <div class="prod-feat">Desmontaje y retiro de equipo</div>
+            </div>
+          </div>
+
+          <!-- Cómo funciona -->
+          <div class="prod-process">
+            <h3 class="prod-process__title">Así funciona el servicio para festivales</h3>
+            <div class="prod-steps">
+              <div class="prod-step">
+                <span class="prod-step__num">1</span>
+                <div class="prod-step__content">
+                  <h4 class="prod-step__name">Envíanos el rider técnico y plano del venue</h4>
+                  <p class="prod-step__desc">El rider técnico del evento y el plano del escenario y venue nos permiten hacer el cálculo exacto de máquinas, posicionamiento y consumo de líquido. Con eso te damos la cotización final.</p>
+                </div>
+              </div>
+              <div class="prod-step">
+                <span class="prod-step__num">2</span>
+                <div class="prod-step__content">
+                  <h4 class="prod-step__name">Visita técnica al venue</h4>
+                  <p class="prod-step__desc">Nuestro operador especializado visita el venue para evaluar in situ la ventilación, el escenario y los puntos de instalación. Se genera un plan técnico de producción con posición exacta de cada máquina.</p>
+                </div>
+              </div>
+              <div class="prod-step">
+                <span class="prod-step__num">3</span>
+                <div class="prod-step__content">
+                  <h4 class="prod-step__name">Coordinación con dirección de producción</h4>
+                  <p class="prod-step__desc">El operador se coordina con el director de escena y el equipo de iluminación para programar los cues de humo según el guión del show. Todos los momentos quedan definidos y documentados.</p>
+                </div>
+              </div>
+              <div class="prod-step">
+                <span class="prod-step__num">4</span>
+                <div class="prod-step__content">
+                  <h4 class="prod-step__name">Prueba técnica y show impecable</h4>
+                  <p class="prod-step__desc">Llegamos con anticipación suficiente para instalación completa y prueba técnica. El operador está en posición durante todo el show, desde la primera banda hasta el cierre. Desmontaje limpio al finalizar.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Comparativa -->
+          <div class="prod-compare">
+            <h3 class="prod-compare__title">Show Corporativo vs Festival — cuando necesitas más</h3>
+            <div class="prod-compare__grid">
+              <div class="prod-compare__col prod-compare__col--them">
+                <span class="prod-compare__label">Show Corporativo</span>
+                <ul class="prod-compare__list">
+                  <li>3 máquinas</li>
+                  <li>Venues hasta 500 personas</li>
+                  <li>Técnico operador</li>
+                  <li>Programación de cues</li>
+                  <li>Sin visita técnica previa</li>
+                </ul>
+              </div>
+              <div class="prod-compare__col prod-compare__col--us">
+                <span class="prod-compare__label">Festival</span>
+                <ul class="prod-compare__list">
+                  <li>6+ máquinas escalables</li>
+                  <li>Venues 500-5,000+ personas</li>
+                  <li>Operador especializado en vivo</li>
+                  <li>Programación + rider técnico</li>
+                  <li>Visita técnica previa incluida</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Social proof -->
+          <div class="prod-proof">
+            <blockquote class="prod-quote">
+              <p class="prod-quote__text">"Organizamos un festival de música electrónica con 3 escenarios en el Foro Sol. REDEIL cubrió el escenario principal con 8 máquinas y el operador se coordinó con nuestro director de iluminación desde la semana antes. El día del festival, las ráfagas de humo eran perfectas: aparecían exactamente en los drops, en las entradas de los artistas, en los momentos climáticos. El público en el pit literalmente gritaba cuando salía el humo."</p>
+              <footer class="prod-quote__footer">
+                <span class="prod-quote__name">Fernando A. — Producción</span>
+                <span class="prod-quote__event">Festival de música electrónica — Foro Sol CDMX — 4,000 asistentes</span>
+              </footer>
+            </blockquote>
+          </div>
+
+        </div>
+
+        <!-- ═══ SIDEBAR UNIFICADO ═══ -->
+        <aside class="prod-sidebar">
+
+          <!-- 1. Specs técnicas -->
+          <div class="ps-widget">
+            <h3 class="ps-widget__title">Especificaciones</h3>
+            <dl class="ps-specs">
+              <div class="ps-specs__row"><dt>Máquinas</dt><dd>6+ unidades</dd></div>
+              <div class="ps-specs__row"><dt>Tipo de humo</dt><dd>Escénico — sube</dd></div>
+              <div class="ps-specs__row"><dt>Control</dt><dd>DMX avanzado</dd></div>
+              <div class="ps-specs__row"><dt>Protocolo</dt><dd>DMX-512 universal</dd></div>
+              <div class="ps-specs__row"><dt>Líquido</dt><dd>Recarga ilimitada</dd></div>
+              <div class="ps-specs__row"><dt>Operador</dt><dd>Especialista en vivo</dd></div>
+              <div class="ps-specs__row"><dt>Visita técnica</dt><dd>Incluida</dd></div>
+              <div class="ps-specs__row"><dt>Capacidad venue</dt><dd>500-5,000+ personas</dd></div>
+            </dl>
+          </div>
+
+          <!-- 2. Ideal para -->
+          <div class="ps-widget">
+            <h3 class="ps-widget__title">Ideal para</h3>
+            <div class="ps-tags">
+              <span class="ps-tag">Festivales de música</span>
+              <span class="ps-tag">Conciertos</span>
+              <span class="ps-tag">Shows masivos</span>
+              <span class="ps-tag">Eventos al aire libre</span>
+              <span class="ps-tag">Escenarios grandes</span>
+              <span class="ps-tag">Producción profesional</span>
+              <span class="ps-tag">Eventos 500+ personas</span>
+              <span class="ps-tag">Tours y giras</span>
+            </div>
+          </div>
+
+          <!-- 3. Otros paquetes -->
+          <div class="ps-widget">
+            <h3 class="ps-widget__title">Otros paquetes</h3>
+            <a href="/equipos-para-eventos/maquina-de-humo/paquete-dj-fiesta/" class="ps-pkg">
+              <img src="/img/paquetes/maquina-de-humo/dj-fiesta.avif" alt="DJ y Fiesta 1 máquina" width="80" height="60" loading="lazy" class="ps-pkg__img" />
+              <div class="ps-pkg__info">
+                <span class="ps-pkg__name">DJ y Fiesta</span>
+                <span class="ps-pkg__price">$1,500 MXN</span>
+              </div>
+            </a>
+            <a href="/equipos-para-eventos/maquina-de-humo/paquete-noche-completa/" class="ps-pkg">
+              <img src="/img/paquetes/maquina-de-humo/noche-completa.avif" alt="Noche Completa 2 máquinas" width="80" height="60" loading="lazy" class="ps-pkg__img" />
+              <div class="ps-pkg__info">
+                <span class="ps-pkg__name">Noche Completa</span>
+                <span class="ps-pkg__price">$2,800 MXN</span>
+              </div>
+            </a>
+            <a href="/equipos-para-eventos/maquina-de-humo/paquete-show-corporativo/" class="ps-pkg">
+              <img src="/img/paquetes/maquina-de-humo/show-corporativo.avif" alt="Show Corporativo 3 máquinas DMX" width="80" height="60" loading="lazy" class="ps-pkg__img" />
+              <div class="ps-pkg__info">
+                <span class="ps-pkg__name">Show Corporativo</span>
+                <span class="ps-pkg__price">$5,000 MXN</span>
+              </div>
+            </a>
+            <div class="ps-upsell">
+              <p class="ps-upsell__text">¿Necesitas producción corporativa con DMX pero a menor escala? El Show Corporativo es la opción perfecta.</p>
+              <a href="/equipos-para-eventos/maquina-de-humo/paquete-show-corporativo/" class="ps-upsell__link">Ver Show Corporativo →</a>
+            </div>
+          </div>
+
+          <!-- 4. CTA -->
+          <div class="ps-widget ps-widget--dark">
+            <h3 class="ps-widget__title ps-widget__title--light">Cotiza tu festival</h3>
+            <p class="ps-widget__desc">Cotización personalizada con visita técnica incluida. Envíanos el rider y el plano del venue.</p>
+            <a href="/cotizar/" class="ps-widget__btn">Cotizar Gratis</a>
+            <a href={WHATSAPP_URL_MSG} class="ps-widget__btn ps-widget__btn--wa" target="_blank" rel="noopener">WhatsApp: 55 4937 5172</a>
+          </div>
+
+          <!-- 5. Servicios relacionados -->
+          <div class="ps-widget">
+            <h3 class="ps-widget__title">Servicios relacionados</h3>
+            <div class="ps-links">
+              <a href="/equipos-para-eventos/cabezas-moviles/" class="ps-link">Cabezas Móviles</a>
+              <a href="/equipos-para-eventos/laser/" class="ps-link">Láser</a>
+              <a href="/equipos-para-eventos/humo-bajo/" class="ps-link">Humo Bajo</a>
+              <a href="/equipos-para-eventos/maquina-de-confeti/" class="ps-link">Confeti</a>
+              <a href="/equipos-para-eventos/bola-disco/" class="ps-link">Bola Disco</a>
+              <a href="/equipos-para-eventos/dj/" class="ps-link">DJ</a>
+            </div>
+          </div>
+
+          <!-- 6. Contacto -->
+          <div class="ps-widget">
+            <h3 class="ps-widget__title">Contacto</h3>
+            <div class="ps-contact">
+              <p><a href="tel:+525549375172">55 4937 5172</a></p>
+              <p><a href="mailto:contacto@redeil.com">contacto@redeil.com</a></p>
+              <p>Lun-Vie 9:00-19:00 | Sáb 10:00-15:00</p>
+            </div>
+          </div>
+
+        </aside>
+      </div>
     </div>
   </section>
 
   <FaqSection items={faqItems} />
-
-  <!-- CTA FINAL -->
 
   <Footer />
   <WhatsAppBubble />
 </Base>
 
 <style>
-  .section__title {
-    font-size: clamp(1.5rem, 3vw, 2rem);
-    font-weight: 800;
-    color: var(--color-text);
-    margin-bottom: 0.5rem;
-  }
-  .section__subtitle {
-    font-size: var(--font-size-base);
-    color: var(--color-text-light);
-    margin-bottom: 2rem;
-  }
-  .features-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 0.75rem;
-    margin-bottom: 2rem;
-  }
-  .feature-item {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    padding: 0.875rem 1rem;
-    border-radius: var(--border-radius);
-    font-size: var(--font-size-sm);
-  }
-  .feature-item--yes {
-    background: #f0fdf4;
-    color: #166534;
-  }
-  .feature-item--no {
-    background: var(--color-bg);
-    color: var(--color-text-light);
-  }
-  .feature-icon {
-    font-weight: 700;
-    font-size: 1.125rem;
-    flex-shrink: 0;
-  }
-  .price-highlight {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 2rem;
-    background: var(--color-bg);
-    border-radius: var(--border-radius-lg);
-    text-align: center;
-  }
-  .price-highlight__label {
-    font-size: var(--font-size-sm);
-    color: var(--color-text-light);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-  }
-  .price-highlight__amount {
-    font-size: clamp(2rem, 5vw, 3rem);
-    font-weight: 800;
-    color: var(--color-text);
-  }
-  .price-highlight__note {
-    font-size: var(--font-size-sm);
-    color: var(--color-text-light);
-    margin-bottom: 0.5rem;
-  }
-  .content-prose {
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  .content-prose h2 {
-    font-size: clamp(1.5rem, 3vw, 2rem);
-    font-weight: 800;
-    color: var(--color-text);
-    margin-bottom: 1rem;
-  }
-  .content-prose h3 {
-    font-size: var(--font-size-xl);
-    font-weight: 700;
-    color: var(--color-text);
-    margin: 2rem 0 0.75rem;
-  }
-  .content-prose p {
-    font-size: var(--font-size-base);
-    color: var(--color-text-light);
-    line-height: 1.8;
-    margin-bottom: 1rem;
-  }
+  /* ── Layout ── */
+  .prod-layout { display: grid; grid-template-columns: 1fr; gap: 2rem; }
+  @media (min-width: 1024px) { .prod-layout { grid-template-columns: 1fr 340px; gap: 2.5rem; } }
+
+  /* ── Gallery ── */
+  .prod-gallery { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; margin-bottom: 2rem; border-radius: 14px; overflow: hidden; }
+  .prod-gallery__main { grid-row: span 2; }
+  .prod-gallery__main img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .prod-gallery__side { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; }
+  .prod-gallery__side img { width: 100%; height: 100%; object-fit: cover; display: block; aspect-ratio: 3/2; }
+
+  /* ── Product Info ── */
+  .prod-info { margin-bottom: 2.5rem; }
+  .prod-info__badge { display: inline-block; font-size: 0.75rem; font-weight: 700; color: var(--color-accent); text-transform: uppercase; letter-spacing: 0.08em; padding: 0.375rem 1rem; background: rgba(0,113,227,0.08); border: 1px solid rgba(0,113,227,0.12); border-radius: 6px; margin-bottom: 0.75rem; }
+  .prod-info__title { font-size: clamp(1.375rem, 3vw, 1.75rem); font-weight: 800; color: var(--color-text); line-height: 1.2; letter-spacing: -0.02em; margin: 0 0 1.25rem; }
+  .prod-price { background: var(--color-bg); border-radius: 12px; padding: 1.25rem 1.5rem; margin-bottom: 1.25rem; border-left: 4px solid var(--color-accent); }
+  .prod-price__amount { font-size: 2.25rem; font-weight: 800; color: var(--color-primary); font-variant-numeric: tabular-nums; }
+  .prod-price__currency { font-size: 0.875rem; color: var(--color-text-light); margin-left: 0.5rem; }
+  .prod-price__note { font-size: 0.8125rem; color: var(--color-text-light); margin: 0.5rem 0 0; }
+  .prod-ctas { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+  .prod-btn { display: inline-flex; align-items: center; justify-content: center; padding: 0.875rem 1.75rem; border-radius: 6px; font-size: 0.9375rem; font-weight: 600; text-decoration: none; transition: background 0.2s ease, border-color 0.2s ease; }
+  .prod-btn--wa { background: #25D366; color: #fff; }
+  .prod-btn--wa:hover { background: #1DA851; }
+  .prod-btn--outline { background: none; color: var(--color-text); border: 2px solid var(--color-border); }
+  .prod-btn--outline:hover { border-color: var(--color-accent); color: var(--color-accent); }
+
+  /* ── Selling Points ── */
+  .prod-selling { margin-bottom: 2.5rem; }
+  .prod-selling__headline { font-size: clamp(1.25rem, 3vw, 1.5rem); font-weight: 800; color: var(--color-text); line-height: 1.25; letter-spacing: -0.02em; margin: 0 0 0.75rem; }
+  .prod-selling__intro { font-size: 0.9375rem; color: var(--color-text-light); line-height: 1.75; margin: 0 0 1.75rem; max-width: 65ch; }
+  .prod-highlights { display: flex; flex-direction: column; gap: 1.25rem; }
+  .prod-hl { display: flex; gap: 1rem; align-items: stretch; }
+  .prod-hl__bar { flex-shrink: 0; width: 3px; background: var(--color-accent); border-radius: 2px; }
+  .prod-hl__content { display: flex; flex-direction: column; gap: 0.25rem; }
+  .prod-hl__title { font-size: 0.9375rem; font-weight: 700; color: var(--color-text); margin: 0; line-height: 1.3; }
+  .prod-hl__desc { font-size: 0.8125rem; color: var(--color-text-light); line-height: 1.65; margin: 0; }
+
+  /* ── Includes ── */
+  .prod-includes { background: var(--color-bg); border-radius: 14px; padding: 1.75rem 2rem; margin-bottom: 2.5rem; }
+  .prod-includes__title { font-size: 1.0625rem; font-weight: 700; color: var(--color-text); margin: 0 0 1rem; }
+  .prod-includes__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; }
+  .prod-feat { font-size: 0.875rem; color: var(--color-text-light); padding-left: 1.25rem; position: relative; line-height: 1.5; }
+  .prod-feat::before { content: ""; position: absolute; left: 0; top: 0.45rem; width: 6px; height: 6px; border-radius: 50%; background: var(--color-accent); }
+  @media (max-width: 640px) { .prod-includes__grid { grid-template-columns: 1fr; } }
+
+  /* ── Sidebar ── */
+  .prod-sidebar { display: flex; flex-direction: column; gap: 1.25rem; }
+  @media (min-width: 1024px) { .prod-sidebar { position: sticky; top: calc(var(--header-height) + var(--topbar-height) + 1.5rem); align-self: start; } }
+  .ps-widget { background: var(--color-white); border: 1px solid var(--color-border); border-radius: 12px; padding: 1.25rem; }
+  .ps-widget--dark { background: var(--color-primary); color: #fff; border: none; }
+  .ps-widget__title { font-size: 0.875rem; font-weight: 700; color: var(--color-text); text-transform: uppercase; letter-spacing: 0.05em; margin: 0 0 0.75rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--color-accent); }
+  .ps-widget__title--light { color: #fff; }
+  .ps-widget__desc { font-size: 0.8125rem; color: rgba(255,255,255,0.75); margin: 0 0 0.75rem; }
+  .ps-widget__btn { display: block; text-align: center; padding: 0.625rem; border-radius: 6px; font-size: 0.875rem; font-weight: 600; text-decoration: none; margin-top: 0.5rem; background: var(--color-accent); color: #fff; transition: background 0.2s ease; }
+  .ps-widget__btn:hover { opacity: 0.9; }
+  .ps-widget__btn--wa { background: #25D366; }
+
+  .ps-specs { display: flex; flex-direction: column; margin: 0; }
+  .ps-specs__row { display: flex; justify-content: space-between; align-items: baseline; padding: 0.4rem 0; border-bottom: 1px solid var(--color-bg); gap: 0.75rem; }
+  .ps-specs__row:last-child { border-bottom: none; }
+  .ps-specs__row dt { font-size: 0.8125rem; color: var(--color-text-light); font-weight: 500; margin: 0; }
+  .ps-specs__row dd { font-size: 0.8125rem; font-weight: 600; color: var(--color-text); text-align: right; margin: 0; font-variant-numeric: tabular-nums; }
+
+  .ps-tags { display: flex; flex-wrap: wrap; gap: 0.375rem; }
+  .ps-tag { font-size: 0.6875rem; font-weight: 600; color: var(--color-text); padding: 0.3rem 0.75rem; background: var(--color-bg); border: 1px solid var(--color-border); border-radius: 6px; white-space: nowrap; }
+
+  .ps-pkg { display: flex; gap: 0.75rem; align-items: center; text-decoration: none; padding: 0.625rem 0; border-bottom: 1px solid var(--color-bg); }
+  .ps-pkg:last-of-type { border-bottom: none; }
+  .ps-pkg__img { width: 72px; height: 54px; object-fit: cover; border-radius: 8px; flex-shrink: 0; }
+  .ps-pkg__info { display: flex; flex-direction: column; gap: 0.125rem; }
+  .ps-pkg__name { font-size: 0.8125rem; font-weight: 600; color: var(--color-text); }
+  .ps-pkg__price { font-size: 0.75rem; font-weight: 700; color: var(--color-accent); font-variant-numeric: tabular-nums; }
+  .ps-pkg:hover .ps-pkg__name { color: var(--color-accent); }
+
+  .ps-upsell { margin-top: 0.75rem; padding-top: 0.75rem; border-top: 1px solid var(--color-bg); }
+  .ps-upsell__text { font-size: 0.75rem; color: var(--color-text-light); line-height: 1.5; margin: 0 0 0.375rem; }
+  .ps-upsell__link { font-size: 0.75rem; font-weight: 600; color: var(--color-accent); text-decoration: none; }
+  .ps-upsell__link:hover { text-decoration: underline; }
+
+  .ps-links { display: flex; flex-direction: column; }
+  .ps-link { padding: 0.4rem 0; border-bottom: 1px solid var(--color-bg); font-size: 0.8125rem; color: var(--color-text-light); text-decoration: none; }
+  .ps-link:last-child { border-bottom: none; }
+  .ps-link:hover { color: var(--color-accent); }
+
+  .ps-contact p { font-size: 0.8125rem; color: var(--color-text-light); margin: 0.3rem 0; }
+  .ps-contact a { color: var(--color-accent); text-decoration: none; }
+
+  /* ── Process Steps ── */
+  .prod-process { margin: 2.5rem 0; }
+  .prod-process__title { font-size: 1.125rem; font-weight: 800; color: var(--color-text); letter-spacing: -0.02em; margin: 0 0 1.25rem; }
+  .prod-steps { display: flex; flex-direction: column; gap: 0; }
+  .prod-step { display: flex; gap: 1rem; padding: 1rem 0; border-bottom: 1px solid var(--color-border); }
+  .prod-step:last-child { border-bottom: none; }
+  .prod-step__num { flex-shrink: 0; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; background: var(--color-accent); color: #fff; font-size: 0.8125rem; font-weight: 700; border-radius: 50%; }
+  .prod-step__content { display: flex; flex-direction: column; gap: 0.2rem; }
+  .prod-step__name { font-size: 0.9375rem; font-weight: 700; color: var(--color-text); margin: 0; line-height: 1.3; }
+  .prod-step__desc { font-size: 0.8125rem; color: var(--color-text-light); line-height: 1.6; margin: 0; }
+
+  /* ── Comparison ── */
+  .prod-compare { margin: 2.5rem 0; }
+  .prod-compare__title { font-size: 1.125rem; font-weight: 800; color: var(--color-text); letter-spacing: -0.02em; margin: 0 0 1.25rem; }
+  .prod-compare__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+  @media (max-width: 640px) { .prod-compare__grid { grid-template-columns: 1fr; } }
+  .prod-compare__col { border-radius: 12px; padding: 1.25rem; }
+  .prod-compare__col--them { background: #fef2f2; border: 1px solid #fecaca; }
+  .prod-compare__col--us { background: #eff6ff; border: 1px solid #bfdbfe; }
+  .prod-compare__label { display: block; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.75rem; }
+  .prod-compare__col--them .prod-compare__label { color: #991b1b; }
+  .prod-compare__col--us .prod-compare__label { color: var(--color-primary); }
+  .prod-compare__list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.5rem; }
+  .prod-compare__list li { font-size: 0.8125rem; color: var(--color-text); line-height: 1.4; padding-left: 1.125rem; position: relative; }
+  .prod-compare__col--them .prod-compare__list li::before { content: "–"; position: absolute; left: 0; color: #dc2626; font-size: 0.75rem; font-weight: 700; }
+  .prod-compare__col--us .prod-compare__list li::before { content: "✓"; position: absolute; left: 0; color: var(--color-accent); font-size: 0.75rem; font-weight: 700; }
+
+  /* ── Social Proof ── */
+  .prod-proof { margin-top: 2.5rem; }
+  .prod-quote { background: var(--color-bg); border-radius: 14px; padding: 1.75rem 2rem; border-left: 4px solid var(--color-accent); margin: 0; }
+  .prod-quote__text { font-size: 0.9375rem; color: var(--color-text); line-height: 1.75; font-style: italic; margin: 0 0 1rem; }
+  .prod-quote__footer { display: flex; flex-direction: column; gap: 0.125rem; }
+  .prod-quote__name { font-size: 0.875rem; font-weight: 700; color: var(--color-text); font-style: normal; }
+  .prod-quote__event { font-size: 0.75rem; color: var(--color-text-light); font-style: normal; }
 </style>

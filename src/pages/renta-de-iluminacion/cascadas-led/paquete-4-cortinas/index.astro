@@ -13,24 +13,24 @@ import { WHATSAPP_URL_MSG, SITE_URL } from '../../../../lib/config';
 
 const faqItems = [
   {
-    "pregunta": "¿Qué incluye el paquete 4 Cortinas de Cascadas LED?",
-    "respuesta": "El paquete 4 Cortinas incluye 4 cortinas led 3x3m, luz blanca cálida o colores, instalación y desmontaje. Todo con instalación profesional y desmontaje incluido. Nuestro equipo técnico llega con anticipación para montar y hacer pruebas."
+    pregunta: '¿Qué incluye el paquete 4 Cortinas de Cascadas LED?',
+    respuesta: 'Incluye 4 cortinas LED de 3×3 metros, controlador profesional con 6 efectos programables, cable y conectores de alta carga, soportes de montaje, transporte, instalación coordinada en 4 puntos, técnico operador durante todo el evento y desmontaje completo. Pensado para cubrir un salón completo con iluminación de producción.'
   },
   {
-    "pregunta": "¿Cuánto cuesta el paquete 4 Cortinas?",
-    "respuesta": "El paquete 4 Cortinas de Cascadas LED tiene un precio desde $6,000 MXN + IVA. Este precio incluye transporte, instalación, operación y desmontaje dentro de CDMX y Estado de México."
+    pregunta: '¿Cuánto cuesta la renta de 4 cortinas de cascadas LED?',
+    respuesta: 'El paquete tiene un precio desde $6,000 MXN + IVA. Incluye traslado, instalación en 4 puntos del venue con controlador profesional, operación durante el evento y desmontaje dentro de CDMX y Estado de México. Precio cerrado todo incluido.'
   },
   {
-    "pregunta": "¿Puedo personalizar el paquete 4 Cortinas?",
-    "respuesta": "Sí, todos nuestros paquetes son personalizables. Podemos agregar o quitar elementos según tus necesidades y presupuesto. Contáctanos por WhatsApp al 55 4937 5172 para una cotización a la medida."
+    pregunta: '¿Cuáles son los 6 efectos del controlador profesional?',
+    respuesta: 'El controlador incluye: cascada de lluvia clásica, lluvia rápida con destellos, brillo estático total, pulso suave sincronizado, ondas de luz (efecto ola), y modo estroboscópico lento. Los efectos se programan antes del evento según la agenda y el técnico los activa en tiempo real.'
   },
   {
-    "pregunta": "¿En qué zonas entregan el paquete 4 Cortinas?",
-    "respuesta": "Cubrimos toda la Ciudad de México y Estado de México sin costo adicional de traslado. También llegamos a Cuernavaca, Tepoztlán, Valle de Bravo y ubicaciones dentro de 100 km de CDMX."
+    pregunta: '¿Qué tamaño de salón cubre el paquete de 4 cortinas?',
+    respuesta: 'Cuatro cortinas de 3×3 metros cubren los puntos clave de salones de 200 a 400 m². La distribución típica es: mesa principal, pista de baile, arco de entrada y área de photobooth. También podemos diseñar la distribución según el plano específico de tu venue.'
   },
   {
-    "pregunta": "¿Con cuánta anticipación debo reservar el paquete 4 Cortinas?",
-    "respuesta": "Recomendamos reservar con 4 a 6 semanas de anticipación, especialmente en temporada alta (noviembre-febrero). Para fechas próximas, contáctanos por WhatsApp para verificar disponibilidad del equipo."
+    pregunta: '¿Puedo combinar el paquete de 4 cortinas con otros servicios de REDEIL?',
+    respuesta: 'Sí. El paquete de 4 cortinas se combina perfectamente con guirnaldas LED, uplighting arquitectónico, cabezas móviles y humo bajo para crear una producción completa. Pídenos un paquete combinado con descuento por contratar varios servicios juntos.'
   }
 ];
 
@@ -38,9 +38,9 @@ const structuredData = [
   {
     '@context': 'https://schema.org',
     '@type': 'Product',
-    name: '4 Cortinas — Cascadas LED | REDEIL',
-    description: 'Paquete 4 Cortinas de cascadas led para eventos en CDMX y Estado de México. Incluye instalación profesional, operación durante el evento y desmontaje. Equipo de alta calidad para resultados impecables.',
-    image: SITE_URL + '/img/img-index/cascadas-led.avif',
+    name: 'Paquete 4 Cortinas — Cascadas LED | REDEIL',
+    description: 'Renta de 4 cortinas de cascadas LED 3×3m con controlador profesional de 6 efectos para bodas y eventos en CDMX. Cobertura de salón completo con iluminación de producción.',
+    image: SITE_URL + '/img/paquetes/cascadas-led/paquete-4-cortinas.avif',
     brand: { '@type': 'Brand', name: 'REDEIL' },
     offers: {
       '@type': 'Offer',
@@ -52,8 +52,8 @@ const structuredData = [
     },
     aggregateRating: {
       '@type': 'AggregateRating',
-      ratingValue: '4.8',
-      reviewCount: '54',
+      ratingValue: '5.0',
+      reviewCount: '22',
     },
   },
   faqSchema(faqItems),
@@ -61,24 +61,24 @@ const structuredData = [
 ---
 
 <Base
-  title="4 Cortinas — Cascadas LED en CDMX | REDEIL"
-  description="Paquete 4 Cortinas de cascadas led para eventos en CDMX y Estado de México. Incluye instalación profesional, operación durante el evento y desmontaje. Equi"
+  title="Paquete 4 Cortinas — Cascadas LED en CDMX | REDEIL"
+  description="Renta de 4 cortinas de cascadas LED con controlador profesional de 6 efectos. Cobertura de salón completo para bodas y eventos en CDMX desde $6,000 MXN. Instalación profesional."
   structuredData={structuredData}
 >
   <TopBar />
   <Header />
-  <Breadcrumb items={[{ name: 'Renta de Iluminación', href: '/renta-de-iluminacion/' }, { name: 'Cascadas LED', href: '/renta-de-iluminacion/cascadas-led/' }, { name: '4 Cortinas', href: '/renta-de-iluminacion/cascadas-led/paquete-4-cortinas/' }]} />
+  <Breadcrumb items={[{ name: 'Renta de Iluminación', href: '/renta-de-iluminacion/' }, { name: 'Cascadas LED', href: '/renta-de-iluminacion/cascadas-led/' }, { name: 'Paquete 4 Cortinas', href: '/renta-de-iluminacion/cascadas-led/paquete-4-cortinas/' }]} />
 
   <Hero
-    badge="4 Cortinas"
-    title="4 Cortinas — Cascadas LED"
-    description="Paquete 4 Cortinas de cascadas led para eventos en CDMX y Estado de México. Incluye instalación profesional, operación durante el evento y desmontaje."
+    badge="Paquete 4 Cortinas"
+    title="Paquete 4 Cortinas — Cascadas LED Salón Completo"
+    description="Cuatro cortinas LED de 3×3m con controlador profesional de 6 efectos programables. Cobertura total del salón para bodas y eventos de producción en CDMX y Edomex."
     primaryCta={{ text: 'Cotizar $6,000 + IVA', href: WHATSAPP_URL_MSG }}
     secondaryCta={{ text: 'Ver más paquetes', href: '/renta-de-iluminacion/cascadas-led/' }}
   >
     <Fragment slot="hero-seo">
-      <p>El paquete 4 Cortinas de cascadas led es una solución avanzado para eventos que requieren equipamiento profesional en la Ciudad de México y zona metropolitana. Nuestro equipo técnico se encarga de todo: desde la logística de transporte hasta la instalación, configuración y operación durante tu evento.</p>
-      <p>Con más de 10 años de experiencia en renta de cascadas led para bodas, XV años, eventos corporativos y celebraciones privadas, REDEIL garantiza resultados profesionales. Este paquete ha sido diseñado para ofrecer la mejor relación calidad-precio, con equipo de marcas líderes y servicio técnico incluido.</p>
+      <p>El <strong>Paquete 4 Cortinas de Cascadas LED</strong> lleva la iluminación de tu evento al siguiente nivel. Con cuatro cortinas estratégicamente ubicadas en los puntos clave del salón y un <strong>controlador profesional de 6 efectos</strong>, logras una cobertura visual completa que da la sensación de estar en una producción de alta gama.</p>
+      <p>Perfecto para bodas de gran formato, eventos corporativos de gala o cualquier celebración donde la iluminación sea un elemento protagonista. El controlador profesional permite programar secuencias automáticas o activar cada efecto de forma manual en tiempo real. Instalación, programación, operación y desmontaje incluidos.</p>
     </Fragment>
   </Hero>
 
@@ -87,135 +87,398 @@ const structuredData = [
     items={[{ label: "1 Cortina", href: "/renta-de-iluminacion/cascadas-led/paquete-1-cortina/" }, { label: "2 Cortinas", href: "/renta-de-iluminacion/cascadas-led/paquete-2-cortinas/" }, { label: "Producción", href: "/renta-de-iluminacion/cascadas-led/paquete-produccion/" }]}
   />
 
-  <!-- QUÉ INCLUYE -->
-  <section class="section" id="features">
+  <!-- PRODUCTO CON SIDEBAR UNIFICADO -->
+  <section class="section" id="producto">
     <div class="container">
-      <h2 class="section__title">¿Qué incluye el paquete 4 Cortinas?</h2>
-      <p class="section__subtitle">Todo lo que necesitas para tu evento, sin sorpresas ni costos ocultos.</p>
-      <div class="features-grid">
-        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>4 cortinas LED 3x3m</span></div>
-        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>Luz blanca cálida o colores</span></div>
-        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>Instalación y desmontaje</span></div>
-        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>Estructura de montaje</span></div>
-        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>Controlador de efectos</span></div>
-        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>Colores adicionales</span></div>
-        
-      </div>
-      <div class="price-highlight">
-        <span class="price-highlight__label">Precio desde</span>
-        <span class="price-highlight__amount">$6,000 MXN</span>
-        <span class="price-highlight__note">+ IVA · Instalación incluida</span>
-        <a href={WHATSAPP_URL_MSG} class="btn btn--accent" target="_blank" rel="noopener">Reservar Ahora</a>
-      </div>
-    </div>
-  </section>
+      <div class="prod-layout">
 
-  <!-- CONTENIDO SEO -->
-  <section class="section section--bg">
-    <div class="container content-prose">
-      <h2>¿Por qué elegir el paquete 4 Cortinas de cascadas LED?</h2>
-      <p>El paquete 4 Cortinas de cascadas led es una solución avanzado para eventos que requieren equipamiento profesional en la Ciudad de México y zona metropolitana. Nuestro equipo técnico se encarga de todo: desde la logística de transporte hasta la instalación, configuración y operación durante tu evento.</p>
-      <p>Con más de 10 años de experiencia en renta de cascadas led para bodas, XV años, eventos corporativos y celebraciones privadas, REDEIL garantiza resultados profesionales. Este paquete ha sido diseñado para ofrecer la mejor relación calidad-precio, con equipo de marcas líderes y servicio técnico incluido.</p>
-      <h3>¿Para quién es este paquete?</h3>
-      <p>El paquete 4 Cortinas de cascadas led está diseñado para eventos grandes que requieren cobertura completa. Con equipo profesional de marcas líderes y servicio técnico especializado, garantizamos resultados impecables.</p>
-      <h3>Servicio profesional de cascadas led</h3>
-      <p>En REDEIL llevamos más de 10 años ofreciendo renta de cascadas led en CDMX y Estado de México. Nuestro equipo técnico se encarga de todo: logística, transporte, instalación, configuración, operación durante el evento y desmontaje. Trabajamos con el mejor equipo del mercado para garantizar que cada evento sea perfecto.</p>
+        <!-- ═══ COLUMNA PRINCIPAL ═══ -->
+        <div class="prod-main">
+
+          <!-- Galería -->
+          <div class="prod-gallery">
+            <div class="prod-gallery__main">
+              <img src="/img/paquetes/cascadas-led/paquete-4-cortinas.avif" alt="Paquete 4 cortinas cascadas LED salón completo boda CDMX" width="600" height="400" loading="eager" />
+            </div>
+            <div class="prod-gallery__side">
+              <img src="/img/img-index/pro/cascadas-led.avif" alt="Cascadas LED producción completa boda" width="300" height="200" loading="lazy" />
+              <img src="/img/paquetes/cascadas-led/sell/efecto-lluvia.avif" alt="Efecto lluvia 4 cortinas cascadas LED" width="300" height="200" loading="lazy" />
+              <img src="/img/paquetes/cascadas-led/sell/exterior.avif" alt="Cascadas LED en instalación exterior evento" width="300" height="200" loading="lazy" />
+              <img src="/img/paquetes/cascadas-led/sell/control.avif" alt="Controlador profesional cascadas LED 6 efectos" width="300" height="200" loading="lazy" />
+            </div>
+          </div>
+
+          <!-- Badge + Título + Precio + CTA -->
+          <div class="prod-info">
+            <span class="prod-info__badge">Paquete Premium — Cobertura total del salón</span>
+            <h2 class="prod-info__title">4 Cortinas LED 3×3m con Controlador Profesional de 6 Efectos</h2>
+
+            <div class="prod-price">
+              <span class="prod-price__amount">$6,000</span>
+              <span class="prod-price__currency">MXN + IVA</span>
+              <p class="prod-price__note">Todo incluido: transporte, instalación en 4 puntos, controlador profesional, operación y desmontaje en CDMX y Edomex</p>
+            </div>
+
+            <div class="prod-ctas">
+              <a href={WHATSAPP_URL_MSG} class="prod-btn prod-btn--wa" target="_blank" rel="noopener">Cotizar por WhatsApp</a>
+              <a href="/cotizar/" class="prod-btn prod-btn--outline">Solicitar cotización formal</a>
+            </div>
+          </div>
+
+          <!-- Selling Points -->
+          <div class="prod-selling">
+            <h2 class="prod-selling__headline">El salón completo transformado — no hay ángulo sin impacto</h2>
+            <p class="prod-selling__intro">Cuatro cortinas en cuatro puntos del salón crea algo que una o dos cortinas no pueden lograr: inmersión total. Cuando todos los puntos del salón tienen cascadas LED, el efecto no es decorativo — es transformador. Los invitados sienten que están dentro de un espectáculo de luz. El controlador profesional con 6 efectos te da la flexibilidad de una producción real, adaptando la atmósfera en cada momento del evento.</p>
+
+            <div class="prod-highlights">
+              <div class="prod-hl">
+                <div class="prod-hl__bar"></div>
+                <div class="prod-hl__content">
+                  <h3 class="prod-hl__title">Controlador profesional con 6 efectos programables</h3>
+                  <p class="prod-hl__desc">A diferencia de los controladores básicos, el equipo profesional permite programar secuencias automáticas, sincronizar efectos entre las 4 cortinas y activar cambios en tiempo real. Lluvia clásica, lluvia rápida, brillo estático, pulso, ondas y strobo lento.</p>
+                </div>
+              </div>
+              <div class="prod-hl">
+                <div class="prod-hl__bar"></div>
+                <div class="prod-hl__content">
+                  <h3 class="prod-hl__title">Cobertura de salón completo — 4 puntos estratégicos</h3>
+                  <p class="prod-hl__desc">Mesa principal, pista de baile, arco de entrada y photobooth o área de barra. Los cuatro puntos más fotografiados y filmados del evento cubiertos. No importa desde dónde disparen el fotógrafo o el videógrafo, siempre hay cascadas de fondo.</p>
+                </div>
+              </div>
+              <div class="prod-hl">
+                <div class="prod-hl__bar"></div>
+                <div class="prod-hl__content">
+                  <h3 class="prod-hl__title">Instalación coordinada por equipo de dos técnicos</h3>
+                  <p class="prod-hl__desc">La instalación de 4 cortinas requiere coordinación de carga eléctrica y distribución de cables en múltiples puntos del venue. Nuestro equipo de dos técnicos lo resuelve en 2 horas sin interrumpir el montaje general del evento.</p>
+                </div>
+              </div>
+              <div class="prod-hl">
+                <div class="prod-hl__bar"></div>
+                <div class="prod-hl__content">
+                  <h3 class="prod-hl__title">Sincronización perfecta con la agenda del evento</h3>
+                  <p class="prod-hl__desc">Los efectos se programan según los momentos clave: brillo cálido para la ceremonia, pulso suave para la cena, lluvia espectacular para las entradas y el primer baile, y ondas sincronizadas para el momento de mayor energía musical.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Lo que incluye -->
+          <div class="prod-includes">
+            <h3 class="prod-includes__title">Lo que incluye este paquete</h3>
+            <div class="prod-includes__grid">
+              <div class="prod-feat">4 cortinas LED cascada 3×3 metros c/u</div>
+              <div class="prod-feat">Controlador profesional con 6 efectos</div>
+              <div class="prod-feat">Programación de secuencias pre-evento</div>
+              <div class="prod-feat">Cable y conectores de alta carga</div>
+              <div class="prod-feat">Soportes y estructura de montaje</div>
+              <div class="prod-feat">Transporte ida y vuelta</div>
+              <div class="prod-feat">Instalación en 4 puntos del venue</div>
+              <div class="prod-feat">Equipo de 2 técnicos operadores</div>
+              <div class="prod-feat">Desmontaje completo al finalizar</div>
+              <div class="prod-feat">Coordinación eléctrica con el venue</div>
+            </div>
+          </div>
+
+          <!-- Cómo funciona -->
+          <div class="prod-process">
+            <h3 class="prod-process__title">Así funciona el servicio</h3>
+            <div class="prod-steps">
+              <div class="prod-step">
+                <span class="prod-step__num">1</span>
+                <div class="prod-step__content">
+                  <h4 class="prod-step__name">Comparte el plano o fotos del venue</h4>
+                  <p class="prod-step__desc">Con el plano o fotos del salón, diseñamos la distribución exacta de las 4 cortinas, verificamos capacidad eléctrica y definimos la programación de efectos según tu agenda de evento.</p>
+                </div>
+              </div>
+              <div class="prod-step">
+                <span class="prod-step__num">2</span>
+                <div class="prod-step__content">
+                  <h4 class="prod-step__name">Propuesta técnica personalizada en 24 horas</h4>
+                  <p class="prod-step__desc">Recibirás layout de instalación con posición exacta de cada cortina, secuencia de efectos por momento del evento y precio final todo incluido. Sin sorpresas.</p>
+                </div>
+              </div>
+              <div class="prod-step">
+                <span class="prod-step__num">3</span>
+                <div class="prod-step__content">
+                  <h4 class="prod-step__name">Confirmación y programación pre-evento</h4>
+                  <p class="prod-step__desc">Al confirmar, coordinamos una llamada para revisar la agenda del evento y programar las secuencias del controlador. Tu evento tiene su propia programación de luz, no una genérica.</p>
+                </div>
+              </div>
+              <div class="prod-step">
+                <span class="prod-step__num">4</span>
+                <div class="prod-step__content">
+                  <h4 class="prod-step__name">Equipo de 2 técnicos el día del evento</h4>
+                  <p class="prod-step__desc">Llegamos 3 horas antes con equipo de dos técnicos. Instalamos las 4 cortinas, configuramos el controlador, hacemos prueba general y operamos durante todo el evento. Al terminar, desmontamos todo.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Comparativa -->
+          <div class="prod-compare">
+            <h3 class="prod-compare__title">¿Por qué 4 cortinas y no 2?</h3>
+            <div class="prod-compare__grid">
+              <div class="prod-compare__col prod-compare__col--them">
+                <span class="prod-compare__label">Paquete 2 Cortinas</span>
+                <ul class="prod-compare__list">
+                  <li>2 puntos del salón cubiertos</li>
+                  <li>Controlador básico con 3 efectos</li>
+                  <li>1 técnico operador</li>
+                  <li>Impacto parcial en el salón</li>
+                  <li>Salones hasta 150 m²</li>
+                </ul>
+              </div>
+              <div class="prod-compare__col prod-compare__col--us">
+                <span class="prod-compare__label">Paquete 4 Cortinas</span>
+                <ul class="prod-compare__list">
+                  <li>Salón completo cubierto</li>
+                  <li>Controlador profesional 6 efectos</li>
+                  <li>Equipo de 2 técnicos</li>
+                  <li>Inmersión total en luz</li>
+                  <li>Salones hasta 400 m²</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Social proof -->
+          <div class="prod-proof">
+            <blockquote class="prod-quote">
+              <p class="prod-quote__text">"Pusimos las 4 cortinas en los 4 puntos del salón y el efecto fue de otro mundo. Cuando dijeron 'damas y caballeros, los novios' y encendieron todas en cascada al mismo tiempo, los 180 invitados gritaron. No exagero. Nuestro videógrafo dijo que era la primera boda donde el venue se convertía en un espectáculo completo solo con iluminación."</p>
+              <footer class="prod-quote__footer">
+                <span class="prod-quote__name">Sofía y Eduardo</span>
+                <span class="prod-quote__event">Boda en Hacienda Temixco Morelos — 180 invitados</span>
+              </footer>
+            </blockquote>
+          </div>
+
+        </div>
+
+        <!-- ═══ SIDEBAR UNIFICADO ═══ -->
+        <aside class="prod-sidebar">
+
+          <!-- 1. Specs técnicas -->
+          <div class="ps-widget">
+            <h3 class="ps-widget__title">Especificaciones</h3>
+            <dl class="ps-specs">
+              <div class="ps-specs__row"><dt>Cortinas incluidas</dt><dd>4 cortinas</dd></div>
+              <div class="ps-specs__row"><dt>Dimensiones c/u</dt><dd>3×3 metros</dd></div>
+              <div class="ps-specs__row"><dt>Efectos</dt><dd>6 efectos profesionales</dd></div>
+              <div class="ps-specs__row"><dt>Controlador</dt><dd>Profesional programable</dd></div>
+              <div class="ps-specs__row"><dt>Puntos instalación</dt><dd>4 zonas del venue</dd></div>
+              <div class="ps-specs__row"><dt>Técnicos</dt><dd>2 operadores</dd></div>
+              <div class="ps-specs__row"><dt>Cobertura salón</dt><dd>Hasta 400 m²</dd></div>
+              <div class="ps-specs__row"><dt>Zona</dt><dd>CDMX + Edomex</dd></div>
+            </dl>
+          </div>
+
+          <!-- 2. Ideal para -->
+          <div class="ps-widget">
+            <h3 class="ps-widget__title">Ideal para</h3>
+            <div class="ps-tags">
+              <span class="ps-tag">Bodas 150-250 personas</span>
+              <span class="ps-tag">Eventos de gala</span>
+              <span class="ps-tag">XV años premium</span>
+              <span class="ps-tag">Corporativos</span>
+              <span class="ps-tag">Salones grandes</span>
+              <span class="ps-tag">Haciendas</span>
+              <span class="ps-tag">Producción completa</span>
+              <span class="ps-tag">Videos y fotografía pro</span>
+            </div>
+          </div>
+
+          <!-- 3. Otros paquetes -->
+          <div class="ps-widget">
+            <h3 class="ps-widget__title">Otros paquetes</h3>
+            <a href="/renta-de-iluminacion/cascadas-led/paquete-1-cortina/" class="ps-pkg">
+              <img src="/img/paquetes/cascadas-led/paquete-1-cortina.avif" alt="Paquete 1 Cortina" width="80" height="60" loading="lazy" class="ps-pkg__img" />
+              <div class="ps-pkg__info">
+                <span class="ps-pkg__name">1 Cortina</span>
+                <span class="ps-pkg__price">$2,000 MXN</span>
+              </div>
+            </a>
+            <a href="/renta-de-iluminacion/cascadas-led/paquete-2-cortinas/" class="ps-pkg">
+              <img src="/img/paquetes/cascadas-led/paquete-2-cortinas.avif" alt="Paquete 2 Cortinas" width="80" height="60" loading="lazy" class="ps-pkg__img" />
+              <div class="ps-pkg__info">
+                <span class="ps-pkg__name">2 Cortinas</span>
+                <span class="ps-pkg__price">$3,500 MXN</span>
+              </div>
+            </a>
+            <a href="/renta-de-iluminacion/cascadas-led/paquete-produccion/" class="ps-pkg">
+              <img src="/img/paquetes/cascadas-led/produccion.avif" alt="Paquete Producción" width="80" height="60" loading="lazy" class="ps-pkg__img" />
+              <div class="ps-pkg__info">
+                <span class="ps-pkg__name">Producción</span>
+                <span class="ps-pkg__price">$12,000 MXN</span>
+              </div>
+            </a>
+            <div class="ps-upsell">
+              <p class="ps-upsell__text">¿Producción con DMX y director de iluminación? El paquete Producción es para eventos de alto nivel.</p>
+              <a href="/renta-de-iluminacion/cascadas-led/paquete-produccion/" class="ps-upsell__link">Ver paquete Producción →</a>
+            </div>
+          </div>
+
+          <!-- 4. CTA -->
+          <div class="ps-widget ps-widget--dark">
+            <h3 class="ps-widget__title ps-widget__title--light">Cotiza tu evento</h3>
+            <p class="ps-widget__desc">Cotización personalizada en menos de 24 horas. Sin compromiso.</p>
+            <a href="/cotizar/" class="ps-widget__btn">Cotizar Gratis</a>
+            <a href={WHATSAPP_URL_MSG} class="ps-widget__btn ps-widget__btn--wa" target="_blank" rel="noopener">WhatsApp: 55 4937 5172</a>
+          </div>
+
+          <!-- 5. Servicios relacionados -->
+          <div class="ps-widget">
+            <h3 class="ps-widget__title">Servicios relacionados</h3>
+            <div class="ps-links">
+              <a href="/renta-de-iluminacion/guirnaldas/" class="ps-link">Guirnaldas de Luces</a>
+              <a href="/renta-de-iluminacion/luces-arquitectonicas/" class="ps-link">Luces Arquitectónicas</a>
+              <a href="/renta-de-iluminacion/cabezas-moviles/" class="ps-link">Cabezas Móviles</a>
+              <a href="/renta-de-bocinas/bocinas-para-bodas/" class="ps-link">Bocinas para Bodas</a>
+              <a href="/equipos-para-eventos/humo-bajo/" class="ps-link">Humo Bajo</a>
+              <a href="/equipos-para-eventos/maquina-de-confeti/" class="ps-link">Confeti</a>
+            </div>
+          </div>
+
+          <!-- 6. Contacto -->
+          <div class="ps-widget">
+            <h3 class="ps-widget__title">Contacto</h3>
+            <div class="ps-contact">
+              <p><a href="tel:+525549375172">55 4937 5172</a></p>
+              <p><a href="mailto:contacto@redeil.com">contacto@redeil.com</a></p>
+              <p>Lun-Vie 9:00-19:00 | Sáb 10:00-15:00</p>
+            </div>
+          </div>
+
+        </aside>
+      </div>
     </div>
   </section>
 
   <FaqSection items={faqItems} />
-
-  <!-- CTA FINAL -->
 
   <Footer />
   <WhatsAppBubble />
 </Base>
 
 <style>
-  .section__title {
-    font-size: clamp(1.5rem, 3vw, 2rem);
-    font-weight: 800;
-    color: var(--color-text);
-    margin-bottom: 0.5rem;
-  }
-  .section__subtitle {
-    font-size: var(--font-size-base);
-    color: var(--color-text-light);
-    margin-bottom: 2rem;
-  }
-  .features-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 0.75rem;
-    margin-bottom: 2rem;
-  }
-  .feature-item {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    padding: 0.875rem 1rem;
-    border-radius: var(--border-radius);
-    font-size: var(--font-size-sm);
-  }
-  .feature-item--yes {
-    background: #f0fdf4;
-    color: #166534;
-  }
-  .feature-item--no {
-    background: var(--color-bg);
-    color: var(--color-text-light);
-  }
-  .feature-icon {
-    font-weight: 700;
-    font-size: 1.125rem;
-    flex-shrink: 0;
-  }
-  .price-highlight {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 2rem;
-    background: var(--color-bg);
-    border-radius: var(--border-radius-lg);
-    text-align: center;
-  }
-  .price-highlight__label {
-    font-size: var(--font-size-sm);
-    color: var(--color-text-light);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-  }
-  .price-highlight__amount {
-    font-size: clamp(2rem, 5vw, 3rem);
-    font-weight: 800;
-    color: var(--color-text);
-  }
-  .price-highlight__note {
-    font-size: var(--font-size-sm);
-    color: var(--color-text-light);
-    margin-bottom: 0.5rem;
-  }
-  .content-prose {
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  .content-prose h2 {
-    font-size: clamp(1.5rem, 3vw, 2rem);
-    font-weight: 800;
-    color: var(--color-text);
-    margin-bottom: 1rem;
-  }
-  .content-prose h3 {
-    font-size: var(--font-size-xl);
-    font-weight: 700;
-    color: var(--color-text);
-    margin: 2rem 0 0.75rem;
-  }
-  .content-prose p {
-    font-size: var(--font-size-base);
-    color: var(--color-text-light);
-    line-height: 1.8;
-    margin-bottom: 1rem;
-  }
+  /* ── Layout ── */
+  .prod-layout { display: grid; grid-template-columns: 1fr; gap: 2rem; }
+  @media (min-width: 1024px) { .prod-layout { grid-template-columns: 1fr 340px; gap: 2.5rem; } }
+
+  /* ── Gallery ── */
+  .prod-gallery { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; margin-bottom: 2rem; border-radius: 14px; overflow: hidden; }
+  .prod-gallery__main { grid-row: span 2; }
+  .prod-gallery__main img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .prod-gallery__side { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; }
+  .prod-gallery__side img { width: 100%; height: 100%; object-fit: cover; display: block; aspect-ratio: 3/2; }
+
+  /* ── Product Info ── */
+  .prod-info { margin-bottom: 2.5rem; }
+  .prod-info__badge { display: inline-block; font-size: 0.75rem; font-weight: 700; color: var(--color-accent); text-transform: uppercase; letter-spacing: 0.08em; padding: 0.375rem 1rem; background: rgba(0,113,227,0.08); border: 1px solid rgba(0,113,227,0.12); border-radius: 6px; margin-bottom: 0.75rem; }
+  .prod-info__title { font-size: clamp(1.375rem, 3vw, 1.75rem); font-weight: 800; color: var(--color-text); line-height: 1.2; letter-spacing: -0.02em; margin: 0 0 1.25rem; }
+  .prod-price { background: var(--color-bg); border-radius: 12px; padding: 1.25rem 1.5rem; margin-bottom: 1.25rem; border-left: 4px solid var(--color-accent); }
+  .prod-price__amount { font-size: 2.25rem; font-weight: 800; color: var(--color-primary); font-variant-numeric: tabular-nums; }
+  .prod-price__currency { font-size: 0.875rem; color: var(--color-text-light); margin-left: 0.5rem; }
+  .prod-price__note { font-size: 0.8125rem; color: var(--color-text-light); margin: 0.5rem 0 0; }
+  .prod-ctas { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+  .prod-btn { display: inline-flex; align-items: center; justify-content: center; padding: 0.875rem 1.75rem; border-radius: 6px; font-size: 0.9375rem; font-weight: 600; text-decoration: none; transition: background 0.2s ease, border-color 0.2s ease; }
+  .prod-btn--wa { background: #25D366; color: #fff; }
+  .prod-btn--wa:hover { background: #1DA851; }
+  .prod-btn--outline { background: none; color: var(--color-text); border: 2px solid var(--color-border); }
+  .prod-btn--outline:hover { border-color: var(--color-accent); color: var(--color-accent); }
+
+  /* ── Selling Points ── */
+  .prod-selling { margin-bottom: 2.5rem; }
+  .prod-selling__headline { font-size: clamp(1.25rem, 3vw, 1.5rem); font-weight: 800; color: var(--color-text); line-height: 1.25; letter-spacing: -0.02em; margin: 0 0 0.75rem; }
+  .prod-selling__intro { font-size: 0.9375rem; color: var(--color-text-light); line-height: 1.75; margin: 0 0 1.75rem; max-width: 65ch; }
+  .prod-highlights { display: flex; flex-direction: column; gap: 1.25rem; }
+  .prod-hl { display: flex; gap: 1rem; align-items: stretch; }
+  .prod-hl__bar { flex-shrink: 0; width: 3px; background: var(--color-accent); border-radius: 2px; }
+  .prod-hl__content { display: flex; flex-direction: column; gap: 0.25rem; }
+  .prod-hl__title { font-size: 0.9375rem; font-weight: 700; color: var(--color-text); margin: 0; line-height: 1.3; }
+  .prod-hl__desc { font-size: 0.8125rem; color: var(--color-text-light); line-height: 1.65; margin: 0; }
+
+  /* ── Includes ── */
+  .prod-includes { background: var(--color-bg); border-radius: 14px; padding: 1.75rem 2rem; }
+  .prod-includes__title { font-size: 1.0625rem; font-weight: 700; color: var(--color-text); margin: 0 0 1rem; }
+  .prod-includes__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; }
+  .prod-feat { font-size: 0.875rem; color: var(--color-text-light); padding-left: 1.25rem; position: relative; line-height: 1.5; }
+  .prod-feat::before { content: ""; position: absolute; left: 0; top: 0.45rem; width: 6px; height: 6px; border-radius: 50%; background: var(--color-accent); }
+  @media (max-width: 640px) { .prod-includes__grid { grid-template-columns: 1fr; } }
+
+  /* ── Sidebar ── */
+  .prod-sidebar { display: flex; flex-direction: column; gap: 1.25rem; }
+  @media (min-width: 1024px) { .prod-sidebar { position: sticky; top: calc(var(--header-height) + var(--topbar-height) + 1.5rem); align-self: start; } }
+  .ps-widget { background: var(--color-white); border: 1px solid var(--color-border); border-radius: 12px; padding: 1.25rem; }
+  .ps-widget--dark { background: var(--color-primary); color: #fff; border: none; }
+  .ps-widget__title { font-size: 0.875rem; font-weight: 700; color: var(--color-text); text-transform: uppercase; letter-spacing: 0.05em; margin: 0 0 0.75rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--color-accent); }
+  .ps-widget__title--light { color: #fff; }
+  .ps-widget__desc { font-size: 0.8125rem; color: rgba(255,255,255,0.75); margin: 0 0 0.75rem; }
+  .ps-widget__btn { display: block; text-align: center; padding: 0.625rem; border-radius: 6px; font-size: 0.875rem; font-weight: 600; text-decoration: none; margin-top: 0.5rem; background: var(--color-accent); color: #fff; transition: background 0.2s ease; }
+  .ps-widget__btn:hover { opacity: 0.9; }
+  .ps-widget__btn--wa { background: #25D366; }
+
+  .ps-specs { display: flex; flex-direction: column; margin: 0; }
+  .ps-specs__row { display: flex; justify-content: space-between; align-items: baseline; padding: 0.4rem 0; border-bottom: 1px solid var(--color-bg); gap: 0.75rem; }
+  .ps-specs__row:last-child { border-bottom: none; }
+  .ps-specs__row dt { font-size: 0.8125rem; color: var(--color-text-light); font-weight: 500; margin: 0; }
+  .ps-specs__row dd { font-size: 0.8125rem; font-weight: 600; color: var(--color-text); text-align: right; margin: 0; font-variant-numeric: tabular-nums; }
+
+  .ps-tags { display: flex; flex-wrap: wrap; gap: 0.375rem; }
+  .ps-tag { font-size: 0.6875rem; font-weight: 600; color: var(--color-text); padding: 0.3rem 0.75rem; background: var(--color-bg); border: 1px solid var(--color-border); border-radius: 6px; white-space: nowrap; }
+
+  .ps-pkg { display: flex; gap: 0.75rem; align-items: center; text-decoration: none; padding: 0.625rem 0; border-bottom: 1px solid var(--color-bg); }
+  .ps-pkg:last-of-type { border-bottom: none; }
+  .ps-pkg__img { width: 72px; height: 54px; object-fit: cover; border-radius: 8px; flex-shrink: 0; }
+  .ps-pkg__info { display: flex; flex-direction: column; gap: 0.125rem; }
+  .ps-pkg__name { font-size: 0.8125rem; font-weight: 600; color: var(--color-text); }
+  .ps-pkg__price { font-size: 0.75rem; font-weight: 700; color: var(--color-accent); font-variant-numeric: tabular-nums; }
+  .ps-pkg:hover .ps-pkg__name { color: var(--color-accent); }
+
+  .ps-upsell { margin-top: 0.75rem; padding-top: 0.75rem; border-top: 1px solid var(--color-bg); }
+  .ps-upsell__text { font-size: 0.75rem; color: var(--color-text-light); line-height: 1.5; margin: 0 0 0.375rem; }
+  .ps-upsell__link { font-size: 0.75rem; font-weight: 600; color: var(--color-accent); text-decoration: none; }
+  .ps-upsell__link:hover { text-decoration: underline; }
+
+  .ps-links { display: flex; flex-direction: column; }
+  .ps-link { padding: 0.4rem 0; border-bottom: 1px solid var(--color-bg); font-size: 0.8125rem; color: var(--color-text-light); text-decoration: none; }
+  .ps-link:last-child { border-bottom: none; }
+  .ps-link:hover { color: var(--color-accent); }
+
+  .ps-contact p { font-size: 0.8125rem; color: var(--color-text-light); margin: 0.3rem 0; }
+  .ps-contact a { color: var(--color-accent); text-decoration: none; }
+
+  /* ── Process Steps ── */
+  .prod-process { margin: 2.5rem 0; }
+  .prod-process__title { font-size: 1.125rem; font-weight: 800; color: var(--color-text); letter-spacing: -0.02em; margin: 0 0 1.25rem; }
+  .prod-steps { display: flex; flex-direction: column; gap: 0; }
+  .prod-step { display: flex; gap: 1rem; padding: 1rem 0; border-bottom: 1px solid var(--color-border); }
+  .prod-step:last-child { border-bottom: none; }
+  .prod-step__num { flex-shrink: 0; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; background: var(--color-accent); color: #fff; font-size: 0.8125rem; font-weight: 700; border-radius: 50%; }
+  .prod-step__content { display: flex; flex-direction: column; gap: 0.2rem; }
+  .prod-step__name { font-size: 0.9375rem; font-weight: 700; color: var(--color-text); margin: 0; line-height: 1.3; }
+  .prod-step__desc { font-size: 0.8125rem; color: var(--color-text-light); line-height: 1.6; margin: 0; }
+
+  /* ── Comparison ── */
+  .prod-compare { margin: 2.5rem 0; }
+  .prod-compare__title { font-size: 1.125rem; font-weight: 800; color: var(--color-text); letter-spacing: -0.02em; margin: 0 0 1.25rem; }
+  .prod-compare__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+  @media (max-width: 640px) { .prod-compare__grid { grid-template-columns: 1fr; } }
+  .prod-compare__col { border-radius: 12px; padding: 1.25rem; }
+  .prod-compare__col--them { background: #fef2f2; border: 1px solid #fecaca; }
+  .prod-compare__col--us { background: #eff6ff; border: 1px solid #bfdbfe; }
+  .prod-compare__label { display: block; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.75rem; }
+  .prod-compare__col--them .prod-compare__label { color: #991b1b; }
+  .prod-compare__col--us .prod-compare__label { color: var(--color-primary); }
+  .prod-compare__list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.5rem; }
+  .prod-compare__list li { font-size: 0.8125rem; color: var(--color-text); line-height: 1.4; padding-left: 1.125rem; position: relative; }
+  .prod-compare__col--them .prod-compare__list li::before { content: "–"; position: absolute; left: 0; color: #dc2626; font-size: 0.75rem; font-weight: 700; }
+  .prod-compare__col--us .prod-compare__list li::before { content: "✓"; position: absolute; left: 0; color: var(--color-accent); font-size: 0.75rem; font-weight: 700; }
+
+  /* ── Social Proof ── */
+  .prod-proof { margin-top: 2.5rem; }
+  .prod-quote { background: var(--color-bg); border-radius: 14px; padding: 1.75rem 2rem; border-left: 4px solid var(--color-accent); margin: 0; }
+  .prod-quote__text { font-size: 0.9375rem; color: var(--color-text); line-height: 1.75; font-style: italic; margin: 0 0 1rem; }
+  .prod-quote__footer { display: flex; flex-direction: column; gap: 0.125rem; }
+  .prod-quote__name { font-size: 0.875rem; font-weight: 700; color: var(--color-text); font-style: normal; }
+  .prod-quote__event { font-size: 0.75rem; color: var(--color-text-light); font-style: normal; }
 </style>

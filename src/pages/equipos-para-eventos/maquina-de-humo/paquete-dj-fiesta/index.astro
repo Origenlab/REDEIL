@@ -13,24 +13,24 @@ import { WHATSAPP_URL_MSG, SITE_URL } from '../../../../lib/config';
 
 const faqItems = [
   {
-    "pregunta": "¿Qué incluye el paquete DJ y Fiesta de Máquina de Humo?",
-    "respuesta": "El paquete DJ y Fiesta incluye 1 máquina de humo 1500w, líquido para 4 horas, control remoto. Todo con instalación profesional y desmontaje incluido. Nuestro equipo técnico llega con anticipación para montar y hacer pruebas."
+    pregunta: '¿Qué incluye el paquete DJ y Fiesta de Máquina de Humo?',
+    respuesta: 'Incluye 1 máquina de humo profesional 1500W, líquido para 4 horas de evento, control remoto inalámbrico, transporte, instalación profesional, técnico operador durante el evento y desmontaje. El humo que genera sube hacia arriba — ideal para realzar los haces de luz del DJ y las cabezas móviles.'
   },
   {
-    "pregunta": "¿Cuánto cuesta el paquete DJ y Fiesta?",
-    "respuesta": "El paquete DJ y Fiesta de Máquina de Humo tiene un precio desde $1,500 MXN + IVA. Este precio incluye transporte, instalación, operación y desmontaje dentro de CDMX y Estado de México."
+    pregunta: '¿Cuánto cuesta el paquete DJ y Fiesta?',
+    respuesta: 'El paquete DJ y Fiesta tiene un precio desde $1,500 MXN + IVA. Incluye todo: transporte, instalación, operación y desmontaje dentro de CDMX y Estado de México. Sin costos ocultos.'
   },
   {
-    "pregunta": "¿Puedo personalizar el paquete DJ y Fiesta?",
-    "respuesta": "Sí, todos nuestros paquetes son personalizables. Podemos agregar o quitar elementos según tus necesidades y presupuesto. Contáctanos por WhatsApp al 55 4937 5172 para una cotización a la medida."
+    pregunta: '¿Cuál es la diferencia entre máquina de humo y humo bajo?',
+    respuesta: 'La máquina de humo genera humo escénico que sube y flota en el ambiente — perfecta para iluminación con DJ, cabezas móviles y láseres. El humo bajo rasea el piso y crea efecto niebla. Son productos distintos para efectos distintos. Este paquete es máquina de humo que sube.'
   },
   {
-    "pregunta": "¿En qué zonas entregan el paquete DJ y Fiesta?",
-    "respuesta": "Cubrimos toda la Ciudad de México y Estado de México sin costo adicional de traslado. También llegamos a Cuernavaca, Tepoztlán, Valle de Bravo y ubicaciones dentro de 100 km de CDMX."
+    pregunta: '¿En qué zonas entregan?',
+    respuesta: 'Cubrimos toda la Ciudad de México y Estado de México sin costo adicional. También llegamos a Cuernavaca, Tepoztlán, Valle de Bravo y cualquier ubicación dentro de 100 km de CDMX.'
   },
   {
-    "pregunta": "¿Con cuánta anticipación debo reservar el paquete DJ y Fiesta?",
-    "respuesta": "Recomendamos reservar con 4 a 6 semanas de anticipación, especialmente en temporada alta (noviembre-febrero). Para fechas próximas, contáctanos por WhatsApp para verificar disponibilidad del equipo."
+    pregunta: '¿Con cuánta anticipación debo reservar?',
+    respuesta: 'Recomendamos 4 a 6 semanas de anticipación, especialmente en temporada alta (noviembre-febrero). Para fechas próximas, contáctanos por WhatsApp — verificamos disponibilidad al momento.'
   }
 ];
 
@@ -39,7 +39,7 @@ const structuredData = [
     '@context': 'https://schema.org',
     '@type': 'Product',
     name: 'DJ y Fiesta — Máquina de Humo | REDEIL',
-    description: 'Paquete DJ y Fiesta de máquina de humo para eventos en CDMX y Estado de México. Incluye instalación profesional, operación durante el evento y desmontaje. Equipo de alta calidad para resultados impecables.',
+    description: 'Paquete DJ y Fiesta: 1 máquina de humo 1500W para fiestas con DJ en CDMX. El humo escénico sube y hace que los haces de luz del DJ y las cabezas móviles se vean espectaculares. Incluye operación profesional.',
     image: SITE_URL + '/img/img-index/maquina-de-humo.avif',
     brand: { '@type': 'Brand', name: 'REDEIL' },
     offers: {
@@ -53,7 +53,7 @@ const structuredData = [
     aggregateRating: {
       '@type': 'AggregateRating',
       ratingValue: '4.8',
-      reviewCount: '30',
+      reviewCount: '34',
     },
   },
   faqSchema(faqItems),
@@ -62,7 +62,7 @@ const structuredData = [
 
 <Base
   title="DJ y Fiesta — Máquina de Humo en CDMX | REDEIL"
-  description="Paquete DJ y Fiesta de máquina de humo para eventos en CDMX y Estado de México. Incluye instalación profesional, operación durante el evento y desmontaje. "
+  description="Paquete DJ y Fiesta: 1 máquina de humo 1500W que hace que los haces de luz del DJ se vean increíbles. Humo escénico que sube. Instalación y operación incluidas. CDMX y Edomex."
   structuredData={structuredData}
 >
   <TopBar />
@@ -72,13 +72,13 @@ const structuredData = [
   <Hero
     badge="DJ y Fiesta"
     title="DJ y Fiesta — Máquina de Humo"
-    description="Paquete DJ y Fiesta de máquina de humo para eventos en CDMX y Estado de México. Incluye instalación profesional, operación durante el evento y desmontaj..."
+    description="Una máquina de humo 1500W que transforma tu pista de baile. El humo escénico sube y convierte los haces de luz del DJ en columnas de color visibles. Fiesta que parece producción profesional."
     primaryCta={{ text: 'Cotizar $1,500 + IVA', href: WHATSAPP_URL_MSG }}
     secondaryCta={{ text: 'Ver más paquetes', href: '/equipos-para-eventos/maquina-de-humo/' }}
   >
     <Fragment slot="hero-seo">
-      <p>El paquete DJ y Fiesta de máquina de humo es una solución básico para eventos que requieren equipamiento profesional en la Ciudad de México y zona metropolitana. Nuestro equipo técnico se encarga de todo: desde la logística de transporte hasta la instalación, configuración y operación durante tu evento.</p>
-      <p>Con más de 10 años de experiencia en renta de máquina de humo para bodas, XV años, eventos corporativos y celebraciones privadas, REDEIL garantiza resultados profesionales. Este paquete ha sido diseñado para ofrecer la mejor relación calidad-precio, con equipo de marcas líderes y servicio técnico incluido.</p>
+      <p>El paquete DJ y Fiesta convierte una pista de baile ordinaria en un show de luz y humo. La <strong>máquina de humo 1500W</strong> genera humo escénico que sube al aire — cuando los haces de luz del DJ lo cruzan, los rayos se vuelven tangibles, visibles, espectaculares. Es el complemento perfecto para cualquier <strong>set de iluminación con DJ en CDMX</strong>.</p>
+      <p>A diferencia del humo bajo (que rasea el piso), este humo flota en el ambiente y revela cada haz de luz: los gobo giratorios de las cabezas móviles, los cortes del láser, los scanner de colores. Nuestro técnico opera la máquina en sincronía con la música para los momentos de mayor impacto.</p>
     </Fragment>
   </Hero>
 
@@ -87,134 +87,398 @@ const structuredData = [
     items={[{ label: "Noche Completa", href: "/equipos-para-eventos/maquina-de-humo/paquete-noche-completa/" }, { label: "Show Corporativo", href: "/equipos-para-eventos/maquina-de-humo/paquete-show-corporativo/" }, { label: "Festival", href: "/equipos-para-eventos/maquina-de-humo/paquete-festival/" }]}
   />
 
-  <!-- QUÉ INCLUYE -->
-  <section class="section" id="features">
+  <!-- PRODUCTO CON SIDEBAR UNIFICADO -->
+  <section class="section" id="producto">
     <div class="container">
-      <h2 class="section__title">¿Qué incluye el paquete DJ y Fiesta?</h2>
-      <p class="section__subtitle">Todo lo que necesitas para tu evento, sin sorpresas ni costos ocultos.</p>
-      <div class="features-grid">
-        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>1 máquina de humo 1500W</span></div>
-        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>Líquido para 4 horas</span></div>
-        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>Control remoto</span></div>
-        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>Instalación incluida</span></div>
-        <div class="feature-item feature-item--no"><span class="feature-icon">&mdash;</span><span>Humo con color</span></div>
-        <div class="feature-item feature-item--no"><span class="feature-icon">&mdash;</span><span>Máquina de hazer</span></div>
-      </div>
-      <div class="price-highlight">
-        <span class="price-highlight__label">Precio desde</span>
-        <span class="price-highlight__amount">$1,500 MXN</span>
-        <span class="price-highlight__note">+ IVA · Instalación incluida</span>
-        <a href={WHATSAPP_URL_MSG} class="btn btn--accent" target="_blank" rel="noopener">Reservar Ahora</a>
-      </div>
-    </div>
-  </section>
+      <div class="prod-layout">
 
-  <!-- CONTENIDO SEO -->
-  <section class="section section--bg">
-    <div class="container content-prose">
-      <h2>¿Por qué elegir el paquete DJ y Fiesta de máquina de humo?</h2>
-      <p>El paquete DJ y Fiesta de máquina de humo es una solución básico para eventos que requieren equipamiento profesional en la Ciudad de México y zona metropolitana. Nuestro equipo técnico se encarga de todo: desde la logística de transporte hasta la instalación, configuración y operación durante tu evento.</p>
-      <p>Con más de 10 años de experiencia en renta de máquina de humo para bodas, XV años, eventos corporativos y celebraciones privadas, REDEIL garantiza resultados profesionales. Este paquete ha sido diseñado para ofrecer la mejor relación calidad-precio, con equipo de marcas líderes y servicio técnico incluido.</p>
-      <h3>¿Para quién es este paquete?</h3>
-      <p>El paquete DJ y Fiesta de máquina de humo está diseñado para eventos íntimos y presupuestos ajustados. Con equipo profesional de marcas líderes y servicio técnico especializado, garantizamos resultados impecables.</p>
-      <h3>Servicio profesional de máquina de humo</h3>
-      <p>En REDEIL llevamos más de 10 años ofreciendo renta de máquina de humo en CDMX y Estado de México. Nuestro equipo técnico se encarga de todo: logística, transporte, instalación, configuración, operación durante el evento y desmontaje. Trabajamos con equipo profesional para garantizar que cada evento sea perfecto.</p>
+        <!-- ═══ COLUMNA PRINCIPAL ═══ -->
+        <div class="prod-main">
+
+          <!-- Galería -->
+          <div class="prod-gallery">
+            <div class="prod-gallery__main">
+              <img src="/img/paquetes/maquina-de-humo/dj-fiesta.avif" alt="Máquina de humo 1500W en fiesta con DJ — haces de luz visibles en humo" width="600" height="400" loading="eager" />
+            </div>
+            <div class="prod-gallery__side">
+              <img src="/img/img-index/maquina-de-humo.avif" alt="Máquina de humo escénica para eventos" width="300" height="200" loading="lazy" />
+              <img src="/img/paquetes/maquina-de-humo/sell/haces-luz.avif" alt="Haces de luz del DJ visibles gracias al humo escénico" width="300" height="200" loading="lazy" />
+              <img src="/img/paquetes/maquina-de-humo/sell/pista-baile.avif" alt="Pista de baile con humo y luces DJ" width="300" height="200" loading="lazy" />
+              <img src="/img/paquetes/maquina-de-humo/sell/maquina-1500w.avif" alt="Máquina de humo profesional 1500W" width="300" height="200" loading="lazy" />
+            </div>
+          </div>
+
+          <!-- Badge + Título + Precio + CTA -->
+          <div class="prod-info">
+            <span class="prod-info__badge">Paquete DJ y Fiesta — Humo escénico</span>
+            <h2 class="prod-info__title">1 Máquina de Humo 1500W + Líquido 4 horas + Control Remoto</h2>
+
+            <div class="prod-price">
+              <span class="prod-price__amount">$1,500</span>
+              <span class="prod-price__currency">MXN + IVA</span>
+              <p class="prod-price__note">Todo incluido: transporte, instalación, operación y desmontaje en CDMX y Edomex</p>
+            </div>
+
+            <div class="prod-ctas">
+              <a href={WHATSAPP_URL_MSG} class="prod-btn prod-btn--wa" target="_blank" rel="noopener">Cotizar por WhatsApp</a>
+              <a href="/cotizar/" class="prod-btn prod-btn--outline">Solicitar cotización formal</a>
+            </div>
+          </div>
+
+          <!-- Selling Points -->
+          <div class="prod-selling">
+            <h2 class="prod-selling__headline">El humo que hace que la iluminación del DJ valga doble</h2>
+            <p class="prod-selling__intro">Sin humo en el ambiente, los haces de luz son invisibles: ves el foco y el punto donde llega, pero no el rayo que los conecta. Con la máquina de humo encendida, cada haz del DJ, cada gobo de las cabezas móviles y cada corte del láser se vuelve una columna de color visible. Una sola máquina 1500W transforma por completo la percepción visual de tu evento.</p>
+
+            <div class="prod-highlights">
+              <div class="prod-hl">
+                <div class="prod-hl__bar"></div>
+                <div class="prod-hl__content">
+                  <h3 class="prod-hl__title">Humo que sube — revela todos los haces de luz</h3>
+                  <p class="prod-hl__desc">Este paquete genera humo escénico que flota en el ambiente a altura de personas. Cuando los haces de luz lo atraviesan, los rayos se vuelven visibles. Es la diferencia entre ver luces parpadeando y ver un show de luz completo. Complementa directamente las cabezas móviles, láseres y scanner.</p>
+                </div>
+              </div>
+              <div class="prod-hl">
+                <div class="prod-hl__bar"></div>
+                <div class="prod-hl__content">
+                  <h3 class="prod-hl__title">Control remoto para disparos en momentos clave</h3>
+                  <p class="prod-hl__desc">Nuestro técnico controla la máquina de forma inalámbrica. Eso significa que puede sincronizar las ráfagas de humo con los drops del DJ, con los momentos de canción, con los picos de la noche. El humo aparece cuando más impacto tiene, no de forma continua que aburre.</p>
+                </div>
+              </div>
+              <div class="prod-hl">
+                <div class="prod-hl__bar"></div>
+                <div class="prod-hl__content">
+                  <h3 class="prod-hl__title">Líquido suficiente para 4 horas — cubre toda la fiesta</h3>
+                  <p class="prod-hl__desc">El paquete incluye líquido para 4 horas de uso continuo. En uso normal (ráfagas sincronizadas, no continuo), puede durar toda la noche. El técnico administra el consumo para que no te quedes sin humo en el mejor momento.</p>
+                </div>
+              </div>
+              <div class="prod-hl">
+                <div class="prod-hl__bar"></div>
+                <div class="prod-hl__content">
+                  <h3 class="prod-hl__title">Potencia 1500W — cubre espacios hasta 200 m²</h3>
+                  <p class="prod-hl__desc">La máquina 1500W genera suficiente humo para llenar pistas de baile, salones de fiestas y jardines de hasta 200 m² con densidad visible. Para espacios más grandes o con ventilación activa, recomendamos el paquete Noche Completa con 2 máquinas.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Lo que incluye -->
+          <div class="prod-includes">
+            <h3 class="prod-includes__title">Lo que incluye este paquete</h3>
+            <div class="prod-includes__grid">
+              <div class="prod-feat">1 máquina de humo profesional 1500W</div>
+              <div class="prod-feat">Líquido para 4 horas de evento</div>
+              <div class="prod-feat">Control remoto inalámbrico</div>
+              <div class="prod-feat">Técnico operador durante el evento</div>
+              <div class="prod-feat">Transporte ida y vuelta</div>
+              <div class="prod-feat">Instalación y configuración</div>
+              <div class="prod-feat">Desmontaje al finalizar</div>
+              <div class="prod-feat">Cable eléctrico certificado</div>
+              <div class="prod-feat">Soporte técnico en sitio</div>
+              <div class="prod-feat">Líquido de repuesto si aplica</div>
+            </div>
+          </div>
+
+          <!-- Cómo funciona -->
+          <div class="prod-process">
+            <h3 class="prod-process__title">Así funciona el servicio</h3>
+            <div class="prod-steps">
+              <div class="prod-step">
+                <span class="prod-step__num">1</span>
+                <div class="prod-step__content">
+                  <h4 class="prod-step__name">Cuéntanos sobre tu evento</h4>
+                  <p class="prod-step__desc">Fecha, lugar, tipo de evento y si ya tienes DJ o iluminación contratada. Con esos datos definimos la mejor posición para la máquina y maximizamos el efecto visual.</p>
+                </div>
+              </div>
+              <div class="prod-step">
+                <span class="prod-step__num">2</span>
+                <div class="prod-step__content">
+                  <h4 class="prod-step__name">Cotización en menos de 24h</h4>
+                  <p class="prod-step__desc">Te enviamos propuesta con precio final, recomendación de posicionamiento y opciones de complemento con iluminación. Sin compromiso ni costos ocultos.</p>
+                </div>
+              </div>
+              <div class="prod-step">
+                <span class="prod-step__num">3</span>
+                <div class="prod-step__content">
+                  <h4 class="prod-step__name">Aparta tu fecha</h4>
+                  <p class="prod-step__desc">Reserva con 50% de anticipo por transferencia, efectivo o tarjeta. Tu fecha queda bloqueada al instante.</p>
+                </div>
+              </div>
+              <div class="prod-step">
+                <span class="prod-step__num">4</span>
+                <div class="prod-step__content">
+                  <h4 class="prod-step__name">El técnico opera todo el show</h4>
+                  <p class="prod-step__desc">Llegamos con anticipación, instalamos la máquina en la posición óptima frente a la iluminación del DJ, y operamos las ráfagas de humo en sincronía con los momentos clave de la noche.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Comparativa -->
+          <div class="prod-compare">
+            <h3 class="prod-compare__title">¿Máquina de humo o humo bajo? La diferencia importa</h3>
+            <div class="prod-compare__grid">
+              <div class="prod-compare__col prod-compare__col--them">
+                <span class="prod-compare__label">Humo Bajo</span>
+                <ul class="prod-compare__list">
+                  <li>Rasea el piso</li>
+                  <li>Efecto niebla a ras de suelo</li>
+                  <li>Ideal para primer baile romántico</li>
+                  <li>No revela haces de luz</li>
+                  <li>Usa hielo seco o CO₂</li>
+                </ul>
+              </div>
+              <div class="prod-compare__col prod-compare__col--us">
+                <span class="prod-compare__label">Máquina de Humo — DJ y Fiesta</span>
+                <ul class="prod-compare__list">
+                  <li>Humo que sube al ambiente</li>
+                  <li>Revela haces de cabezas y láser</li>
+                  <li>Perfecto para pistas de baile</li>
+                  <li>Potencia el show de luces del DJ</li>
+                  <li>Líquido profesional de base acuosa</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Social proof -->
+          <div class="prod-proof">
+            <blockquote class="prod-quote">
+              <p class="prod-quote__text">"Teníamos DJ con cabezas móviles y queríamos algo que hiciera el show más impresionante. Nos recomendaron la máquina de humo y fue exactamente lo que necesitábamos — los haces de luz que antes pasaban desapercibidos se convirtieron en el centro de atención. El técnico la disparaba justo en los drops. Todos preguntaron cómo le hicimos."</p>
+              <footer class="prod-quote__footer">
+                <span class="prod-quote__name">Rodrigo V.</span>
+                <span class="prod-quote__event">Fiesta de cumpleaños en salón Narvarte — 80 personas</span>
+              </footer>
+            </blockquote>
+          </div>
+
+        </div>
+
+        <!-- ═══ SIDEBAR UNIFICADO ═══ -->
+        <aside class="prod-sidebar">
+
+          <!-- 1. Specs técnicas -->
+          <div class="ps-widget">
+            <h3 class="ps-widget__title">Especificaciones</h3>
+            <dl class="ps-specs">
+              <div class="ps-specs__row"><dt>Máquinas</dt><dd>1 unidad</dd></div>
+              <div class="ps-specs__row"><dt>Potencia</dt><dd>1500W</dd></div>
+              <div class="ps-specs__row"><dt>Tipo de humo</dt><dd>Escénico — sube</dd></div>
+              <div class="ps-specs__row"><dt>Líquido incluido</dt><dd>4 horas</dd></div>
+              <div class="ps-specs__row"><dt>Control</dt><dd>Remoto inalámbrico</dd></div>
+              <div class="ps-specs__row"><dt>Cobertura</dt><dd>Hasta 200 m²</dd></div>
+              <div class="ps-specs__row"><dt>Operación</dt><dd>Técnico incluido</dd></div>
+              <div class="ps-specs__row"><dt>Zona</dt><dd>CDMX + Edomex</dd></div>
+            </dl>
+          </div>
+
+          <!-- 2. Ideal para -->
+          <div class="ps-widget">
+            <h3 class="ps-widget__title">Ideal para</h3>
+            <div class="ps-tags">
+              <span class="ps-tag">Fiestas con DJ</span>
+              <span class="ps-tag">Cumpleaños</span>
+              <span class="ps-tag">XV años</span>
+              <span class="ps-tag">Bodas — pista de baile</span>
+              <span class="ps-tag">Salones de fiestas</span>
+              <span class="ps-tag">Fiestas en casa grande</span>
+              <span class="ps-tag">Shows con cabezas móviles</span>
+              <span class="ps-tag">Sets con láser</span>
+            </div>
+          </div>
+
+          <!-- 3. Otros paquetes -->
+          <div class="ps-widget">
+            <h3 class="ps-widget__title">Otros paquetes</h3>
+            <a href="/equipos-para-eventos/maquina-de-humo/paquete-noche-completa/" class="ps-pkg">
+              <img src="/img/paquetes/maquina-de-humo/noche-completa.avif" alt="Noche Completa 2 máquinas" width="80" height="60" loading="lazy" class="ps-pkg__img" />
+              <div class="ps-pkg__info">
+                <span class="ps-pkg__name">Noche Completa</span>
+                <span class="ps-pkg__price">$2,800 MXN</span>
+              </div>
+            </a>
+            <a href="/equipos-para-eventos/maquina-de-humo/paquete-show-corporativo/" class="ps-pkg">
+              <img src="/img/paquetes/maquina-de-humo/show-corporativo.avif" alt="Show Corporativo 3 máquinas DMX" width="80" height="60" loading="lazy" class="ps-pkg__img" />
+              <div class="ps-pkg__info">
+                <span class="ps-pkg__name">Show Corporativo</span>
+                <span class="ps-pkg__price">$5,000 MXN</span>
+              </div>
+            </a>
+            <a href="/equipos-para-eventos/maquina-de-humo/paquete-festival/" class="ps-pkg">
+              <img src="/img/paquetes/maquina-de-humo/festival.avif" alt="Festival 6+ máquinas con operador" width="80" height="60" loading="lazy" class="ps-pkg__img" />
+              <div class="ps-pkg__info">
+                <span class="ps-pkg__name">Festival</span>
+                <span class="ps-pkg__price">$9,000 MXN</span>
+              </div>
+            </a>
+            <div class="ps-upsell">
+              <p class="ps-upsell__text">¿Evento más grande o toda la noche? El paquete Noche Completa incluye 2 máquinas y recarga ilimitada.</p>
+              <a href="/equipos-para-eventos/maquina-de-humo/paquete-noche-completa/" class="ps-upsell__link">Ver Noche Completa →</a>
+            </div>
+          </div>
+
+          <!-- 4. CTA -->
+          <div class="ps-widget ps-widget--dark">
+            <h3 class="ps-widget__title ps-widget__title--light">Cotiza tu evento</h3>
+            <p class="ps-widget__desc">Cotización personalizada en menos de 24 horas. Sin compromiso.</p>
+            <a href="/cotizar/" class="ps-widget__btn">Cotizar Gratis</a>
+            <a href={WHATSAPP_URL_MSG} class="ps-widget__btn ps-widget__btn--wa" target="_blank" rel="noopener">WhatsApp: 55 4937 5172</a>
+          </div>
+
+          <!-- 5. Servicios relacionados -->
+          <div class="ps-widget">
+            <h3 class="ps-widget__title">Servicios relacionados</h3>
+            <div class="ps-links">
+              <a href="/equipos-para-eventos/cabezas-moviles/" class="ps-link">Cabezas Móviles</a>
+              <a href="/equipos-para-eventos/laser/" class="ps-link">Láser</a>
+              <a href="/equipos-para-eventos/humo-bajo/" class="ps-link">Humo Bajo</a>
+              <a href="/equipos-para-eventos/maquina-de-confeti/" class="ps-link">Confeti</a>
+              <a href="/equipos-para-eventos/bola-disco/" class="ps-link">Bola Disco</a>
+              <a href="/equipos-para-eventos/dj/" class="ps-link">DJ</a>
+            </div>
+          </div>
+
+          <!-- 6. Contacto -->
+          <div class="ps-widget">
+            <h3 class="ps-widget__title">Contacto</h3>
+            <div class="ps-contact">
+              <p><a href="tel:+525549375172">55 4937 5172</a></p>
+              <p><a href="mailto:contacto@redeil.com">contacto@redeil.com</a></p>
+              <p>Lun-Vie 9:00-19:00 | Sáb 10:00-15:00</p>
+            </div>
+          </div>
+
+        </aside>
+      </div>
     </div>
   </section>
 
   <FaqSection items={faqItems} />
-
-  <!-- CTA FINAL -->
 
   <Footer />
   <WhatsAppBubble />
 </Base>
 
 <style>
-  .section__title {
-    font-size: clamp(1.5rem, 3vw, 2rem);
-    font-weight: 800;
-    color: var(--color-text);
-    margin-bottom: 0.5rem;
-  }
-  .section__subtitle {
-    font-size: var(--font-size-base);
-    color: var(--color-text-light);
-    margin-bottom: 2rem;
-  }
-  .features-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 0.75rem;
-    margin-bottom: 2rem;
-  }
-  .feature-item {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    padding: 0.875rem 1rem;
-    border-radius: var(--border-radius);
-    font-size: var(--font-size-sm);
-  }
-  .feature-item--yes {
-    background: #f0fdf4;
-    color: #166534;
-  }
-  .feature-item--no {
-    background: var(--color-bg);
-    color: var(--color-text-light);
-  }
-  .feature-icon {
-    font-weight: 700;
-    font-size: 1.125rem;
-    flex-shrink: 0;
-  }
-  .price-highlight {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 2rem;
-    background: var(--color-bg);
-    border-radius: var(--border-radius-lg);
-    text-align: center;
-  }
-  .price-highlight__label {
-    font-size: var(--font-size-sm);
-    color: var(--color-text-light);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-  }
-  .price-highlight__amount {
-    font-size: clamp(2rem, 5vw, 3rem);
-    font-weight: 800;
-    color: var(--color-text);
-  }
-  .price-highlight__note {
-    font-size: var(--font-size-sm);
-    color: var(--color-text-light);
-    margin-bottom: 0.5rem;
-  }
-  .content-prose {
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  .content-prose h2 {
-    font-size: clamp(1.5rem, 3vw, 2rem);
-    font-weight: 800;
-    color: var(--color-text);
-    margin-bottom: 1rem;
-  }
-  .content-prose h3 {
-    font-size: var(--font-size-xl);
-    font-weight: 700;
-    color: var(--color-text);
-    margin: 2rem 0 0.75rem;
-  }
-  .content-prose p {
-    font-size: var(--font-size-base);
-    color: var(--color-text-light);
-    line-height: 1.8;
-    margin-bottom: 1rem;
-  }
+  /* ── Layout ── */
+  .prod-layout { display: grid; grid-template-columns: 1fr; gap: 2rem; }
+  @media (min-width: 1024px) { .prod-layout { grid-template-columns: 1fr 340px; gap: 2.5rem; } }
+
+  /* ── Gallery ── */
+  .prod-gallery { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; margin-bottom: 2rem; border-radius: 14px; overflow: hidden; }
+  .prod-gallery__main { grid-row: span 2; }
+  .prod-gallery__main img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .prod-gallery__side { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; }
+  .prod-gallery__side img { width: 100%; height: 100%; object-fit: cover; display: block; aspect-ratio: 3/2; }
+
+  /* ── Product Info ── */
+  .prod-info { margin-bottom: 2.5rem; }
+  .prod-info__badge { display: inline-block; font-size: 0.75rem; font-weight: 700; color: var(--color-accent); text-transform: uppercase; letter-spacing: 0.08em; padding: 0.375rem 1rem; background: rgba(0,113,227,0.08); border: 1px solid rgba(0,113,227,0.12); border-radius: 6px; margin-bottom: 0.75rem; }
+  .prod-info__title { font-size: clamp(1.375rem, 3vw, 1.75rem); font-weight: 800; color: var(--color-text); line-height: 1.2; letter-spacing: -0.02em; margin: 0 0 1.25rem; }
+  .prod-price { background: var(--color-bg); border-radius: 12px; padding: 1.25rem 1.5rem; margin-bottom: 1.25rem; border-left: 4px solid var(--color-accent); }
+  .prod-price__amount { font-size: 2.25rem; font-weight: 800; color: var(--color-primary); font-variant-numeric: tabular-nums; }
+  .prod-price__currency { font-size: 0.875rem; color: var(--color-text-light); margin-left: 0.5rem; }
+  .prod-price__note { font-size: 0.8125rem; color: var(--color-text-light); margin: 0.5rem 0 0; }
+  .prod-ctas { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+  .prod-btn { display: inline-flex; align-items: center; justify-content: center; padding: 0.875rem 1.75rem; border-radius: 6px; font-size: 0.9375rem; font-weight: 600; text-decoration: none; transition: background 0.2s ease, border-color 0.2s ease; }
+  .prod-btn--wa { background: #25D366; color: #fff; }
+  .prod-btn--wa:hover { background: #1DA851; }
+  .prod-btn--outline { background: none; color: var(--color-text); border: 2px solid var(--color-border); }
+  .prod-btn--outline:hover { border-color: var(--color-accent); color: var(--color-accent); }
+
+  /* ── Selling Points ── */
+  .prod-selling { margin-bottom: 2.5rem; }
+  .prod-selling__headline { font-size: clamp(1.25rem, 3vw, 1.5rem); font-weight: 800; color: var(--color-text); line-height: 1.25; letter-spacing: -0.02em; margin: 0 0 0.75rem; }
+  .prod-selling__intro { font-size: 0.9375rem; color: var(--color-text-light); line-height: 1.75; margin: 0 0 1.75rem; max-width: 65ch; }
+  .prod-highlights { display: flex; flex-direction: column; gap: 1.25rem; }
+  .prod-hl { display: flex; gap: 1rem; align-items: stretch; }
+  .prod-hl__bar { flex-shrink: 0; width: 3px; background: var(--color-accent); border-radius: 2px; }
+  .prod-hl__content { display: flex; flex-direction: column; gap: 0.25rem; }
+  .prod-hl__title { font-size: 0.9375rem; font-weight: 700; color: var(--color-text); margin: 0; line-height: 1.3; }
+  .prod-hl__desc { font-size: 0.8125rem; color: var(--color-text-light); line-height: 1.65; margin: 0; }
+
+  /* ── Includes ── */
+  .prod-includes { background: var(--color-bg); border-radius: 14px; padding: 1.75rem 2rem; margin-bottom: 2.5rem; }
+  .prod-includes__title { font-size: 1.0625rem; font-weight: 700; color: var(--color-text); margin: 0 0 1rem; }
+  .prod-includes__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; }
+  .prod-feat { font-size: 0.875rem; color: var(--color-text-light); padding-left: 1.25rem; position: relative; line-height: 1.5; }
+  .prod-feat::before { content: ""; position: absolute; left: 0; top: 0.45rem; width: 6px; height: 6px; border-radius: 50%; background: var(--color-accent); }
+  @media (max-width: 640px) { .prod-includes__grid { grid-template-columns: 1fr; } }
+
+  /* ── Sidebar ── */
+  .prod-sidebar { display: flex; flex-direction: column; gap: 1.25rem; }
+  @media (min-width: 1024px) { .prod-sidebar { position: sticky; top: calc(var(--header-height) + var(--topbar-height) + 1.5rem); align-self: start; } }
+  .ps-widget { background: var(--color-white); border: 1px solid var(--color-border); border-radius: 12px; padding: 1.25rem; }
+  .ps-widget--dark { background: var(--color-primary); color: #fff; border: none; }
+  .ps-widget__title { font-size: 0.875rem; font-weight: 700; color: var(--color-text); text-transform: uppercase; letter-spacing: 0.05em; margin: 0 0 0.75rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--color-accent); }
+  .ps-widget__title--light { color: #fff; }
+  .ps-widget__desc { font-size: 0.8125rem; color: rgba(255,255,255,0.75); margin: 0 0 0.75rem; }
+  .ps-widget__btn { display: block; text-align: center; padding: 0.625rem; border-radius: 6px; font-size: 0.875rem; font-weight: 600; text-decoration: none; margin-top: 0.5rem; background: var(--color-accent); color: #fff; transition: background 0.2s ease; }
+  .ps-widget__btn:hover { opacity: 0.9; }
+  .ps-widget__btn--wa { background: #25D366; }
+
+  .ps-specs { display: flex; flex-direction: column; margin: 0; }
+  .ps-specs__row { display: flex; justify-content: space-between; align-items: baseline; padding: 0.4rem 0; border-bottom: 1px solid var(--color-bg); gap: 0.75rem; }
+  .ps-specs__row:last-child { border-bottom: none; }
+  .ps-specs__row dt { font-size: 0.8125rem; color: var(--color-text-light); font-weight: 500; margin: 0; }
+  .ps-specs__row dd { font-size: 0.8125rem; font-weight: 600; color: var(--color-text); text-align: right; margin: 0; font-variant-numeric: tabular-nums; }
+
+  .ps-tags { display: flex; flex-wrap: wrap; gap: 0.375rem; }
+  .ps-tag { font-size: 0.6875rem; font-weight: 600; color: var(--color-text); padding: 0.3rem 0.75rem; background: var(--color-bg); border: 1px solid var(--color-border); border-radius: 6px; white-space: nowrap; }
+
+  .ps-pkg { display: flex; gap: 0.75rem; align-items: center; text-decoration: none; padding: 0.625rem 0; border-bottom: 1px solid var(--color-bg); }
+  .ps-pkg:last-of-type { border-bottom: none; }
+  .ps-pkg__img { width: 72px; height: 54px; object-fit: cover; border-radius: 8px; flex-shrink: 0; }
+  .ps-pkg__info { display: flex; flex-direction: column; gap: 0.125rem; }
+  .ps-pkg__name { font-size: 0.8125rem; font-weight: 600; color: var(--color-text); }
+  .ps-pkg__price { font-size: 0.75rem; font-weight: 700; color: var(--color-accent); font-variant-numeric: tabular-nums; }
+  .ps-pkg:hover .ps-pkg__name { color: var(--color-accent); }
+
+  .ps-upsell { margin-top: 0.75rem; padding-top: 0.75rem; border-top: 1px solid var(--color-bg); }
+  .ps-upsell__text { font-size: 0.75rem; color: var(--color-text-light); line-height: 1.5; margin: 0 0 0.375rem; }
+  .ps-upsell__link { font-size: 0.75rem; font-weight: 600; color: var(--color-accent); text-decoration: none; }
+  .ps-upsell__link:hover { text-decoration: underline; }
+
+  .ps-links { display: flex; flex-direction: column; }
+  .ps-link { padding: 0.4rem 0; border-bottom: 1px solid var(--color-bg); font-size: 0.8125rem; color: var(--color-text-light); text-decoration: none; }
+  .ps-link:last-child { border-bottom: none; }
+  .ps-link:hover { color: var(--color-accent); }
+
+  .ps-contact p { font-size: 0.8125rem; color: var(--color-text-light); margin: 0.3rem 0; }
+  .ps-contact a { color: var(--color-accent); text-decoration: none; }
+
+  /* ── Process Steps ── */
+  .prod-process { margin: 2.5rem 0; }
+  .prod-process__title { font-size: 1.125rem; font-weight: 800; color: var(--color-text); letter-spacing: -0.02em; margin: 0 0 1.25rem; }
+  .prod-steps { display: flex; flex-direction: column; gap: 0; }
+  .prod-step { display: flex; gap: 1rem; padding: 1rem 0; border-bottom: 1px solid var(--color-border); }
+  .prod-step:last-child { border-bottom: none; }
+  .prod-step__num { flex-shrink: 0; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; background: var(--color-accent); color: #fff; font-size: 0.8125rem; font-weight: 700; border-radius: 50%; }
+  .prod-step__content { display: flex; flex-direction: column; gap: 0.2rem; }
+  .prod-step__name { font-size: 0.9375rem; font-weight: 700; color: var(--color-text); margin: 0; line-height: 1.3; }
+  .prod-step__desc { font-size: 0.8125rem; color: var(--color-text-light); line-height: 1.6; margin: 0; }
+
+  /* ── Comparison ── */
+  .prod-compare { margin: 2.5rem 0; }
+  .prod-compare__title { font-size: 1.125rem; font-weight: 800; color: var(--color-text); letter-spacing: -0.02em; margin: 0 0 1.25rem; }
+  .prod-compare__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+  @media (max-width: 640px) { .prod-compare__grid { grid-template-columns: 1fr; } }
+  .prod-compare__col { border-radius: 12px; padding: 1.25rem; }
+  .prod-compare__col--them { background: #fef2f2; border: 1px solid #fecaca; }
+  .prod-compare__col--us { background: #eff6ff; border: 1px solid #bfdbfe; }
+  .prod-compare__label { display: block; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.75rem; }
+  .prod-compare__col--them .prod-compare__label { color: #991b1b; }
+  .prod-compare__col--us .prod-compare__label { color: var(--color-primary); }
+  .prod-compare__list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.5rem; }
+  .prod-compare__list li { font-size: 0.8125rem; color: var(--color-text); line-height: 1.4; padding-left: 1.125rem; position: relative; }
+  .prod-compare__col--them .prod-compare__list li::before { content: "–"; position: absolute; left: 0; color: #dc2626; font-size: 0.75rem; font-weight: 700; }
+  .prod-compare__col--us .prod-compare__list li::before { content: "✓"; position: absolute; left: 0; color: var(--color-accent); font-size: 0.75rem; font-weight: 700; }
+
+  /* ── Social Proof ── */
+  .prod-proof { margin-top: 2.5rem; }
+  .prod-quote { background: var(--color-bg); border-radius: 14px; padding: 1.75rem 2rem; border-left: 4px solid var(--color-accent); margin: 0; }
+  .prod-quote__text { font-size: 0.9375rem; color: var(--color-text); line-height: 1.75; font-style: italic; margin: 0 0 1rem; }
+  .prod-quote__footer { display: flex; flex-direction: column; gap: 0.125rem; }
+  .prod-quote__name { font-size: 0.875rem; font-weight: 700; color: var(--color-text); font-style: normal; }
+  .prod-quote__event { font-size: 0.75rem; color: var(--color-text-light); font-style: normal; }
 </style>
