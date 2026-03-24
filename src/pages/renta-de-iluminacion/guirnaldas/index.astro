@@ -227,21 +227,41 @@ const structuredData = [
           />
 
           <div class="sell__grid">
-            <div class="sell__point">
-              <h3 class="sell__point-title">Montaje invisible</h3>
-              <p class="sell__point-desc">Nuestro equipo llega 4-6 horas antes. Cuando tú llegues, las guirnaldas ya están arriba, los dimmers calibrados y las pruebas hechas. El cable negro profesional desaparece entre los árboles — tus invitados solo ven la magia, no la logística.</p>
+            <div class="sell__card">
+              <div class="sell__card-img">
+                <img src="/img/paquetes/guirnaldas/sell/montaje.avif" alt="Equipo profesional instalando guirnaldas en jardín" width="600" height="400" loading="lazy" />
+              </div>
+              <div class="sell__card-body">
+                <h3 class="sell__card-title">Montaje invisible</h3>
+                <p class="sell__card-desc">Nuestro equipo llega 4-6 horas antes. Cuando tú llegues, las guirnaldas ya están arriba, los dimmers calibrados y las pruebas hechas. El cable negro profesional desaparece entre los árboles — tus invitados solo ven la magia, no la logística.</p>
+              </div>
             </div>
-            <div class="sell__point">
-              <h3 class="sell__point-title">Focos Edison auténticos</h3>
-              <p class="sell__point-desc">No usamos series navideñas ni focos genéricos. Cada guirnalda tiene focos Edison LED con filamento visible que emite ese tono ámbar cálido que hace que las fotos salgan perfectas sin necesidad de filtros. La diferencia se ve en cada imagen.</p>
+            <div class="sell__card">
+              <div class="sell__card-img">
+                <img src="/img/paquetes/guirnaldas/sell/focos-edison.avif" alt="Close-up foco Edison LED con filamento ámbar" width="600" height="400" loading="lazy" />
+              </div>
+              <div class="sell__card-body">
+                <h3 class="sell__card-title">Focos Edison auténticos</h3>
+                <p class="sell__card-desc">No usamos series navideñas ni focos genéricos. Cada guirnalda tiene focos Edison LED con filamento visible que emite ese tono ámbar cálido que hace que las fotos salgan perfectas sin necesidad de filtros. La diferencia se ve en cada imagen.</p>
+              </div>
             </div>
-            <div class="sell__point">
-              <h3 class="sell__point-title">Control de intensidad</h3>
-              <p class="sell__point-desc">Incluimos dimmer profesional en los paquetes Estándar y superiores. Ceremonia con luz suave, cena con brillo medio, fiesta con toda la potencia. Tu técnico ajusta la intensidad en cada momento sin que nadie lo note.</p>
+            <div class="sell__card">
+              <div class="sell__card-img">
+                <img src="/img/paquetes/guirnaldas/sell/dimmer.avif" alt="Control dimmer profesional para guirnaldas" width="600" height="400" loading="lazy" />
+              </div>
+              <div class="sell__card-body">
+                <h3 class="sell__card-title">Control de intensidad</h3>
+                <p class="sell__card-desc">Incluimos dimmer profesional en los paquetes Estándar y superiores. Ceremonia con luz suave, cena con brillo medio, fiesta con toda la potencia. Tu técnico ajusta la intensidad en cada momento sin que nadie lo note.</p>
+              </div>
             </div>
-            <div class="sell__point">
-              <h3 class="sell__point-title">Cero preocupaciones</h3>
-              <p class="sell__point-desc">El precio incluye TODO: guirnaldas, cable, estructura, transporte, instalación, operación y desmontaje. Si un foco falla (raro, pero pasa), tenemos repuestos en el evento. Tú disfrutas, nosotros nos encargamos.</p>
+            <div class="sell__card">
+              <div class="sell__card-img">
+                <img src="/img/paquetes/guirnaldas/sell/todo-incluido.avif" alt="Instalación completa de guirnaldas lista para evento" width="600" height="400" loading="lazy" />
+              </div>
+              <div class="sell__card-body">
+                <h3 class="sell__card-title">Cero preocupaciones</h3>
+                <p class="sell__card-desc">El precio incluye TODO: guirnaldas, cable, estructura, transporte, instalación, operación y desmontaje. Si un foco falla (raro, pero pasa), tenemos repuestos en el evento. Tú disfrutas, nosotros nos encargamos.</p>
+              </div>
             </div>
           </div>
         </div>
@@ -510,19 +530,31 @@ const structuredData = [
     margin-top: 2rem;
   }
   @media (min-width: 640px) { .sell__grid { grid-template-columns: 1fr 1fr; } }
-  .sell__point {
-    padding: 1.5rem;
+  .sell__card {
     background: #fff;
-    border-radius: 12px;
-    border-left: 3px solid #D4A04A;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
   }
-  .sell__point-title {
+  .sell__card-img {
+    aspect-ratio: 3 / 2;
+    overflow: hidden;
+  }
+  .sell__card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .sell__card-body {
+    padding: 1.25rem 1.5rem 1.5rem;
+  }
+  .sell__card-title {
     font-size: 1.0625rem;
     font-weight: 700;
     color: #0F172A;
     margin: 0 0 0.5rem;
   }
-  .sell__point-desc {
+  .sell__card-desc {
     font-size: 0.9375rem;
     color: #475569;
     line-height: 1.7;
