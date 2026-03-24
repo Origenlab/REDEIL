@@ -213,20 +213,39 @@ const structuredData = [
     </div>
   </section>
 
-  <!-- CONTENIDO SEO -->
+  <!-- EXPERIENCIA — Sección de venta -->
   <section class="section section--bg">
-    <div class="container content-prose">
-      <h2>¿Por qué rentar guirnaldas de luces con REDEIL?</h2>
-      <p>Luces vintage con focos Edison para bodas en jardín y eventos elegantes. En REDEIL nos especializamos en ofrecer equipamiento profesional para eventos de todos los tamaños en la Ciudad de México y área metropolitana. Nuestro equipo técnico capacitado se encarga de cada detalle para que tú solo te preocupes por disfrutar.</p>
+    <div class="container">
+      <div class="sell">
+        <div class="sell__main">
+          <SectionHeader
+            badge="La diferencia REDEIL"
+            title="¿Cómo transformamos tu evento con guirnaldas?"
+            subtitle="Hay una razón por la que las guirnaldas de focos Edison son lo más solicitado para bodas en jardín. No es solo iluminación — es el momento en que tus invitados llegan, ven el espacio y dicen 'wow'. Ese instante donde el jardín deja de ser un jardín y se convierte en el lugar que todos van a recordar."
+            subtitle2="En 10 años hemos montado guirnaldas en haciendas de Cuernavaca, terrazas en Polanco, jardines en Coyoacán y patios en Valle de Bravo. Cada venue es diferente: la distancia entre árboles, la altura del techo, las tomas de corriente, el viento. Por eso hacemos visita técnica previa — para diseñar la distribución exacta que tu espacio necesita, no una instalación genérica."
+            id="sell-title"
+          />
 
-      <h3>¿Qué incluye la renta de guirnaldas de luces?</h3>
-      <p>Cada paquete de guirnaldas de luces incluye mucho más que solo equipo. Ofrecemos un servicio completo que abarca la logística de transporte, la instalación profesional en tu venue, la configuración y pruebas antes del evento, la operación técnica durante toda la celebración y el desmontaje al finalizar. No hay costos ocultos ni sorpresas.</p>
-
-      <h3>¿Qué equipo profesional usan para guirnaldas de luces?</h3>
-      <p>Trabajamos con las mejores marcas del mercado: JBL, QSC, Martin Professional, Chauvet y Elation. Nuestro inventario se actualiza constantemente para ofrecerte la tecnología más reciente. Cada equipo pasa por revisiones periódicas de mantenimiento para garantizar un funcionamiento impecable.</p>
-
-      <h3>¿En qué zonas de CDMX rentan guirnaldas de luces?</h3>
-      <p>Nuestro servicio de renta de guirnaldas de luces cubre toda la Ciudad de México y el Estado de México. También llegamos a destinos populares para eventos como Cuernavaca, Tepoztlán, Valle de Bravo y cualquier ubicación dentro de 100 km de CDMX sin costo adicional de traslado.</p>
+          <div class="sell__grid">
+            <div class="sell__point">
+              <h3 class="sell__point-title">Montaje invisible</h3>
+              <p class="sell__point-desc">Nuestro equipo llega 4-6 horas antes. Cuando tú llegues, las guirnaldas ya están arriba, los dimmers calibrados y las pruebas hechas. El cable negro profesional desaparece entre los árboles — tus invitados solo ven la magia, no la logística.</p>
+            </div>
+            <div class="sell__point">
+              <h3 class="sell__point-title">Focos Edison auténticos</h3>
+              <p class="sell__point-desc">No usamos series navideñas ni focos genéricos. Cada guirnalda tiene focos Edison LED con filamento visible que emite ese tono ámbar cálido que hace que las fotos salgan perfectas sin necesidad de filtros. La diferencia se ve en cada imagen.</p>
+            </div>
+            <div class="sell__point">
+              <h3 class="sell__point-title">Control de intensidad</h3>
+              <p class="sell__point-desc">Incluimos dimmer profesional en los paquetes Estándar y superiores. Ceremonia con luz suave, cena con brillo medio, fiesta con toda la potencia. Tu técnico ajusta la intensidad en cada momento sin que nadie lo note.</p>
+            </div>
+            <div class="sell__point">
+              <h3 class="sell__point-title">Cero preocupaciones</h3>
+              <p class="sell__point-desc">El precio incluye TODO: guirnaldas, cable, estructura, transporte, instalación, operación y desmontaje. Si un foco falla (raro, pero pasa), tenemos repuestos en el evento. Tú disfrutas, nosotros nos encargamos.</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -482,4 +501,31 @@ const structuredData = [
   .pkg__cta:hover { background: #D4A04A; }
   .pkg--featured .pkg__cta { background: #D4A04A; }
   .pkg--featured .pkg__cta:hover { background: #B8862D; }
+</style>
+<style>
+  .sell__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    margin-top: 2rem;
+  }
+  @media (min-width: 640px) { .sell__grid { grid-template-columns: 1fr 1fr; } }
+  .sell__point {
+    padding: 1.5rem;
+    background: #fff;
+    border-radius: 12px;
+    border-left: 3px solid #D4A04A;
+  }
+  .sell__point-title {
+    font-size: 1.0625rem;
+    font-weight: 700;
+    color: #0F172A;
+    margin: 0 0 0.5rem;
+  }
+  .sell__point-desc {
+    font-size: 0.9375rem;
+    color: #475569;
+    line-height: 1.7;
+    margin: 0;
+  }
 </style>
