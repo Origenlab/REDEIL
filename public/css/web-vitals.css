@@ -1,0 +1,471 @@
+/**
+ * REDEIL - CSS Core Web Vitals Optimization
+ * Fixes for CLS (Cumulative Layout Shift) and LCP
+ * v1.0.0
+ */
+
+/* ========================================
+   CLS FIX: Reserve space for images
+   ======================================== */
+
+/* Gallery images - aspect ratio 2:3 (portrait) */
+.gallery__image {
+  aspect-ratio: 2 / 3;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Gallery container - reserve space */
+.gallery__item {
+  aspect-ratio: 2 / 3;
+  overflow: hidden;
+}
+
+/* Blog card images */
+.blog-card__image {
+  aspect-ratio: 16 / 10;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Article gallery images */
+.article-gallery__image {
+  aspect-ratio: 4 / 3;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Service grid images - already have aspect-ratio in main CSS, reinforce */
+.lighting__image,
+.audio__image,
+.equipment__image {
+  aspect-ratio: 2 / 3;
+}
+
+.lighting__img,
+.audio__img,
+.equipment__img {
+  aspect-ratio: 2 / 3;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Logo placeholder - prevent shift */
+.logo__image {
+  width: 194px;
+  height: 70px;
+}
+
+/* ========================================
+   CLS FIX: Font display optimization
+   ======================================== */
+@font-face {
+  font-display: swap;
+}
+
+/* ========================================
+   CLS FIX: Prevent header jump
+   ======================================== */
+.header {
+  min-height: 92px;
+}
+
+@media (max-width: 733px) {
+  .header {
+    min-height: 60px;
+  }
+}
+
+/* ========================================
+   CLS FIX: Breadcrumbs placeholder
+   ======================================== */
+.breadcrumbs {
+  min-height: 48px;
+}
+
+@media (max-width: 768px) {
+  .breadcrumbs {
+    min-height: 42px;
+  }
+}
+
+/* ========================================
+   CLS FIX: Footer placeholder
+   ======================================== */
+.footer {
+  min-height: 400px;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    min-height: 600px;
+  }
+}
+
+/* ========================================
+   CLS FIX: CTA sections
+   ======================================== */
+.cta-section,
+.cta-dark {
+  min-height: 300px;
+}
+
+@media (max-width: 768px) {
+  .cta-section,
+  .cta-dark {
+    min-height: 250px;
+  }
+}
+
+/* ========================================
+   CLS FIX: Testimonials
+   ======================================== */
+.testimonials-section {
+  min-height: 400px;
+}
+
+/* ========================================
+   CLS FIX: FAQ accordion
+   ======================================== */
+.faq__item {
+  min-height: 60px;
+}
+
+.faq__answer {
+  min-height: 0;
+  transition: min-height 0.3s ease;
+}
+
+/* ========================================
+   LCP FIX: Hero/Intro section optimization
+   ======================================== */
+.intro-section {
+  contain: layout style;
+}
+
+/* ========================================
+   CONTENT VISIBILITY: Lazy render off-screen content
+   ======================================== */
+.footer,
+.testimonials-section,
+.faq-section {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 400px;
+}
+
+/* ========================================
+   IMAGE RENDERING OPTIMIZATION
+   ======================================== */
+img {
+  /* Prevent image decode from blocking main thread */
+  image-rendering: auto;
+}
+
+/* Placeholder while images load */
+img[loading="lazy"] {
+  background-color: #f5f5f7;
+}
+
+/* ========================================
+   ANIMATION PERFORMANCE
+   ======================================== */
+.wa-float,
+.btn,
+.cta__button,
+.lighting__link,
+.audio__link,
+.equipment__link {
+  will-change: transform;
+}
+
+/* Remove will-change after interaction */
+.wa-float:not(:hover),
+.btn:not(:hover),
+.lighting__link:not(:hover) {
+  will-change: auto;
+}
+
+/* ========================================
+   MOBILE-SPECIFIC FIXES
+   ======================================== */
+@media (max-width: 767px) {
+  /* Reserve full width for mobile grids */
+  .lighting__grid,
+  .audio__grid,
+  .equipment__grid {
+    min-height: 480px; /* One card visible */
+  }
+
+  /* Gallery mobile layout */
+  .gallery {
+    min-height: 500px;
+  }
+
+  /* Blog grid mobile */
+  .blog-grid {
+    min-height: 400px;
+  }
+}
+
+/* ========================================
+   PRELOAD HINTS (CSS containment)
+   ======================================== */
+.services-section,
+.contact-section {
+  contain: layout style;
+}
+
+/* ========================================
+   SKELETON LOADING STYLES (optional)
+   ======================================== */
+.skeleton {
+  background: linear-gradient(90deg, #f5f5f7 25%, #e8e8ed 50%, #f5f5f7 75%);
+  background-size: 200% 100%;
+  animation: skeleton-loading 1.5s infinite;
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* ========================================
+   MOBILE OPTIMIZATION ENHANCEMENTS
+   ======================================== */
+
+/* Touch-friendly tap targets (minimum 44x44px) */
+@media (max-width: 767px) {
+  a,
+  button,
+  input[type="submit"],
+  .btn,
+  .nav__link,
+  .mobile-menu-link {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  /* Better touch spacing */
+  .contact__phone,
+  .contact__whatsapp {
+    min-height: 48px;
+    padding: 14px 20px;
+  }
+
+  /* Improve form inputs for mobile */
+  input,
+  textarea,
+  select {
+    font-size: 16px !important; /* Prevents zoom on iOS */
+    padding: 14px 16px;
+    border-radius: 10px;
+  }
+
+  /* Better button sizing */
+  .cta__button,
+  .article-cta__button,
+  .contact__submit-btn,
+  .form__submit {
+    width: 100%;
+    min-height: 52px;
+    font-size: 17px;
+  }
+
+  /* Improve readability */
+  body {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  p {
+    line-height: 1.7;
+  }
+
+  /* Better spacing for mobile */
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  /* Card spacing optimization */
+  .lighting__item,
+  .audio__item,
+  .equipment__item {
+    margin-bottom: 16px;
+  }
+
+  /* Blog cards mobile optimization */
+  .blog-card {
+    margin-bottom: 20px;
+  }
+
+  .blog-card__content {
+    padding: 20px;
+  }
+
+  .blog-card__title {
+    font-size: 1.25rem;
+    line-height: 1.3;
+  }
+
+  /* FAQ mobile optimization */
+  .faq__question {
+    font-size: 1rem;
+    padding: 18px 16px;
+  }
+
+  .faq__answer {
+    padding: 0 16px 18px;
+  }
+
+  /* Footer mobile spacing */
+  .footer-column {
+    margin-bottom: 32px;
+  }
+
+  .footer-links a {
+    padding: 10px 0;
+    display: block;
+  }
+
+  /* Improve scroll performance */
+  .gallery,
+  .lighting__grid,
+  .audio__grid,
+  .equipment__grid,
+  .blog-grid {
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* WhatsApp button mobile enhancement */
+  .wa-float {
+    bottom: 16px;
+    right: 16px;
+    width: 60px;
+    height: 60px;
+  }
+
+  .wa-float__icon {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+/* ========================================
+   TABLET OPTIMIZATION (768px - 1024px)
+   ======================================== */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .container {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  /* Grid adjustments */
+  .lighting__grid,
+  .audio__grid,
+  .equipment__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  /* Blog grid tablet */
+  .blog-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  /* Form optimizations */
+  .form__row {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* ========================================
+   ACCESSIBILITY IMPROVEMENTS
+   ======================================== */
+
+/* Focus indicators for keyboard navigation */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+.btn:focus-visible {
+  outline: 2px solid #0071e3;
+  outline-offset: 2px;
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .wa-float,
+  .btn,
+  .lighting__link {
+    will-change: auto;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .btn,
+  .cta__button,
+  .contact__whatsapp {
+    border: 2px solid currentColor;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+}
+
+/* ========================================
+   PRINT OPTIMIZATION
+   ======================================== */
+@media print {
+  .header,
+  .footer,
+  .wa-float,
+  .mobile-menu,
+  .mobile-menu-btn,
+  nav,
+  .cta-section,
+  .contact-section form {
+    display: none !important;
+  }
+
+  .main {
+    padding: 0;
+  }
+
+  body {
+    font-size: 12pt;
+    line-height: 1.5;
+    color: #000;
+    background: #fff;
+  }
+
+  a {
+    color: #000;
+    text-decoration: underline;
+  }
+
+  img {
+    max-width: 100% !important;
+  }
+}

@@ -1,0 +1,326 @@
+---
+import Base from '../../layouts/Base.astro';
+import TopBar from '../../components/TopBar.astro';
+import Header from '../../components/Header.astro';
+import Hero from '../../components/Hero.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import SectionHeader from '../../components/SectionHeader.astro';
+import FaqSection from '../../components/FaqSection.astro';
+import Footer from '../../components/Footer.astro';
+import WhatsAppBubble from '../../components/WhatsAppBubble.astro';
+import { organizationSchema, breadcrumbSchema, faqSchema } from '../../lib/seo';
+import { WHATSAPP_URL_MSG } from '../../lib/config';
+
+const faqItems = [
+  { pregunta: '¿Qué tipos de eventos cubren en CDMX y Estado de México?', respuesta: 'Cubrimos bodas, fiestas de XV años, eventos corporativos (conferencias, galas, lanzamientos), fiestas y cumpleaños, y baby showers. Para cada tipo de evento tenemos equipo especializado y paquetes diseñados para crear la atmósfera perfecta.' },
+  { pregunta: '¿Cómo elijo el equipo correcto para mi evento?', respuesta: 'Solo necesitas decirnos tres cosas: tipo de evento, número de invitados y el espacio donde será. Con esos datos, nuestro equipo técnico te recomienda la potencia de audio, cantidad de luces y efectos especiales ideales para tu celebración.' },
+  { pregunta: '¿Hacen visita técnica previa al venue?', respuesta: 'Sí, para eventos medianos y grandes realizamos una visita técnica gratuita al venue. Evaluamos las dimensiones del espacio, tomas de corriente, acústica y accesos para planificar el montaje perfecto.' },
+  { pregunta: '¿Cuánto cuesta rentar equipo para un evento en CDMX?', respuesta: 'Los precios varían según el tipo de evento: fiestas desde $3,500 MXN, bodas desde $12,000 MXN, XV años desde $15,000 MXN, y eventos corporativos desde $8,000 MXN. Todos los paquetes incluyen transporte, instalación y operación técnica.' },
+  { pregunta: '¿Pueden armar un paquete personalizado?', respuesta: 'Absolutamente. No vendemos paquetes genéricos. Escuchamos qué tienes en mente y diseñamos una propuesta técnica que se ajuste a tus necesidades y presupuesto. Combinamos iluminación, audio y efectos especiales a tu medida.' },
+  { pregunta: '¿Qué zonas cubren para eventos?', respuesta: 'Cubrimos toda la Ciudad de México y el Estado de México: salones en Polanco, haciendas en Cuernavaca, jardines en Tepoztlán, centros de convenciones en Santa Fe y cualquier ubicación dentro de 100 km de CDMX sin costo adicional de traslado.' },
+];
+
+const structuredData = [
+  organizationSchema(),
+  breadcrumbSchema([
+    { name: 'Inicio', url: '/' },
+    { name: 'Eventos', url: '/eventos/' },
+  ]),
+  faqSchema(faqItems),
+];
+
+const tiposEvento = [
+  {
+    nombre: 'Bodas',
+    slug: 'bodas',
+    descripcion: 'Iluminación romántica, audio para ceremonia y fiesta, humo bajo para el primer baile y efectos especiales que hacen mágico cada momento de tu boda.',
+    servicios: [
+      { nombre: 'Guirnaldas de Luces', href: '/renta-de-iluminacion/guirnaldas/' },
+      { nombre: 'Uplighting Arquitectónico', href: '/renta-de-iluminacion/luces-arquitectonicas/' },
+      { nombre: 'Humo Bajo', href: '/equipos-para-eventos/humo-bajo/' },
+      { nombre: 'Bocinas para Bodas', href: '/renta-de-bocinas/bocinas-para-bodas/' },
+      { nombre: 'Proyector de Gobos', href: '/renta-de-iluminacion/proyector-de-gobos/' },
+      { nombre: 'Seguidor de Luz', href: '/renta-de-iluminacion/seguidor-de-luz/' },
+    ],
+    invitados: '50 - 500 personas',
+    presupuesto: 'Desde $12,000 MXN',
+  },
+  {
+    nombre: 'XV Años',
+    slug: 'xv-anos',
+    descripcion: 'La fiesta de quince años merece lo mejor: pista de baile con cabezas móviles, audio potente para el DJ, confeti para el brindis y luces que hacen brillar a la quinceañera.',
+    servicios: [
+      { nombre: 'Cabezas Móviles', href: '/renta-de-iluminacion/cabezas-moviles/' },
+      { nombre: 'Bocinas para XV Años', href: '/renta-de-bocinas/bocinas-para-xv-anos/' },
+      { nombre: 'Máquina de Confeti', href: '/equipos-para-eventos/maquina-de-confeti/' },
+      { nombre: 'Iluminación Láser', href: '/renta-de-iluminacion/iluminacion-laser/' },
+      { nombre: 'Humo Bajo', href: '/equipos-para-eventos/humo-bajo/' },
+      { nombre: 'Bolas Disco', href: '/equipos-para-eventos/bolas-disco/' },
+    ],
+    invitados: '100 - 400 personas',
+    presupuesto: 'Desde $15,000 MXN',
+  },
+  {
+    nombre: 'Eventos Corporativos',
+    slug: 'corporativos',
+    descripcion: 'Audio profesional para conferencias, iluminación arquitectónica para galas, pantallas para presentaciones y todo el equipo técnico que tu empresa necesita.',
+    servicios: [
+      { nombre: 'Audio para Conferencias', href: '/renta-de-bocinas/audio-para-conferencias/' },
+      { nombre: 'Luces Arquitectónicas', href: '/renta-de-iluminacion/luces-arquitectonicas/' },
+      { nombre: 'Renta de Podium', href: '/equipos-para-eventos/renta-de-podium/' },
+      { nombre: 'Pantalla Inflable', href: '/equipos-para-eventos/pantalla-inflable/' },
+      { nombre: 'Sky Tracker', href: '/renta-de-iluminacion/sky-tracker/' },
+      { nombre: 'Seguidor de Luz', href: '/renta-de-iluminacion/seguidor-de-luz/' },
+    ],
+    invitados: '20 - 2,000 personas',
+    presupuesto: 'Desde $8,000 MXN',
+  },
+  {
+    nombre: 'Fiestas y Cumpleaños',
+    slug: 'fiestas',
+    descripcion: 'Desde una fiesta en casa hasta una celebración en salón de eventos: bocinas potentes, luces de colores, máquina de humo y todo para que la fiesta no pare.',
+    servicios: [
+      { nombre: 'Bocinas para Fiestas', href: '/renta-de-bocinas/bocinas-para-fiestas/' },
+      { nombre: 'Cabezas Móviles', href: '/renta-de-iluminacion/cabezas-moviles/' },
+      { nombre: 'Luz Negra UV', href: '/renta-de-iluminacion/luz-negra/' },
+      { nombre: 'Máquina de Humo', href: '/equipos-para-eventos/maquina-de-humo/' },
+      { nombre: 'Iluminación Láser', href: '/renta-de-iluminacion/iluminacion-laser/' },
+      { nombre: 'Bolas Disco', href: '/equipos-para-eventos/bolas-disco/' },
+    ],
+    invitados: '20 - 500 personas',
+    presupuesto: 'Desde $3,500 MXN',
+  },
+  {
+    nombre: 'Baby Showers',
+    slug: 'baby-showers',
+    descripcion: 'Ambientación delicada con guirnaldas, luces cálidas, burbujas y audio suave para una celebración íntima y elegante antes de la llegada del bebé.',
+    servicios: [
+      { nombre: 'Guirnaldas de Luces', href: '/renta-de-iluminacion/guirnaldas/' },
+      { nombre: 'Cascadas LED', href: '/renta-de-iluminacion/cascadas-led/' },
+      { nombre: 'Máquina de Burbujas', href: '/equipos-para-eventos/maquina-de-burbujas/' },
+      { nombre: 'City Light', href: '/renta-de-iluminacion/city-light/' },
+      { nombre: 'Luz Neón LED', href: '/renta-de-iluminacion/luz-neon/' },
+      { nombre: 'Proyector de Gobos', href: '/renta-de-iluminacion/proyector-de-gobos/' },
+    ],
+    invitados: '20 - 100 personas',
+    presupuesto: 'Desde $3,500 MXN',
+  },
+];
+---
+
+<Base
+  title="Eventos CDMX — Equipo para Bodas, XV Años y Más | REDEIL"
+  description="Renta de iluminación, audio y efectos para bodas, XV años, eventos corporativos, fiestas y baby showers en CDMX. Guía por tipo de evento. Cotiza gratis."
+  structuredData={structuredData}
+>
+  <TopBar />
+  <Header activePage="eventos" />
+  <Breadcrumb items={[{ name: 'Eventos', href: '/eventos/' }]} />
+
+  <Hero
+    badge="Equipo para cada ocasión"
+    title="Renta de Equipo para Eventos en CDMX"
+    description="Cada evento es diferente. Encuentra la iluminación, audio y efectos ideales para tu tipo de celebración. Paquetes personalizados con instalación incluida."
+    primaryCta={{ text: 'Cotizar Mi Evento', href: WHATSAPP_URL_MSG }}
+    secondaryCta={{ text: 'Ver Tipos de Evento', href: '#tipos' }}
+  >
+    <Fragment slot="hero-seo">
+      <p>No es lo mismo iluminar una boda en jardín que montar el audio para un congreso corporativo. En <strong>REDEIL</strong> llevamos más de 10 años adaptando nuestro equipo profesional a cada tipo de evento en <strong>CDMX y Estado de México</strong>. Conocemos los salones, haciendas y venues más populares de la zona, y sabemos exactamente qué equipo necesita cada espacio.</p>
+      <p>Aquí encontrarás una guía organizada por tipo de evento con los servicios que recomendamos para cada uno. Ya sea que estés organizando una <strong>boda íntima</strong>, una <strong>fiesta de XV años</strong> para 300 invitados o una <strong>conferencia corporativa</strong>, tenemos el equipo y la experiencia para hacerlo realidad.</p>
+    </Fragment>
+  </Hero>
+
+  <!-- TIPOS DE EVENTO -->
+  <section class="section" id="tipos">
+    <div class="container">
+      <SectionHeader
+        badge="5 tipos de evento"
+        title="Encuentra el Equipo Ideal para tu Evento"
+        subtitle="Seleccionamos los mejores servicios de iluminación, audio y efectos según el tipo de celebración que estás organizando."
+        subtitle2="Cada recomendación está basada en nuestra experiencia montando cientos de eventos en CDMX y Estado de México. Haz clic en cualquier servicio para ver paquetes y precios."
+        id="tipos-title"
+      />
+
+      <div class="eventos-list">
+        {tiposEvento.map((evento, i) => (
+          <article class={`evento-card ${i % 2 !== 0 ? 'evento-card--alt' : ''}`} id={evento.slug}>
+            <div class="evento-card__info">
+              <h3 class="evento-card__name">{evento.nombre}</h3>
+              <p class="evento-card__desc">{evento.descripcion}</p>
+              <div class="evento-card__meta">
+                <span class="evento-card__badge">{evento.invitados}</span>
+                <span class="evento-card__badge">{evento.presupuesto}</span>
+              </div>
+              <a href={WHATSAPP_URL_MSG} class="btn btn--accent btn--sm" target="_blank" rel="noopener">Cotizar {evento.nombre}</a>
+            </div>
+            <div class="evento-card__servicios">
+              <h4 class="evento-card__servicios-title">Servicios recomendados</h4>
+              <ul class="evento-card__servicios-list">
+                {evento.servicios.map((s) => (
+                  <li><a href={s.href}>{s.nombre}</a></li>
+                ))}
+              </ul>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST SECTION -->
+  <section class="section section--bg">
+    <div class="container">
+      <SectionHeader
+        title="¿Por qué organizar tu evento con REDEIL?"
+        subtitle="Más de 10 años creando eventos memorables en CDMX y Estado de México."
+        id="ventajas-title"
+      />
+      <div class="trust-grid">
+        <div class="trust-item">
+          <h3 class="trust-item__title">Propuesta Personalizada</h3>
+          <p class="trust-item__desc">No vendemos paquetes genéricos. Escuchamos qué tienes en mente, visitamos tu venue y diseñamos una propuesta técnica que se ajuste a tus necesidades y presupuesto.</p>
+        </div>
+        <div class="trust-item">
+          <h3 class="trust-item__title">Equipo de Marcas Líderes</h3>
+          <p class="trust-item__desc">Audio JBL, QSC y Shure. Iluminación Martin Professional, Chauvet y Elation. Efectos especiales con equipos certificados. Las marcas que usan los mejores venues del mundo.</p>
+        </div>
+        <div class="trust-item">
+          <h3 class="trust-item__title">Técnicos Profesionales</h3>
+          <p class="trust-item__desc">Cada evento cuenta con técnicos especializados en audio, iluminación y efectos. Llegamos con anticipación para montaje, pruebas y ajustes. Operamos todo durante el evento.</p>
+        </div>
+        <div class="trust-item">
+          <h3 class="trust-item__title">Todo Incluido</h3>
+          <p class="trust-item__desc">Transporte, montaje, operación técnica y desmontaje incluido en todos los servicios. Sin costos ocultos ni sorpresas. El precio que cotizamos es el precio que pagas.</p>
+        </div>
+        <div class="trust-item">
+          <h3 class="trust-item__title">Cotización en 24 Horas</h3>
+          <p class="trust-item__desc">Escríbenos por WhatsApp con los datos de tu evento y en menos de 24 horas tendrás una propuesta detallada con opciones de paquetes y precios. Sin compromiso.</p>
+        </div>
+        <div class="trust-item">
+          <h3 class="trust-item__title">Cobertura CDMX + EdoMex</h3>
+          <p class="trust-item__desc">Llegamos a salones, haciendas, jardines y centros de convenciones en toda la zona metropolitana. Traslado incluido dentro de 100 km desde CDMX.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" id="faq">
+    <div class="container">
+      <SectionHeader
+        badge="FAQ"
+        title="Preguntas Frecuentes"
+        subtitle="Resolvemos las dudas más comunes sobre renta de equipo para eventos en CDMX y Estado de México. Tipos de evento, precios, cobertura y proceso."
+        subtitle2="Si no encuentras tu respuesta, escríbenos por WhatsApp al 55 4937 5172 y te asesoramos sin compromiso. Cotización personalizada en menos de 24 horas."
+        id="faq-title"
+      />
+    </div>
+    <FaqSection items={faqItems} />
+  </section>
+
+  <Footer />
+  <WhatsAppBubble />
+</Base>
+
+<style>
+  .eventos-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+  }
+
+  .evento-card {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+    background: var(--color-white);
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-lg);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .evento-card__name {
+    font-size: clamp(1.25rem, 3vw, 1.5rem);
+    font-weight: 800;
+    color: var(--color-text);
+    margin-bottom: 0.5rem;
+  }
+
+  .evento-card__desc {
+    font-size: var(--font-size-base);
+    color: var(--color-text-light);
+    line-height: 1.7;
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .evento-card__meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: var(--spacing-md);
+  }
+
+  .evento-card__badge {
+    display: inline-block;
+    font-size: var(--font-size-xs);
+    font-weight: 600;
+    color: var(--color-accent);
+    background: rgba(0, 113, 227, 0.08);
+    padding: 0.25rem 0.75rem;
+    border-radius: 100px;
+  }
+
+  .evento-card__servicios-title {
+    font-size: var(--font-size-sm);
+    font-weight: 700;
+    color: var(--color-text);
+    margin-bottom: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+
+  .evento-card__servicios-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  .evento-card__servicios-list li {
+    font-size: var(--font-size-sm);
+  }
+
+  .evento-card__servicios-list a {
+    color: var(--color-text);
+    padding: 0.5rem 0.75rem;
+    display: block;
+    background: var(--color-bg);
+    border-radius: var(--border-radius);
+    transition: background 0.2s, color 0.2s;
+  }
+
+  .evento-card__servicios-list a:hover {
+    background: rgba(0, 113, 227, 0.08);
+    color: var(--color-accent);
+  }
+
+  @media (min-width: 640px) {
+    .evento-card__servicios-list {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .evento-card {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .evento-card--alt {
+      direction: rtl;
+    }
+
+    .evento-card--alt > * {
+      direction: ltr;
+    }
+  }
+</style>

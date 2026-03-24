@@ -1,0 +1,402 @@
+---
+import Base from '../../layouts/Base.astro';
+import TopBar from '../../components/TopBar.astro';
+import Header from '../../components/Header.astro';
+import Hero from '../../components/Hero.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import FaqSection from '../../components/FaqSection.astro';
+import Footer from '../../components/Footer.astro';
+import WhatsAppBubble from '../../components/WhatsAppBubble.astro';
+import { organizationSchema, faqSchema, breadcrumbSchema } from '../../lib/seo';
+import { WHATSAPP_NUMBER, WHATSAPP_URL_MSG, PHONE_DISPLAY, PHONE_URL, EMAIL, EMAIL_URL } from '../../lib/config';
+
+const faqItems = [
+  { pregunta: '¿Cuánto cuesta la renta de iluminación para fiestas?', respuesta: 'Un paquete básico de iluminación LED (8 luces par + montaje) inicia desde $3,500 MXN. Paquetes con cabezas móviles, uplighting y efectos van desde $12,000 hasta $35,000 MXN. Todo incluye instalación y operación.' },
+  { pregunta: '¿Cuánto cuesta rentar bocinas para un evento?', respuesta: 'El audio para eventos pequeños (hasta 80 personas) inicia desde $3,000 MXN con 2 bocinas JBL. Para eventos de 100-300 personas, los paquetes van desde $6,500 hasta $15,000 MXN. Eventos grandes con line array desde $20,000 MXN.' },
+  { pregunta: '¿Cuánto cuesta un paquete de luz y sonido completo?', respuesta: 'Paquetes combinados de iluminación + audio inician desde $8,500 MXN para fiestas de hasta 100 personas. Paquetes premium para bodas y XV años con DJ, cabezas móviles y efectos desde $18,000 hasta $55,000 MXN.' },
+  { pregunta: '¿El precio incluye instalación?', respuesta: 'Sí, todos nuestros precios incluyen transporte, instalación profesional, operación técnica durante todo el evento y desmontaje. No hay costos ocultos ni cargos adicionales por montaje.' },
+  { pregunta: '¿Cuánto cuesta el servicio de DJ?', respuesta: 'El servicio de DJ profesional con equipo de audio incluido va desde $8,000 MXN por 5 horas. Incluye repertorio personalizado, mezclas en vivo y coordinación con el protocolo de tu evento.' },
+  { pregunta: '¿Tienen algún paquete para bodas todo incluido?', respuesta: 'Sí, nuestro paquete de boda premium incluye audio line array, iluminación completa (uplighting + cabezas móviles + láser), DJ profesional, humo bajo para el primer baile y confeti. Desde $32,000 MXN.' },
+  { pregunta: '¿Cobran por traslado fuera de CDMX?', respuesta: 'No cobramos traslado dentro de los primeros 100 km desde CDMX. Esto cubre la mayoría de venues en Cuernavaca, Tepoztlán y zonas cercanas. Para distancias mayores, cotizamos el traslado adicional.' },
+  { pregunta: '¿Cómo es el proceso de cotización?', respuesta: 'Escríbenos por WhatsApp o llena el formulario con los datos de tu evento. En menos de 24 horas te enviamos una propuesta detallada con opciones de paquetes y precios. Sin compromiso.' },
+];
+
+const structuredData = [
+  organizationSchema(),
+  faqSchema(faqItems),
+  breadcrumbSchema([
+    { name: 'Inicio', url: '/' },
+    { name: 'Cotizar', url: '/cotizar/' },
+  ]),
+];
+
+const servicios = [
+  'Guirnaldas de luces',
+  'Cabezas móviles',
+  'Uplighting / Luces arquitectónicas',
+  'Luz negra UV',
+  'Láser profesional',
+  'Sky Tracker',
+  'Cascadas LED',
+  'Proyector de gobos',
+  'Bocinas / Audio profesional',
+  'DJ profesional',
+  'Humo bajo (nubes)',
+  'Máquina de humo',
+  'Máquina de confeti',
+  'Máquina de burbujas',
+  'Pantalla inflable',
+  'Otro (especificar en mensaje)',
+];
+---
+
+<Base
+  title="Cotizar Evento — Renta de Luz y Sonido CDMX | REDEIL"
+  description="Cotiza gratis tu evento. Renta de iluminación LED, audio JBL, DJ y efectos en CDMX. Respuesta en menos de 24 horas. WhatsApp: 55 4937 5172."
+  structuredData={structuredData}
+>
+  <TopBar />
+  <Header activePage="cotizar" />
+  <Breadcrumb items={[{ name: 'Cotizar', href: '/cotizar/' }]} />
+
+  <Hero
+    badge="Cotización gratuita"
+    title="Cotiza tu Evento sin Compromiso"
+    description="Completa el formulario o escríbenos directo por WhatsApp. Recibe una propuesta personalizada con precios en menos de 24 horas."
+    primaryCta={{ text: 'WhatsApp Directo', href: WHATSAPP_URL_MSG }}
+    secondaryCta={{ text: 'Ver Precios Aproximados', href: '#precios' }}
+  >
+    <Fragment slot="hero-seo">
+      <p>Sabemos que el presupuesto es importante cuando organizas un evento. Por eso en <strong>REDEIL</strong> te ofrecemos cotizaciones personalizadas sin costo ni compromiso. Cuéntanos qué tipo de evento planeas, cuántos invitados esperas y qué servicios te interesan, y nosotros armamos una propuesta a tu medida.</p>
+      <p>Nuestro equipo responde en minutos por WhatsApp y en menos de 24 horas por correo. Atendemos <strong>bodas, XV años, fiestas, eventos corporativos</strong> y cualquier celebración en <strong>CDMX y Estado de México</strong>. Todos los precios incluyen instalación profesional.</p>
+    </Fragment>
+  </Hero>
+
+  <!-- FORMULARIO -->
+  <section class="section">
+    <div class="container">
+      <div class="cotizar-grid">
+        <div class="cotizar-form-wrap">
+          <h2 class="cotizar-form__title">Datos de tu evento</h2>
+          <p class="cotizar-form__sub">Completa los campos y te contactamos con una propuesta. También puedes escribirnos directo por WhatsApp.</p>
+
+          <form id="cotizar-form" class="cotizar-form">
+            <div class="form-group">
+              <label for="nombre">Nombre completo *</label>
+              <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre" />
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="tu@email.com" />
+              </div>
+              <div class="form-group">
+                <label for="telefono">Teléfono / WhatsApp *</label>
+                <input type="tel" id="telefono" name="telefono" required placeholder="55 1234 5678" />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="tipo-evento">Tipo de evento *</label>
+                <select id="tipo-evento" name="tipo-evento" required>
+                  <option value="" disabled selected>Selecciona...</option>
+                  <option value="Boda">Boda</option>
+                  <option value="XV Años">XV Años</option>
+                  <option value="Fiesta / Cumpleaños">Fiesta / Cumpleaños</option>
+                  <option value="Evento Corporativo">Evento Corporativo</option>
+                  <option value="Conferencia">Conferencia</option>
+                  <option value="Baby Shower">Baby Shower</option>
+                  <option value="Graduación">Graduación</option>
+                  <option value="Otro">Otro</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="fecha">Fecha del evento</label>
+                <input type="date" id="fecha" name="fecha" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Servicios que te interesan</label>
+              <div class="checkbox-grid">
+                {servicios.map((s) => (
+                  <label class="checkbox-label">
+                    <input type="checkbox" name="servicios" value={s} />
+                    <span>{s}</span>
+                  </label>
+                ))}
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="mensaje">Cuéntanos más sobre tu evento</label>
+              <textarea id="mensaje" name="mensaje" rows="4" placeholder="Número de invitados, lugar del evento, horario, detalles especiales..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn--wa cotizar-form__submit">Enviar por WhatsApp</button>
+            <p class="cotizar-form__note">Al enviar, se abrirá WhatsApp con tu información para que podamos responderte al instante.</p>
+          </form>
+        </div>
+
+        <!-- SIDEBAR -->
+        <div class="cotizar-sidebar">
+          <div class="sidebar-card">
+            <h3 class="sidebar-card__title">WhatsApp directo</h3>
+            <p class="sidebar-card__text">¿Prefieres escribirnos directamente? Es la forma más rápida de recibir tu cotización.</p>
+            <a href={WHATSAPP_URL_MSG} class="btn btn--wa" style="width:100%" target="_blank" rel="noopener">Abrir WhatsApp</a>
+          </div>
+
+          <div class="sidebar-card">
+            <h3 class="sidebar-card__title">Llámanos</h3>
+            <a href={PHONE_URL} class="sidebar-card__link">{PHONE_DISPLAY}</a>
+            <p class="sidebar-card__text">Lun-Vie 9:00-19:00 | Sáb 10:00-15:00</p>
+          </div>
+
+          <div class="sidebar-card">
+            <h3 class="sidebar-card__title">Email</h3>
+            <a href={EMAIL_URL} class="sidebar-card__link">{EMAIL}</a>
+            <p class="sidebar-card__text">Para cotizaciones detalladas y propuestas formales.</p>
+          </div>
+
+          <div class="sidebar-card sidebar-card--highlight">
+            <h3 class="sidebar-card__title">¿Por qué REDEIL?</h3>
+            <ul class="sidebar-card__list">
+              <li>10+ años de experiencia</li>
+              <li>1,000+ eventos realizados</li>
+              <li>Equipo JBL, QSC, Martin, Chauvet</li>
+              <li>Instalación profesional incluida</li>
+              <li>Cobertura CDMX y Estado de México</li>
+              <li>Cotización sin compromiso</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ CON PRECIOS -->
+  <div id="precios">
+    <FaqSection items={faqItems} />
+  </div>
+
+  <!-- CTA -->
+
+  <Footer />
+  <WhatsAppBubble />
+</Base>
+
+<script>
+  const form = document.getElementById('cotizar-form') as HTMLFormElement;
+  form?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const data = new FormData(form);
+    const nombre = data.get('nombre') || '';
+    const telefono = data.get('telefono') || '';
+    const email = data.get('email') || '';
+    const tipo = data.get('tipo-evento') || '';
+    const fecha = data.get('fecha') || '';
+    const servicios = data.getAll('servicios').join(', ');
+    const mensaje = data.get('mensaje') || '';
+
+    let text = `Hola REDEIL, quiero cotizar mi evento:\n\n`;
+    text += `*Nombre:* ${nombre}\n`;
+    if (telefono) text += `*Teléfono:* ${telefono}\n`;
+    if (email) text += `*Email:* ${email}\n`;
+    if (tipo) text += `*Tipo de evento:* ${tipo}\n`;
+    if (fecha) text += `*Fecha:* ${fecha}\n`;
+    if (servicios) text += `*Servicios:* ${servicios}\n`;
+    if (mensaje) text += `\n*Detalles:* ${mensaje}\n`;
+
+    const waUrl = `https://wa.me/525549375172?text=${encodeURIComponent(text)}`;
+    window.open(waUrl, '_blank');
+  });
+</script>
+
+<style>
+  .cotizar-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-xl);
+  }
+
+  .cotizar-form__title {
+    font-size: var(--font-size-xl);
+    font-weight: 800;
+    color: var(--color-text);
+    margin-bottom: 0.25rem;
+  }
+
+  .cotizar-form__sub {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-light);
+    margin-bottom: var(--spacing-lg);
+    line-height: 1.6;
+  }
+
+  .cotizar-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.375rem;
+  }
+
+  .form-group label {
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    color: var(--color-text);
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+    font-size: var(--font-size-base);
+    font-family: var(--font-primary);
+    color: var(--color-text);
+    background: var(--color-white);
+    width: 100%;
+  }
+
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 3px rgba(0, 113, 227, 0.15);
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+
+  .checkbox-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    margin-top: 0.25rem;
+  }
+
+  .checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: var(--font-size-sm);
+    color: var(--color-text);
+    cursor: pointer;
+    font-weight: 400;
+  }
+
+  .checkbox-label input[type="checkbox"] {
+    width: 1rem;
+    height: 1rem;
+    accent-color: var(--color-accent);
+    flex-shrink: 0;
+  }
+
+  .cotizar-form__submit {
+    align-self: flex-start;
+    padding: 0.875rem 2rem;
+    font-size: var(--font-size-base);
+    border: none;
+    cursor: pointer;
+  }
+
+  .cotizar-form__note {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-light);
+  }
+
+  .cotizar-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+  }
+
+  .sidebar-card {
+    background: var(--color-bg);
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-lg);
+  }
+
+  .sidebar-card--highlight {
+    background: var(--color-primary);
+  }
+
+  .sidebar-card--highlight .sidebar-card__title {
+    color: var(--color-white);
+  }
+
+  .sidebar-card__title {
+    font-size: var(--font-size-lg);
+    font-weight: 700;
+    color: var(--color-text);
+    margin-bottom: 0.5rem;
+  }
+
+  .sidebar-card__text {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-light);
+    line-height: 1.6;
+    margin-top: 0.375rem;
+  }
+
+  .sidebar-card--highlight .sidebar-card__text {
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  .sidebar-card__link {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    color: var(--color-accent);
+  }
+
+  .sidebar-card__list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .sidebar-card__list li {
+    font-size: var(--font-size-sm);
+    color: rgba(255, 255, 255, 0.9);
+    padding-left: 1.25rem;
+    position: relative;
+    line-height: 1.5;
+  }
+
+  .sidebar-card__list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #25d366;
+    font-weight: 700;
+  }
+
+  @media (min-width: 640px) {
+    .form-row {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .checkbox-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .cotizar-grid {
+      grid-template-columns: 1.5fr 1fr;
+    }
+  }
+</style>

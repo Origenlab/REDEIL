@@ -1,0 +1,97 @@
+---
+import '../styles/global.css';
+import { SITE_URL, SITE_NAME, OG_IMAGE_DEFAULT, GEO, BRAND_COLOR } from '../lib/config';
+
+interface Props {
+  title: string;
+  description: string;
+  canonical?: string;
+  ogTitle?: string;
+  ogDescription?: string;
+  ogImage?: string;
+  ogType?: string;
+  noindex?: boolean;
+  structuredData?: object[];
+}
+
+const {
+  title,
+  description,
+  canonical,
+  ogImage,
+  ogType = 'website',
+  noindex = false,
+  structuredData = [],
+} = Astro.props;
+
+const pathname = Astro.url.pathname.replace(/\.html$/, '').replace(/\/$/, '') || '/';
+const canonicalUrl = canonical || `${SITE_URL}${pathname === '/' ? '/' : pathname + '/'}`;
+const ogImageUrl = ogImage ? `${SITE_URL}${ogImage}` : `${SITE_URL}${OG_IMAGE_DEFAULT}`;
+const ogTitleFinal = Astro.props.ogTitle || title;
+const ogDescFinal = Astro.props.ogDescription || description;
+---
+
+<!DOCTYPE html>
+<html lang="es-MX">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>{title}</title>
+  <meta name="description" content={description}>
+  {noindex
+    ? <meta name="robots" content="noindex, follow">
+    : <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  }
+  <link rel="canonical" href={canonicalUrl}>
+
+  <!-- Geo meta tags para SEO local -->
+  <meta name="geo.region" content={GEO.region}>
+  <meta name="geo.placename" content={GEO.placename}>
+  <meta name="geo.position" content={`${GEO.latitude};${GEO.longitude}`}>
+  <meta name="ICBM" content={`${GEO.latitude}, ${GEO.longitude}`}>
+
+  <!-- Open Graph -->
+  <meta property="og:title" content={ogTitleFinal}>
+  <meta property="og:description" content={ogDescFinal}>
+  <meta property="og:type" content={ogType}>
+  <meta property="og:url" content={canonicalUrl}>
+  <meta property="og:image" content={ogImageUrl}>
+  <meta property="og:site_name" content={SITE_NAME}>
+  <meta property="og:locale" content="es_MX">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content={ogTitleFinal}>
+  <meta name="twitter:description" content={ogDescFinal}>
+  <meta name="twitter:image" content={ogImageUrl}>
+
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content={BRAND_COLOR}>
+
+  <!-- Inter Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Structured Data -->
+  {structuredData.map((data) => (
+    <script type="application/ld+json" set:html={JSON.stringify(data)} />
+  ))}
+
+  <slot name="head" />
+
+  <!-- Rybbit Analytics -->
+  <script src="https://app.rybbit.io/api/script.js" data-site-id="9340b2303c86" defer></script>
+</head>
+
+<body>
+  <slot />
+</body>
+
+</html>

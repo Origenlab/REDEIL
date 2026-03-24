@@ -1,0 +1,421 @@
+---
+import Base from '../../layouts/Base.astro';
+import TopBar from '../../components/TopBar.astro';
+import Header from '../../components/Header.astro';
+import Hero from '../../components/Hero.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import FaqSection from '../../components/FaqSection.astro';
+import Footer from '../../components/Footer.astro';
+import WhatsAppBubble from '../../components/WhatsAppBubble.astro';
+import { faqSchema, localBusinessSchema, breadcrumbSchema } from '../../lib/seo';
+import { WHATSAPP_URL_MSG, SITE_URL } from '../../lib/config';
+
+const faqItems = [
+  { pregunta: '¿Qué zonas de la CDMX cubren?', respuesta: 'Cubrimos toda la Ciudad de México incluyendo Polanco, Condesa, Roma, Coyoacán, Del Valle, Santa Fe, San Ángel, Pedregal, Xochimilco, Tlalpan, Narvarte, Benito Juárez, Miguel Hidalgo, Cuauhtémoc y Azcapotzalco. Nuestro equipo llega puntualmente a cualquier venue de la ciudad.' },
+  { pregunta: '¿Atienden eventos en el Estado de México?', respuesta: 'Sí, cubrimos toda la Zona Metropolitana del Estado de México: Naucalpan, Tlalnepantla, Huixquilucan, Atizapán, Satélite, Interlomas, Metepec, Toluca, Ecatepec, Nezahualcóyotl, Texcoco, Coacalco, Cuautitlán Izcalli, Tultitlán y Chalco.' },
+  { pregunta: '¿Cobran extra por traslado fuera de la CDMX?', respuesta: 'La mayoría de los municipios del Estado de México están dentro de nuestra zona de cobertura estándar sin cargo extra. Para zonas más alejadas como Toluca, Metepec o Texcoco, puede aplicar un cargo de traslado que indicamos transparentemente en la cotización.' },
+  { pregunta: '¿Cuánto tiempo antes deben llegar para instalar?', respuesta: 'Normalmente llegamos 3-5 horas antes del evento dependiendo de la complejidad de la producción. Coordinamos directamente con tu venue para respetar sus horarios y protocolos de acceso.' },
+  { pregunta: '¿Qué pasa si mi zona no aparece en la lista?', respuesta: 'Si tu zona no está listada, escríbenos de todas formas. Es muy probable que podamos atenderte. Nuestra cobertura se extiende a toda la Zona Metropolitana del Valle de México y podemos evaluar ubicaciones especiales caso por caso.' },
+];
+
+const structuredData = [
+  localBusinessSchema(),
+  faqSchema(faqItems),
+  breadcrumbSchema([
+    { name: 'Inicio', url: '/' },
+    { name: 'Zonas de Servicio', url: '/zonas/' },
+  ]),
+];
+---
+
+<Base
+  title="Zonas de Servicio CDMX y EdoMex | REDEIL"
+  description="REDEIL cubre 30 zonas en CDMX y Estado de México. Renta de iluminación, audio y efectos para eventos. Polanco, Condesa, Santa Fe, Interlomas y más."
+  structuredData={structuredData}
+>
+  <TopBar />
+  <Header />
+  <Breadcrumb items={[
+    { name: 'Zonas de Servicio', href: '/zonas/' },
+  ]} />
+
+  <Hero
+    badge="30 zonas de cobertura"
+    title="Cobertura CDMX y Zona Metropolitana"
+    description="Llevamos iluminación profesional, audio de alta calidad y efectos especiales a eventos en toda la Ciudad de México y los principales municipios del Esta..."
+    primaryCta={{ text: 'Cotizar ahora', href: WHATSAPP_URL_MSG }}
+    secondaryCta={{ text: 'Ver zonas', href: '#zonas' }}
+  >
+    <Fragment slot="hero-seo">
+      <p>REDEIL ofrece renta de iluminación, audio y efectos especiales para eventos en toda la Zona Metropolitana del Valle de México. Desde Polanco y la Condesa hasta Interlomas y Satélite, nuestro equipo profesional llega con puntualidad a cualquier venue con todo el equipo necesario para transformar tu evento.</p>
+      <p>Cubrimos bodas, XV años, eventos corporativos, fiestas privadas, graduaciones y todo tipo de celebraciones. Instalación profesional incluida, soporte técnico durante el evento y la mejor tecnología LED disponible en el mercado.</p>
+    </Fragment>
+  </Hero>
+
+  <!-- Zonas Grid -->
+  <section class="section" id="zonas">
+    <div class="container">
+      <div class="zonas-layout">
+        <!-- CDMX -->
+        <div class="zonas-col">
+          <h2 class="zonas-col__title">Ciudad de México</h2>
+          <p class="zonas-col__desc">15 zonas en las principales alcaldías y colonias de la CDMX.</p>
+          <div class="zonas-list">
+            <a href="/zonas/polanco/" class="zona-card">
+              <span class="zona-card__name">Polanco</span>
+              <span class="zona-card__arrow">→</span>
+            </a>
+            <a href="/zonas/condesa/" class="zona-card">
+              <span class="zona-card__name">Condesa</span>
+              <span class="zona-card__arrow">→</span>
+            </a>
+            <a href="/zonas/roma/" class="zona-card">
+              <span class="zona-card__name">Roma</span>
+              <span class="zona-card__arrow">→</span>
+            </a>
+            <a href="/zonas/coyoacan/" class="zona-card">
+              <span class="zona-card__name">Coyoacán</span>
+              <span class="zona-card__arrow">→</span>
+            </a>
+            <a href="/zonas/del-valle/" class="zona-card">
+              <span class="zona-card__name">Del Valle</span>
+              <span class="zona-card__arrow">→</span>
+            </a>
+            <a href="/zonas/santa-fe/" class="zona-card">
+              <span class="zona-card__name">Santa Fe</span>
+              <span class="zona-card__arrow">→</span>
+            </a>
+            <a href="/zonas/narvarte/" class="zona-card">
+              <span class="zona-card__name">Narvarte</span>
+              <span class="zona-card__arrow">→</span>
+            </a>
+            <a href="/zonas/san-angel/" class="zona-card">
+              <span class="zona-card__name">San Ángel</span>
+              <span class="zona-card__arrow">→</span>
+            </a>
+            <a href="/zonas/pedregal/" class="zona-card">
+              <span class="zona-card__name">Pedregal</span>
+              <span class="zona-card__arrow">→</span>
+            </a>
+            <a href="/zonas/xochimilco/" class="zona-card">
+              <span class="zona-card__name">Xochimilco</span>
+              <span class="zona-card__arrow">→</span>
+            </a>
+            <a href="/zonas/tlalpan/" class="zona-card">
+              <span class="zona-card__name">Tlalpan</span>
+              <span class="zona-card__arrow">→</span>
+            </a>
+            <a href="/zonas/benito-juarez/" class="zona-card">
+              <span class="zona-card__name">Benito Juárez</span>
+              <span class="zona-card__arrow">→</span>
+            </a>
+            <a href="/zonas/miguel-hidalgo/" class="zona-card">
+              <span class="zona-card__name">Miguel Hidalgo</span>
+              <span class="zona-card__arrow">→</span>
+            </a>
+            <a href="/zonas/cuauhtemoc/" class="zona-card">
+              <span class="zona-card__name">Cuauhtémoc</span>
+              <span class="zona-card__arrow">→</span>
+            </a>
+            <a href="/zonas/azcapotzalco/" class="zona-card">
+              <span class="zona-card__name">Azcapotzalco</span>
+              <span class="zona-card__arrow">→</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Estado de México -->
+        <div class="zonas-col">
+          <h2 class="zonas-col__title">Estado de México</h2>
+          <p class="zonas-col__desc">15 municipios de la Zona Metropolitana con servicio sin cargo extra.</p>
+          <div class="zonas-list">
+            <a href="/zonas/naucalpan/" class="zona-card">
+              <span class="zona-card__name">Naucalpan</span>
+              <span class="zona-card__arrow">→</span>
+            </a>
+            <a href="/zonas/tlalnepantla/" class="zona-card">
+              <span class="zona-card__name">Tlalnepantla</span>
+              <span class="zona-card__arrow">→</span>
+            </a>
+            <a href="/zonas/huixquilucan/" class="zona-card">
+              <span class="zona-card__name">Huixquilucan</span>
+              <span class="zona-card__arrow">→</span>
+            </a>
+            <a href="/zonas/atizapan/" class="zona-card">
+              <span class="zona-card__name">Atizapán de Zaragoza</span>
+              <span class="zona-card__arrow">→</span>
+            </a>
+            <a href="/zonas/satelite/" class="zona-card">
+              <span class="zona-card__name">Ciudad Satélite</span>
+              <span class="zona-card__arrow">→</span>
+            </a>
+            <a href="/zonas/interlomas/" class="zona-card">
+              <span class="zona-card__name">Interlomas</span>
+              <span class="zona-card__arrow">→</span>
+            </a>
+            <a href="/zonas/metepec/" class="zona-card">
+              <span class="zona-card__name">Metepec</span>
+              <span class="zona-card__arrow">→</span>
+            </a>
+            <a href="/zonas/toluca/" class="zona-card">
+              <span class="zona-card__name">Toluca</span>
+              <span class="zona-card__arrow">→</span>
+            </a>
+            <a href="/zonas/ecatepec/" class="zona-card">
+              <span class="zona-card__name">Ecatepec</span>
+              <span class="zona-card__arrow">→</span>
+            </a>
+            <a href="/zonas/nezahualcoyotl/" class="zona-card">
+              <span class="zona-card__name">Nezahualcóyotl</span>
+              <span class="zona-card__arrow">→</span>
+            </a>
+            <a href="/zonas/texcoco/" class="zona-card">
+              <span class="zona-card__name">Texcoco</span>
+              <span class="zona-card__arrow">→</span>
+            </a>
+            <a href="/zonas/coacalco/" class="zona-card">
+              <span class="zona-card__name">Coacalco</span>
+              <span class="zona-card__arrow">→</span>
+            </a>
+            <a href="/zonas/cuautitlan-izcalli/" class="zona-card">
+              <span class="zona-card__name">Cuautitlán Izcalli</span>
+              <span class="zona-card__arrow">→</span>
+            </a>
+            <a href="/zonas/tultitlan/" class="zona-card">
+              <span class="zona-card__name">Tultitlán</span>
+              <span class="zona-card__arrow">→</span>
+            </a>
+            <a href="/zonas/chalco/" class="zona-card">
+              <span class="zona-card__name">Chalco</span>
+              <span class="zona-card__arrow">→</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mapa conceptual -->
+  <section class="section section--bg">
+    <div class="container content-prose">
+      <h2>Cobertura Completa en la Zona Metropolitana</h2>
+      <p>Nuestra cobertura abarca toda la Zona Metropolitana del Valle de México, desde las zonas más exclusivas como Polanco, Santa Fe e Interlomas hasta municipios del oriente como Ecatepec, Nezahualcóyotl y Chalco.</p>
+
+      <div class="mapa-grid">
+        <div class="mapa-sector">
+          <h3>Poniente</h3>
+          <ul>
+            <li>Santa Fe</li>
+            <li>Huixquilucan</li>
+            <li>Interlomas</li>
+            <li>Naucalpan</li>
+          </ul>
+        </div>
+        <div class="mapa-sector">
+          <h3>Norte</h3>
+          <ul>
+            <li>Satélite</li>
+            <li>Tlalnepantla</li>
+            <li>Atizapán</li>
+            <li>Coacalco</li>
+            <li>Cuautitlán Izcalli</li>
+            <li>Tultitlán</li>
+            <li>Ecatepec</li>
+            <li>Azcapotzalco</li>
+          </ul>
+        </div>
+        <div class="mapa-sector">
+          <h3>Centro</h3>
+          <ul>
+            <li>Polanco</li>
+            <li>Condesa</li>
+            <li>Roma</li>
+            <li>Cuauhtémoc</li>
+            <li>Miguel Hidalgo</li>
+            <li>Narvarte</li>
+            <li>Del Valle</li>
+            <li>Benito Juárez</li>
+          </ul>
+        </div>
+        <div class="mapa-sector">
+          <h3>Sur</h3>
+          <ul>
+            <li>San Ángel</li>
+            <li>Pedregal</li>
+            <li>Coyoacán</li>
+            <li>Tlalpan</li>
+            <li>Xochimilco</li>
+          </ul>
+        </div>
+        <div class="mapa-sector">
+          <h3>Oriente</h3>
+          <ul>
+            <li>Nezahualcóyotl</li>
+            <li>Texcoco</li>
+            <li>Chalco</li>
+          </ul>
+        </div>
+        <div class="mapa-sector">
+          <h3>Valle de Toluca</h3>
+          <ul>
+            <li>Toluca</li>
+            <li>Metepec</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section cta-zona">
+    <div class="container cta-zona__inner">
+      <h2 class="cta-zona__title">¿No encuentras tu zona?</h2>
+      <p class="cta-zona__desc">Escríbenos de todas formas. Nuestra cobertura es amplia y podemos evaluar tu ubicación sin compromiso.</p>
+      <a href={WHATSAPP_URL_MSG} target="_blank" rel="noopener" class="btn btn--wa">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.75.75 0 0 0 .917.918l4.462-1.494A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.336 0-4.512-.703-6.32-1.905l-.44-.295-2.641.884.884-2.638-.306-.453A9.958 9.958 0 0 1 2 12C2 6.486 6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"/></svg>
+        Cotizar por WhatsApp
+      </a>
+    </div>
+  </section>
+
+  <FaqSection items={faqItems} />
+
+  <Footer />
+  <WhatsAppBubble />
+</Base>
+
+<style>
+  /* Zonas layout */
+  .zonas-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-xl);
+  }
+  @media (min-width: 768px) {
+    .zonas-layout { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  .zonas-col__title {
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    color: var(--color-text);
+    margin-bottom: var(--spacing-xs);
+  }
+  .zonas-col__desc {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-light);
+    margin-bottom: var(--spacing-md);
+  }
+
+  .zonas-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .zona-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.875rem var(--spacing-md);
+    background: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    color: inherit;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+  .zona-card:hover {
+    border-color: var(--color-accent);
+    box-shadow: var(--shadow-sm);
+  }
+  .zona-card__name {
+    font-size: var(--font-size-base);
+    font-weight: 500;
+    color: var(--color-text);
+  }
+  .zona-card__arrow {
+    font-size: var(--font-size-base);
+    color: var(--color-accent);
+    font-weight: 600;
+  }
+
+  /* Mapa grid */
+  .mapa-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-xl);
+  }
+  @media (min-width: 640px) {
+    .mapa-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (min-width: 1024px) {
+    .mapa-grid { grid-template-columns: repeat(3, 1fr); }
+  }
+
+  .mapa-sector h3 {
+    font-size: var(--font-size-base);
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-xs);
+    padding-bottom: var(--spacing-xs);
+    border-bottom: 2px solid var(--color-accent);
+  }
+  .mapa-sector ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.375rem;
+  }
+  .mapa-sector li {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-light);
+    padding-left: 1rem;
+    position: relative;
+  }
+  .mapa-sector li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--color-accent);
+    font-weight: 700;
+  }
+
+  /* CTA zona */
+  .cta-zona {
+    background: linear-gradient(135deg, var(--color-primary) 0%, #0f1f3d 100%);
+    text-align: center;
+  }
+  .cta-zona__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-md);
+  }
+  .cta-zona__title {
+    font-size: var(--font-size-2xl);
+    font-weight: 700;
+    color: var(--color-white);
+  }
+  .cta-zona__desc {
+    font-size: var(--font-size-lg);
+    color: rgba(255, 255, 255, 0.8);
+    max-width: 520px;
+  }
+
+  /* Content prose */
+  .content-prose h2 {
+    font-size: var(--font-size-2xl);
+    font-weight: 700;
+    color: var(--color-text);
+    margin-bottom: var(--spacing-sm);
+  }
+  .content-prose p {
+    font-size: var(--font-size-base);
+    color: var(--color-text-light);
+    line-height: 1.7;
+    max-width: 720px;
+  }
+</style>

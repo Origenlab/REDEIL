@@ -1,0 +1,365 @@
+---
+import { NAV_LINKS, WHATSAPP_URL_MSG } from '../lib/config';
+
+interface Props {
+  activePage?: string;
+}
+
+const { activePage = '' } = Astro.props;
+---
+
+<header class="header" role="banner">
+  <div class="container">
+    <div class="header__logo">
+      <a href="/" aria-label="REDEIL - Inicio">
+        <img
+          src="/img/redeil.avif"
+          alt="REDEIL - Renta de Iluminación y Sonido para Eventos en CDMX"
+          class="header__logo-img"
+          width="194"
+          height="70"
+          loading="eager"
+          decoding="async"
+          fetchpriority="high"
+        >
+      </a>
+    </div>
+
+    <nav class="nav-desktop" role="navigation" aria-label="Navegación principal">
+      <ul class="nav-desktop__list">
+        {NAV_LINKS.map((link) => (
+          <li class={`nav-desktop__item ${link.children ? 'nav-desktop__item--has-dropdown' : ''}`}>
+            <a
+              href={link.href}
+              class={`nav-desktop__link ${activePage === link.label.toLowerCase() ? 'nav-desktop__link--active' : ''}`}
+            >
+              {link.label}
+              {link.children && <span class="nav-desktop__arrow" aria-hidden="true">&#9660;</span>}
+            </a>
+            {link.children && (
+              <div class="nav-desktop__dropdown">
+                {link.children.map((child) => (
+                  <a href={child.href} class="nav-desktop__dropdown-link">{child.label}</a>
+                ))}
+              </div>
+            )}
+          </li>
+        ))}
+      </ul>
+    </nav>
+
+    <a href={WHATSAPP_URL_MSG} class="btn btn--accent btn--sm header__cta" target="_blank" rel="noopener">Cotizar</a>
+
+    <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false">
+      <span class="hamburger__line"></span>
+      <span class="hamburger__line"></span>
+      <span class="hamburger__line"></span>
+    </button>
+  </div>
+</header>
+
+<div class="mobile-overlay" id="mobile-overlay" aria-hidden="true"></div>
+
+<nav class="mobile-nav" id="mobile-nav" role="navigation" aria-label="Navegación móvil" aria-hidden="true">
+  <ul>
+    {NAV_LINKS.map((link) => (
+      <li class="mobile-nav__item">
+        {link.children ? (
+          <>
+            <button class="mobile-nav__link mobile-nav__toggle" aria-expanded="false">
+              {link.label} <span class="mobile-nav__arrow" aria-hidden="true">&#9660;</span>
+            </button>
+            <div class="mobile-nav__submenu">
+              {link.children.map((child) => (
+                <a href={child.href} class="mobile-nav__sublink">{child.label}</a>
+              ))}
+              <a href={link.href} class="mobile-nav__sublink mobile-nav__sublink--all">Ver todo {link.label} &rarr;</a>
+            </div>
+          </>
+        ) : (
+          <a href={link.href} class="mobile-nav__link">{link.label}</a>
+        )}
+      </li>
+    ))}
+  </ul>
+  <div class="mobile-nav__cta">
+    <a href={WHATSAPP_URL_MSG} class="btn btn--wa" target="_blank" rel="noopener" style="width:100%">Cotizar por WhatsApp</a>
+  </div>
+</nav>
+
+<script>
+  // Hamburger toggle
+  const hamburger = document.getElementById('hamburger');
+  const mobileNav = document.getElementById('mobile-nav');
+  const overlay = document.getElementById('mobile-overlay');
+
+  if (hamburger && mobileNav && overlay) {
+    hamburger.addEventListener('click', () => {
+      const isOpen = mobileNav.classList.toggle('mobile-nav--active');
+      hamburger.classList.toggle('hamburger--active');
+      overlay.classList.toggle('mobile-overlay--active');
+      hamburger.setAttribute('aria-expanded', String(isOpen));
+      mobileNav.setAttribute('aria-hidden', String(!isOpen));
+      document.body.style.overflow = isOpen ? 'hidden' : '';
+    });
+
+    overlay.addEventListener('click', () => {
+      mobileNav.classList.remove('mobile-nav--active');
+      hamburger.classList.remove('hamburger--active');
+      overlay.classList.remove('mobile-overlay--active');
+      hamburger.setAttribute('aria-expanded', 'false');
+      mobileNav.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    });
+  }
+
+  // Mobile dropdown toggles
+  document.querySelectorAll('.mobile-nav__toggle').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const submenu = btn.nextElementSibling;
+      const isOpen = submenu?.classList.toggle('mobile-nav__submenu--open');
+      btn.querySelector('.mobile-nav__arrow')?.classList.toggle('mobile-nav__arrow--open');
+      btn.setAttribute('aria-expanded', String(!!isOpen));
+    });
+  });
+
+  // Header shadow on scroll
+  const header = document.querySelector('.header');
+  if (header) {
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('header--scrolled', window.scrollY > 10);
+    }, { passive: true });
+  }
+</script>
+
+<style>
+  .header {
+    background-color: var(--color-white);
+    height: var(--header-height);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .header--scrolled {
+    box-shadow: var(--shadow-md);
+  }
+
+  .header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  .header__logo { flex-shrink: 0; }
+  .header__logo a { display: block; }
+  .header__logo-img {
+    width: 160px;
+    height: auto;
+    max-height: 50px;
+    object-fit: contain;
+  }
+
+  .header__cta { display: none; }
+
+  /* Desktop Nav */
+  .nav-desktop { display: none; }
+
+  .nav-desktop__list {
+    display: flex;
+    align-items: center;
+    gap: 0;
+  }
+
+  .nav-desktop__item { position: relative; }
+
+  .nav-desktop__link {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0.5rem 1rem;
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    color: var(--color-text);
+    white-space: nowrap;
+    transition: color 0.2s ease;
+  }
+
+  .nav-desktop__link:hover,
+  .nav-desktop__link--active {
+    color: var(--color-accent);
+  }
+
+  .nav-desktop__arrow {
+    font-size: 10px;
+    transition: transform 0.2s ease;
+  }
+
+  .nav-desktop__item--has-dropdown:hover .nav-desktop__arrow {
+    transform: rotate(180deg);
+  }
+
+  /* Dropdown */
+  .nav-desktop__dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-top: 3px solid var(--color-accent);
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
+    box-shadow: var(--shadow-lg);
+    padding: 0.5rem 0;
+    min-width: 220px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(8px);
+    transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease;
+    pointer-events: none;
+  }
+
+  .nav-desktop__item--has-dropdown:hover .nav-desktop__dropdown,
+  .nav-desktop__item--has-dropdown:focus-within .nav-desktop__dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  .nav-desktop__dropdown-link {
+    display: block;
+    padding: 0.5rem 1.25rem;
+    font-size: var(--font-size-sm);
+    color: var(--color-text-light);
+    transition: color 0.15s ease;
+  }
+
+  .nav-desktop__dropdown-link:hover {
+    color: var(--color-accent);
+  }
+
+  /* Hamburger */
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    gap: 5px;
+    z-index: 1100;
+  }
+
+  .hamburger__line {
+    width: 24px;
+    height: 2px;
+    background: var(--color-text);
+    border-radius: 2px;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+  }
+
+  .hamburger--active .hamburger__line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  .hamburger--active .hamburger__line:nth-child(2) { opacity: 0; }
+  .hamburger--active .hamburger__line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+
+  /* Mobile Overlay */
+  .mobile-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1050;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+  }
+
+  .mobile-overlay--active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  /* Mobile Nav */
+  .mobile-nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 320px;
+    max-width: 85vw;
+    height: 100vh;
+    background: var(--color-white);
+    z-index: 1060;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    overflow-y: auto;
+    padding: var(--spacing-2xl) var(--spacing-md) var(--spacing-lg);
+  }
+
+  .mobile-nav--active { transform: translateX(0); }
+
+  .mobile-nav__item {
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .mobile-nav__link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--spacing-sm) 0;
+    font-size: var(--font-size-base);
+    font-weight: 500;
+    color: var(--color-text);
+    width: 100%;
+    text-align: left;
+  }
+
+  .mobile-nav__link:hover { color: var(--color-accent); }
+
+  .mobile-nav__arrow {
+    font-size: 12px;
+    transition: transform 0.2s ease;
+  }
+
+  .mobile-nav__arrow--open { transform: rotate(180deg); }
+
+  .mobile-nav__submenu {
+    display: none;
+    padding-bottom: var(--spacing-sm);
+  }
+
+  .mobile-nav__submenu--open { display: block; }
+
+  .mobile-nav__sublink {
+    display: block;
+    font-size: var(--font-size-sm);
+    color: var(--color-text-light);
+    padding: 0.4rem 0 0.4rem var(--spacing-sm);
+  }
+
+  .mobile-nav__sublink:hover { color: var(--color-accent); }
+
+  .mobile-nav__sublink--all {
+    font-weight: 600;
+    color: var(--color-accent);
+    margin-top: var(--spacing-xs);
+    border-top: 1px solid var(--color-border);
+    padding-top: var(--spacing-sm);
+  }
+
+  .mobile-nav__cta { margin-top: var(--spacing-lg); }
+
+  @media (min-width: 1024px) {
+    .nav-desktop { display: block; }
+    .hamburger { display: none; }
+    .header__cta { display: inline-flex; flex-shrink: 0; }
+  }
+
+  @media print {
+    .header { display: none !important; }
+  }
+</style>

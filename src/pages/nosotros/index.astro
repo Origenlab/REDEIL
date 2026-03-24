@@ -1,0 +1,127 @@
+---
+import Base from '../../layouts/Base.astro';
+import TopBar from '../../components/TopBar.astro';
+import Header from '../../components/Header.astro';
+import Hero from '../../components/Hero.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import SectionHeader from '../../components/SectionHeader.astro';
+import Footer from '../../components/Footer.astro';
+import WhatsAppBubble from '../../components/WhatsAppBubble.astro';
+import { organizationSchema, breadcrumbSchema } from '../../lib/seo';
+import { WHATSAPP_URL_MSG } from '../../lib/config';
+
+const structuredData = [
+  organizationSchema(),
+  breadcrumbSchema([
+    { name: 'Inicio', url: '/' },
+    { name: 'Nosotros', url: '/nosotros/' },
+  ]),
+];
+---
+
+<Base
+  title="Nosotros — Renta de Iluminación y Audio CDMX | REDEIL"
+  description="Conoce a REDEIL: más de 10 años de experiencia en renta de iluminación, audio y equipos para eventos en CDMX y Estado de México."
+  structuredData={structuredData}
+>
+  <TopBar />
+  <Header activePage="nosotros" />
+  <Breadcrumb items={[{ name: 'Nosotros', href: '/nosotros/' }]} />
+
+  <Hero
+    badge="Sobre REDEIL"
+    title="10+ Años Haciendo Eventos Inolvidables"
+    description="Desde nuestra fundación, REDEIL ha sido sinónimo de calidad y confiabilidad en renta de equipos para eventos en CDMX y Estado de México."
+    primaryCta={{ text: 'Cotizar mi evento', href: WHATSAPP_URL_MSG }}
+  >
+    <Fragment slot="hero-seo">
+      <p>Desde nuestra fundación, <strong>REDEIL</strong> ha sido sinónimo de <strong>calidad y confiabilidad en renta de equipos para eventos</strong>. Con más de 10 años de experiencia en el mercado, hemos participado en cientos de <strong>bodas</strong>, <strong>XV años</strong>, eventos corporativos y producciones en <strong>CDMX</strong> y <strong>Estado de México</strong>.</p>
+      <p>Cada proyecto es una oportunidad para superar expectativas y crear momentos que permanecen en la memoria de nuestros clientes y sus invitados.</p>
+    </Fragment>
+  </Hero>
+
+  <section class="section">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-content">
+          <h2 class="about-content__title">Experiencia que se nota en cada detalle</h2>
+          <p>Con más de 10 años de experiencia en el mercado, hemos tenido el honor de participar en cientos de <strong>bodas</strong>, <strong>XV años</strong>, eventos corporativos y producciones en <strong>CDMX</strong> y <strong>Estado de México</strong>. Cada proyecto es una oportunidad para superar expectativas y crear momentos que permanecen en la memoria.</p>
+          <p>Nuestro equipo está formado por técnicos certificados con amplia experiencia en <strong>iluminación profesional</strong>, <strong>sistemas de audio</strong> y montaje de eventos. No solo rentamos equipos: ofrecemos servicios completos personalizados para cada tipo de celebración. Sabemos que un evento exitoso requiere más que buena tecnología; requiere compromiso, atención al detalle y un partner confiable.</p>
+          <p>Trabajamos con marcas líderes como <strong>JBL</strong>, <strong>QSC</strong>, <strong>Martin Professional</strong> y <strong>Chauvet</strong>, garantizando que cada boda, cada XV años y cada evento corporativo tenga el respaldo de tecnología de vanguardia. Nuestro inventario se actualiza constantemente para ofrecerte las últimas tendencias en <strong>iluminación LED</strong>, <strong>efectos especiales</strong> y <strong>audio profesional</strong>.</p>
+        </div>
+        <div class="about-content">
+          <h2 class="about-content__title">Servicios completos en CDMX y Estado de México</h2>
+          <p>Ofrecemos desde <strong>guirnaldas de luces vintage con focos Edison</strong> perfectas para bodas en jardín, hasta tecnología de punta como <strong>cabezas móviles LED</strong>, <strong>Sky Tracker</strong> (rayos de luz verticales visibles a kilómetros), <strong>iluminación láser</strong> y <strong>uplighting arquitectónico</strong> que transforma por completo cualquier espacio.</p>
+          <p>También contamos con <strong>luz negra UV profesional</strong> para fiestas temáticas neón, <strong>City Color LED</strong> para efectos dinámicos, y sistemas de audio que van desde bocinas portátiles hasta line arrays para eventos masivos. Todo nuestro equipo utiliza tecnología de última generación.</p>
+          <p>Cada servicio incluye <strong>transporte, instalación profesional, operación durante el evento y desmontaje</strong>. Nuestro compromiso es que tú solo te preocupes por disfrutar mientras nosotros nos encargamos de todos los detalles técnicos. Ya sea una boda íntima de 50 personas, una quinceañera de 200 invitados, o un evento corporativo de 500 asistentes, tenemos la experiencia y el equipo para hacerlo memorable.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cobertura -->
+  <section class="section section--bg">
+    <div class="container">
+      <SectionHeader
+        title="Nuestra Cobertura"
+        subtitle="Llegamos a donde sea tu evento en CDMX y Estado de México, hasta 100 km sin costo adicional de traslado."
+        id="cobertura-title"
+      />
+      <div class="about-grid">
+        <div class="about-content">
+          <p>Nuestra cobertura abarca toda la <strong>Ciudad de México</strong> y el <strong>Estado de México</strong>, incluyendo zonas populares para eventos como Coyoacán, Polanco, Santa Fe, San Ángel, Tlalpan, Xochimilco, Interlomas, Satélite, Metepec, Toluca y Valle de Bravo.</p>
+          <p>Sin importar dónde se realice tu evento, nuestro equipo llega puntual, instalado y listo para funcionar. También cubrimos haciendas en Cuernavaca, Tepoztlán y otras ubicaciones populares para bodas y celebraciones.</p>
+        </div>
+        <div class="about-content">
+          <p><strong>Sucursales estratégicas:</strong></p>
+          <p>• <strong>Benito Juárez:</strong> Av. Insurgentes Sur 615, Piso 6, Nápoles, 03810 CDMX</p>
+          <p>• <strong>Polanco:</strong> Av. Homero 1933, Piso 3, 11510 CDMX</p>
+          <p>• <strong>Naucalpan:</strong> Blvd. Manuel Ávila Camacho 5, Lomas de Sotelo, 53390 EdoMex</p>
+          <p>• <strong>Tlalnepantla:</strong> Emilio Carranza 17, Tlalnepantla Centro, 54000 EdoMex</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lo que nos hace diferentes -->
+  <section class="section">
+    <div class="container">
+      <SectionHeader
+        title="Lo Que Nos Hace Diferentes"
+        subtitle="No solo rentamos equipos. Ofrecemos una experiencia completa de principio a fin."
+        id="diferenciadores-title"
+      />
+      <div class="trust-grid">
+        <div class="trust-item">
+          <h3 class="trust-item__title">Técnicos especializados</h3>
+          <p class="trust-item__desc">Personal capacitado en iluminación profesional, ingeniería de audio y montaje de eventos. No improvisamos. Cada técnico tiene años de experiencia en campo.</p>
+        </div>
+        <div class="trust-item">
+          <h3 class="trust-item__title">Equipo de primera</h3>
+          <p class="trust-item__desc">JBL, QSC, Martin Professional, Chauvet. Inventario actualizado con tecnología de vanguardia. Mantenimiento constante para garantizar funcionamiento perfecto.</p>
+        </div>
+        <div class="trust-item">
+          <h3 class="trust-item__title">Todo incluido</h3>
+          <p class="trust-item__desc">Transporte, montaje, operación y desmontaje. Sin sorpresas, sin costos ocultos. Desde que llegamos hasta que nos vamos, nos encargamos de todo.</p>
+        </div>
+        <div class="trust-item">
+          <h3 class="trust-item__title">Cobertura amplia</h3>
+          <p class="trust-item__desc">CDMX, Estado de México y hasta 100 km a la redonda. Llegamos donde sea tu evento, desde salones de fiesta hasta haciendas en la montaña.</p>
+        </div>
+        <div class="trust-item">
+          <h3 class="trust-item__title">Atención personalizada</h3>
+          <p class="trust-item__desc">Cada evento es diferente. Diseñamos propuestas a la medida de tu estilo, espacio y presupuesto. Sin paquetes genéricos.</p>
+        </div>
+        <div class="trust-item">
+          <h3 class="trust-item__title">Respuesta rápida</h3>
+          <p class="trust-item__desc">Cotización por WhatsApp en minutos. Propuesta detallada en menos de 24 horas. Sin compromiso. Sin letra chica.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+
+  <Footer />
+  <WhatsAppBubble />
+</Base>

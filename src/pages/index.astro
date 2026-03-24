@@ -1,0 +1,283 @@
+---
+import Base from '../layouts/Base.astro';
+import TopBar from '../components/TopBar.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import CtaBar from '../components/CtaBar.astro';
+import SectionHeader from '../components/SectionHeader.astro';
+import CategoryCard from '../components/CategoryCard.astro';
+import ServiceCard from '../components/ServiceCard.astro';
+import FaqSection from '../components/FaqSection.astro';
+import TestimonialCard from '../components/TestimonialCard.astro';
+import Footer from '../components/Footer.astro';
+import WhatsAppBubble from '../components/WhatsAppBubble.astro';
+import { organizationSchema, localBusinessSchema, webSiteSchema, faqSchema } from '../lib/seo';
+import { ILUMINACION_SERVICES, AUDIO_SERVICES, EQUIPOS_SERVICES, WHATSAPP_URL_MSG } from '../lib/config';
+
+const faqItems = [
+  { pregunta: '¿Cuánto cuesta la renta de iluminación para eventos en CDMX?', respuesta: 'Un paquete básico de iluminación LED para fiestas pequeñas inicia desde $3,500 MXN. Paquetes completos con cabezas móviles, uplighting y efectos van desde $12,000 hasta $35,000 MXN. Todos incluyen instalación profesional y desmontaje.' },
+  { pregunta: '¿La instalación está incluida en la renta?', respuesta: 'Sí, todos nuestros servicios incluyen transporte, instalación profesional, operación durante el evento y desmontaje. Nuestro equipo técnico llega con anticipación para montar, configurar y hacer pruebas.' },
+  { pregunta: '¿En qué zonas cubren servicio?', respuesta: 'Cubrimos toda la Ciudad de México y el Estado de México. Llegamos a haciendas en Cuernavaca, Tepoztlán, Valle de Bravo y cualquier ubicación dentro de 100 km de CDMX sin costo adicional de traslado.' },
+  { pregunta: '¿Con cuánta anticipación debo reservar?', respuesta: 'Recomendamos reservar con al menos 4 a 6 semanas de anticipación, especialmente en temporada alta (noviembre-febrero). Para fechas próximas, contáctanos por WhatsApp para verificar disponibilidad.' },
+  { pregunta: '¿Qué tipo de eventos cubren?', respuesta: 'Bodas, XV años, fiestas de cumpleaños, graduaciones, eventos corporativos, conferencias, lanzamientos de producto, cenas de gala, fiestas temáticas y conciertos. Cada evento recibe atención personalizada.' },
+  { pregunta: '¿Trabajan con equipo profesional?', respuesta: 'Trabajamos con marcas líderes: JBL, QSC, Martin Professional y Chauvet. Nuestro inventario se actualiza constantemente para ofrecerte las últimas tendencias en iluminación LED y audio profesional.' },
+  { pregunta: '¿Ofrecen servicio de DJ?', respuesta: 'Sí, nuestro servicio de DJ incluye equipo de audio profesional JBL, iluminación sincronizada y repertorio adaptado a tus gustos. Desde música electrónica y regional hasta pop y mezclas personalizadas.' },
+  { pregunta: '¿Qué es el humo bajo y para qué sirve?', respuesta: 'El humo bajo crea un efecto de "bailando en las nubes" a nivel del piso. Es ideal para el primer baile en bodas y momentos especiales. Nosotros llevamos el equipo, lo instalamos y lo operamos en el momento perfecto.' },
+  { pregunta: '¿Puedo rentar pantallas LED para mi evento?', respuesta: 'Sí, ofrecemos pantallas LED de alta resolución para videomapping, presentaciones corporativas, transmisión de videos en bodas y ambientación visual. Incluye estructura de montaje y técnico especializado.' },
+  { pregunta: '¿Cómo puedo cotizar?', respuesta: 'Escríbenos por WhatsApp al 55 4937 5172 con la fecha, lugar y tipo de evento. Te enviamos una propuesta personalizada sin costo ni compromiso en menos de 24 horas. También puedes llamar o escribir a contacto@redeil.com.' },
+];
+
+const structuredData = [
+  organizationSchema(),
+  localBusinessSchema(),
+  webSiteSchema(),
+  faqSchema(faqItems),
+];
+---
+
+<Base
+  title="Renta de Iluminación y Sonido para Eventos CDMX | REDEIL"
+  description="Renta de iluminación LED, audio profesional, DJ y equipos para bodas, XV años y eventos corporativos en CDMX y Estado de México. 10+ años."
+  structuredData={structuredData}
+>
+
+  <TopBar />
+  <Header activePage="inicio" />
+
+  <!-- 3. HERO -->
+  <Hero
+    badge="Renta de Equipo para Eventos"
+    title="Renta de Iluminación y Sonido para Eventos en CDMX"
+    description="Iluminación LED profesional, sistemas de audio JBL y QSC, DJ y equipos especializados para bodas, XV años y eventos corporativos en CDMX y Estado de Méx..."
+    primaryCta={{ text: 'Cotizar Gratis', href: WHATSAPP_URL_MSG }}
+    secondaryCta={{ text: 'Ver Catálogo', href: '#iluminacion' }}
+  >
+    <Fragment slot="hero-seo">
+      <p>En <strong>REDEIL</strong> llevamos más de 10 años transformando ideas en momentos inolvidables. Ofrecemos <strong>renta de iluminación LED profesional</strong>, sistemas de audio JBL y QSC, y equipos especializados para <strong>bodas, XV años y eventos corporativos</strong> en CDMX y Estado de México. Cada servicio incluye transporte, instalación profesional, operación y desmontaje.</p>
+      <p>Ya sea una boda íntima en jardín, un evento corporativo en hotel de lujo o una gran fiesta en hacienda, nosotros nos encargamos del audio, la iluminación y todos los detalles técnicos. Desde <strong>guirnaldas vintage</strong> hasta <strong>cabezas móviles LED</strong>, <strong>Sky Tracker</strong> y <strong>uplighting arquitectónico</strong>, cada evento es único y lo tratamos como si fuera el nuestro.</p>
+    </Fragment>
+  </Hero>
+
+  <!-- CTA BAR -->
+  <CtaBar
+    headline="¿Qué necesitas para tu evento?"
+    items={[
+      { label: "Iluminación", href: "#iluminacion", icon: "iluminacion" },
+      { label: "Sonido y DJ", href: "#audio", icon: "sonido" },
+      { label: "Equipos", href: "#equipos", icon: "equipos" },
+      { label: "Cotiza Gratis", href: "/contacto/", icon: "cotizar" },
+    ]}
+  />
+
+  <!-- 4. ILUMINACIÓN PROFESIONAL — 12 servicios con paquetes -->
+  <section class="section section--bg" id="iluminacion">
+    <div class="container">
+      <SectionHeader
+        badge="12 tipos de iluminación"
+        title="¿Qué tipos de iluminación profesional rentamos?"
+        subtitle="12 servicios de iluminación LED con equipo Martin Professional, Chauvet y Elation. Cada renta incluye transporte, instalación profesional y operación técnica durante tu evento. Desde guirnaldas vintage hasta shows de cabezas móviles."
+        id="iluminacion-title"
+      />
+      <div class="grid-4">
+        {ILUMINACION_SERVICES.map((s) => (
+          <CategoryCard
+            title={s.nombre}
+            subtitle={s.descripcion}
+            href={`/renta-de-iluminacion/${s.slug}/`}
+            image={s.imagen}
+            subcategories={s.paquetes.map((p) => ({
+              name: p.nombre,
+              href: `/renta-de-iluminacion/${s.slug}/${p.slug}/`,
+            }))}
+          />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. AUDIO Y SONIDO — 4 servicios con paquetes -->
+  <section class="section" id="audio">
+    <div class="container">
+      <SectionHeader
+        badge="Audio profesional"
+        title="Renta de Bocinas y Sonido Profesional"
+        subtitle="Sistemas de audio JBL y QSC dimensionados para tu espacio. Desde salas de juntas hasta eventos de 2,000+ personas. Instalación incluida."
+        id="audio-title"
+      />
+      <div class="grid-4">
+        {AUDIO_SERVICES.map((s) => (
+          <CategoryCard
+            title={s.nombre}
+            subtitle={s.descripcion}
+            href={`/renta-de-bocinas/${s.slug}/`}
+            image={s.imagen}
+            subcategories={s.paquetes.map((p) => ({
+              name: p.nombre,
+              href: `/renta-de-bocinas/${s.slug}/${p.slug}/`,
+            }))}
+          />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. EQUIPOS PARA EVENTOS — 8 servicios con paquetes -->
+  <section class="section section--bg" id="equipos">
+    <div class="container">
+      <SectionHeader
+        badge="8 equipos especializados"
+        title="Equipos para Eventos"
+        subtitle="Efectos especiales, pantallas y mobiliario profesional. Los detalles que convierten un buen evento en algo inolvidable."
+        id="equipos-title"
+      />
+      <div class="grid-4">
+        {EQUIPOS_SERVICES.map((s) => (
+          <CategoryCard
+            title={s.nombre}
+            subtitle={s.descripcion}
+            href={`/equipos-para-eventos/${s.slug}/`}
+            image={s.imagen}
+            subcategories={s.paquetes.map((p) => ({
+              name: p.nombre,
+              href: `/equipos-para-eventos/${s.slug}/${p.slug}/`,
+            }))}
+          />
+        ))}
+      </div>
+    </div>
+  </section>
+
+
+  <!-- 11. TESTIMONIALES -->
+  <section class="section section--bg" id="testimonios">
+    <div class="container">
+      <SectionHeader
+        title="Empresas que Confían en REDEIL"
+        subtitle="Trabajamos con las mejores empresas de eventos en CDMX y Estado de México."
+        id="testimonios-title"
+      />
+      <div class="grid-3">
+        <TestimonialCard
+          name="Ofelia Aranda"
+          role="Directora Comercial"
+          company="Inflables para Fiestas"
+          companyUrl="https://inflablesparafiestas.com.mx/"
+          avatar="/img/resenas/ofelia-aranda.avif"
+          rating={5}
+          text="REDEIL ha sido nuestro aliado durante 3 años. Su iluminación transforma completamente nuestros inflables, especialmente en eventos nocturnos. Puntualidad y calidad excepcionales."
+        />
+        <TestimonialCard
+          name="Sonia Castañeda"
+          role="Gerente de Proyectos"
+          company="Eventech"
+          companyUrl="https://eventech.mx/"
+          avatar="/img/resenas/sonia-castaneda.avif"
+          rating={5}
+          text="Como empresa de tecnología audiovisual, necesitamos proveedores a nuestro nivel. REDEIL supera expectativas con sus sistemas de iluminación inteligente y equipo técnico capacitado."
+        />
+        <TestimonialCard
+          name="Frank Oropeza"
+          role="Coordinador de Diseño"
+          company="Mesas Picnic"
+          companyUrl="https://mesaspicnic.com/"
+          avatar="/img/resenas/frank-oropeza.avif"
+          rating={5}
+          text="La iluminación es clave para resaltar nuestras mesas de dulces. Las cascadas LED y proyectores de REDEIL hacen que cada creación se vea espectacular. Servicio técnico impecable."
+        />
+        <TestimonialCard
+          name="Juan Martínez"
+          role="Director de Operaciones"
+          company="Fantasy Globos"
+          companyUrl="https://fantasyglobos.com.mx/"
+          avatar="/img/resenas/juan-martinez.avif"
+          rating={5}
+          text="En eventos de alto perfil en Polanco, la calidad no se negocia. REDEIL entiende nuestras necesidades. Su iluminación arquitectónica complementa nuestras decoraciones de forma magistral."
+        />
+        <TestimonialCard
+          name="Daniel González"
+          role="Director General"
+          company="AVANTEXPO"
+          companyUrl="https://avantexpo.com.mx/"
+          avatar="/img/resenas/daniel-gonzalez.avif"
+          rating={5}
+          text="Para exposiciones y ferias profesionales, la iluminación correcta es fundamental. REDEIL nos ha apoyado en múltiples convenciones con equipos de primer nivel."
+        />
+        <TestimonialCard
+          name="Gabriel Toledo"
+          role="Gerente de Operaciones"
+          company="PODIUMEX"
+          companyUrl="https://podiumex.com/"
+          avatar="/img/resenas/gabriel-toledo.avif"
+          rating={5}
+          text="Los podiums cobran vida con la iluminación adecuada. REDEIL nos proporciona seguidores de luz y sistemas LED que realzan cada presentación. Puntualidad incomparable."
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. ¿POR QUÉ REDEIL? — Trust section -->
+  <section class="section" id="ventajas">
+    <div class="container">
+      <SectionHeader
+        badge="¿Por qué elegirnos?"
+        title="¿Por qué más de 500 eventos eligen REDEIL?"
+        subtitle="10+ años de experiencia respaldan cada evento. No solo rentamos equipo — entregamos producción completa con garantía."
+        id="ventajas-title"
+      />
+      <div class="trust-grid">
+        <div class="trust-item">
+          
+          <h3 class="trust-item__title">+10 años de experiencia</h3>
+          <p class="trust-item__desc">Más de 500 eventos exitosos en CDMX y Estado de México. Bodas, XV años, corporativos y conciertos nos respaldan.</p>
+        </div>
+        <div class="trust-item">
+          
+          <h3 class="trust-item__title">Instalación profesional incluida</h3>
+          <p class="trust-item__desc">Transporte, montaje, operación durante el evento y desmontaje. Nuestro equipo técnico llega con anticipación para pruebas.</p>
+        </div>
+        <div class="trust-item">
+          
+          <h3 class="trust-item__title">Equipo profesional de marcas líderes</h3>
+          <p class="trust-item__desc">JBL, QSC, Martin Professional, Chauvet y Elation. Inventario actualizado con las últimas tecnologías en LED y audio.</p>
+        </div>
+        <div class="trust-item">
+          
+          <h3 class="trust-item__title">Precios directos sin intermediarios</h3>
+          <p class="trust-item__desc">Cotización gratuita en menos de 24 horas. Paquetes desde $3,500 MXN. Sin costos ocultos ni sorpresas.</p>
+        </div>
+        <div class="trust-item">
+          
+          <h3 class="trust-item__title">Atención por WhatsApp 24/7</h3>
+          <p class="trust-item__desc">Respuesta inmediata al 55 4937 5172. Asesoría técnica para elegir el equipo correcto para tu evento.</p>
+        </div>
+        <div class="trust-item">
+          
+          <h3 class="trust-item__title">Cobertura total CDMX y Edomex</h3>
+          <p class="trust-item__desc">Cubrimos las 16 alcaldías y municipios del Estado de México. Haciendas en Cuernavaca, Tepoztlán y Valle de Bravo sin costo extra de traslado.</p>
+        </div>
+        <div class="trust-item">
+          
+          <h3 class="trust-item__title">Montaje rápido y puntual</h3>
+          <p class="trust-item__desc">Llegamos con anticipación, montamos, hacemos pruebas de audio e iluminación. Todo listo antes de que lleguen tus invitados.</p>
+        </div>
+        <div class="trust-item">
+          
+          <h3 class="trust-item__title">Técnico operador incluido</h3>
+          <p class="trust-item__desc">Un técnico profesional opera el equipo durante todo el evento. Ajustes en tiempo real de luces y sonido según el momento.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. FAQ -->
+  <FaqSection items={faqItems} />
+
+  <!-- 12. CTA FINAL (handled by Footer CTA band) -->
+
+  <!-- 13. FOOTER + WA BUBBLE -->
+  <Footer />
+  <WhatsAppBubble />
+
+</Base>
+
+<!-- styles moved to global.css -->

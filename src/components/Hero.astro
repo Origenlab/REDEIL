@@ -1,0 +1,169 @@
+---
+interface Props {
+  badge?: string;
+  title: string;
+  description: string;
+  primaryCta?: { text: string; href: string };
+  secondaryCta?: { text: string; href: string };
+  metrics?: Array<{ valor: string; texto: string }>;
+}
+
+const {
+  badge = '',
+  title,
+  description,
+  primaryCta = { text: 'Cotizar Gratis', href: 'https://wa.me/525549375172' },
+  secondaryCta,
+  metrics = [],
+} = Astro.props;
+
+const hasSlot = Astro.slots.has('hero-seo');
+---
+
+<section class={`hero ${hasSlot ? 'hero--two-cols' : ''}`} aria-labelledby="hero-title">
+  <div class="hero__inner">
+    <div class="hero__left">
+      {badge && <p class="hero__badge">{badge}</p>}
+      <h1 id="hero-title" class="hero__title">{title}</h1>
+      <p class="hero__desc">{description}</p>
+      <div class="hero__ctas">
+        {primaryCta && (
+          <a href={primaryCta.href} class="btn btn--accent" target={primaryCta.href.startsWith('http') ? '_blank' : undefined} rel={primaryCta.href.startsWith('http') ? 'noopener' : undefined}>{primaryCta.text}</a>
+        )}
+        {secondaryCta && (
+          <a href={secondaryCta.href} class="btn btn--outline">{secondaryCta.text}</a>
+        )}
+      </div>
+      {metrics.length > 0 && (
+        <div class="hero__metrics">
+          {metrics.map((m) => (
+            <div class="hero__metric">
+              <span class="hero__metric-value">{m.valor}</span>
+              <span class="hero__metric-label">{m.texto}</span>
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+
+    {hasSlot && (
+      <div class="hero__right">
+        <slot name="hero-seo" />
+      </div>
+    )}
+  </div>
+</section>
+
+<style>
+  .hero {
+    padding: calc(var(--topbar-height) + var(--header-height) + 1rem) 0 4rem;
+    background: linear-gradient(135deg, var(--color-primary) 0%, #0f2441 60%, #0a1a30 100%);
+    color: var(--color-white);
+  }
+
+  .hero__inner {
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    align-items: center;
+  }
+
+  .hero__badge {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--color-accent);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 1rem;
+    padding: 0.375rem 1rem;
+    background: rgba(0, 113, 227, 0.15);
+    border-radius: 4px;
+  }
+
+  .hero__title {
+    font-size: clamp(1.75rem, 5vw, 2.75rem);
+    font-weight: 800;
+    color: var(--color-white);
+    line-height: 1.15;
+    margin-bottom: 1rem;
+  }
+
+  .hero__desc {
+    font-size: 1.125rem;
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero__ctas {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero__metrics {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+  }
+
+  .hero__metric {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hero__metric-value {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-white);
+    line-height: 1.2;
+  }
+
+  .hero__metric-label {
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  .hero__right {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .hero__right :global(p) {
+    font-size: 0.9375rem;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.75;
+    margin: 0;
+  }
+
+  .hero__right :global(strong) {
+    color: var(--color-white);
+    font-weight: 600;
+  }
+
+  @media (min-width: 1024px) {
+    .hero--two-cols .hero__inner {
+      grid-template-columns: 55% 1fr;
+      gap: 3rem;
+    }
+
+    .hero__title {
+      font-size: 2.75rem;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .hero__title {
+      font-size: 3rem;
+    }
+  }
+</style>

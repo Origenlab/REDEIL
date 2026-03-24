@@ -1,0 +1,201 @@
+---
+import Base from '../../layouts/Base.astro';
+import TopBar from '../../components/TopBar.astro';
+import Header from '../../components/Header.astro';
+import Hero from '../../components/Hero.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import Footer from '../../components/Footer.astro';
+import WhatsAppBubble from '../../components/WhatsAppBubble.astro';
+import { organizationSchema, breadcrumbSchema } from '../../lib/seo';
+import { PHONE_DISPLAY, PHONE_URL, WHATSAPP_URL_MSG, EMAIL, EMAIL_URL, BUSINESS_HOURS, SOCIAL_MEDIA } from '../../lib/config';
+
+const structuredData = [
+  organizationSchema(),
+  breadcrumbSchema([
+    { name: 'Inicio', url: '/' },
+    { name: 'Contacto', url: '/contacto/' },
+  ]),
+];
+---
+
+<Base
+  title="Contacto | REDEIL - Renta de Iluminación y Audio CDMX"
+  description="Cotiza gratis tu evento. WhatsApp: 55 4937 5172. Renta de iluminación, audio y DJ en CDMX y Estado de México. Respuesta en minutos."
+  structuredData={structuredData}
+>
+  <TopBar />
+  <Header activePage="contacto" />
+  <Breadcrumb items={[{ name: 'Contacto', href: '/contacto/' }]} />
+
+  <Hero
+    badge="Contacto"
+    title="Cotiza tu Evento sin Compromiso"
+    description="Escríbenos por WhatsApp, llámanos o envíanos un correo. Respuesta en minutos para que tu evento quede perfecto."
+    primaryCta={{ text: 'WhatsApp Directo', href: WHATSAPP_URL_MSG }}
+    secondaryCta={{ text: 'Llamar ahora', href: PHONE_URL }}
+  >
+    <Fragment slot="hero-seo">
+      <p>¿Listo para hacer realidad tu evento perfecto? En <strong>REDEIL</strong> te brindamos atención personalizada para cada proyecto. Ya sea una <strong>boda íntima</strong>, una fiesta de <strong>XV años</strong> o un <strong>evento corporativo</strong>, nuestro equipo está listo para crear una propuesta a la medida.</p>
+      <p>Contáctanos por el medio que prefieras y recibe una <strong>cotización personalizada sin costo</strong> en menos de 24 horas. Servicio en <strong>CDMX y Estado de México</strong>.</p>
+    </Fragment>
+  </Hero>
+
+  <section class="section">
+    <div class="container">
+      <div class="contact-grid">
+        <!-- Contact Info -->
+        <div class="contact-info">
+          <h2 class="contact-info__title">Información de Contacto</h2>
+
+          <div class="contact-info__item">
+            <h3 class="contact-info__label">WhatsApp / Teléfono</h3>
+            <a href={PHONE_URL} class="contact-info__value">{PHONE_DISPLAY}</a>
+            <p class="contact-detail-text">Respuesta en minutos. Disponible para consultas rápidas y cotizaciones express.</p>
+          </div>
+
+          <div class="contact-info__item">
+            <h3 class="contact-info__label">Email</h3>
+            <a href={EMAIL_URL} class="contact-info__value">{EMAIL}</a>
+            <p class="contact-detail-text">Para cotizaciones detalladas y propuestas formales.</p>
+          </div>
+
+          <div class="contact-info__item">
+            <h3 class="contact-info__label">Horario de Atención</h3>
+            <span class="contact-info__value">{BUSINESS_HOURS.display}</span>
+          </div>
+
+          <div class="contact-info__item">
+            <h3 class="contact-info__label">Cobertura</h3>
+            <span class="contact-info__value">CDMX y Estado de México</span>
+            <p class="contact-detail-text">Hasta 100 km sin costo adicional de traslado.</p>
+          </div>
+
+          <div class="contact-info__item">
+            <h3 class="contact-info__label">Redes Sociales</h3>
+            <div class="contact-social">
+              <a href={SOCIAL_MEDIA.facebook} target="_blank" rel="noopener">Facebook</a>
+              <a href={SOCIAL_MEDIA.instagram} target="_blank" rel="noopener">Instagram</a>
+              <a href={SOCIAL_MEDIA.tiktok} target="_blank" rel="noopener">TikTok</a>
+              <a href={SOCIAL_MEDIA.linkedin} target="_blank" rel="noopener">LinkedIn</a>
+              <a href={SOCIAL_MEDIA.pinterest} target="_blank" rel="noopener">Pinterest</a>
+            </div>
+          </div>
+
+          <div class="contact-info__wa">
+            <a href={WHATSAPP_URL_MSG} class="btn btn--wa" target="_blank" rel="noopener" style="width:100%">
+              Cotizar por WhatsApp
+            </a>
+            <p class="contact-info__note">Respuesta en minutos. Sin compromiso.</p>
+          </div>
+        </div>
+
+        <!-- Map / Coverage Info -->
+        <div class="contact-map">
+          <div class="contact-map__placeholder">
+            <h3 class="contact-map__title">Cobertura CDMX y Estado de México</h3>
+            <p class="contact-map__text">Cubrimos toda la zona metropolitana y hasta 100 km a la redonda. Haciendas, salones, jardines, hoteles, centros de convenciones.</p>
+            <p class="contact-map__text"><strong>Zonas frecuentes:</strong> Polanco, Santa Fe, Coyoacán, San Ángel, Tlalpan, Xochimilco, Interlomas, Satélite, Metepec, Toluca, Cuernavaca, Tepoztlán, Valle de Bravo.</p>
+          </div>
+
+          <!-- Branches -->
+          <div class="branches">
+            <h3 class="branches__title">Nuestras Sucursales</h3>
+            <div class="branches__grid">
+              <div class="branch-item">
+                <h4 class="branch-item__name">Benito Juárez</h4>
+                <p class="branch-item__address">Av. Insurgentes Sur 615 - Piso 6, Nápoles, Benito Juárez, 03810 CDMX</p>
+              </div>
+              <div class="branch-item">
+                <h4 class="branch-item__name">Polanco</h4>
+                <p class="branch-item__address">Av. Homero 1933 - Piso 3, Polanco I Secc, 11510 CDMX</p>
+              </div>
+              <div class="branch-item">
+                <h4 class="branch-item__name">Naucalpan</h4>
+                <p class="branch-item__address">Blvd. Manuel Ávila Camacho 5, Lomas de Sotelo, Piso 10, Torre B, 53390 Naucalpan, EdoMex</p>
+              </div>
+              <div class="branch-item">
+                <h4 class="branch-item__name">Tlalnepantla</h4>
+                <p class="branch-item__address">Emilio Carranza 17, Tlalnepantla Centro, 54000 Tlalnepantla, EdoMex</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+
+  <Footer />
+  <WhatsAppBubble />
+</Base>
+
+<style>
+  .contact-detail-text {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-light);
+    line-height: 1.6;
+    margin-top: 0.25rem;
+  }
+
+  .contact-social {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+  }
+
+  .contact-social a {
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    color: var(--color-accent);
+    padding: 0.375rem 0.75rem;
+    background: rgba(0, 113, 227, 0.08);
+    border-radius: var(--border-radius-sm);
+  }
+
+  .contact-social a:hover {
+    background: rgba(0, 113, 227, 0.15);
+  }
+
+  .branches {
+    margin-top: var(--spacing-xl);
+  }
+
+  .branches__title {
+    font-size: var(--font-size-lg);
+    font-weight: 700;
+    color: var(--color-text);
+    margin-bottom: var(--spacing-md);
+  }
+
+  .branches__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-sm);
+  }
+
+  .branch-item {
+    padding: var(--spacing-md);
+    background: var(--color-bg);
+    border-radius: var(--border-radius);
+  }
+
+  .branch-item__name {
+    font-size: var(--font-size-sm);
+    font-weight: 700;
+    color: var(--color-text);
+    margin-bottom: 0.25rem;
+  }
+
+  .branch-item__address {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-light);
+    line-height: 1.5;
+  }
+
+  @media (min-width: 640px) {
+    .branches__grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+</style>

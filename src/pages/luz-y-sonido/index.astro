@@ -1,0 +1,334 @@
+---
+import Base from '../../layouts/Base.astro';
+import TopBar from '../../components/TopBar.astro';
+import Header from '../../components/Header.astro';
+import Hero from '../../components/Hero.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import SectionHeader from '../../components/SectionHeader.astro';
+import CategoryCard from '../../components/CategoryCard.astro';
+import FaqSection from '../../components/FaqSection.astro';
+import Footer from '../../components/Footer.astro';
+import WhatsAppBubble from '../../components/WhatsAppBubble.astro';
+import { organizationSchema, localBusinessSchema, serviceSchema, faqSchema, breadcrumbSchema } from '../../lib/seo';
+import { ILUMINACION_SERVICES, AUDIO_SERVICES, WHATSAPP_URL_MSG } from '../../lib/config';
+
+const faqItems = [
+  { pregunta: '¿Cuánto cuesta rentar luz y sonido para un evento en CDMX?', respuesta: 'Un paquete básico de luz y sonido para fiestas de hasta 100 personas inicia desde $8,500 MXN. Paquetes completos con iluminación LED, cabezas móviles, audio JBL y DJ van desde $18,000 hasta $55,000 MXN dependiendo del tamaño del evento. Todos incluyen instalación y operación.' },
+  { pregunta: '¿Qué incluye un paquete de luz y sonido?', respuesta: 'Nuestros paquetes combinados incluyen sistema de audio profesional JBL o QSC dimensionado para tu espacio, iluminación LED ambiental y de pista, técnico de audio, montaje y desmontaje. Según el paquete, puede incluir DJ, cabezas móviles, láser y efectos especiales.' },
+  { pregunta: '¿Puedo rentar solo iluminación o solo sonido?', respuesta: 'Sí, ofrecemos cada servicio por separado. Tenemos 12 tipos de iluminación profesional y 4 categorías de audio. También puedes armar un paquete combinado a tu medida con exactamente lo que necesitas.' },
+  { pregunta: '¿Cubren eventos al aire libre?', respuesta: 'Sí, nuestro equipo está preparado para jardines, haciendas, terrazas y cualquier espacio abierto. Llevamos equipo resistente a la intemperie, plantas de luz de respaldo y técnicos que se adaptan a cualquier condición.' },
+  { pregunta: '¿Incluyen operador técnico durante el evento?', respuesta: 'Todos nuestros servicios incluyen técnico profesional que opera el equipo durante todo el evento. Para paquetes de luz y sonido, asignamos al menos un técnico de audio y uno de iluminación para garantizar la mejor experiencia.' },
+  { pregunta: '¿Con cuánta anticipación debo reservar luz y sonido?', respuesta: 'Recomendamos reservar con 4 a 6 semanas de anticipación, especialmente en temporada alta (noviembre a febrero). Para fechas próximas, escríbenos por WhatsApp al 55 4937 5172 para verificar disponibilidad inmediata.' },
+  { pregunta: '¿Trabajan con equipo de marca reconocida?', respuesta: 'Sí, trabajamos con JBL, QSC, Martin Professional, Chauvet y Elation. Nuestro inventario se actualiza constantemente para ofrecerte tecnología de primer nivel en cada evento.' },
+  { pregunta: '¿Qué zonas cubren en CDMX y Estado de México?', respuesta: 'Cubrimos toda la Ciudad de México y el Estado de México. Llegamos a haciendas en Cuernavaca, Tepoztlán, Valle de Bravo y cualquier ubicación dentro de 100 km de CDMX sin costo adicional de traslado.' },
+];
+
+const structuredData = [
+  organizationSchema(),
+  localBusinessSchema(),
+  serviceSchema({
+    name: 'Renta de Luz y Sonido para Eventos CDMX',
+    description: 'Servicio profesional de renta de iluminación LED y audio JBL/QSC para bodas, XV años y eventos corporativos en Ciudad de México y Estado de México. Instalación incluida.',
+    url: '/luz-y-sonido/',
+  }),
+  faqSchema(faqItems),
+  breadcrumbSchema([
+    { name: 'Inicio', url: '/' },
+    { name: 'Luz y Sonido', url: '/luz-y-sonido/' },
+  ]),
+];
+
+const paquetesCombinados = [
+  {
+    nombre: 'Esencial',
+    precio: 'Desde $8,500',
+    ideal: 'Fiestas hasta 100 personas',
+    incluye: [
+      '2 bocinas JBL 15" con subwoofer',
+      'Micrófono inalámbrico',
+      '8 luces LED Par de colores',
+      'Montaje y operación técnica',
+    ],
+  },
+  {
+    nombre: 'Fiesta Completa',
+    precio: 'Desde $18,000',
+    ideal: 'Eventos hasta 250 personas',
+    incluye: [
+      '4 bocinas JBL con 2 subwoofers',
+      '2 micrófonos inalámbricos',
+      '12 luces LED + 2 cabezas móviles',
+      'DJ profesional 5 horas',
+      'Máquina de humo',
+    ],
+  },
+  {
+    nombre: 'Premium',
+    precio: 'Desde $32,000',
+    ideal: 'Bodas y XV años hasta 400 personas',
+    incluye: [
+      'Audio line array JBL/QSC',
+      '4 micrófonos inalámbricos',
+      'Iluminación completa: uplighting + cabezas móviles + láser',
+      'DJ profesional toda la noche',
+      'Humo bajo para primer baile',
+      'Máquina de confeti',
+    ],
+  },
+  {
+    nombre: 'Producción Total',
+    precio: 'Desde $55,000',
+    ideal: 'Grandes eventos 500+ personas',
+    incluye: [
+      'Audio line array de alta potencia',
+      'Monitoreo de escenario',
+      'Iluminación completa con seguidor de luz',
+      'DJ + técnico de audio + técnico de luces',
+      'Sky Tracker + láser + efectos especiales',
+      'Coordinación técnica integral',
+    ],
+  },
+];
+---
+
+<Base
+  title="Renta de Luz y Sonido CDMX — Paquetes desde $8,500 | REDEIL"
+  description="Renta de luz y sonido para eventos en CDMX. Paquetes combinados de iluminación LED + audio JBL desde $8,500. Bodas, XV años, corporativos."
+  structuredData={structuredData}
+>
+  <TopBar />
+  <Header activePage="luz-y-sonido" />
+  <Breadcrumb items={[{ name: 'Luz y Sonido', href: '/luz-y-sonido/' }]} />
+
+  <Hero
+    badge="Servicio #1 en CDMX"
+    title="Renta de Luz y Sonido para Eventos en CDMX"
+    description="Paquetes combinados de iluminación LED profesional y audio JBL/QSC para bodas, XV años y eventos corporativos."
+    primaryCta={{ text: 'Cotizar Mi Evento', href: WHATSAPP_URL_MSG }}
+    secondaryCta={{ text: 'Ver Paquetes', href: '#paquetes' }}
+  >
+    <Fragment slot="hero-seo">
+      <p>Cuando organizas un evento, la <strong>luz y el sonido</strong> son los dos elementos que definen la atmósfera. En <strong>REDEIL</strong> combinamos iluminación LED profesional con sistemas de audio JBL y QSC para que tu boda, fiesta de XV años o evento corporativo suene y se vea exactamente como lo imaginaste. Llevamos más de 10 años montando eventos en CDMX y Estado de México con equipo de primer nivel.</p>
+      <p>Nuestros paquetes de <strong>renta de luz y sonido</strong> incluyen todo: transporte, montaje, operación técnica durante el evento y desmontaje. Tú solo te preocupas por disfrutar. Desde fiestas íntimas hasta producciones de más de 500 personas, tenemos el equipo y la experiencia para que cada momento sea perfecto.</p>
+    </Fragment>
+  </Hero>
+
+  <!-- PAQUETES COMBINADOS -->
+  <section class="section section--bg" id="paquetes">
+    <div class="container">
+      <SectionHeader
+        badge="4 paquetes todo incluido"
+        title="Paquetes de Luz y Sonido"
+        subtitle="Combinamos iluminación y audio en un solo servicio con precio especial. Cada paquete incluye montaje, operación y desmontaje."
+        id="paquetes-title"
+      />
+      <div class="grid-4">
+        {paquetesCombinados.map((pkg) => (
+          <article class="pkg-card">
+            <div class="pkg-card__header">
+              <h3 class="pkg-card__name">{pkg.nombre}</h3>
+              <span class="pkg-card__price">{pkg.precio}</span>
+              <span class="pkg-card__ideal">{pkg.ideal}</span>
+            </div>
+            <ul class="pkg-card__features">
+              {pkg.incluye.map((item) => (
+                <li>{item}</li>
+              ))}
+            </ul>
+            <a href={WHATSAPP_URL_MSG} class="pkg-card__btn" target="_blank" rel="noopener">Cotizar Paquete</a>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ILUMINACIÓN — 12 servicios -->
+  <section class="section" id="iluminacion">
+    <div class="container">
+      <SectionHeader
+        badge="12 tipos de iluminación"
+        title="Servicios de Iluminación Profesional"
+        subtitle="Equipo Martin Professional, Chauvet y Elation. Cada servicio incluye transporte, instalación y operación técnica."
+        id="iluminacion-title"
+      />
+      <div class="grid-4">
+        {ILUMINACION_SERVICES.map((s) => (
+          <CategoryCard
+            title={s.nombre}
+            subtitle={s.descripcion}
+            href={`/renta-de-iluminacion/${s.slug}/`}
+            image={s.imagen}
+            subcategories={s.paquetes.map((p) => ({
+              name: p.nombre,
+              href: `/renta-de-iluminacion/${s.slug}/${p.slug}/`,
+            }))}
+          />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- AUDIO — 4 servicios -->
+  <section class="section section--bg" id="sonido">
+    <div class="container">
+      <SectionHeader
+        badge="Audio profesional"
+        title="Servicios de Sonido y Audio"
+        subtitle="Sistemas de audio JBL y QSC dimensionados para tu espacio. Desde salas de juntas hasta eventos de 2,000+ personas."
+        id="sonido-title"
+      />
+      <div class="grid-4">
+        {AUDIO_SERVICES.map((s) => (
+          <CategoryCard
+            title={s.nombre}
+            subtitle={s.descripcion}
+            href={`/renta-de-bocinas/${s.slug}/`}
+            image={s.imagen}
+            subcategories={s.paquetes.map((p) => ({
+              name: p.nombre,
+              href: `/renta-de-bocinas/${s.slug}/${p.slug}/`,
+            }))}
+          />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ¿POR QUÉ JUNTOS? -->
+  <section class="section" id="por-que">
+    <div class="container">
+      <SectionHeader
+        badge="Ventaja competitiva"
+        title="¿Por qué rentar luz y sonido juntos?"
+        subtitle="Contratar iluminación y audio con el mismo proveedor tiene ventajas que van más allá del precio. Cuando un solo equipo técnico se encarga de ambos servicios, la coordinación es perfecta: las luces se sincronizan con la música, los cambios de ambiente fluyen naturalmente y no hay conflictos de espacio ni de tiempos de montaje."
+        subtitle2="En REDEIL, nuestros técnicos de iluminación y audio trabajan juntos desde el primer momento. Hacemos una visita técnica previa a tu venue para planificar la distribución del equipo, las tomas de corriente y los tiempos de montaje. El resultado es un evento donde todo funciona como reloj."
+        id="por-que-title"
+      />
+    </div>
+  </section>
+
+  <!-- EQUIPO PROFESIONAL -->
+  <section class="section section--bg" id="equipo">
+    <div class="container">
+      <SectionHeader
+        badge="Marcas líderes"
+        title="¿Qué equipo profesional usamos para cada evento?"
+        subtitle="No es lo mismo sonorizar una ceremonia religiosa íntima que una pista de baile con 400 invitados. Tampoco se ilumina igual un jardín al atardecer que un salón de hotel. Cada cotización que hacemos es personalizada: evaluamos tu espacio, número de invitados y tipo de ambiente."
+        subtitle2="Trabajamos con las mejores marcas del mercado: bocinas JBL y QSC para audio cristalino, luces Martin Professional y Chauvet para iluminación de alto impacto, y consolas de control DMX para manejar todo en tiempo real. Cobertura en toda la CDMX, Estado de México, Cuernavaca, Tepoztlán y Valle de Bravo — traslado incluido dentro de 100 km."
+        id="equipo-title"
+      />
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <FaqSection items={faqItems} />
+
+  <!-- CTA FINAL -->
+
+  <Footer />
+  <WhatsAppBubble />
+</Base>
+
+<style>
+  .pkg-card {
+    display: flex;
+    flex-direction: column;
+    background: var(--color-white);
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .pkg-card__header {
+    background: var(--color-primary);
+    padding: var(--spacing-lg);
+    text-align: center;
+  }
+
+  .pkg-card__name {
+    font-size: var(--font-size-lg);
+    font-weight: 700;
+    color: var(--color-white);
+    margin-bottom: 0.25rem;
+  }
+
+  .pkg-card__price {
+    display: block;
+    font-size: var(--font-size-xl);
+    font-weight: 800;
+    color: var(--color-white);
+    margin-bottom: 0.25rem;
+  }
+
+  .pkg-card__ideal {
+    display: block;
+    font-size: var(--font-size-sm);
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  .pkg-card__features {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+    padding: var(--spacing-lg);
+    list-style: none;
+  }
+
+  .pkg-card__features li {
+    font-size: var(--font-size-sm);
+    color: var(--color-text);
+    padding-left: 1.5rem;
+    position: relative;
+    line-height: 1.5;
+  }
+
+  .pkg-card__features li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--color-accent);
+    font-weight: 700;
+  }
+
+  .pkg-card__btn {
+    display: block;
+    text-align: center;
+    padding: 0.875rem var(--spacing-md);
+    margin: 0 var(--spacing-lg) var(--spacing-lg);
+    background: var(--color-accent);
+    color: var(--color-white);
+    font-weight: 600;
+    font-size: var(--font-size-sm);
+    border-radius: var(--border-radius);
+    transition: background 0.2s;
+  }
+
+  .pkg-card__btn:hover {
+    background: #005bb5;
+  }
+
+  .content-prose {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .content-prose h2 {
+    font-size: clamp(1.25rem, 3vw, 1.75rem);
+    font-weight: 800;
+    color: var(--color-text);
+    margin-bottom: var(--spacing-sm);
+    margin-top: var(--spacing-2xl);
+  }
+
+  .content-prose h2:first-child {
+    margin-top: 0;
+  }
+
+  .content-prose p {
+    font-size: var(--font-size-base);
+    color: var(--color-text-light);
+    line-height: 1.8;
+    margin-bottom: var(--spacing-sm);
+  }
+</style>

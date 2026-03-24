@@ -1,0 +1,353 @@
+---
+import Base from '../../../layouts/Base.astro';
+import TopBar from '../../../components/TopBar.astro';
+import Header from '../../../components/Header.astro';
+import Hero from '../../../components/Hero.astro';
+import Breadcrumb from '../../../components/Breadcrumb.astro';
+import CtaBar from '../../../components/CtaBar.astro';
+import SectionHeader from '../../../components/SectionHeader.astro';
+import CategoryCard from '../../../components/CategoryCard.astro';
+import FaqSection from '../../../components/FaqSection.astro';
+import Footer from '../../../components/Footer.astro';
+import WhatsAppBubble from '../../../components/WhatsAppBubble.astro';
+import { faqSchema, breadcrumbSchema } from '../../../lib/seo';
+import { WHATSAPP_URL_MSG, SITE_URL } from '../../../lib/config';
+
+const paquetes = [
+  {
+    "nombre": "Sala de Juntas",
+    "slug": "paquete-sala-juntas",
+    "precio": 3000,
+    "features": [
+      "2 bocinas compactas",
+      "1 micrófono inalámbrico",
+      "Mezcladora 4 canales",
+      "Conexión laptop/HDMI",
+      "Instalación incluida"
+    ]
+  },
+  {
+    "nombre": "Conferencia Salón",
+    "slug": "paquete-conferencia-salon",
+    "precio": 6000,
+    "features": [
+      "4 bocinas de línea",
+      "2 micrófonos inalámbricos",
+      "Mezcladora 8 canales",
+      "Conexión laptop/HDMI",
+      "Micrófonos de solapa",
+      "Instalación incluida"
+    ]
+  },
+  {
+    "nombre": "Auditorio",
+    "slug": "paquete-auditorio",
+    "precio": 12000,
+    "features": [
+      "Sistema line array",
+      "4 micrófonos inalámbricos",
+      "Mezcladora digital 16 ch",
+      "Conexión multimedia",
+      "Micrófonos de solapa",
+      "Monitoreo de escenario",
+      "Ingeniero de sonido"
+    ]
+  },
+  {
+    "nombre": "Producción Congreso",
+    "slug": "paquete-produccion-congreso",
+    "precio": 25000,
+    "features": [
+      "Sistema line array completo",
+      "8+ micrófonos inalámbricos",
+      "Mezcladora digital 32 ch",
+      "Sistema de traducción",
+      "Grabación profesional",
+      "Streaming de audio",
+      "2 ingenieros de sonido"
+    ]
+  }
+];
+
+const faqItems = [
+  {
+    "pregunta": "¿Cuánto cuesta la renta de audio para conferencias en CDMX?",
+    "respuesta": "Los precios de audio para conferencias van desde $3,000 MXN hasta $25,000 MXN + IVA, dependiendo del paquete. Todos incluyen instalación profesional y desmontaje."
+  },
+  {
+    "pregunta": "¿Qué paquetes de audio para conferencias ofrecen?",
+    "respuesta": "Ofrecemos 4 paquetes: Sala de Juntas, Conferencia Salón, Auditorio, Producción Congreso. Cada uno está diseñado para diferentes tamaños de evento y presupuesto."
+  },
+  {
+    "pregunta": "¿La instalación de audio para conferencias está incluida?",
+    "respuesta": "Sí, todos nuestros paquetes de audio para conferencias incluyen transporte, instalación profesional, operación durante el evento y desmontaje. No hay costos ocultos."
+  },
+  {
+    "pregunta": "¿En qué tipo de eventos se usa audio para conferencias?",
+    "respuesta": "Audio para Conferencias es popular en bodas, XV años, fiestas de cumpleaños, eventos corporativos, conferencias y celebraciones privadas. Adaptamos cada paquete al tipo de evento."
+  },
+  {
+    "pregunta": "¿Cubren servicio de audio para conferencias en Estado de México?",
+    "respuesta": "Sí, cubrimos CDMX y todo el Estado de México. También llegamos a Cuernavaca, Tepoztlán, Valle de Bravo y ubicaciones dentro de 100 km sin costo adicional."
+  },
+  {
+    "pregunta": "¿Con cuánta anticipación debo reservar audio para conferencias?",
+    "respuesta": "Recomendamos reservar con 4-6 semanas de anticipación, especialmente en temporada alta. Para fechas próximas, escríbenos por WhatsApp al 55 4937 5172."
+  },
+  {
+    "pregunta": "¿Puedo combinar audio para conferencias con otros servicios?",
+    "respuesta": "Por supuesto. Ofrecemos descuentos especiales al combinar servicios de iluminación, audio y equipos. Diseñamos paquetes integrales a la medida de tu evento."
+  },
+  {
+    "pregunta": "¿Qué marcas de equipo usan para audio para conferencias?",
+    "respuesta": "Trabajamos con marcas líderes como JBL, QSC, Martin Professional, Chauvet y Elation. Nuestro inventario se actualiza constantemente para ofrecer la mejor tecnología disponible."
+  }
+];
+
+const structuredData = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: 'Renta de Audio para Conferencias — REDEIL',
+    description: 'Sistemas de audio con micrófonos inalámbricos para eventos corporativos.',
+    provider: {
+      '@type': 'LocalBusiness',
+      name: 'REDEIL',
+      url: SITE_URL,
+    },
+    areaServed: { '@type': 'City', name: 'Ciudad de México' },
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog',
+      name: 'Paquetes de Audio para Conferencias',
+      itemListElement: paquetes.map(p => ({
+        '@type': 'Offer',
+        name: p.nombre,
+        price: p.precio,
+        priceCurrency: 'MXN',
+        url: SITE_URL + '/renta-de-bocinas/audio-para-conferencias/' + p.slug + '/',
+      })),
+    },
+  },
+  breadcrumbSchema([
+    { name: 'Inicio', url: '/' },
+    { name: 'Renta de Bocinas', url: '/renta-de-bocinas/' },
+    { name: 'Audio para Conferencias', url: '/renta-de-bocinas/audio-para-conferencias/' },
+  ]),
+  faqSchema(faqItems),
+];
+---
+
+<Base
+  title="Renta de Audio para Conferencias para Eventos CDMX | REDEIL"
+  description="Sistemas de audio con micrófonos inalámbricos para eventos corporativos. 4 paquetes desde $3,000 MXN. Instalación profesional incluida en CDMX y EdoMex."
+  structuredData={structuredData}
+>
+  <TopBar />
+  <Header />
+  <Breadcrumb items={[{ name: 'Renta de Bocinas', href: '/renta-de-bocinas/' }, { name: 'Audio para Conferencias', href: '/renta-de-bocinas/audio-para-conferencias/' }]} />
+
+  <Hero
+    badge="Renta de Audio para Conferencias"
+    title="Renta de Audio para Conferencias para Eventos en CDMX"
+    description="Sistemas de audio con micrófonos inalámbricos para eventos corporativos. Ofrecemos 4 paquetes profesionales con instalación incluida para bodas, XV años..."
+    primaryCta={{ text: 'Cotizar Audio para Conferencias', href: WHATSAPP_URL_MSG }}
+    secondaryCta={{ text: 'Ver Paquetes', href: '#paquetes' }}
+  >
+    <Fragment slot="hero-seo">
+      <p>La <strong>renta de audio para conferencias</strong> es uno de los servicios más solicitados en <strong>REDEIL</strong>. Sistemas de audio con micrófonos inalámbricos para eventos corporativos. Cada paquete incluye transporte, instalación profesional, operación durante el evento y desmontaje en <strong>CDMX y Estado de México</strong>.</p>
+      <p>Con más de 10 años de experiencia, hemos llevado audio para conferencias a cientos de <strong>bodas, XV años, fiestas privadas y eventos corporativos</strong>. Trabajamos con equipo de marcas líderes y un equipo técnico capacitado que garantiza resultados impecables en cada evento.</p>
+    </Fragment>
+  </Hero>
+
+  <CtaBar
+    headline="Elige tu paquete de Audio para Conferencias"
+    items={paquetes.map(p => ({
+      label: p.nombre,
+      href: '/renta-de-bocinas/audio-para-conferencias/' + p.slug + '/',
+    }))}
+  />
+
+  <!-- GRID DE PAQUETES -->
+  <section class="section" id="paquetes">
+    <div class="container">
+      <SectionHeader
+        badge="4 paquetes"
+        title="Paquetes de Audio para Conferencias"
+        subtitle="Desde eventos íntimos hasta producciones de gran escala. Elige el paquete perfecto para tu evento."
+        id="paquetes-title"
+      />
+      <div class="grid-4">
+        {paquetes.map((p) => (
+          <article class="pkg-card">
+            <div class="pkg-card__header">
+              <h3 class="pkg-card__title">{p.nombre}</h3>
+              <div class="pkg-card__price">
+                <span class="pkg-card__amount">${p.precio.toLocaleString()}</span>
+                <span class="pkg-card__currency">MXN + IVA</span>
+              </div>
+            </div>
+            <ul class="pkg-card__features">
+              {p.features.map((f: string) => (
+                <li class="pkg-card__feature">&#10003; {f}</li>
+              ))}
+            </ul>
+            <a href={'/renta-de-bocinas/audio-para-conferencias/' + p.slug + '/'} class="pkg-card__btn">Ver Paquete</a>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTENIDO SEO -->
+  <section class="section section--bg">
+    <div class="container content-prose">
+      <h2>¿Por qué rentar audio para conferencias con REDEIL?</h2>
+      <p>Sistemas de audio con micrófonos inalámbricos para eventos corporativos. En REDEIL nos especializamos en ofrecer equipamiento profesional para eventos de todos los tamaños en la Ciudad de México y área metropolitana. Nuestro equipo técnico capacitado se encarga de cada detalle para que tú solo te preocupes por disfrutar.</p>
+
+      <h3>¿Qué incluye la renta de audio para conferencias?</h3>
+      <p>Cada paquete de audio para conferencias incluye mucho más que solo equipo. Ofrecemos un servicio completo que abarca la logística de transporte, la instalación profesional en tu venue, la configuración y pruebas antes del evento, la operación técnica durante toda la celebración y el desmontaje al finalizar. No hay costos ocultos ni sorpresas.</p>
+
+      <h3>¿Qué equipo profesional usan para audio para conferencias?</h3>
+      <p>Trabajamos con las mejores marcas del mercado: JBL, QSC, Martin Professional, Chauvet y Elation. Nuestro inventario se actualiza constantemente para ofrecerte la tecnología más reciente. Cada equipo pasa por revisiones periódicas de mantenimiento para garantizar un funcionamiento impecable.</p>
+
+      <h3>¿En qué zonas de CDMX rentan audio para conferencias?</h3>
+      <p>Nuestro servicio de renta de audio para conferencias cubre toda la Ciudad de México y el Estado de México. También llegamos a destinos populares para eventos como Cuernavaca, Tepoztlán, Valle de Bravo y cualquier ubicación dentro de 100 km de CDMX sin costo adicional de traslado.</p>
+    </div>
+  </section>
+
+  
+  <!-- Zonas de servicio -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section__title">¿En qué zonas de CDMX ofrecemos audio para conferencias?</h2>
+      <p class="section__subtitle">Llevamos audio para conferencias a toda la Ciudad de México y Estado de México. Estas son algunas de nuestras zonas de cobertura.</p>
+      <div class="zonas-servicio">
+        <a href="/zonas/polanco/" class="zona-link">Renta de audio para conferencias en Polanco</a>
+        <a href="/zonas/condesa/" class="zona-link">Renta de audio para conferencias en Condesa</a>
+        <a href="/zonas/santa-fe/" class="zona-link">Renta de audio para conferencias en Santa Fe</a>
+      </div>
+      <p style="margin-top: var(--spacing-md); text-align: center;"><a href="/zonas/" style="color: var(--color-accent); font-weight: 600;">Ver todas las zonas de cobertura →</a></p>
+    </div>
+  </section>
+
+  <FaqSection items={faqItems} />
+
+  <!-- CTA FINAL -->
+
+  <Footer />
+  <WhatsAppBubble />
+</Base>
+
+<style>
+  .pkg-card {
+    background: var(--color-white);
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: var(--shadow-sm);
+  }
+  .pkg-card__header {
+    padding: 1.5rem;
+    background: var(--color-primary);
+    color: var(--color-white);
+    text-align: center;
+  }
+  .pkg-card__title {
+    font-size: var(--font-size-lg);
+    font-weight: 700;
+    margin: 0 0 0.5rem;
+  }
+  .pkg-card__price {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 0.25rem;
+  }
+  .pkg-card__amount {
+    font-size: var(--font-size-2xl);
+    font-weight: 800;
+  }
+  .pkg-card__currency {
+    font-size: var(--font-size-sm);
+    opacity: 0.8;
+  }
+  .pkg-card__features {
+    padding: 1.5rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    list-style: none;
+  }
+  .pkg-card__feature {
+    font-size: var(--font-size-sm);
+    color: var(--color-text);
+    padding: 0.375rem 0;
+    border-bottom: 1px solid var(--color-bg);
+  }
+  .pkg-card__feature:last-child {
+    border-bottom: none;
+  }
+  .pkg-card__btn {
+    display: block;
+    margin: 0 1.5rem 1.5rem;
+    padding: 0.875rem;
+    text-align: center;
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    background: var(--color-accent);
+    color: var(--color-white);
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+  .pkg-card__btn:hover {
+    background: var(--color-accent-dark);
+  }
+  .content-prose {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .content-prose h2 {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: 800;
+    color: var(--color-text);
+    margin-bottom: 1rem;
+  }
+  .content-prose h3 {
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    color: var(--color-text);
+    margin: 2rem 0 0.75rem;
+  }
+  .content-prose p {
+    font-size: var(--font-size-base);
+    color: var(--color-text-light);
+    line-height: 1.8;
+    margin-bottom: 1rem;
+  }
+
+  .zonas-servicio {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: var(--spacing-sm);
+  }
+  .zonas-servicio .zona-link,
+  .zona-link {
+    display: block;
+    padding: var(--spacing-sm) var(--spacing-md);
+    background: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    color: var(--color-accent);
+    font-weight: 600;
+    font-size: var(--font-size-sm);
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+  .zona-link:hover {
+    border-color: var(--color-accent);
+    box-shadow: var(--shadow-sm);
+  }
+</style>

@@ -1,0 +1,139 @@
+---
+interface Props {
+  title: string;
+  subtitle: string;
+  href: string;
+  image: string;
+  subcategories: Array<{ name: string; href: string }>;
+}
+
+const { title, subtitle, href, image, subcategories } = Astro.props;
+---
+
+<article class="svc-card">
+  <div class="svc-card__img-wrap">
+    <img
+      src={image}
+      alt={title}
+      class="svc-card__img"
+      loading="lazy"
+      decoding="async"
+      width="640"
+      height="360"
+    />
+  </div>
+  <div class="svc-card__body">
+    <h3 class="svc-card__title">{title}</h3>
+    <p class="svc-card__desc">{subtitle}</p>
+    {subcategories.length > 0 && (
+      <div class="svc-card__links">
+        {subcategories.map((sub) => (
+          <a href={sub.href} class="svc-card__link">{sub.name}</a>
+        ))}
+      </div>
+    )}
+    <a href={href} class="svc-card__btn">{title}</a>
+  </div>
+</article>
+
+<style>
+  .svc-card {
+    background: var(--color-white);
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .svc-card__img-wrap {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    background: var(--color-bg);
+    overflow: hidden;
+  }
+
+  .svc-card__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .svc-card__body {
+    padding: var(--spacing-lg);
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: var(--spacing-sm);
+  }
+
+  .svc-card__title {
+    font-size: var(--font-size-lg);
+    font-weight: 700;
+    color: var(--color-text);
+    line-height: var(--line-height-tight);
+    margin: 0;
+  }
+
+  .svc-card__desc {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-light);
+    line-height: 1.7;
+    margin: 0;
+  }
+
+  .svc-card__links {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin-top: var(--spacing-xs);
+  }
+
+  .svc-card__link {
+    display: block;
+    font-size: var(--font-size-sm);
+    color: var(--color-text);
+    padding: 0.5rem 0 0.5rem 1rem;
+    border-bottom: 1px solid var(--color-bg);
+    position: relative;
+    text-decoration: none;
+  }
+
+  .svc-card__link::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--color-accent);
+    font-weight: 700;
+  }
+
+  .svc-card__link:last-child {
+    border-bottom: none;
+  }
+
+  .svc-card__link:hover {
+    color: var(--color-accent);
+  }
+
+  .svc-card__btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    padding: 0.875rem 1.5rem;
+    margin-top: auto;
+    border-radius: var(--border-radius);
+    background: var(--color-accent);
+    color: var(--color-white);
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+  }
+
+  .svc-card__btn:hover {
+    background: var(--color-accent-dark);
+  }
+</style>

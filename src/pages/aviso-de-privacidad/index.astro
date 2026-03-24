@@ -1,0 +1,96 @@
+---
+import Base from '../../layouts/Base.astro';
+import TopBar from '../../components/TopBar.astro';
+import Header from '../../components/Header.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import Footer from '../../components/Footer.astro';
+import WhatsAppBubble from '../../components/WhatsAppBubble.astro';
+import { breadcrumbSchema } from '../../lib/seo';
+---
+
+<Base
+  title="Aviso de Privacidad | REDEIL"
+  description="Aviso de privacidad de REDEIL. Conoce cómo protegemos tus datos personales conforme a la Ley Federal de Protección de Datos Personales."
+  noindex={true}
+  structuredData={[breadcrumbSchema([{ name: 'Inicio', url: '/' }, { name: 'Aviso de Privacidad', url: '/aviso-de-privacidad/' }])]}
+>
+  <TopBar />
+  <Header />
+  <Breadcrumb items={[{ name: 'Aviso de Privacidad', href: '/aviso-de-privacidad/' }]} />
+
+  <section class="section">
+    <div class="container">
+      <div class="legal-content">
+        <h1 class="legal-content__title">Aviso de Privacidad</h1>
+        <p class="legal-content__date">Última actualización: marzo 2025</p>
+
+        <div class="prose">
+          <h2>Responsable del tratamiento de datos personales</h2>
+          <p><strong>REDEIL</strong>, con domicilio en Ciudad de México, es responsable del tratamiento de sus datos personales conforme a la Ley Federal de Protección de Datos Personales en Posesión de los Particulares (LFPDPPP).</p>
+
+          <h2>Datos personales que recopilamos</h2>
+          <p>Para la prestación de nuestros servicios de renta de iluminación, audio y equipos para eventos, podemos recopilar los siguientes datos personales:</p>
+          <ul>
+            <li>Nombre completo</li>
+            <li>Número de teléfono</li>
+            <li>Correo electrónico</li>
+            <li>Dirección del evento</li>
+            <li>Información sobre el tipo y fecha del evento</li>
+          </ul>
+
+          <h2>Finalidades del tratamiento</h2>
+          <p>Sus datos personales serán utilizados para:</p>
+          <ul>
+            <li>Atender solicitudes de cotización y contratación de servicios</li>
+            <li>Coordinar la logística de instalación y desmontaje de equipos</li>
+            <li>Enviar confirmaciones de reserva y recordatorios de eventos</li>
+            <li>Contactar para seguimiento y atención al cliente</li>
+            <li>Enviar información promocional sobre nuestros servicios (con su consentimiento)</li>
+          </ul>
+
+          <h2>Transferencia de datos</h2>
+          <p>REDEIL no transfiere ni comparte sus datos personales con terceros sin su consentimiento expreso, salvo en los casos previstos por la LFPDPPP y su Reglamento.</p>
+
+          <h2>Derechos ARCO</h2>
+          <p>Usted tiene derecho a Acceder, Rectificar, Cancelar u Oponerse al tratamiento de sus datos personales (derechos ARCO). Para ejercer estos derechos, puede enviar un correo electrónico a <a href="mailto:contacto@redeil.com">contacto@redeil.com</a> indicando su solicitud.</p>
+
+          <h2>Medidas de seguridad</h2>
+          <p>REDEIL implementa medidas de seguridad administrativas, técnicas y físicas para proteger sus datos personales contra daño, pérdida, alteración, destrucción o uso no autorizado.</p>
+
+          <h2>Modificaciones al aviso de privacidad</h2>
+          <p>REDEIL se reserva el derecho de modificar este aviso de privacidad en cualquier momento. Las modificaciones serán publicadas en esta página: <a href="https://redeil.com/aviso-de-privacidad/">redeil.com/aviso-de-privacidad</a>.</p>
+
+          <h2>Contacto</h2>
+          <p>Para cualquier duda o aclaración sobre este aviso de privacidad, contáctenos:</p>
+          <ul>
+            <li>Email: <a href="mailto:contacto@redeil.com">contacto@redeil.com</a></li>
+            <li>Teléfono: <a href="tel:+525549375172">55 4937 5172</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+  <WhatsAppBubble />
+</Base>
+
+<style>
+  .legal-content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .legal-content__title {
+    font-size: var(--font-size-3xl);
+    font-weight: 800;
+    color: var(--color-text);
+    margin-bottom: var(--spacing-xs);
+  }
+
+  .legal-content__date {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-light);
+    margin-bottom: var(--spacing-xl);
+  }
+</style>

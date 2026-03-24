@@ -1,0 +1,221 @@
+---
+import Base from '../../../../layouts/Base.astro';
+import TopBar from '../../../../components/TopBar.astro';
+import Header from '../../../../components/Header.astro';
+import Hero from '../../../../components/Hero.astro';
+import Breadcrumb from '../../../../components/Breadcrumb.astro';
+import CtaBar from '../../../../components/CtaBar.astro';
+import FaqSection from '../../../../components/FaqSection.astro';
+import Footer from '../../../../components/Footer.astro';
+import WhatsAppBubble from '../../../../components/WhatsAppBubble.astro';
+import { faqSchema } from '../../../../lib/seo';
+import { WHATSAPP_URL_MSG, SITE_URL } from '../../../../lib/config';
+
+const faqItems = [
+  {
+    "pregunta": "¿Qué incluye el paquete Láser Premium de Iluminación Láser?",
+    "respuesta": "El paquete Láser Premium incluye 4 láseres rgb 3w, control dmx profesional, instalación profesional. Todo con instalación profesional y desmontaje incluido. Nuestro equipo técnico llega con anticipación para montar y hacer pruebas."
+  },
+  {
+    "pregunta": "¿Cuánto cuesta el paquete Láser Premium?",
+    "respuesta": "El paquete Láser Premium de Iluminación Láser tiene un precio desde $12,000 MXN + IVA. Este precio incluye transporte, instalación, operación y desmontaje dentro de CDMX y Estado de México."
+  },
+  {
+    "pregunta": "¿Puedo personalizar el paquete Láser Premium?",
+    "respuesta": "Sí, todos nuestros paquetes son personalizables. Podemos agregar o quitar elementos según tus necesidades y presupuesto. Contáctanos por WhatsApp al 55 4937 5172 para una cotización a la medida."
+  },
+  {
+    "pregunta": "¿En qué zonas entregan el paquete Láser Premium?",
+    "respuesta": "Cubrimos toda la Ciudad de México y Estado de México sin costo adicional de traslado. También llegamos a Cuernavaca, Tepoztlán, Valle de Bravo y ubicaciones dentro de 100 km de CDMX."
+  },
+  {
+    "pregunta": "¿Con cuánta anticipación debo reservar el paquete Láser Premium?",
+    "respuesta": "Recomendamos reservar con 4 a 6 semanas de anticipación, especialmente en temporada alta (noviembre-febrero). Para fechas próximas, contáctanos por WhatsApp para verificar disponibilidad del equipo."
+  }
+];
+
+const structuredData = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Product',
+    name: 'Láser Premium — Iluminación Láser | REDEIL',
+    description: 'Paquete Láser Premium de iluminación láser para eventos en CDMX y Estado de México. Incluye instalación profesional, operación durante el evento y desmontaje. Equipo de alta calidad para resultados impecables.',
+    image: SITE_URL + '/img/img-index/iluminacion-laser.avif',
+    brand: { '@type': 'Brand', name: 'REDEIL' },
+    offers: {
+      '@type': 'Offer',
+      price: '12000',
+      priceCurrency: 'MXN',
+      availability: 'https://schema.org/InStock',
+      priceValidUntil: '2027-12-31',
+      url: SITE_URL + '/renta-de-iluminacion/iluminacion-laser/paquete-laser-premium/',
+    },
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '4.8',
+      reviewCount: '54',
+    },
+  },
+  faqSchema(faqItems),
+];
+---
+
+<Base
+  title="Láser Premium — Iluminación Láser en CDMX | REDEIL"
+  description="Paquete Láser Premium de iluminación láser para eventos en CDMX y Estado de México. Incluye instalación profesional, operación durante el evento y desmonta"
+  structuredData={structuredData}
+>
+  <TopBar />
+  <Header />
+  <Breadcrumb items={[{ name: 'Renta de Iluminación', href: '/renta-de-iluminacion/' }, { name: 'Iluminación Láser', href: '/renta-de-iluminacion/iluminacion-laser/' }, { name: 'Láser Premium', href: '/renta-de-iluminacion/iluminacion-laser/paquete-laser-premium/' }]} />
+
+  <Hero
+    badge="Láser Premium"
+    title="Láser Premium — Iluminación Láser"
+    description="Paquete Láser Premium de iluminación láser para eventos en CDMX y Estado de México. Incluye instalación profesional, operación durante el evento y desmo..."
+    primaryCta={{ text: 'Cotizar $12,000 + IVA', href: WHATSAPP_URL_MSG }}
+    secondaryCta={{ text: 'Ver más paquetes', href: '/renta-de-iluminacion/iluminacion-laser/' }}
+  >
+    <Fragment slot="hero-seo">
+      <p>El paquete Láser Premium de iluminación láser es una solución avanzado para eventos que requieren equipamiento profesional en la Ciudad de México y zona metropolitana. Nuestro equipo técnico se encarga de todo: desde la logística de transporte hasta la instalación, configuración y operación durante tu evento.</p>
+      <p>Con más de 10 años de experiencia en renta de iluminación láser para bodas, XV años, eventos corporativos y celebraciones privadas, REDEIL garantiza resultados profesionales. Este paquete ha sido diseñado para ofrecer la mejor relación calidad-precio, con equipo de marcas líderes y servicio técnico incluido.</p>
+    </Fragment>
+  </Hero>
+
+  <CtaBar
+    headline="Otros paquetes de Iluminación Láser"
+    items={[{ label: "Láser Básico", href: "/renta-de-iluminacion/iluminacion-laser/paquete-laser-basico/" }, { label: "Láser Estándar", href: "/renta-de-iluminacion/iluminacion-laser/paquete-laser-estandar/" }, { label: "Producción Láser", href: "/renta-de-iluminacion/iluminacion-laser/paquete-produccion-laser/" }]}
+  />
+
+  <!-- QUÉ INCLUYE -->
+  <section class="section" id="features">
+    <div class="container">
+      <h2 class="section__title">¿Qué incluye el paquete Láser Premium?</h2>
+      <p class="section__subtitle">Todo lo que necesitas para tu evento, sin sorpresas ni costos ocultos.</p>
+      <div class="features-grid">
+        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>4 láseres RGB 3W</span></div>
+        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>Control DMX profesional</span></div>
+        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>Instalación profesional</span></div>
+        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>Programación personalizada</span></div>
+        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>Humo para efecto</span></div>
+        <div class="feature-item feature-item--yes"><span class="feature-icon">&#10003;</span><span>Técnico operador</span></div>
+        
+      </div>
+      <div class="price-highlight">
+        <span class="price-highlight__label">Precio desde</span>
+        <span class="price-highlight__amount">$12,000 MXN</span>
+        <span class="price-highlight__note">+ IVA · Instalación incluida</span>
+        <a href={WHATSAPP_URL_MSG} class="btn btn--accent" target="_blank" rel="noopener">Reservar Ahora</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTENIDO SEO -->
+  <section class="section section--bg">
+    <div class="container content-prose">
+      <h2>¿Por qué elegir el paquete Láser Premium de iluminación láser?</h2>
+      <p>El paquete Láser Premium de iluminación láser es una solución avanzado para eventos que requieren equipamiento profesional en la Ciudad de México y zona metropolitana. Nuestro equipo técnico se encarga de todo: desde la logística de transporte hasta la instalación, configuración y operación durante tu evento.</p>
+      <p>Con más de 10 años de experiencia en renta de iluminación láser para bodas, XV años, eventos corporativos y celebraciones privadas, REDEIL garantiza resultados profesionales. Este paquete ha sido diseñado para ofrecer la mejor relación calidad-precio, con equipo de marcas líderes y servicio técnico incluido.</p>
+      <h3>¿Para quién es este paquete?</h3>
+      <p>El paquete Láser Premium de iluminación láser está diseñado para eventos grandes que requieren cobertura completa. Con equipo profesional de marcas líderes y servicio técnico especializado, garantizamos resultados impecables.</p>
+      <h3>Servicio profesional de iluminación láser</h3>
+      <p>En REDEIL llevamos más de 10 años ofreciendo renta de iluminación láser en CDMX y Estado de México. Nuestro equipo técnico se encarga de todo: logística, transporte, instalación, configuración, operación durante el evento y desmontaje. Trabajamos con el mejor equipo del mercado para garantizar que cada evento sea perfecto.</p>
+    </div>
+  </section>
+
+  <FaqSection items={faqItems} />
+
+  <!-- CTA FINAL -->
+
+  <Footer />
+  <WhatsAppBubble />
+</Base>
+
+<style>
+  .section__title {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: 800;
+    color: var(--color-text);
+    margin-bottom: 0.5rem;
+  }
+  .section__subtitle {
+    font-size: var(--font-size-base);
+    color: var(--color-text-light);
+    margin-bottom: 2rem;
+  }
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+  }
+  .feature-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.875rem 1rem;
+    border-radius: var(--border-radius);
+    font-size: var(--font-size-sm);
+  }
+  .feature-item--yes {
+    background: #f0fdf4;
+    color: #166534;
+  }
+  .feature-item--no {
+    background: var(--color-bg);
+    color: var(--color-text-light);
+  }
+  .feature-icon {
+    font-weight: 700;
+    font-size: 1.125rem;
+    flex-shrink: 0;
+  }
+  .price-highlight {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 2rem;
+    background: var(--color-bg);
+    border-radius: var(--border-radius-lg);
+    text-align: center;
+  }
+  .price-highlight__label {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-light);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .price-highlight__amount {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 800;
+    color: var(--color-text);
+  }
+  .price-highlight__note {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-light);
+    margin-bottom: 0.5rem;
+  }
+  .content-prose {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .content-prose h2 {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: 800;
+    color: var(--color-text);
+    margin-bottom: 1rem;
+  }
+  .content-prose h3 {
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    color: var(--color-text);
+    margin: 2rem 0 0.75rem;
+  }
+  .content-prose p {
+    font-size: var(--font-size-base);
+    color: var(--color-text-light);
+    line-height: 1.8;
+    margin-bottom: 1rem;
+  }
+</style>

@@ -1,0 +1,338 @@
+---
+import Base from '../../../layouts/Base.astro';
+import TopBar from '../../../components/TopBar.astro';
+import Header from '../../../components/Header.astro';
+import Hero from '../../../components/Hero.astro';
+import Breadcrumb from '../../../components/Breadcrumb.astro';
+import FaqSection from '../../../components/FaqSection.astro';
+import Footer from '../../../components/Footer.astro';
+import WhatsAppBubble from '../../../components/WhatsAppBubble.astro';
+import { faqSchema, localBusinessSchema, breadcrumbSchema } from '../../../lib/seo';
+import { WHATSAPP_URL_MSG, SITE_URL } from '../../../lib/config';
+
+const faqItems = [
+  {
+    "pregunta": "¿Cuánto cuesta iluminación en Tultitlán?",
+    "respuesta": "Paquetes desde $3,500 MXN para guirnaldas. Eventos completos en salones de Tultitlán con iluminación y audio van de $6,000 a $16,000 MXN."
+  },
+  {
+    "pregunta": "¿Cubren todo Tultitlán?",
+    "respuesta": "Sí, cubrimos Tultitlán Centro, San Pablo de las Salinas, Fuentes del Valle, Buenavista y todo el municipio."
+  },
+  {
+    "pregunta": "¿Hay cargo extra por Tultitlán?",
+    "respuesta": "No, Tultitlán está dentro de nuestra cobertura metropolitana estándar. Sin cargos adicionales."
+  },
+  {
+    "pregunta": "¿Qué eventos cubren en Tultitlán?",
+    "respuesta": "XV años, bodas, cumpleaños, graduaciones, bautizos y todo tipo de celebraciones en salones, jardines y quintas del municipio."
+  },
+  {
+    "pregunta": "¿Cómo cotizo para Tultitlán?",
+    "respuesta": "Mándanos WhatsApp con fecha, venue, tipo de evento y asistentes. Cotización en menos de 2 horas."
+  }
+];
+
+const structuredData = [
+  localBusinessSchema(),
+  faqSchema(faqItems),
+  breadcrumbSchema([
+    { name: 'Inicio', url: '/' },
+    { name: 'Zonas de Servicio', url: '/zonas/' },
+    { name: 'Tultitlán', url: '/zonas/tultitlan/' },
+  ]),
+];
+---
+
+<Base
+  title="Renta de Iluminación y Sonido en Tultitlán | REDEIL"
+  description="Renta de iluminación, audio y efectos para eventos en Tultitlán. Guirnaldas, luces LED, sonido profesional. Instalación incluida. Cotiza hoy."
+  structuredData={structuredData}
+>
+  <TopBar />
+  <Header />
+  <Breadcrumb items={[
+    { name: 'Zonas de Servicio', href: '/zonas/' },
+    { name: 'Tultitlán', href: '/zonas/tultitlan/' },
+  ]} />
+
+  <Hero
+    badge="Estado de México"
+    title="Renta de Iluminación y Sonido en Tultitlán"
+    description="Iluminación profesional LED, audio de alta fidelidad y efectos especiales para bodas, XV años, eventos corporativos y fiestas en Tultitlán."
+    primaryCta={{ text: 'Cotizar ahora', href: WHATSAPP_URL_MSG }}
+    secondaryCta={{ text: 'Ver servicios', href: '#servicios' }}
+  >
+    <Fragment slot="hero-seo">
+      <p>Tultitlán es un municipio con fuerte identidad comunitaria y tradición de celebraciones. Salones de fiestas sobre Vía Gustavo Baz, jardines de eventos, quintas en Tultitlán Centro, espacios en San Pablo de las Salinas y centros sociales ofrecen venues accesibles para fiestas y eventos familiares.</p>
+      <p>REDEIL lleva la mejor iluminación y sonido a las celebraciones de Tultitlán. XV años con show de luces, bodas elegantes, cumpleaños espectaculares y fiestas familiares con audio profesional. Paquetes desde $3,500 MXN con equipo LED e instalación incluida.</p>
+    </Fragment>
+  </Hero>
+
+  <!-- Servicios recomendados -->
+  <section class="section" id="servicios">
+    <div class="container">
+      <h2 class="section__title">¿Qué servicios de iluminación y sonido ofrecemos en Tultitlán?</h2>
+      <p class="section__subtitle">Equipo profesional que llevamos hasta tu venue en Tultitlán. Instalación y soporte técnico incluidos.</p>
+      <div class="servicios-grid">
+        <a href="/renta-de-iluminacion/guirnaldas/" class="servicio-card">
+          <h3 class="servicio-card__title">Guirnaldas de Luces</h3>
+          <p class="servicio-card__desc">Luces vintage Edison para jardines y exteriores</p>
+          <span class="servicio-card__link">Ver paquetes →</span>
+        </a>
+        <a href="/renta-de-iluminacion/luces-arquitectonicas/" class="servicio-card">
+          <h3 class="servicio-card__title">Luces Arquitectónicas</h3>
+          <p class="servicio-card__desc">Uplighting para resaltar fachadas y columnas</p>
+          <span class="servicio-card__link">Ver paquetes →</span>
+        </a>
+        <a href="/renta-de-iluminacion/cabezas-moviles/" class="servicio-card">
+          <h3 class="servicio-card__title">Cabezas Móviles</h3>
+          <p class="servicio-card__desc">Show de luces robóticas para pistas de baile</p>
+          <span class="servicio-card__link">Ver paquetes →</span>
+        </a>
+        <a href="/renta-de-bocinas/bocinas-para-bodas/" class="servicio-card">
+          <h3 class="servicio-card__title">Bocinas para Bodas</h3>
+          <p class="servicio-card__desc">Audio profesional JBL para ceremonias y fiestas</p>
+          <span class="servicio-card__link">Ver paquetes →</span>
+        </a>
+        <a href="/equipos-para-eventos/humo-bajo/" class="servicio-card">
+          <h3 class="servicio-card__title">Humo Bajo</h3>
+          <p class="servicio-card__desc">Efecto "bailando en las nubes" para primer baile</p>
+          <span class="servicio-card__link">Ver paquetes →</span>
+        </a>
+        <a href="/equipos-para-eventos/maquina-de-confeti/" class="servicio-card">
+          <h3 class="servicio-card__title">Máquina de Confeti</h3>
+          <p class="servicio-card__desc">Cañones de confeti para momentos especiales</p>
+          <span class="servicio-card__link">Ver paquetes →</span>
+        </a>
+        <a href="/renta-de-iluminacion/cascadas-led/" class="servicio-card">
+          <h3 class="servicio-card__title">Cascadas LED</h3>
+          <p class="servicio-card__desc">Cortinas de luz LED para decoración de salones</p>
+          <span class="servicio-card__link">Ver paquetes →</span>
+        </a>
+        <a href="/renta-de-iluminacion/proyector-de-gobos/" class="servicio-card">
+          <h3 class="servicio-card__title">Proyector de Gobos</h3>
+          <p class="servicio-card__desc">Proyección de logos e iniciales personalizadas</p>
+          <span class="servicio-card__link">Ver paquetes →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Venues y cobertura -->
+  <section class="section section--bg">
+    <div class="container content-prose">
+      <h2>¿En qué venues de Tultitlán instalamos equipo?</h2>
+      <p>Instalamos equipo profesional en los principales venues de Tultitlán y sus requerimientos técnicos. Coordinamos directamente con cada espacio para garantizar una instalación impecable.</p>
+      <div class="venues-grid">
+        <div class="venues-col">
+          <h3>Venues Populares</h3>
+          <ul>
+            <li>Salones de Vía Gustavo Baz</li>
+            <li>Jardines de eventos</li>
+            <li>Quintas en Tultitlán Centro</li>
+            <li>San Pablo de las Salinas</li>
+            <li>Centros sociales</li>
+          </ul>
+        </div>
+        <div class="venues-col">
+          <h3>Colonias que Cubrimos</h3>
+          <ul>
+            <li>Tultitlán Centro</li>
+            <li>San Pablo de las Salinas</li>
+            <li>Fuentes del Valle</li>
+            <li>Buenavista</li>
+            <li>Santiago Teyahualco</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA WhatsApp -->
+  <section class="section cta-zona">
+    <div class="container cta-zona__inner">
+      <h2 class="cta-zona__title">¿Tienes un evento en Tultitlán?</h2>
+      <p class="cta-zona__desc">Cuéntanos los detalles y recibe tu cotización personalizada en menos de 2 horas. Sin compromiso.</p>
+      <a href={WHATSAPP_URL_MSG} target="_blank" rel="noopener" class="btn btn--wa">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.75.75 0 0 0 .917.918l4.462-1.494A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.336 0-4.512-.703-6.32-1.905l-.44-.295-2.641.884.884-2.638-.306-.453A9.958 9.958 0 0 1 2 12C2 6.486 6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"/></svg>
+        Cotizar por WhatsApp
+      </a>
+    </div>
+  </section>
+
+  
+  <!-- Zonas cercanas -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section__title">¿Buscas servicio en zonas cercanas a Tultitlán?</h2>
+      <p class="section__subtitle">También cubrimos estas zonas con el mismo nivel de servicio profesional.</p>
+      <div class="zonas-cercanas">
+        <a href="/zonas/coacalco/" class="zona-link">Renta de iluminación en Coacalco</a>
+        <a href="/zonas/cuautitlan-izcalli/" class="zona-link">Renta de iluminación en Cuautitlán Izcalli</a>
+        <a href="/zonas/ecatepec/" class="zona-link">Renta de iluminación en Ecatepec</a>
+      </div>
+    </div>
+  </section>
+
+  <FaqSection items={faqItems} />
+
+  <Footer />
+  <WhatsAppBubble />
+</Base>
+
+<style>
+  .section__title {
+    font-size: var(--font-size-2xl);
+    font-weight: 700;
+    color: var(--color-text);
+    margin-bottom: var(--spacing-xs);
+  }
+  .section__subtitle {
+    font-size: var(--font-size-lg);
+    color: var(--color-text-light);
+    margin-bottom: var(--spacing-xl);
+    max-width: 640px;
+  }
+
+  /* Servicios grid */
+  .servicios-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+  @media (min-width: 640px) {
+    .servicios-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (min-width: 1024px) {
+    .servicios-grid { grid-template-columns: repeat(4, 1fr); }
+  }
+
+  .servicio-card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+    padding: var(--spacing-md);
+    background: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius-lg);
+    text-decoration: none;
+    color: inherit;
+    transition: box-shadow 0.2s ease, border-color 0.2s ease;
+  }
+  .servicio-card:hover {
+    border-color: var(--color-accent);
+    box-shadow: var(--shadow-md);
+  }
+  .servicio-card__title {
+    font-size: var(--font-size-base);
+    font-weight: 600;
+    color: var(--color-text);
+  }
+  .servicio-card__desc {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-light);
+    line-height: 1.5;
+  }
+  .servicio-card__link {
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    color: var(--color-accent);
+    margin-top: auto;
+  }
+
+  /* Venues grid */
+  .venues-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-lg);
+  }
+  @media (min-width: 640px) {
+    .venues-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  .venues-col h3 {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    color: var(--color-text);
+    margin-bottom: var(--spacing-sm);
+  }
+  .venues-col ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .venues-col li {
+    font-size: var(--font-size-base);
+    color: var(--color-text-light);
+    padding-left: 1.25rem;
+    position: relative;
+  }
+  .venues-col li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--color-accent);
+    font-weight: 700;
+  }
+
+  /* CTA zona */
+  .cta-zona {
+    background: linear-gradient(135deg, var(--color-primary) 0%, #0f1f3d 100%);
+    text-align: center;
+  }
+  .cta-zona__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-md);
+  }
+  .cta-zona__title {
+    font-size: var(--font-size-2xl);
+    font-weight: 700;
+    color: var(--color-white);
+  }
+  .cta-zona__desc {
+    font-size: var(--font-size-lg);
+    color: rgba(255, 255, 255, 0.8);
+    max-width: 520px;
+  }
+
+  /* Content prose */
+  .content-prose h2 {
+    font-size: var(--font-size-2xl);
+    font-weight: 700;
+    color: var(--color-text);
+    margin-bottom: var(--spacing-sm);
+  }
+  .content-prose p {
+    font-size: var(--font-size-base);
+    color: var(--color-text-light);
+    line-height: 1.7;
+    max-width: 720px;
+  }
+
+  .zonas-cercanas {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: var(--spacing-sm);
+  }
+  .zona-link {
+    display: block;
+    padding: var(--spacing-sm) var(--spacing-md);
+    background: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    color: var(--color-accent);
+    font-weight: 600;
+    font-size: var(--font-size-sm);
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+  .zona-link:hover {
+    border-color: var(--color-accent);
+    box-shadow: var(--shadow-sm);
+  }
+</style>

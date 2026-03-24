@@ -1,0 +1,78 @@
+---
+import { SITE_URL } from '../lib/config';
+import { breadcrumbSchema } from '../lib/seo';
+
+interface Props {
+  items: Array<{ name: string; href: string }>;
+}
+
+const { items } = Astro.props;
+
+// Always include Home
+const fullItems = [{ name: 'Inicio', href: '/' }, ...items];
+const schema = breadcrumbSchema(fullItems.map(i => ({ name: i.name, url: i.href })));
+---
+
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <div class="container">
+    <ol class="breadcrumb__list">
+      {fullItems.map((item, index) => (
+        <li class={`breadcrumb__item ${index === fullItems.length - 1 ? 'breadcrumb__item--active' : ''}`}>
+          {index < fullItems.length - 1 ? (
+            <a href={item.href} class="breadcrumb__link">{item.name}</a>
+          ) : (
+            <span>{item.name}</span>
+          )}
+        </li>
+      ))}
+    </ol>
+  </div>
+  <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+</nav>
+
+<style>
+  .breadcrumb {
+    background: var(--color-white);
+    border-bottom: 1px solid var(--color-border);
+    padding: 0.625rem 0;
+  }
+
+  .breadcrumb__list {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    font-size: var(--font-size-xs);
+    line-height: 1;
+  }
+
+  .breadcrumb__item {
+    display: flex;
+    align-items: center;
+    color: var(--color-text-light);
+  }
+
+  .breadcrumb__item + .breadcrumb__item::before {
+    content: "";
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    border-top: 1.5px solid var(--color-text-light);
+    border-right: 1.5px solid var(--color-text-light);
+    transform: rotate(45deg);
+    margin: 0 0.625rem;
+    opacity: 0.5;
+  }
+
+  .breadcrumb__link {
+    color: var(--color-text-light);
+  }
+
+  .breadcrumb__link:hover {
+    color: var(--color-accent);
+  }
+
+  .breadcrumb__item--active {
+    font-weight: 600;
+    color: var(--color-text);
+  }
+</style>

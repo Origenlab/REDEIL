@@ -1,0 +1,350 @@
+---
+import { SITE_NAME, PHONE_DISPLAY, PHONE_URL, WHATSAPP_URL_MSG, EMAIL, EMAIL_URL, BUSINESS_HOURS, ILUMINACION_SERVICES, AUDIO_SERVICES, EQUIPOS_SERVICES } from '../lib/config';
+
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="footer" role="contentinfo">
+  <!-- CTA Band -->
+  <div class="footer__cta-band">
+    <div class="container">
+      <div class="footer__cta-inner">
+        <div class="footer__cta-content">
+          <p class="footer__cta-text">¿Listo para hacer tu evento inolvidable?</p>
+          <p class="footer__cta-sub">Cotiza gratis y sin compromiso. Respuesta en minutos.</p>
+        </div>
+        <div class="footer__cta-actions">
+          <a href={WHATSAPP_URL_MSG} class="footer__cta-btn footer__cta-btn--primary" target="_blank" rel="noopener">Cotizar por WhatsApp</a>
+          <a href={PHONE_URL} class="footer__cta-btn footer__cta-btn--ghost">Llamar ahora</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Footer -->
+  <div class="footer__main">
+    <div class="container">
+      <div class="footer__grid">
+        <!-- Col 1: Brand + Contact -->
+        <div class="footer__brand">
+          <div class="footer__logo">
+            <span class="footer__logo-text">{SITE_NAME}</span>
+            <span class="footer__logo-tag">Renta de Iluminación y Audio</span>
+          </div>
+          <p class="footer__brand-desc">Renta profesional de iluminación, audio, DJ y equipos para eventos en CDMX y Estado de México. 10+ años de experiencia. Instalación incluida.</p>
+          <div class="footer__contact-grid">
+            <a href={PHONE_URL} class="footer__contact-item">
+              <svg class="footer__contact-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <span>{PHONE_DISPLAY}</span>
+            </a>
+            <a href={WHATSAPP_URL_MSG} class="footer__contact-item" target="_blank" rel="noopener">
+              <svg class="footer__contact-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
+              <span>WhatsApp</span>
+            </a>
+            <a href={EMAIL_URL} class="footer__contact-item">
+              <svg class="footer__contact-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <span>{EMAIL}</span>
+            </a>
+          </div>
+          <div class="footer__schedule">
+            <svg class="footer__schedule-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <span>{BUSINESS_HOURS.display}</span>
+          </div>
+        </div>
+
+        <!-- Col 2: Iluminación -->
+        <div class="footer__col">
+          <h3 class="footer__title">Iluminación</h3>
+          <ul class="footer__list">
+            {ILUMINACION_SERVICES.map((s) => (
+              <li><a href={`/renta-de-iluminacion/${s.slug}/`} class="footer__link">{s.nombre}</a></li>
+            ))}
+          </ul>
+        </div>
+
+        <!-- Col 3: Audio + Equipos -->
+        <div class="footer__col">
+          <h3 class="footer__title">Audio y Sonido</h3>
+          <ul class="footer__list">
+            {AUDIO_SERVICES.map((s) => (
+              <li><a href={`/renta-de-bocinas/${s.slug}/`} class="footer__link">{s.nombre}</a></li>
+            ))}
+          </ul>
+          <h3 class="footer__title footer__title--spaced">Equipos para Eventos</h3>
+          <ul class="footer__list">
+            {EQUIPOS_SERVICES.map((s) => (
+              <li><a href={`/equipos-para-eventos/${s.slug}/`} class="footer__link">{s.nombre}</a></li>
+            ))}
+          </ul>
+        </div>
+
+        <!-- Col 4: Empresa -->
+        <div class="footer__col">
+          <h3 class="footer__title">Empresa</h3>
+          <ul class="footer__list">
+            <li><a href="/" class="footer__link">Inicio</a></li>
+            <li><a href="/nosotros/" class="footer__link">Nosotros</a></li>
+            <li><a href="/contacto/" class="footer__link">Contacto</a></li>
+            <li><a href="/blog/" class="footer__link">Blog</a></li>
+            <li><a href="/aviso-de-privacidad/" class="footer__link">Aviso de Privacidad</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom -->
+  <div class="footer__bottom">
+    <div class="container">
+      <div class="footer__bottom-inner">
+        <p class="footer__copy">&copy; {currentYear} {SITE_NAME}. Todos los derechos reservados.</p>
+        <div class="footer__legal">
+          <a href="/aviso-de-privacidad/">Aviso de Privacidad</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    background: #18181b;
+    color: var(--footer-text-90);
+  }
+
+  /* CTA Band */
+  .footer__cta-band {
+    background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-dark) 100%);
+    padding: var(--spacing-xl) 0;
+  }
+
+  .footer__cta-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: var(--spacing-lg);
+  }
+
+  .footer__cta-text {
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    color: var(--color-white);
+    margin: 0;
+  }
+
+  .footer__cta-sub {
+    font-size: var(--font-size-base);
+    color: rgba(255, 255, 255, 0.85);
+    margin: 0.25rem 0 0;
+  }
+
+  .footer__cta-actions {
+    display: flex;
+    gap: var(--spacing-sm);
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .footer__cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    border-radius: var(--border-radius);
+    transition: background-color 0.2s ease;
+  }
+
+  .footer__cta-btn--primary {
+    background: var(--color-white);
+    color: var(--color-accent);
+  }
+
+  .footer__cta-btn--primary:hover {
+    background: var(--color-bg);
+  }
+
+  .footer__cta-btn--ghost {
+    background: transparent;
+    color: var(--color-white);
+    border: 2px solid rgba(255, 255, 255, 0.5);
+  }
+
+  .footer__cta-btn--ghost:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--color-white);
+  }
+
+  /* Main Footer */
+  .footer__main {
+    padding: var(--spacing-2xl) 0;
+  }
+
+  .footer__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-xl);
+  }
+
+  .footer__logo { margin-bottom: var(--spacing-md); }
+
+  .footer__logo-text {
+    display: block;
+    font-size: var(--font-size-xl);
+    font-weight: 800;
+    color: var(--color-white);
+  }
+
+  .footer__logo-tag {
+    display: block;
+    font-size: var(--font-size-sm);
+    color: var(--color-accent);
+    font-weight: 500;
+    margin-top: 0.125rem;
+  }
+
+  .footer__brand-desc {
+    font-size: var(--font-size-sm);
+    color: var(--footer-text-70);
+    line-height: 1.7;
+    margin: 0 0 var(--spacing-md);
+  }
+
+  .footer__contact-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .footer__contact-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: var(--font-size-sm);
+    color: var(--footer-text-90);
+  }
+
+  .footer__contact-item:hover { color: var(--color-white); }
+
+  .footer__contact-icon {
+    flex-shrink: 0;
+    color: var(--color-accent);
+  }
+
+  .footer__schedule {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: var(--spacing-md);
+    padding-top: var(--spacing-md);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: var(--font-size-sm);
+    color: var(--footer-text-90);
+  }
+
+  .footer__schedule-icon { color: var(--color-accent); }
+
+  .footer__col {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer__title {
+    font-size: var(--font-size-sm);
+    font-weight: 700;
+    color: var(--color-white);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin: 0 0 var(--spacing-md);
+  }
+
+  .footer__title--spaced {
+    margin-top: var(--spacing-lg);
+    padding-top: var(--spacing-md);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .footer__list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .footer__link {
+    font-size: var(--font-size-sm);
+    color: var(--footer-text-70);
+  }
+
+  .footer__link:hover { color: var(--color-white); }
+
+  /* Bottom */
+  .footer__bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: var(--spacing-md) 0;
+  }
+
+  .footer__bottom-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: var(--spacing-sm);
+  }
+
+  .footer__copy {
+    font-size: var(--font-size-xs);
+    color: var(--footer-text-50);
+    margin: 0;
+  }
+
+  .footer__legal {
+    display: flex;
+    gap: var(--spacing-md);
+  }
+
+  .footer__legal a {
+    font-size: var(--font-size-xs);
+    color: var(--footer-text-50);
+  }
+
+  .footer__legal a:hover { color: var(--color-white); }
+
+  @media (min-width: 640px) {
+    .footer__grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer__brand {
+      grid-column: 1 / -1;
+    }
+
+    .footer__bottom-inner {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .footer__cta-inner {
+      flex-direction: row;
+      justify-content: space-between;
+      text-align: left;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .footer__grid {
+      grid-template-columns: 1.5fr 1fr 1fr 0.8fr;
+    }
+
+    .footer__brand {
+      grid-column: auto;
+    }
+  }
+
+  @media print {
+    .footer { display: none !important; }
+  }
+</style>

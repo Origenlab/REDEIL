@@ -1,0 +1,95 @@
+---
+interface Props {
+  badge?: string;
+  title: string;
+  subtitle: string;
+  subtitle2?: string;
+  id?: string;
+}
+
+const { badge, title, subtitle, subtitle2, id = 'section-title' } = Astro.props;
+---
+
+<div class="section-header">
+  <div class="section-header__left">
+    {badge && <span class="section-header__badge">{badge}</span>}
+    <h2 id={id} class="section-header__title">{title}</h2>
+  </div>
+  <div class="section-header__right">
+    <p class="section-header__subtitle">{subtitle}</p>
+    {subtitle2 && <p class="section-header__subtitle">{subtitle2}</p>}
+  </div>
+</div>
+
+<style>
+  .section-header {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-xl);
+    text-align: center;
+  }
+
+  .section-header__left {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+    align-items: center;
+  }
+
+  .section-header__badge {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--color-accent);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 0.375rem 1rem;
+    background: rgba(0, 113, 227, 0.08);
+    border-radius: 4px;
+  }
+
+  .section-header__title {
+    font-size: var(--font-size-xl);
+    font-weight: 800;
+    color: var(--color-text);
+    line-height: var(--line-height-tight);
+    margin: 0;
+  }
+
+  .section-header__subtitle {
+    font-size: var(--font-size-base);
+    color: var(--color-text-light);
+    line-height: var(--line-height-base);
+    margin: 0;
+  }
+
+  @media (min-width: 768px) {
+    .section-header__title {
+      font-size: var(--font-size-2xl);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .section-header {
+      grid-template-columns: 1fr 1fr;
+      gap: var(--spacing-2xl);
+      text-align: left;
+      align-items: center;
+    }
+
+    .section-header__left {
+      align-items: flex-start;
+    }
+
+    .section-header__title {
+      font-size: var(--font-size-2xl);
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .section-header__title {
+      font-size: var(--font-size-3xl);
+    }
+  }
+</style>

@@ -1,0 +1,137 @@
+---
+import Base from '../../layouts/Base.astro';
+import TopBar from '../../components/TopBar.astro';
+import Header from '../../components/Header.astro';
+import Hero from '../../components/Hero.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import SectionHeader from '../../components/SectionHeader.astro';
+import CategoryCard from '../../components/CategoryCard.astro';
+import FaqSection from '../../components/FaqSection.astro';
+import Footer from '../../components/Footer.astro';
+import WhatsAppBubble from '../../components/WhatsAppBubble.astro';
+import { organizationSchema, breadcrumbSchema, faqSchema } from '../../lib/seo';
+import { EQUIPOS_SERVICES, WHATSAPP_URL_MSG } from '../../lib/config';
+
+const faqItems = [
+  { pregunta: '¿Qué tipos de equipos para eventos ofrecen en CDMX y Estado de México?', respuesta: 'Ofrecemos una amplia gama de equipos especializados: bolas disco con LED integrados, máquinas de confeti y humo, pantallas inflables gigantes, podiums profesionales, máquinas de burbujas, humo bajo, y mesas picnic resistentes. Todos nuestros equipos están diseñados para eventos de todo tipo, desde bodas hasta eventos corporativos.' },
+  { pregunta: '¿Las máquinas de humo y confeti son seguras para eventos con niños?', respuesta: 'Absolutamente. Utilizamos fluidos biodegradables y no tóxicos en nuestras máquinas de humo y confeti. Todos nuestros equipos cumplen con las normas de seguridad y son apropiados para eventos infantiles, garantizando diversión sin riesgos para la salud de los asistentes.' },
+  { pregunta: '¿Pueden personalizar los equipos para eventos temáticos?', respuesta: 'Sí, ofrecemos personalización para muchos de nuestros equipos. Podemos adaptar colores de LED en bolas disco, tipos de confeti personalizados, logos en podiums, y efectos especiales según el tema de tu evento.' },
+  { pregunta: '¿Con cuánto tiempo de anticipación debo reservar los equipos para eventos?', respuesta: 'Recomendamos reservar con al menos 3 a 4 semanas de anticipación, especialmente en temporada alta. Para eventos grandes o equipos especializados como pantallas inflables, sugerimos 6 semanas para asegurar disponibilidad.' },
+  { pregunta: '¿Ofrecen instalación y operación de los equipos durante el evento?', respuesta: 'Sí, nuestro servicio incluye instalación profesional, configuración y operación durante tu evento. Nuestros técnicos se encargan de todo el setup, pruebas previas y operación en tiempo real.' },
+  { pregunta: '¿Trabajan con eventos al aire libre en CDMX y Estado de México?', respuesta: 'Definitivamente. Tenemos equipos especialmente diseñados para exteriores: pantallas inflables resistentes al viento, mesas picnic resistentes al agua, máquinas de humo que funcionan en espacios abiertos, y sistemas de anclaje seguros.' },
+];
+
+const structuredData = [
+  organizationSchema(),
+  breadcrumbSchema([
+    { name: 'Inicio', url: '/' },
+    { name: 'Equipos para Eventos', url: '/equipos-para-eventos/' },
+  ]),
+  faqSchema(faqItems),
+];
+---
+
+<Base
+  title="Renta de Equipos para Eventos en CDMX y EdoMex | REDEIL"
+  description="Renta de bolas disco, máquinas de humo, confeti, burbujas, podiums, pantallas inflables y mesas picnic para eventos en CDMX. Instalación incluida."
+  structuredData={structuredData}
+>
+  <TopBar />
+  <Header activePage="equipos" />
+  <Breadcrumb items={[{ name: 'Equipos para Eventos', href: '/equipos-para-eventos/' }]} />
+
+  <!-- HERO 2-COL -->
+  <Hero
+    badge="8 equipos especializados"
+    title="Equipos que transforman. Eventos inolvidables."
+    description="Renta de equipos para eventos profesionales: efectos especiales, mobiliario y tecnología para bodas, XV años y corporativos en CDMX y Estado de México."
+    primaryCta={{ text: 'Cotizar Equipos', href: WHATSAPP_URL_MSG }}
+    secondaryCta={{ text: 'Ver equipos', href: '#servicios' }}
+  >
+    <Fragment slot="hero-seo">
+      <p>Los mejores eventos tienen algo en común: esos pequeños detalles que sorprenden y hacen la diferencia. Una lluvia de confeti en el momento exacto, <strong>humo bajo</strong> que hace que el primer baile parezca sacado de una película, o una <strong>bola disco</strong> que transforma la pista. En <strong>REDEIL</strong> rentamos todos esos <strong>equipos especiales</strong> que convierten tu evento en algo único.</p>
+      <p>Trabajamos en <strong>CDMX y Estado de México</strong> con equipos profesionales para todo tipo de celebraciones: bodas, fiestas de XV años, eventos corporativos y más. Desde máquinas de efectos especiales hasta pantallas inflables y podiums, lo que necesites para que tu evento sea memorable, nosotros lo tenemos.</p>
+    </Fragment>
+  </Hero>
+
+  <!-- SERVICIOS DE EQUIPOS — CategoryCards con paquetes -->
+  <section class="section section--bg" id="servicios-detallados">
+    <div class="container">
+      <SectionHeader
+        badge="8 equipos especializados"
+        title="¿Qué incluye la renta de equipos para eventos?"
+        subtitle="Cada equipo incluye transporte, instalación profesional, operación durante el evento y desmontaje. Trabajamos con equipos de grado profesional certificados para eventos en interiores y exteriores."
+        subtitle2="Desde máquinas de humo bajo para el primer baile hasta pantallas inflables gigantes para cine al aire libre, tenemos 8 categorías de equipos especiales con paquetes para cada presupuesto. Elige tu equipo y selecciona el paquete ideal."
+        id="detallados-title"
+      />
+      <div class="grid-4">
+        {EQUIPOS_SERVICES.map((s) => (
+          <CategoryCard
+            title={s.nombre}
+            subtitle={s.descripcion}
+            href={`/equipos-para-eventos/${s.slug}/`}
+            image={s.imagen}
+            subcategories={s.paquetes.map((p) => ({
+              name: p.nombre,
+              href: `/equipos-para-eventos/${s.slug}/${p.slug}/`,
+            }))}
+          />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST SECTION -->
+  <section class="section">
+    <div class="container">
+      <SectionHeader
+        title="¿Por qué rentar equipos para eventos con REDEIL?"
+        subtitle="Equipos profesionales que crean momentos inolvidables en cada celebración."
+        id="ventajas-title"
+      />
+      <div class="trust-grid">
+        <div class="trust-item">
+          <h3 class="trust-item__title">Humo Bajo Profesional</h3>
+          <p class="trust-item__desc">Máquinas de humo bajo de grado profesional que crean una nube densa a nivel del piso. El efecto más solicitado para primer baile de bodas — dura exactamente el tiempo que necesitas.</p>
+        </div>
+        <div class="trust-item">
+          <h3 class="trust-item__title">Confeti Biodegradable</h3>
+          <p class="trust-item__desc">Cañones de confeti con papel biodegradable y colores personalizados. Perfecto para brindis, salida de novios y coronación en XV años. Sin residuos dañinos para el venue.</p>
+        </div>
+        <div class="trust-item">
+          <h3 class="trust-item__title">Pantallas Inflables Gigantes</h3>
+          <p class="trust-item__desc">Pantallas de 3 a 7 metros con proyector HD y audio incluido. Ideales para cine al aire libre, transmisiones en vivo y presentaciones corporativas en jardines y terrazas.</p>
+        </div>
+        <div class="trust-item">
+          <h3 class="trust-item__title">Burbujas para Ambientación</h3>
+          <p class="trust-item__desc">Máquinas de burbujas profesionales que crean un ambiente mágico. Con fluidos no tóxicos y seguros para niños, perfectas para baby showers, bodas y eventos infantiles.</p>
+        </div>
+        <div class="trust-item">
+          <h3 class="trust-item__title">Bolas Disco con LED Integrado</h3>
+          <p class="trust-item__desc">Bolas disco profesionales con LED multicolor que transforman cualquier pista de baile. Efectos clásicos y modernos con control DMX para sincronizar con la música.</p>
+        </div>
+        <div class="trust-item">
+          <h3 class="trust-item__title">Instalación y Operación Incluida</h3>
+          <p class="trust-item__desc">Nuestros técnicos instalan, configuran y operan todos los equipos durante tu evento. Llegamos con anticipación para montaje y pruebas. Tú solo disfruta.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" id="faq">
+    <div class="container">
+      <SectionHeader
+        badge="FAQ"
+        title="Preguntas Frecuentes"
+        subtitle="Resolvemos las dudas más comunes sobre renta de equipos para eventos en CDMX y Estado de México. Efectos especiales, mobiliario, seguridad y precios."
+        subtitle2="Si no encuentras tu respuesta, escríbenos por WhatsApp al 55 4937 5172 y te asesoramos sin compromiso. Cotización personalizada en menos de 24 horas."
+        id="faq-title"
+      />
+    </div>
+    <FaqSection items={faqItems} />
+  </section>
+
+  <Footer />
+  <WhatsAppBubble />
+</Base>

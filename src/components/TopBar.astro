@@ -1,0 +1,126 @@
+---
+import { SITE_TAGLINE, PHONE_DISPLAY, PHONE_URL, WHATSAPP_URL, BUSINESS_HOURS } from '../lib/config';
+---
+
+<div class="topbar" role="complementary" aria-label="Información de contacto">
+  <div class="container">
+    <div class="topbar__mobile">
+      <a href={PHONE_URL} aria-label="Llamar a REDEIL">Tel: {PHONE_DISPLAY}</a>
+      <span class="topbar__sep">|</span>
+      <a href={WHATSAPP_URL} aria-label="WhatsApp REDEIL" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+    <div class="topbar__left">
+      <span class="topbar__label">{SITE_TAGLINE}</span>
+      <span class="topbar__sep">|</span>
+      <a href={PHONE_URL} aria-label="Llamar a REDEIL">Tel: {PHONE_DISPLAY}</a>
+      <span class="topbar__sep">|</span>
+      <a href={WHATSAPP_URL} target="_blank" rel="noopener" aria-label="WhatsApp REDEIL">WhatsApp: {PHONE_DISPLAY}</a>
+    </div>
+    <div class="topbar__right">
+      <span class="topbar__hours hide-mobile">{BUSINESS_HOURS.display}</span>
+      <a href={WHATSAPP_URL} class="topbar__cta" target="_blank" rel="noopener">Cotiza gratis</a>
+    </div>
+  </div>
+</div>
+
+<style>
+  .topbar {
+    background-color: var(--color-primary);
+    color: var(--footer-text-90);
+    font-size: var(--font-size-xs);
+    height: var(--topbar-height);
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 1001;
+  }
+
+  .topbar .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-sm);
+  }
+
+  .topbar__left {
+    display: none;
+  }
+
+  .topbar__right {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+  }
+
+  .topbar__mobile {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    font-size: var(--font-size-xs);
+  }
+
+  .topbar__mobile a {
+    color: var(--footer-text-90);
+  }
+
+  .topbar__mobile a:hover {
+    color: var(--color-white);
+  }
+
+  .topbar__label {
+    font-weight: 600;
+    color: var(--color-white);
+    letter-spacing: 0.02em;
+  }
+
+  .topbar__left a {
+    color: var(--footer-text-90);
+  }
+
+  .topbar__left a:hover {
+    color: var(--color-white);
+  }
+
+  .topbar__sep {
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  .topbar__hours {
+    color: var(--footer-text-70);
+  }
+
+  .topbar__cta {
+    background: var(--color-accent);
+    color: var(--color-white);
+    padding: 0.3rem 1rem;
+    border-radius: var(--border-radius-sm);
+    font-weight: 600;
+    font-size: var(--font-size-xs);
+    white-space: nowrap;
+    transition: background-color 0.2s ease;
+  }
+
+  .topbar__cta:hover {
+    background: var(--color-accent-dark);
+  }
+
+  @media (min-width: 768px) {
+    .topbar .container {
+      justify-content: space-between;
+    }
+
+    .topbar__left {
+      display: flex;
+      align-items: center;
+      gap: var(--spacing-md);
+    }
+
+    .topbar__mobile {
+      display: none;
+    }
+  }
+
+  @media print {
+    .topbar { display: none !important; }
+  }
+</style>

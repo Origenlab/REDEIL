@@ -1,0 +1,148 @@
+---
+import Base from '../../layouts/Base.astro';
+import TopBar from '../../components/TopBar.astro';
+import Header from '../../components/Header.astro';
+import Hero from '../../components/Hero.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import SectionHeader from '../../components/SectionHeader.astro';
+import CategoryCard from '../../components/CategoryCard.astro';
+import FaqSection from '../../components/FaqSection.astro';
+import Footer from '../../components/Footer.astro';
+import WhatsAppBubble from '../../components/WhatsAppBubble.astro';
+import { organizationSchema, breadcrumbSchema, faqSchema } from '../../lib/seo';
+import { ILUMINACION_SERVICES, WHATSAPP_URL_MSG } from '../../lib/config';
+
+const faqItems = [
+  { pregunta: '¿Qué tipo de equipo de iluminación rentan para bodas en CDMX?', respuesta: 'Ofrecemos una amplia gama de iluminación para bodas, desde elegantes luces guirnalda y cascadas LED para un ambiente romántico, hasta cabezas móviles y proyectores de gobos para personalizar la pista de baile con sus iniciales.' },
+  { pregunta: '¿Qué son las luces arquitectónicas y cómo pueden mejorar mi evento?', respuesta: 'La iluminación arquitectónica consiste en proyectar luz sobre paredes, columnas o fachadas para resaltar la belleza de un lugar. Es ideal para transformar un salón o jardín, pintándolo con los colores de tu evento y creando una atmósfera sofisticada.' },
+  { pregunta: '¿Qué diferencia hay entre una cabeza móvil y un proyector de gobos?', respuesta: 'Las cabezas móviles son luces robóticas que se mueven y cambian de color para dinamizar la pista de baile. El proyector de gobos es un equipo que proyecta imágenes o logos estáticos sobre una superficie, ideal para personalizar tu evento con la marca de tu empresa o las iniciales de los novios.' },
+  { pregunta: '¿Con cuánto tiempo de anticipación debo reservar el equipo de iluminación?', respuesta: 'Recomendamos reservar tu equipo de iluminación con al menos 4 a 6 semanas de anticipación, especialmente en temporada alta, para asegurar la disponibilidad de todos los equipos que necesitas para tu evento.' },
+  { pregunta: '¿La instalación de iluminación está incluida en la renta?', respuesta: 'Sí, todos nuestros servicios de renta de iluminación incluyen transporte, instalación profesional, operación durante el evento y desmontaje. Nuestro equipo técnico llega con anticipación para montar, configurar y hacer pruebas.' },
+  { pregunta: '¿Qué es un Sky Tracker y para qué sirve?', respuesta: 'El Sky Tracker es un reflector de alta potencia que proyecta rayos de luz verticales visibles a kilómetros de distancia. Se usa para inauguraciones, eventos masivos y celebraciones que necesitan llamar la atención desde lejos.' },
+  { pregunta: '¿Ofrecen paquetes combinados de iluminación y audio?', respuesta: 'Sí, diseñamos paquetes a la medida que combinan iluminación con audio profesional. Al contratar ambos servicios obtienes mejor precio y coordinación perfecta entre luces y sonido durante tu evento.' },
+  { pregunta: '¿La iluminación funciona en eventos al aire libre?', respuesta: 'Absolutamente. Contamos con equipos con certificación IP65 para uso en exteriores. Desde guirnaldas para jardines hasta City Color y Sky Tracker para eventos al aire libre, tenemos soluciones para cualquier espacio.' },
+];
+
+const detailedServices = [
+  { slug: 'guirnaldas', nombre: 'Guirnaldas', imagen: '/renta-de-iluminacion/img-iluminacion/guirnaldas.avif', desc1: 'Las guirnaldas LED representan la excelencia en alquiler de iluminación para eventos en CDMX. Ofrecemos guirnaldas profesionales que transforman espacios, creando ambientes cálidos y sofisticados ideales para bodas en jardín, conferencias, lanzamientos de productos y celebraciones en el Estado de México.', desc2: 'Con tecnología LED de bajo consumo energético, nuestras guirnaldas garantizan durabilidad y eficiencia, perfectas para eventos que buscan sostenibilidad. Personaliza la intensidad lumínica y colores para resaltar la decoración de tu evento.' },
+  { slug: 'cascadas-led', nombre: 'Cascadas LED', imagen: '/renta-de-iluminacion/img-iluminacion/cascadas-led.avif', desc1: 'Las cascadas LED y cortinas de luces crean efectos espectaculares de lluvia de luz, ideales para bodas, eventos corporativos y celebraciones especiales en CDMX y Estado de México. Ofrecemos cascadas LED profesionales con diferentes longitudes (6m, 10m y 20m) que transforman cualquier espacio en un ambiente mágico y romántico.', desc2: 'Con tecnología LED de bajo consumo y certificación IP65 para uso en exteriores, nuestras cascadas LED son perfectas para decorar jardines, terrazas y salones. Los efectos de caída irregular simulan una lluvia de luces brillantes, creando fondos fotográficos impresionantes.' },
+  { slug: 'luz-neon', nombre: 'Luz Neón', imagen: '/renta-de-iluminacion/img-iluminacion/luz-neon.avif', desc1: 'La renta de luz neón profesional es esencial para eventos nocturnos en CDMX y Estado de México. Proporcionamos iluminación neón de alta calidad que añade un toque moderno y llamativo a tus eventos, desde fiestas privadas hasta presentaciones de productos.', desc2: 'Nuestros sistemas de luz neón ofrecen versatilidad para todo tipo de eventos, permitiendo destacar elementos específicos de tu decoración. Con bajo consumo energético y fácil instalación, garantizamos una iluminación impactante que mejora la percepción de tu evento.' },
+  { slug: 'luz-negra', nombre: 'Luz Negra', imagen: '/renta-de-iluminacion/img-iluminacion/luz-negra.avif', desc1: 'La iluminación con luz negra UV es perfecta para alquiler en eventos nocturnos en CDMX. Ofrecemos renta de luz negra profesional que crea efectos espectaculares, ideal para fiestas temáticas neón, lanzamientos de productos y eventos especiales en el Estado de México.', desc2: 'Nuestra luz negra resalta elementos fluorescentes, potenciando la visibilidad de tu decoración. Con tecnología avanzada y bajo mantenimiento, proporciona una experiencia única que diferencia tus eventos y deja una impresión duradera en los invitados.' },
+  { slug: 'city-color', nombre: 'City Color', imagen: '/renta-de-iluminacion/img-iluminacion/city-color.avif', desc1: 'La iluminación City Color LED es la elección premium para eventos en CDMX. Brindamos alquiler de sistemas City Color que transforman espacios, creando atmósferas dinámicas perfectas para conferencias, bodas y presentaciones en el Estado de México.', desc2: 'Con control preciso de colores y efectos, nuestros City Color se adaptan a la identidad visual de tu evento. Eficiencia energética y facilidad de uso los hacen ideales para eventos largos, generando entornos profesionales que mejoran la experiencia de los asistentes.' },
+  { slug: 'sky-tracker', nombre: 'Sky Tracker', imagen: '/renta-de-iluminacion/img-iluminacion/sky-tracker.avif', desc1: 'Los reflectores Sky Tracker son ideales para alquiler en eventos al aire libre en CDMX. Ofrecemos Sky Tracker profesionales que iluminan el cielo, creando espectáculos visuales impactantes para inauguraciones y celebraciones en el Estado de México.', desc2: 'Nuestros Sky Tracker generan visibilidad excepcional, atrayendo atención a tu evento desde kilómetros de distancia. Con tecnología de alta potencia y bajo consumo, proporcionan una iluminación dramática que mejora la experiencia y crea recuerdos duraderos.' },
+  { slug: 'cabezas-moviles', nombre: 'Cabezas Móviles', imagen: '/renta-de-iluminacion/img-iluminacion/cabezas-moviles.avif', desc1: 'La renta de cabezas móviles inteligentes es esencial para eventos dinámicos en CDMX. Proporcionamos cabezas móviles profesionales que ofrecen movimientos precisos y cambios de color, ideales para conciertos, fiestas y presentaciones en el Estado de México.', desc2: 'Con programación avanzada, nuestras cabezas móviles crean shows visuales que capturan la atención. Eficiencia energética y versatilidad las hacen perfectas para eventos largos, mejorando la atmósfera y facilitando interacciones que impulsan el engagement.' },
+  { slug: 'iluminacion-laser', nombre: 'Iluminación Láser', imagen: '/renta-de-iluminacion/img-iluminacion/iluminacion-laser.avif', desc1: 'La iluminación láser profesional es la opción para eventos espectaculares en el Estado de México. Ofrecemos alquiler de sistemas láser que crean efectos visuales avanzados, perfectos para lanzamientos de productos y eventos en CDMX.', desc2: 'Nuestros láseres generan gráficos y animaciones que refuerzan tu mensaje de marca. Con seguridad certificada y bajo mantenimiento, proporcionan una iluminación innovadora que diferencia tus eventos y crea experiencias únicas.' },
+  { slug: 'luces-arquitectonicas', nombre: 'Luces Arquitectónicas', imagen: '/renta-de-iluminacion/img-iluminacion/lucs-arquitectonicas.avif', desc1: 'La iluminación arquitectónica profesional transforma espacios en CDMX. Brindamos alquiler de luces arquitectónicas que resaltan estructuras, creando ambientes elegantes para bodas, conferencias y eventos corporativos en el Estado de México.', desc2: 'Nuestras luces arquitectónicas mejoran la percepción del espacio, destacando columnas, fachadas y elementos clave de tu venue. Con control de color y eficiencia energética, generan atmósferas sofisticadas que mejoran la experiencia de tu evento.' },
+  { slug: 'proyector-de-gobos', nombre: 'Proyector de Gobos', imagen: '/renta-de-iluminacion/img-iluminacion/proyector-de-gobos.avif', desc1: 'Los proyectores de gobos personalizados son esenciales para branding en eventos. Ofrecemos alquiler de proyectores de gobos que proyectan logos, iniciales y mensajes, ideales para bodas, conferencias y lanzamientos en CDMX y Estado de México.', desc2: 'Nuestros gobos permiten personalización completa con tu identidad visual. Tecnología avanzada y alta resolución garantizan proyecciones nítidas que refuerzan el reconocimiento de marca y crean experiencias profesionales que fortalecen relaciones.' },
+  { slug: 'city-light', nombre: 'City Light', imagen: '/renta-de-iluminacion/img-iluminacion/city-light.avif', desc1: 'La renta de iluminación City Light LED es ideal para eventos urbanos en CDMX y Estado de México. Proporcionamos sistemas City Light que iluminan fachadas y espacios, creando atmósferas modernas para todo tipo de eventos.', desc2: 'Nuestros City Light ofrecen control total de colores y efectos. Eficiencia energética y durabilidad los hacen perfectos para eventos largos, mejorando la visibilidad y generando entornos profesionales que facilitan presentaciones efectivas.' },
+  { slug: 'seguidor-de-luz', nombre: 'Seguidor de Luz', imagen: '/renta-de-iluminacion/img-iluminacion/seguidor-de-luz.avif', desc1: 'El alquiler de seguidor de luz profesional es clave para presentaciones dinámicas en CDMX. Ofrecemos seguidores de luz que siguen movimientos, ideales para bodas, conferencias y eventos corporativos en el Estado de México.', desc2: 'Con tecnología avanzada, nuestros seguidores de luz destacan presentadores y protagonistas. Precisión y facilidad de uso garantizan una iluminación enfocada que mejora la atención del público y crea experiencias profesionales inolvidables.' },
+];
+
+const structuredData = [
+  organizationSchema(),
+  breadcrumbSchema([
+    { name: 'Inicio', url: '/' },
+    { name: 'Renta de Iluminación', url: '/renta-de-iluminacion/' },
+  ]),
+  faqSchema(faqItems),
+];
+---
+
+<Base
+  title="Renta de Iluminación LED para Eventos CDMX | REDEIL"
+  description="Renta de equipo de iluminación profesional para eventos. Guirnaldas, cabezas móviles, luz neón, láser, Sky Tracker y más en CDMX y Estado de México."
+  structuredData={structuredData}
+>
+  <TopBar />
+  <Header activePage="iluminación" />
+  <Breadcrumb items={[{ name: 'Renta de Iluminación', href: '/renta-de-iluminacion/' }]} />
+
+  <!-- HERO 2-COL -->
+  <Hero
+    badge="12 tipos de iluminación"
+    title="Iluminación que transforma. Eventos que inspiran."
+    description="Renta de equipo de iluminación profesional para bodas, conciertos y eventos corporativos en CDMX y Estado de México."
+    primaryCta={{ text: 'Cotizar Iluminación', href: WHATSAPP_URL_MSG }}
+    secondaryCta={{ text: 'Ver equipos', href: '#servicios' }}
+  >
+    <Fragment slot="hero-seo">
+      <p>La iluminación correcta puede transformar completamente un evento. En <strong>REDEIL</strong> rentamos <strong>equipos de iluminación profesional</strong> que crean el ambiente perfecto para bodas, eventos corporativos y celebraciones en <strong>CDMX y Estado de México</strong>.</p>
+      <p>Desde <strong>guirnaldas románticas</strong> para bodas hasta <strong>cabezas móviles</strong> para fiestas llenas de energía, tenemos todo tipo de luces. Nuestro equipo técnico se encarga de instalarlo, configurarlo y operarlo durante tu evento. Tú solo disfruta mientras nosotros hacemos que todo se vea increíble.</p>
+    </Fragment>
+  </Hero>
+
+  <!-- PRODUCT GRID: 12 LIGHTING SERVICES -->
+
+  <!-- SERVICIOS DE ILUMINACIÓN — CategoryCards con paquetes -->
+  <section class="section section--bg" id="servicios-detallados">
+    <div class="container">
+      <SectionHeader
+        badge="12 servicios de iluminación"
+        title="¿Qué incluye la renta de iluminación para eventos?"
+        subtitle="Cada servicio incluye transporte, instalación profesional, operación durante el evento y desmontaje. Trabajamos con equipo Martin Professional, Chauvet y Elation — las marcas líderes en iluminación para eventos."
+        subtitle2="Desde guirnaldas vintage para bodas en jardín hasta shows de cabezas móviles para pistas de baile, tenemos 12 tipos de iluminación LED con paquetes desde $3,500 MXN. Elige tu servicio y selecciona el paquete ideal."
+        id="detallados-title"
+      />
+      <div class="grid-4">
+        {ILUMINACION_SERVICES.map((s) => (
+          <CategoryCard
+            title={s.nombre}
+            subtitle={s.descripcion}
+            href={`/renta-de-iluminacion/${s.slug}/`}
+            image={s.imagen}
+            subcategories={s.paquetes.map((p) => ({
+              name: p.nombre,
+              href: `/renta-de-iluminacion/${s.slug}/${p.slug}/`,
+            }))}
+          />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFITS / HIGHLIGHTED SERVICES -->
+  <section class="section">
+    <div class="container">
+      <SectionHeader
+        title="¿Cuáles son los servicios de iluminación más populares?"
+        subtitle="Descubre nuestros servicios más populares de iluminación para eventos y Estado de México."
+        id="destacados-title"
+      />
+      <div class="trust-grid">
+        <div class="trust-item">
+          <h3 class="trust-item__title"><a href="/renta-de-iluminacion/guirnaldas/" style="color:inherit">Guirnaldas LED Vintage</a></h3>
+          <p class="trust-item__desc">Crea ambientes románticos y cálidos con nuestras guirnaldas LED profesionales. Perfectas para bodas, eventos al aire libre y celebraciones íntimas. Transforman cualquier espacio en un lugar mágico.</p>
+        </div>
+        <div class="trust-item">
+          <h3 class="trust-item__title"><a href="/renta-de-iluminacion/cabezas-moviles/" style="color:inherit">Cabezas Móviles Inteligentes</a></h3>
+          <p class="trust-item__desc">Iluminación dinámica profesional para shows y eventos. Nuestras cabezas móviles crean efectos espectaculares con movimientos programables, colores intensos y patrones únicos.</p>
+        </div>
+        <div class="trust-item">
+          <h3 class="trust-item__title"><a href="/renta-de-iluminacion/luz-neon/" style="color:inherit">Luz Neón Profesional</a></h3>
+          <p class="trust-item__desc">Dale un toque moderno y llamativo a tu evento con iluminación neón de alta calidad. Ideal para fiestas temáticas, eventos de marca y celebraciones contemporáneas.</p>
+        </div>
+        <div class="trust-item">
+          <h3 class="trust-item__title"><a href="/renta-de-bocinas/bocinas-para-bodas/" style="color:inherit">Audio Profesional para Eventos</a></h3>
+          <p class="trust-item__desc">Complementa tu iluminación profesional con nuestro sistema de audio de alta fidelidad. Ofrecemos paquetes integrales de audio e iluminación con descuento especial.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" id="faq">
+    <div class="container">
+      <SectionHeader
+        badge="FAQ"
+        title="Preguntas Frecuentes"
+        subtitle="Resolvemos las dudas más comunes sobre renta de iluminación profesional para eventos en CDMX y Estado de México. Precios, instalación, cobertura y tiempos."
+        subtitle2="Si no encuentras tu respuesta, escríbenos por WhatsApp al 55 4937 5172 y te asesoramos sin compromiso. Cotización personalizada en menos de 24 horas."
+        id="faq-title"
+      />
+    </div>
+    <FaqSection items={faqItems} />
+  </section>
+
+  <Footer />
+  <WhatsAppBubble />
+</Base>

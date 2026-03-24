@@ -1,0 +1,127 @@
+---
+interface Props {
+  name: string;
+  role: string;
+  company: string;
+  companyUrl?: string;
+  avatar: string;
+  rating: number;
+  text: string;
+}
+
+const { name, role, company, companyUrl, avatar, rating, text } = Astro.props;
+const stars = '★'.repeat(rating) + '☆'.repeat(5 - rating);
+---
+
+<article class="tcard">
+  <div class="tcard__top">
+    <div class="tcard__stars" aria-label={`${rating} de 5 estrellas`}>{stars}</div>
+  </div>
+  <blockquote class="tcard__text">{text}</blockquote>
+  <div class="tcard__author">
+    <img src={avatar} alt={name} class="tcard__avatar" width="48" height="48" loading="lazy" decoding="async" />
+    <div class="tcard__info">
+      <span class="tcard__name">{name}</span>
+      <span class="tcard__role">{role}</span>
+      {companyUrl ? (
+        <a href={companyUrl} class="tcard__company" target="_blank" rel="noopener noreferrer">
+          {company} <span class="tcard__arrow">↗</span>
+        </a>
+      ) : (
+        <span class="tcard__company">{company}</span>
+      )}
+    </div>
+  </div>
+</article>
+
+<style>
+  .tcard {
+    background: var(--color-white);
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-lg);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--color-border);
+  }
+
+  .tcard__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .tcard__stars {
+    font-size: 1.125rem;
+    color: #F59E0B;
+    letter-spacing: 0.05em;
+  }
+
+  .tcard__text {
+    font-size: var(--font-size-sm);
+    color: var(--color-text);
+    line-height: 1.75;
+    margin: 0;
+    flex: 1;
+    font-style: normal;
+  }
+
+  .tcard__author {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding-top: var(--spacing-md);
+    border-top: 1px solid var(--color-border);
+  }
+
+  .tcard__avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+
+  .tcard__info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.125rem;
+  }
+
+  .tcard__name {
+    font-size: var(--font-size-sm);
+    font-weight: 700;
+    color: var(--color-text);
+  }
+
+  .tcard__role {
+    font-size: 0.8125rem;
+    color: var(--color-text-light);
+  }
+
+  a.tcard__company {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: var(--color-accent);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  a.tcard__company:hover {
+    color: var(--color-accent-dark);
+  }
+
+  span.tcard__company {
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: var(--color-text);
+  }
+
+  .tcard__arrow {
+    font-size: 0.75rem;
+  }
+</style>
