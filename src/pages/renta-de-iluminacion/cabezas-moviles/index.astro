@@ -18,6 +18,8 @@ const paquetes = [
     "nombre": "Show Básico",
     "slug": "paquete-show-basico",
     "precio": 4000,
+    "imagen": "/img/paquetes/cabezas-moviles/show-basico.avif",
+    "badge": "",
     "features": [
       "4 cabezas móviles LED",
       "Controlador DMX",
@@ -29,6 +31,8 @@ const paquetes = [
     "nombre": "Show Estándar",
     "slug": "paquete-show-estandar",
     "precio": 7500,
+    "imagen": "/img/paquetes/cabezas-moviles/show-estandar.avif",
+    "badge": "Más popular",
     "features": [
       "8 cabezas móviles LED",
       "Controlador DMX avanzado",
@@ -41,6 +45,8 @@ const paquetes = [
     "nombre": "Show Premium",
     "slug": "paquete-show-premium",
     "precio": 13000,
+    "imagen": "/img/paquetes/cabezas-moviles/show-premium.avif",
+    "badge": "",
     "features": [
       "12 cabezas móviles LED",
       "Controlador DMX profesional",
@@ -54,6 +60,8 @@ const paquetes = [
     "nombre": "Producción",
     "slug": "paquete-produccion",
     "precio": 24000,
+    "imagen": "/img/paquetes/cabezas-moviles/produccion.avif",
+    "badge": "",
     "features": [
       "20+ cabezas móviles LED",
       "Controlador DMX profesional",
@@ -165,77 +173,137 @@ const structuredData = [
   />
 
   <!-- GRID DE PAQUETES -->
+    <!-- PAQUETES -->
   <section class="section" id="paquetes">
     <div class="container">
       <SectionHeader
-        badge="4 paquetes"
-        title="Paquetes de Cabezas Móviles"
-        subtitle="Desde eventos íntimos hasta producciones de gran escala. Elige el paquete perfecto para tu evento."
+        badge="4 niveles de show"
+        title="¿Cuánto cuesta un show de cabezas móviles?"
+        subtitle="De 4 fixtures para una pista de baile íntima hasta 20+ para una producción tipo concierto. Las cabezas móviles no son decoración — son un show de luces programado que transforma completamente la atmósfera de tu evento."
+        subtitle2="Cada paquete incluye truss de aluminio, cabezas móviles Martin/Chauvet, controlador DMX, máquina de humo atmosférico (para que los haces se vean), instalación, programación, operación durante todo el evento y desmontaje."
         id="paquetes-title"
       />
-      <div class="grid-4">
-        {paquetes.map((p) => (
-          <article class="pkg-card">
-            <div class="pkg-card__header">
-              <h3 class="pkg-card__title">{p.nombre}</h3>
-              <div class="pkg-card__price">
-                <span class="pkg-card__amount">${p.precio.toLocaleString()}</span>
-                <span class="pkg-card__currency">MXN + IVA</span>
-              </div>
+      <div class="pkg-grid">
+        {paquetes.map((p: any) => (
+          <article class={`pkg ${p.badge ? 'pkg--featured' : ''}`}>
+            <div class="pkg__img-wrap">
+              <img src={p.imagen} alt={p.nombre} width="600" height="400" loading="lazy" class="pkg__img" />
+              {p.badge && <span class="pkg__badge">{p.badge}</span>}
             </div>
-            <ul class="pkg-card__features">
-              {p.features.map((f: string) => (
-                <li class="pkg-card__feature">&#10003; {f}</li>
-              ))}
-            </ul>
-            <a href={'/renta-de-iluminacion/cabezas-moviles/' + p.slug + '/'} class="pkg-card__btn">Ver Paquete</a>
+            <div class="pkg__body">
+              <h3 class="pkg__name">{p.nombre}</h3>
+              <div class="pkg__pricing">
+                <span class="pkg__amount">${p.precio.toLocaleString()}</span>
+                <span class="pkg__tax">MXN + IVA</span>
+              </div>
+              <ul class="pkg__features">
+                {p.features.map((f: string) => (
+                  <li>{f}</li>
+                ))}
+              </ul>
+              <a href={'/renta-de-iluminacion/cabezas-moviles/' + p.slug + '/'} class="pkg__cta">Cotizar este show</a>
+            </div>
           </article>
         ))}
       </div>
     </div>
   </section>
 
-  <!-- CONTENIDO SEO -->
+  <!-- POR QUÉ CABEZAS MÓVILES -->
   <section class="section section--bg">
-    <div class="container content-prose">
-      <h2>¿Por qué rentar cabezas móviles con REDEIL?</h2>
-      <p>Luces robóticas inteligentes con movimiento y cambio de color para pistas de baile. En REDEIL nos especializamos en ofrecer equipamiento profesional para eventos de todos los tamaños en la Ciudad de México y área metropolitana. Nuestro equipo técnico capacitado se encarga de cada detalle para que tú solo te preocupes por disfrutar.</p>
-
-      <h3>¿Qué incluye la renta de cabezas móviles?</h3>
-      <p>Cada paquete de cabezas móviles incluye mucho más que solo equipo. Ofrecemos un servicio completo que abarca la logística de transporte, la instalación profesional en tu venue, la configuración y pruebas antes del evento, la operación técnica durante toda la celebración y el desmontaje al finalizar. No hay costos ocultos ni sorpresas.</p>
-
-      <h3>¿Qué equipo profesional usan para cabezas móviles?</h3>
-      <p>Trabajamos con las mejores marcas del mercado: JBL, QSC, Martin Professional, Chauvet y Elation. Nuestro inventario se actualiza constantemente para ofrecerte la tecnología más reciente. Cada equipo pasa por revisiones periódicas de mantenimiento para garantizar un funcionamiento impecable.</p>
-
-      <h3>¿En qué zonas de CDMX rentan cabezas móviles?</h3>
-      <p>Nuestro servicio de renta de cabezas móviles cubre toda la Ciudad de México y el Estado de México. También llegamos a destinos populares para eventos como Cuernavaca, Tepoztlán, Valle de Bravo y cualquier ubicación dentro de 100 km de CDMX sin costo adicional de traslado.</p>
+    <div class="container">
+      <SectionHeader
+        badge="No es decoración — es un show"
+        title="¿Qué hace diferente a las cabezas móviles de cualquier otra iluminación?"
+        subtitle="La diferencia es movimiento. Las guirnaldas decoran. Las cascadas ambientan. Las cabezas móviles crean un espectáculo. Son luces robóticas que se programan para cada momento de tu evento: vals suave con movimientos lentos, fiesta con barridos rápidos multicolor, momento sorpresa con blackout y explosión de haces."
+        subtitle2="Cada fixture Martin o Chauvet tiene motor interno que gira 360° y proyecta haces de luz concentrados. Con humo atmosférico, esos haces se convierten en rayos sólidos de color que cortan el aire — el efecto visual que ves en conciertos y festivales, ahora en tu boda o evento."
+        id="diferencia-title"
+      />
+      <div class="sell__grid">
+        <div class="sell__card">
+          <div class="sell__card-img">
+            <img src="/img/paquetes/cabezas-moviles/sell/movimiento.avif" alt="Cabeza móvil en pleno giro sobre truss" width="600" height="400" loading="lazy" />
+          </div>
+          <div class="sell__card-body">
+            <h3 class="sell__card-title">Show programado por momentos</h3>
+            <p class="sell__card-desc">Nuestro técnico programa escenas para cada momento: ceremonia con wash suave, cena con colores cálidos estáticos, vals con movimientos lentos románticos, fiesta con barridos rápidos multicolor. Cada transición es automática — el show se adapta al ritmo de tu evento sin que nadie lo note.</p>
+          </div>
+        </div>
+        <div class="sell__card">
+          <div class="sell__card-img">
+            <img src="/img/paquetes/cabezas-moviles/sell/haces-aire.avif" alt="Haces de luz de cabezas móviles cortando humo atmosférico" width="600" height="400" loading="lazy" />
+          </div>
+          <div class="sell__card-body">
+            <h3 class="sell__card-title">Haces que se ven en el aire</h3>
+            <p class="sell__card-desc">¿Sabes por qué en los conciertos los haces de luz se ven como rayos sólidos? Humo atmosférico. Cada paquete incluye máquina de haze profesional que llena el ambiente con una neblina imperceptible — pero que hace que cada haz de luz se convierta en una línea de color sólida que corta el aire. El resultado es cinematográfico.</p>
+          </div>
+        </div>
+        <div class="sell__card">
+          <div class="sell__card-img">
+            <img src="/img/paquetes/cabezas-moviles/sell/control-dmx.avif" alt="Consola DMX controlando cabezas móviles" width="600" height="400" loading="lazy" />
+          </div>
+          <div class="sell__card-body">
+            <h3 class="sell__card-title">Control DMX profesional</h3>
+            <p class="sell__card-desc">El cerebro del show. Una consola DMX controla cada fixture individualmente: posición, color, intensidad, velocidad de movimiento, patrones de gobos internos. Nuestro técnico opera la consola en tiempo real, sincronizando los movimientos con la música y la energía del momento.</p>
+          </div>
+        </div>
+        <div class="sell__card">
+          <div class="sell__card-img">
+            <img src="/img/paquetes/cabezas-moviles/sell/transformacion.avif" alt="Pista de baile transformada con show de cabezas móviles" width="600" height="400" loading="lazy" />
+          </div>
+          <div class="sell__card-body">
+            <h3 class="sell__card-title">Escalable a cualquier evento</h3>
+            <p class="sell__card-desc">4 cabezas para una fiesta de 50 personas. 8 para una boda de 150. 12 para una producción de XV años. 20+ para un evento corporativo o concierto. El mismo tipo de show a diferente escala — siempre con equipo profesional Martin y Chauvet, siempre con técnico operador dedicado.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
-  
-  <!-- Zonas de servicio -->
+  <!-- ZONAS -->
   <section class="section">
     <div class="container">
-      <h2 class="section__title">¿En qué zonas de CDMX ofrecemos cabezas móviles?</h2>
-      <p class="section__subtitle">Llevamos cabezas móviles a toda la Ciudad de México y Estado de México. Estas son algunas de nuestras zonas de cobertura.</p>
-      <div class="zonas-servicio">
-        <a href="/zonas/polanco/" class="zona-link">Renta de cabezas móviles en Polanco</a>
-        <a href="/zonas/condesa/" class="zona-link">Renta de cabezas móviles en Condesa</a>
-        <a href="/zonas/santa-fe/" class="zona-link">Renta de cabezas móviles en Santa Fe</a>
+      <SectionHeader
+        badge="Cobertura"
+        title="¿Dónde montamos shows de cabezas móviles?"
+        subtitle="Llevamos producción de cabezas móviles a toda la CDMX y Estado de México. El montaje requiere espacio vertical (mínimo 3 metros de altura para el truss), así que es ideal para salones con techo alto, carpas de eventos, jardines con estructura y foros."
+        subtitle2="Nuestro equipo hace visita técnica previa para medir alturas, verificar carga eléctrica y diseñar la distribución del truss. El traslado está incluido dentro de 100 km de CDMX."
+        id="zonas-title"
+      />
+      <div class="zonas-grid">
+        <a href="/zonas/polanco/" class="zona-card"><span class="zona-card__name">Polanco</span><span class="zona-card__desc">Hoteles y salones</span></a>
+        <a href="/zonas/condesa/" class="zona-card"><span class="zona-card__name">Condesa</span><span class="zona-card__desc">Foros y terrazas</span></a>
+        <a href="/zonas/santa-fe/" class="zona-card"><span class="zona-card__name">Santa Fe</span><span class="zona-card__desc">Corporativos</span></a>
+        <a href="/zonas/coyoacan/" class="zona-card"><span class="zona-card__name">Coyoacán</span><span class="zona-card__desc">Jardines y haciendas</span></a>
+        <a href="/zonas/san-angel/" class="zona-card"><span class="zona-card__name">San Ángel</span><span class="zona-card__desc">Salones privados</span></a>
+        <a href="/zonas/interlomas/" class="zona-card"><span class="zona-card__name">Interlomas</span><span class="zona-card__desc">Carpas y foros</span></a>
+        <a href="/zonas/naucalpan/" class="zona-card"><span class="zona-card__name">Naucalpan</span><span class="zona-card__desc">Salones grandes</span></a>
+        <a href="/zonas/tlalnepantla/" class="zona-card"><span class="zona-card__name">Tlalnepantla</span><span class="zona-card__desc">Eventos masivos</span></a>
       </div>
-      <p style="margin-top: var(--spacing-md); text-align: center;"><a href="/zonas/" style="color: var(--color-accent); font-weight: 600;">Ver todas las zonas de cobertura →</a></p>
+      <div class="zonas-cta"><a href="/zonas/" class="zonas-cta__link">Ver las 30 zonas de cobertura →</a></div>
     </div>
   </section>
 
-  <FaqSection items={faqItems} />
-
-  <!-- CTA FINAL -->
+  <!-- FAQ -->
+  <section class="section" id="faq">
+    <div class="container">
+      <SectionHeader
+        badge="FAQ"
+        title="Preguntas Frecuentes"
+        subtitle="Las dudas más comunes sobre renta de cabezas móviles para eventos en CDMX. Precios, montaje, humo atmosférico y programación."
+        subtitle2="Si no encuentras tu respuesta, escríbenos por WhatsApp al 55 4937 5172. Asesoría sin compromiso."
+        id="faq-title"
+      />
+    </div>
+    <FaqSection items={faqItems} />
+  </section>
 
   <Footer />
   <WhatsAppBubble />
 </Base>
 
 <style>
+
   .pkg-card {
     background: var(--color-white);
     border-radius: var(--border-radius-lg);
@@ -347,4 +415,205 @@ const structuredData = [
     border-color: var(--color-accent);
     box-shadow: var(--shadow-sm);
   }
+
+
+  /* Package cards - redesigned */
+  .pkg-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+  .pkg {
+    background: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06), 0 8px 24px rgba(0,0,0,0.04);
+    display: flex;
+    flex-direction: column;
+    border: 2px solid transparent;
+    transition: border-color 0.2s;
+  }
+  .pkg:hover { border-color: #D4A04A; }
+  .pkg--featured { border-color: #D4A04A; }
+  .pkg__img-wrap {
+    position: relative;
+    aspect-ratio: 3 / 2;
+    overflow: hidden;
+  }
+  .pkg__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .pkg__badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: #D4A04A;
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.375rem 0.875rem;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .pkg__body {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+  .pkg__name {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #0F172A;
+    margin: 0 0 0.75rem;
+    line-height: 1.3;
+  }
+  .pkg__pricing {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #E8E8E8;
+  }
+  .pkg__amount {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: #D4A04A;
+    line-height: 1;
+  }
+  .pkg__tax {
+    font-size: 0.75rem;
+    color: #94A3B8;
+    font-weight: 500;
+  }
+  .pkg__features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    flex: 1;
+  }
+  .pkg__features li {
+    font-size: 0.875rem;
+    color: #475569;
+    padding-left: 1.25rem;
+    position: relative;
+    line-height: 1.5;
+  }
+  .pkg__features li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.5rem;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #D4A04A;
+  }
+  .pkg__cta {
+    display: block;
+    text-align: center;
+    padding: 0.875rem;
+    background: #1A1A2E;
+    color: #fff;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: background 0.2s;
+    margin-top: auto;
+  }
+  .pkg__cta:hover { background: #D4A04A; }
+  .pkg--featured .pkg__cta { background: #D4A04A; }
+  .pkg--featured .pkg__cta:hover { background: #B8862D; }
+
+
+  .sell__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    margin-top: 2rem;
+  }
+  @media (min-width: 640px) { .sell__grid { grid-template-columns: 1fr 1fr; } }
+  @media (min-width: 1024px) { .sell__grid { grid-template-columns: repeat(4, 1fr); } }
+  .sell__card {
+    background: #fff;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  }
+  .sell__card-img {
+    aspect-ratio: 3 / 2;
+    overflow: hidden;
+  }
+  .sell__card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .sell__card-body {
+    padding: 1.25rem 1.5rem 1.5rem;
+  }
+  .sell__card-title {
+    font-size: 1.0625rem;
+    font-weight: 700;
+    color: #0F172A;
+    margin: 0 0 0.5rem;
+  }
+  .sell__card-desc {
+    font-size: 0.9375rem;
+    color: #475569;
+    line-height: 1.7;
+    margin: 0;
+  }
+
+
+  .zonas-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+  @media (min-width: 768px) { .zonas-grid { grid-template-columns: repeat(4, 1fr); } }
+  .zona-card {
+    display: flex;
+    flex-direction: column;
+    padding: 1.25rem;
+    background: #fff;
+    border-radius: 10px;
+    border: 1px solid #E8E8E8;
+    text-decoration: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+  .zona-card:hover {
+    border-color: #D4A04A;
+    box-shadow: 0 4px 12px rgba(212,160,74,0.15);
+  }
+  .zona-card__name {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #0F172A;
+  }
+  .zona-card__desc {
+    font-size: 0.8125rem;
+    color: #94A3B8;
+    margin-top: 0.25rem;
+  }
+  .zonas-cta {
+    text-align: center;
+    margin-top: 1.5rem;
+  }
+  .zonas-cta__link {
+    font-size: 0.9375rem;
+    font-weight: 600;
+    color: #D4A04A;
+    text-decoration: none;
+  }
+  .zonas-cta__link:hover { text-decoration: underline; }
+
 </style>
